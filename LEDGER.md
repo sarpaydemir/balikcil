@@ -145,3 +145,72 @@ kullanılmaz. Skiller Mateo'nun betiklerine, Greta'nın ölçümüne ve Viktor'u
 eleştirisine hizmet eder; izleyiciye ne arayacağı söylenmez (KURALLAR 3).
 Ajan tanımlarının hiçbirinde `Skill` aracı yok — bu sınır yapısal olarak da
 kapalı.
+
+`2026-09-18 20:12 UTC` · **working language · English** · By the user's decision the whole
+laboratory now works in English: documents, folder names, file names, agent
+definitions, instructions, notes, canteen, scripts, exam papers, technical
+reports. **One role speaks Turkish** — Derya, the reporter (`reporter`), who
+writes the plain account for the user. The coordinator also answers the user in
+Turkish in chat; everything written to disk is English.
+
+Renamed: `EKIP.md`→`TEAM.md`, `KURALLAR.md`→`RULES.md`,
+`TAKTIKLER.md`→`TACTICS.md`, `DEFTER.md`→`LEDGER.md`; folders
+`veri`→`data`, `kartlar`→`cards`, `notlar`→`notes`,
+`kantin`→`canteen`, `sinav`→`exam`, `talimatlar`→`instructions`,
+`betikler`→`scripts`, `raporlar`→`reports`; agents
+`veri-ustasi`→`data-engineer`, `izleyici`→`watcher`,
+`kantin-baskani`→`canteen-chair`, `supheci`→`skeptic`,
+`sinav-adayi`→`exam-candidate`, `raportor`→`reporter`; skills
+`defter`→`ledger`, `talimat`→`instruction`,
+`duvar-denetimi`→`wall-audit`, `KAYNAK.md`→`SOURCES.md`,
+`PARMAK-IZLERI.txt`→`FINGERPRINTS.txt`.
+
+Rule numbering is unchanged, so "RULES 12" still points at the same rule. The
+**English `RULES.md` is now the authoritative version**; the agent definitions
+were updated accordingly (they previously deferred to the Turkish files).
+
+**No ledger record line was translated or touched.** Only this file's heading
+was translated, and a note was added under it saying so. Entries above are
+Turkish because that was the language at the time.
+
+Technical terms are translated nowhere, in any language: `funding rate`,
+`open interest`, `taker buy volume`, `walk-forward`, `embargo`,
+`drawdown`, column and file names. Sofia's rule must be convertible to code by
+Mateo without a single question; translating a term creates ambiguity.
+
+**Hana and Tomás sit the exam in the same language.** Language is an exam
+condition; the `instruction` skill's leak check now tests for it.
+
+`2026-09-18 20:12 UTC` · **eleventh name · Derya** · Added to the team on the user's request:
+reads the laboratory's English output, writes the user's account in Turkish.
+Cannot interpret, conclude, soften, add a number, or fill a gap. Writes only
+into `reports/`. A terminal node — the laboratory flows into Derya, nothing
+flows back out into the laboratory. Model opus, effort high. Recorded in
+`TEAM.md`.
+
+`2026-09-18 20:12 UTC` · **git** · The folder was already a git repository with `origin`
+configured (`github.com/sarpaydemir/balikcil`) and one commit named
+"initial"; the coordinator's `git init` was a re-init and changed nothing.
+The rename and translation went in as commit `d05ecd9` and was pushed to
+`origin main`. 63 files tracked; `data/` is excluded by `.gitignore`.
+
+From now on **every ledger entry is one commit and one push** — written into
+step 6 of the `ledger` skill, so the git history and this file tell the same
+story.
+
+**Open item · credential exposure.** The `origin` URL carries a GitHub
+personal access token in plaintext inside `.git/config`. It is not committed,
+so it does not reach GitHub, but the coordinator printed it into the session
+transcript while inspecting the remote. **The token should be treated as
+exposed and rotated,** and the remote switched to a credential helper or
+`gh auth` so the URL holds no secret. Until then, git output is filtered
+before printing (written into the `ledger` skill).
+
+`2026-09-18 20:12 UTC` · **still open** · (1) `autoMemoryDirectory` in
+`.claude/settings.json` points at `freqtrade_hyperopt/projects/balikcil`
+while the project sits at `/home/user/balikcil` — memory is written outside
+the wall; the coordinator had no permission to change settings this session.
+(2) No `PreToolUse` hook closing the command-line read hole (RULES 5).
+(3) Nadia is not a separate definition. (4) Token cost not measured (RULES 25).
+(5) Disk: 16 GB free, order book files are large (RULES 28) — Mateo measures
+before downloading. (6) The GitHub token above.

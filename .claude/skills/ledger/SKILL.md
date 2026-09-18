@@ -42,9 +42,18 @@ is ever deleted.*
    losing old lines.
 5. After appending, verify the line count **grew.** If it shrank or stayed the
    same, stop and tell the user.
-6. If this project is a git repository, commit the entry: stage the changed
-   files and commit with a one-line message naming the entry's label. Records
-   that are committed are records that survive (RULES 29–30).
+6. **Commit and push.** Stage the changed files, commit with a one-line message
+   naming the entry's label, and push to `origin main`. Records that are pushed
+   are records that survive (RULES 29–30). Every ledger entry is one commit, so
+   the git history and the ledger tell the same story.
+
+   If the push fails, say so — a failed push is a technical failure and a
+   technical failure is not a result (RULES 21). Do not carry on as if the
+   record were safe.
+
+   When printing git output, never print the remote URL: the token is embedded
+   in it. Filter it:
+   `git push origin main 2>&1 | sed -E 's/github_pat_[A-Za-z0-9_]+/***/g'`
 
 ## What must go into an entry
 
