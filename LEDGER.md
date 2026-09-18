@@ -345,3 +345,129 @@ token in the git config should be treated as exposed and rotated. (6)
 `walk-forward-validation`'s DSR/PBO thresholds still contradict RULES 12;
 adding them to the passing condition would be a rule change and the user has
 not been asked.
+
+`2026-09-18 21:01 UTC` · **run · universe and draw · completed** · Mateo's Mode A run
+finished. **Run number `e458f643863ed84e`** (first 16 hex of the input
+`data/universe/universe.csv` SHA-256, RULES 29). Seed / draw number `20260913`.
+
+**Downloaded:** 8,567 monthly 1d kline zips under `data/universe/klines/`,
+**8,567 of 8,567 verified against their own `.CHECKSUM`**, 0 mismatches, 0
+listing failures. Only 1d klines were fetched; no order book, no funding, no
+5-minute data. Disk measured before the download (RULES 28):
+16,832,335,872 bytes free at `2026-09-18T20:27:28Z`; the run wrote 19,862,374
+bytes.
+
+**Coordinator's own verification, not taken on the agent's word:** the manifest
+holds 8,593 lines for 8,567 unique paths (the 26 extra lines are the failure and
+retry of the same files, see below); for every unique path
+`checksum_verified` is true and the recorded SHA-256 equals the expected one; 12
+files chosen at random were re-hashed on disk and all 12 matched; the three
+list files are disjoint and sum to 795; `exam/` holds only the two written
+files plus its `.gitkeep`; `data/draw/draw-manifest.md` names none of the 20
+exam symbols (grep with the exam list as patterns: 0 hits).
+
+**Universe: 795 symbols** out of 1,018 archive folders — 864 are USDT
+perpetuals (name ends `USDT`, no `_`), 837 of those have 1d rows in the period,
+795 of those traded at least once. Groups: large 160 · mid 160 · small 161 ·
+new 314. Volume column: `quote_volume` (kline column 8), because base-asset
+volume is not comparable across contracts. Cut values, measured by the script
+over the 481 ranked non-new symbols: large/mid at **4344202.7566115**,
+mid/small at **1838834.05961**; no tie straddles either cut.
+
+**Draw:** observation 10 (3·3·2·2), exam 20 (6·6·4·4), money test 765. Every
+quota filled from its own group; no substitution. Reproducibility shown by
+running the draw a second time into a scratch directory — all three lists
+byte-identical — and the append-only guard (RULES 30) was shown to fire on a
+tampered copy.
+
+**Observation coins (the only list named here):** `BCHUSDT`, `ZROUSDT`,
+`FARTCOINUSDT` (large) · `FHEUSDT`, `NEWTUSDT`, `NILUSDT` (mid) · `OMNIUSDT`,
+`KOMAUSDT` (small) · `AVGOUSDT`, `NOKUSDT` (new). The 20 exam and 765
+money-test names stay in `exam/draw/`, per the 20:27 UTC decision.
+
+**Fingerprints:**
+```
+e458f643863ed84e230798a3142a0159dc689e65ef9f2682f5454959bbc4eabe  data/universe/universe.csv
+c208c51f8c08c643f538bbe1b18076d1ab2424d2d2f6cd4bcc24eb7abfd54dff  data/universe/universe-groups.json
+b353e425698628689bde99184caa8adf915b9bdbe76b469b421144fe7b5eb187  data/universe/archive-index.json
+39232e013bf8a86838e103334f400b3251b6bf644d2d2f13204d5838cd57390a  data/universe/manifest.jsonl
+333ec18ec163b3a07141b6d236e094ff3d7a77023ab788636fa6b8fd8f31f247  data/universe/excluded-no-trades.txt
+336f2cf885319ae0fcfe2c3020c7ae20f7b7dff1a826230d16b8bcd7c4b81d08  data/draw/observation-coins.txt
+b4fc76a6436a3ce9bc76a9598d0aec2e8920b54f046badd58a83ac76230e8e7c  data/draw/draw-manifest.md
+b92a2212c166dc61a6aed6f0533d4b9031924cb7f865d0687d748039c2a25f50  exam/draw/exam-coins.txt
+00251f67836942e91ac722d1c1a9954f9d06c236a1cb00cfc1ebcb7afd874530  exam/draw/money-test-coins.txt
+bc2892d642df0dc8853ef481139dce1ff4ac689a91e5f6407a786932dd0e81d0  scripts/lab_archive.py
+46efdb5defb5f68256c5fca809112e8dcad463a9406cee560f6ccd42ed17fafe  scripts/01_index_archive.py
+965b8a0dee994b2a98dee9a3d26f4a5c9b33dc863f4a6c5abdf93514df9b2291  scripts/02_download_klines.py
+65aef849f0799bf66f0e0d6dfe078987872adcbb31f8f14635d09096bdcd7113  scripts/03_build_universe.py
+72f261d05d82ddd20de1f35c3e70a97650ea528f9be9963e016882bd356fc822  scripts/04_draw.py
+```
+
+`2026-09-18 21:01 UTC` · **technical failure during that run, reported as a failure** ·
+26 of the 8,567 files failed on the first download pass with, verbatim:
+`zip fetch failed: UnicodeEncodeError: 'ascii' codec can't encode characters in
+position 36-40: ordinal not in range(128)`. Four contracts carry non-ASCII
+names and `urllib` would not encode the path. **This was a client-side bug, not
+missing data** (RULES 20): the agent fetched one percent-encoded URL with
+`curl` and got `http=200 bytes=1936` *before* changing any code, then added
+percent-encoding and re-ran. All 26 are now verified. The manifest keeps both
+the failure line and the retry line for each, which is why it has 8,593 lines
+for 8,567 paths. Unique paths left unverified: 0.
+
+`2026-09-18 21:01 UTC` · **open decision · the 42 contracts that never traded** ·
+**Not settled. The user is being asked.** The archive keeps publishing a daily
+kline row for a delisted contract with the price frozen and `volume`,
+`quote_volume` and `count` all zero. 42 contracts have 365 such rows and **not
+one trade** inside the period. TACTICS 0 says "every contract that **traded**
+during this period", so the agent implemented `MIN_TRADES_IN_PERIOD = 1` and
+excluded them; the 42 are named in `data/universe/excluded-no-trades.txt`.
+It is material — with the 42 kept the universe is 837 not 795, the ranked pool
+523 not 481, the groups 174/174/175 not 160/160/161, and both cut values move
+(large/mid 3934018.3418, mid/small 1556496.922371), which changes who is drawn.
+**The agent flagged that it made this call after seeing the 42 names, which is
+the shape RULES 6 warns about**, and asked for confirmation rather than letting
+it stand. Reversing it means `MIN_TRADES_IN_PERIOD = 0` and re-running scripts
+03 and 04; the seed is fixed so the outcome is fully determined.
+
+`2026-09-18 21:01 UTC` · **open decision · `OMNIUSDT` in the observation set** ·
+**Not settled. The user is being asked.** 46 universe contracts have a median
+daily `quote_volume` of exactly 0.0 — they traded, but on fewer than half the
+days — and all 46 sit in `small`. One of them, `OMNIUSDT`, was drawn into the
+observation 10: it traded 2025-09-01 → 2025-09-22 and then stopped, **22
+trading days out of 365**. One further zero-median contract fell into the exam
+set and is deliberately not named here. TACTICS 2 already scales a short-lived
+coin's moment count (one moment per 18 days), so 22 days yields roughly one
+moment — meaning one of the ten observation coins would contribute almost
+nothing. Adding a minimum-lifetime condition to the draw would be a **rule
+change** and is not made without the user.
+
+`2026-09-18 21:01 UTC` · **decisions the agent named, recorded not buried** ·
+(a) Volume column `quote_volume`, reasoned above. (b) Ranking ties broken by
+symbol name ascending, needed for reproducibility; no tie straddles a cut, so
+no group assignment changed. (c) `universe.csv` carries **two** last-day
+columns — `last_day_in_period` (last day with a row) and
+`last_day_with_trades_in_period` (last day a trade happened) — because for a
+contract like `OMNIUSDT` those are 2026-08-31 and 2025-09-22, and one column
+alone stated a false last trading day. The first version of the table had only
+the row-based column and was corrected; **the draw did not change** (the three
+list fingerprints are identical before and after), only `universe.csv`'s
+fingerprint and therefore the recorded run number. (d) Observation and exam
+lists are in draw order, the money-test list alphabetical. (e) `last_day` for a
+still-live contract is reported only within the period, because monthly
+archives exist only for completed months — the column means what it says and
+not more.
+
+`2026-09-18 21:01 UTC` · **TACTICS wording to fix at source** · The agent
+independently reached the same two readings the coordinator had written into
+the instruction, and asked that they be fixed in `TACTICS.md` rather than
+re-resolved in every run: (1) "split into three by the median" cannot produce
+three groups from one median; (2) TACTICS 1 says the group assignment goes into
+`LEDGER.md` and, one line later, that watchers do not see the exam and
+money-test names. `TACTICS.md` is **not edited** here — editing tactics is a
+decision, and the user takes it.
+
+`2026-09-18 21:01 UTC` · **cost, measured** · This run cost **129,194 subagent
+tokens**, 61 tool uses, 1,993,787 ms wall clock (≈33 minutes), as reported by
+the harness. This is the laboratory's first measured cost figure. It does not
+discharge RULES 25, which is about the token cost of the first 10 **cards**;
+no card exists yet.
