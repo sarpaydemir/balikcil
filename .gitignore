@@ -1,3 +1,3 @@
-# Balıkçıl — yeniden indirilebilir ham veri git'e girmez
-veri/
+# Balıkçıl — re-downloadable raw data does not enter git
+data/
 .claude/settings.local.json

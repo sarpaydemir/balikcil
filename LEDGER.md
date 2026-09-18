@@ -1,4 +1,8 @@
-# Defter — sadece eklenir, hiçbir satır silinmez
+# Ledger — append-only, no line is ever deleted
+
+> Entries up to 2026-09-18 are in Turkish, because that was the laboratory's
+> language at the time. From the "working language" entry onward, entries are in
+> English. No record line was translated or touched — only this heading was.
 
 `2026-09-13 11:00 UTC` · **kuruluş** · Kod adı Balıkçıl. README, EKIP, KURALLAR,
 TAKTIKLER yazıldı. Kura numarası `20260913` yazıldı; çekiliş yapılmadı. Veri

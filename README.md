@@ -1,69 +1,81 @@
-# Balıkçıl — izleme laboratuvarı
+# Balıkçıl — observation laboratory
 
-**Kod adı:** Balıkçıl · **Klasör:** `projects/balikcil` (proje deposunun içinde)
+**Code name:** Balıkçıl (Turkish for heron) · **Folder:** `/home/user/balikcil`
 
-Balıkçıl suyun içinde saatlerce kıpırdamadan durur. Hiçbir şey yapmaz, sadece
-izler. Suyu anladığında bir kez vurur.
+A heron stands motionless in the water for hours. It does nothing, it only
+watches. When it understands the water, it strikes once.
 
-Bu laboratuvar da öyle çalışır. Alım satım yapmaz, önce izler: coin sakinken ne
-oluyor, sert hareketten önce ne oluyor, borsa bu sırada ne yapıyor, dünyada ne
-oluyor.
+This laboratory works the same way. It does not trade; first it watches: what
+happens while a coin is quiet, what happens before a sharp move, what the
+exchange is doing meanwhile, what is happening in the world.
 
-**Amaç bir puanlama sistemi.** Puan bir çizginin üstündeyse al, başka bir
-çizgideyse sat (short), aradaysa bir şey yapma. Puanın nereden geleceğini
-izleyerek buluruz, tahminle değil.
+**The goal is a scoring system.** If the score is above one line, buy; at
+another line, sell (short); in between, do nothing. Where the score comes from
+is found by watching, not by guessing.
 
-## Neden duvar var
+## Why there is a wall
 
-Eski laboratuvarda aylarca çalıştık, kafamızda bir sürü kanaat birikti. Bu
-kanaatler yeni izleyicilerin gözünü boyamasın diye Balıkçıl aynı deponun içinde
-ama bir duvarın arkasında durur:
+We worked for months in the old laboratory and accumulated a pile of opinions.
+So that those opinions do not colour the new watchers' eyes, Balıkçıl stands
+behind a wall:
 
-- üst klasördeki eski kural dosyası yüklenmez
-- eski deney klasörleri ve durum dosyaları okunamaz
-- Balıkçıl'ın kendi hafıza defteri vardır
-- veri sıfırdan indirilir
+- the old rule file is not loaded
+- the old experiment folders and status files cannot be read
+- Balıkçıl has its own memory
+- data is downloaded from scratch
 
-Duvar `.claude/settings.json` içindedir ve **yalnız Balıkçıl bu klasörden
-açılınca çalışır.** Ayrıntısı `KURALLAR.md`de.
+The wall lives in `.claude/settings.json` and **only works when Balıkçıl is
+opened from this folder.** Details in `RULES.md`.
 
-## Akış — yedi adım
+## The flow — seven steps
 
-1. **Çekiliş.** Coinler kurayla seçilir: 10 coin izlemeye, 20 coin sınava, geri
-   kalanı para testine.
-2. **Hazırlık.** Veri indirilir. Her coinin büyük hareket anları ve sakin anları
-   bulunur. Her an için tek sayfalık bir kart yazılır. Bunu betik yapar, yapay
-   zekâ değil.
-3. **Serbest izleme.** Dört izleyici 10 coinin kartlarını okur. Hareketin öncesini
-   de sonrasını da görürler ve not alırlar.
-4. **Kantin.** İzleyiciler birbirinin notunu okuyup tartışır. Şüpheci her fikre
-   saldırır. Kantin başkanı ayakta kalan fikirleri kurala çevirir.
-5. **Kör sınav.** Sınav coinlerinden kartlar gösterilir, ama sadece hareketin
-   öncesi. Coin adı ve tarih gizlidir. Kurallar "ne olacak" diye tahmin eder.
-   Hiç izlememiş biri ve basit bir kural da aynı sınava girer.
-6. **Para testi.** Sınavı geçen kural, hiç görülmemiş yüzlerce coinde
-   masraflarıyla denenir.
-7. **Rapor.** Önce sade, sonra teknik.
+1. **The draw.** Coins are picked by lot: 10 coins for observation, 20 for the
+   exam, the rest for the money test.
+2. **Preparation.** Data is downloaded. Each coin's large-movement moments and
+   calm moments are found. A one-page card is written for each moment. A script
+   does this, not an AI.
+3. **Free observation.** Four watchers read the cards of the 10 coins. They see
+   both before and after the movement, and take notes.
+4. **The canteen.** The watchers read each other's notes and argue. The skeptic
+   attacks every idea. The canteen chair turns the surviving ideas into rules.
+5. **The blind exam.** Cards from the exam coins are shown, but only the part
+   before the movement. The coin name and date are hidden. The rules predict
+   "what will happen". Somebody who never watched, and a simple rule, sit the
+   same exam.
+6. **The money test.** A rule that passes the exam is tried, with its costs, on
+   hundreds of coins never seen before.
+7. **The report.** Plain first, technical after.
 
-**Serbest izleme fikir üretir, kanıt üretmez.** Kanıt yalnız 5. ve 6. adımdan
-gelir.
+**Free observation produces ideas, not evidence.** Evidence comes only from
+steps 5 and 6.
 
-## Dosyalar
+## Language
 
-- `EKIP.md` — kim kimdir, ne yapar, ne yapamaz
-- `KURALLAR.md` — değişmez kurallar
-- `TAKTIKLER.md` — adım adım nasıl yapılır
-- `DEFTER.md` — ne zaman ne oldu; sadece eklenir, hiçbir satır silinmez
-- `CLAUDE.md` — bu klasörde açılan yapay zekâ oturumunun ilk okuyacağı yer
-- `.claude/settings.json` — duvar ayarları
+The laboratory runs in **English**: agent definitions, instructions, notes, the
+canteen, rules, scripts, exam papers, technical reports.
 
-İlk iş olarak kurulacak klasörler: `veri/` · `kartlar/` · `notlar/` · `kantin/` ·
-`sinav/` · `talimatlar/` · `betikler/` · `raporlar/`
+**One role speaks Turkish:** Derya, the reporter, who writes the plain account
+for the user. Technical terms are never translated. See `TEAM.md`.
 
-## Durum
+## Files
 
-`2026-09-13` kuruldu, `2026-09-14` proje deposunun içine taşındı ve duvar
-ayarları eklendi. Hiçbir veri indirilmedi, hiçbir ajan çalışmadı.
+- `TEAM.md` — who is who, what they do, what they cannot do
+- `RULES.md` — the rules that do not change
+- `TACTICS.md` — how it is done, step by step
+- `LEDGER.md` — what happened when; append-only, no line is ever deleted
+- `CLAUDE.md` — the first thing a session opened in this folder reads
+- `.claude/settings.json` — the wall settings
+- `.claude/agents/` — the six agent definitions
+- `.claude/skills/` — skills, and `SOURCES.md` saying where each came from
 
-**Sonra eklenecek:** izleme ekranı. Kartlar, notlar, oylar ve itirazlar tek
-sayfada görünecek.
+Folders: `data/` · `cards/` · `notes/` · `canteen/` · `exam/` ·
+`instructions/` · `scripts/` · `reports/`
+
+## Status
+
+Founded `2026-09-13`, moved and walled `2026-09-14`, agents and skills set up
+`2026-09-18`, switched to English `2026-09-18`. No data downloaded, no agent has
+run yet.
+
+**To be added later:** the observation screen. Cards, notes, votes and
+objections on a single page.
