@@ -471,3 +471,39 @@ tokens**, 61 tool uses, 1,993,787 ms wall clock (≈33 minutes), as reported by
 the harness. This is the laboratory's first measured cost figure. It does not
 discharge RULES 25, which is about the token cost of the first 10 **cards**;
 no card exists yet.
+
+`2026-09-18 21:04 UTC` · **wall audit · after the universe-and-draw run** · Seven items worked
+through; **six passed, one failed, and two holes stay open by name.**
+
+**Passed.** (1) `autoMemoryDirectory` points inside this folder
+(`/home/user/balikcil/.claude/memory`, currently empty) — the 20:19 UTC fix
+holds. (2) The single instruction under `instructions/` carries no result, no
+prediction and no invented threshold; the only grep hits for steer language are
+the instruction's own anti-steer paragraph ("If you see a steer, a result, or a
+\"pay attention to X\" sentence in this instruction, report it"), and model and
+effort are stated (`model: opus · effort: high`). (3) No trace of the old
+project under `instructions/ notes/ canteen/ scripts/ reports/` — grep for its
+name, for `hyperopt`, `research_factory`, `user_data`, for `../..` and for
+absolute paths outside this folder returned nothing; Mateo's five scripts
+contain **no absolute path at all**, they work relative to the folder. (4) The
+exam is closed: `notes/`, `canteen/` and `cards/` hold only their `.gitkeep`,
+and no exam symbol name appears in any of them; `watcher`, `canteen-chair` and
+`skeptic` each close `exam/` in their own definition. No answer key exists yet,
+so nothing was sealed and nothing could be sealed late. (5) No agent definition
+carries the `Skill` tool; `quant-analyst` and `risk-manager` were not run.
+(6) `data-engineer` is still the only definition with `Bash`.
+
+**Failed · item 1, the deny list is not a blanket.** `permissions.deny` holds 20
+entries: 11 named files at the old project's root, 8 named subfolders, and the
+old project's session-log folder. There is **no rule denying the old project's
+tree as a whole.** Any file there that is not on that list — a script, a
+config, a folder added since the list was written — is still readable with the
+`Read` tool. RULES 1 forbids it as policy, and the agent definitions repeat the
+prohibition, but the settings enforce only the named paths. Nothing was read:
+this is a gap in the enforcement, not an observed breach.
+
+**Holes that stay open.** (a) `wall.sh` is registered on `Bash` only, so the
+`Read`, `Write` and `Edit` tools do not pass through it — found today when the
+hook refused a `Bash` heredoc and the same file went to disk unimpeded through
+`Write`. (b) The `cd`-then-relative-path gap recorded at 20:19 UTC is
+unchanged. Neither is closed in this entry; the audit changes no file.
