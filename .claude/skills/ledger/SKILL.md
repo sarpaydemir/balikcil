@@ -2,7 +2,7 @@
 name: ledger
 description: Appends a new entry to Balıkçıl's LEDGER.md. Only appends — never deletes or changes a line. Reads the clock from the system instead of guessing it. Use when something is set up, a decision is taken, a run completes, a fingerprint is sealed, or a rule changes.
 allowed-tools: Bash, Read
-argument-hint: [subject of the entry]
+argument-hint: "[subject of the entry]"
 ---
 
 ## Current time (read from the system)

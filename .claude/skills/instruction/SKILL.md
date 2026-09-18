@@ -2,7 +2,7 @@
 name: instruction
 description: Writes an instruction for a Balıkçıl agent, runs it through a leak check, saves the full copy under instructions/, then launches the agent. Use whenever a watcher, canteen chair, skeptic, data engineer, exam candidate or reporter is to be run.
 allowed-tools: Bash, Read, Write, Glob, Grep
-argument-hint: [agent name] [task]
+argument-hint: "[agent name] [task]"
 ---
 
 ## Available agents
