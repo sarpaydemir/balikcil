@@ -214,3 +214,60 @@ the wall; the coordinator had no permission to change settings this session.
 (3) Nadia is not a separate definition. (4) Token cost not measured (RULES 25).
 (5) Disk: 16 GB free, order book files are large (RULES 28) — Mateo measures
 before downloading. (6) The GitHub token above.
+
+`2026-09-18 20:19 UTC` · **hooks · wall and auto-commit** · Two hooks registered in
+`.claude/settings.json`, scripts in `.claude/hooks/`. Added because the
+laboratory is about to run unattended, where nothing may depend on the
+coordinator remembering to do something.
+
+**`wall.sh`** (`PreToolUse` on `Bash`) refuses commands reaching for the old
+project or for past session logs. This closes the command-line read hole that
+RULES 5 states the settings cannot close.
+
+**It was narrowed once, after failing in practice.** The first version matched
+the bare project name anywhere in the command, and it immediately blocked a
+legitimate write: this very ledger entry, which *mentions* the old path while
+recording that the memory path was fixed. Writing about a path is not reading
+it, and LEDGER.md and settings.json legitimately carry that name (the move
+record and the deny list). The match now requires the name to be preceded by a
+slash, which covers absolute, `../` and `~/` forms.
+
+**Residual gap, stated rather than hidden:** a command that first changes
+directory outside the folder and then uses a bare relative name would slip
+through. This hook is defence in depth, not the only control — the others are
+the agent definitions, the `Read()` deny rules, and the fact that only
+`data-engineer` has `Bash`.
+
+Tested with 10 cases from a script kept outside the project (the test strings
+are the ones the hook hunts for, so they must not appear in the command line
+that launches the test). 6 dangerous forms denied, 4 legitimate forms allowed,
+including writing about the path and an ordinary download.
+
+**`autocommit.sh`** (`Stop`) stages, commits and pushes at the end of every
+turn. Every path in it exits 0, so it can never fail a turn. Push results are
+appended to `reports/git-push.log`; a failed push leaves the commit local and
+says so rather than being swallowed (RULES 21). The remote URL is never printed
+because a token is embedded in it.
+
+**Agents do not commit.** Five of the six definitions have no `Bash` at all and
+`data-engineer`'s definition says nothing about git. Commits come from the
+coordinator's turn ending.
+
+`2026-09-18 20:19 UTC` · **memory path fixed** · `autoMemoryDirectory` pointed into the old
+project's tree while the project sits at `/home/user/balikcil`, so memory was
+being written outside the wall. Now `/home/user/balikcil/.claude/memory`. The
+`permissions.deny` list was left in place as a second line of defence.
+
+`2026-09-18 20:19 UTC` · **YAML fix** · Three frontmatter blocks did not parse.
+`canteen-chair` carried an unquoted colon inside `description` ("in two
+forms: a mechanical rule"), which YAML read as a mapping; replaced with a dash.
+The `instruction` and `ledger` skills had `argument-hint` values in square
+brackets, which YAML read as a flow sequence; both quoted. All frontmatter under
+`.claude/agents/` and `.claude/skills/` now parses — verified with a script,
+not by eye. The three project skills load.
+
+`2026-09-18 20:19 UTC` · **still open** · (1) The wall hook's residual gap above.
+(2) Nadia is not a separate definition. (3) Token cost not measured (RULES 25).
+(4) Disk: 16 GB free, order book files are large (RULES 28) — Mateo measures
+before downloading. (5) The GitHub token in the git config should be treated as
+exposed and rotated.

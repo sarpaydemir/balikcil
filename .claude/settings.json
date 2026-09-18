@@ -27,8 +27,31 @@
     "duckdb-skills@claude-plugins-official": true,
     "quantitative-trading@claude-code-workflows": true
   },
-  "autoMemoryDirectory": "/home/user/freqtrade_hyperopt/projects/balikcil/.claude/memory",
+  "autoMemoryDirectory": "/home/user/balikcil/.claude/memory",
   "claudeMdExcludes": [
     "/home/user/freqtrade_hyperopt/CLAUDE.md"
-  ]
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/wall.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/autocommit.sh"
+          }
+        ]
+      }
+    ]
+  }
 }
