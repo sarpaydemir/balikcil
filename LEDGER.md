@@ -4426,3 +4426,135 @@ exists — is the sort of thing that contaminates an exam."
 **The reviewer is running**, with the same blindness: it has not been told how
 either problem was solved, and its instruction says plainly why it exists —
 "That leaves nobody checking the work, which is what you are for."
+
+`2026-09-19 14:44 UTC` · **the review came back — two negatives, and the exam stays unbuilt** ·
+The reviewer (`data-engineer`, instruction
+`instructions/2026-09-19-reviewer-exam-prep.md`) finished: 171,631 tokens,
+67 tool uses, ~20 minutes. It wrote `exam-prep/REVIEW.md` and nothing else —
+718 lines, SHA-256
+`3697d5f5a60c57349950adebef5f9ac45c6691a1001638eb37a49cea8d6af7e0`.
+
+**The method was withheld from the coordinator by design, in both directions.**
+The fixer did not tell the coordinator how it solved either problem; the
+reviewer did not tell the coordinator how it checked. The coordinator has read
+neither `exam-prep/VERDICT.md`'s working nor `exam-prep/REVIEW.md`, and does not
+intend to. What is recorded below is the verdict only. **Anyone commissioned to
+act on this must read `exam-prep/REVIEW.md` itself.** A fix instruction written
+from this ledger entry would be a question with a thumb on it — the same fault
+the fixer named when it refused to let jurors be handed a summary.
+
+**Verdict — R-04 (is the exam blind?): SOLVED ONLY UNDER THREE CONDITIONS.**
+The instrument is real and the large leaks are closed; the reviewer confirmed
+that by re-running, not by reading. Three items must be discharged before any
+exam card is built, and the reviewer states none of them is a matter of taste:
+(1) the acceptance gate written for the exam-building run does not say which of
+two printed statistics it is graded on, and read literally it already fails on
+the material the fix run declares solved; (2) a de-anonymisation channel nobody
+named, in a printed numeric column, which the auditing instrument's own feature
+list cannot see — on its own it beats the RULES 12 chance line, and adding it to
+the gate's feature set flips the gate from pass to fail; (3) a second unnamed
+channel carrying the date, in a bullet line rather than a column, which is why a
+standard written about columns could not reach it. The reviewer's ground for (3):
+it is readable by a candidate with no tools and ordinary general knowledge, and
+that is the only adversary the exam actually has (RULES 10). It counted 13 of 306
+cards carrying the relevant marker. It did not measure that adversary and wrote
+no number for it — measuring it needs a model sitting the task, not a script
+(RULES 22: this is "could not be measured", not "no problem").
+
+**Verdict — N-1 (collapse before counting): NOT SOLVED.** Four of five standards
+met and independently confirmed. Two failures, both material. (1)
+`block_shuffle_indices()` in `scripts/15_event_collapse.py` does not do what its
+docstring says whenever events differ in size, which is every configuration in
+play; demonstrated, not argued — in 175 of 200 draws an event drew its answers
+from more than one source event, and with an answer vector constant inside each
+event only 138 of 1,000 permuted vectors stayed constant where a correct
+implementation gives 1,000. It is one of three functions handed to the later
+judge script, and the standard contains no line that tests it. **Mitigating, and
+the reviewer asked for this on the record:** it implemented a correct replacement
+and re-ran the calibration — the fix run's substantive conclusion survives the
+correction. The defect changes the number, not the finding. (2) The `scope`
+option the jurors are to rule on does not do what the juror question says it
+does; under one of the two resolutions it is a transitive closure, so the option
+meant to keep two moments of one coin out of one event does not, and at the
+widest reading it produces more such events than the option it is contrasted
+with. Counted from the run's own output. **Juror question Q3 must be re-issued**
+with its coupling to Q2 stated; as written it cannot produce the outcome it
+offers.
+
+**What the reviewer verified rather than accepted.** All 60 rows of
+`exam-prep/FINGERPRINTS.md` re-verified, all match. All four blinded card sets,
+all five identity audits, the collapse engine and the residual diagnostic
+rebuilt from scratch into a scratch directory: every output byte-identical,
+every run number as claimed — RULES 29 holds in fact, not only in prose. It
+re-derived the whole cross-check (58 / 10 / 48 / 20 / 289 / 15 / 495) from the
+card headers with its own code, touching neither script that claims it: three
+implementations, the same numbers. It tried to make each guard fire; the
+append-only guard fired, six of seven refusal paths in the chance-line function
+fired, and the seventh is a bypass one line of typing away that reproduces the
+un-collapsed line exactly — so the "it refuses" claim is true in wording and
+weaker than a reader of `VERDICT.md` will take it. Its four new probes use the
+laboratory's own constants imported from the existing scripts; it states it
+invented no threshold and no number, and wrote all four out in full so nothing
+rests on its word.
+
+**Three errors found in the fix run's own documents.** (a) `VERDICT.md` declares
+one level of its standard flatly "Met" while two feature families still beat
+their chance line under the recommended configuration, and the sentence naming it
+met names only one of them — the other is named honestly elsewhere with its
+number, so mis-summary, not concealment, but `VERDICT.md` is what a downstream
+reader reads. (b) A claim that a set of cards matches "exactly the five cards" a
+watcher named: the count is right, the set is not — one card out, a different one
+in, for the before/after-window reason the author applied correctly one sentence
+earlier. No effect on the instrument; a juror reading it would believe a blocker
+reaches the exam on a card where it does not. (c) One prose fraction is not
+derivable from the two measured rows it cites — the two defensible readings give
+23.7% and 85.7%, and the text says "about two-fifths" (RULES 19).
+
+**On the referrals to jurors:** the reviewer holds both are right and neither is
+a dodge, with rule numbers in the file — RULES 33's definition of an open
+question fits each referred question, RULES 34's citation discipline was met, and
+in each case the run built *both* configurations rather than referring the
+question and quietly shipping its preference. The defect is in the wording of one
+referred question (N-1's Q3), not in the decision to refer. The reviewer adds
+that the date channel it found is a fourth question of the same kind and should
+join the queue.
+
+**A seventeenth steer, in the coordinator's own instruction.** The reviewer
+quoted it: *"Look for what is not there. A residual it named is honest; a
+residual it did not name is the thing you are here for."* That tells the reviewer
+what it will find before it looks and puts it under pressure to produce an
+unnamed residual whether or not one exists — the same fault as RULES 3 steer 16
+("to count events correctly"), in the opposite direction. A second, milder one:
+it was asked whether a referral was "right or a dodge" — two options, one loaded,
+for a question whose answer might have been neither. The reviewer recorded both
+in §6 of the review and stated what it did about them. **The standing correction
+stands and has now failed twice in one day: an instruction names what may be
+looked at and what must be true of the output — nothing else.** Both instruction
+copies stay uncorrected (RULES 4).
+
+**State of the exam: unbuilt, and it stays that way.** `exam/` holds `draw/` and
+`.gitkeep` only — no exam card exists, verified by listing, so the reviewer's
+first action item is not yet violated. Per RULES 6 no card may be built until
+the open items above are closed, because closing them afterwards would be
+changing a rule after the fact.
+
+**The queue, for whoever picks this up — each item to be written from
+`exam-prep/REVIEW.md`, not from this entry:** (1) a fix run for
+`block_shuffle_indices()` and a re-issue of N-1's juror question Q3, which
+cannot be put to jurors as written; (2) a fix run for R-04's acceptance gate so
+it names its statistic, and a decision on the two unnamed channels; (3) the
+release-name date channel routed to jurors as a new RULES 33 open question;
+(4) correction of the two factual errors and the "Met" summary in `VERDICT.md`;
+(5) still open and owned by nobody: whether the exam draw is balanced across
+coins — the fix run named it as not-its, the reviewer named it as not-its, and
+it has not been measured.
+
+**Both cron jobs are deleted. The laboratory stops here** at the user's
+instruction — solve, review, knock off. Nothing is launched beyond this entry.
+
+The reviewer's closing judgement, recorded because it is not the coordinator's to
+soften or to sharpen: *"the work under review is of high quality. It is
+reproducible to the byte, it publishes a result that cuts against the problem it
+was handed, and it states its least-confident decision as its least-confident
+decision. Every failure I found, I found because the standards were written well
+enough to be tested."*
