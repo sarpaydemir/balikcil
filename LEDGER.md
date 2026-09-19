@@ -2378,3 +2378,47 @@ change there would produce −100% and infinity.
 **Third agent to flag the `canteen/` versus `notes/` contradiction**, after Kenji's
 own earlier run and Ingrid's. Same resolution each time: follow the instruction,
 report the conflict, do not decide it.
+
+`2026-09-19 10:56 UTC` · **observation · Lukas · v2 batch 01 · finished** · 34 of 34 read, notes
+at `notes/2026-09-19-lukas-v2-batch01.md`, about 85 notes each carrying a card
+number. No steer found. **258,566 tokens.**
+
+**His firmest finding is entirely negative and he said so:** none of the usual
+"something is coming" markers separates large from calm in this batch, and he
+gave the counterexamples in pairs rather than in prose — volume compression at
+0.10×, 0.19× and 0.37× of the weekly average on **calm** cards against 0.13×,
+0.24× and 0.44× on **large** ones; a last-hour volume spike of 4.8× and 2.5× on
+calm against 6.0× and 2.5× on large; a dead-quiet before window on six calm
+cards and on three large ones. Book skew above 1 at the last hour holds on 15 of
+17 large **and** 12 of 17 calm — "a standing property of the data" — and used as
+a direction guess it goes 10 right and 7 wrong. Confidence 4, and he wrote that
+this is "the firmest thing I have, and it is all negative."
+
+**He then dismantled his own positive finding.** Three separate measures — hot
+hours, a wide 7-day range, a thin book relative to turnover — each pick out
+almost the same cards, and those cards are **three coins**, not three signals.
+"It also catches under half the large moments."
+
+**And he checked his strongest pattern against the exam.** In large cards the
+after tends to reverse the before 24 hours, 10 of 11 — but he flagged
+immediately that this is "conditional on knowing the card is a large moment,
+which the exam does not tell you", and then measured it blind across all 18
+cards with a before-move over 3%: 13 right, 5 wrong; calm cards split 3–4.
+
+**Four cards carry depth values he would not trust**, each named: C287, C041
+(identical depth pairs repeated for three consecutive hours — carried forward,
+not measured), C053 and C042 (single-hour spikes against their own baseline).
+
+**One disclosure of his own, unprompted.** He wrote a placeholder file into the
+session scratchpad while working out how to correct a line without an Edit tool
+— outside the laboratory folder, containing nothing from the cards. His words:
+"it is a write and I am reporting it rather than leaving it silent." **The
+coordinator's instruction said "write nothing else, anywhere" and did not
+mention the scratchpad**; the instructions issued after this one now close it
+explicitly. No card content left the folder.
+
+`2026-09-19 10:56 UTC` · **v2 batch 01 complete · measured spend** · Four watchers, 34 cards
+each, effort high: Lukas 258,566 · Kenji 241,844 · Amara (running) · Ingrid
+95,494. **Batch 02 launched for the three who are free**; Amara follows when
+batch 01 releases her. No division is performed on these numbers and no claim is
+made about whether they fit — that is the user's to see.
