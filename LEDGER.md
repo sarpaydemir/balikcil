@@ -2503,3 +2503,50 @@ design, not about the exchange.
 
 Interval changes across 68 flags in this batch: **zero.** "Anyone scoring it from
 batch 02 is scoring an empty cell."
+
+`2026-09-19 11:05 UTC` · **observation · Lukas · v2 batch 02 · finished** · 34 of 34 read, notes
+at `notes/2026-09-19-lukas-v2-batch02.md`, a note per card plus 11 cross-card
+notes, defects listed. No steer found. **253,708 tokens.**
+
+**He found the same-market-hour pairs independently of Amara, in a different
+batch, by the same method — and two of his pairs carry opposite labels:**
+- `C049` after-hour +23 and `C204` after-hour +15 are the same hour, both
+  printing BTC −2.27 / ETH −3.32. **C049 large (−9.81%), C204 calm (−4.97%).**
+- `C224` after-hour +18 and `C183` after-hour +7 are the same hour, both BTC
+  −1.98 / ETH −1.60. **C224 calm (−6.29%), C183 large (−13.38%).**
+
+Two watchers, two batches, no contact, same finding: **the market hour does not
+determine the label.** Under RULES 13 these are single events, and he named five
+more large moves sitting on hours where bitcoin and ethereum fell 2–4%, "i.e.
+they do not belong to the coin."
+
+**A large move can arrive with nothing at all in front of it**, at least 3 of 15
+large cards, confidence 5: `C088` has the **lowest** before-volatility of all 15
+large cards, no before-hour above 0.94%, volume below its own weekly average —
+and then moved **+23.20%**. `C219` likewise, and its burst did not begin until
+after-hour +15. Against them, the quietest card of all 34 (`C016`) stayed calm.
+**Quiet before-windows precede both outcomes.**
+
+**Something that bears on exit design and nobody had measured:** in `C065` the
+entire +21.05% is **one hour** (+20.85% at after-hour +23); from +0 to +22 the
+price moved +0.02%. In `C219`, `C174`, `C088` and `C244` the burst also begins
+15–23 hours in. **A rule holding less than about 15 hours would collect none of
+five of the fifteen large moves.** That is a constraint on the exit half of any
+idea (RULES 8), discovered by reading rather than assumed.
+
+**Eight card defects named, all in his own columns**, including `C018` whose bid
+depth is frozen at `3.19k` for all 48 rows, `C183` whose bid depth reads
+`140.79` — no `k` suffix — for seven consecutive hours against 48k–96k
+elsewhere, and `C135` whose before-section trade count reads exactly `3k` for
+all 24 hours.
+
+**And a batch-wide limit that touches every trade-count statement anyone makes:**
+the `trades` column prints counts below about 1000 exactly but **rounds
+everything above to one significant figure** (`1k`, `2k`, `27k`), so mid-range
+counts carry roughly ±50% granularity. He wrote that every trade-count statement
+he made inherits it. Raw depth also spans about 600× between coins in the batch,
+"so it cannot be used unnormalised."
+
+**He stated the coverage limit of his own comparison rather than hiding it:** the
+depth-trend comparison covers all 14 usable large cards but **only 7 of the 19
+calm cards**, "so that comparison is partial and I said so in the notes."
