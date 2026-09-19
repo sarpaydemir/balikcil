@@ -2196,3 +2196,88 @@ is the next jury. The coordinator will not answer it, and in particular will not
 offer the defence that the watchers read each card's kind off the card anyway;
 that is evidence for a jury, and the last time the coordinator reasoned this way
 about this very artefact it was wrong.
+
+`2026-09-19 10:35 UTC` · **RULES 23 BREACHED BY THE COORDINATOR · the clock was guessed, not read** ·
+Found by Mateo, who reported it as "a factual discrepancy in the instruction":
+the instruction called the existing order "the card order built at **07:55
+UTC**", while the v1 manifest's own clock line reads **`2026-09-19T09:54:29Z`**
+and the file's mtime agrees. He said he did not know which was right, only what
+the manifest recorded, and used the manifest's time.
+
+**The manifest is right and the instruction was wrong.** `RULES.md` 23 says
+"The clock is not guessed, it is read." Every ledger entry in this file took its
+time from `date -u` and is sound. **The instruction titles and filenames did
+not** — the coordinator typed them by hand, carrying forward the last time it
+happened to have seen. At least one is out by about two hours, and the others
+under `instructions/` should be read as approximate rather than as clock
+readings.
+
+**Not corrected in place.** Renaming the files or editing their titles would
+overwrite the record of what was actually sent to an agent (RULES 4), which is
+worse than a wrong timestamp. The instruction copies stay exactly as sent, and
+this entry is the correction. **From here the clock is read before an
+instruction is written, the same way the `ledger` skill reads it.**
+
+The current time, read: **2026-09-19 10:35 UTC**.
+
+`2026-09-19 10:35 UTC` · **`data/` is not in git · a durability gap, stated** · `.gitignore`
+excludes `data/` with the comment "re-downloadable raw data does not enter git".
+Measured just now: **10,642 files on disk under `data/`, 0 tracked.** Tracked
+and pushed: `cards/` 308, `decisions/` 28, `instructions/` 27, `notes/` 7,
+`scripts/` 14, `reports/` 3.
+
+The comment is true of the downloaded archive and false of what has grown beside
+it: `data/moments/`, `data/card-order/`, `data/pilot/` and the per-file
+manifests are **derived artefacts with fingerprints**, not re-downloadable raw
+data. If this machine were lost, they would go with it.
+
+**What saves it is that they are reproducible rather than backed up:** the
+scripts are tracked, the seeds and their derivations are in this ledger, and
+every run has demonstrated that the same input reproduces the same output byte
+for byte. The key fingerprints are here too. **Recorded as an open item**, not
+fixed — changing `.gitignore` is a decision about what the repository is for,
+and it is not one the coordinator takes while the laboratory is running.
+
+`2026-09-19 10:35 UTC` · **the order rebuilt · v2 conforms · v1 kept intact** · Mateo did not take
+the coordinator's measurement as the answer: he wrote his own checker,
+`scripts/12_order_conformance.py`, one test per bullet of the ratified
+check-list, runnable standalone on either order.
+
+**On v1 he measured more than the coordinator did.** The coordinator found the
+kind is a function of position at period 2. He enumerated every period from 2 to
+153 and found **the kind is a function of position for all 76 even periods from
+2 to 152**. v1 passes T0–T4 and T6 and fails T5. **DOES NOT CONFORM.**
+
+**v2 passes every ratified test.** One uniform shuffle over all 306 card numbers;
+kind, coin and date take no part and no position is reserved. Seed **derived**:
+the previous run's source string plus one new field, the SHA-256 of the ratified
+verdict — the document the order is built to satisfy, which did not exist when
+the first order was drawn. RULES 29 exactly: the input grew, so the number
+changed, so the order changed. He verified the rule by recomputing the
+**previous** seed from its own source string and reproducing it exactly.
+
+Current order: `data/card-order/v2/order.csv`, SHA-256
+`9f3a2cf675cfb76b3fceee8d92908c5e05a918f34a1bf9c6fc8471bb1555131b`, nine
+batches of 34. **All ten v1 artefacts re-fingerprinted after the run and
+unchanged, byte for byte** (RULES 30). A pointer file
+`data/card-order/SUCCESSION.md` says which order is current and why the other
+was replaced, so anyone listing the folder sees it without reading a manifest.
+
+**The unsettled boundary case is live in the new order and he refused to settle
+it:** the longest run of one kind is **9**, and the ratified verdict declines to
+say whether an honest shuffle that clumps must be re-drawn. His script **draws
+once and never re-draws** — re-drawing on a criterion would require settling the
+number that RULES 33 keeps out of his hands. The order on disk is the first and
+only draw.
+
+**He reported a crash of his own as a crash:** `KeyError: 'move'` at
+`scripts/12_order_conformance.py` line 191 on the first run, because his card
+loader did not carry a field the checker needed. Fixed, re-run, nothing had been
+written before it. "Reporting it because a crash is a failure, not a
+non-event."
+
+**And he found two more steers in the coordinator's instruction.** The Role
+paragraph said "This run builds the order again under the ratified requirement"
+— **the outcome of task 1, stated before task 1 asked him to reach it**, in the
+same instruction that told him to stop if the old order conformed. And task 3
+presupposed the seed would differ. Both accepted.
