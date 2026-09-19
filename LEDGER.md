@@ -2110,3 +2110,41 @@ She also reported honestly that she did **not** verify the two watcher
 definitions differ only in effort, because comparing them was not among the
 files her instruction permitted — "reporting this as not verified rather than as
 verified."
+
+`2026-09-19 10:24 UTC` · **card-order jury · three answers in · and the coordinator's mechanical check** ·
+All three jurors answered, none having seen an order. Their answers converge on
+two halves: **(a)** the sequence must be a shuffle over the whole pool of the
+ten coins' cards, produced by a randomising procedure and not derivable from any
+card property; **(b)** in the delivered sequence the two kinds must be mixed,
+and **position must not predict kind.** Juror 2 wrote (b) as an explicit test:
+"does a fixed position→kind rule hold throughout — strict alternation, every
+even card calm, every third large? → fail."
+
+**All three also left the same point deliberately unsettled**, and each gave the
+same reason: whether a *fair* shuffle that happens to produce a long same-kind
+run must be re-drawn. Answering it needs a run-length limit, and RULES 33 bars a
+juror from setting a number. Juror 3 put its confidence at **2 of 5** on the one
+sub-claim that excludes a "shuffle within each kind, then alternate"
+construction, and said plainly it could not rule that out from the text alone —
+it excluded it using `watcher-high.md`, a file that declares itself subordinate
+to the rule files, and told the referee to mark that.
+
+**The coordinator's check of the built order, run in code, reported as a
+measurement and not as a ruling:** across all 306 positions the order
+`data/card-order/order.csv` is **strictly alternating** — every even position
+`large`, every odd position `calm`, run-length histogram `{1: 306}`, not one
+exception. Position determines kind exactly.
+
+**What that means is the referee's to say and not the coordinator's.** The
+requirement is not ratified until the referee rules; comparing an artefact to a
+ratified requirement is arithmetic and is the coordinator's job, but the
+requirement does not exist yet. Recorded now, before the verdict, so that the
+comparison cannot later be accused of having been fitted to it (RULES 6).
+
+**If the requirement is ratified as the jurors wrote it, three things follow and
+none of them is a judgement call:** the order is rebuilt; the batch files are
+rebuilt with it; and **batch 01's 829,967 tokens of notes** become a question
+about contamination that the coordinator may not answer alone. All four watchers
+reported reading each card's kind off the card itself, and two said unprompted
+that they did not use position — that is evidence for a jury to weigh, not a
+defence for the coordinator to offer.
