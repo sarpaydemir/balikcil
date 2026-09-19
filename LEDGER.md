@@ -1463,3 +1463,33 @@ measurable for the first time — the token cost of ten cards at each effort
 level, the estimate for the full 306, and the note-quality comparison TACTICS 4
 asks for. The effort level for the real observation run is chosen from that
 measurement and from nothing else.
+
+`2026-09-19 09:14 UTC` · **pilot · medium arm finished · two card-level facts it reported** ·
+Notes at `notes/2026-09-19-round1-price-medium.md`, all ten cards read, none
+missing or broken, no steer seen in the instruction. **The comparison waits for
+the high arm**; what follows is not about effort levels but about the cards
+themselves, and is recorded now because it is the coordinator's business, not a
+watcher's interpretation.
+
+1. **A "calm" card can carry a large move.** The watcher measured C001, printed
+   as calm, at **+4.19 %** over its 24 hours, and C010, printed as calm, at
+   **−4.87 %**. That is not a defect in the card: TACTICS 2 defines a calm
+   moment as a random start hour at least 72 h from any *large* movement, and
+   says nothing about the moment being quiet. **The word "calm" describes where
+   the moment came from, not what happened in it.** Whether that is what the
+   laboratory wants from its negative class is an open question for a jury, and
+   it is written here so it is not met by surprise in the canteen or the exam.
+2. **There is no volatility column on the cards.** The watcher's field of view
+   as `TEAM.md` writes it includes volatility; TACTICS 3's list of what goes on
+   a card does not. The watcher computed it from `chg%` itself and said so in
+   every note it used it in, which is the correct behaviour. Recorded as a gap
+   between `TEAM.md` and TACTICS 3, not as a fault in the card.
+
+**Also reported, and it is a real omission in the instruction:** the watcher was
+given a field of view but not a name, while its definition names the four
+watchers. Its notes are signed by field. The four real observation instructions
+will name the watcher.
+
+**Not recorded here:** the watcher's observations about what the price series
+does. Those belong in `notes/` and go to the canteen. The coordinator does not
+interpret a card, and does not summarise one into this ledger either.
