@@ -1,0 +1,103 @@
+{
+  "script": "scripts/20_build_key.py",
+  "built_utc": "2026-09-19T23:13:52+00:00",
+  "seed": 20260919,
+  "n_items": 100,
+  "n_per_author": 25,
+  "sources": [
+    "notes/2026-09-19-amara-v2-batch01.md",
+    "notes/2026-09-19-amara-v2-batch02.md",
+    "notes/2026-09-19-amara-v2-batch03.md",
+    "notes/2026-09-19-amara-v2-batch04.md",
+    "notes/2026-09-19-amara-v2-batch05.md",
+    "notes/2026-09-19-amara-v2-batch06.md",
+    "notes/2026-09-19-amara-v2-batch07.md",
+    "notes/2026-09-19-amara-v2-batch08.md",
+    "notes/2026-09-19-amara-v2-batch09.md",
+    "notes/2026-09-19-ingrid-v2-batch01.md",
+    "notes/2026-09-19-ingrid-v2-batch02.md",
+    "notes/2026-09-19-ingrid-v2-batch03.md",
+    "notes/2026-09-19-ingrid-v2-batch04.md",
+    "notes/2026-09-19-ingrid-v2-batch06.md",
+    "notes/2026-09-19-ingrid-v2-batch07.md",
+    "notes/2026-09-19-ingrid-v2-batch08.md",
+    "notes/2026-09-19-ingrid-v2-batch09.md",
+    "notes/2026-09-19-kenji-v2-batch01.md",
+    "notes/2026-09-19-kenji-v2-batch02.md",
+    "notes/2026-09-19-kenji-v2-batch03.md",
+    "notes/2026-09-19-kenji-v2-batch05.md",
+    "notes/2026-09-19-kenji-v2-batch07.md",
+    "notes/2026-09-19-kenji-v2-batch08.md",
+    "notes/2026-09-19-kenji-v2-batch09.md",
+    "notes/2026-09-19-lukas-v2-batch01.md",
+    "notes/2026-09-19-lukas-v2-batch03.md",
+    "notes/2026-09-19-lukas-v2-batch04.md",
+    "notes/2026-09-19-lukas-v2-batch06.md",
+    "notes/2026-09-19-lukas-v2-batch07.md",
+    "notes/2026-09-19-lukas-v2-batch08.md",
+    "notes/2026-09-19-lukas-v2-batch09.md"
+  ],
+  "selection_rule": "The published selection rule for a note line.\n\nA line qualifies when all of the following hold:\n  (a) it is not a heading and not blank;\n  (b) it cites at least one card number of the form C###;\n  (c) it is written in the note format of TACTICS §4,\n      `card no · what I saw · why I think so · how sure I am (1-5)`:\n      at least three ' · '-separated fields, the last of which is a single\n      digit 1-5;\n  (d) it contains no laboratory member's name, which would give the\n      field-of-view label away.\n",
+  "qualifying_pool_per_author": {
+    "ingrid": 261,
+    "kenji": 357,
+    "amara": 482,
+    "lukas": 587
+  },
+  "label_bases": {
+    "field_key": "the watcher file the line came from; TEAM.md defines the four fields of view and the criteria text is quoted from it",
+    "multi_key": "regex count of distinct C### numbers on the line",
+    "confidence_key": "the 1-5 digit the watcher wrote as the last field; it is removed from text_no_confidence before that item is sent"
+  },
+  "key_distribution": {
+    "field": {
+      "OUTSIDE_WORLD": 25,
+      "PRICE_ITSELF": 25,
+      "CROWD": 25,
+      "EXCHANGE_BEHAVIOUR": 25
+    },
+    "multi": {
+      "SINGLE": 52,
+      "MULTI": 48
+    },
+    "confidence": {
+      "4": 51,
+      "5": 25,
+      "3": 19,
+      "2": 4,
+      "1": 1
+    }
+  },
+  "items_sha256": "5871ab671c0bcb18c97fbafa29bfe20bc97c392e294b1efe1fadf2c0dcd79462",
+  "key_sha256": "2b9c95375e9bdb4ad134cd591e8dce792edd5ce1f09278abb245bb45ccf26c7f",
+  "note": "items.jsonl carries the id and the text only — no author, no source file, no label. key.jsonl carries the labels and the provenance. The run script reads items.jsonl only.",
+  "notarisation": {
+    "posted": "sha256:2b9c95375e9bdb4ad134cd591e8dce792edd5ce1f09278abb245bb45ccf26c7f",
+    "http_status": 200,
+    "latency_s": 0.3292,
+    "local_clock_utc": "2026-09-19T23:13:52+00:00",
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "is_hex": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0.04,
+            "YES": 0.96
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 377,
+        "output_tokens": 32,
+        "cost": 1.5834e-05
+      },
+      "id": "gen-dec-1789859632-fC65sN7LREPHCIDORKfr",
+      "provider": "TypeSafe"
+    },
+    "provider_unix_time": 1789859632,
+    "provider_time_utc": "2026-09-19T23:13:52+00:00"
+  }
+}

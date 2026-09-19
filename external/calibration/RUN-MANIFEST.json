@@ -1,0 +1,20 @@
+{
+  "script": "scripts/21_run_endpoint.py",
+  "started_utc": "2026-09-19T23:14:58+00:00",
+  "finished_utc": "2026-09-19T23:16:45+00:00",
+  "endpoint": "https://openrouter.ai/api/alpha/decisions",
+  "model_requested": "typesafe/jev-1.13",
+  "model_served": "typesafe/jev-1.13-20260917",
+  "items_sha256": "5871ab671c0bcb18c97fbafa29bfe20bc97c392e294b1efe1fadf2c0dcd79462",
+  "key_sha256_at_run_time": "2b9c95375e9bdb4ad134cd591e8dce792edd5ce1f09278abb245bb45ccf26c7f",
+  "calls_total": 300,
+  "calls_ok": 300,
+  "calls_failed": 0,
+  "cost_usd_measured": 0.00667027,
+  "input_tokens_total": 158816,
+  "output_tokens_total": 11748,
+  "latency_s_median": 0.3399,
+  "latency_s_max": 0.6099,
+  "wall_clock_s_this_pass": 107.1,
+  "responses_sha256": "2b0da346faeb4e6b19787c71b3c9f4aa7f54168bcfeb75e9a114d3e1acf4fa6d"
+}

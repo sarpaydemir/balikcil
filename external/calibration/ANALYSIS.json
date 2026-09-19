@@ -1,0 +1,1111 @@
+{
+  "script": "scripts/22_compare.py",
+  "ordering_check": {
+    "key_digest_matches_notarised": true,
+    "notarisation_provider_unix_time": 1789859632,
+    "earliest_call_provider_unix_time": 1789859698,
+    "calls_with_no_provider_time": 0,
+    "every_call_after_notarisation": true,
+    "seconds_between_notarisation_and_first_call": 66
+  },
+  "inputs": {
+    "key_sha256": "2b9c95375e9bdb4ad134cd591e8dce792edd5ce1f09278abb245bb45ccf26c7f",
+    "items_sha256": "5871ab671c0bcb18c97fbafa29bfe20bc97c392e294b1efe1fadf2c0dcd79462",
+    "responses_sha256": "2b0da346faeb4e6b19787c71b3c9f4aa7f54168bcfeb75e9a114d3e1acf4fa6d",
+    "comparison_sha256": "c9377461c70c2c485bc3d22bf513761cfd39c86d2bbe43f674e2689c2f93aa62"
+  },
+  "question_sets": {
+    "FIELD": {
+      "n": 100,
+      "agreement_with_key": 0.73,
+      "n_correct": 73,
+      "n_wrong": 27,
+      "key_class_counts": {
+        "OUTSIDE_WORLD": 25,
+        "PRICE_ITSELF": 25,
+        "CROWD": 25,
+        "EXCHANGE_BEHAVIOUR": 25
+      },
+      "baseline_always_majority_class": 0.25,
+      "baseline_uniform_guess": 0.25,
+      "confusion_matrix_truth_x_model": {
+        "OUTSIDE_WORLD": {
+          "PRICE_ITSELF": 8,
+          "OUTSIDE_WORLD": 17
+        },
+        "PRICE_ITSELF": {
+          "PRICE_ITSELF": 22,
+          "OUTSIDE_WORLD": 3
+        },
+        "CROWD": {
+          "CROWD": 23,
+          "OUTSIDE_WORLD": 1,
+          "EXCHANGE_BEHAVIOUR": 1
+        },
+        "EXCHANGE_BEHAVIOUR": {
+          "EXCHANGE_BEHAVIOUR": 11,
+          "OUTSIDE_WORLD": 2,
+          "PRICE_ITSELF": 7,
+          "CROWD": 5
+        }
+      },
+      "confidence_of_every_wrong_item": [
+        {
+          "item_id": "I042",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "CROWD",
+          "confidence": 0.2,
+          "p_of_truth": 0.26
+        },
+        {
+          "item_id": "I071",
+          "truth": "CROWD",
+          "model": "EXCHANGE_BEHAVIOUR",
+          "confidence": 0.27,
+          "p_of_truth": 0.43
+        },
+        {
+          "item_id": "I001",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.31,
+          "p_of_truth": 0.43
+        },
+        {
+          "item_id": "I096",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.39,
+          "p_of_truth": 0.43
+        },
+        {
+          "item_id": "I044",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.4,
+          "p_of_truth": 0.43
+        },
+        {
+          "item_id": "I020",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "OUTSIDE_WORLD",
+          "confidence": 0.5,
+          "p_of_truth": 0.37
+        },
+        {
+          "item_id": "I025",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.51,
+          "p_of_truth": 0.36
+        },
+        {
+          "item_id": "I069",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "CROWD",
+          "confidence": 0.57,
+          "p_of_truth": 0.32
+        },
+        {
+          "item_id": "I021",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.6,
+          "p_of_truth": 0.25
+        },
+        {
+          "item_id": "I031",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "CROWD",
+          "confidence": 0.61,
+          "p_of_truth": 0.25
+        },
+        {
+          "item_id": "I067",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.61,
+          "p_of_truth": 0.14
+        },
+        {
+          "item_id": "I033",
+          "truth": "PRICE_ITSELF",
+          "model": "OUTSIDE_WORLD",
+          "confidence": 0.68,
+          "p_of_truth": 0.23
+        },
+        {
+          "item_id": "I077",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "OUTSIDE_WORLD",
+          "confidence": 0.72,
+          "p_of_truth": 0
+        },
+        {
+          "item_id": "I087",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.72,
+          "p_of_truth": 0.12
+        },
+        {
+          "item_id": "I035",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.74,
+          "p_of_truth": 0.09
+        },
+        {
+          "item_id": "I056",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.76,
+          "p_of_truth": 0.15
+        },
+        {
+          "item_id": "I053",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.77,
+          "p_of_truth": 0.17
+        },
+        {
+          "item_id": "I059",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "CROWD",
+          "confidence": 0.78,
+          "p_of_truth": 0.1
+        },
+        {
+          "item_id": "I008",
+          "truth": "PRICE_ITSELF",
+          "model": "OUTSIDE_WORLD",
+          "confidence": 0.79,
+          "p_of_truth": 0.16
+        },
+        {
+          "item_id": "I060",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.79,
+          "p_of_truth": 0.09
+        },
+        {
+          "item_id": "I051",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.85,
+          "p_of_truth": 0.11
+        },
+        {
+          "item_id": "I090",
+          "truth": "PRICE_ITSELF",
+          "model": "OUTSIDE_WORLD",
+          "confidence": 0.88,
+          "p_of_truth": 0.09
+        },
+        {
+          "item_id": "I010",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.89,
+          "p_of_truth": 0.01
+        },
+        {
+          "item_id": "I092",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "CROWD",
+          "confidence": 0.93,
+          "p_of_truth": 0.05
+        },
+        {
+          "item_id": "I037",
+          "truth": "OUTSIDE_WORLD",
+          "model": "PRICE_ITSELF",
+          "confidence": 0.96,
+          "p_of_truth": 0.01
+        },
+        {
+          "item_id": "I017",
+          "truth": "CROWD",
+          "model": "OUTSIDE_WORLD",
+          "confidence": 0.99,
+          "p_of_truth": 0
+        },
+        {
+          "item_id": "I058",
+          "truth": "EXCHANGE_BEHAVIOUR",
+          "model": "PRICE_ITSELF",
+          "confidence": 1,
+          "p_of_truth": 0
+        }
+      ],
+      "confidence_right": {
+        "min": 0.32,
+        "p10": 0.55,
+        "median": 0.98,
+        "p90": 1,
+        "max": 1,
+        "mean": 0.8747
+      },
+      "confidence_wrong": {
+        "min": 0.2,
+        "median": 0.72,
+        "max": 1,
+        "mean": 0.6748
+      },
+      "correct_but_low_confidence": {
+        "below_0.5": 4,
+        "below_0.7": 15,
+        "below_0.9": 24,
+        "below_0.95": 26,
+        "below_1.0": 44
+      },
+      "escalation_curve": [
+        {
+          "threshold": 0.5,
+          "accepted": 91,
+          "accepted_share": 0.91,
+          "accuracy_on_accepted": 0.7582,
+          "errors_accepted": 22,
+          "escalated": 9,
+          "accuracy_on_escalated": 0.4444
+        },
+        {
+          "threshold": 0.6,
+          "accepted": 83,
+          "accepted_share": 0.83,
+          "accuracy_on_accepted": 0.7711,
+          "errors_accepted": 19,
+          "escalated": 17,
+          "accuracy_on_escalated": 0.5294
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 73,
+          "accepted_share": 0.73,
+          "accuracy_on_accepted": 0.7945,
+          "errors_accepted": 15,
+          "escalated": 27,
+          "accuracy_on_escalated": 0.5556
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 62,
+          "accepted_share": 0.62,
+          "accuracy_on_accepted": 0.8871,
+          "errors_accepted": 7,
+          "escalated": 38,
+          "accuracy_on_escalated": 0.4737
+        },
+        {
+          "threshold": 0.85,
+          "accepted": 60,
+          "accepted_share": 0.6,
+          "accuracy_on_accepted": 0.8833,
+          "errors_accepted": 7,
+          "escalated": 40,
+          "accuracy_on_escalated": 0.5
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 53,
+          "accepted_share": 0.53,
+          "accuracy_on_accepted": 0.9245,
+          "errors_accepted": 4,
+          "escalated": 47,
+          "accuracy_on_escalated": 0.5106
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 50,
+          "accepted_share": 0.5,
+          "accuracy_on_accepted": 0.94,
+          "errors_accepted": 3,
+          "escalated": 50,
+          "accuracy_on_escalated": 0.52
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 37,
+          "accepted_share": 0.37,
+          "accuracy_on_accepted": 0.9459,
+          "errors_accepted": 2,
+          "escalated": 63,
+          "accuracy_on_escalated": 0.6032
+        },
+        {
+          "threshold": 1.0,
+          "accepted": 30,
+          "accepted_share": 0.3,
+          "accuracy_on_accepted": 0.9667,
+          "errors_accepted": 1,
+          "escalated": 70,
+          "accuracy_on_escalated": 0.6286
+        }
+      ],
+      "latency_s": {
+        "median": 0.3399,
+        "max": 0.6099
+      },
+      "cost_usd": 0.00251462
+    },
+    "CARDCOUNT": {
+      "n": 100,
+      "agreement_with_key": 1.0,
+      "n_correct": 100,
+      "n_wrong": 0,
+      "key_class_counts": {
+        "SINGLE": 52,
+        "MULTI": 48
+      },
+      "baseline_always_majority_class": 0.52,
+      "baseline_uniform_guess": 0.5,
+      "confusion_matrix_truth_x_model": {
+        "SINGLE": {
+          "SINGLE": 52
+        },
+        "MULTI": {
+          "MULTI": 48
+        }
+      },
+      "confidence_of_every_wrong_item": [],
+      "confidence_right": {
+        "min": 0.21,
+        "p10": 0.94,
+        "median": 1,
+        "p90": 1,
+        "max": 1,
+        "mean": 0.9648
+      },
+      "confidence_wrong": {
+        "min": null,
+        "median": null,
+        "max": null,
+        "mean": null
+      },
+      "correct_but_low_confidence": {
+        "below_0.5": 2,
+        "below_0.7": 3,
+        "below_0.9": 9,
+        "below_0.95": 11,
+        "below_1.0": 42
+      },
+      "escalation_curve": [
+        {
+          "threshold": 0.5,
+          "accepted": 98,
+          "accepted_share": 0.98,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 2,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.6,
+          "accepted": 98,
+          "accepted_share": 0.98,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 2,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 97,
+          "accepted_share": 0.97,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 3,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 96,
+          "accepted_share": 0.96,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 4,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.85,
+          "accepted": 94,
+          "accepted_share": 0.94,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 6,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 91,
+          "accepted_share": 0.91,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 9,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 89,
+          "accepted_share": 0.89,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 11,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 73,
+          "accepted_share": 0.73,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 27,
+          "accuracy_on_escalated": 1.0
+        },
+        {
+          "threshold": 1.0,
+          "accepted": 58,
+          "accepted_share": 0.58,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 42,
+          "accuracy_on_escalated": 1.0
+        }
+      ],
+      "latency_s": {
+        "median": 0.3422,
+        "max": 0.5847
+      },
+      "cost_usd": 0.00206102
+    },
+    "CERTAINTY": {
+      "n": 100,
+      "agreement_with_key": 0.37,
+      "n_correct": 37,
+      "n_wrong": 63,
+      "key_class_counts": {
+        "4": 51,
+        "5": 25,
+        "3": 19,
+        "2": 4,
+        "1": 1
+      },
+      "baseline_always_majority_class": 0.51,
+      "baseline_uniform_guess": 0.2,
+      "confusion_matrix_truth_x_model": {
+        "4": {
+          "3": 30,
+          "5": 10,
+          "4": 8,
+          "1": 2,
+          "2": 1
+        },
+        "5": {
+          "5": 17,
+          "3": 6,
+          "4": 2
+        },
+        "3": {
+          "3": 11,
+          "4": 2,
+          "1": 4,
+          "2": 2
+        },
+        "2": {
+          "3": 2,
+          "1": 2
+        },
+        "1": {
+          "1": 1
+        }
+      },
+      "confidence_of_every_wrong_item": [
+        {
+          "item_id": "I024",
+          "truth": 3,
+          "model": 1,
+          "confidence": 0,
+          "p_of_truth": 0.12
+        },
+        {
+          "item_id": "I067",
+          "truth": 3,
+          "model": 1,
+          "confidence": 0,
+          "p_of_truth": 0.22
+        },
+        {
+          "item_id": "I025",
+          "truth": 5,
+          "model": 3,
+          "confidence": 0.08,
+          "p_of_truth": 0.2
+        },
+        {
+          "item_id": "I100",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.08,
+          "p_of_truth": 0.13
+        },
+        {
+          "item_id": "I023",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.12,
+          "p_of_truth": 0.22
+        },
+        {
+          "item_id": "I054",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.12,
+          "p_of_truth": 0.22
+        },
+        {
+          "item_id": "I002",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.13,
+          "p_of_truth": 0.28
+        },
+        {
+          "item_id": "I014",
+          "truth": 4,
+          "model": 1,
+          "confidence": 0.14,
+          "p_of_truth": 0.11
+        },
+        {
+          "item_id": "I079",
+          "truth": 3,
+          "model": 1,
+          "confidence": 0.15,
+          "p_of_truth": 0.35
+        },
+        {
+          "item_id": "I015",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.16,
+          "p_of_truth": 0.18
+        },
+        {
+          "item_id": "I055",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.16,
+          "p_of_truth": 0.11
+        },
+        {
+          "item_id": "I013",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.17,
+          "p_of_truth": 0.18
+        },
+        {
+          "item_id": "I018",
+          "truth": 5,
+          "model": 3,
+          "confidence": 0.17,
+          "p_of_truth": 0.17
+        },
+        {
+          "item_id": "I089",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.18,
+          "p_of_truth": 0.24
+        },
+        {
+          "item_id": "I072",
+          "truth": 4,
+          "model": 1,
+          "confidence": 0.19,
+          "p_of_truth": 0.04
+        },
+        {
+          "item_id": "I031",
+          "truth": 5,
+          "model": 3,
+          "confidence": 0.21,
+          "p_of_truth": 0.24
+        },
+        {
+          "item_id": "I065",
+          "truth": 3,
+          "model": 4,
+          "confidence": 0.21,
+          "p_of_truth": 0.27
+        },
+        {
+          "item_id": "I096",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.21,
+          "p_of_truth": 0.28
+        },
+        {
+          "item_id": "I058",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.23,
+          "p_of_truth": 0.25
+        },
+        {
+          "item_id": "I039",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.25,
+          "p_of_truth": 0.28
+        },
+        {
+          "item_id": "I082",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.25,
+          "p_of_truth": 0.17
+        },
+        {
+          "item_id": "I006",
+          "truth": 3,
+          "model": 4,
+          "confidence": 0.26,
+          "p_of_truth": 0.25
+        },
+        {
+          "item_id": "I026",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.26,
+          "p_of_truth": 0.16
+        },
+        {
+          "item_id": "I049",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.26,
+          "p_of_truth": 0.2
+        },
+        {
+          "item_id": "I019",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.27,
+          "p_of_truth": 0.26
+        },
+        {
+          "item_id": "I052",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.28,
+          "p_of_truth": 0.1
+        },
+        {
+          "item_id": "I045",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.29,
+          "p_of_truth": 0.33999999999999997
+        },
+        {
+          "item_id": "I001",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.3,
+          "p_of_truth": 0.33
+        },
+        {
+          "item_id": "I080",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.31,
+          "p_of_truth": 0.13
+        },
+        {
+          "item_id": "I032",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.32,
+          "p_of_truth": 0.11
+        },
+        {
+          "item_id": "I088",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.32,
+          "p_of_truth": 0.3
+        },
+        {
+          "item_id": "I022",
+          "truth": 5,
+          "model": 3,
+          "confidence": 0.34,
+          "p_of_truth": 0.13
+        },
+        {
+          "item_id": "I057",
+          "truth": 4,
+          "model": 2,
+          "confidence": 0.34,
+          "p_of_truth": 0.09
+        },
+        {
+          "item_id": "I016",
+          "truth": 5,
+          "model": 4,
+          "confidence": 0.35,
+          "p_of_truth": 0.24
+        },
+        {
+          "item_id": "I086",
+          "truth": 2,
+          "model": 3,
+          "confidence": 0.35,
+          "p_of_truth": 0.35
+        },
+        {
+          "item_id": "I012",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.36,
+          "p_of_truth": 0.13
+        },
+        {
+          "item_id": "I066",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.36,
+          "p_of_truth": 0.23
+        },
+        {
+          "item_id": "I034",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.38,
+          "p_of_truth": 0.27
+        },
+        {
+          "item_id": "I063",
+          "truth": 5,
+          "model": 4,
+          "confidence": 0.38,
+          "p_of_truth": 0.19
+        },
+        {
+          "item_id": "I083",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.38,
+          "p_of_truth": 0.23
+        },
+        {
+          "item_id": "I078",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.39,
+          "p_of_truth": 0.37
+        },
+        {
+          "item_id": "I005",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.4,
+          "p_of_truth": 0.3
+        },
+        {
+          "item_id": "I085",
+          "truth": 5,
+          "model": 3,
+          "confidence": 0.4,
+          "p_of_truth": 0.06
+        },
+        {
+          "item_id": "I028",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.41,
+          "p_of_truth": 0.11
+        },
+        {
+          "item_id": "I033",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.42,
+          "p_of_truth": 0.08
+        },
+        {
+          "item_id": "I068",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.43,
+          "p_of_truth": 0.14
+        },
+        {
+          "item_id": "I070",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.45,
+          "p_of_truth": 0.28
+        },
+        {
+          "item_id": "I077",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.45,
+          "p_of_truth": 0.07
+        },
+        {
+          "item_id": "I097",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.48,
+          "p_of_truth": 0.23
+        },
+        {
+          "item_id": "I094",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.49,
+          "p_of_truth": 0.08
+        },
+        {
+          "item_id": "I038",
+          "truth": 2,
+          "model": 1,
+          "confidence": 0.51,
+          "p_of_truth": 0.14
+        },
+        {
+          "item_id": "I071",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.52,
+          "p_of_truth": 0.15
+        },
+        {
+          "item_id": "I090",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.52,
+          "p_of_truth": 0.21
+        },
+        {
+          "item_id": "I091",
+          "truth": 3,
+          "model": 2,
+          "confidence": 0.52,
+          "p_of_truth": 0.36
+        },
+        {
+          "item_id": "I037",
+          "truth": 2,
+          "model": 3,
+          "confidence": 0.55,
+          "p_of_truth": 0.24
+        },
+        {
+          "item_id": "I047",
+          "truth": 4,
+          "model": 3,
+          "confidence": 0.56,
+          "p_of_truth": 0.03
+        },
+        {
+          "item_id": "I092",
+          "truth": 3,
+          "model": 2,
+          "confidence": 0.56,
+          "p_of_truth": 0.2
+        },
+        {
+          "item_id": "I010",
+          "truth": 5,
+          "model": 3,
+          "confidence": 0.57,
+          "p_of_truth": 0.07
+        },
+        {
+          "item_id": "I036",
+          "truth": 3,
+          "model": 1,
+          "confidence": 0.65,
+          "p_of_truth": 0.06
+        },
+        {
+          "item_id": "I084",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.66,
+          "p_of_truth": 0.2
+        },
+        {
+          "item_id": "I041",
+          "truth": 2,
+          "model": 1,
+          "confidence": 0.92,
+          "p_of_truth": 0.05
+        },
+        {
+          "item_id": "I074",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.93,
+          "p_of_truth": 0.05
+        },
+        {
+          "item_id": "I011",
+          "truth": 4,
+          "model": 5,
+          "confidence": 0.94,
+          "p_of_truth": 0.03
+        }
+      ],
+      "confidence_right": {
+        "min": 0,
+        "p10": 0.14,
+        "median": 0.39,
+        "p90": 0.58,
+        "max": 0.98,
+        "mean": 0.3759
+      },
+      "confidence_wrong": {
+        "min": 0,
+        "median": 0.34,
+        "max": 0.94,
+        "mean": 0.35
+      },
+      "correct_but_low_confidence": {
+        "below_0.5": 30,
+        "below_0.7": 35,
+        "below_0.9": 36,
+        "below_0.95": 36,
+        "below_1.0": 37
+      },
+      "escalation_curve": [
+        {
+          "threshold": 0.5,
+          "accepted": 20,
+          "accepted_share": 0.2,
+          "accuracy_on_accepted": 0.35,
+          "errors_accepted": 13,
+          "escalated": 80,
+          "accuracy_on_escalated": 0.375
+        },
+        {
+          "threshold": 0.6,
+          "accepted": 9,
+          "accepted_share": 0.09,
+          "accuracy_on_accepted": 0.4444,
+          "errors_accepted": 5,
+          "escalated": 91,
+          "accuracy_on_escalated": 0.3626
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 5,
+          "accepted_share": 0.05,
+          "accuracy_on_accepted": 0.4,
+          "errors_accepted": 3,
+          "escalated": 95,
+          "accuracy_on_escalated": 0.3684
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 4,
+          "accepted_share": 0.04,
+          "accuracy_on_accepted": 0.25,
+          "errors_accepted": 3,
+          "escalated": 96,
+          "accuracy_on_escalated": 0.375
+        },
+        {
+          "threshold": 0.85,
+          "accepted": 4,
+          "accepted_share": 0.04,
+          "accuracy_on_accepted": 0.25,
+          "errors_accepted": 3,
+          "escalated": 96,
+          "accuracy_on_escalated": 0.375
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 4,
+          "accepted_share": 0.04,
+          "accuracy_on_accepted": 0.25,
+          "errors_accepted": 3,
+          "escalated": 96,
+          "accuracy_on_escalated": 0.375
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 1,
+          "accepted_share": 0.01,
+          "accuracy_on_accepted": 1.0,
+          "errors_accepted": 0,
+          "escalated": 99,
+          "accuracy_on_escalated": 0.3636
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 0,
+          "accepted_share": 0.0,
+          "accuracy_on_accepted": null,
+          "errors_accepted": 0,
+          "escalated": 100,
+          "accuracy_on_escalated": 0.37
+        },
+        {
+          "threshold": 1.0,
+          "accepted": 0,
+          "accepted_share": 0.0,
+          "accuracy_on_accepted": null,
+          "errors_accepted": 0,
+          "escalated": 100,
+          "accuracy_on_escalated": 0.37
+        }
+      ],
+      "latency_s": {
+        "median": 0.3373,
+        "max": 0.5567
+      },
+      "cost_usd": 0.00209462,
+      "exact_match_argmax": 0.37,
+      "exact_match_rounded_score": 0.35,
+      "within_one_argmax": 0.87,
+      "mean_abs_error_argmax": 0.78,
+      "mean_abs_error_rounded": 0.77,
+      "baseline_always_4_exact": 0.51,
+      "baseline_always_4_within_one": 0.95
+    }
+  },
+  "contract_identities_tested": {
+    "binary_confidence_equals_top_minus_second": {
+      "tested": 100,
+      "matched": 100,
+      "max_abs_gap": 0.01
+    },
+    "score_equals_expected_index": {
+      "tested": 100,
+      "max_abs_gap": 0.03
+    }
+  },
+  "totals": {
+    "calls": 300,
+    "calls_failed": 0,
+    "cost_usd_items_only": 0.00667027,
+    "latency_s_median": 0.3399,
+    "latency_s_max": 0.6099,
+    "latency_s_min": 0.2743,
+    "latency_s_p90": 0.4376
+  },
+  "unknowns": [
+    "The FIELD key is the file a note was written in, not an adjudication of what the note is about. A watcher writing outside their own field of view produces a disagreement that this run cannot attribute to the model or to the key.",
+    "The CERTAINTY key is one observer's self-rating. Its attainable ceiling is unknown and is not 100%.",
+    "No second run of the same items was made, so the endpoint's run-to-run stability on these items is unmeasured; only two repeated probe calls were made.",
+    "The confidence number's definition is not published. Only the identities reported under contract_identities_tested were checked."
+  ]
+}

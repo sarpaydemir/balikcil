@@ -1,0 +1,91 @@
+{
+  "script": "scripts/23_manifest_and_scan.py",
+  "written_utc": "2026-09-19T23:24:57+00:00",
+  "files": [
+    {
+      "path": "external/calibration/ANALYSIS.json",
+      "bytes": 27378,
+      "sha256": "2f1706cac3e09c634de91b771f213740349ed76396faa398ae46e95b5e7d56b2"
+    },
+    {
+      "path": "external/calibration/KEY-MANIFEST.json",
+      "bytes": 4037,
+      "sha256": "08264a44037ac4c6077d87aa14ff145ac28c13a737349deb053109e9fb54009b"
+    },
+    {
+      "path": "external/calibration/REPORT.md",
+      "bytes": 27402,
+      "sha256": "a679c11f8c43b415a4fae93192db6f4807a8a9ac2acd76bba0f38ded6775d088"
+    },
+    {
+      "path": "external/calibration/RUN-MANIFEST.json",
+      "bytes": 811,
+      "sha256": "d317dd85ebf68b9d01eb11ec910f2b30aa13aec73a20ffacda4df7db1b337fa8"
+    },
+    {
+      "path": "external/calibration/comparison.jsonl",
+      "bytes": 94983,
+      "sha256": "c9377461c70c2c485bc3d22bf513761cfd39c86d2bbe43f674e2689c2f93aa62"
+    },
+    {
+      "path": "external/calibration/items.jsonl",
+      "bytes": 74806,
+      "sha256": "5871ab671c0bcb18c97fbafa29bfe20bc97c392e294b1efe1fadf2c0dcd79462"
+    },
+    {
+      "path": "external/calibration/key.jsonl",
+      "bytes": 34815,
+      "sha256": "2b9c95375e9bdb4ad134cd591e8dce792edd5ce1f09278abb245bb45ccf26c7f"
+    },
+    {
+      "path": "external/calibration/probes/probe-results.json",
+      "bytes": 54969,
+      "sha256": "bbce3d40246f25786cbf3c6f2e66a8757bb06a8a7cf784c54415c2ea6d0a4394"
+    },
+    {
+      "path": "external/calibration/responses.jsonl",
+      "bytes": 232503,
+      "sha256": "2b0da346faeb4e6b19787c71b3c9f4aa7f54168bcfeb75e9a114d3e1acf4fa6d"
+    },
+    {
+      "path": "scripts/19_endpoint_probe.py",
+      "bytes": 18584,
+      "sha256": "f64319761126845b9bf094f77f9739c6fbff91343095f3d52b9e522c8ee861aa"
+    },
+    {
+      "path": "scripts/20_build_key.py",
+      "bytes": 12625,
+      "sha256": "484212f17fa4eb7d4282455c6d1499e434d4a0d0d723f31763f6848b5a70df91"
+    },
+    {
+      "path": "scripts/21_run_endpoint.py",
+      "bytes": 13037,
+      "sha256": "c051a4eb09af4900e71c5ea7655cb1b18ee8d644585dfd4a46bfe7d16a27cbce"
+    },
+    {
+      "path": "scripts/22_compare.py",
+      "bytes": 14776,
+      "sha256": "df92e96e04f4adfc932fc2fac75f6c09c223946599682d1c5448ded1b1e3b1d1"
+    },
+    {
+      "path": "scripts/23_manifest_and_scan.py",
+      "bytes": 5004,
+      "sha256": "9e15971a412f60cc6ad9f3c5ca6288982699f2297de9c871db7249c4689f66a1"
+    }
+  ],
+  "secret_scan": {
+    "key_present_in_environment": true,
+    "files_scanned": 14,
+    "checks": [
+      "exact key",
+      "any 20-char key fragment",
+      "openrouter_style_token",
+      "generic_sk_token",
+      "bearer_with_long_token",
+      "long_high_entropy_run"
+    ],
+    "sha256_digests_whitelisted": 14,
+    "findings": {},
+    "verdict": "CLEAN"
+  }
+}
