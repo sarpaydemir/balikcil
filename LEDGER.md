@@ -1948,3 +1948,62 @@ one field of view. Ingrid's field — announcements — is `MISSING` on every ca
 in the set, so her run tests whether a card costs the same to read when the
 field is empty. If it does not, the ≈ 9.2 million figure moves, and it will be
 corrected here rather than carried.
+
+`2026-09-19 10:19 UTC` · **the coordinator was wrong about "interleaved", and a watcher demonstrated it** ·
+At 08:15 UTC the coordinator recorded that the question did not need answering
+because "an order satisfying strict alternation also satisfies the looser
+reading, so the artefact is valid either way." **That is literally true and
+purposively wrong, and it is the same error the jurors have caught five times in
+instructions: the letter kept, the point missed.**
+
+Ingrid read the moment kind of all 34 cards in the order `batch-01.md` gives
+them and reported: **positions 1, 3, 5 … 33 are all large; positions 2, 4, 6 …
+34 are all calm. 17 and 17, no exception in 34.** Her words: "any watcher who
+notices the position can name the answer of every card without reading it, and a
+watcher writing 'I saw X before a large move' may be reporting the ordering
+rather than the card."
+
+She also wrote that she did not use the order in forming any note and that every
+note rests on the card's own funding text — which is the right thing to do and
+the reason this is a flag rather than a contamination.
+
+**The coordinator's defence of the artefact — that a card states its own kind
+anyway, so position adds nothing — is not good enough**, and is recorded here
+only so that the jury can weigh it rather than have it presented as settled. It
+answers a question about one card and says nothing about a sequence.
+
+**Five agents have now flagged this question unprompted:** Mateo when he built
+the order, all three cross-run jurors, and now Ingrid with a demonstration.
+The coordinator repeating "non-blocking" a third time would be exactly what
+RULES 33 exists to prevent. **It goes to a jury, and no further batch is
+launched until it is ratified.** Kenji and Amara are left to finish batch 01 —
+stopping them mid-run would waste the spend and their notes are keyed by card
+number, so a ruling can be applied to them either way.
+
+`2026-09-19 10:19 UTC` · **EXAM DESIGN · a blinding leak found before the exam exists** ·
+Also from Ingrid, outside her field but reported anyway. **The exam's hiding
+rules in TACTICS 6 cannot hide how many funding payments a 24-hour window
+contains.** Three payments against six splits the universe into 8-hour and
+4-hour contracts, and that is contract-class information surviving into a card
+that is supposed to be blind. In her batch, 7 of 34 cards are 8-hour contracts.
+
+TACTICS 6 hides the coin name, the date, the price, the coin name inside
+announcements, the Wikipedia number and the calendar date. **It does not hide
+the funding payment count, and nobody had noticed.** This is not a trading
+signal and she did not present it as one; it is a hole in the blinding, found
+**before** a single exam card exists, which is the only time it can be fixed for
+free. Written here so Mode B meets it as a requirement rather than as a
+discovery.
+
+`2026-09-19 10:19 UTC` · **Ingrid's own field is unobserved, and she said so in the right words** ·
+"Half my field of view is unobserved, not empty — 34 of 34 cards." The
+announcement field reads `MISSING` with byte-identical text on every card, and
+she pointed at the card legend's own distinction: the same cards print `none`
+for the prediction market, so `MISSING` is a fetch failure and not an absence.
+"For batch 01 I cannot say whether listings, delistings or warnings sat near
+these moments. **This is a failure, not a result.**" That is RULES 20 and 21
+applied by the agent that was hurt by them, without being asked.
+
+She also found the payment **interval** has zero variance in the batch — 34 of
+34 cards read `interval changed: no` — and drew the only conclusion available:
+"A field with no variance cannot discriminate."
