@@ -3820,3 +3820,39 @@ pre-registered."
 median, "so intra-hour book withdrawal is not measurable. That is precisely what
 I wanted to see before a cliff hour like `C228` +23, and it is not in this card
 format."
+
+`2026-09-19 12:08 UTC` · **MILESTONE · Amara has read all 306 cards · round 1 complete in her field** ·
+Nine batches, nine notes files. **The third watcher to cover the whole set.**
+Only Lukas's batch 09 remains outstanding in the whole of round 1.
+
+**Her cleanest coin-only case, and it is very clean:** `C078` falls **−18.01%
+in hour +0** and **−8.63% at +1** while bitcoin prints **+0.02 and −0.36** — and
+**the window ends with bitcoin up 1.3%.** The coin collapsed while the market
+rose.
+
+**She counted both halves again rather than picking one:** bitcoin's 24-hour sum
+reaches 3% or more on **9 of 18** large cards, and stays under 2% on **7**. "So
+'bitcoin moved' is neither necessary nor sufficient for a large moment here,
+and each card of the market-wide half must be counted as one event under
+RULES 13."
+
+**The release calendar's separation is exactly zero, and she then explained
+why:** a release is named on **9 of 18 large (50%)** and **8 of 16 calm (50%)**.
+The reason is in the composition — **CPI, PPI and FOMC appear once each in 34
+cards**, while the calendar is dominated by Metro Area Employment (5 cards),
+JOLTS (5), State Employment (2) and one-offs including Summer Youth Labor Force
+and Union Membership. **TACTICS 3 asks for "inflation, employment, rate
+decision"; what the cards actually carry is mostly regional BLS bulletins.**
+
+**The one timing effect she found lands on a calm card:** CPI at +5 h with the
+coin printing −3.15% at +6 while bitcoin was +0.96 — and `C006` is **calm**.
+
+**Two more counterexamples for the canteen, named so they are not lost:**
+`C141` is **calm** with a 24-hour bitcoin move of **+3.4%**, and `C286` is
+**calm** at **−7.40%** — "'calm' on these cards does not mean 'small move'."
+
+**And she confirmed `C161`/`C162` independently** — the same duplication Ingrid
+found from funding and Kenji found from open interest. **Three watchers, three
+fields, one pair of cards that is one observation.**
+
+Her three ideas are rated **1–2** and she wrote: "none of them evidence."
