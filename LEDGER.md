@@ -1260,3 +1260,35 @@ the tenth fault.
 
 If the jurors find the section admits more than one procedure and does not
 choose, that answer is explicitly permitted and is not a failure.
+
+`2026-09-19 07:06 UTC` · **eleventh, twelfth and thirteenth faults — the transparency ones** ·
+Juror 1 of the large-moment jury found three more sentences carrying
+information it did not have from the files. All accepted.
+
+1. **"If the procedures it admits differ in how many moments they yield, say
+   that too."** Names the axis on which the readings differ before the juror
+   opens the file. The juror's words: "It told me to look at counts."
+2. **"What should happen to any list already produced is a separate
+   question."** Discloses that a list exists and that its validity is in doubt
+   — which says one of the two answers is the expensive one.
+3. **"this laboratory has learned that handing a juror an artefact built under
+   one reading pulls toward that reading."** The same disclosure again.
+
+**The instructive part: (2) and (3) were the coordinator being careful.** (2) is
+the symmetric scope fence demanded after the second jury; (3) is the explanation
+of why no data file was opened — written to be honest about the method. Both
+leaked. **A scope fence written for both branches still discloses that a
+branch has an aftermath, and an explanation of a precaution still describes the
+thing being guarded against.**
+
+Thirteen faults now. The honest summary is not that the corrections are failing
+but that **every sentence beyond three does something**: what you may read, what
+the question is, what the output must contain. The fourth sentence is always
+where the coordinator starts helping. The next instruction carries no fourth
+kind of sentence — no fence, no rationale, no permission note.
+
+**An internal inconsistency in `TACTICS.md` the juror found in passing, and it
+belongs to a future jury, not to the coordinator:** TACTICS 6 asks for 200
+large-movement exam cards across the 20 exam coins of TACTICS 1 — ten per coin —
+while TACTICS 2's count for a full-year coin is twenty. The two numbers do not
+reconcile. Recorded, unanswered.
