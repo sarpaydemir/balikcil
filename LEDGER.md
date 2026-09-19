@@ -854,3 +854,80 @@ line. The substitution recorded in
 `instructions/2026-09-19-0645-jury-composition-note.md` therefore applies to the
 first jury only; the referee for that jury, and every jury after it, uses the
 purpose-built definitions.
+
+`2026-09-19 06:43 UTC` · **RULES 3 breached again, by the coordinator, in the jury instruction** ·
+Juror 2 reported two steers in the question it was given. Both are the
+coordinator's hand and both are accepted; they are written here before the
+jury's outcome is known, so that nobody can later say the record was tidied
+after the fact.
+
+1. **"A run is currently in progress that depends on the present answer."** The
+   sentence disclaims itself in the next breath — "that is a fact about cost,
+   not an argument for either reading" — but the juror is right: it is
+   **one-directional pressure toward the status quo**, because only one of the
+   two answers costs a re-run. It should have been left out. A juror does not
+   need to know what a ruling costs the schedule.
+2. **The two group-cut values, given for both branches.** Symmetric, and the
+   juror said it did not treat them as a steer, but they are numbers a juror did
+   not need in order to read a sentence.
+
+This is the **second** RULES 3 breach in two days, both by the coordinator:
+the first was the four contents named in Derya's instruction at 06:13 UTC, and
+it was caught by Derya. Twice now an agent has caught a steer the coordinator
+did not see while writing it. The pattern is the same both times — the
+coordinator supplying *context it believed helpful*. Recorded as a standing
+correction: **an instruction carries what the agent may look at and what must be
+true of its output, and nothing about cost, consequence or what is riding on the
+answer.**
+
+Told to the user, as RULES 3 breaches are. Juror 2's answer stands: the leak
+report explicitly states neither item changed its answer, and the juror is the
+one who would know.
+
+`2026-09-19 06:44 UTC` · **first jury · three answers in, and a third leak the coordinator did not see** ·
+All three jurors answered and all three wrote their answers into
+`decisions/2026-09-19-zero-trade-contracts/`. **The outcome is not recorded
+here** — RULES 35 says an unratified outcome is not an outcome, and the referee
+is sitting now.
+
+What is recorded here is the leak, because it is the coordinator's and because
+juror 3 found the one that matters:
+
+**The question told the jurors the answer that had already been taken.** Its own
+words: "Those 42 contracts were **excluded** from the universe, and the draw was
+made from the 795 that remain." `LEDGER.md` and `instructions/` were closed to
+the jurors on the stated ground that "a juror who reads the answer before
+answering is not a juror" — **and then the instruction handed them that same
+answer.** The closure protected nothing. Juror 3 put it plainly: "the closure did
+not achieve what it was for... the referee should weigh that under
+independence."
+
+Juror 1 found a second route to the same place, which the coordinator also did
+not foresee: **two files on the jurors' permitted list carry the coordinator's
+conclusion in plain text** — `data/universe/excluded-no-trades.txt` lines 3–5
+("Excluded from the universe because the instruction and TACTICS 0 both say
+'contracts that TRADED'") and `scripts/03_build_universe.py` lines 21–29 and
+70–76, the second of which also records that earlier TACTICS 1 ambiguities
+"were resolved by the coordinator in this run's instruction". A juror cannot
+read the evidence without reading the argument that was written on top of it.
+Juror 1 said it read `TACTICS.md` first and that two of its own arguments appear
+in neither file, but added: "I cannot claim my reading was untouched."
+
+So the count of coordinator RULES 3 breaches stands at **three in two days**:
+the contents named in Derya's instruction, the cost framing and cut values in
+the jury question, and the answer itself stated in the jury question. All three
+were caught by the agent receiving the instruction, none by the coordinator
+writing it.
+
+**Standing correction, written so it binds the next instruction:** an
+instruction carries what the agent may look at and what must be true of its
+output. It does not carry the decision already taken, what a ruling would cost,
+what is riding on the answer, or computed results the agent did not need. And
+**closing a file is not enough if the same sentence is written on an artefact
+the agent must read** — for a question about an artefact, the artefact's own
+commentary has to be checked too, or the question has to be put before the
+artefact is annotated.
+
+The referee decides what all of this does to the jury's independence. It has
+the three answers and the question itself in front of it, and nobody has told
+it what to conclude.
