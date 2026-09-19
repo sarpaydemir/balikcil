@@ -3303,3 +3303,46 @@ includes these two."
 same bitcoin and ethereum values, "so part of `C230`'s +21.21% is one market
 event shared with `C277`, not the coin's own." She then listed which four of the
 thirteen large cards carry a market-wide leg **and which six do not.**
+
+`2026-09-19 11:36 UTC` · **observation · Kenji · v2 batch 06 · finished** · 34 of 34, no steer
+found, no scratch file. Notes at `notes/2026-09-19-kenji-v2-batch06.md`.
+
+**He filed two tentative signals and attached the confound to each in the same
+breath.** The stronger-looking one: `L/S acct` falling 4% or more across the
+before window fires on 7 of 34 — **five large-down, two calm, never before a
+large up**, against a large-down base rate of 11 of 34. Then his own
+disqualification: **"in all five down cases BTC and ETH also fell in the after
+window"**, with the numbers — BTC −2.76, −3.48, −1.98, −1.82, −1.85 — "so by
+RULES 13 these may not be five independent events." Confidence 3.
+
+The other: funding above +0.050% on a flat price fires on 3 cards, **all large
+and all up** (+41.49%, +17.55%, +65.60%), and he checked it is not a restatement
+of price (24-hour price was −4.2% and −0.01% on two of them). Then: "3 cards,
+2 coins (KOMA twice), all 4 h interval." Confidence 3.
+
+**"I could read it; I do not believe it."** — on the `taker L/S` column, which
+**contradicts `taker buy%` in the same row** on thin coins. He gave five cases
+with both numbers: `C263` h−10 reads taker buy% **47.3** (implying about 0.90)
+next to a `taker L/S` of **385.31**. `C195` h−16: 53.8 against 6.46.
+
+**Five cards where `top L/S pos` steps 20% or more in one hour with no matching
+move in open interest, account ratio or price** — and `C027` steps 2.29 → 1.72 →
+1.24 and then **back to 2.22 later on the same card.** "Any rule keyed to the
+level of `top L/S pos` is exposed to these."
+
+**`C263` carries an open interest of exactly `0` between 825.03k and 817.83k** —
+"a missing value written as a number", the third such case found in three
+different batches by two different readers.
+
+**A flat crowd panel in front of a large move, again, with the numbers:** `C109`
+— open interest −1.7%, `L/S acct` 0.67 → 0.70, `top L/S pos` 2.16 → 2.17, five
+of six funding payments at the floor — **then +36.50%**. `C166` has
+`top L/S pos` **identical at 1.24 in 23 of 24 hours**, then +17.55%. His words:
+"This caps the recall of any crowd-based rule well below 100%."
+
+**And he listed what he checked and found empty**, which is RULES 20 done
+without being asked: gradual open-interest drift either way (largest build → a
+**calm** card; second-largest decline → **calm**), the absolute levels of both
+ratio columns (coin constants — FARTCOIN's eight cards put large and calm at the
+same levels), all-negative funding (2 up, 1 down, 1 calm), and single-hour taker
+extremes ("going three different ways").
