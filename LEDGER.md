@@ -2053,3 +2053,60 @@ and he wrote three caveats into the notes in the same breath: the line was
 fitted after seeing outcomes, it sits in a 0.6-point gap, it flags size but not
 direction, and two of the six are one event under RULES 13, so it is five
 independent cases and not six.
+
+`2026-09-19 10:23 UTC` · **batch 01 complete · the cost of a batch, measured on all four fields** ·
+Four watchers, the same 34 cards, effort high. **Measured, not estimated:**
+
+| watcher | field of view | tokens | notes lines |
+|---|---|---|---|
+| Lukas | price itself | 256,080 | 107 |
+| Kenji | the crowd | 244,378 | 146 |
+| Amara | the outside world | 255,904 | 154 |
+| Ingrid | exchange behaviour | **73,605** | 115 |
+| **batch total** | | **829,967** | |
+
+**Ingrid's run cost 29% of the others'** because the field she was given is
+`MISSING` on every card — there is nothing to read, only the absence to verify.
+That is the price of a failed source measured in tokens rather than in prose.
+
+**Full observation run, on measurement rather than extrapolation: 9 × 829,967 ≈
+7.47 million tokens**, against ≈ 14.86 million remaining. The earlier figures
+were ≈ 12.4 million (linear from ten cards) and ≈ 9.2 million (one field of
+view). Each was labelled an upper bound at the time and each was one.
+
+**A cost that may yet be paid and is not being hidden:** if the card-order jury
+rules the present order non-conforming, batch 01's **829,967 tokens** are the
+bill for the coordinator's 08:15 reasoning. Whether the notes survive is the
+jury's and the referee's to say, not the coordinator's — all four watchers
+happened to report reading each card's kind off the card itself, and two said
+unprompted that they did not use the position.
+
+`2026-09-19 10:23 UTC` · **Amara · batch 01 · a RULES 13 finding nobody asked for** ·
+**C019 and C182 are one event, not two.** BCH starting 2025-10-16 09:00 and NEWT
+starting 2025-10-16 08:00: she matched their bitcoin and ethereum columns hour
+by hour across the 23 overlapping hours and found them **identical**. Both are
+labelled large (−12.53% and −11.86%). Under RULES 13 they count once.
+
+She then did the converse check, which is the part that makes it evidence rather
+than a hunch: **C139 and C221 are not one event** despite adjacent dates, because
+C139's after window closes before the 2025-10-10 market break while C221's
+contains it.
+
+**And she put a number on how much of her own material is bitcoin:** 7 of the 17
+large moments in the batch are market-wide, with bitcoin moving 3.8% or more the
+same way and coin/BTC ratios of 2.3 to 5.5. Her words: "Anything scored on those
+cards is being scored on bitcoin."
+
+**Three of her five sources are unusable and she refused to let that read as
+"nothing there":** announcements `MISSING` on 34 of 34 (a fetch failure —
+"Nobody has shown there was no listing/delisting/warning in these hours");
+Wikipedia `MISSING` on 30 of 34, the failure being in the collection method, not
+in Wikipedia; and the prediction market empty on 34 of 34, which she
+distinguished as **a genuine emptiness rather than a failure** — Polymarket was
+reached every time, and for three of the nine coins it returns no market at all,
+so that column "can never carry information" for 17 of the 34 cards.
+
+She also reported honestly that she did **not** verify the two watcher
+definitions differ only in effort, because comparing them was not among the
+files her instruction permitted — "reporting this as not verified rather than as
+verified."
