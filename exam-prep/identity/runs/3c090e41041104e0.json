@@ -1,0 +1,27 @@
+{
+ "card_set": "raw-observation",
+ "cards": 306,
+ "families_leaking": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "depth-level",
+  "funding-line",
+  "openint-level",
+  "p7-shape",
+  "price-level",
+  "ratio-level",
+  "shape-scale-free",
+  "taker-buy",
+  "trades-level",
+  "volatility-frozen",
+  "volume-level",
+  "wikipedia-presence"
+ ],
+ "input_fingerprint": "3c090e41041104e07dc76d71d5332040fb7c79622ab14ecb2e6171a88d4ab856",
+ "run": "3c090e41041104e0",
+ "script_sha256": "4c4928b84ff9b484995058c2dd4e5b043af1491b60f314e1a0f418dd90e4a371",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "top_fraction": 0.01
+}

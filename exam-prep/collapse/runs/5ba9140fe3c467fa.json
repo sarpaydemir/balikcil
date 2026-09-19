@@ -1,0 +1,23 @@
+{
+ "configurations": 11,
+ "events_by_config": {
+  "card-span/component/any": 58,
+  "card-span/component/cross-coin": 62,
+  "card-span/greedy-clique/any": 116,
+  "card-span/greedy-clique/cross-coin": 125,
+  "move-window/component/any": 131,
+  "move-window/component/cross-coin": 136,
+  "move-window/greedy-clique/any": 161,
+  "move-window/greedy-clique/cross-coin": 168,
+  "none/none/none": 306,
+  "start-hour/component/any": 289,
+  "start-hour/component/cross-coin": 289
+ },
+ "input_fingerprint": "5ba9140fe3c467fab967d4862faa604b19bcabea244fdc486a177ebc35d9cf95",
+ "moments": 306,
+ "run": "5ba9140fe3c467fa",
+ "script_sha256": "66716b5fde81ddd4c7614dc62c986c41bbe76ec7912ba90bfd45b13d60496f46",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "top_fraction": 0.01
+}

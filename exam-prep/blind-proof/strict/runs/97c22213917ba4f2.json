@@ -1,0 +1,18 @@
+{
+ "blinded_cards_combined_sha256": "fb9b83059a6682098a6de41848e8ac9d89ebb207719986b07333fa8346d653f4",
+ "cards": 306,
+ "config": "levels=rank;btceth=drop;funding=summary;takerbuy=rank;p7=no-scale;ratio_dp=3",
+ "input_fingerprint": "97c22213917ba4f29c3e16c7b3890a4453bfe047d56ba72dc7629aee4cbc3d53",
+ "label": "strict",
+ "run": "97c22213917ba4f2",
+ "script_sha256": "f9b6b217f12571bd1c50ff6d8c533bd39d0ce1420533f27b8dbcee724c8cd6af",
+ "seed": 20260913,
+ "survived": {
+  "B-3 \u00b7 cards printing an open-interest zero, blinded": 4,
+  "B-3 \u00b7 cards printing an open-interest zero, raw": 4,
+  "B-4 \u00b7 cards with a depth run of >= 3, blinded (3 dp)": 5,
+  "B-4 \u00b7 cards with a depth run of >= 3, raw": 5,
+  "S-1 \u00b7 cards whose largest |chg%| is unchanged": 306,
+  "cards_written": 306
+ }
+}

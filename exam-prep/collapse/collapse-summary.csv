@@ -1,0 +1,12 @@
+config,definition,resolution,scope,cards,events,cards_per_event_mean,events_of_size_1,largest_event,events_holding_both_kinds,events_holding_more_than_one_coin,cards_in_events_of_size_1,size_histogram
+none/none/none,none,none,none,306,306,1.0,306,1,0,0,306,1:306
+start-hour/component/any,start-hour,component,any,306,289,1.0588,274,3,2,15,274,1:274 2:13 3:2
+start-hour/component/cross-coin,start-hour,component,cross-coin,306,289,1.0588,274,3,2,15,274,1:274 2:13 3:2
+move-window/component/any,move-window,component,any,306,131,2.3359,49,8,52,80,49,1:49 2:34 3:22 4:16 5:6 7:3 8:1
+move-window/component/cross-coin,move-window,component,cross-coin,306,136,2.25,56,8,52,80,56,1:56 2:33 3:22 4:16 5:5 7:3 8:1
+move-window/greedy-clique/any,move-window,greedy-clique,any,306,161,1.9006,68,6,49,88,68,1:68 2:56 3:27 4:7 5:1 6:2
+move-window/greedy-clique/cross-coin,move-window,greedy-clique,cross-coin,306,168,1.8214,78,6,50,90,78,1:78 2:55 3:27 4:5 5:1 6:2
+card-span/component/any,card-span,component,any,306,58,5.2759,10,20,37,47,10,1:10 2:10 3:6 4:4 5:5 6:7 7:4 8:1 9:2 10:2 11:2 12:2 15:1 20:2
+card-span/component/cross-coin,card-span,component,cross-coin,306,62,4.9355,13,20,39,49,13,1:13 2:9 3:6 4:5 5:6 6:7 7:4 8:2 9:1 10:2 11:3 12:2 15:1 20:1
+card-span/greedy-clique/any,card-span,greedy-clique,any,306,116,2.6379,32,7,56,83,32,1:32 2:26 3:29 4:17 5:7 6:3 7:2
+card-span/greedy-clique/cross-coin,card-span,greedy-clique,cross-coin,306,125,2.448,41,7,60,84,41,1:41 2:27 3:31 4:18 5:4 6:2 7:2

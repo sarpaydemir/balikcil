@@ -1,0 +1,22 @@
+{
+ "card_set": "blinded-rank",
+ "cards": 306,
+ "families_leaking": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "funding-line",
+  "openint-level",
+  "p7-shape",
+  "taker-buy",
+  "trades-level",
+  "volatility-frozen",
+  "volume-level"
+ ],
+ "input_fingerprint": "3b1cb7d540d11283b964516268113596ecc15f7933e17df7bf0aec85c2ea6af2",
+ "run": "3b1cb7d540d11283",
+ "script_sha256": "4c4928b84ff9b484995058c2dd4e5b043af1491b60f314e1a0f418dd90e4a371",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "top_fraction": 0.01
+}

@@ -4371,3 +4371,58 @@ the method closed, the coordinator cannot check the fix itself. **That is the
 point of the arrangement**, and the reviewer exists because of it. What the
 coordinator records is the verdict, the fingerprints, and whether a reviewer who
 also did not know agreed.
+
+`2026-09-19 14:21 UTC` · **the two problems · worked, verdict sealed, review running** · The fixer
+finished: **277,841 tokens, 79 tool uses, 37 minutes.** Five new instruments
+under `scripts/` and 1,280 files, 5.6 MB, under `exam-prep/`. The coordinator
+has read none of the working and will not.
+
+**Its verdict, which is the only thing the coordinator was given:**
+- **`R-04`, the blindness problem — SOLVED** against a standard it wrote into
+  `exam-prep/` for the reviewer to disagree with, **"with a residual that is
+  measured, named and not zero."** Its reason for not closing the residual
+  further: doing so "would mean changing a rule after the fact, which RULES 6
+  forbids."
+- **`N-1`, the collapse problem — SOLVED as far as one person is allowed to
+  solve it.** The instrument exists, is tested, and is cross-checked against an
+  independent earlier script. **The last step is not its to take.**
+
+**Neither fix requires changing a rule in `RULES.md`** — the coordinator asked
+it to stop and say so if one did.
+
+**It corrected a presumption the coordinator had built into the instruction, and
+this is the sixteenth leak.** The instruction spoke of what a later run needs
+"to count events correctly", **which presumes the current counting is wrong.**
+That presumption is the allegation it was asked to fix — and **its measurement
+"came out mixed rather than confirming it."** It said so in the verdict "rather
+than let the presumption stand." A coordinator that had been told the method
+would have had no way to catch that; the agent caught it because the
+coordinator's sentence was the only thing it had to push against.
+
+**A new open question under RULES 33 now blocks the judge's script**, and it
+found it rather than deciding it: one of the two problems "turns on a wording in
+`RULES.md` that can be read more than one way, and the readings do not give the
+same numbers." Four numbered questions with every measurement a juror needs are
+in `exam-prep/N-1-collapse.md` §7. **Its instruction to the coordinator is
+exact, and is addressed to this ledger's own record:**
+
+> "Three jurors must be pointed at that section and must read it there. **Do not
+> paraphrase it into their instruction, and do not put any of its numbers into
+> their instruction: a question handed to jurors through a summary is a question
+> with a thumb on it.**"
+
+**Ten decisions it took that the instruction did not cover** are written up by
+name in `exam-prep/`, and it named them to the coordinator **by subject only,
+without content** — including that **D-1 is the one it is least sure of**, that
+both alternatives are built and measured, "so it can be overturned cheaply."
+Four further questions it refused to answer are in the same file.
+
+**And it stopped itself from doing something nobody would have noticed:** it
+declined to evaluate any rule from the frozen canteen book on the observation
+cards, although Sofia's book asks for such a measurement — "it is Greta's in
+Mode C, it is a result about a rule, and producing it here — before the exam
+exists — is the sort of thing that contaminates an exam."
+
+**The reviewer is running**, with the same blindness: it has not been told how
+either problem was solved, and its instruction says plainly why it exists —
+"That leaves nobody checking the work, which is what you are for."
