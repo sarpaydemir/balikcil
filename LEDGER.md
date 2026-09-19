@@ -2468,3 +2468,38 @@ distinct failure reasons on the rest.
 **She also marked the limit of her own method:** she matched overlapping-hour
 pairs **by eye, not systematically**, so there may be more than the three she
 found.
+
+`2026-09-19 11:01 UTC` · **observation · Ingrid · v2 batch 02 · finished** · 34 of 34 read, notes
+at `notes/2026-09-19-ingrid-v2-batch02.md`, no steer found. **228,817 tokens** —
+against 95,494 for her batch 01. The difference is not effort or field: batch 01
+was read by extracting her field-of-view lines with searches scoped to each
+named file, batch 02 by reading each card in full. **The same watcher on the same
+field can cost 2.4× more depending on how it reads**, which nothing in the
+instruction fixes and which the earlier cost arithmetic did not know.
+
+**She caught her own idea wearing a costume.** Her one complete idea leans
+"sell", and she wrote the weakness into the record herself: all three of its
+"down" cases coincide with bitcoin and ethereum falling in the same hours
+(C184 h+18 BTC −2.13 / ETH −3.90; C046 h+0 BTC −2.04 / ETH −3.46; C049 h+23 BTC
+−2.27 / ETH −3.32). Her words: **"RULES 13 makes that one market event, so the
+'sell' lean is largely a bitcoin observation in a funding costume."**
+
+**She found a separation and then disqualified it herself.** After-window funding
+is negative on 8 of 15 large cards against 3 of 19 calm — real separation — and
+she recorded it **only so it would not later be mistaken for a finding**,
+because TACTICS 6 gives the exam the Before section alone: "it can never be
+traded or scored."
+
+**Her standing refutation, kept as a pair:** the deepest negative before-funding
+in the batch (−0.1030%, C240) precedes a **calm** +0.74%, while C283's
+all-negative before window precedes **+43.11%**.
+
+**A structural emptiness, not an accidental one:** TACTICS 3 states outright that
+the history of leverage limits is not on the card, so the "every administrative
+decision the exchange takes" half of her field of view **cannot** be observed
+from any card, ever. Together with the announcement fetch failure, her field is
+mostly unobservable by construction — which is a fact about the laboratory's
+design, not about the exchange.
+
+Interval changes across 68 flags in this batch: **zero.** "Anyone scoring it from
+batch 02 is scoring an empty cell."
