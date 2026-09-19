@@ -3940,3 +3940,38 @@ average). The first two were honest upper bounds. **The third was not flagged as
 possibly low and should have been.**
 
 The output: **36 notes files** under `notes/`.
+
+`2026-09-19 12:45 UTC` · **RULES 23 · third occurrence, and the mechanical fix finally applied** ·
+The round-2 instructions were first written with a typed time — 12:12 — while
+the clock in the same command read **12:44**. The coordinator ran `date -u`,
+printed it, and then typed a different number into the template. **The fix
+recorded at 11:21 UTC — "the clock is read in the same command that writes the
+instruction" — was described and not implemented.**
+
+It is implemented now: the clock is captured into a shell variable, passed into
+the generator through the environment, and **interpolated into the instruction
+text**. There is no longer a place to type a time. The four wrongly-timed files
+were deleted before any agent saw them and rewritten as
+`instructions/2026-09-19-1244-watcher-<name>-round2.md`.
+
+`2026-09-19 12:45 UTC` · **round 2 launched · all four watchers** · Each reads **the other
+three's 27 round-1 notes files** and agrees, disagrees or qualifies, citing card
+numbers. Instruction copies under `instructions/`, identical but for the
+watcher's name, the three names it reads and its output path.
+
+**Its own nine files are closed to it.** The cross-run jury ruled 3–0 that a
+watcher in a later run is given no substance of its own earlier runs, and
+nothing has narrowed that for round 2. The consequence is written into the
+instruction: **"Check every claim against the cards, not against your memory of
+what you wrote."** A watcher that cannot consult its own notes must verify from
+the source — which is stricter than the alternative, not weaker.
+
+**One reading the coordinator made and states so it can be overturned:** in
+round 2 a watcher may read **any column** of a card whose claim it is checking,
+not only its own field's. The basis is in the watcher definition's own round-2
+clause, which already has it reading notes full of other fields' numbers —
+**reading the column those numbers came from is the same permission used
+honestly, not a wider one.** If a jury disagrees, round 2 is re-run; the notes
+are keyed by card number and nothing downstream has consumed them yet.
+
+The reading load, measured: **620,037 bytes** of other watchers' notes per run.
