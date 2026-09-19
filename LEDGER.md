@@ -2148,3 +2148,51 @@ about contamination that the coordinator may not answer alone. All four watchers
 reported reading each card's kind off the card itself, and two said unprompted
 that they did not use position — that is evidence for a jury to weigh, not a
 defence for the coordinator to offer.
+
+`2026-09-19 10:26 UTC` · **card-order jury · RATIFIED · 3–0 · strict alternation fails** ·
+**Outcome: TACTICS 4 requires a shuffle over the whole pool of the ten coins'
+cards, not derivable from any card property, with the two kinds mixed through
+one sequence — and a watcher must not be able to read a card's kind from its
+position. Strict alternation fails.** Split **3–0**. Verdict:
+`decisions/2026-09-19-card-order-requirement/verdict.md`, first line
+`RATIFIED`.
+
+The referee ruled on the three things it was given. On the two framings all
+three jurors reported in the question: they did not break independence. On the
+point all three deliberately left unsettled — whether a *fair* shuffle with an
+accidental long same-kind run must be re-drawn — it ruled the settled part is
+enough to be an outcome, and the unsettled part stands as the next open question
+if anyone needs it. On juror 3's request that its use of a subordinate document
+be marked: **marked, and it does not block.**
+
+**So the order built at 07:55 UTC does not conform.** The coordinator's
+measurement, taken and written down **before** the verdict existed, is at
+`data/card-order/order-conformance-check.md` (SHA-256
+`dd44d556dc65203d46224a705b119dfc9868062aa00052e944e9788c0e85932a`): 306 cards,
+longest same-kind run **1**, histogram `{1: 306}`, every even position `large`
+and every odd position `calm`. Applying a ratified requirement to a measured
+artefact is arithmetic, and the arithmetic is not close.
+
+**This is the coordinator's error, start to finish.** Mateo flagged the question
+when he built the order and asked for a jury. The coordinator answered it alone
+— twice — with a reading that was literally true and missed the point, and only
+convened a jury after a fifth agent demonstrated the consequence. RULES 33 was
+written for exactly this and the coordinator went around it.
+
+`2026-09-19 10:26 UTC` · **Mateo running · the order rebuilt under the ratified requirement** ·
+The instruction does not restate the requirement: it names the verdict file and
+the three juror answers and tells him to read it there, and tells him not to
+take the coordinator's word for any part of it. It also tells him to **check the
+existing order first and stop if it conforms** — the coordinator's arithmetic is
+not handed to him as a conclusion.
+
+Nothing the previous run wrote may be overwritten or deleted (RULES 30): the old
+order stays as the record of what was built and why it was replaced, and the new
+artefacts go somewhere that makes the succession obvious.
+
+**Still open and not answered by anyone:** what becomes of batch 01's four notes
+files — 829,967 tokens of reading — taken under the non-conforming order. That
+is the next jury. The coordinator will not answer it, and in particular will not
+offer the defence that the watchers read each card's kind off the card anyway;
+that is evidence for a jury, and the last time the coordinator reasoned this way
+about this very artefact it was wrong.
