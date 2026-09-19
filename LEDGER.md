@@ -3346,3 +3346,40 @@ without being asked: gradual open-interest drift either way (largest build → a
 ratio columns (coin constants — FARTCOIN's eight cards put large and calm at the
 same levels), all-negative funding (2 up, 1 down, 1 calm), and single-hour taker
 extremes ("going three different ways").
+
+`2026-09-19 11:40 UTC` · **observation · Ingrid · v2 batch 08 · finished** · 34 of 34, no steer
+found. **Eight of nine. Batch 09 launched — it completes the first full pass any
+watcher has made over all 306 cards.**
+
+**She found the strongest separation any watcher has reported, and filed it as
+an observation rather than an idea.** "At least one of the six before-window
+payments differs from the +0.0050% baseline by 0.010 percentage points or more"
+holds on **8 of 12 large** cards against **1 of 14 calm** — the other thirteen
+calm cards stay within 0.004 pp of baseline.
+
+Then she took it apart herself:
+- **the sign carries no direction** — positive deviations precede −51.75%,
+  +34.70%, −16.54% and **+135.21%**; negative deviations precede +46.39%,
+  −25.02%, +26.15%, −34.22%. "No arrow at all." Confidence 4 on that.
+- **it may be price in disguise** — "the deviating cards are also the coins with
+  the wildest prior 7-day prices, so it may restate volatility that price alone
+  already shows." Confidence 3 on the separation.
+- **RULES 8 therefore forbids calling it an idea**, and she said so: "The
+  funding-deviation finding has no direction, so I filed it as an **observation,
+  not an idea**."
+
+**And she carried the counter-evidence by name rather than leaving it out:**
+`C228` **−50.46%** and `C106` **+120.84%** — **the two largest moves in the
+batch** — both have all six before-window payments at exactly the baseline. "A
+flat baseline does not rule out the two largest moves in the batch." She filed
+the flat-baseline state as a **blocker candidate carrying its own two
+counterexamples**, which is RULES 31's blocker line being written by the agent
+that found it.
+
+**A field that separates nothing, stated as such:** `C013` and `C012` are both
+AVGO with funding at exactly **+0.0000%**, one large and one calm.
+
+**She is also the only watcher so far to report the definition check as
+passed rather than unverified:** "I found **no difference** between the
+`watcher` and `watcher-high` definitions other than the effort line, the name,
+the description and the paragraph that explains the pair."
