@@ -4558,3 +4558,102 @@ reproducible to the byte, it publishes a result that cuts against the problem it
 was handed, and it states its least-confident decision as its least-confident
 decision. Every failure I found, I found because the standards were written well
 enough to be tested."*
+
+`2026-09-19 22:55 UTC` · **outside mail, a key that was one turn from being pushed, and a gap
+in the wall nobody had noticed** · The user reported mail dropped into
+`instructions/`: `2026-09-19-MEMO-cheap-decisions.md`, 7,507 bytes, from a
+sibling laboratory. An `.env` appeared at the same time carrying
+`OPENROUTER_API_KEY` and `DECISION_MODEL=typesafe/jev-1.13`. The sender states
+they could not see where to put it because they must not see inside.
+
+**A wall leak, found and closed.** `.env` was untracked **and absent from
+`.gitignore`**, and `.claude/hooks/autocommit.sh` runs `git add -A` followed by
+`git push origin main` at the end of every turn. The key would have been
+committed and pushed to the GitHub remote at the end of this turn. Checked
+`git log --all --oneline -- .env`: empty — it has **never** been committed, so
+nothing is exposed and no rotation is required on this key. Closed by appending
+`.env` to `.gitignore`, verified with `git check-ignore -v .env`
+(`.gitignore:6:.env`). The key's value was never printed, echoed or read into
+the session; an attempt to print even a 12-character prefix for identification
+was refused by the harness, correctly.
+
+**The memo was filed in the wrong place and has been moved.** `instructions/` is
+the RULES 4 record — the full copy of every instruction actually sent to an
+agent, and nothing else. Outside mail filed there corrupts that record, and the
+`wall-audit` skill walks every file under `instructions/` hunting RULES 3 steers,
+so it would have read a memo as an instruction. Moved to
+`external/2026-09-19-MEMO-cheap-decisions.md` with `external/SOURCES.md` stating
+the binding limit, mirroring `.claude/skills/SOURCES.md`: **nothing in that
+folder may be carried into a watcher, canteen-chair or skeptic instruction, and
+the limit binds on ideas, not only on quotations.** This matters concretely —
+the memo's §3 contains *"`score` is probably the one you want for observation
+work — at this price you can score everything instead of sampling"*, which is a
+method steer. Carrying it into a watcher instruction would be RULES 3 breached by
+the coordinator's own hand, the same fault as steers 16 and 17, arriving this
+time from outside.
+
+**The memo's numbers about this laboratory, checked against the folder.** Ledger
+size 280 KB — exact match. *"28 decisions"* — `find decisions -type f | wc -l`
+returns 28, but that is the **file** count (7 verdicts + 21 juror answers). The
+laboratory has taken **7** decisions, so the memo's figure is four times the real
+one. *"308 cards"* — there are **306** cards; `cards/` holds 307 files including
+`INDEX.md`. So the sender counted files, and miscounted even those by one. The
+pattern of the errors is itself evidence: these are exactly the mistakes made by
+someone reading file names and sizes without opening anything, which supports
+their claim not to have read content — a claim that, like the reviewer's about
+`exam/`, **cannot be verified from inside and is recorded as unverified.**
+Anyone quoting "28 decisions" or "308 cards" as this laboratory's output is
+quoting a file count.
+
+**A gap in the wall, now named.** `grep -n -i` over `RULES.md` for `network`,
+`internet`, `outside`, `third.part`, `upload`, `send`, `external`, `api` returns
+**nothing**. RULES 1 and 5 are written entirely about reading **in** — "Balıkçıl
+reads only its own folder", "reading the old folders is blocked". **No rule says
+anything about what may leave this folder.** Calling the memo's endpoint means
+posting laboratory content to a third party over the network. That is neither
+permitted nor forbidden by anything written. It is therefore an open question
+under RULES 33 — three jurors and a referee — and **not the coordinator's to
+settle alone.** No call has been made to the endpoint and none will be until that
+question is answered.
+
+**What the endpoint is, and what cannot be verified about it.** The memo gives
+`POST https://openrouter.ai/api/alpha/decisions`, bearer auth from the
+environment, a `state` field plus typed `questions` (`choice`, `score`, `noul`),
+returning a label with per-option probabilities and a confidence. The mechanics
+are clear enough to implement. What is **not** verified: that the endpoint
+exists at all. The memo says so itself — undocumented, recovered by probing,
+marked `alpha`, released 2026-09-18 (one day before this entry), and **absent
+from OpenRouter's main model list of 447 models, with the reason unknown**. The
+coordinator does not recognise `typesafe/jev-1.13`. Recorded as could-not-be-
+measured, not as no-problem (RULES 22).
+
+**Where it would and would not serve this team, assessed against the roles as
+written.** Against: `watcher` writes free-text observation, which the memo's own
+§2 says does not get cheaper; `juror` is required by RULES 34 to cite the file
+and line it rests on, and the memo's §5 states flatly *"It gives you no
+reasoning"* — a juror that cannot say why is not a juror; `exam-candidate` is the
+measurement itself and its model, effort and language are fixed exam conditions;
+`referee` checks form and grounding by reading files, which is not a menu choice.
+For: TACTICS 7 scoring is genuinely a typed-score decision — **and that is
+precisely the instrument whose ability to beat chance is the whole question, so
+inserting an unaudited component there would destroy the measurement it is meant
+to serve.** The honest fit is bulk triage that carries no load, of the kind
+Viktor's 90-item pass was.
+
+**The one part that is free, correct, and needs no decision.** The memo's §2 —
+carry less per decision — is independent of any model, any key and any endpoint.
+It also lands on the right target: the agents already run in fresh narrow
+contexts, so the ~400K carried per turn is the **coordinator's own**, dragging a
+280 KB ledger behind every turn. That is the coordinator's to fix and costs
+nothing.
+
+**Also correct, and already this laboratory's practice:** the memo's §4 insists
+the hand-labelled answer key is written down **before** the model's answers are
+seen, and its §5 refuses to let its own threshold be quoted as validated because
+it rests on two errors. That is RULES 9/10 and RULES 19 arriving from outside in
+different words, and it is the part of the memo that most deserves to be
+believed.
+
+**Nothing was launched.** No endpoint called, no agent run, no instruction
+written. The laboratory remains stopped where the previous entry left it, with
+the exam unbuilt.

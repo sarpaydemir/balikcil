@@ -1,3 +1,6 @@
 # Balıkçıl — re-downloadable raw data does not enter git
 data/
 .claude/settings.local.json
+
+# Secrets never enter git
+.env
