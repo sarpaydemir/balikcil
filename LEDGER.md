@@ -1070,3 +1070,63 @@ Measured side-fact from juror 1, which the objection about equity trading hours
 turns on: `AVGOUSDT` has `days_with_zero_trades` = 0 across 134 of 134 days and
 `NOKUSDT` 0 across 92 of 92 — both traded every day including weekends, so the
 hourly series does not show the holes an equity underlier would predict.
+
+`2026-09-19 06:56 UTC` · **second jury · RATIFIED · 3–0 · the definition admits them** ·
+**Outcome: `TACTICS.md` section 0, as written, admits a contract whose
+underlying is a tokenized equity.** Split **3–0**, no reasoned objection.
+Verdict: `decisions/2026-09-19-tokenized-equity/verdict.md`, first line
+`RATIFIED`. **So `AVGOUSDT` and `NOKUSDT` stay in the universe and in the
+observation set**, and the remedy question that was queued behind this one is
+moot — there is nothing to remedy.
+
+The reasoning, so it can be attacked: section 0's tests are venue, instrument
+type and having traded; **none of them is about the underlying.** Juror 1
+grepped all four open documents for `crypto|equit|stock|share|underlying|asset
+class` and found no restriction anywhere — `RULES.md` returns no match at all.
+All three then leaned on RULES 6: the universe rule and the draw number were
+fixed before the draw was opened, so reading an asset-class restriction into
+section 0 **now**, after seeing what was drawn, would be a new rule wearing the
+old one's clothes.
+
+**All three wrote down the case against themselves, and it is a good one:**
+"coin" appears 20 times in `TACTICS.md` against one "contract", and section 0's
+own closing clause says "so that **coins** which died during the period are
+included". Juror 2's formulation is the one to keep: **"the definition admits
+it, and probably did so unintentionally — two different findings, and only the
+first is mine."** Whether the laboratory *wants* such contracts is a rule
+change, which RULES 33 closes to a juror and which the user has declined to be
+asked about. So it stands.
+
+The referee ruled on all three special matters it was given. On the steer:
+**"RULES 3 breach"**, stated as such, ratified anyway because the jurors
+reached the alternative reading themselves and explained why it is not
+dispositive. On the title and the one-sided scope fence: confirmed, and juror 1
+answered against the marked branch. On the `cards/` exposure: the three lines
+were about Wikipedia matching and unrelated to the universe definition. It also
+ran the overreach check and found none — every juror kept `NOKUSDT` as
+unidentified.
+
+**Cost:** 3 jurors 112,331 tokens (38,598 + 38,210 + 35,523); referee 44,548 on
+`haiku`. Second ratified question ≈ 157,000 tokens.
+
+`2026-09-19 06:56 UTC` · **third jury convened · the separation of calm moments** ·
+Question: does `TACTICS.md` section 2 require a minimum distance between two
+calm moments of the same coin? This is the open question Mateo named as the one
+he would have stopped and asked about if he could.
+
+**The instruction was written against all six faults found so far**, and this is
+the test of whether the corrections hold: neutral title naming neither answer;
+section 2 neither quoted nor summarised, so no observation is handed over ahead
+of the reading; the aftermath clause written for **both** branches; "the text is
+silent" declared a permitted answer; `data/moments/moment-manifest.md` **closed**
+because its "Definitions used" section describes the implementation under
+question — the same trap as the annotated artefacts of the first jury, caught
+this time before the question went out; and an explicit instruction to scope
+every search to a named file, because of the `cards/` exposure.
+
+**A coordinator measurement that corrects an agent's, in the question itself:**
+Mateo reported "20 calm pairs closer than 48 h". Recounted from
+`moments.csv`: **20 adjacent pairs, 21 pairs in total** — the extra one where
+three calm moments of one coin fall inside a single 48-hour window. Both are
+correct measurements of different things; the jurors were given both, and told
+the numbers bear on neither answer.
