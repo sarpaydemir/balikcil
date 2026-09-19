@@ -2336,3 +2336,45 @@ flagged it first. She resolved it the same way — followed the instruction,
 reported the discrepancy, and said explicitly that under RULES 33 it is for
 three jurors and "not me and not the coordinator alone." **Queued, still not
 answered, still not blocking.**
+
+`2026-09-19 10:54 UTC` · **user decision · the laboratory stops at 14:00 UTC today** · The user
+asked for work to stop after 17:00 so they can look at how their session limit
+is going, and said we would talk after that.
+
+**The machine's local clock is UTC** (`date` reports `+0000`), so "17:00" is
+ambiguous: 17:00 on this machine, or 17:00 where the user is. **The earlier of
+the two was chosen** — 14:00 UTC, which is 17:00 at UTC+3 — because stopping
+early is reversible and stopping late is not. A one-shot job `c5500919` fires at
+13:58 UTC to make it happen whether or not the coordinator is mid-thought; it
+will wind down anything running, delete the recurring 3-hour loop `df0011b1`,
+and report. Told to the user, who can move it if the other reading was meant.
+
+`2026-09-19 10:54 UTC` · **observation · Kenji · v2 batch 01 · finished** · 34 of 34 read, notes
+at `notes/2026-09-19-kenji-v2-batch01.md`, every line carrying a card number, no
+steer found. **241,844 tokens.**
+
+**He led with his negative finding and said why:** "my strongest finding is a
+negative one — the funding rate, which is the most-cited item in my whole field,
+told me nothing in these 34 cards, and I would rather that be recorded clearly
+than buried under the one idea that fired 4 times out of 5." The measurement
+behind it: the most negative before-funding in the batch precedes a **calm**
+card; the next most negative precedes a large move **down**; another all-negative
+card precedes a large move **up**. One sign, three different outcomes. And nine
+cards sit pinned at the +0.0050% floor for all six payments — zero variation,
+zero information — splitting 4 large / 5 calm.
+
+**He checked his own best separator against price and reported that price beat
+it.** Open interest rising ≥2% in any before-hour fires on 9 of 17 large and 3
+of 17 calm; but "any hour with |price change| ≥3%" alone already gives 13 of 17
+against 3 of 17. His conclusion, unprompted: price carries most of the
+separation, and the open-interest column adds something only in the three cards
+where the jump came in a quiet hour.
+
+**One data defect named:** `C259` prints a literal `0` for open interest at three
+hours with neighbours around 926k–941k — a dropout written as a zero. He
+excluded those rows and said so, and warned that any script taking hour-on-hour
+change there would produce −100% and infinity.
+
+**Third agent to flag the `canteen/` versus `notes/` contradiction**, after Kenji's
+own earlier run and Ingrid's. Same resolution each time: follow the instruction,
+report the conflict, do not decide it.
