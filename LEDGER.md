@@ -2979,3 +2979,41 @@ they agree on the liquid coins. **"`taker L/S` must not be used raw."**
 
 He confirmed the `C272`/`C180` shared start hour independently — the third
 reader to do so — and named five of the 21 large cards as whole-market hours.
+
+`2026-09-19 11:21 UTC` · **observation · Ingrid · v2 batch 05 · finished** · 34 of 34, notes at
+`notes/2026-09-19-ingrid-v2-batch05.md`, no steer found, no scratch file.
+
+**She hit TACTICS 8's cost model, with arithmetic on printed numbers.** Summing
+the six after-window funding payments card by card: **`C111` +0.3578%**, then
++0.1781, +0.1772, +0.1538, +0.1403, +0.1253, +0.0983 — against **+0.0300%** on
+every floor-clamped card. **Funding varies by more than tenfold across cards in
+one batch, and `C111`'s 24-hour funding alone exceeds the entire 0.20%
+round-trip cost TACTICS 8 assumes.** At the other end, a 24-hour long on `C265`
+would have **received about 3.75%**.
+
+TACTICS 8 says funding is calculated from the real payments, so the model is not
+wrong — but a single flat cost number cannot stand beside a field that ranges
+from −3.75% to +0.36% over the same 24 hours. Recorded as a measurement the
+money test will have to carry.
+
+**Her null holds inside a single coin, which is the strongest form of it:**
+across the seven KOMA cards the **four highest** before-funding readings are all
+**calm** — +0.0835, +0.0591, +0.0426, +0.0312. **"Rich funding is a coin trait,
+not a moment trait."** And two hard counterexamples: `C104` **+161.78%** with
+before-funding flat at the floor, `C237` **+42.62%** with funding at the floor
+across all twelve payments. On `C104` she checked the after table herself —
+bitcoin stays inside ±0.5%/h through the whole rally — "so it is the coin, not
+the market."
+
+**Two more cards on the wrong side of the label boundary**, found independently
+of Lukas and Kenji: `C072` is marked **calm** at **−14.11%**, `C085` calm at
+−8.61%. Her note: "every calm/large count in my notes inherits that."
+
+**She distrusted her own best-looking result for the right reason:** elevated
+before-funding was followed by a large move **5 times out of 5** — "the opposite
+of the crowded-longs story, which is **precisely why** I do not trust it at n=5
+across 3 coins." Confidence 2.
+
+**Her deep-negative-funding idea carries its own disqualification:** 2 of 34
+cards, both large, both up, zero false fires — "two events is an observation,
+not a rule, and **the threshold was cut after looking.**"
