@@ -1341,3 +1341,54 @@ the disclosure that a list exists, the naming of *count* as the axis of
 difference, and the explanation of why no data file was opened. Three jurors,
 three identical findings, which is what a steer in the common question looks
 like.
+
+`2026-09-19 07:10 UTC` · **fourth jury · RATIFIED · 2–1 · the separation operates during selection** ·
+**Outcome: `TACTICS.md` section 2 applies the 48-hour separation as a
+constraint while moments are being chosen, not as a cull after a set of N has
+been fixed.** Moments are taken largest-first, each at least 48 h from every
+moment already taken, and selection stops at the quota — so a coin with enough
+separated candidates yields exactly N. Split **2–1**. Verdict:
+`decisions/2026-09-19-large-moment-selection/verdict.md`, first line
+`RATIFIED`.
+
+**Mateo's reading R1 stands. The moment list and all 306 cards are correct on
+this point and are not regenerated.**
+
+**The dissent is recorded, not buried.** Juror 2 held that "The largest 20 of
+the year are **taken**" stays literally true only under take-then-prune, and
+that section 2 uses "moment" for a selected moment and never for an hourly
+candidate. The referee ruled this an **alternative answer, not a reasoned
+objection under RULES 32** — the juror itself conceded both readings are
+admissible — so it does not block. Anyone reopening this question starts from
+juror 2's two sentences, which are the strongest thing written against the
+ratified reading.
+
+The ratified ground: "one moment per 18 days" is a statement of **yield**, and
+365 ÷ 20 ≈ 18.25; under the other reading the sentence describes nothing the
+laboratory produces. Juror 3 added the determinacy argument the referee did not
+need but which the record should keep: as a post-filter the pairwise clause is
+under-determined where three moments chain — 0/40/80 hours at sizes 10/11/12
+gives `{80}` or `{0,80}` depending on resolution order, and the section supplies
+no chain rule, so two implementers would not produce the same list.
+
+**On the steers:** the referee found they "affect all three jurors equally and
+do not push them toward a single answer", and pointed at the evidence —
+**juror 2 reached a different conclusion despite them.** That is a stronger
+independence finding than the first jury's, because this time the jury was not
+unanimous.
+
+**A split verdict is the mechanism's first real test and it passed:** three
+jurors disagreed on a genuinely ambiguous text, all three said so, all three put
+themselves at 3 of 5, and the referee counted rather than re-deciding.
+
+`2026-09-19 07:10 UTC` · **gaps the jurors named and refused to fill — still open** · Every
+juror listed what section 2 leaves unsettled even after the order is fixed, and
+under RULES 33 the coordinator may not fill any of them: rounding of
+lifetime ÷ 18; what "lifetime" means for a coin that died mid-period; the
+tie-break between equal-sized candidates; whether size is percentage or absolute;
+whether the 48 h is measured between start hours or window edges; and whether
+"closer than 48 hours" excludes a gap of exactly 48 h. Mateo resolved each of
+these in code and his resolutions stand as **provisional**, recorded at
+06:43 UTC. They are smaller than R1 and R5 and none of them changes which
+moments exist by more than an edge case, but they are not settled and are not
+written down as settled.
