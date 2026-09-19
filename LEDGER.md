@@ -4097,3 +4097,60 @@ before-hours of `C018` and on `C019` h−24…h−21, both BCH** — "joined, it
 explanation:** `taker L/S` = **80.90** at `C236` h−17 (NIL, **4k trades**) and
 `C260` h−1 (NOK, 454 trades) — two coins five months apart — **and both rows'
 `taker buy%` implies about 1.3–1.9, not 80.9.**
+
+`2026-09-19 12:56 UTC` · **round 2 · Amara · eleven ideas tested, nine killed, and a rule that contradicts its own author** ·
+She read all 27 files and **opened 20 cards**, naming each. Her own nine stayed
+closed.
+
+**Ingrid and Amara reached the same verdict independently, from different
+fields, on different cards.** Amara's wording: **"No directional idea from round
+1 survives a card drawn from outside the batch that proposed it."** She tested
+eleven and killed nine with verified cards, including:
+- Kenji's batch-01 idea, which says **sell**, fires on **`C245`** → large
+  **+42.88% up**. **And the same card fires his batch-02 idea in the opposite
+  direction** — "two of his own rules contradict each other."
+- His batch-06 idea, **sell**, fires on **`C251`** → **+37.91% up.**
+- His batch-07 idea, **buy**, fires on **`C045`** → **−15.23%.**
+- Lukas's batch-09 blow-off idea, **sell**, fires on **`C104`** → **+161.78%
+  up** and **`C279`** → **+19.62% up.**
+- Lukas's batch-09 buy idea fires on **`C225`** → calm **−8.10%**, "hits his own
+  stop."
+
+**The one survivor is not an idea.** Lukas's magnitude gate — at least one
+before-hour of |chg| ≥ 5% — survives, but she found **two calm fires**
+(`C246`, `C277`) and it supplies no direction, "so under RULES 8 it is not an
+idea." That matches Lukas's own filing.
+
+**Three set-level facts no single batch could produce**, and the second one
+matters most:
+1. The corpus base rate is **exactly 153 large / 153 calm**, while **per-batch
+   base rates run 38% to 62%** — **"so every in-batch 'lift' must be
+   re-based."** Every count in the 36 round-1 files was measured against a
+   moving denominator.
+2. Pooling Ingrid's own nine counts, **funding pinned at baseline covers 103
+   cards — 47 large / 56 calm = 45.6% against a 50% set base rate.** The
+   commonest reading in her entire field is very slightly **anti**-correlated
+   with a large move.
+3. The labels overlap at set level, verified card to card: `C127` calm at
+   **−13.83%** against `C013` large at **+7.91%**. She then named which of
+   Lukas's own statements to keep and which to discard — his batch-03 "the two
+   labels do not overlap" and batch-06 "a magnitude threshold would separate
+   these 34 perfectly" are **batch-local and fail**; his batch-07/08 wording
+   stands.
+
+**She escalated the exam leak rather than filing it.** Verified on all 20 cards:
+every AVGO / BCH / NOK card prints `interval 8 h`, every NIL / KOMA / FHE / ZRO
+/ NEWT / FARTCOIN card prints `interval 4 h`; AVGO and NOK also print funding of
+exactly +0.0000%. **"A reader of 400 exam cards can cluster them by coin off the
+funding line alone… This should reach Nadia before the answer key is sealed."**
+Three watchers from three fields now say the same thing.
+
+**Four number corrections to other watchers**, each against the card, including
+one she owes Ingrid twice and one she owes Kenji on which window a value sits
+in. **And she independently reproduced Lukas's correction of Ingrid's `C007`
+estimate**, getting about −4.5% / −6.4% where Ingrid had eyeballed −3.6% /
+−4.2%.
+
+**`C084`/`C085` verified byte-for-byte** — after rows +9…+23 are before rows
+h−24…h−10, **both calm** — and placed where it belongs: "**This is an open
+question for three jurors under RULES 33, not for me.**"
