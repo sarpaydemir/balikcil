@@ -1199,3 +1199,64 @@ not answered; it is a question for a jury, not for the coordinator.
 
 **Three answers are in and the referee is sitting.** No outcome is recorded
 until it rules (RULES 35).
+
+`2026-09-19 07:02 UTC` · **third jury · RATIFIED · 3–0 · calm moments need no separation** ·
+**Outcome: `TACTICS.md` section 2 requires no minimum distance between two calm
+moments of the same coin.** Split **3–0**, no reasoned objection. Verdict:
+`decisions/2026-09-19-calm-separation/verdict.md`, first line `RATIFIED`.
+
+**So Mateo's reading R5 stands and the 306 cards are correct on this point.**
+The 21 close calm pairs are not a defect. This was the open question Mateo
+named as the one he would have stopped and asked about — it has now been
+answered by three jurors and a referee instead of by the coordinator, which is
+the whole of RULES 33 working as intended.
+
+Three independent grounds, reached separately: **(a)** the 48-hour clause is an
+indented sub-bullet of the *large-movement* definition, whose two siblings are
+unarguably large-only, while the calm bullet returns to the outer level;
+**(b)** "only the larger counts" has no operand for a calm moment — large
+moments are magnitude-ranked by construction, calm moments are "chosen at
+random", and picking the larger of two would replace random selection with
+pick-the-biggest-mover, contradicting the sentence that defines them; **(c)**
+the calm bullet borrows explicitly when it borrows ("the same number as the
+large moments") and states its own separation requirement naming a different
+counterparty — "at least 72 hours away from any **large movement**", not "any
+other moment".
+
+**All three wrote the case against themselves** and it is real: line 39 says
+"Of two **moments**", unqualified, and two calm moments 14 hours apart produce
+cards overlapping by ten of twenty-four hours — which is the near-duplication
+RULES 13 and TACTICS 7 guard against elsewhere. Juror 3 named the actual pair:
+`AVGOUSDT-C-20260716T0000` and `AVGOUSDT-C-20260716T1400`. What defeated it for
+all three is that the opposing reading must invent a remedy the text never
+supplies — redraw? drop the later? drop the one nearer a large move? — and
+choosing among those is writing the rule, not reading it.
+
+**The referee listed all four instruction faults as quality issues and ratified
+anyway**, on the ground that every answer is grounded in the text rather than in
+the coordinator's measurements. It named them in its own verdict rather than
+letting them pass.
+
+**Cost:** 3 jurors 97,545 tokens; referee on `haiku`. Three questions ratified,
+≈ 420,000 tokens spent on the mechanism so far.
+
+`2026-09-19 07:03 UTC` · **fourth jury convened · how a coin's large-movement moments are selected** ·
+Mateo's reading **R1** — the load-bearing one. The literal order (take the
+largest 20 hours, then drop neighbours) and the order he implemented
+(separation applied *during* selection) do not produce the same list, and he
+recorded that the literal order collapses to a handful of moments because one
+price event occupies many consecutive start hours. **Every card in `cards/`
+rests on this.**
+
+**The instruction was written against all ten faults**, and this one drops two
+things the previous three all carried: it asks an **open** question — what
+procedure does the section prescribe, and in what order do its clauses operate
+— rather than offering two readings to choose between; and it **opens no data
+file at all.** A question about a text does not need an artefact, and every
+artefact this laboratory now holds was built under one of the readings. It also
+carries no measurement, no chosen cut, no statement about what has been
+implemented, and none of the "N faults have been found" boilerplate that became
+the tenth fault.
+
+If the jurors find the section admits more than one procedure and does not
+choose, that answer is explicitly permitted and is not a failure.
