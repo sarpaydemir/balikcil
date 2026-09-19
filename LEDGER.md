@@ -1615,3 +1615,50 @@ identical bodies from line 9 onward, frontmatter differing in `name`,
 is closed to jurors. **A verification nobody permitted can see is not a
 verification.** The referee's permitted list will include both definition files
 so the objection can be closed by someone who can look.
+
+`2026-09-19 09:47 UTC` · **fifth jury · three answers in · unanimous, and unanimously unable to close the objection** ·
+All three jurors of the effort-level jury answered **`high`**, each computing
+the ratios itself from `data/pilot/2026-09-19-pilot-measurements.md` and each
+marking the arithmetic as its own. **The outcome waits for the referee**
+(RULES 35).
+
+**All three raised the same objection, and none could settle it:** they were
+unable to verify that `watcher` and `watcher-high` differ **only** in effort,
+because `.claude/agents/` was not in the list the coordinator opened to them.
+Juror 3 put it at its sharpest — "if they differ beyond effort, all three
+jurors have been asked to read a confounded experiment" — and asked, in its own
+report, that someone permitted run the diff. Juror 1 capped its confidence at 4
+for this reason alone and said the objection "settles in minutes" for anyone who
+can look.
+
+**The referee can look.** Both definition files are in its permitted list and it
+has been told to compare them line by line and rule on what it finds. That is
+the correction to fault fourteen, applied in the same jury rather than recorded
+for later: **the coordinator's own diff, sitting in a file closed to the
+jurors, was not a verification.**
+
+**Fifteenth fault, found by juror 3.** The question said the two arms used "the
+same instruction, differing only in effort level", while the measured artefact
+says they "differ in four lines (title, role, effort, output path)". The
+juror's own classification, which the coordinator accepts as more precise than
+"steer": an **over-tidy premise** — it states no result and names no winner,
+but it "asserts as settled exactly the thing my objection says is unverified,
+and points the juror away from asking about the confound." **The pattern is new
+and worth naming separately: not a result smuggled in, but a difficulty
+smoothed out.**
+
+**What each juror held against its own answer**, recorded because the ledger
+carries reasoning and not only counts: that n = 1 per arm, so the gap is a
+single draw and not a mean; that the card-numbered-line count flatters the high
+arm, which writes one computed line per card where the medium arm packs ten
+cards into one line; and that **on the one unit RULES 8 defines — a complete
+idea with trigger, direction and exit — the medium arm produced more.** Two
+jurors answered that objection the same way: the high arm's two direction-empty
+items are labelled blocker candidates and it wrote that it declined "rather
+than inventing a direction to fill the slot", which is RULES 8 compliance
+rather than shortfall. That reply is interpretation, and juror 3 said so of its
+own reply.
+
+Juror 3 also named the measurement TACTICS 4 really wants and the pilot did not
+take: **a blind read of the two notes files by someone who does not know which
+arm is which.**
