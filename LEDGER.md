@@ -1560,3 +1560,58 @@ a first.
 Instruction copies:
 `instructions/2026-09-19-0735-juror-effort-level-1.md` and `-2`, `-3`, which
 differ from one another in the output filename alone.
+
+`2026-09-19 09:46 UTC` · **WALL INCIDENT · commit subjects are a channel through the wall** ·
+Found and reported by juror 1 of the effort-level jury, unasked. Its words:
+its launch context "included a git-status system note whose commit subjects
+referenced `LEDGER.md` content, including 'RULES 25 measured: pilot costs,
+full-run estimate, pilot limitations'. `LEDGER.md` is closed to me."
+
+**The mechanism:** the harness puts recent commit subjects into **every**
+subagent's launch context. The `ledger` skill instructed the coordinator to
+"commit with a one-line message **naming the entry's label**". So every
+descriptive commit subject this laboratory has written has been delivered to
+every agent launched afterwards — watchers, jurors, referees — regardless of
+what their instruction closed to them.
+
+**What has actually gone through it:** subjects naming jury outcomes ("first
+jury RATIFIED 3-0, the 42 stay out"), the wall incident, the RULES 25
+measurement, and the existence and direction of coordinator decisions. The
+juror states it did not open `LEDGER.md` and that no figure from those subjects
+appears in its answer — but it also says the material "arrived unasked and
+touches a closed file", which is exactly right and is why it reported it.
+
+**Severity, and this is the part that matters:** the exam has not been prepared.
+When it is, `exam-candidate` runs with `TodoWrite` and one turn — and it would
+still receive the commit subjects. A subject reading "answer key sealed" or
+naming a finding would **contaminate the blind exam**, which is the one thing in
+this laboratory that cannot be repaired after the fact. This was found before
+the exam exists, which is the only good thing about it.
+
+**Fixed now, not queued:** the `ledger` skill's step 6 is rewritten. Commit
+subjects are **contentless** from this line onward — `ledger: <timestamp>` and
+nothing else — and the reason is written into the skill so it survives the
+coordinator forgetting it. The `autocommit.sh` hook's own messages were already
+contentless ("auto: working tree at <time>").
+
+**Not repaired retroactively, and cannot be:** the subjects already written are
+in the git history and will keep appearing in launch contexts. Rewriting history
+would break RULES 30's append-only discipline and the pushed record. What can be
+said is that no agent whose context carried them was an exam candidate, because
+none has run.
+
+**Told to the user**, as a wall leak.
+
+`2026-09-19 09:46 UTC` · **fourteenth instruction fault · a juror was denied what it needed to check the pilot** ·
+The same juror's strongest objection: it could not verify that `watcher` and
+`watcher-high` differ **only** in effort, because `.claude/agents/` was not in
+its permitted list. If they differ in more, part of the note-count gap belongs
+to the definition rather than to effort, and the pilot measured the wrong thing.
+It could not close the objection and said so, capping its own confidence at 4.
+
+**The coordinator ran exactly that diff at 07:20 and recorded the result** —
+identical bodies from line 9 onward, frontmatter differing in `name`,
+`description` and the effort line alone — but recorded it in `LEDGER.md`, which
+is closed to jurors. **A verification nobody permitted can see is not a
+verification.** The referee's permitted list will include both definition files
+so the objection can be closed by someone who can look.

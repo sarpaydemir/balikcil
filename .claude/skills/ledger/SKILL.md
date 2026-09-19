@@ -42,8 +42,16 @@ is ever deleted.*
    losing old lines.
 5. After appending, verify the line count **grew.** If it shrank or stayed the
    same, stop and tell the user.
-6. **Commit and push.** Stage the changed files, commit with a one-line message
-   naming the entry's label, and push to `origin main`. Records that are pushed
+6. **Commit and push.** Stage the changed files, commit with a **contentless**
+   one-line message — `ledger: <YYYY-MM-DD HH:MM UTC>` and nothing else — and
+   push to `origin main`.
+
+   **The message must not name the entry's label or summarise what happened.**
+   The harness injects recent commit subjects into every subagent's launch
+   context, including agents for whom `LEDGER.md` is closed and including exam
+   candidates. A descriptive commit subject is therefore a hole straight through
+   the wall. Found on 2026-09-19 by a juror who reported receiving commit
+   subjects referencing ledger content it was not permitted to read. Records that are pushed
    are records that survive (RULES 29–30). Every ledger entry is one commit, so
    the git history and the ledger tell the same story.
 
