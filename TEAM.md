@@ -1,13 +1,14 @@
 # Team
 
-Eleven names, one coordinator. The watchers look at different places so that the
-same thing is not seen four times.
+Eleven names, one coordinator, and — since 2026-09-19 — a jury. The watchers
+look at different places so that the same thing is not seen four times.
 
 All work is in English. The single exception is Derya, the reporter, who writes
 the account for the user in Turkish.
 
 Every task states its model and effort level explicitly. Model is `opus`
-everywhere; the distinction is made by **effort level**, not model size.
+everywhere except the **referee**, which is small on purpose; the distinction is
+otherwise made by **effort level**, not model size.
 
 ---
 
@@ -107,6 +108,26 @@ everywhere; the distinction is made by **effort level**, not model size.
 - **Greta is a script, not an AI.** A judge has no opinions. Mateo writes the
   script.
 
+## Jurors — the answer to an open question
+
+- **Does:** answers one open question, alone, in a fresh context, without seeing
+  any other juror's answer. Cites the file and line the answer rests on,
+  writes the strongest case against itself, and gives a confidence of 1–5.
+- **Cannot:** decide a trading rule, a threshold or a score; change a rule in
+  `RULES.md`; see exam cards; see another juror's answer.
+- **How many:** at least three per question (RULES 33).
+- **Agent:** `juror` · effort high.
+
+## The referee — mini on purpose
+
+- **Does:** reads the jurors' answers and **ratifies or refuses.** Checks count,
+  independence, grounding, the split, the reasoned objection and scope.
+- **Cannot:** answer the question itself, even when every juror is wrong. Then
+  it refuses and says why.
+- **Model:** small (`haiku`) — the one role that is not `opus`, deliberately.
+  A referee that reasons its way to a preference stops being a referee.
+- **Agent:** `referee` · effort medium.
+
 ---
 
 ## Coordinator
@@ -114,12 +135,14 @@ everywhere; the distinction is made by **effort level**, not model size.
   explains them to the user.
 - **Cannot:** interpret a card, write a rule, or sit the exam with their own
   hands. Cannot carry findings from the old project to the agents.
+  **Cannot answer an open question alone** — that goes to three jurors and the
+  referee (RULES 33–35).
 
 ---
 
 # Agent definitions
 
-Six definitions in `.claude/agents/` cover the nine AI roles. Greta stays a
+Eight definitions in `.claude/agents/` cover the AI roles. Greta stays a
 script.
 
 | definition | roles it covers | effort |
@@ -130,9 +153,11 @@ script.
 | `skeptic` | Viktor | xhigh |
 | `exam-candidate` | Hana · Tomás | medium |
 | `reporter` | Derya | high |
+| `juror` | one open question, at least three run per question | high |
+| `referee` | ratifies or refuses, **model `haiku`** | medium |
 
 Structural decisions:
-- All six carry `omitClaudeMd: true` — an agent never sees a parent `CLAUDE.md`
+- All eight carry `omitClaudeMd: true` — an agent never sees a parent `CLAUDE.md`
   and reads its wall text from its own definition.
 - **No definition has the `Skill` tool.** No agent can call a skill and walk
   around the wall.

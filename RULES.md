@@ -107,6 +107,33 @@ it is written into `LEDGER.md`.
 
 ---
 
+## G · Open questions
+
+Added 2026-09-19 on the user's decision. An **open question** is a point the
+written rules do not settle by themselves: a wording that can be read two ways,
+a gap an instruction did not cover, a choice that changes the numbers.
+
+33. **An open question is never answered by one person** — and least of all by
+    the coordinator alone. **At least three jurors answer it independently**, in
+    separate contexts, without seeing each other's answers. Three answers that
+    saw each other are one answer. A juror decides procedure and definition
+    only: never a trading rule, never a threshold or score, and never a change
+    to a rule in this file.
+34. **Every answer cites what it rests on** — a file and a line, quoted. An
+    answer citing nothing does not count and is struck out before the count is
+    taken. This is the same discipline as a watcher note without a card number.
+35. **A mini referee ratifies or refuses.** It checks six things: count,
+    independence, grounding, the split, the reasoned objection (RULES 32), and
+    scope. **It never answers the question itself** — if all the jurors are
+    wrong it refuses and says why. A tie is no outcome. Ratification and
+    refusal are both written into `LEDGER.md` with the split in numbers.
+
+    The referee runs on a small model on purpose. A referee that reasons its way
+    to a preference has stopped being a referee. This is the single exception to
+    the 2026-09-18 decision that every role runs on `opus`.
+
+---
+
 ## Note on language · 2026-09-18
 
 This file was originally written in Turkish as `KURALLAR.md`. On the user's

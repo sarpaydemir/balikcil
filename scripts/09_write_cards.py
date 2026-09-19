@@ -319,17 +319,19 @@ SEP = "|" + "---|" * 14
 
 
 def hour_rows(hours, rel0, bars, met, bd, refbars, guard, sect, what):
-    rows, prev = [], None
+    """One row per hour. `chg%` is measured against the hour before the row,
+    which for the first row of a table is the hour just outside it; that hour is
+    always *earlier* than the row, so the before section never reaches forward."""
+    rows = []
     for i, h in enumerate(hours):
         (guard.before_hour if sect == "before" else guard.after)(h, what)
         b = bars.get(h)
         m = met.get(h) or {}
         d = bd.get(h) or {}
+        prevb = bars.get(h - HOUR_MS)
         chg = None
-        if b and prev and prev > 0:
-            chg = 100.0 * (b["close"] / prev - 1.0)
-        if b:
-            prev = b["close"]
+        if b and prevb and prevb["close"] > 0:
+            chg = 100.0 * (b["close"] / prevb["close"] - 1.0)
         ref = []
         for r in REFERENCE:
             rb, rp = refbars.get(r, {}).get(h), refbars.get(r, {}).get(h - HOUR_MS)
@@ -416,9 +418,11 @@ def wiki_line(w, t0, sect, absent):
 
 def market_line(p, lo, hi, guard, sect, absent):
     if p is None:
-        absent.append(("prediction market", "MISSING - prediction-market.json was not written"))
+        absent.append(("prediction market price", "MISSING - prediction-market.json was not written"))
         return "- **Prediction market:** MISSING - prediction-market.json was not written."
     if p.get("errors") and not p.get("markets_matched"):
+        if sect == "before":
+            absent.append(("prediction market price", "MISSING - Polymarket search failed"))
         return ("- **Prediction market:** MISSING - search failed: %s"
                 % p["errors"][0].get("error"))
     lines = []
@@ -433,6 +437,10 @@ def market_line(p, lo, hi, guard, sect, absent):
         return "- **Prediction market:** " + "; ".join(lines)
     n_match = len(p.get("markets_matched") or [])
     n_over = sum(1 for r in (p.get("markets_matched") or []) if r.get("overlaps_card_span"))
+    if sect == "before":
+        absent.append(("prediction market price",
+                       "empty - Polymarket was reached and searched; no market mentioning "
+                       "this coin had a price point in these hours"))
     return ("- **Prediction market:** none - Polymarket search over %s returned %d markets, "
             "%d mentioning this coin, %d overlapping this coin's card span, none with a "
             "price point in these hours."
@@ -482,9 +490,22 @@ def main() -> int:
     wiki = load_json("wikipedia.json")
     poly = load_json("prediction-market.json")
     ann = load_json("announcements.json")
-    ann_note = ("MISSING - " + "; ".join(
-        "%s -> %s" % (p["label"], p["error"] or p.get("note") or "answered but carries no history")
-        for p in ann["probes"])) if ann else "MISSING - announcements.json was not written"
+    if ann:
+        by_ex = {}
+        for p in ann["probes"]:
+            why = p["error"] or p.get("note") or "answered but carries no history"
+            by_ex.setdefault(p["exchange"], [])
+            if why not in by_ex[p["exchange"]]:
+                by_ex[p["exchange"]].append(why)
+        ann_note = ("MISSING - no announcement source could be reached: "
+                    + "; ".join("%s: %s" % (e, " / ".join(v)) for e, v in sorted(by_ex.items()))
+                    + ". Full probe log: `data/observation/external/announcements.json`.")
+        ann_short = ("MISSING - every address probed failed or carries no history "
+                     "(%s); see data/observation/external/announcements.json"
+                     % ", ".join(sorted(by_ex)))
+    else:
+        ann_note = "MISSING - announcements.json was not written"
+        ann_short = ann_note
 
     refbars = {r: load_klines(r) for r in REFERENCE}
     for r in REFERENCE:
@@ -540,13 +561,14 @@ def main() -> int:
         A("")
         A(seven_day_line(c["bars"], t0, guard, absent))
         A(funding_line(c["fund"], t0 - BEFORE_H * HOUR_MS, t0, guard, "before", absent))
-        A("- **Order book depth:** median notional resting within 1%% of mid, per hour, "
-          "in the table below." if c["bd"] else
+        A("- **Order book depth:** median notional resting within 1% of mid, per hour, "
+          "in the two `depth` columns below." if c["bd"] else
           "- **Order book depth:** MISSING - no bookDepth file for this coin.")
         A(releases_line(cal, t0 - BEFORE_H * HOUR_MS, t0, guard, "before", absent))
         A(wiki_line((wiki or {}).get(sym), t0, "before", absent))
         A(market_line((poly or {}).get(sym), t0 - BEFORE_H * HOUR_MS, t0, guard, "before", absent))
         A("- **Exchange announcements:** %s" % ann_note)
+        absent.append(("Binance and Korean exchange announcements", ann_short))
         A("")
         A(HEADER)
         A(SEP)
@@ -570,17 +592,19 @@ def main() -> int:
         A("")
 
         # measured per-cell gaps
-        gaps = []
+        gaps, gap_index = [], []
         for label, src in (("open interest / long-short ratios", c["met"]),
-                           ("order book depth", c["bd"])):
+                           ("order book depth", c["bd"]),
+                           ("price / volume / trade count", c["bars"])):
             if src:
                 miss = sum(1 for h in before_hours + after_hours if h not in src)
                 if miss:
-                    gaps.append("%s: %d of the 48 hours have no published value"
-                                % (label, miss))
-        miss_bars = sum(1 for h in before_hours + after_hours if h not in c["bars"])
-        if miss_bars:
-            gaps.append("price/volume: %d of the 48 hours have no kline" % miss_bars)
+                    gaps.append("**%s** - empty for %d of the 48 hours: the source covers "
+                                "this coin but published no value for those hours" % (label, miss))
+                    gap_index.append((label,
+                                      "empty on some hours - the source covers this coin but "
+                                      "published no value for every hour; the exact count is "
+                                      "on each card"))
 
         A("## Fields not on this card")
         A("")
@@ -611,8 +635,8 @@ def main() -> int:
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(text)
 
-        for name, why in absent:
-            absent_all.setdefault((name, why), []).append(no)
+        for name, why in absent + gap_index:
+            absent_all.setdefault((name, why), set()).add(sym)
         index_rows.append({"no": no, "symbol": sym, "kind": m["kind"],
                            "start": hhmm(t0), "sha256": sha256_file(path)})
         if i % 25 == 0:
@@ -663,13 +687,18 @@ def main() -> int:
     A("that hour. A card never implies a measurement that was not made (RULES 20).\n")
     A("## Fields missing or empty, by name\n")
     if absent_all:
-        A("| field | reason | cards |")
+        A("| field | missing or empty, and why | coins affected |")
         A("|---|---|---|")
-        for (name, why), nos in sorted(absent_all.items()):
-            rng = "%s..%s (%d cards)" % (nos[0], nos[-1], len(nos)) if len(nos) > 4 else ", ".join(nos)
-            A("| %s | %s | %s |" % (name, why.replace("|", "/"), rng))
+        for (name, why), syms in sorted(absent_all.items()):
+            n = sum(per_coin[s]["large"] + per_coin[s]["calm"] for s in syms)
+            A("| %s | %s | %s (%d cards) |" % (name, why.replace("|", "/"),
+                                               ", ".join(sorted(syms)), n))
     else:
         A("None.")
+    A("")
+    A("TACTICS 3 also names Google searches, Reddit, Twitter, the history of leverage")
+    A("limits and a world news archive as things that are *not* on the card because")
+    A("there is no history or they cannot be reached. None of them was attempted here.")
     A("")
     A("## Count per coin\n")
     A("| coin | large | calm | total |")

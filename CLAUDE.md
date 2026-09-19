@@ -34,6 +34,13 @@ column names, file paths, script names, run numbers.
 - **The agents do the work.** The coordinator writes instructions, examines the
   results, and explains them to the user. The coordinator does not interpret a
   card, does not write a rule, and does not sit the exam.
+- **An open question is never answered by the coordinator alone** (RULES 33–35).
+  Three `juror` agents answer it independently, each citing the file and line it
+  rests on, and the mini `referee` ratifies or refuses. Both outcomes go into
+  `LEDGER.md` with the split in numbers.
+- **The user is an observer and is not asked questions.** They are approached
+  for exactly two things: a wall leak, or a broken rule. Everything else is
+  resolved against the written rules and recorded.
 - The full copy of every instruction is saved under `instructions/` (RULES 4).
 - Agents are told what they may look at, never what to look for (RULES 3).
 - Every task states its model and effort explicitly (RULES 24). Model is `opus`

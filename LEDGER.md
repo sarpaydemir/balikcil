@@ -662,3 +662,58 @@ exactly 2 as its 22-day life implies. `data/observation/` held 401 MB of
 verified hourly klines, `fundingRate`, `bookDepth` and metrics at 06:29 UTC and
 was still growing. **No card exists yet**, so no watcher has run and RULES 25
 remains unmeasurable. Disk: 16 GB free.
+
+`2026-09-19 06:41 UTC` · **rule change · RULES 33–35 · an open question is never answered alone** ·
+**The user's decision, and the user brought it unprompted** — which is the one
+path `RULES.md` allows for a rule to change ("If one must change, the user is
+asked first, and then it is written into `LEDGER.md`"). The user's words: an
+open question must not be answered by one person, at least three must decide,
+and a mini referee can ratify.
+
+Written into `RULES.md` as a new **section G**, rules **33, 34, 35**, and into
+`TEAM.md` and `CLAUDE.md`. Rules 1–32 are untouched and keep their numbers.
+- **33** — at least three jurors answer independently, in separate contexts,
+  never seeing each other's answers; a juror decides procedure and definition
+  only, never a trading rule, a threshold, a score, or a change to a rule.
+- **34** — every answer quotes the file and line it rests on. An answer citing
+  nothing is struck out **before** the count, like a watcher note without a
+  card number.
+- **35** — a mini referee checks count, independence, grounding, the split, the
+  reasoned objection (RULES 32) and scope, and **never answers the question
+  itself.** A tie is no outcome. Ratification and refusal both come here with
+  the split in numbers.
+
+Two agent definitions written: `.claude/agents/juror.md` (opus, effort high)
+and `.claude/agents/referee.md` (**`haiku`**, effort medium). The referee is
+the **single exception** to the 2026-09-18 decision that every role runs on
+opus, and the reason is written into the definition: a referee that reasons its
+way to a preference has stopped being a referee.
+
+`2026-09-19 06:41 UTC` · **first jury convened · the zero-trade contracts · unratified** ·
+The coordinator had decided this one alone at 21:01 UTC yesterday, which is
+exactly what rule 33 now forbids, so it is the first question to go to a jury.
+Question: do the 42 contracts with frozen zero-trade rows belong in the
+universe? Both readings, and the measured cost of each, were put without a
+recommendation; `LEDGER.md` and `instructions/` were **closed to the jurors**
+so that none of them could read the coordinator's earlier answer before writing
+their own. Answers go to `decisions/2026-09-19-zero-trade-contracts/`.
+
+**Deviation, named rather than smoothed over.** `juror` and `referee` do not
+load in the session that created them — the harness reads its agent registry at
+session start and both were refused with `Agent type 'juror' not found`. The
+first jury therefore sits with three **existing** definitions, picked to be
+three different instruments rather than three copies of one: `skeptic`
+(juror 1), `canteen-chair` (juror 2), `data-engineer` (juror 3, told to run no
+script and download nothing). All three definitions say `RULES.md` wins over
+their own text, and `RULES.md` now carries 33–35. From the next session the
+purpose-built definitions are used and this substitution ends. Full record:
+`instructions/2026-09-19-0645-jury-composition-note.md`.
+
+**The referee has not sat, so there is no outcome.** `referee` does not load
+either, and no existing definition fits: `exam-candidate` cannot read a file,
+`reporter` cannot conclude, and the general-purpose agents carry `Bash`, which
+would break the structural rule that only `data-engineer` has it. Under RULES 35
+an unratified outcome is not an outcome. **Therefore: the universe of 795 and
+the draw made from it are PROVISIONAL**, and so is Mateo's card run now in
+progress, which is building on them. Nothing here is treated as settled and
+nothing is quietly carried as if it were.
