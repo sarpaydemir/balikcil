@@ -2007,3 +2007,49 @@ applied by the agent that was hurt by them, without being asked.
 She also found the payment **interval** has zero variance in the batch — 34 of
 34 cards read `interval changed: no` — and drew the only conclusion available:
 "A field with no variance cannot discriminate."
+
+`2026-09-19 10:21 UTC` · **a contradiction inside TACTICS, found by Kenji and queued for a jury** ·
+**`TACTICS.md` section 5 says "Round 1: everybody writes their notes into the
+`canteen/` folder."** Section 4, the watcher definitions and every instruction
+this laboratory has written say notes go to `notes/`. Kenji's definition tells
+him the authoritative files win over an instruction, so he had a genuine
+conflict.
+
+**What he did is the right thing and is worth recording as the pattern:** he
+obeyed the instruction, wrote one file to `notes/`, wrote nothing anywhere else,
+and **reported the conflict instead of silently picking a side** — and said why:
+writing to `canteen/` would have broken the instruction, and he did not want two
+copies of the notes in two places.
+
+**Queued, not answered.** The coordinator may not settle a contradiction between
+two sections of an authoritative document alone (RULES 33). It does not block:
+the notes exist, they are keyed by card number, and the canteen instruction can
+name whatever path the ruling gives. The card-order jury is sitting; this one
+follows it rather than running beside it.
+
+`2026-09-19 10:21 UTC` · **observation · Kenji · batch 01 · finished, and more card defects named** ·
+All 34 read, none missing, none unreadable, no steer found. Notes at
+`notes/2026-09-19-kenji-batch01.md` — 34 per-card notes, 10 cross-card notes,
+2 ideas with an explicit "no third idea", and 8 data-quality notes.
+
+**Data defects inside readable cards, his measurements, recorded for whoever
+next touches the card script:**
+- `taker L/S` carries broken cells — **2981.81** on C143 After +1, and 30.92,
+  33.26, 24.87, 23.56, 19.01, 17.38, 18.45 elsewhere, **all in low-trade-count
+  hours**.
+- `top L/S pos` has eight one-hour level shifts of 20–60% **not matched by
+  comparable price moves** — C019 After +17 goes 4.51 → 1.87 while that hour's
+  price moves −0.04%. He wrote the consequence himself: any rule measuring the
+  *change* in that column would partly be measuring these breaks.
+- `L/S acct` has single-hour spikes that revert immediately.
+- `AVGOUSDT` funding is **exactly +0.0000%** on all three After payments, which
+  he read as administratively set rather than market-determined, and said
+  funding on that symbol should probably not be treated as crowd information at
+  all.
+
+**He also discounted his own best finding before anyone asked.** Six cards show
+open interest up more than 7.5% over the before window and all six are large —
+and he wrote three caveats into the notes in the same breath: the line was
+fitted after seeing outcomes, it sits in a 0.6-point gap, it flags size but not
+direction, and two of the six are one event under RULES 13, so it is five
+independent cases and not six.
