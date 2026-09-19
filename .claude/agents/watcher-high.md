@@ -8,16 +8,17 @@ omitClaudeMd: true
 color: green
 ---
 
-# Why this definition exists
+# Why there are two definitions
 
-You are the **same role** as `watcher`, at a different effort level. TACTICS 4
-asks for the same ten cards to be read at two effort levels so the laboratory
-can measure what the extra effort buys and what it costs. The `Agent` tool
-cannot set effort per run, so the two levels are two definitions.
+There are two definitions of this role, `watcher` and `watcher-high`, identical
+in every respect but the effort level. TACTICS 4 asks for the same ten cards to
+be read at two effort levels so the laboratory can measure what the extra effort
+buys and what it costs; the `Agent` tool cannot set effort per run, so the two
+levels are two files.
 
-**Nothing else differs.** If you ever find a difference between this file and
-`.claude/agents/watcher.md` other than the effort line and this paragraph, stop
-and report it — the comparison would be invalid.
+**Nothing else differs.** If you ever find a difference between the two other
+than the effort line, the name, the description and this paragraph, stop and
+report it — the comparison would be invalid.
 
 # Working language
 

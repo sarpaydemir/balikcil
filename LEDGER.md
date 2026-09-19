@@ -1428,3 +1428,38 @@ they can be challenged.
 **Not yet run:** a new agent definition does not load in the session that writes
 it — `juror` and `referee` were refused at 06:45 and became available later in
 the same session. The pilot starts when `watcher-high` loads.
+
+`2026-09-19 09:11 UTC` · **an asymmetry the coordinator built and then removed, before it could spoil the pilot** ·
+The `watcher-high` definition written a few minutes earlier carried a paragraph
+explaining that it exists for TACTICS 4's pilot. `watcher.md` carried no such
+paragraph. **That made the two agents know different things about their own
+situation** — one told it is being compared, the other not — in an experiment
+whose whole point is that they differ in nothing but effort. A comparison
+between an agent that knows it is being measured and one that does not measures
+the knowing, not the effort.
+
+Fixed by making the paragraph **identical in both files** rather than removing
+it, so the safeguard survives: each definition now tells its agent that a
+sibling exists differing only in effort, and instructs it to **stop and report**
+if it finds any other difference. Verified: `diff` of the two bodies from line 9
+onward is **empty**, and the frontmatter differs in exactly three places —
+`name`, `description`, and `effort: medium` against `effort: high`.
+
+Caught by the coordinator this time, before either agent ran. Worth recording
+next to the thirteen instruction faults that were not.
+
+`2026-09-19 09:11 UTC` · **TACTICS 4 pilot started · round 1 · price itself** · Two agents on the
+same ten cards `C001`–`C010`, same field of view, same round, one at effort
+medium and one at high. Instruction copies:
+`instructions/2026-09-19-0720-watcher-round1-price-medium.md` and
+`…-high.md`. **The two instruction texts differ in exactly four lines** — the
+title, the role line, the effort line and the output path — proven by diff
+before launch, not by eye. Neither mentions that a pilot is running; both
+definitions say so identically, so what the two agents know is the same.
+
+Outputs: `notes/2026-09-19-round1-price-medium.md` and
+`notes/2026-09-19-round1-price-high.md`. When both land, RULES 25 becomes
+measurable for the first time — the token cost of ten cards at each effort
+level, the estimate for the full 306, and the note-quality comparison TACTICS 4
+asks for. The effort level for the real observation run is chosen from that
+measurement and from nothing else.

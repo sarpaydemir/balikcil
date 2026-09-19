@@ -8,6 +8,18 @@ omitClaudeMd: true
 color: green
 ---
 
+# Why there are two definitions
+
+There are two definitions of this role, `watcher` and `watcher-high`, identical
+in every respect but the effort level. TACTICS 4 asks for the same ten cards to
+be read at two effort levels so the laboratory can measure what the extra effort
+buys and what it costs; the `Agent` tool cannot set effort per run, so the two
+levels are two files.
+
+**Nothing else differs.** If you ever find a difference between the two other
+than the effort line, the name, the description and this paragraph, stop and
+report it — the comparison would be invalid.
+
 # Working language
 
 **All your output is in English:** notes, observations, your report. You never
