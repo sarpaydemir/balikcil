@@ -1166,3 +1166,36 @@ RULES 33 exists.
 **Juror 1's answer stands** — it states the anchoring did not move it, that it
 read section 2 before rereading the framing, and its grounds are the nesting and
 wording of the section, not the pair counts. The referee will weigh that.
+
+`2026-09-19 06:59 UTC` · **ninth and tenth faults — one of them is the anti-steer boilerplate itself** ·
+Jurors 2 and 3 of the calm-separation jury found two more, beyond the seventh
+and eighth recorded above. Both accepted.
+
+**Ninth — a sentence of the instruction was simply false.** It said "neither has
+been implemented in preference to the other in anything you may read." The one
+data file the jurors were given, `data/moments/moments.csv`, **is** the
+no-separation reading implemented: it contains same-coin calm pairs hours apart.
+Juror 2 classed it as an accuracy fault rather than a steer; juror 3 was
+sharper, calling it a status-quo pull toward exactly the answer it was about to
+give, and **asked the referee to weigh its own reasoning more suspiciously
+because of it.** An instruction that states something untrue about the material
+is worse than one that steers, because the agent cannot check it against
+anything.
+
+**Tenth — the anti-steer line became a steer.** The instruction closed with
+"Six such faults have been found in this laboratory's instructions so far, every
+one by the agent receiving them." Juror 3: that is "an expectation that I find a
+seventh — mild pressure toward manufacturing a fault", and it noted it reported
+only what it could quote. **The sentence the coordinator added to guard against
+steering was itself a steer.** It has been dropped from the referee instruction
+that followed, and does not go into another instruction.
+
+**An open question the jurors raised and nobody has answered:** `RULES.md`
+declares the English `RULES.md` authoritative after the 2026-09-18 language
+switch, but **nothing anywhere says the same of `TACTICS.md`.** Two jurors named
+this, independently, as something that would bear on reading section 2's
+indentation — whether it is the drafter's or a translation artefact. Recorded,
+not answered; it is a question for a jury, not for the coordinator.
+
+**Three answers are in and the referee is sitting.** No outcome is recorded
+until it rules (RULES 35).
