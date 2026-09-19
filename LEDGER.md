@@ -3717,3 +3717,44 @@ with outcomes of **+1.29%** and **+42.15%**.
 columns**, including a **chain of three** across 2026-06-07 to 06-11. Lukas
 found these from the price side; Amara found one of the same pairs from the
 outside-world side in the same batch.
+
+`2026-09-19 11:58 UTC` · **MILESTONE · Kenji has read all 306 cards · round 1 complete in his field** ·
+Nine batches, nine notes files. **The second watcher to cover the whole set.**
+
+**His strongest single result arrived in the last batch, and he rated it 3.**
+Open interest moving more than ±3% across the 24 hours before the start hour
+holds on **13 of 18 large cards and 1 of 16 calm** — the one exception named.
+And he tested it against the charge that has killed almost every other
+candidate: **is it just price again?** Four cards say no, with numbers:
+`C120` price **exactly flat** while open interest moved **+17.9%**; `C270`
+price **−8.7%** with open interest **+10.8% — opposite sign**; `C004` +1.2%
+against +18.4%; `C007` −0.2% against +9.1%. He also named the card where it
+**does** restate price and says so: "in `C078` price and OI move together, so
+there OI adds little."
+
+**Then he capped his own confidence at 3 anyway:** "13/16 counts in one batch of
+34 is an observation, not a rule."
+
+**Across nine batches this is the one column in his field that has repeatedly
+shown anything**, and it is the same column he warned about in batch 06, where
+a card printed open interest as `0` between two values near 825k. In this batch
+`C264` prints `0` **four times** between neighbours around 778–780k. **A rule
+built on hour-to-hour open-interest change would be building partly on those
+zeros** — he made that point himself and reported the cells as a broken field,
+not a measurement.
+
+**He named the second hazard precisely:** `top L/S pos` takes one-hour steps in
+6 of 34 cards — +97%, −50%, and four others quoted — and added the sentence
+that makes it matter: **"All six fell in after-sections here, but the same step
+inside a before-window would manufacture a 'large-trader divergence'."**
+
+**Nulls he put on the record rather than leaving out:** taker buy% in the final
+before-hour averages **49.8 across the eighteen large cards and 50.9 across the
+sixteen calm**; funding pinned at the floor splits **5 large / 6 calm**; and
+elevated positive funding is **more common in calm cards here — 7 calm against 4
+large, and five of those seven are one coin.**
+
+**Another calm-calm overlap, the fourth found by a reader:** `C161` and `C162`,
+same coin, starts fifteen hours apart, "the h−24..h−10 rows of `C162` are
+literally the h−9..h+5 rows of `C161`." Ingrid found this same pair from the
+funding side in the same batch. Two watchers, two fields, one duplication.
