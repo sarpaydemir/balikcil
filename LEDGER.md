@@ -1903,3 +1903,48 @@ four of the 17 large moments fall in the single week 2025-10-09 → 2025-10-16, 
 two of them start one hour apart on different coins, with bitcoin down roughly
 5–6% across the after windows. It wrote that counting those as four independent
 events would overstate anything found. Nobody asked it to check that.
+
+`2026-09-19 10:14 UTC` · **RULES 25 · the estimate is replaced by a measurement** · Two runs at
+the same field of view and the same effort, differing only in how many cards
+they read, separate a run's fixed cost from a card's marginal cost. Both figures
+are **measured**, not estimated:
+
+- pilot, **10** cards: **101,346** tokens
+- Lukas, batch 01, **34** cards: **256,080** tokens, 39 tool uses, 566,509 ms
+
+Solving the two: **marginal cost ≈ 6,447 tokens per card**; **fixed cost ≈
+36,874 tokens per run** — the rules read, the definition loaded, the report
+written, paid once however many cards follow.
+
+**The full observation run — 4 watchers × 306 cards in 36 runs — comes to
+≈ 9.2 million tokens**, of which about 7.9 million is cards and 1.3 million is
+the thirty-six fixed costs. The earlier ≈ 12.4 million was a linear
+extrapolation and was labelled an upper bound; it was one, by about 26%.
+
+**The arithmetic the coordinator is not hiding:** ≈ 9.2 million against a
+remaining session budget of ≈ 14.9 million. What follows the observation run —
+the canteen, the skeptic, the exam and its candidates, the money test, the
+reports, and any further juries — comes out of what is left. **Running out is
+not a catastrophe and the laboratory was built for it:** RULES 26 requires work
+that survives the session closing, every artefact is on disk and pushed, and a
+new session opened in this folder continues from the ledger's bottom entry.
+
+**The batching overhead is now knowable and is not being chased.** Nine batches
+cost 36 fixed payments; three larger batches would cost 12, saving roughly
+0.9 million — about 10% of the run. It is not taken: batch 01 has already been
+read at the ratified size, re-batching mid-run would leave one batch treated
+differently from the rest, and a clean record is worth more than 10%. Written
+down so the choice is visible rather than silently defaulted.
+
+`2026-09-19 10:14 UTC` · **observation · batch 01 · the other three watchers running** · Ingrid
+(exchange behaviour), Kenji (the crowd) and Amara (the outside world) launched
+on the same 34 cards, each writing its own file under `notes/`, each told the
+same thing about within-batch counts. Instruction copies under `instructions/`,
+all four batch-01 instructions differing only in the watcher's name, its field
+of view and its output path.
+
+**This is also a second measurement.** The 6,447 tokens per card was measured on
+one field of view. Ingrid's field — announcements — is `MISSING` on every card
+in the set, so her run tests whether a card costs the same to read when the
+field is empty. If it does not, the ≈ 9.2 million figure moves, and it will be
+corrected here rather than carried.
