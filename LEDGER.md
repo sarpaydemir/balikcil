@@ -717,3 +717,140 @@ an unratified outcome is not an outcome. **Therefore: the universe of 795 and
 the draw made from it are PROVISIONAL**, and so is Mateo's card run now in
 progress, which is building on them. Nothing here is treated as settled and
 nothing is quietly carried as if it were.
+
+`2026-09-19 06:43 UTC` · **run · moments and cards · completed** · Mateo's second Mode A run
+finished. **Moment run number `80f0c0db548e826e`** (SHA-256 of the 112 input
+kline zips plus the seed). Seed **`20260913`** — the existing draw number,
+reused rather than a new number invented, because TACTICS 2 requires randomness
+and names no seed.
+
+**306 moments, 306 cards.** 153 large-movement and 153 calm, for the 10
+observation coins: 20+20 for the seven full-year coins, 7+7 AVGOUSDT, 5+5
+NOKUSDT, **1+1 OMNIUSDT** — its 21.4-day life yielding exactly the one moment
+TACTICS 2's per-lifetime scaling implies. Cards are `cards/C001.md` …
+`C306.md` plus `cards/INDEX.md`; numbering is the 1-based position in
+`moments.csv` sorted by (symbol, start hour, kind), so the same input always
+gives the same number.
+
+**Downloaded:** 1,917 archive files — hourly klines for the 10 coins plus
+`BTCUSDT` and `ETHUSDT`, `fundingRate`, `metrics` (5-minute open interest and
+long/short ratios), and `bookDepth` for the moment days only. **1,917 of 1,917
+verified against their own `.CHECKSUM`, 0 failures, 0 mismatches.** Disk was
+measured before each of the two downloads (RULES 28) and neither came close to
+the limit; free space after everything 15,974,346,752 bytes. Nothing was dropped
+to make room.
+
+**Coordinator's own verification, not taken on the agent's word:** 306 card
+files exist; the SHA-256 of all 306 concatenated in order is
+`ff881068ccaa7c7c8db9b5a44ce6601559372e22b068ea92b122effe47ef979e`, matching the
+report; `moments.csv` is `1a503bc064e17b2dd217f2b2a0c1274a60f40404e681911d2c21d5459a08a761`,
+matching; the observation manifest holds 1,917 lines for 1,917 unique paths with
+`checksum_verified` true and recorded SHA equal to expected on every one;
+`git status --porcelain exam/` is empty, so `exam/` was neither read nor
+written. Independently of the agent's own checker, every card was scanned for
+the answer leaking into its before section — `kind`, the 24-hour move, the words
+naming the moment type — and **0 cards leak**. Every card carries an explicit
+legend separating `MISSING` (source could not be fetched), `none` (fetched, holds
+nothing) and `.` (no value that hour), which is RULES 20 written onto the card
+itself.
+
+The agent's own before/after guard counted 60,417 timestamps into the before
+section and 9,135 into the after section with **0 violations**, and its
+re-derivation of all 306 cards from the raw zips found 0 failures. Re-running
+the moment script reproduced `moments.csv` byte-identically; re-running the card
+script rewrote nothing.
+
+`2026-09-19 06:43 UTC` · **two of the four watchers will read a degraded field — named, not softened** ·
+This is the most important thing in this run and it is not a technical detail.
+
+1. **Announcements are `MISSING` on all 306 cards.** Every documented address
+   was tried and each is recorded with its exact answer: Binance's announcement
+   RSS and list endpoints returned **HTTP 202 with a zero-length body**; two
+   Upbit endpoints returned **HTTP 404**; Bithumb returned HTTP 200 but **only
+   the 5 most recent notices**, oldest 2026-09-18, and no paging parameter
+   changed the answer. Full log `data/observation/external/announcements.json`.
+   This is recorded as **source failed**, never as "no announcements" (RULES 20,
+   21). **Ingrid's field of view is listing, delisting and warning
+   announcements** (TEAM.md) — she will be reading cards where that field is
+   empty on every single card, and her instruction must say so.
+2. **Wikipedia page views exist on BCHUSDT only — 40 of 306 cards.** The API
+   worked (374 daily values). The other nine coins have no accepted article.
+   **Amara's field of view includes the Wikipedia number**; 266 of her cards
+   will not have it.
+3. **Prediction market is empty on all 306 cards** with a measured reason:
+   Polymarket was reached, markets were found for six of the coins, 9 overlapped
+   a card's hours, and every one returned **HTTP 200 with 0 history points**.
+   Recorded as empty-with-reason, not missing.
+
+**A near-miss the agent caught and reported rather than buried.** Its first
+Wikipedia pass searched by ticker and accepted exact title matches, which
+produced *Newt* the amphibian for `NEWTUSDT`, the *Norwegian krone* for
+`NOKUSDT`, and wrong entities for `ZRO`, `Nil`, `Omni`, `Koma`, `Avgo` — other
+things' page views about to be printed as the coins' own on 256 cards. It was
+caught before any card was written and the ticker search was dropped entirely.
+No card carries a mismatched article. This is exactly the class of silent
+corruption that has no downstream detector, and it was stopped by the agent, not
+by the coordinator.
+
+`2026-09-19 06:43 UTC` · **the observation set may contain two things that are not coins** ·
+Reported by the agent and repeated here because a downstream role must not meet
+it by surprise: **`AVGOUSDT` and `NOKUSDT` look like tokenized-equity
+contracts.** CoinGecko's exact-symbol hits for AVGO are Broadcom tokenizations;
+NOK had no symbol match at all. Two of the ten observation coins may therefore
+not be cryptocurrencies. **Nothing was done about it** — acting on it would
+change the draw, which is an open question for a jury, not a coordinator's call.
+Also named: CoinGecko's exact-symbol top hit for `OMNI` is "OmniCat" while the
+Binance `OMNIUSDT` perpetual is Omni Network; it affected only prediction-market
+query terms, which returned 0 matches either way.
+
+`2026-09-19 06:43 UTC` · **open questions from this run, queued for juries (RULES 33)** · The
+agent listed 17 things it had to decide that the instruction did not cover.
+Under RULES 33 these are open questions and **the coordinator may not answer any
+of them alone**; they are listed here so none is lost, and they are answered one
+jury at a time. Until a jury rules, each stands as the agent implemented it and
+is **provisional**:
+- **R1** — how TACTICS 2's 48-hour rule is applied. Read literally (take the top
+  20 hours, then drop neighbours) one price event occupies ~24 consecutive start
+  hours and only two or three moments survive; the agent applied the separation
+  *during* selection instead. This changes which moments exist.
+- **R2** — `N = min(20, floor(lifetime_days / 18))`.
+- **R3** — "lifetime" means first to last hour with an actual trade, not the
+  flat zero-volume candles a dead contract keeps receiving.
+- **R4** — candidate windows confined to that lifetime.
+- **R5** — **no minimum distance between two calm moments**, because TACTICS 2
+  sets none. Measured consequence: **20 calm pairs inside one coin are closer
+  than 48 h**, so some calm cards for the same coin overlap. The agent said
+  plainly it would have stopped and asked about this one.
+- **The Wikipedia acceptance rule**, including its subject check — its cost is
+  nine of ten coins losing the field.
+- **Scheduled US releases are kept strictly on the after side**, even though a
+  release scheduled inside the next 24 h is knowable at the start hour.
+- **Order book depth** summarised as the median resting notional at ±1 % of mid
+  per hour; the level and the statistic are the agent's choice.
+- **Metrics aggregation:** last sample of the hour for stock quantities, mean
+  for the taker flow ratio.
+- **`AVGOUSDT`/`NOKUSDT` may not be coins**, above.
+
+Also measured and recorded for later: **15 start hours are shared by more than
+one coin**, which RULES 13 (several coins in the same hour count as one event)
+governs downstream, listed by hour in `data/moments/moment-manifest.md`.
+
+**A bug the agent reported as a bug:** its first verifier used a tolerance of
+5e-4 against a value the card prints to 2 decimals and produced 273 false
+failures. It fixed **the verifier**, not the cards. The cards were never wrong.
+29 `fundingRate` months are absent from the archive because they predate the
+contracts; each is named with its reason in
+`data/observation/missing-archive-files.json`.
+
+**Cost, measured:** 186,407 subagent tokens, 95 tool uses, 1,647,667 ms
+(≈27 minutes). RULES 25 is **now measurable for the first time** — cards exist —
+but it asks for the tokens a reader spends on the first 10 cards, and no reader
+has read one yet. That is the TACTICS 4 pilot, and it is the next measurement
+owed.
+
+`2026-09-19 06:43 UTC` · **`juror` and `referee` now load** · The two definitions written at
+06:40 UTC were refused by the harness at 06:45 and are available as of this
+line. The substitution recorded in
+`instructions/2026-09-19-0645-jury-composition-note.md` therefore applies to the
+first jury only; the referee for that jury, and every jury after it, uses the
+purpose-built definitions.
