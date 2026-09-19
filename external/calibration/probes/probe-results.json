@@ -2,14 +2,14 @@
   "script": "scripts/19_endpoint_probe.py",
   "endpoint": "https://openrouter.ai/api/alpha/decisions",
   "model_requested": "typesafe/jev-1.13",
-  "started_utc": "2026-09-19T23:10:14+00:00",
-  "finished_utc": "2026-09-19T23:10:24+00:00",
+  "started_utc": "2026-09-19T23:11:20+00:00",
+  "finished_utc": "2026-09-19T23:11:29+00:00",
   "probe_count": 37,
   "probes": [
     {
       "name": "01_choice_memo_shape",
       "purpose": "the exact request shape printed in the memo, three options",
-      "sent_at_utc": "2026-09-19T23:10:14+00:00",
+      "sent_at_utc": "2026-09-19T23:11:20+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -26,7 +26,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.5784,
+      "latency_s": 0.5021,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -40,9 +40,9 @@
             "type": "choice",
             "choice": "FUNDING",
             "probabilities": {
-              "PRICE": 0,
+              "FUNDING": 1,
               "OTHER": 0,
-              "FUNDING": 1
+              "PRICE": 0
             },
             "confidence": 1
           }
@@ -52,14 +52,14 @@
           "output_tokens": 42,
           "cost": 1.575e-05
         },
-        "id": "gen-dec-1789859415-ecXXSonKifLhUQZ8SrIW",
+        "id": "gen-dec-1789859480-5P1QaToyv6ihPSCOpP7P",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "02_choice_two_options",
       "purpose": "choice with two options",
-      "sent_at_utc": "2026-09-19T23:10:15+00:00",
+      "sent_at_utc": "2026-09-19T23:11:21+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -75,7 +75,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3304,
+      "latency_s": 0.3172,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -89,8 +89,8 @@
             "type": "choice",
             "choice": "YES",
             "probabilities": {
-              "YES": 1,
-              "NO": 0
+              "NO": 0,
+              "YES": 1
             },
             "confidence": 1
           }
@@ -100,14 +100,14 @@
           "output_tokens": 32,
           "cost": 1.4364e-05
         },
-        "id": "gen-dec-1789859415-APZAHE1XPnKXt6OTnDr0",
+        "id": "gen-dec-1789859481-nFT5kjz9tMOltfIMJjXb",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "03_choice_six_options",
       "purpose": "choice with six options",
-      "sent_at_utc": "2026-09-19T23:10:15+00:00",
+      "sent_at_utc": "2026-09-19T23:11:21+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -127,13 +127,13 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3976,
+      "latency_s": 0.3341,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
         "Server": "cloudflare"
       },
-      "response_text_len": 342,
+      "response_text_len": 343,
       "response_json": {
         "model": "typesafe/jev-1.13-20260917",
         "answers": {
@@ -142,11 +142,11 @@
             "choice": "OPT_1",
             "probabilities": {
               "OPT_4": 0.07,
+              "OPT_6": 0.09,
               "OPT_1": 0.58,
-              "OPT_3": 0.1,
-              "OPT_2": 0.08,
+              "OPT_2": 0.09,
               "OPT_5": 0.07,
-              "OPT_6": 0.1
+              "OPT_3": 0.1
             },
             "confidence": 0.49
           }
@@ -156,14 +156,14 @@
           "output_tokens": 73,
           "cost": 1.7388e-05
         },
-        "id": "gen-dec-1789859415-5fVB3zohAgHTSVvpotxv",
+        "id": "gen-dec-1789859481-D6FqIwmR7uEUKlUgqnOC",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "04_score_array_criteria",
       "purpose": "score type, criteria given as an array as the memo states",
-      "sent_at_utc": "2026-09-19T23:10:16+00:00",
+      "sent_at_utc": "2026-09-19T23:11:21+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -182,7 +182,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.2905,
+      "latency_s": 0.382,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -217,14 +217,14 @@
           "output_tokens": 18,
           "cost": 1.491e-05
         },
-        "id": "gen-dec-1789859416-aT2e6kAmHwPSpXJ3FoZs",
+        "id": "gen-dec-1789859481-tVBHIehTPzzwl1wGEHRA",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "05_score_two_point_array",
       "purpose": "score type with a two-element criteria array, to see what range comes back",
-      "sent_at_utc": "2026-09-19T23:10:16+00:00",
+      "sent_at_utc": "2026-09-19T23:11:22+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -240,28 +240,28 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.307,
+      "latency_s": 0.4519,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
         "Server": "cloudflare"
       },
-      "response_text_len": 311,
+      "response_text_len": 314,
       "response_json": {
         "model": "typesafe/jev-1.13-20260917",
         "answers": {
           "certainty": {
             "type": "score",
-            "score": 0.9,
+            "score": 0.91,
             "legend": {
               "0": "low",
               "1": "high"
             },
             "probabilities": {
-              "0": 0.1,
-              "1": 0.9
+              "0": 0.09,
+              "1": 0.91
             },
-            "confidence": 0.79
+            "confidence": 0.82
           }
         },
         "usage": {
@@ -269,14 +269,14 @@
           "output_tokens": 18,
           "cost": 1.3356e-05
         },
-        "id": "gen-dec-1789859416-YEgzjpyPxUgFAFM2HtZB",
+        "id": "gen-dec-1789859482-a5ztfMumuYM3xl7FcFXA",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "06_score_no_criteria",
       "purpose": "score type with instructions but no criteria at all",
-      "sent_at_utc": "2026-09-19T23:10:16+00:00",
+      "sent_at_utc": "2026-09-19T23:11:22+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -288,7 +288,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0585,
+      "latency_s": 0.0709,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -306,7 +306,7 @@
     {
       "name": "07_score_record_criteria",
       "purpose": "score type given a record instead of an array (deliberate type mismatch)",
-      "sent_at_utc": "2026-09-19T23:10:16+00:00",
+      "sent_at_utc": "2026-09-19T23:11:22+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -322,7 +322,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0627,
+      "latency_s": 0.0589,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -340,7 +340,7 @@
     {
       "name": "08_noul_bare",
       "purpose": "the 'noul' type with instructions only",
-      "sent_at_utc": "2026-09-19T23:10:17+00:00",
+      "sent_at_utc": "2026-09-19T23:11:22+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -352,7 +352,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3743,
+      "latency_s": 0.3587,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -364,7 +364,7 @@
         "answers": {
           "thing": {
             "type": "noul",
-            "noul": 0.67
+            "noul": 0.66
           }
         },
         "usage": {
@@ -372,14 +372,14 @@
           "output_tokens": 20,
           "cost": 1.2852e-05
         },
-        "id": "gen-dec-1789859417-a1CU4WHvF5BmHaFdtqyg",
+        "id": "gen-dec-1789859482-cV9iGIBh0wDWFgHExpX9",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "09_noul_with_criteria",
       "purpose": "the 'noul' type with a criteria record attached",
-      "sent_at_utc": "2026-09-19T23:10:17+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -395,7 +395,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0564,
+      "latency_s": 0.0582,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -413,7 +413,7 @@
     {
       "name": "10_two_questions_one_call",
       "purpose": "two questions of different types in a single request",
-      "sent_at_utc": "2026-09-19T23:10:17+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -441,7 +441,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3703,
+      "latency_s": 0.2779,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -463,7 +463,7 @@
           },
           "certainty": {
             "type": "score",
-            "score": 3.34,
+            "score": 3.29,
             "legend": {
               "0": "1",
               "1": "2",
@@ -472,13 +472,13 @@
               "4": "5"
             },
             "probabilities": {
-              "0": 0.08,
+              "0": 0.09,
               "1": 0.07,
               "2": 0.05,
               "3": 0.06,
-              "4": 0.74
+              "4": 0.73
             },
-            "confidence": 0.45
+            "confidence": 0.41
           }
         },
         "usage": {
@@ -486,14 +486,14 @@
           "output_tokens": 57,
           "cost": 1.785e-05
         },
-        "id": "gen-dec-1789859417-3ctA8YBuyEjUrW2Llfzs",
+        "id": "gen-dec-1789859483-rqhvA3YesCiMoFzzxEhP",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "11_choice_no_instructions",
       "purpose": "choice with criteria but no instructions field",
-      "sent_at_utc": "2026-09-19T23:10:17+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -508,7 +508,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0583,
+      "latency_s": 0.0645,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -526,7 +526,7 @@
     {
       "name": "12_choice_no_criteria",
       "purpose": "choice with instructions but no criteria",
-      "sent_at_utc": "2026-09-19T23:10:17+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -538,7 +538,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0528,
+      "latency_s": 0.0608,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -556,7 +556,7 @@
     {
       "name": "13_unknown_type",
       "purpose": "a question type that does not exist",
-      "sent_at_utc": "2026-09-19T23:10:17+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -572,7 +572,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0678,
+      "latency_s": 0.0536,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -590,13 +590,13 @@
     {
       "name": "14_no_questions_key",
       "purpose": "state present, questions key absent",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no."
       },
       "auth": "real-key",
-      "latency_s": 0.0533,
+      "latency_s": 0.0606,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -614,14 +614,14 @@
     {
       "name": "15_empty_questions",
       "purpose": "questions present but empty",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
         "questions": {}
       },
       "auth": "real-key",
-      "latency_s": 0.0628,
+      "latency_s": 0.0534,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -639,7 +639,7 @@
     {
       "name": "16_no_state",
       "purpose": "questions present, state absent",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "questions": {
@@ -655,7 +655,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0576,
+      "latency_s": 0.0607,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -673,7 +673,7 @@
     {
       "name": "17_empty_state",
       "purpose": "state present but the empty string",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:23+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "",
@@ -690,7 +690,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3375,
+      "latency_s": 0.3037,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -705,8 +705,8 @@
             "choice": "OTHER",
             "probabilities": {
               "FUNDING": 0.01,
-              "OTHER": 0.99,
-              "PRICE": 0
+              "PRICE": 0,
+              "OTHER": 0.99
             },
             "confidence": 0.98
           }
@@ -716,14 +716,14 @@
           "output_tokens": 40,
           "cost": 1.4448e-05
         },
-        "id": "gen-dec-1789859418-p43kifiAJdRXcxP7p3ww",
+        "id": "gen-dec-1789859483-UY9D1GOeu9sCTZp6cjyQ",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "18_no_model",
       "purpose": "model key absent",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": {
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
         "questions": {
@@ -739,7 +739,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.059,
+      "latency_s": 0.0544,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -757,7 +757,7 @@
     {
       "name": "19_bad_model",
       "purpose": "a model id that should not exist",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": {
         "model": "typesafe/jev-0.0-does-not-exist",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -774,7 +774,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.0594,
+      "latency_s": 0.0741,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -791,10 +791,10 @@
     {
       "name": "20_malformed_json",
       "purpose": "a body that is not valid JSON",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": "{\"model\": \"typesafe/jev-1.13\", \"state\": \"x\", \"questions\": {",
       "auth": "real-key",
-      "latency_s": 0.0765,
+      "latency_s": 0.0659,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -812,7 +812,7 @@
     {
       "name": "21_bad_auth",
       "purpose": "a syntactically plausible but wrong bearer token (the real key is NOT sent)",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -829,16 +829,16 @@
         }
       },
       "auth": "deliberately-wrong-key",
-      "latency_s": 0.1932,
+      "latency_s": 0.0526,
       "http_status": 401,
       "response_headers_subset": {
         "Content-Type": "application/json",
         "Server": "cloudflare"
       },
-      "response_text_len": 50,
+      "response_text_len": 64,
       "response_json": {
         "error": {
-          "message": "User not found.",
+          "message": "Missing Authentication header",
           "code": 401
         }
       }
@@ -846,7 +846,7 @@
     {
       "name": "22_no_auth",
       "purpose": "no Authorization header at all",
-      "sent_at_utc": "2026-09-19T23:10:18+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -863,7 +863,7 @@
         }
       },
       "auth": "absent",
-      "latency_s": 0.0619,
+      "latency_s": 0.0526,
       "http_status": 401,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -880,7 +880,7 @@
     {
       "name": "23_oversize_state",
       "purpose": "a state far larger than the stated 32,000 token context",
-      "sent_at_utc": "2026-09-19T23:10:19+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "<200000 chars elided; begins: 'the funding rate moved. the funding rate moved. the funding '>",
@@ -897,7 +897,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.4031,
+      "latency_s": 0.4064,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -914,7 +914,7 @@
     {
       "name": "24_repeat_a",
       "purpose": "identical to probe 01, first of two, to see whether the answer is deterministic",
-      "sent_at_utc": "2026-09-19T23:10:19+00:00",
+      "sent_at_utc": "2026-09-19T23:11:24+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -931,57 +931,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3448,
-      "http_status": 200,
-      "response_headers_subset": {
-        "Content-Type": "application/json",
-        "Server": "cloudflare"
-      },
-      "response_text_len": 295,
-      "response_json": {
-        "model": "typesafe/jev-1.13-20260917",
-        "answers": {
-          "field": {
-            "type": "choice",
-            "choice": "FUNDING",
-            "probabilities": {
-              "FUNDING": 1,
-              "PRICE": 0,
-              "OTHER": 0
-            },
-            "confidence": 1
-          }
-        },
-        "usage": {
-          "input_tokens": 375,
-          "output_tokens": 42,
-          "cost": 1.575e-05
-        },
-        "id": "gen-dec-1789859419-twabTVIVKXKepdhcwBjt",
-        "provider": "TypeSafe"
-      }
-    },
-    {
-      "name": "25_repeat_b",
-      "purpose": "identical to probe 01, second of two",
-      "sent_at_utc": "2026-09-19T23:10:19+00:00",
-      "request_body": {
-        "model": "typesafe/jev-1.13",
-        "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
-        "questions": {
-          "field": {
-            "type": "choice",
-            "instructions": "Which single field does this sentence describe?",
-            "criteria": {
-              "FUNDING": "the sentence is about the funding rate or its payment interval",
-              "PRICE": "the sentence is about price, volume or volatility",
-              "OTHER": "neither of the above"
-            }
-          }
-        }
-      },
-      "auth": "real-key",
-      "latency_s": 0.3831,
+      "latency_s": 0.3244,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1007,14 +957,64 @@
           "output_tokens": 42,
           "cost": 1.575e-05
         },
-        "id": "gen-dec-1789859419-kfhKdJIpQ687INzSARA7",
+        "id": "gen-dec-1789859484-nxfnAV20Dvko4ELTOOvr",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "name": "25_repeat_b",
+      "purpose": "identical to probe 01, second of two",
+      "sent_at_utc": "2026-09-19T23:11:25+00:00",
+      "request_body": {
+        "model": "typesafe/jev-1.13",
+        "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
+        "questions": {
+          "field": {
+            "type": "choice",
+            "instructions": "Which single field does this sentence describe?",
+            "criteria": {
+              "FUNDING": "the sentence is about the funding rate or its payment interval",
+              "PRICE": "the sentence is about price, volume or volatility",
+              "OTHER": "neither of the above"
+            }
+          }
+        }
+      },
+      "auth": "real-key",
+      "latency_s": 0.3646,
+      "http_status": 200,
+      "response_headers_subset": {
+        "Content-Type": "application/json",
+        "Server": "cloudflare"
+      },
+      "response_text_len": 295,
+      "response_json": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "field": {
+            "type": "choice",
+            "choice": "FUNDING",
+            "probabilities": {
+              "PRICE": 0,
+              "FUNDING": 1,
+              "OTHER": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 375,
+          "output_tokens": 42,
+          "cost": 1.575e-05
+        },
+        "id": "gen-dec-1789859485-9kSANC7Vcg84wKYIqSBV",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "26_temperature_param",
       "purpose": "a temperature parameter, which the memo says is unsupported",
-      "sent_at_utc": "2026-09-19T23:10:20+00:00",
+      "sent_at_utc": "2026-09-19T23:11:25+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1032,7 +1032,7 @@
         "temperature": 0.9
       },
       "auth": "real-key",
-      "latency_s": 0.3314,
+      "latency_s": 0.3011,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1046,8 +1046,8 @@
             "type": "choice",
             "choice": "FUNDING",
             "probabilities": {
-              "FUNDING": 1,
               "OTHER": 0,
+              "FUNDING": 1,
               "PRICE": 0
             },
             "confidence": 1
@@ -1058,14 +1058,14 @@
           "output_tokens": 42,
           "cost": 1.575e-05
         },
-        "id": "gen-dec-1789859420-VXbsAJdwqk9Ij2WNvmd4",
+        "id": "gen-dec-1789859485-gxoe84FVEHvPIKHeq9Br",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "27_chat_completion_body",
       "purpose": "an OpenAI chat-completions body posted to this endpoint",
-      "sent_at_utc": "2026-09-19T23:10:20+00:00",
+      "sent_at_utc": "2026-09-19T23:11:25+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "messages": [
@@ -1076,7 +1076,7 @@
         ]
       },
       "auth": "real-key",
-      "latency_s": 0.0619,
+      "latency_s": 0.0553,
       "http_status": 400,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1094,7 +1094,7 @@
     {
       "name": "28_noul_true_false_criteria",
       "purpose": "noul with a criteria record keyed 'true' and 'false', as probe 09's error implied",
-      "sent_at_utc": "2026-09-19T23:10:20+00:00",
+      "sent_at_utc": "2026-09-19T23:11:25+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1110,7 +1110,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.4578,
+      "latency_s": 0.4833,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1130,14 +1130,14 @@
           "output_tokens": 20,
           "cost": 1.386e-05
         },
-        "id": "gen-dec-1789859420-PSvX5Ue1jZs79HT98cst",
+        "id": "gen-dec-1789859485-ijF0InVzyropewwhGqpl",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "29_score_three_point_array",
       "purpose": "score with a three-element array, to pin the scale the returned score sits on",
-      "sent_at_utc": "2026-09-19T23:10:21+00:00",
+      "sent_at_utc": "2026-09-19T23:11:26+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1154,7 +1154,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.2852,
+      "latency_s": 0.3923,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1166,7 +1166,7 @@
         "answers": {
           "certainty": {
             "type": "score",
-            "score": 1.78,
+            "score": 1.77,
             "legend": {
               "0": "low",
               "1": "medium",
@@ -1174,10 +1174,10 @@
             },
             "probabilities": {
               "0": 0.07,
-              "1": 0.08,
-              "2": 0.85
+              "1": 0.09,
+              "2": 0.84
             },
-            "confidence": 0.66
+            "confidence": 0.65
           }
         },
         "usage": {
@@ -1185,14 +1185,14 @@
           "output_tokens": 18,
           "cost": 1.3608e-05
         },
-        "id": "gen-dec-1789859421-cUU33t434ZwRauo6ktRB",
+        "id": "gen-dec-1789859486-JEprzCuUXShhLuolVpz4",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "30_score_one_point_array",
       "purpose": "score with a one-element array",
-      "sent_at_utc": "2026-09-19T23:10:21+00:00",
+      "sent_at_utc": "2026-09-19T23:11:26+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1207,7 +1207,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.2893,
+      "latency_s": 0.3164,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1234,14 +1234,14 @@
           "output_tokens": 18,
           "cost": 1.3104e-05
         },
-        "id": "gen-dec-1789859421-3jG2zHGwtTrhrWqVQ8MC",
+        "id": "gen-dec-1789859486-aheGxFVig9OGVJAZqHQF",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "31_state_as_record",
       "purpose": "state given as a record rather than a string",
-      "sent_at_utc": "2026-09-19T23:10:21+00:00",
+      "sent_at_utc": "2026-09-19T23:11:27+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": {
@@ -1262,7 +1262,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3825,
+      "latency_s": 0.3666,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1276,9 +1276,9 @@
             "type": "choice",
             "choice": "FUNDING",
             "probabilities": {
-              "OTHER": 0,
+              "FUNDING": 1,
               "PRICE": 0,
-              "FUNDING": 1
+              "OTHER": 0
             },
             "confidence": 1
           }
@@ -1288,14 +1288,14 @@
           "output_tokens": 42,
           "cost": 1.5666e-05
         },
-        "id": "gen-dec-1789859421-QJeWmkVRvuVFrV7NPq0N",
+        "id": "gen-dec-1789859487-X2OFvDjIMXqbpJmVbSgC",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "32_state_as_array",
       "purpose": "state given as an array rather than a string",
-      "sent_at_utc": "2026-09-19T23:10:21+00:00",
+      "sent_at_utc": "2026-09-19T23:11:27+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": [
@@ -1316,7 +1316,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.361,
+      "latency_s": 0.3238,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1342,14 +1342,14 @@
           "output_tokens": 42,
           "cost": 1.5498e-05
         },
-        "id": "gen-dec-1789859422-bSaR3d1bBJsPDcmbsTxG",
+        "id": "gen-dec-1789859487-DomaETZdAW03o9bcygil",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "33_unknown_top_level_key",
       "purpose": "an unknown top-level key, to see whether unknown keys are rejected or ignored",
-      "sent_at_utc": "2026-09-19T23:10:22+00:00",
+      "sent_at_utc": "2026-09-19T23:11:27+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1373,7 +1373,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3035,
+      "latency_s": 0.3125,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1387,9 +1387,9 @@
             "type": "choice",
             "choice": "FUNDING",
             "probabilities": {
+              "OTHER": 0,
               "FUNDING": 1,
-              "PRICE": 0,
-              "OTHER": 0
+              "PRICE": 0
             },
             "confidence": 1
           }
@@ -1399,14 +1399,14 @@
           "output_tokens": 42,
           "cost": 1.575e-05
         },
-        "id": "gen-dec-1789859422-scZICKlRr4YoaCSALAy0",
+        "id": "gen-dec-1789859487-pKCbPKH2QJj9gr4LIwBw",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "34_large_state_100k_chars",
       "purpose": "a state of 100,000 characters, to bracket the context limit from below",
-      "sent_at_utc": "2026-09-19T23:10:22+00:00",
+      "sent_at_utc": "2026-09-19T23:11:28+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "<100000 chars elided; begins: 'the funding rate moved. the funding rate moved. the funding '>",
@@ -1423,7 +1423,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.5119,
+      "latency_s": 0.4999,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1437,9 +1437,9 @@
             "type": "choice",
             "choice": "FUNDING",
             "probabilities": {
-              "FUNDING": 1,
               "OTHER": 0,
-              "PRICE": 0
+              "PRICE": 0,
+              "FUNDING": 1
             },
             "confidence": 1
           }
@@ -1449,14 +1449,14 @@
           "output_tokens": 42,
           "cost": 0.000889434
         },
-        "id": "gen-dec-1789859422-x3JXbmcyoVc26NTBkdQa",
+        "id": "gen-dec-1789859488-G8tV0FIai2ZHmzZof9iy",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "35_large_state_140k_chars",
       "purpose": "a state of 140,000 characters, to bracket the context limit from above",
-      "sent_at_utc": "2026-09-19T23:10:23+00:00",
+      "sent_at_utc": "2026-09-19T23:11:28+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "<140000 chars elided; begins: 'the funding rate moved. the funding rate moved. the funding '>",
@@ -1473,7 +1473,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.566,
+      "latency_s": 0.5841,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1487,8 +1487,8 @@
             "type": "choice",
             "choice": "FUNDING",
             "probabilities": {
-              "FUNDING": 1,
               "OTHER": 0,
+              "FUNDING": 1,
               "PRICE": 0
             },
             "confidence": 1
@@ -1499,14 +1499,14 @@
           "output_tokens": 42,
           "cost": 0.001239462
         },
-        "id": "gen-dec-1789859423-dxBUBsOTUZORDOH5bYV4",
+        "id": "gen-dec-1789859488-PWyIclDKjAij5swQTbI6",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "36_label_odd_characters",
       "purpose": "a question label containing a space, a dot and a non-ascii character",
-      "sent_at_utc": "2026-09-19T23:10:23+00:00",
+      "sent_at_utc": "2026-09-19T23:11:29+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1522,7 +1522,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.338,
+      "latency_s": 0.3895,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1536,10 +1536,10 @@
             "type": "choice",
             "choice": "A",
             "probabilities": {
-              "A": 0.83,
-              "B": 0.17
+              "B": 0.19,
+              "A": 0.81
             },
-            "confidence": 0.66
+            "confidence": 0.62
           }
         },
         "usage": {
@@ -1547,14 +1547,14 @@
           "output_tokens": 35,
           "cost": 1.4028e-05
         },
-        "id": "gen-dec-1789859423-pqfNmfHVizbJqF1TAMOE",
+        "id": "gen-dec-1789859489-f8e51sSunp0ptEDunXDj",
         "provider": "TypeSafe"
       }
     },
     {
       "name": "37_option_keys_with_spaces",
       "purpose": "choice option keys containing spaces and punctuation",
-      "sent_at_utc": "2026-09-19T23:10:24+00:00",
+      "sent_at_utc": "2026-09-19T23:11:29+00:00",
       "request_body": {
         "model": "typesafe/jev-1.13",
         "state": "The funding line on this note reads +0.0100% with an 8 hour interval and the interval-changed flag set to no.",
@@ -1570,7 +1570,7 @@
         }
       },
       "auth": "real-key",
-      "latency_s": 0.3593,
+      "latency_s": 0.3273,
       "http_status": 200,
       "response_headers_subset": {
         "Content-Type": "application/json",
@@ -1595,7 +1595,7 @@
           "output_tokens": 39,
           "cost": 1.4322e-05
         },
-        "id": "gen-dec-1789859424-PLtEZdN4u7zA6F9igxUz",
+        "id": "gen-dec-1789859489-vni1RIj1FIP3jStSSr08",
         "provider": "TypeSafe"
       }
     }
