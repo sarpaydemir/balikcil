@@ -12,15 +12,23 @@
 ## 1 · The draw
 
 - Coins are split into four groups:
-  - **large / mid / small:** split into three by the median of daily trading
-    volume over the period
-  - **new:** first trade falls inside the period
+  - **new:** first trade falls inside the period. Assigned **first and
+    exclusively** — a new coin is not also ranked by volume.
+  - **large / mid / small:** every other coin, ranked by its median daily
+    trading volume (`quote_volume`) over the period and cut into **three
+    groups of equal size**; where the count does not divide by three, the
+    remainder goes to the lower-volume groups. Ties are broken by symbol name
+    ascending, so the ranking is reproducible.
 - **Draw number:** `20260913`. Written before the draw; it does not change.
 - **Observation:** 10 coins (3 large · 3 mid · 2 small · 2 new)
 - **Exam:** a different 20 coins (6 · 6 · 4 · 4)
 - **Money test:** all remaining coins
-- Which coin fell into which group is written into `LEDGER.md`. Watchers do not
-  see the names of the exam and money-test coins.
+- The group totals, the cut values, the seed and the fingerprint of each list
+  are written into `LEDGER.md`, together with the names of the **10 observation
+  coins**. The **exam and money-test names are not written into `LEDGER.md`**;
+  they live in `exam/draw/`, which the watcher, canteen chair and skeptic
+  definitions close. Watchers do not see the names of the exam and money-test
+  coins, and `LEDGER.md` is a root document a watcher can be pointed at.
 
 ## 2 · Moments
 

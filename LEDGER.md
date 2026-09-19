@@ -507,3 +507,119 @@ this is a gap in the enforcement, not an observed breach.
 hook refused a `Bash` heredoc and the same file went to disk unimpeded through
 `Write`. (b) The `cd`-then-relative-path gap recorded at 20:19 UTC is
 unchanged. Neither is closed in this entry; the audit changes no file.
+
+`2026-09-19 06:13 UTC` · **user decision · three questions handed back to the laboratory** · The
+user was asked four questions and answered all four. To three of them the answer
+was the same: *"kendileri bilir, beni ilgilendirmiyor, ben gözlemciyim"* — the
+laboratory decides, the user watches. **That is a delegation, not an approval of
+a particular outcome**, and it is recorded as such so that nobody later reads it
+as "the user confirmed the 42 exclusion".
+
+What the delegation resolves to, and what each rests on:
+1. **The 42 contracts that never traded stay excluded.** This is not anybody's
+   preference: TACTICS 0 says "every contract that **traded** during this
+   period" and a contract with 365 frozen rows and zero trades did not trade.
+   The universe stays 795. It can still be reversed with
+   `MIN_TRADES_IN_PERIOD = 0` and a re-run of scripts 03 and 04.
+2. **`OMNIUSDT` stays in the observation set.** Removing it would need a
+   minimum-lifetime condition in the draw, which is a **rule change**, and
+   RULES says a rule changes only after the user is asked. The user was asked
+   and declined to decide, so no rule changed. TACTICS 2 already scales a short
+   life to roughly one moment; with 22 trading days, one of the ten observation
+   coins will contribute almost nothing. That cost is accepted, not hidden.
+3. **TACTICS wording fixed at source** (below), because leaving it meant
+   somebody re-deciding the same thing at every run.
+
+`2026-09-19 06:13 UTC` · **user decision · the wall, all three repairs approved and made** ·
+The one question the user answered directly. All three were selected and all
+three are in place; the hook logic now lives in
+`.claude/hooks/wall_check.py` with `wall.sh` a thin wrapper, so it can be run
+against its own cases.
+
+1. **`wall.sh` narrowed.** A **path** reference is now matched against the
+   command with heredoc **bodies** removed — writing a path into a file is not
+   reading it — while quoted spans are **kept**, because quoting a path is an
+   ordinary way to read one and stripping quotes would open the door. The
+   forbidden **tool name** is matched with heredoc bodies *and* quoted spans
+   removed, so it catches an invocation and not a mention. That was the 21:01
+   UTC failure: the `instruction` skill's skeleton requires every instruction to
+   carry a sentence forbidding that tool, so the name is inside the text of
+   every instruction this laboratory writes.
+2. **Blanket deny rules added.** `permissions.deny` now denies the old
+   project's **whole tree** and the **whole** session-log folder, not 11 named
+   files and 8 named subfolders. 22 entries; the specific ones are kept, because
+   a narrower rule costs nothing and survives a reorganisation.
+3. **The hook is no longer registered on `Bash` alone.** Matcher is now
+   `Bash|Read|Write|Edit|Glob|Grep`. For the file tools only the **path**
+   arguments are examined and the content is not examined at all — the same
+   read/write distinction, stated the other way round.
+
+**Beyond the literal approval, and said plainly:** the user approved binding the
+hook to `Read`, `Write` and `Edit`. `Glob` and `Grep` were added as well,
+because a path-scoped search tool is the same door and leaving it open would
+have made the repair decorative. If the user wants those two out, they come out.
+
+**Tested, not assumed:** `.claude/hooks/wall-test.py` holds **22 cases** —
+**22 passed, 0 failed.** 12 denials (absolute, relative, tilde and quoted forms
+of the old path; the session-log folder; a bare invocation of the forbidden
+tool and one after a pipe; the old tree reached through `Read`, `Write`,
+`Edit` and `Grep`) and 10 allowals (a heredoc writing *about* the old path, a
+heredoc writing the forbidden tool name, an ordinary download, ordinary work
+inside the folder, a `Write` whose *content* mentions the old path, a word that
+merely contains the tool name). The test file keeps the hunted strings inside
+itself, never on the command line that launches it. The repair was confirmed by
+the hook refusing the coordinator's own verification command a minute later,
+for the right reason.
+
+**Residual gaps, unchanged and still named:** `cd /home/user && cat <oldname>/FILE`
+still slips through because the name carries no leading slash there; and an
+unterminated heredoc swallows the rest of a command for path matching.
+
+`2026-09-19 06:13 UTC` · **TACTICS.md and README.md corrected** · TACTICS 1 now states what was
+twice resolved in an instruction instead of implying it: `new` is assigned
+first and exclusively; the other contracts are ranked by median daily
+`quote_volume` and cut into three groups of equal size, remainder to the
+lower-volume groups, ties broken by symbol name; and the exam and money-test
+names are **not** written into `LEDGER.md` but live in `exam/draw/`, with the
+group totals, cut values, seed, list fingerprints and the 10 observation names
+going into the ledger. README's Status line said "No data downloaded, no agent
+has run yet", which stopped being true at 21:01 UTC; it now records the first
+run and that no card has been written and no watcher has run.
+
+`2026-09-19 06:13 UTC` · **Derya's report, and the steer she reported** · The account for the
+user is `reports/2026-09-18-universe-and-draw.md` (Turkish sentences, English
+technical terms). She recorded the technical failure as a failure, both
+undecided questions as undecided, the failed audit item as failed, and RULES 25
+as unmeasured.
+
+**She also reported a steer in her own instruction, and she was right.** The
+instruction listed, before she had read anything, the four things that had to
+appear in the report — naming the error, the two questions, the audit item and
+RULES 25 with their numbers. The `instruction` skill says that when an agent
+reports a steer, the coordinator **stops and tells the user**. That is done, in
+this line and to the user directly. In mitigation and not in denial: all four
+had a one-to-one counterpart in the source material, so no invented finding was
+carried in, and the steer pushed toward *completeness*, which is what RULES 22
+demands of a reporter. It remains content direction and the coordinator's hand.
+**For the next reporter instruction: name the source files and the shape, not
+the contents.**
+
+`2026-09-19 06:13 UTC` · **corrections to earlier entries in this ledger** · Append-only, so the
+earlier lines stand and these correct them.
+1. The 21:01 UTC entry says the 42 excluded contracts "have 365 such rows".
+   **Wrong for one of them:** 41 have 365 rows, `BTCSTUSDT` has 303
+   (`last_day_in_period` 2026-06-30). All 42 have zero trades, so the exclusion
+   is unaffected. Found by Derya reading `excluded-no-trades.txt` against the
+   ledger; verified by the coordinator counting the file.
+2. **Two different numbers were both called "the run number".** The 20:27 UTC
+   entry calls the instruction's SHA-256 `6b2b282c…` "this run's number"; the
+   21:01 UTC entry and the draw manifest call `e458f643863ed84e` the run
+   number. **The run number is `e458f643863ed84e`** — the fingerprint of the
+   run's data input, `universe.csv`, which is what RULES 29 means. `6b2b282c…`
+   is the instruction's fingerprint and nothing more.
+3. **Disk figures differ between two records, and both are true.** The ledger's
+   16,832,335,872 bytes at `20:27:28Z` is the measurement before any download.
+   `data/universe/disk-check.json` holds 16,547,426,304 bytes at `20:53:58Z`,
+   which is the check written by the **second, resumability** run of the
+   download script; that file keeps only the latest check, so the pre-download
+   figure survives in this ledger alone.

@@ -74,8 +74,10 @@ Folders: `data/` · `cards/` · `notes/` · `canteen/` · `exam/` ·
 ## Status
 
 Founded `2026-09-13`, moved and walled `2026-09-14`, agents and skills set up
-`2026-09-18`, switched to English `2026-09-18`. No data downloaded, no agent has
-run yet.
+`2026-09-18`, switched to English `2026-09-18`. First run `2026-09-18`: the
+universe was built from the archive and the draw was made (795 contracts; 10
+observation · 20 exam · 765 money test). No card has been written and no
+watcher has run yet.
 
 **To be added later:** the observation screen. Cards, notes, votes and
 objections on a single page.

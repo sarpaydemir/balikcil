@@ -1,6 +1,7 @@
 {
   "permissions": {
     "deny": [
+      "Read(//home/user/freqtrade_hyperopt/**)",
       "Read(//home/user/freqtrade_hyperopt/CLAUDE.md)",
       "Read(//home/user/freqtrade_hyperopt/AGENTS.md)",
       "Read(//home/user/freqtrade_hyperopt/EVAL_RULES.md)",
@@ -20,6 +21,7 @@
       "Read(//home/user/freqtrade_hyperopt/user_data/**)",
       "Read(//home/user/freqtrade_hyperopt/.claude/**)",
       "Read(//home/user/freqtrade_hyperopt/.research_factory/**)",
+      "Read(//home/user/.claude/projects/**)",
       "Read(//home/user/.claude/projects/-home-user-freqtrade-hyperopt/**)"
     ]
   },
@@ -34,7 +36,7 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Bash",
+        "matcher": "Bash|Read|Write|Edit|Glob|Grep",
         "hooks": [
           {
             "type": "command",
