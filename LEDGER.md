@@ -1662,3 +1662,56 @@ own reply.
 Juror 3 also named the measurement TACTICS 4 really wants and the pilot did not
 take: **a blind read of the two notes files by someone who does not know which
 arm is which.**
+
+`2026-09-19 09:50 UTC` · **fifth jury · RATIFIED · 3–0 · the observation run reads at effort high** ·
+**Outcome: TACTICS 4's pilot selects effort `high`.** Split **3–0**. Verdict:
+`decisions/2026-09-19-effort-level/verdict.md`, first line `RATIFIED`.
+
+**The referee closed the objection the jurors could not.** It compared
+`.claude/agents/watcher.md` and `.claude/agents/watcher-high.md` itself and
+reported: they differ at line 2 (`name`), line 3 (`description`) and line 6
+(`effort`), and lines 11–137 are "100% identical". **The pilot is not
+confounded**, and that is now established by someone other than the person who
+built it.
+
+The ratified ground: TACTICS 4 names two criteria and no exchange rate between
+them, so an answer is available only where one moves a lot and the other barely
+moves. Card-numbered notes went 26 → 68 (2.6×) for tokens 90,152 → 101,346
+(1.124×). Every juror computed those ratios itself from the raw artefact and
+marked the arithmetic as its own; the coordinator supplied none of them.
+
+**The limits the jurors put on their own answer are part of the outcome:**
+n = 1 per arm, so the gap is one draw and not a mean; the line count flatters the
+arm that writes one computed line per card; and **on RULES 8's own unit — a
+complete idea with trigger, direction and exit — the medium arm produced more.**
+And the measurement TACTICS 4 really wants was not taken: a blind read of the
+two notes files by someone who does not know which arm is which.
+
+`2026-09-19 09:50 UTC` · **`TEAM.md` updated · bookkeeping, not a rule change** · The four
+watchers now read at effort `high` through the `watcher-high` definition;
+`watcher` stays in the file as the medium arm, kept for a future pilot and not
+used in the observation run. Two jurors flagged in advance that acting on the
+outcome would require this edit and that it touches `TEAM.md` and not
+`RULES.md`, so it is a consequence of a rule rather than a change to one. The
+edit says on its face where it came from: "set by TACTICS 4's pilot,
+2026-09-19".
+
+`2026-09-19 09:50 UTC` · **Mateo running · the card order and its batches** · Before any watcher
+reads the set, two things must exist that do not yet: the **order** the cards
+are given in, which TACTICS 4 constrains, and the **batches**, because 306
+cards do not fit in one agent's context — that is a measured capacity fact, not
+a choice. The instruction tells him to read TACTICS 4's ordering requirement
+from TACTICS 4 rather than restating it, to fix and record the seed rather than
+invent one, and to **measure before choosing a batch size** and state what the
+choice rests on. The batch a card lands in may be decided only by its position
+in the order — not by its coin, its kind or its date.
+
+Outputs: `data/card-order/order.csv`, `data/card-order/batches/`, and a
+manifest carrying the seed, the sizes, the every-card-exactly-once check and the
+fingerprints.
+
+**The cost question is not settled and is not being hidden:** the RULES 25
+estimate for the full run is ≈ 12.4 million tokens at high, an upper bound from
+a linear extrapolation of ten cards. The first real batch measures the marginal
+cost properly, because most of a pilot arm's 101,346 tokens is fixed cost paid
+once per run. Nothing is committed beyond that first batch until it is measured.

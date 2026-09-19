@@ -23,25 +23,25 @@ otherwise made by **effort level**, not model size.
   delisting and warning announcements; every administrative decision the
   exchange takes.
 - **Cannot:** see exam cards.
-- **Agent:** `watcher` · effort medium.
+- **Agent:** `watcher-high` · effort high (set by TACTICS 4's pilot, 2026-09-19).
 
 ## Kenji — watcher · the crowd
 - **Looks at:** open interest, long/short ratios, the ratio of large players,
   taker buy/sell pressure, the funding rate itself.
 - **Cannot:** see exam cards.
-- **Agent:** `watcher` · effort medium.
+- **Agent:** `watcher-high` · effort high (set by TACTICS 4's pilot, 2026-09-19).
 
 ## Amara — watcher · the outside world
 - **Looks at:** Binance and Korean exchange announcements, the US release
   calendar, the number of people viewing the page on Wikipedia, the prediction
   market, the state of bitcoin and ethereum over those hours.
 - **Cannot:** see exam cards.
-- **Agent:** `watcher` · effort medium.
+- **Agent:** `watcher-high` · effort high (set by TACTICS 4's pilot, 2026-09-19).
 
 ## Lukas — watcher · price itself
 - **Looks at:** price, volume, trade count, order book depth, volatility.
 - **Cannot:** see exam cards.
-- **Agent:** `watcher` · effort medium.
+- **Agent:** `watcher-high` · effort high (set by TACTICS 4's pilot, 2026-09-19).
 
 ## Sofia — canteen chair
 - **Does:** collects the notes, runs the discussion. Writes the surviving ideas
@@ -148,12 +148,12 @@ script.
 | definition | roles it covers | effort |
 |---|---|---|
 | `data-engineer` | Mateo + Nadia (Mode B) + Greta's script (Mode C) | high |
-| `watcher` | Ingrid · Kenji · Amara · Lukas (field of view from the instruction) | medium |
+| `watcher` | the medium-effort arm; kept for a future pilot, not used in the observation run | medium |
+| `watcher-high` | Ingrid · Kenji · Amara · Lukas (field of view from the instruction) | high |
 | `canteen-chair` | Sofia | high |
 | `skeptic` | Viktor | xhigh |
 | `exam-candidate` | Hana · Tomás | medium |
 | `reporter` | Derya | high |
-| `watcher-high` | the same four watchers at effort high, for TACTICS 4's pilot only | high |
 | `juror` | one open question, at least three run per question | high |
 | `referee` | ratifies or refuses, **model `haiku`** | medium |
 
