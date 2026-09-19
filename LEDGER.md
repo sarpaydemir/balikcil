@@ -3212,3 +3212,51 @@ coins."
 **Both his ideas are filed with their support stated as a count:** one rests on
 **1 card of 34**, the other on **2**. "The only shape in my field worth testing,
 not something I believe."
+
+`2026-09-19 11:33 UTC` · **observation · Amara · v2 batch 05 · finished** · 34 of 34, no steer
+found. Notes at `notes/2026-09-19-amara-v2-batch05.md`.
+
+**A card defect she found by arithmetic, and it matters for RULES 16.**
+`C081` and `C292` both print "FOMC statement (rate decision) on 2026-04-29 (the
+calendar publishes no clock time)". **`C081`'s after window closes 2026-04-29
+09:00 UTC.** An FOMC statement lands around 18:00 UTC — **after the window the
+card attaches it to.** Her conclusion: "Untimed calendar events appear to be
+attached **by date**, and should not be used as a trigger." She marked the 18:00
+as her opinion rather than a card value, which is the correct way to report it.
+
+**A name-resolution defect, now confirmed from two directions.** `C265` searches
+the prediction market over `OmniCat`/`OMNI` for the symbol `OMNIUSDT`; her
+opinion is that the Binance OMNI perpetual is **Omni Network**, not OmniCat.
+**Mateo flagged exactly this mismatch when he wrote the cards** — CoinGecko's
+exact-symbol top hit for OMNI is OmniCat — and she has now found its downstream
+effect: **"The same name rule feeds the Wikipedia lookup, so a wrong name could
+also explain the MISSING Wikipedia line."** A wrong name turns into a `none`
+that reads like evidence. Both go to the card script's next run.
+
+**A third item she reports as printed and refuses to interpret:** `C072` starts
+2026-01-14 and lists "Producer Price Index for **November 2025**"; `C111` starts
+2026-01-16 and lists a November 2025 employment release. "Whether the lag is
+real-world or a build artefact is outside my field and should be checked before
+keying a rule to this field."
+
+**Her measurement of bitcoin's reach:** the 19 calm cards span a 24-hour bitcoin
+move of −5.5% to +3.1%, the 15 large cards −8.0% to +3.3% — **the calm range
+sits almost entirely inside the large range.** And both extremes of the labels
+sit the wrong way round: `C275` is **calm** with bitcoin at −5.5%, while
+`C111` (+40.69%) and `C104` (+161.78%) happened with bitcoin at **0.0% and
++1.9%**.
+
+**`C202` is the sharpest attribution case in the corpus so far:** the coin fell
+−13.60% while **ethereum fell about −13.4%** over the same hours. "That labelled
+large moment carries close to zero coin-specific content."
+
+**And she wrote the honest limit of her own field, unprompted:** it produced
+"mainly *negative and attributional* results", and its useful role in a score
+recipe "looks to me like a **deduction or a blocker on attribution** — does this
+move belong to the coin at all? — not a raising signal." One of her two
+three-part ideas is **deliberately a refusal**: its trigger fires on no card in
+the batch, "so it is a proposal to be tested elsewhere, not evidence."
+
+She also confirmed the `C245`/`C002` same-hour pair — identical bitcoin and
+ethereum values producing a **large +42.88%** in one coin and a **calm −0.05%**
+in another — and the `C084`/`C085` calm-calm overlap Lukas measured.
