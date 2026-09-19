@@ -1493,3 +1493,44 @@ will name the watcher.
 **Not recorded here:** the watcher's observations about what the price series
 does. Those belong in `notes/` and go to the canteen. The coordinator does not
 interpret a card, and does not summarise one into this ledger either.
+
+`2026-09-19 09:17 UTC` · **RULES 25 · measured for the first time, and the estimate is large** ·
+The pilot's two arms are finished. Raw measurements, with no comparison drawn in
+the file itself, are at `data/pilot/2026-09-19-pilot-measurements.md`, SHA-256
+`03b748f724f640db8fd0a731c2694f1832d23d2fe6c35e3a5bb2dddfd7068854`.
+
+**Measured, not estimated — ten cards, one field of view, one watcher:**
+effort **medium** 90,152 subagent tokens in 223,683 ms; effort **high** 101,346
+tokens in 344,796 ms. Identical tool use, 14 each. The notes files: medium 74
+lines and 26 lines opening with a card number; high 101 lines and 68 such lines.
+
+**The estimate for the full run, labelled an estimate (RULES 19):** the
+observation run is 306 cards read by four watchers. Extrapolated linearly from
+ten cards, that is **≈ 11.0 million tokens at medium and ≈ 12.4 million at
+high** — estimate, and specifically an **upper bound**, because a large part of
+each pilot arm is fixed cost paid once per run whatever the batch size: reading
+`RULES.md` and `TACTICS.md`, loading the definition, writing the report. How
+much of the 90,152 is fixed was **not measured** and is not guessed here.
+
+**Two consequences that are facts, not choices:** 306 cards at 88 lines each is
+about 27,000 lines, so **no watcher can read the set in one context** and the
+real run must be batched; and an 11-million-token estimate stands against the
+session's remaining budget, so the scale is not incidental.
+
+**RULES 25 also requires the user be told in a single sentence before the run
+starts.** That sentence is given in this turn, as information rather than a
+question, since the user has declined to be asked things.
+
+`2026-09-19 09:17 UTC` · **what the pilot cannot tell us, said plainly** · The ten cards
+`C001`–`C010` are all one contract, `AVGOUSDT`, spanning about ten weeks —
+a consequence of the coordinator's choice to read RULES 25's "first 10 cards"
+mechanically. **Both watchers found this themselves and both said so
+unprompted**, the high arm noting that TACTICS 4 has the watchers read the cards
+of ten *coins*. The cost measurement is unaffected — a card costs what it costs.
+**The note-quality comparison is narrowed**: it compares two readings of one
+contract's ten weeks, not two readings of the observation set. Recorded as a
+limitation of the pilot, not corrected after the fact.
+
+Both arms also reported, independently and without being asked, that `C003`,
+`C004` and `C005` are one continuous stretch of price rather than three
+samples, and both discounted their own strongest counts because of it.
