@@ -3975,3 +3975,67 @@ honestly, not a wider one.** If a jury disagrees, round 2 is re-run; the notes
 are keyed by card number and nothing downstream has consumed them yet.
 
 The reading load, measured: **620,037 bytes** of other watchers' notes per run.
+
+`2026-09-19 12:52 UTC` · **round 2 · Lukas · and a correction to this ledger** · He read all 27
+of the others' files and **opened 39 cards to check named claims**, listing
+every one. His own nine files stayed closed; every claim below was verified
+against a card.
+
+**CORRECTION TO EARLIER ENTRIES IN THIS FILE.** Several entries above celebrate
+"two watchers, two fields, reached without contact" — most explicitly the
+11:51 UTC entry on Ingrid and Kenji both finding the funding-deviation
+separation in batch 08. **Lukas has shown that is an overcount, and he is
+right:**
+
+> "My definition says 'each one looks somewhere else — so that the same thing is
+> not seen four times.' **They do not.** Ingrid's field and Kenji's **both**
+> contain the funding rate; Ingrid's and Amara's **both** contain
+> Binance/Korean announcements. Where I compared Ingrid and Kenji on funding
+> they agree to the last digit — which is real cross-checking, but it is **one
+> observation reported twice, not two.**"
+
+`TEAM.md` assigns Kenji "the funding rate itself" and Ingrid "changes in the
+funding rate"; it assigns Amara "Binance and Korean exchange announcements" and
+Ingrid the same. **The fields as written overlap, and the coordinator counted
+the overlap as independent confirmation.** Lukas's rule for reading the notes:
+"Anyone counting 'two watchers found X in funding' or 'two watchers found
+announcements MISSING on 306/306' must count it **once**, on the same discipline
+RULES 13 applies to market hours." Applied to this ledger from here.
+
+**He proved the central negative by construction rather than by counting.**
+`C028` and `C106` start two hours apart on 2025-12-15 and share 22 after-hours;
+he verified **value for value** that C028's bitcoin hours +12…+15 are C106's
++10…+13, ethereum identical. **`C028` is calm at −5.41%. `C106` is large at
++120.84%.** "Same market background, opposite labels. Seen in this 1 pair, but
+it needs only one."
+
+**He corrected three of Kenji's counts and one of Ingrid's, each against the
+card, and said what survives.** Kenji's pinned-funding lists mix up `C296` and
+`C298`, place `C060`'s five-of-six in the wrong window, and omit `C087` — "none
+of the three damages his conclusions", and Ingrid's counts are the right ones.
+Ingrid's eyeballed bitcoin sums for `C007` are **−4.52% and −6.36%**, not the
+"about −3.6% / −4.2%" she had labelled an estimate — "her conclusion survives,
+strengthened", and **Amara's summed columns should be preferred where the two
+overlap** because they were exact wherever he checked.
+
+**He strengthened a defect beyond what its finder claimed.** Kenji read the
+identical `taker L/S` of 80.90 in two unrelated cards as possibly a thin-hour
+artefact; Lukas checked and **`C236`'s hour carries 4,000 trades**, so the
+thin-hour explanation does not cover it — "the cap/sentinel reading is stronger
+than he stated."
+
+**A fifth de-anonymisation channel, and the most complete one yet.** Wikipedia
+is present on **exactly 40 of 306 cards and all forty are BCHUSDT** — he
+reconstructed the count two independent ways and got 40 both times. **"In an
+exam that hides the coin name, 'Wikipedia present' decodes to 'this is the
+large-cap coin' with zero error."**
+
+**Two integrity checks that passed**, and they are the first cross-checks of the
+corpus by anyone: the three watchers' independently-stated batch splits **agree
+batch for batch and sum to exactly 153 large / 153 calm**, as TACTICS 2
+requires. And **`C007` is the only funding-interval change in all 306 cards** —
+"a signal with one event in the whole set, which cannot be scored."
+
+**And he marked what has no second pair of eyes by construction:** four of the
+five zero open-interest cells are in Kenji's field alone. "I verified one of
+five and left the other four **unchecked, not confirmed.**"
