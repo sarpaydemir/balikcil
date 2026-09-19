@@ -1715,3 +1715,66 @@ estimate for the full run is ≈ 12.4 million tokens at high, an upper bound fro
 a linear extrapolation of ten cards. The first real batch measures the marginal
 cost properly, because most of a pilot arm's 101,346 tokens is fixed cost paid
 once per run. Nothing is committed beyond that first batch until it is measured.
+
+`2026-09-19 09:56 UTC` · **run · card order and batches · completed** · Mateo's Mode A run
+finished. Run id `b2ceb7a0e05530debc0788dd23994d0e67b20c376724b5345b871fca93b325a2`.
+Outputs: `data/card-order/order.csv` (SHA-256 `dd744316857fb012faf1a2a6c7434dd300a3a57affde2918b8087ad3359fcf39`),
+nine batch files under `data/card-order/batches/`, and
+`data/card-order/order-manifest.md`.
+
+**The seed was derived, not invented:** the string
+`card-order|draw=20260913|moments_sha256=1a503bc…|card_kinds_sha256=098349ee…`
+hashed, first 16 hex as an integer. The draw number is TACTICS 1's, and tying it
+to the input fingerprints means the order belongs to the exact card set it
+orders (RULES 29). `moments.csv`'s hash matches the one `cards/INDEX.md`
+recorded, so this order uses the numbering the cards were written under.
+
+**306 cards, 153 large and 153 calm, nine batches of 34**, every batch the same
+size with nothing left over. Checks run in code and printed: the order is a
+permutation of all 306 with no repeats; no two neighbours share a kind across
+all 305 adjacent pairs; the batches concatenate back to the order; **every card
+in exactly one batch**, 0 duplicates, 0 missing. Then re-verified by a **second
+independent script** that re-read the files from disk and re-derived the kinds
+from `INDEX.md` instead of `moments.csv`. Reproducibility shown by four runs —
+2, 3 and 4 reported every file unchanged — and the append-only guard shown to
+fire on a tampered `order.csv`.
+
+**Two failures reported as failures, not smoothed:** no tokenizer exists on this
+machine (`ModuleNotFoundError: No module named 'tiktoken'`, same for
+`transformers` and `anthropic`), so **every token figure in the manifest is an
+estimate and is labelled one**; and the append-only guard initially made the
+script non-re-runnable because the manifest carries its own write clock, which
+he fixed by exempting that one line for that one file and said so.
+
+**The batch size rests on three numbers that are his and are written nowhere in
+this laboratory** — a 200,000-token window, cards taking at most half of it, and
+3.0 bytes per token — all labelled assumptions. **He also named the fix
+himself:** `data/pilot/` was not in his permitted list, and the pilot's measured
+token cost, not his estimate, is the right basis for a batch size. The order
+does not depend on the batch size, so only the size would move.
+
+`2026-09-19 09:56 UTC` · **sixteenth fault, and the agent was right to report it** · The
+instruction said a watcher reads in batches "**because the 306 cards do not fit
+in one agent's context**" — in the same instruction that told him to measure
+before choosing. **The conclusion of the measurement was asserted above the
+measurement.** His own figures turned out consistent with it, which is not the
+point; he reported it because it was stated before he looked, and the
+coordinator accepts it.
+
+`2026-09-19 09:56 UTC` · **"interleaved" · an open question that does not block, and why** ·
+Mateo flagged under RULES 33 that TACTICS 4's "large moments and calm moments
+interleaved" reads two ways: **(a)** strictly alternating, or **(b)** merely
+mixed rather than grouped by kind. He implemented (a).
+
+**The coordinator is not answering this and does not need to:** an order
+satisfying (a) also satisfies (b), so the artefact is valid under either
+reading, and the question does not gate the observation run. That is an
+observation about the artefact, not a ruling on the text, and it is recorded as
+such.
+
+**It gates something else, and he saw it before anyone else did:** under (a) the
+kind sequence is fully predictable from position. In free observation that leaks
+nothing, because a card's after-section states its kind outright. **If this
+order — or this ordering script — is ever reused where the kind is hidden, (a)
+is wrong and the order must be rebuilt.** The blind exam is exactly such a
+place. Written here so that Mode B does not inherit it by accident.
