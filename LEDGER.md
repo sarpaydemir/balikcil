@@ -3486,3 +3486,47 @@ identically for four hours; `C017` prints the **same constant 3.19k** for five
 hours — **same coin, six days apart** — and an ask depth of 1.51k identically
 for thirteen. "I judge these a frozen/floored feed, not a real book; any depth
 reading of those rows should be treated as void."
+
+`2026-09-19 11:43 UTC` · **observation · Kenji · v2 batch 07 · finished** · 34 of 34, 38 notes,
+no steer found.
+
+**The cleanest null in the corpus, because it is controlled within a single
+coin.** Six NIL cards have **all six before-window funding payments at exactly
+the +0.0050% floor.** Three of them are large — **+23.86%, +23.15%, +21.21%** —
+and three are calm — **+0.55%, +1.29%, +1.80%.** Same coin, same funding state,
+**an exact 3/3 split.** No confound left to blame.
+
+**He then removed the confound from the opposite-looking result.** "Elevated
+funding → large move" appears to hold on five large cards — until he notes
+**all four KOMA cards in the batch are large**, and outside KOMA the same
+trigger is **1 large out of 3.** And among the five elevated-funding large
+cards, **two went up and three went down**, so it gives no direction either.
+
+**His headline is a negative and he defended it as one:** "across 34
+before-windows I found no measurement in my field that separated the 13 large
+moments from the 21 calm ones, and none that gave the direction of the 13 large
+moments. **That is a negative result for this batch, not a failure to look.**"
+
+**The one clean firing, and his own reason for distrusting it:** `top L/S pos`
+falling 20% or more across the before window fires on exactly **2 of 34** cards,
+both large, both up, **0 of 21 calm**. He filed it as an idea with all three
+parts and then wrote the test that kills it: **the milder 5–15% version of the
+same measurement splits 4 large / 4 calm — "exactly what a threshold fitted to
+two points looks like."**
+
+**A big open-interest unwind is not a warning:** the six deepest declines in the
+batch are ranked, and **five of the six are calm.** The deepest, −28.8%, came
+with a −0.2715% funding payment and produced a **calm −4.31%**.
+
+**Taker pressure gives no direction, measured rather than asserted:** mean taker
+buy% over the last six before-hours is **49.5 for the nine up-moves and 49.8 for
+the four down-moves**, and the two lowest readings in the batch precede one
+large **up** and one large **down**.
+
+**A suspected sentinel value, found by coincidence and reported as unverified:**
+`taker L/S` reads **exactly 80.90** in two unrelated cards — different coins,
+different months. "Suspected cap or sentinel; I cannot verify it from the cards
+alone and recommend the 5-minute taker archive be checked before anyone builds
+on that column." With his four worked contradictions between `taker L/S` and
+`taker buy%` on the same row, his recommendation is to **treat `taker buy%` as
+the usable taker column.**
