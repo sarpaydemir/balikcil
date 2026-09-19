@@ -1864,3 +1864,42 @@ marginal cost of a card, which the linear extrapolation behind the ≈ 12.4
 million estimate could not do. **Nothing beyond this one run is committed until
 that number exists.** Thirty-five runs would follow it if the arithmetic allows,
 and the arithmetic is not yet known.
+
+`2026-09-19 10:12 UTC` · **observation · Lukas · batch 01 · finished** · All 34 cards read, none
+skipped, none unreadable, no steer found in the instruction. Notes at
+`notes/2026-09-19-lukas-batch01.md`. **The token cost is not yet in hand and is
+therefore not written here** (RULES 19); it is the whole reason this run went
+first and it gets its own entry when the harness reports it.
+
+**Four data defects inside otherwise readable cards, named by the watcher and
+recorded here because they are the card-writer's business, not an observation:**
+- **C019** — `depth -1%` reads exactly 3.19k for hours h-24…h-21 while
+  `depth +1%` reads about 5.6M in the same hours, an asymmetry of roughly
+  1750× repeated identically four times. The watcher read that field as **broken
+  for those hours** and said so rather than using it.
+- **C139** — the after-section `depth -1%` is stuck at 762.47 for **22
+  consecutive hours**.
+- **C235** — the after-section `depth -1%` jumps to about 390–430k for hours
+  +5…+8 against about 25–35k on either side.
+- **C255** — the card's own 7-day line declares "106 hour(s) missing", so its
+  7-day volume and range rest on a partial week. The watcher discounted that
+  card's figures accordingly and said so.
+
+**These are not failures of this run.** Every one was caught by the reader, named
+by card number, and kept out of its conclusions — which is what RULES 20 and 21
+ask for. They belong to whoever next touches the card-writing script, and they
+are written here so that whoever that is does not have to find them again.
+
+**A consequence of position-only batching, measured by the watcher and worth
+knowing before the notes are read:** batch 01 holds 17 large and 17 calm, but
+its coins are concentrated — FHE 9, KOMA 5, NIL 5, BCH 4, ZRO 4, NEWT 3, AVGO 2,
+NOK 1, FARTCOIN 1. The watcher said it plainly: its counts "must not be read as
+counts over coins". The coordinator required batching by position alone and this
+is the price of it; the alternative — balancing coins across batches — would have
+let the batch structure carry information about the cards, which is worse.
+
+**The watcher also filed a RULES 13 observation about its own strongest counts**:
+four of the 17 large moments fall in the single week 2025-10-09 → 2025-10-16, and
+two of them start one hour apart on different coins, with bitcoin down roughly
+5–6% across the after windows. It wrote that counting those as four independent
+events would overstate anything found. Nobody asked it to check that.
