@@ -1130,3 +1130,39 @@ Mateo reported "20 calm pairs closer than 48 h". Recounted from
 three calm moments of one coin fall inside a single 48-hour window. Both are
 correct measurements of different things; the jurors were given both, and told
 the numbers bear on neither answer.
+
+`2026-09-19 06:58 UTC` · **seventh and eighth faults — and the one that names the root** ·
+The instruction written against all six earlier faults carried two more, both
+found by juror 1 of the calm-separation jury, both accepted:
+
+1. **It put a measured result into an instruction.** RULES 3, quoted by the
+   juror against the coordinator: an instruction "contains no result, no
+   prediction, and no 'pay attention to X' steer." The 20 and 21 pair counts are
+   results about the laboratory's own artefact. The coordinator included them
+   believing that establishing a question is live is different from supplying a
+   result. **RULES 3 draws no such distinction, and the juror is right that it
+   does not.**
+2. **Both numbers were measured at 48 hours.** The question was open —
+   *is there a minimum distance?* — but the only evidence offered named one
+   candidate distance and no other, anchoring on the 48-hour clause before the
+   juror had opened section 2. The juror's neutral alternative: give the
+   distribution of within-coin calm-to-calm gaps with no cut selected, **or give
+   nothing.**
+
+**The root, now visible across all eight faults:** every one is the coordinator
+supplying context it believed the agent needed — the decision taken, the cost,
+the deciding observation, the title, the one-sided aftermath, the measurement,
+the chosen cut. The corrections have been getting narrower each time while the
+habit stayed the same. **The rule that actually covers all eight is the one
+already written:** RULES 3, read literally. An instruction names what may be
+looked at and what must be true of the output. Nothing else. A question does not
+need to be shown to be live; if it is not live, the answer costs a jury and
+nothing else.
+
+Eight faults, eight found by the agent receiving the instruction, none by the
+coordinator writing it. That ratio is itself the finding, and it is the reason
+RULES 33 exists.
+
+**Juror 1's answer stands** — it states the anchoring did not move it, that it
+read section 2 before rereading the framing, and its grounds are the nesting and
+wording of the section, not the pair counts. The referee will weigh that.
