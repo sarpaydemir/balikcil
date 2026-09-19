@@ -1534,3 +1534,29 @@ limitation of the pilot, not corrected after the fact.
 Both arms also reported, independently and without being asked, that `C003`,
 `C004` and `C005` are one continuous stretch of price rather than three
 samples, and both discounted their own strongest counts because of it.
+
+`2026-09-19 09:44 UTC` · **fifth jury convened · which effort level the pilot selects** ·
+TACTICS 4 says the effort level "is chosen accordingly" but does not say by
+whom, and the measurement does not choose by itself — somebody has to weigh
+notes against tokens. Under RULES 33 that somebody is not the coordinator.
+
+**The instruction states none of the measurements.** It names the files and asks
+the question; the jurors read the raw measurement artefact and both notes files
+themselves. This is the correction learned at 06:55 and again at 07:15 — the
+coordinator's summary of a result is a result in an instruction, so the
+coordinator supplies no summary. No ratio is computed for them, no cost is
+framed, and the session's remaining budget is not mentioned, because a juror
+weighing evidence should not be told what the laboratory can afford.
+
+"The evidence does not select an effort level" is written in as a permitted
+answer.
+
+**Jurors may read `notes/` for this question**, which no jury has done before.
+They must, to judge note quality. It is not a wall breach — `notes/` is closed
+to the exam candidates, not to a juror — and a juror writes only its verdict
+file, so nothing flows from it back into the laboratory. Recorded because it is
+a first.
+
+Instruction copies:
+`instructions/2026-09-19-0735-juror-effort-level-1.md` and `-2`, `-3`, which
+differ from one another in the output filename alone.
