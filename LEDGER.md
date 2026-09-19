@@ -1292,3 +1292,52 @@ belongs to a future jury, not to the coordinator:** TACTICS 6 asks for 200
 large-movement exam cards across the 20 exam coins of TACTICS 1 — ten per coin —
 while TACTICS 2's count for a full-year coin is twenty. The two numbers do not
 reconcile. Recorded, unanswered.
+
+`2026-09-19 07:07 UTC` · **fourth jury · three answers in · the first split, and the first real test** ·
+The three answers are in `decisions/2026-09-19-large-moment-selection/`. **No
+outcome is recorded until the referee rules** (RULES 35). What is recorded here
+is that **this jury did not agree**, which is the first time.
+
+- **Jurors 1 and 3:** the 48-hour separation is a constraint applied **during**
+  selection — walk candidates largest-first, take one if it is ≥48 h from every
+  moment already taken, stop at the quota. The count is a quota on the
+  **delivered** list, so a coin with enough separated candidates gets exactly N.
+- **Juror 2:** **take first, prune second** — take the largest N, then apply the
+  48-hour clause within those N and drop the smaller of any close pair. The list
+  holds **at most** N and fewer wherever the top N cluster.
+
+**All three put their confidence at 3 of 5, and all three say the section states
+no order.** None of them is guessing; they disagree about which reading the
+silence favours.
+
+The two sides of the argument, since the ledger must carry the reasoning and not
+only the count:
+- For **during-selection**: "one moment per 18 days" is a *rate of delivered
+  moments*, and 365 ÷ 20 ≈ 18.25 — under the other reading the sentence
+  describes nothing the laboratory produces. And the pairwise clause is
+  **under-determined as a post-filter**: juror 3's example of moments at hours
+  0/40/80 with sizes 10/11/12 yields `{80}` under simultaneous suppression but
+  `{0, 80}` resolved largest-first, and the section supplies no chain rule — so
+  two implementers would not produce the same list.
+- For **take-then-prune**: "The largest 20 of the year are **taken**" stays
+  literally true under it and becomes false under the other reading, since
+  moments that were not among the largest 20 appear in their place. And section
+  2 uses "moment" for a *selected* moment, never for an hourly candidate, so
+  the 48-hour clause reads most naturally as operating on an already-selected
+  set.
+
+Juror 2 also demolished one of its own supports unprompted: the third sub-bullet
+modifies the first — "written third, executed first" — so **bullet order in
+section 2 is demonstrably not execution order**, which was its own strongest
+argument. It recorded that against itself.
+
+**What rides on it:** if the ruling goes to take-then-prune, the moment list and
+all **306 cards** were built under the wrong reading and are regenerated. Both
+readings' proponents noted, independently, that take-then-prune is the cheaper
+direction to reverse because its list is contained in the other's.
+
+**Jurors 2 and 3 independently confirmed juror 1's three instruction faults** —
+the disclosure that a list exists, the naming of *count* as the axis of
+difference, and the explanation of why no data file was opened. Three jurors,
+three identical findings, which is what a steer in the common question looks
+like.
