@@ -2422,3 +2422,49 @@ each, effort high: Lukas 258,566 · Kenji 241,844 · Amara (running) · Ingrid
 95,494. **Batch 02 launched for the three who are free**; Amara follows when
 batch 01 releases her. No division is performed on these numbers and no claim is
 made about whether they fit — that is the user's to see.
+
+`2026-09-19 10:58 UTC` · **observation · Amara · v2 batch 01 · finished · batch 01 now complete** ·
+34 of 34 read, notes at `notes/2026-09-19-amara-v2-batch01.md`, no steer found.
+**275,269 tokens.**
+
+**v2 batch 01 measured spend, all four watchers, 34 cards each at effort high:**
+Lukas **258,566** · Amara **275,269** · Kenji **241,844** · Ingrid **95,494** —
+**871,173 tokens.** Recorded as measured. No denominator is applied.
+
+**She found something by fingerprinting the bitcoin and ethereum columns**,
+which nobody asked her to do and which bears directly on RULES 13:
+
+- **`C048` (BCH, large **+13.16%**) at hour +6 and `C203` (NEWT, calm **+1.94%**)
+  at hour +9 carry the identical market hour** — BTC +2.04, ETH +2.90,
+  2026-06-14 21:00 UTC. **The same market hour, opposite labels.**
+- `C075` (FARTCOIN) and `C119` (FHE) share two hours of a roughly +5.5% bitcoin
+  surge and **both are calm.**
+- `C040` and `C041` are the same coin with overlapping windows, both calm.
+
+She stated the consequence plainly: counting these as independent observations
+would inflate the count. And she named **8 large cards where the bitcoin move in
+the after window is at least 3%** as market events rather than coin events.
+
+**The measurement behind her strongest negative:** mean absolute 24-hour bitcoin
+move is **2.89% on large cards against 1.12% on calm** in the **after** window —
+8 of 17 large exceed 3%, **0 of 17 calm do**. In the **before** window it is
+**1.76% against 1.73%, indistinguishable**, and a large bitcoin move beforehand
+is *more* common on calm cards. So bitcoin moves **with** a large moment and
+says nothing **before** it.
+
+**A card defect that bites on RULES 16, found and named:** `C105` carries the
+batch's only FOMC entry and the card records that **the calendar publishes no
+clock time** for it. Her words: "the one release class most likely to move the
+market is the one the card cannot place on an hour." RULES 16 turns on knowing
+the hour of a moment known in advance.
+
+**Three of her five sources are empty on all 34 cards**, and she separated the
+three kinds of emptiness rather than merging them: announcements `MISSING` (a
+fetch failure), prediction market `none` with Polymarket **reached** and a market
+actually overlapping the card span on 9 cards — "so the gap is granularity, not
+coverage" — and Wikipedia present on 8 of 34, all of them one coin, with two
+distinct failure reasons on the rest.
+
+**She also marked the limit of her own method:** she matched overlapping-hour
+pairs **by eye, not systematically**, so there may be more than the three she
+found.
