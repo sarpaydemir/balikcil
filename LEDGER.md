@@ -3260,3 +3260,46 @@ the batch, "so it is a proposal to be tested elsewhere, not evidence."
 She also confirmed the `C245`/`C002` same-hour pair — identical bitcoin and
 ethereum values producing a **large +42.88%** in one coin and a **calm −0.05%**
 in another — and the `C084`/`C085` calm-calm overlap Lukas measured.
+
+`2026-09-19 11:35 UTC` · **observation · Ingrid · v2 batch 07 · finished** · 34 of 34, no steer
+found. **Seven of nine batches done in her field.**
+
+**The cleanest null the laboratory has produced:** `C223` and `C239` have
+**byte-identical funding lines** and outcomes of **+23.86%** and **+0.55%**.
+Same reading, opposite worlds.
+
+**She found a pattern that fires 5 of 5 large and 0 of 21 calm — and filed it as
+an observation, not an idea.** Funding at or above +0.02% before the moment hits
+five cards, every one large, none of the twenty-one calm cards. Two reasons she
+refused to promote it, both hers:
+- **the direction splits 2 up / 3 down, "so the direction field cannot be
+  filled"** — RULES 8 applied against her own best result;
+- **"4 of the 5 are KOMAUSDT and all 4 KOMAUSDT cards in this batch are large
+  moments"** — the trigger may be selecting a coin, not a condition.
+
+A 5-for-5 hit rate with zero false positives, declined on its own evidence.
+
+**Her field has now collapsed to one variable and she said so plainly:**
+announcements MISSING on 34 of 34, interval unchanged in all 68 lines, **and no
+administrative decision of any kind — interval change, listing, delisting,
+warning, leverage or margin change — recorded on any card.** "My whole field of
+view collapses to one usable variable — the funding rate level."
+
+**And the one variable points the wrong way:** the four most negative before
+windows in the batch are **all calm**, including `C241`'s single **−0.2715%**,
+the largest absolute payment anywhere in the batch, in front of a calm card.
+
+**She separated what a forecaster can see from what it cannot:** funding leaves
+its baseline only **after** a large move is under way, and with inconsistent
+sign — two cards fell to −0.0460% and −0.1760% during +23% and +21% **rises**,
+two others rose during +42% and +37% rises. "That is after-window data a
+forecaster never sees."
+
+**Two more calm cards on the wrong side of the label:** `C127` calm at
+**−13.83%**, `C256` calm at −6.08%. "Any count of 'calm' cards in my notes
+includes these two."
+
+**One more shared market hour:** `C230` h+10/h+11 and `C277` h−16/h−15 carry the
+same bitcoin and ethereum values, "so part of `C230`'s +21.21% is one market
+event shared with `C277`, not the coin's own." She then listed which four of the
+thirteen large cards carry a market-wide leg **and which six do not.**
