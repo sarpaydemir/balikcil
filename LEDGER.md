@@ -4039,3 +4039,61 @@ requires. And **`C007` is the only funding-interval change in all 306 cards** �
 **And he marked what has no second pair of eyes by construction:** four of the
 five zero open-interest cells are in Kenji's field alone. "I verified one of
 five and left the other four **unchecked, not confirmed.**"
+
+`2026-09-19 12:53 UTC` · **round 2 · Ingrid · every idea from round 1 dies outside the batch it was fitted in** ·
+She read all 27 files and **opened 12 cards** to test named ideas against cards
+their author never saw. Her result, in her own words:
+
+> **"I looked for one trigger that was measured in more than one batch and kept
+> its sign; there is none."**
+
+**Seven card-verified counterexamples, each naming the idea, the card and the
+outcome:**
+- Kenji's batch-04 divergence idea fires on **`C084`** — acct 1.60→1.10, top
+  L/S pos 2.10→2.35, funding pinned — and **`C084` is calm.**
+- His batch-07 idea, which says **buy**, fires on **`C221`** (top L/S pos
+  2.88→2.26 = 0.785×) → **−38.18%.**
+- His batch-05 idea fires on **`C169`** (six-payment mean +0.0445%) →
+  **−51.75%.**
+- His batch-06 idea fires on **`C144`** (funding +0.0935%, before-window price
+  −0.10%) and **`C144` is calm.**
+- Lukas's batch-06 union trigger fires on **`C264` on both legs** (q12 = 0.28%,
+  volume 4.66×) and **`C264` is calm.**
+- His batch-08 "≥5% hour" trigger fires on **`C246`** — **calm.**
+- His batch-09 blow-off idea, which says **sell**, fires on **`C168`** (261×) →
+  **+135.21%** and **`C279`** (5.97×) → **+19.62%.**
+
+**This is the laboratory working.** Every one of those ideas was filed by its
+author with an honest confidence of 1–3 and an "afterwards" label on its
+threshold. Round 2 has now shown what those labels were warning about: **the
+thresholds were fitted to 34 cards and do not survive contact with the other
+272.**
+
+**SECOND CORRECTION TO THIS LEDGER.** The 12:10 UTC entry records Lukas
+measuring the RULES 11 rival as "wrong about three times in four on the large
+cards", and an earlier entry records him finding 8 right / 11 wrong. **Ingrid
+pooled his own per-batch counts across all nine batches: the momentum rival
+scores 62 / 121, about 51%, on large cards.** His batch-level reversal result
+**does not survive pooling** — it was two batches, not the corpus. The claim
+that RULES 11's rival is a straw man is **withdrawn pending a measurement over
+all 306 cards.** The coordinator repeated that claim twice to the user; it was
+a batch-local finding presented as a corpus one.
+
+**Her overlap worry is already answered, and she could not know it.** She writes
+that the pooled overlap lists give about 25 groups, "every one found inside a
+single batch — the cross-batch overlaps have never been searched." **They have:**
+Mateo's map at 11:0x UTC measured **all 306 cards, 495 pairs, 296 cards
+involved, largest group 7, run `12ce59e2902a0034`.** `data/` is closed to a
+watcher by instruction, so she reported an unmeasured gap in good faith. **The
+gap is closed and the map is the answer to her D2.**
+
+**She joined two defects nobody could join before.** Lukas found the constant
+`3.19k` in bid depth in batch 02 and again in batch 06 and "could only link the
+two that shared a batch". Ingrid checked the cards: it is on **all 24
+before-hours of `C018` and on `C019` h−24…h−21, both BCH** — "joined, it is a
+**per-coin feed floor** across at least 3 BCH cards in 2 batches."
+
+**And she confirmed the sentinel with the detail that kills the innocent
+explanation:** `taker L/S` = **80.90** at `C236` h−17 (NIL, **4k trades**) and
+`C260` h−1 (NOK, 454 trades) — two coins five months apart — **and both rows'
+`taker buy%` implies about 1.3–1.9, not 80.9.**
