@@ -3873,3 +3873,46 @@ on top of five external-source lines.
 **Three passes complete: 5,772,252 tokens. With Lukas's eight, 7,790,697.** One
 run outstanding. Every figure is the harness's own report at the end of a run;
 nothing here is extrapolated and no denominator is applied.
+
+`2026-09-19 12:10 UTC` · **ROUND 1 IS COMPLETE · four watchers, 306 cards each, 36 runs** ·
+Lukas finished batch 09. **Every one of the 306 observation cards has now been
+read by all four watchers, each in its own field of view, each writing to its
+own file, none having seen another's work or its own earlier work.**
+TACTICS 4 is done.
+
+**He measured the RULES 11 rival for the second time, and this time it loses
+outright.** On the 17 large cards that had a direction, the next 24 hours went
+**against** the previous 24 hours in **13** — with him naming all thirteen and
+the four exceptions. On the 16 calm cards the same test is **8/8, a coin flip**.
+His summary: **"the 'last 24 hours continues' rival of RULES 11 was wrong about
+three times in four on the large cards of this batch."** He then costed the
+fade: twelve trades, **+144.1 points of raw 24-hour move, 8 winners, before
+costs** — and immediately disclosed that the buy-after-a-fall half carries it
+while the sell half "rests on two cards and holds a −35.10 loss."
+
+In batch 06 he measured the same rival at **8 right / 11 wrong** and found a
+7-day variant that scored 14 of 19. **Two independent batches now say the rival
+RULES 11 names is weak, and a recipe that beats it may be beating a straw man.**
+Still not the coordinator's to change; still waiting on a jury.
+
+**His sharpest separator is one card wide and he said so.** Before-window range
+of 11% or more fires on **5 of 34 cards, all five large** — "the nearest calm
+card is `C216` at **10.86%**, so the line is one card wide."
+
+**And the finding that ties back to a ratified jury:** the three large cards his
+range rule misses **include two AVGOUSDT cards**, whose before windows sit
+fifteen hours inside ±0.2% "and whose moves land in **US equity hours**." His
+conclusion: **"The rule's failures cluster by instrument type rather than
+falling at random,"** and one of his own idea's four triggers — also AVGO —
+"may be a **clock effect** rather than a signal."
+
+The second jury ratified that TACTICS 0's universe definition admits a
+tokenized-equity contract. **Lukas has now found what that admission costs in
+practice**, from the price side, without having seen the ruling: two of the ten
+observation coins do not keep crypto hours, and a rule fitted across all ten
+will fail on them for a reason that has nothing to do with markets.
+
+**A negative he wrote down specifically to save the canteen time:** volume level
+alone is useless in both directions — `C120`'s before window ran about **9.7×**
+its own weekly average and the card **fell 44.4%**; `C140`'s ran **0.32×** and
+the card **rose 41.5%**.
