@@ -4330,3 +4330,44 @@ collapsed for RULES 13** (`N-1`). And two questions she refused to answer and
 sent to jurors: whether two calm moments may overlap — **135 calm+calm pairs of
 495** — and whether the instrument blocker may be applied at all in a blind
 exam.
+
+`2026-09-19 13:43 UTC` · **user decision · the coordinator is cut out of the fix** · The user
+ordered the two pre-exam problems solved before any exam card is built, then
+reviewed, **and specified that the coordinator neither solves them nor is told
+how.** Their words: one agent solves, another reviews, "ama sana söylemesinler"
+— and they should not tell you.
+
+**That is a correct response to this ledger's own record.** Fifteen instruction
+leaks are written above, every one by the coordinator, every one caught by the
+agent receiving it. **A coordinator who cannot stop leaking what it knows should
+be told less.** The design is the user's and it is better than anything the
+coordinator proposed.
+
+**How it is built:**
+- A new folder **`exam-prep/`**, closed to every other role **and to the
+  coordinator.** The fixer writes its working, its decisions, its standard and
+  its tests there in whatever detail it likes, and nobody trims it.
+- One file, `exam-prep/VERDICT.md`, states **solved or not solved** for each
+  problem and **nothing about the method.** That file is the only one the
+  coordinator reads.
+- A reviewer, also untold, checks the work afterwards and reports a verdict, not
+  a method.
+
+The fixer's instruction says why, in plain words, so the agent knows it is not
+being asked to be secretive for its own sake: "The method stays with you."
+
+**The two problems, as the canteen stated them and not as the coordinator
+restates them:** `R-04` and `N-1` in Sofia's book. The instruction points at
+the canteen files and does not paraphrase either one — the coordinator's
+paraphrase is exactly the channel that leaked fifteen times.
+
+**Both stop jobs cancelled.** The 13:58 stop (`c5500919`) would have fired
+mid-task and forbidden launching the reviewer; the 3-hour loop (`df0011b1`) is
+no longer the thing driving work. **The laboratory stops when the review lands**,
+which is what the user asked for — solve, review, then knock off.
+
+**One thing the coordinator will not be able to verify and says so now:** with
+the method closed, the coordinator cannot check the fix itself. **That is the
+point of the arrangement**, and the reviewer exists because of it. What the
+coordinator records is the verdict, the fingerprints, and whether a reviewer who
+also did not know agreed.
