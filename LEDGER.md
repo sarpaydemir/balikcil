@@ -3530,3 +3530,47 @@ alone and recommend the 5-minute taker archive be checked before anyone builds
 on that column." With his four worked contradictions between `taker L/S` and
 `taker buy%` on the same row, his recommendation is to **treat `taker buy%` as
 the usable taker column.**
+
+`2026-09-19 11:48 UTC` · **MILESTONE · Ingrid has read all 306 cards · round 1 complete in her field** ·
+Nine batches, nine notes files, `notes/2026-09-19-ingrid-v2-batch01.md` through
+`…batch09.md`. **The first watcher to cover the whole observation set.** Her
+batch-09 token figure follows when the harness reports it; the eight before it
+were 95,494 · 228,817 · 109,343 · 100,855 · 85,891 · 92,675 · 235,862 · 226,554.
+
+**Her fourth de-anonymisation channel, and the one that most directly threatens
+the exam.** The payment interval is constant per coin, and **interval plus
+habitual funding level clusters the 34 cards by coin perfectly.** Her
+instruction to nobody in particular: "Since the exam hides the coin name,
+someone should check whether **exam cards can be grouped by coin from the
+funding interval alone.**" With the three she found earlier — the payment count,
+the interval as a proxy for contract class, and "funding is unusual here"
+decoding to a coin name — that is four separate routes by which a blinded card
+still says which coin it is.
+
+**She wrote down an artifact specifically so nobody mistakes it for a signal.**
+Eight of the ten 8-hour cards in her batch are large against ten of twenty-four
+4-hour cards — "**That is how this batch was cut** — my 34 cards see only a
+slice of each coin — **not a property of the interval.**" An agent pre-empting a
+misreading of its own numbers.
+
+**The sharpest single card of her whole pass:** `C221` moved **−38.18%** and the
+**after**-window funding stayed at exactly +0.0050% at **every** payment.
+"Funding never reacted at all." Flat funding sat in front of both of the
+batch's biggest moves.
+
+**The only interval change in 306 cards is `C007`** — `interval changed: yes`,
+twelve payments, then −8.36%, with the market falling alongside. **n = 1**, and
+she filed it at confidence 1. Every batch before this one reported zero. So the
+laboratory now knows: the interval-change signal is not weak, it is **almost
+entirely absent from the data**, and the one instance is confounded.
+
+**And she found the ambiguity inside that single instance:** `C007`'s card reads
+`interval 1/8 h` and "does not say which hours ran at 1 h and which at 8 h, so I
+could not place the three large negative payments against the switch." The one
+card that could have carried the signal cannot be read.
+
+**Another calm-calm overlap**, `C161`/`C162`, fifteen hours apart with funding
+sequences that interlock exactly — and she placed it correctly: legal as
+written, "a gap in the rule rather than a card-making error… per RULES 33–35 it
+is an open question for jurors, not for me." She then **checked the rest of the
+batch for the same thing** and reported the near-miss she found.
