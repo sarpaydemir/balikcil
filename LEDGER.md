@@ -4154,3 +4154,57 @@ estimate**, getting about −4.5% / −6.4% where Ingrid had eyeballed −3.6% /
 **`C084`/`C085` verified byte-for-byte** — after rows +9…+23 are before rows
 h−24…h−10, **both calm** — and placed where it belongs: "**This is an open
 question for three jurors under RULES 33, not for me.**"
+
+`2026-09-19 12:56 UTC` · **ROUND 2 COMPLETE · Kenji · and three findings no round-1 watcher could reach** ·
+He read all 27 files and **opened 31 cards**, naming each. Round 2 is finished:
+four watchers, four cross-examination files.
+
+**(i) He found the seven-card October event from the cards, and it is the same
+group Mateo's script found from the timestamps.** Start hours read off the
+cards: `C139` 2025-10-09 10:00, `C099`/`C272`/`C180` all 10-09 22:00, `C017`
+10-10 02:00, `C221` 10-10 05:00, `C058` 10-10 14:00 — **seven coins, all large,
+all falls of −12.95% to −48.49%, inside 28 hours.** With the rebound leg and the
+second down leg it is **12 of the 153 large cards inside eight days.**
+
+**Mateo's overlap map named exactly these seven as `G049`.** A script working
+from moment timestamps and a reader working from card headers, with no contact,
+produced the same set. And Kenji explained why no round-1 watcher could have
+seen it: **the seven sit in batches 03, 04, 05, 06 and 09 — no watcher held more
+than three at once.**
+
+**(ii) The frozen-depth fault is a date range, not a coin property — and it
+lands on that same event.** The constant `3.19k` fills all 48 rows of `C018`,
+4 rows of `C019` and 18 of `C017`; `3.41k` fills all 48 rows of `C059` and 29
+of `C058`. **Two different coins, BCH and FARTCOIN, with start hours between
+2025-10-10 and 2025-10-16.** He then ran the control: **`C045` and `C031`
+contain no `3.19k`, `C060` contains no `3.41k`** — same coins, outside the
+window. Five cards positive, three negative.
+
+His conclusion is the one that matters: **"the depth column is dead exactly
+where the largest moves in the sample are."** Lukas had flagged each card
+separately across four batches and could not see the pattern.
+
+**(iii) The direction base rate is not a coin flip, and every direction claim
+has been measured against the wrong number.** On the 153 large cards the split
+is **92 up / 61 down = 60% up.** "That is the number every direction claim must
+beat." Every "my rule was right 4 of 5 times on the up side" in the 36 round-1
+files was implicitly compared against 50%.
+
+**He settled an open question by using a defect as an instrument.** The funding
+payments are printed **oldest-to-newest**, and he proved it from the
+`C161`/`C162` overlap — the very duplication that costs independence. **Ingrid
+had flagged the order as explicitly unresolved and said every one of her funding
+ideas inverts if it is newest-first.** It is not. The ideas stand as written,
+and the card-format gap she named is closed by measurement rather than by
+assertion.
+
+**He independently reproduced Ingrid's pooling correction:** the RULES 11 rival
+scores **62 of 121 = 51%** on large cards, "so Lukas's batch-09 'wrong three
+times out of four' and batch-04 '8 of 10 on the up side' are **both batch
+noise**." Two watchers, two methods, same verdict on the same claim — and this
+one is genuine independence, because it is Kenji's field against Lukas's.
+
+**And he reported two imprecisions in his own notes file rather than correcting
+it**, because the instruction said to write it once: a mis-typed citation and an
+over-broad sentence about which cards he opened for what. "Neither affects a
+claim."
