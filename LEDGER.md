@@ -1828,3 +1828,39 @@ alternation also satisfies the looser reading, so the artefact is valid either
 way and the observation run is not gated by it.** It gates reuse where the kind
 is hidden — the blind exam — and that is where it must be convened, before Mode
 B runs and not after.
+
+`2026-09-19 10:03 UTC` · **sixth jury · RATIFIED · 3–0 · a later run gets bookkeeping and nothing else** ·
+**Outcome: a watcher in a later run may be given only its field of view, its
+round number, which batch it reads, the batch file and the file it writes to —
+and none of the substance of its own earlier runs.** Split **3–0**, no reasoned
+objection. Verdict: `decisions/2026-09-19-watcher-across-runs/verdict.md`,
+first line `RATIFIED`.
+
+The referee was asked to say whether the one-file-per-run consequence sits
+inside the ratified answer or outside it, because the coordinator would act on
+the difference. Its ruling: **inside for juror 1, inside in structure for juror
+3, unresolved for juror 2 — treat one-file-per-run as a ratified consequence.**
+It also ruled that the question's framing about fresh contexts moved none of
+the three.
+
+`2026-09-19 10:03 UTC` · **the observation run has started · Lukas · batch 01** ·
+The first run of TACTICS 4 proper. `watcher-high` at effort `high` — the level
+the fifth jury selected — reading the 34 cards of batch 01, field of view price
+itself, writing to `notes/2026-09-19-lukas-batch01.md`, a file of its own as the
+sixth jury requires. Instruction copy:
+`instructions/2026-09-19-0830-watcher-lukas-batch01.md`.
+
+**The instruction carries the ratified consequence in plain words**: the watcher
+sees 34 cards and nothing else, so its "how many cards did I see it in" is a
+count out of 34 and a floor, not a count over the set, and the set-wide count is
+made later from filed notes keyed by card number. That sentence is bookkeeping
+about scope, not a result, and it exists because juror 1 asked for it by name.
+
+**This run is also a measurement, and it is why it goes first.** The pilot read
+**10** cards at this same field and effort for 101,346 tokens. This run reads
+**34** at the same field and effort. The difference separates the fixed cost of
+a run — reading the rules, loading the definition, writing the report — from the
+marginal cost of a card, which the linear extrapolation behind the ≈ 12.4
+million estimate could not do. **Nothing beyond this one run is committed until
+that number exists.** Thirty-five runs would follow it if the arithmetic allows,
+and the arithmetic is not yet known.
