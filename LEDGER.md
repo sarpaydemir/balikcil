@@ -2281,3 +2281,58 @@ paragraph said "This run builds the order again under the ratified requirement"
 — **the outcome of task 1, stated before task 1 asked him to reach it**, in the
 same instruction that told him to stop if the old order conformed. And task 3
 presupposed the seed would differ. Both accepted.
+
+`2026-09-19 10:53 UTC` · **CORRECTION · the "remaining budget" figure was meaningless and is withdrawn** ·
+Three entries in this ledger compare the laboratory's measured token spend
+against "a remaining session budget of ≈ 14.9 million" and conclude it fits.
+**Those comparisons are withdrawn.** The user asked where the number came from
+and the honest answer did not survive the asking.
+
+**What the number was:** a counter the harness shows the coordinator each turn,
+starting at 15,000,000. **It is not the user's plan allowance, it is not
+documented anywhere, and it does not count subagent tokens.** The evidence is in
+this ledger's own figures: Lukas's batch-01 run reported **256,080 subagent
+tokens** and the counter fell by about **4,400** across that turn. It tracks the
+coordinator's own conversation, not the work.
+
+**What the real limits are**, from Anthropic's published help pages, checked
+rather than recalled: a **five-hour session window** and a **weekly limit**, and
+**usage of claude.ai, Claude Code and Claude Desktop all counts against the same
+allowance.** So this laboratory draws from the same pool as everything else the
+user does with this account. **The coordinator cannot see any of it** — not the
+ceiling, not what is left, not what other work has consumed.
+
+**What stands and what does not.** The measured spend stands: every figure came
+from the harness's own report of a completed run, and they are real model calls
+whose accounting against the plan limit is undocumented but which there is no
+reason to assume are free. **What was invented was the denominator.**
+
+**How this is handled from here:** the spend of each run is recorded as measured,
+and **no claim is made about whether it fits.** Whether the scale is affordable
+is the user's to see and the user's to say; the coordinator reports the numbers
+and does not do the division.
+
+`2026-09-19 10:53 UTC` · **observation · Ingrid · v2 batch 01 · finished** · 34 of 34 read under
+the conforming order, notes at `notes/2026-09-19-ingrid-v2-batch01.md`, 27 notes
+each carrying its card numbers. No steer found. Batch composition she measured:
+17 large, 17 calm, nine coins.
+
+**She put numbers on the exam-blinding hole she reported earlier.** The payment
+interval never changes — all 68 funding lines read `interval changed: no` — and
+it is a per-coin constant. In this batch it **separates move sizes with no
+overlap**: all 5 large moments on 8-hour contracts moved 8.82%–14.36%, all 12 on
+4-hour contracts moved 15.95%–103.98%. She filed it as an observation and not an
+idea, because it carries no direction. **This is the same interval that a
+blinded exam card cannot hide**, since the payment count gives it away — the
+hole she named at 09:00 UTC now has a measured consequence attached.
+
+**Two thirds of her field still has no data** and she refused to let it read as
+absence: the announcement line is byte-identical on all 34 cards, "so the
+absence is uniform and carries no per-card meaning either."
+
+**She is the second agent to flag the same contradiction:** TACTICS 5 says round-1
+notes go into `canteen/`; every instruction and definition says `notes/`. Kenji
+flagged it first. She resolved it the same way — followed the instruction,
+reported the discrepancy, and said explicitly that under RULES 33 it is for
+three jurors and "not me and not the coordinator alone." **Queued, still not
+answered, still not blocking.**
