@@ -1392,3 +1392,39 @@ these in code and his resolutions stand as **provisional**, recorded at
 06:43 UTC. They are smaller than R1 and R5 and none of them changes which
 moments exist by more than an edge case, but they are not settled and are not
 written down as settled.
+
+`2026-09-19 07:10 UTC` · **`watcher-high` definition written, for the pilot only** · TACTICS 4
+requires the same ten cards to be read **at two effort levels**, and the 2026-09-18
+decision made effort — not model size — the axis of that comparison. The `Agent`
+tool cannot set effort per run; effort comes from the definition. So the second
+level is a second definition, `.claude/agents/watcher-high.md`.
+
+**It is a byte-for-byte copy of `watcher.md`** except the `name`, the
+`description`, the line `effort: medium` → `effort: high`, and one added
+paragraph telling the agent why it exists and instructing it to **stop and
+report** if it ever finds any other difference — because any other difference
+would invalidate the comparison. Verified by diff at the time of writing: the
+only change in the body is that paragraph. Same tools, same `omitClaudeMd`,
+same model, no memory.
+
+`2026-09-19 07:10 UTC` · **pilot parameters · coordinator operational choices, named as such** ·
+These are not readings of a rule and not interpretations of any result, so they
+do not go to a jury; they are operating choices, and they are written down so
+they can be challenged.
+
+1. **Which ten cards: `C001`–`C010`.** RULES 25 says "the tokens spent on the
+   **first 10 cards**". The card numbering is the position in `moments.csv`
+   sorted by (symbol, start hour, kind), so "the first 10" is mechanical and
+   needs no judgement. They are all one coin's cards, which makes them a poor
+   sample of the year but a correct reading of the rule; the pilot measures cost
+   and note quality, not market behaviour.
+2. **Which field of view: price itself.** TACTICS 4 does not say. The choice is
+   driven by a technical fact, not by anything about markets: **announcements
+   are `MISSING` on all 306 cards and Wikipedia is absent from 266 of them**, so
+   piloting those fields would measure the cost of reading empty fields. Price,
+   volume, trade count, book depth and volatility are present on every card.
+   If anyone would rather pilot a different field, it is cheap to redo.
+
+**Not yet run:** a new agent definition does not load in the session that writes
+it — `juror` and `referee` were refused at 06:45 and became available later in
+the same session. The pilot starts when `watcher-high` loads.

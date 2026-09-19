@@ -153,6 +153,7 @@ script.
 | `skeptic` | Viktor | xhigh |
 | `exam-candidate` | Hana · Tomás | medium |
 | `reporter` | Derya | high |
+| `watcher-high` | the same four watchers at effort high, for TACTICS 4's pilot only | high |
 | `juror` | one open question, at least three run per question | high |
 | `referee` | ratifies or refuses, **model `haiku`** | medium |
 
