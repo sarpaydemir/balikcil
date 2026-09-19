@@ -2649,3 +2649,46 @@ of the moment.**
 cannot tell whether the last before-payment fell ten minutes or four hours
 before the start hour. RULES 16 forbids filling at a known-in-advance moment's
 open, so **any funding-timed rule needs timestamps the card does not carry.**
+
+`2026-09-19 11:12 UTC` · **observation · Kenji · v2 batch 03 · finished** · 34 of 34 read, 39
+notes, all carrying card numbers. No steer found. **237,742 tokens.**
+
+**He measured how far apart the two classes actually are, and it is not far.**
+In batch 03 the largest **calm** moves are `C189` **+8.67%**, `C132` **+8.56%**,
+`C096` **+8.52%**, and the smallest **large** move is `C207` **−11.44%**. **The
+whole boundary between the classes is a band from about 8.7% to 11.4%.** The
+first watcher of the day noticed calm cards carrying moves of ±4–5%; this is the
+same fact with the gap measured. It bears on everything downstream: the exam
+asks a reader to separate these two classes, and near the boundary they are a
+couple of percentage points apart.
+
+**His headline is that there is no headline, and he wrote it that way:**
+"Nothing in my field separates the two classes in this batch — and that is the
+result." He listed what he tested and what each returned, so the negative can be
+checked rather than taken on trust: funding ≥ +0.030% (3 large / 2 calm),
+funding negative (4/3, and 2 up / 2 down), `L/S acct` below 1.0 (4/2), above 4.0
+(3 cards, opposite outcomes), `top L/S pos` moving more than 10% (6 of 18 large
+against 4 of 16 calm — **and the two biggest swings in the batch, −43% and −26%,
+are both calm**), and the 24-hour mean of `taker buy%` in one narrow band of
+about 44–52 for everything.
+
+**The one thing that separates cleanly, and why it is useless:** after-window
+open interest growing 1.5× or more occurs on 4 of 18 large and **0 of 16 calm** —
+"but it happens *during* the move, so it cannot be a trigger."
+
+**Two of his five columns are restatements and he said which:** hourly
+`taker buy%` tracks the sign of the same hour's candle closely enough to be
+near-redundant with price; and the spread of `taker L/S` is driven by **trade
+count**, not by the future — on a card with 100k–372k trades an hour it stays
+inside 0.89–1.22 for all 24 hours, while on thin cards it reaches 20.87, 27.66,
+36.39, **and the batch's most extreme prints all sit on calm cards.**
+
+**Levels are a coin fingerprint, not a state:** FHEUSDT alone reads
+0.34, 1.86, 2.34, 2.81, 3.00, 3.65 for `L/S acct` across six cards in one year,
+"so no fixed threshold on either level is transportable."
+
+**He confirmed both overlaps Ingrid found, independently and with the row:**
+`C011`'s before window repeats fourteen hours of `C010`'s after window verbatim —
+he quoted the shared row — and `C300` h−15 and `C207` h+23 are the same clock
+hour, both reading BTC −4.85% / ETH −5.99%. **Two coins, two cards, one event.**
+He also found `C207`'s five-payment anomaly independently.
