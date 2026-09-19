@@ -3589,3 +3589,43 @@ watchers have been running between roughly 230,000 and 260,000 per batch.
 **No extrapolation to a total is written here.** The remaining runs are Lukas
 batches 08 and 09, Kenji batch 09, and Amara batches 08 and 09; when they land,
 the sum will be an addition, not an estimate.
+
+`2026-09-19 11:51 UTC` · **observation · Kenji · v2 batch 08 · finished** · 34 of 34, no steer
+found. **239,147 tokens.** Batch 09 launched — his last.
+
+**Two watchers, the same batch, the same measure, the same disqualification —
+reached without contact.** Ingrid reported that funding deviating from baseline
+by 0.010 pp or more holds on **8 of 12 large against 1 of 14 calm** in batch 08.
+Kenji, reading the same 34 cards in a different field of view, reports that a
+funding payment of **|rate| ≥ 0.02%** holds on **10 of 17 large against 1 of 17
+calm** — and **the single calm exception is the same card, `C210`.**
+
+**Both then refused to call it an idea, for the same reason:** the direction
+splits. Kenji's count is **5 up / 5 down**; Ingrid's was 2/2 in each sign group.
+RULES 8 requires a direction and neither could supply one.
+
+**Kenji did one thing Ingrid did not, and it matters:** he normalised for the
+8-hour contracts. "On a per-4h-equivalent scale for the 8h coins it becomes
+**9 of 17 / 1 of 17**" — the separation survives the normalisation, slightly
+weaker. He also stated the threshold was **chosen after looking**, on both of
+his candidate separators.
+
+**He resolved the `taker L/S` question the batch had been circling.** Five of the
+six largest prints in the batch sit on **calm** cards, and **all six sit on
+hours with under about 2,000 trades.** "A thin-hour artefact, not crowd
+information." Confidence 5. That is the fourth watcher-run to reach it and the
+first to state the trade-count condition as a measurement.
+
+**`top L/S pos` is a coin's home address, with the ranges written out:** ZRO
+2.45–4.11, NIL 0.59–2.27, BCH 0.70–3.26, FHE 1.02–1.91, KOMA 1.02–1.47 — and
+**within each coin the calm and large cards overlap completely.** ZRO's highest
+reading anywhere is on a **calm** card, its lowest on a **large** one. "Any
+cross-coin threshold on this column selects coin identity, not moments."
+
+**Four of the seventeen large cards carry a completely flat baseline funding
+line before the move** — including the batch's **+135.21%** and **−51.75%**.
+
+**Fourth flag of the same contradiction:** TACTICS 5 sends round-1 notes to
+`canteen/`, every instruction and definition sends them to `notes/`. He could
+not comply with both, followed the instruction, and flagged it. Still queued,
+still not blocking.
