@@ -3674,3 +3674,46 @@ Edit tool is unavailable, so to correct a card-count error in her own notes she
 version." The instruction that told watchers to write once in full rather than
 correct in place exists because two earlier runs reached for a scratch file
 instead; she did it the intended way and documented it.
+
+`2026-09-19 11:53 UTC` · **observation · Lukas · v2 batch 07 · finished** · 34 of 34, no steer
+found. **264,278 tokens.**
+
+**He caught a mean hiding behind three cards.** "Late volume ramp" shows a mean
+last-three-hour volume ratio of **1.5 for large cards against 0.8 for calm** —
+which looks like a separator until he reports the medians: **0.76 and 0.69.
+"No gap at all. The mean is carried by three cards."** The two highest calm
+readings, 2.12× and 1.96×, "went nowhere." A watcher checking its own summary
+statistic against its own distribution, unprompted.
+
+**His strongest separator is monotonic across three buckets and he filed it as
+not-an-idea anyway.** Book depth at the last before-hour divided by the card's
+own weekly average volume: the **ten thinnest** cards are **7 large / 3 calm
+(70%)**, the middle fourteen **29%**, the **ten deepest 20%** — against a 38%
+base rate, using depth and volume rather than price. Then, in his words "stated
+against myself": **all four KOMA cards in the batch are large** and three sit in
+the thin bucket; removing KOMA leaves **4 of 7 (57%) against a non-KOMA base
+rate of 30%**, and the within-coin evidence **holds for BCH and fails for FHE**.
+He filed it as a magnitude-only separator, **not an idea**, "because I could
+find nothing in my field that sets the direction" — the seven large cards under
+it split **4 up / 3 down**.
+
+**The back-loading is now measured across a second batch and quantified.** For
+the 13 large cards the single largest after-hour falls in **+12…+23 in nine of
+them** and is the **very last hour in five**. The median share of the move
+already in place by +12 is about **43%**, and for the five biggest movers:
+**0%, 25%, 31%, 37%, 61%.** `C152` is **+24.92% in the single hour +23** out of
+a +37.06% card. His consequence: **"an exit at +12 forfeits most of the largest
+rises."**
+
+**Four named counterexamples, each killing an obvious reading:** the two biggest
+movers came out of the **two quietest before-windows** of any large card;
+`C038` carried the **largest coin-specific volume shock in the batch** — about
+12× its own baseline with bitcoin at +0.02 — and was followed by one of the
+calmest afters, **+2.22% with no hour beyond ±1.1%**; and `C236` and `C128`
+show the **same before-picture** — violent prior week, very quiet final 24 h —
+with outcomes of **+1.29%** and **+42.15%**.
+
+**Five pairs sharing market hours in one batch, verified by matching printed
+columns**, including a **chain of three** across 2026-06-07 to 06-11. Lukas
+found these from the price side; Amara found one of the same pairs from the
+outside-world side in the same batch.
