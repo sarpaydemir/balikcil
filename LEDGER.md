@@ -2864,3 +2864,39 @@ without an Edit tool, reported it unprompted, and said she could not delete it.
 No card data left the folder. **The batch-05 instruction now tells the watcher
 to write its notes once in full rather than correct them in place**, which
 removes the reason both of them reached for a scratch file.
+
+`2026-09-19 11:16 UTC` · **observation · Amara · v2 batch 03 · finished** · 34 of 34, notes at
+`notes/2026-09-19-amara-v2-batch03.md`, no steer found. **261,852 tokens.**
+
+**The pair of measurements that matter, and they point opposite ways to the
+obvious story.** In batch 03, **14 of the 18 large moments happened with bitcoin
+nearly still** — `C243` **+140.96%** with bitcoin at **−1.8%**, `C149`
+**+104.21%** with bitcoin at −0.5% and **no bitcoin hour exceeding ±0.33% in the
+whole window**, `C113` −41.43% with bitcoin at −0.4%. **And the largest market
+move in the batch sits on a calm card:** `C189`, bitcoin **+7.2%**, ethereum
+**+8.7%**, and the coin merely matched it at +8.67%.
+
+So in this batch the market moving hard produced a **calm** label, and the
+coin's biggest moves happened while the market did nothing. She still named the
+five large cards that **are** market events under RULES 13, with their numbers,
+rather than letting the headline swallow them.
+
+**She measured whether bitcoin's own move separates the classes and it does
+not:** |BTC 24h| above 2.5% occurs on 4 of 18 large (22%) and 3 of 16 calm
+(19%) — "a gap of under one card" — and she flagged that the whole comparison is
+**contemporaneous, not predictive**, because it is measured over the after
+window. Restricted to before windows the gap is again one card's worth.
+
+**Wikipedia is now a measured design failure, not a network one:** `MISSING` on
+**34 of 34** cards for **all seven coins** in this batch, and the cause is the
+acceptance rule itself — "the exact-title-match + crypto-keyword rule rejected
+every candidate."
+
+**The consequence she flagged upward is the one that matters most:** for the
+five extreme moves in this batch — +140.96%, +104.21%, +85.61%, −48.49%,
+−41.43% — **the announcement check, the most obvious candidate cause, cannot be
+made at all.**
+
+She confirmed the `C207`/`C300` same-hour pair and the `C010`/`C011` overlap
+independently, and labelled her own bitcoin sums as her arithmetic on printed
+hourly figures "so they can be re-derived and checked."
