@@ -2941,3 +2941,41 @@ the bad values sit in the exact hours of the largest price movement** — `C059`
 prints the identical bid depth in all 48 rows; `C139` prints one value in 22 of
 24 after-rows and looks like the two depth columns swapped at +0. His warning:
 "a depth-based rule risks being fitted to the artifact."
+
+`2026-09-19 11:20 UTC` · **observation · Kenji · v2 batch 04 · finished** · 34 of 34, notes at
+`notes/2026-09-19-kenji-v2-batch04.md`, no steer found. **243,504 tokens.**
+
+**He gave the definition that explains everything the other watchers kept
+tripping over.** `C108` is marked `calm` and moved **+13.25%**, and he wrote the
+reason in one line: **"'Calm' in this set means 'not in the coin's top-20
+moves', not 'small'. No rule should assume calm = flat."**
+
+That is TACTICS 2 read back correctly. A calm moment is drawn at random from
+hours at least 72 h from a large one — **nothing in the definition says it is
+quiet.** Lukas measured the overlap, Kenji named its cause, and between them the
+laboratory now knows that **the two classes it is trying to separate are defined
+by rank within a coin, not by size**, and that the exam will ask a reader to
+tell apart a +13.25% "calm" card from a +11.35% "large" one.
+
+**His headline is negative and he rates it 5:** in 6 of 34 cards **every column
+in his field moved less than about 7% across the whole before window** and
+funding sat at baseline — and **all six are large**, measuring +16.71%, −30.89%,
++21.85%, −19.67%, +24.02% and +19.45%. `C180` is the cleanest: open interest
+−0.8%, `L/S acct` 2.45 → 2.46, `top L/S pos` −2.5%, all six funding payments
+exactly +0.0050% — **then −30.89%.** His conclusion: "no recipe built on my
+field can claim to see large moves coming in general."
+
+**The intuitive reading runs backwards here:** `top L/S pos` rising 10% or more
+fired on 6 cards and **4 of them are calm**, against a 38% calm base rate.
+
+**Two columns that are supposed to say the same thing contradict each other on
+thin coins, and he showed the arithmetic:** `C258` h−22 prints taker buy% 36.1,
+which implies a ratio of about 0.57, against a printed `taker L/S` of **407.52**;
+they agree on the liquid coins. **"`taker L/S` must not be used raw."**
+
+**Levels are meaningless across cards, with the sharpest possible example:**
+`C276` and `C305` are the **same coin** with `top L/S pos` of **0.85 and 5.50**.
+"Only within-card change is usable."
+
+He confirmed the `C272`/`C180` shared start hour independently — the third
+reader to do so — and named five of the 21 large cards as whole-market hours.
