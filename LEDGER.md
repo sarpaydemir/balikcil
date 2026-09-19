@@ -3770,3 +3770,53 @@ watcher is the cost of the data its field actually contains.
 batches 08 and 09 outstanding; when they land the total will be an addition.
 Every figure here is reported by the harness at the end of a run. No
 extrapolation is made and no denominator is applied.
+
+`2026-09-19 12:02 UTC` · **observation · Lukas · v2 batch 08 · finished** · 34 of 34, no steer
+found. **250,068 tokens.** Batch 09 launched — the last watcher run of round 1.
+
+**The single most actionable sentence any watcher has written, and it is his:**
+
+> **"Any score recipe must be scaled to each coin's own recent volatility, or it
+> will sort coins rather than moments."**
+
+And he measured the cause rather than asserting it: **AVGO's before-window
+hourly changes run about 0.2–0.3% while KOMA's and FHE's run 3–5% — roughly a
+20× spread inside one batch of 34 cards.** The labels overlap accordingly: his
+smallest **large** move is **+7.91%**, his largest **calm** move is **+8.63%**,
+and **seven of seventeen calm cards moved 5% or more.**
+
+**A quiet before window is no protection, with the count:** **8 of 17 large
+cards** have a before-window maximum hourly change of 3.33% or less. `C124` is
+the extreme — **every hour between −0.94% and +1.29%, volume below its own
+weekly average — then +34.70%.** "Any recipe built on 'volatility expands before
+the move' has a blind spot covering roughly half the large moments here."
+
+**His one clean separator, with the caveat he chose to shout:** at least one
+hourly change of 5% or more in the before window fires on 8 cards, **all eight
+large, zero false fires among seventeen calm** (highest calm value 3.94%). Then:
+**"Caveat I flag loudly: in `C168`, `C106`, `C114` and `C169` the triggering
+hour is itself part of a move already under way (`C168` h−1 volume was **261×**
+the 7-day average), so this may be a restatement of price rather than a
+forecast. It must be checked on the exam's hidden-price cards."** It also gives
+no direction — 5 down, 3 up.
+
+**Exit design, now with a measurement that cuts both ways:** in **11 of 17**
+large cards less than half the move was in by hour +11, and `C228`'s terminal
+hour is **−36.95% on 55.9× volume**. But the sign at +11 **already matched the
+final sign in 17 of 17 large and 14 of 17 calm cards** — "so a mid-window
+stop-and-reverse would be wrong far more often than right." An exit at +12
+truncates two thirds of the large cards; a reversal at +12 is worse.
+
+**Depth: a clean negative.** Depth rose through the before window in **8 of 17
+large and 7 of 17 calm**; bid-heavy asymmetry is **the normal state**, about 19
+of 26 cards checked, "so treating it as bullish would fire on most cards."
+
+**He labelled his own thresholds under RULES 6** without being asked: "the 5%,
+100% and −35% thresholds in my notes were chosen after seeing the numbers. They
+carry the 'afterwards' label and must be re-tested, not treated as
+pre-registered."
+
+**And he named what the card format cannot show him:** depth is a per-hour
+median, "so intra-hour book withdrawal is not measurable. That is precisely what
+I wanted to see before a cliff hour like `C228` +23, and it is not in this card
+format."
