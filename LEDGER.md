@@ -3856,3 +3856,20 @@ found from funding and Kenji found from open interest. **Three watchers, three
 fields, one pair of cards that is one observation.**
 
 Her three ideas are rated **1–2** and she wrote: "none of them evidence."
+
+`2026-09-19 12:09 UTC` · **three complete passes, measured** · Amara's nine batches sum to
+**2,303,017 tokens**, **7,526 per card** — the most expensive of the three
+finished so far, and the reason is visible in her own reports: her field
+requires reading the bitcoin and ethereum columns of every card, all 48 rows,
+on top of five external-source lines.
+
+| watcher | field | total tokens | per card |
+|---|---|---|---|
+| Ingrid | exchange behaviour | 1,296,517 | 4,237 |
+| Kenji | the crowd | 2,172,718 | 7,101 |
+| Amara | the outside world | 2,303,017 | 7,526 |
+| Lukas | price itself | 2,018,445 *(8 of 9)* | — |
+
+**Three passes complete: 5,772,252 tokens. With Lukas's eight, 7,790,697.** One
+run outstanding. Every figure is the harness's own report at the end of a run;
+nothing here is extrapolated and no denominator is applied.
