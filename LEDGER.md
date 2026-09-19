@@ -3438,3 +3438,51 @@ She also named `C263` (`NOKUSDT`) as an unresolved symbol whose four
 prediction-market "mentions" are "very likely false matches on the currency or
 the handset maker" — the same name-resolution fault Mateo flagged for OMNI and
 Amara found for the Wikipedia rule, now on a third coin.
+
+`2026-09-19 11:42 UTC` · **observation · Lukas · v2 batch 06 · finished** · 34 of 34, no steer
+found. Notes at `notes/2026-09-19-lukas-v2-batch06.md`.
+
+**He measured RULES 11's own rival and found it may be a straw man.** "The
+direction of the last 24 hours continues" is **right in 8 and wrong in 11** of
+the nineteen large cards. Substituting the card's printed **7-day** price change
+for the 24-hour direction gives **14 of 19**. His words: **"If the official
+rival is the 24-hour version, a recipe may beat a straw man; I suggest running
+the 7-day version beside it."**
+
+RULES 11 names three rivals a finding must beat, and the simple rule is one of
+them. **A watcher has now measured that the named rival loses to a trivial
+variant of itself.** That is not a watcher's decision to change — RULES 11 is a
+rule — but it is exactly the kind of thing the skeptic and a jury need before
+the exam's passing condition means anything. Recorded, unanswered.
+
+**His best separator is also his most honestly labelled.** Two quantities, both
+pure arithmetic on printed numbers: the flattest last-twelve-hours, and the
+largest volume hour against the card's own weekly average. A union of the two
+fires on **nine cards — all nine large, none of the fifteen calm.** And
+immediately: **"with fitted cuts"** — the thresholds were drawn after seeing the
+answers, one calm card shows the same shape just under the line, and the gap at
+the cut is thin. Confidence 3.
+
+**The part that makes it worth testing rather than discarding:** in all seven
+volume-spike cards **the spike hour's own price change was between −2.01% and
++1.79%** — "so this is **not** a restatement of price." A signal that survives
+the "price already says it" test is rare in these notes.
+
+**Down moves are market-wide; up moves in this batch were not.** Six large-down
+cards carry bitcoin and ethereum down with them, quoted hour by hour. Against
+them, six large-up cards move with bitcoin inside about ±1% — `C109`'s
+**+14.73% hour happens while bitcoin is −1.11**.
+
+**A third overlap cluster, and the largest yet found by a reader:** `C050`,
+`C051` and `C052` — same coin, **all three calm** — cover one stretch of about
+**85 hours**, verified byte-identical row by row across two joins. "Three of
+fifteen calm cards in this batch cover one ~85-hour stretch." He then placed it
+correctly: consistent with the ratified reading of TACTICS 2, "and still costs
+independence… **This may be an open question under RULES 33 if calm-card counts
+are used anywhere as an n.**"
+
+**Frozen depth, now traced across cards:** `C019` prints bid depth **3.19k**
+identically for four hours; `C017` prints the **same constant 3.19k** for five
+hours — **same coin, six days apart** — and an ask depth of 1.51k identically
+for thirteen. "I judge these a frozen/floored feed, not a real book; any depth
+reading of those rows should be treated as void."
