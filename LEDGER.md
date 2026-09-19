@@ -999,3 +999,74 @@ question, and a scope fence must be written symmetrically or not at all.
 
 No outcome yet — jurors 1 and 2 are still answering, and under RULES 35 nothing
 counts until the referee has sat.
+
+`2026-09-19 06:52 UTC` · **WALL INCIDENT · a closed folder was exposed to a juror** · Reported by
+juror 1 of the tokenized-equity jury, in its own words and without being asked.
+
+**What happened:** one of its searches was globbed `*.md` across the whole
+folder and **matched files in `cards/`**, which the question had closed to it.
+The tool preview showed **three lines** from three card files (`C189`, `C283`,
+`C072`), all the same boilerplate sentence about the Wikipedia article-matching
+rule. The juror stopped there, **did not open the saved full output**, and
+re-ran its search file-by-file against `TACTICS.md` and `RULES.md` only. It
+states those lines played no part in its answer.
+
+**Severity, stated rather than guessed:** `exam/` was **not** touched — not
+opened, not listed, not named — so the blind exam is intact. What leaked was
+three lines of card boilerplate, which contain no moment, no coin name and no
+outcome. The juror's question had nothing to do with cards. **This is a
+containment failure, not a contamination of the exam.**
+
+**Why it happened, and it is the coordinator's fault, not the juror's:** a
+"what you may not look at" list in an instruction is a rule the agent must keep
+by hand. The `Read()` deny rules and `wall.sh` guard the **old project**, not
+folders this laboratory closes to one role for one question. **Nothing in the
+harness enforces an intra-laboratory closure.** The juror kept the rule the
+moment it saw it was breaking it; the mechanism that should have made the glob
+impossible does not exist.
+
+**Told to the user**, because a closed folder being read is exactly one of the
+two things the user asked to hear about. **Not closed, recorded as open:** there
+is no enforcement for intra-laboratory closures, and `exam/` — the closure that
+actually matters — rests today on the same honour-plus-instruction basis as
+`cards/` did here.
+
+`2026-09-19 06:52 UTC` · **sixth steer, and the first one that independence cannot fix** ·
+Juror 2 found a sentence in the tokenized-equity question that the coordinator
+wrote believing it was neutral description: **"The definition is written in
+terms of contracts."** The juror's objection, quoted: it "is the single
+observation that decides the question, handed to me before I opened the file",
+and — the part that matters — **"a steer identical across all three jurors is
+not corrected by independence."**
+
+That is a new failure mode in the record. The first jury's leaks were caught by
+the jurors' independent reasoning going beyond them. **A steer in the common
+question reaches all three identically, so three agreeing answers prove nothing
+about it.** The referee has been told to rule on it and has not been told what
+to conclude.
+
+Neutral framing, per the juror: stop at "`TACTICS.md` section 0 defines this
+laboratory's universe."
+
+`2026-09-19 06:52 UTC` · **a claim of the coordinator's, corrected by the jurors** · At 06:43 UTC
+this ledger recorded, from the agent's report, that "`AVGOUSDT` and `NOKUSDT`
+look like tokenized-equity contracts", and the coordinator repeated that to the
+user. **All three jurors are more careful than that, and they are right:**
+- **`AVGOUSDT`** — `"error": null`, and all three exact-symbol hits are
+  tokenized wrappers of one listed company's shares. Strong evidence. Still a
+  **CoinGecko name lookup, not a Binance contract specification** (RULES 19).
+- **`NOKUSDT`** — `"error": "CoinGecko search returned 5 coins, none with
+  symbol == NOK"`, `"name": null`, no exact-symbol hits. This is a **successful
+  lookup with a negative result**, not a connection failure, and it identifies
+  the contract as **nothing at all.** Juror 2 named this as "the most likely
+  place another juror or the referee could overreach". Treating it as a second
+  confirmed equity would be an unmeasured claim.
+
+**So: one contract with strong indirect evidence, one unknown.** The user was
+told "probably not coins" about both; that was the coordinator overreaching on
+an agent's summary, and it is corrected here and to the user.
+
+Measured side-fact from juror 1, which the objection about equity trading hours
+turns on: `AVGOUSDT` has `days_with_zero_trades` = 0 across 134 of 134 days and
+`NOKUSDT` 0 across 92 of 92 — both traded every day including weekends, so the
+hourly series does not show the holes an equity underlier would predict.
