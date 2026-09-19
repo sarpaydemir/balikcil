@@ -973,3 +973,29 @@ way.
 **Cost of the mechanism, measured:** 3 jurors 125,188 subagent tokens combined
 (45,392 + 40,148 + 39,648), 37 tool uses; referee 40,488 tokens, 10 tool uses,
 on `haiku`. One ratified question costs roughly 165,000 tokens.
+
+`2026-09-19 06:51 UTC` · **second jury · framing faults found in the corrected instruction** ·
+The tokenized-equity question was written under the standing correction of
+06:43 UTC — no decision stated, no cost framing, no unneeded computed results,
+and the two permitted artefacts were checked beforehand for coordinator
+commentary and were clean. **It still carried two faults, both found by juror
+3 and both accepted:**
+
+1. **The heading presupposed the answer.** "tokenized equities in the universe"
+   asserts at least one is there. The juror's own wording for a neutral
+   heading: "the universe definition and non-crypto underlyings".
+2. **The scope fence was one-sided.** "If your answer is that such contracts do
+   not belong, the remedy is a separate question" gives an aftermath to only one
+   of the two branches, which faintly marks it as the live one. The juror
+   answered against that branch, so if it was a steer it did not take.
+
+These are lighter than the three of 06:41–06:43 UTC — neither states a decision
+or a result — but they are the same failure in smaller form: **the coordinator
+shaping the question while believing it is only describing it.** Five findings
+in two days, every one made by the agent receiving the instruction.
+
+**Added to the standing correction:** a question's own title is part of the
+question, and a scope fence must be written symmetrically or not at all.
+
+No outcome yet — jurors 1 and 2 are still answering, and under RULES 35 nothing
+counts until the referee has sat.
