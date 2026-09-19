@@ -4268,3 +4268,65 @@ than a bare permission would." Accepted — the folder should have been named
 without saying what it contains.
 
 **He proposed no idea of his own and fixed no rule**, as his definition forbids.
+
+`2026-09-19 13:33 UTC` · **THE CANTEEN BOOK IS FROZEN · TACTICS 5 complete** ·
+
+| file | lines | SHA-256 |
+|---|---|---|
+| `canteen/2026-09-19-sofia.md` | 960 | `650daccc526353c4418509f98a6147fd678de5808d139cfc9273dcaef92662de` |
+| `canteen/2026-09-19-viktor.md` | 1,264 | `c67f884ab379ce684e8e96837ac2c9ed28d9b2156ed1f90b6416fa5c10465c41` |
+| the 40 watcher files concatenated | 5,773+ | `89bf45bbe77be232168ea13c46b505bb81416dd34858373b4aaef01edfdf88ac` |
+
+TACTICS 5 says the book freezes after at most two rounds and its fingerprint
+goes here. Two rounds are done. **It is frozen at those three values.**
+
+**THE RESULT, stated as Sofia wrote it:**
+
+> **"Directional rules: the list is empty. No rule in this book says buy or
+> sell."**
+
+All 52 directional items carry a reasoned red stamp. **RULES 32 says nobody can
+override a reasoned blocker, and Sofia went through all 52 looking for one she
+could challenge on the material: "I found none, and I resurrected nothing."**
+
+**The score recipe, RULES 31 form, all five lines filled:** two scores kept
+apart and never added — Movement (0..1) and **Direction (0..0)**. One raising
+signal worth +1 and nothing else. Six blockers. **Eleven unknowns, the longest
+line in the recipe.** And:
+
+> **"buy line / sell line: both empty. Not 'threshold undetermined' — empty
+> because D = 0 on every card by construction. The recipe's instruction on every
+> card is *do nothing*."**
+
+**A laboratory built to find a scoring system has produced a scoring system
+whose every instruction is "do nothing", and has produced it honestly.**
+README's own sentence — "Free observation produces ideas, not evidence" — has
+been tested and the answer is that the ideas were not even ideas.
+
+**Sofia corrected Viktor in four places and every correction made the surviving
+gate weaker, not stronger.** Its calm-fire count is **5 cards / 4 events, not
+4/3** — she found `C241`, which he missed and which Lukas had named himself.
+She took market co-movement **off** the blockers line because its grounds are an
+after-window count while its trigger reads the before window. And she made the
+instrument blocker **inapplicable in the exam**, with the reason: "a blocker
+applicable only by reading a hidden label is not a blocker in a blind exam."
+
+**The most unusual section of the book is §6, and it is the reason to trust the
+rest.** She listed **eight ideas that occurred to her and that she refused to
+write**, each with why — including volatility-scaling the gate, grading it by
+count, using the firing hour's position as the missing direction leg, and a
+per-coin funding z-score. Her reason each time: **several watchers say the
+principle, none of them filed the trigger, "so building one would be my
+construction, not an observation."** A chair who lists her own temptations and
+declines them is the strongest evidence the book contains.
+
+**She also struck out nothing for want of a card number** — "every substantive
+observation in all 40 files carries at least one card number" — and named the
+handful of lines that carry none, all housekeeping.
+
+**Two things she flags for action before the exam, both already in this ledger
+from other mouths:** the exam may not be blind (`R-04`), and **nothing has been
+collapsed for RULES 13** (`N-1`). And two questions she refused to answer and
+sent to jurors: whether two calm moments may overlap — **135 calm+calm pairs of
+495** — and whether the instrument blocker may be applied at all in a blind
+exam.
