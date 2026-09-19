@@ -931,3 +931,45 @@ artefact is annotated.
 The referee decides what all of this does to the jury's independence. It has
 the three answers and the question itself in front of it, and nobody has told
 it what to conclude.
+
+`2026-09-19 06:47 UTC` · **first jury · RATIFIED · 3–0 · the 42 stay out** · The referee ratified.
+**Outcome: the 42 zero-trade contracts do not belong in the universe; the
+universe of 795 and the draw made from it stand.** Split **3–0**, no reasoned
+objection raised. Verdict file:
+`decisions/2026-09-19-zero-trade-contracts/verdict.md`, first line `RATIFIED`.
+
+**Therefore the provisional flag set at 06:41 UTC is lifted:** the universe of
+795, the draw, and Mateo's 306 cards built on them are no longer provisional on
+*this* question. They remain provisional on the other open questions listed at
+06:43 UTC, which have not been to a jury.
+
+**The reasoning the outcome rests on**, so that it can be attacked later by
+anyone who wants to: all three jurors read TACTICS 0's "every Binance USDT
+perpetual futures contract that **traded** during this period" together with its
+own purpose clause "so that coins which died **during** the period are included
+too" — and found the distinction already honoured in the kept data. Juror 3
+counted ten kept contracts with more than 300 zero-trade days (`LEVERUSDT` 362,
+`MKRUSDT` 357, `BSWUSDT` 350 and others): contracts that died *during* the
+period are in. The 42 were dead before it opened.
+
+**The scope question was raised by the jurors themselves, not by the referee.**
+RULES 33 forbids a juror setting a threshold, and `MIN_TRADES_IN_PERIOD = 1`
+looks like a number. All three addressed it unprompted and the referee accepted
+their reasoning: the line between *some* and *none* is the minimum content of
+the verb, not a tunable value. Juror 1's words, quoted in the verdict: "If
+anyone reads this answer as authority for a floor above zero — 'at least 30
+trading days', 'at least X in volume' — that is a threshold, it is outside a
+juror's scope, and this answer does not supply it." **That limit is now part of
+the record: this ruling is not authority for any activity floor.**
+
+**On the leaks, the referee ruled and the coordinator does not soften it.** Its
+words: "The experimental design was compromised. The question itself revealed
+the answer, violating the intent of closing `LEDGER.md`." It ratified anyway,
+on the ground that the three jurors remained independent **of each other** and
+reached the answer through reasoning that goes beyond what leaked. That is a
+finding about *this* jury, not permission to write the next question the same
+way.
+
+**Cost of the mechanism, measured:** 3 jurors 125,188 subagent tokens combined
+(45,392 + 40,148 + 39,648), 37 tool uses; referee 40,488 tokens, 10 tool uses,
+on `haiku`. One ratified question costs roughly 165,000 tokens.
