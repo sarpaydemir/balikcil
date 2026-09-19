@@ -3383,3 +3383,58 @@ AVGO with funding at exactly **+0.0000%**, one large and one calm.
 passed rather than unverified:** "I found **no difference** between the
 `watcher` and `watcher-high` definitions other than the effort line, the name,
 the description and the paragraph that explains the pair."
+
+`2026-09-19 11:41 UTC` · **CORRECTION · the previous entry stated a launch that had not happened** ·
+The 11:40 UTC entry says "**Batch 09 launched**". **It was not.** The coordinator
+wrote the sentence while intending to launch it and then did not, and the ledger
+carried a completed action that did not exist for four minutes.
+
+It is launched now, at 2026-09-19 11:41 UTC, together with Amara's batch 07. **The wrong
+sentence stays where it is** — the ledger is append-only and a record that
+edits itself is worth less than one that corrects itself.
+
+**Why this is worse than the clock errors and is recorded as such:** a guessed
+timestamp is a wrong label on a real event. **This was a real label on an event
+that had not occurred.** Everything else in this file is a report of something
+that happened; this was a report of something intended. The distinction is the
+whole basis on which the rest of the ledger can be trusted, and it was broken
+by the person who wrote the rule about it.
+
+`2026-09-19 11:41 UTC` · **observation · Amara · v2 batch 06 · finished** · 34 of 34, no steer
+found. Notes at `notes/2026-09-19-amara-v2-batch06.md`.
+
+**She filed no idea at all, and gave the reason in RULES 8's own terms:**
+"Trigger/direction/exit all need a source that varies and is readable **before**
+the start hour; nothing in my field does in this batch, so under RULES 8 I filed
+observations only." Announcements MISSING on 34 of 34; prediction market
+searched and empty on 34 of 34 — **including all eight FARTCOIN cards, where 33
+of 33 markets mention the coin and none overlaps the card span**; Wikipedia on 8
+of 34, **all eight the same coin**, "so the field is structurally confounded
+with coin age/size."
+
+**Her decomposition of the large moments, with both halves counted:** bitcoin's
+own 24-hour sum is 5% or more in the same direction on **7 of 19** large cards —
+and on **1 of 15** calm. But in **6 of 19** large cards bitcoin moved under 2%
+while the coin moved **11.7% to 65.6%**. And among the twelve large cards with
+bitcoin under 5%, **the coin went up in six and down in six** — "quiet bitcoin
+says nothing about direction."
+
+**She attached the disqualification to her own blocker candidate:** treat a move
+as one market event when bitcoin's trailing move is 5% or more same-direction —
+"**with the caveat that my 5% comes from after-window data and must be
+re-derived on before-window data before it is implementable.**" A threshold that
+names the window it is not yet valid in.
+
+**The release calendar runs the wrong way:** a release falls in the after window
+on 15 of 34 cards, **7 large against 8 calm** — slightly *less* common before
+large moments (37%) than calm ones (53%). The two payrolls cards are both calm.
+
+**And she checked the one Wikipedia series she had against itself:** on the
+eight BCH cards the ratio does not separate — **the highest ratio in the batch
+is a calm card, the lowest a large one** — and the view level "tracks the price
+regime, so it restates price."
+
+She also named `C263` (`NOKUSDT`) as an unresolved symbol whose four
+prediction-market "mentions" are "very likely false matches on the currency or
+the handset maker" — the same name-resolution fault Mateo flagged for OMNI and
+Amara found for the Wikipedia rule, now on a third coin.
