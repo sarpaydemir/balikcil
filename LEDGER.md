@@ -3574,3 +3574,18 @@ sequences that interlock exactly — and she placed it correctly: legal as
 written, "a gap in the rule rather than a card-making error… per RULES 33–35 it
 is an open question for jurors, not for me." She then **checked the rest of the
 batch for the same thing** and reported the near-miss she found.
+
+`2026-09-19 11:48 UTC` · **the measured cost of one watcher reading the whole set** · Ingrid's
+nine batches, added: **1,296,517 tokens** for **306 cards** — a mean of 144,057
+per batch and **4,237 tokens per card**, one field of view, effort high.
+
+This is the first complete, measured figure the laboratory has for the unit of
+work TACTICS 4 describes. It is **not** representative of the other three: her
+field is the cheapest to read because two thirds of it is `MISSING` on every
+card, and her per-batch cost ranged from **85,891 to 235,862** depending on
+whether she read cards whole or searched them by named line. The other three
+watchers have been running between roughly 230,000 and 260,000 per batch.
+
+**No extrapolation to a total is written here.** The remaining runs are Lukas
+batches 08 and 09, Kenji batch 09, and Amara batches 08 and 09; when they land,
+the sum will be an addition, not an estimate.
