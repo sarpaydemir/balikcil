@@ -3916,3 +3916,27 @@ will fail on them for a reason that has nothing to do with markets.
 alone is useless in both directions — `C120`'s before window ran about **9.7×**
 its own weekly average and the card **fell 44.4%**; `C140`'s ran **0.32×** and
 the card **rose 41.5%**.
+
+`2026-09-19 12:10 UTC` · **ROUND 1 · the whole measured cost** · Thirty-six runs, four
+watchers, 306 cards each.
+
+| watcher | field of view | total tokens | per card |
+|---|---|---|---|
+| Ingrid | exchange behaviour | 1,296,517 | 4,237 |
+| Lukas | price itself | 2,262,894 | 7,395 |
+| Kenji | the crowd | 2,172,718 | 7,101 |
+| Amara | the outside world | 2,303,017 | 7,526 |
+| **round 1** | | **8,035,146** | **6,565 per card-reading** |
+
+**8,035,146 tokens**, 1,224 card-readings. Every figure is the harness's own
+report at the end of a run, added; nothing is extrapolated.
+
+**Against the estimates this laboratory made along the way:** ≈12.4 million
+(linear from ten cards, labelled an upper bound — it was, by 35%), then ≈9.2
+million (measured on one field of view, labelled an upper bound — it was, by
+13%), then ≈7.47 million (measured on one batch of four fields — **that one was
+low by 7%**, because batch 01's four runs happened to be cheaper than the
+average). The first two were honest upper bounds. **The third was not flagged as
+possibly low and should have been.**
+
+The output: **36 notes files** under `notes/`.
