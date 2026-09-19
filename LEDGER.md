@@ -3115,3 +3115,49 @@ on a calm card** measuring −1.56%. Meanwhile the batch's largest move, `C110`
 two cards returned `EACCES: permission denied, posix_spawn 'rg'`. She retried,
 succeeded, and reported them anyway "per RULES 21 rather than letting them pass
 as results."
+
+`2026-09-19 11:29 UTC` · **observation · Kenji · v2 batch 05 · finished** · 34 of 34, 58 notes,
+no steer found.
+
+**One sentence of his belongs directly in the score recipe.** Ten of 34 cards
+have every before-window funding payment clamped at exactly +0.0050%, split 6
+calm / 4 large — and that clamp sat in front of **the batch's largest move,
+`C104` at +161.78%**, whose entire crowd panel was featureless: open interest
++1.06%, `L/S acct` 3.11 → 3.16, no taker drift. His conclusion:
+**"My field must be allowed to return *unknown* rather than *calm*."**
+
+RULES 31 already reserves a line for unknowns and says it cannot be left empty.
+**This is the first measured case of why**: a panel with nothing in it is not
+evidence of quiet, and a recipe that scores it as quiet will be wrong by
+161.78%.
+
+**He caught two of his own ideas describing one pair of events.** His
+deep-negative-funding idea and his open-interest-drain idea **fire on the same
+two cards**, and he flagged it in the notes "so the canteen cannot double-count
+them." Nobody asked him to check whether his own ideas overlapped.
+
+**He trusts his refutation more than his finding, and said so.** Four cards whose
+six-payment before-window mean reached +0.020% are all large and all up
+(+40.69%, +55.55%, +37.58%, +27.86%). But four other cards carry a **bigger
+single spike** and low means — **and all four are calm.** So a "largest single
+payment" rule fails on four cards while only the sustained mean separates. He
+then measured how fragile that is: **highest calm mean +0.0185% against lowest
+firing +0.0244%, a gap of 0.006 percentage points**, and the four firings come
+from only two coins.
+
+**The ratio columns encode the coin's name:** `L/S acct` runs 4.18–6.23 on all
+seven KOMA cards, 0.54–1.31 on ZRO, 0.78–1.37 on BCH. `top L/S pos ÷ L/S acct`
+at the last before-hour gives 0.24–3.13 for large and 0.15–3.00 for calm —
+**fully overlapping.** The most crowd-long card in the batch was calm.
+
+**A defect he refused to read as a finding:** `C002` prints open interest as
+`0` at two hours while the same rows carry 42.18k and 4.92k of quote volume and
+804 and 73 trades. "I could not tell from the card whether the source was empty
+or the value genuinely zero, so I **excluded `C002`'s OI series from every
+open-interest count** rather than calling it 'OI fell to zero'."
+
+**And he checked his own ground against RULES 13 before resting on it:** the two
+cards in his batch with a clear whole-market component are named with their
+bitcoin and ethereum hours, and the eight up-moves his funding observations rest
+on are shown to be coin-specific — "BTC moved less than ±0.6% in each decisive
+hour."
