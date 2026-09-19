@@ -4657,3 +4657,79 @@ believed.
 **Nothing was launched.** No endpoint called, no agent run, no instruction
 written. The laboratory remains stopped where the previous entry left it, with
 the exam unbuilt.
+
+`2026-09-19 23:08 UTC` · **the user decided the outbound question, and the endpoint was
+measured rather than doubted** · The previous entry named a gap: `RULES.md` is
+written entirely about reading **into** this folder and says nothing about what
+may leave it, so calling an outside service was neither permitted nor forbidden.
+The coordinator declined to settle it alone and put it to the user. **The user
+decided: the outside decision service may be called.** Recorded here as a user
+decision, under the standing requirement that a rule is not changed without
+asking the user first. The user's grounds were cost: *"balikcili bu sekilde
+yurutemiyorum maliyetler beni asmaya baslayacak."* The user also stated the
+service is real and working, and told the coordinator to stop hedging and
+establish how to use it.
+
+**The coordinator's previous position is withdrawn as too cautious.** Declining
+to verify a thing that can be verified in one call is not caution; it is an
+unmeasured claim dressed as one (RULES 19, 22). Four probes were run against the
+service named in `external/2026-09-19-MEMO-cheap-decisions.md`, using **no
+laboratory content** — synthetic sentences only.
+
+**It works.** HTTP 200, 0.44 s on the first call, provider `TypeSafe`, model
+`typesafe/jev-1.13-20260917`. Measured cost of the four probes, from the `usage`
+fields: **$0.0000149, $0.0000141, $0.0000137, $0.0000136** — four decisions for
+about six thousandths of a cent.
+
+**The probes establish something the memo admits it did not.** The memo's §5
+states *"We did not measure how many correct answers were also low-confidence"*,
+and its confidence observation rests on two errors. The probes tested whether
+`confidence` carries information at all: a clear factual question ("is 7 prime")
+returned the right answer at **confidence 1.0**; a vague but answerable item
+returned a sensible answer at **0.92**; and an item whose state **did not contain
+the answer at all** ("The number is.") returned a fabricated choice at
+**confidence 0.18**, with probabilities 0.59/0.41. So the model does signal when
+it is guessing. Four synthetic items is **not** a validation, and this is
+recorded as a signal, not a result (RULES 19).
+
+**The memo's description of the response is incomplete**, found by probe. It
+describes `score` as handing back "a rating instead of a category". The service
+actually returns a **continuous** `score` (0.24 on a five-option scale), plus a
+`legend` mapping indices to the option strings and a per-bucket `probabilities`
+map. It also returns `id` and `provider`, neither of which the memo mentions.
+
+**Where the money actually is, measured rather than assumed.** Round 1 cost
+8,035,146 measured tokens for 4 watchers × 306 cards. Ahead of us, TACTICS 6 is
+**400 cards × 5 sitters**. Two of those sitters — Hana with the recipe, Tomás
+without — **are the measurement itself**, and their model, effort and language
+are fixed exam conditions; cheapening either destroys the comparison the exam
+exists to make. But sitters 4 and 5 are already rivals (the last-24-hours rule,
+and a coin flip), so a typed-choice model is admissible in that same position as
+**a further rival**, at roughly $0.006 for all 400 cards. Whether it belongs
+there is not the coordinator's to decide.
+
+**And the expensive half of the memo's own precondition is already paid for.**
+Memo §4 requires a hand-labelled key and says producing it is the costly part
+that does not get cheaper. This laboratory already holds labelled material
+produced by opus agents and frozen with fingerprints: Viktor's 90 items with 52
+reasoned red stamps, Sofia's book, and 1,632 card-citing note lines across 42
+files, each carrying a self-reported confidence of 1–5.
+
+**Commissioned:** `data-engineer`, instruction
+`instructions/2026-09-19-2305-data-engineer-endpoint-calibration.md`, effort
+`high`. It must establish the service's contract itself rather than trusting the
+memo or the coordinator; build a key **in the order the memo's §4 requires**,
+with that ordering visible in the artefacts rather than promised; and report
+agreement, the confusion matrix, the confidence distribution of its errors, and
+measured cost and latency. It is **forbidden to set an operating threshold** and
+is told to refer that to RULES 33 if it judges it a question rather than a
+calculation. `exam/` is closed to it entirely and nothing from `exam/` may leave
+the folder. The credential is read from the environment, may appear in no file,
+and the run must verify that in code and report the check.
+
+**The RULES 3 limit still binds and was written into the instruction.** The
+memo's §3 carries a method steer (*"`score` is probably the one you want for
+observation work"*). The instruction points Mateo at the memo's sections and
+makes him read them there rather than restating them, and tells him that if
+`external/SOURCES.md`'s limit blocks a use he would otherwise recommend, he must
+say so rather than route around it.
