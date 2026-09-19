@@ -3758,3 +3758,15 @@ large, and five of those seven are one coin.**
 same coin, starts fifteen hours apart, "the h−24..h−10 rows of `C162` are
 literally the h−9..h+5 rows of `C161`." Ingrid found this same pair from the
 funding side in the same batch. Two watchers, two fields, one duplication.
+
+`2026-09-19 11:58 UTC` · **two complete passes, measured** · Kenji's nine batches sum to
+**2,172,718 tokens** for 306 cards — **7,101 per card**, against Ingrid's
+**1,296,517** and **4,237 per card**. The gap is not effort, which was `high`
+for both, and not the model, which was `opus` for both: **Ingrid's field is
+two-thirds unreadable on every card, so there is less to read.** The cost of a
+watcher is the cost of the data its field actually contains.
+
+**Two of the four passes are complete: 3,469,235 tokens.** Lukas and Amara have
+batches 08 and 09 outstanding; when they land the total will be an addition.
+Every figure here is reported by the harness at the end of a run. No
+extrapolation is made and no denominator is applied.
