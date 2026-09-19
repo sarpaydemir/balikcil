@@ -2692,3 +2692,55 @@ inside 0.89–1.22 for all 24 hours, while on thin cards it reaches 20.87, 27.66
 he quoted the shared row — and `C300` h−15 and `C207` h+23 are the same clock
 hour, both reading BTC −4.85% / ETH −5.99%. **Two coins, two cards, one event.**
 He also found `C207`'s five-payment anomaly independently.
+
+`2026-09-19 11:13 UTC` · **observation · Lukas · v2 batch 03 · finished** · 34 of 34 read, notes
+at `notes/2026-09-19-lukas-v2-batch03.md`, no steer found. **242,962 tokens.**
+
+**The strongest single measurement of the day, and it is a negative.** `C144`
+(calm, **+1.97%**) and `C149` (large, **+104.21%**) are the same coin and have
+near-identical before windows, dimension by dimension: 7-day average volume
+18.39k against 22.79k, last-hour volume 9.13k against 15.51k, depth −1% 14.72k
+against 11.61k, 24-hour price change −0.1% against −3.2%, mean hourly |chg%|
+0.41% against 0.44%. `C137` is a third window of the same shape and also calm.
+**Nothing in his columns told them apart**, and `C149`'s move did not begin until
+hour **+17** of the after window. Confidence 5.
+
+That is the laboratory's own question answered in miniature: two windows a
+reader cannot distinguish, one followed by nothing and one by a hundred percent.
+
+**Every candidate signal he could name is present in calm cards too**, each with
+its card numbers: volume contraction into the start hour (a large card at 0.44×
+the weekly average, a **calm** card at 0.14×); a 10.6× volume spike in the final
+before-hour (`C011`, calm after); the **widest 7-day range in the batch, 86.94%,
+on a calm card**; depth rising 64% and falling 19% before the same outcome.
+
+**He measured the RULES 11 rival inside the batch rather than assuming it:** the
+before window's own 24-hour direction agreed with the sign of the after move in
+**11 of the 17 large cards where a call could be made** — and flagged that
+measuring the rival is useful but proposing it would not be a finding.
+
+**His one asymmetry, filed as an observation on two events, not a rule:** two
+cards where the last six before-hours show both mean hourly |chg%| ≥ 2.0% and
+mean volume ≥ 2× weekly; both large, both moving with the six-hour sum. He then
+listed the four cards that sit just outside the threshold and would have been
+called wrong or missed — including `C113` at 1.67× which went **−41.43%** and
+`C250` at 1.86× which went **+25.48%**. "Knife-edge", his word.
+
+**A defect he refused to turn into a finding:** `C099`'s bid depth reads 187.27,
+129.91, 129.91, 717.25 … over the last eight before-hours while ask depth holds
+at 39.80k–65.24k, **and the exact value 129.91 repeats seven times** across the
+card. The card moved −48.49%. "If real, it would be the most striking pre-move
+reading in the batch… because an identical repeated value reads to me as stale
+or placeholder, **I cannot say which it is**, and I declined to write it as an
+idea."
+
+**A discrepancy between two readers, for the overlap map to settle:** Kenji
+measured `C010`/`C011` as sharing **fourteen** hours; Lukas verified row by row
+and reports `C011`'s **entire** before window reproduced inside `C010` — twenty-four.
+Both quoted matching rows. The script's map will say which.
+
+**And a warning about mixing instruments:** AVGOUSDT does not behave like the
+other six coins in his columns — hourly moves almost all under ±1%, hours with
+as few as 50 trades, and depth running 4×–25× hourly volume where the others run
+depth below one hour of volume. "A single numeric threshold shared with FHE or
+KOMA would not mean the same thing on this instrument."
