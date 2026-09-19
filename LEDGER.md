@@ -2900,3 +2900,44 @@ made at all.**
 She confirmed the `C207`/`C300` same-hour pair and the `C010`/`C011` overlap
 independently, and labelled her own bitcoin sums as her arithmetic on printed
 hourly figures "so they can be re-derived and checked."
+
+`2026-09-19 11:20 UTC` · **observation · Lukas · v2 batch 04 · finished** · 34 of 34, notes at
+`notes/2026-09-19-lukas-v2-batch04.md`, no steer found. **Token figure follows
+in the closing entry.** **No further batch is launched** — the agreed stop is
+minutes away and the stop instruction says to start nothing new.
+
+**The classes do not merely nearly touch — they overlap, and he read it straight
+off the header lines.** `C108` is marked **calm** with a measured 24-hour move of
+**+13.25%**, which is **larger than three cards marked large**: `C179` (+11.35%),
+`C201` (+12.76%), `C033` (+12.52%). Four of 34 cards, confidence 5. His
+consequence: "a rule that asks 'big move or small move?' in absolute percent
+will mislabel these four."
+
+Kenji measured the boundary as a band of roughly 8.7% to 11.4% in batch 03.
+**Lukas has now found a card on the wrong side of it.** The two classes the exam
+will ask a reader to separate are not separated by size.
+
+**The move is back-loaded, and it has a direct consequence for RULES 8's exit
+slot.** In **12 of the 21 large cards** the single biggest hourly move of the
+after window falls in the **last eight hours**; only two have theirs in the first
+four. `C306` falls a further −4.2% over nineteen hours and then does
++10.86 / +3.36 / +5.34 / +3.11 in the final four. **"A rule that closes at 6 or
+12 hours sits through the flat part and misses the payoff."** Lukas measured the
+same shape in batch 03; this is the second batch to show it.
+
+**He tried five candidate separators and every one appears in both groups.** The
+measurement that states it most plainly: **median printed 7-day high-low range
+is 20.00% before large moments and 27.06% before calm ones — the calm side is
+wider.**
+
+**He confirmed the seven-coin October event from inside the cards** — `C272` and
+`C180` share the start hour 2025-10-09 22:00, both flat about sixteen hours then
+falling in +22/+23 on the same bitcoin and ethereum hours — **and then refused to
+fold in a third card that looked like it belonged**: `C139` crashed −15.68% at
++0 while bitcoin was **+0.29%**, "so it must *not* be folded into that event."
+
+**Six cards carry depth values he reports as a data failure, and in three of them
+the bad values sit in the exact hours of the largest price movement** — `C059`
+prints the identical bid depth in all 48 rows; `C139` prints one value in 22 of
+24 after-rows and looks like the two depth columns swapped at +0. His warning:
+"a depth-based rule risks being fitted to the artifact."
