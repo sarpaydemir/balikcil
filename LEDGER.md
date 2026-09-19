@@ -3041,3 +3041,41 @@ the same command that writes the instruction, so there is nothing to remember.
 
 Real time, read: **2026-09-19 11:21 UTC**. The stop job `c5500919` fires at 13:58 UTC and has
 not fired. Work resumes.
+
+`2026-09-19 11:25 UTC` · **observation · Amara · v2 batch 04 · finished** · 34 of 34, notes at
+`notes/2026-09-19-amara-v2-batch04.md`, 37 notes, no steer found.
+
+**Three cards where the coin moved against the market**, which is the sharpest
+form of "this belongs to the coin": `C112` **+56.18%** while bitcoin was
+**−2.25** and ethereum −3.24; `C196` **+24.09%** while bitcoin −2.82 and
+ethereum −4.69; `C305` **+24.02%** while bitcoin −1.65. And **seven cards** with
+a large coin move while bitcoin's 24-hour net stayed inside ±1% — `C107`
+**−52.36%** with bitcoin at **+0.10**.
+
+**Against that she named nine large cards, eight distinct events, that are
+substantially market-wide** — the coin running 1.5× to 3.2× ethereum in the same
+direction — "those moves **do not belong to the coin**." She wrote both lists
+with their numbers rather than keeping the one that reads better.
+
+**Two overlapping pairs ending in opposite outcomes, which she calls the
+cleanest evidence in her field:** `C214` (calm, **+0.12%**) and `C306` (large,
+**+19.25%**) cover the same market hours of 2026-08-24 with matching bitcoin
+columns; `C251` (large, **+37.91%**) and `C131` (calm, **−5.87%**) likewise on
+2026-08-09. **Same market, opposite outcomes** — so market state cannot be the
+trigger. She also confirmed `C272`/`C180` and added that they "must be collapsed
+**before any chance line is computed**", which is where RULES 12 and RULES 13
+meet.
+
+**Her honest accounting of her own field, recorded because it decides what the
+canteen can expect from her:** of the five things she was asked to watch, **two
+are unavailable everywhere** (announcements on 34 of 34 — a fetch failure;
+Wikipedia absent on 32 of 34), **one exists on two cards**, **one appears on
+eleven and is mostly minor BLS series**, and **only the bitcoin and ethereum
+columns are present on every card.** Her field effectively reduces to those
+columns — and she added that co-movement inside the after window "is an
+attribution tool under RULES 13, not a forecast, since it is the same exchange's
+price over the same hours."
+
+She separated the two Wikipedia failure causes rather than merging them: 31
+cards fail the title-and-summary rule, `C258` fails one step earlier because
+CoinGecko resolved no coin for the symbol `NOK`.
