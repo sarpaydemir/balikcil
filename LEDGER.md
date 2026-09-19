@@ -2823,3 +2823,44 @@ already replaced and script versions no longer on disk. He judged a stale
 unreproducible record more misleading than a missing one, **and told the
 coordinator it was a deletion of records.** Recorded here so the gap in the run
 numbers has a reason attached to it.
+
+`2026-09-19 11:15 UTC` · **observation · Ingrid · v2 batch 04 · finished** · 34 of 34, notes at
+`notes/2026-09-19-ingrid-v2-batch04.md`, no steer found. **100,855 tokens.**
+
+**Her third distinct blinding leak, and the most serious of the three.**
+"Whether funding moves at all is mostly a coin attribute": all five FHE cards,
+both KOMA cards and the OMNI card leave the default in the before window on calm
+and large moments alike, while all three NIL and all five FARTCOIN cards, six of
+seven NEWT and seven of eight ZRO stay pinned at it. Her conclusion: **"funding
+is unusual here" largely decodes to "this contract is FHE/KOMA/OMNI", which in a
+blind exam is a hidden-label leak unless funding is normalised per coin.**
+
+With the two she found earlier — the payment **count** giving away the 4-hour /
+8-hour interval, and the interval itself acting as "a proxy label for
+smaller/newer altcoin" — that is **three separate channels by which a card
+TACTICS 6 calls blind still carries its coin's identity.** All three found before
+a single exam card exists.
+
+**She confirmed part of the seven-card group from inside a card:** `C272` (ZRO
+−28.51%) and `C180` (NEWT −30.89%) **share the identical start hour**
+2025-10-09 22:00 UTC. The map has both of them in `G049`, the seven-coin
+twenty-hour group. Her note: funding on both stayed at exactly +0.0050%
+throughout it.
+
+**Funding flat through enormous moves:** in 12 of 34 cards funding is exactly
++0.0050% on all twelve payments across 48 hours, and **eight of those twelve are
+large moments** measuring +12.76, +19.25, −28.51, +11.35, −22.94, −30.89, −19.67
+and +24.02 per cent.
+
+**Her one idea is filed with its own disqualification attached:** it lives
+entirely in the after section, "so it can only be tested in the money test and
+never in the exam", its payment timing is an **estimate** from the UTC grid
+because the card prints no timestamps, and no calm card produced the trigger so
+she has no false-positive count. Confidence 2.
+
+**Second scratchpad write, and the instruction is now fixed.** Like Lukas, she
+created a placeholder file outside the folder while trying to correct one word
+without an Edit tool, reported it unprompted, and said she could not delete it.
+No card data left the folder. **The batch-05 instruction now tells the watcher
+to write its notes once in full rather than correct them in place**, which
+removes the reason both of them reached for a scratch file.
