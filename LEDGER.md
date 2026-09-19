@@ -1778,3 +1778,53 @@ nothing, because a card's after-section states its kind outright. **If this
 order — or this ordering script — is ever reused where the kind is hidden, (a)
 is wrong and the order must be rebuilt.** The blind exam is exactly such a
 place. Written here so that Mode B does not inherit it by accident.
+
+`2026-09-19 10:00 UTC` · **sixth jury · three answers in · unanimous on substance** · All three
+jurors of the cross-run jury answered the same way: a watcher in a later run may
+be given **only bookkeeping** — its field of view, its round number, which batch
+it reads, the batch file, and the file it writes to — and **nothing of the
+substance of its own earlier runs**: not the notes, not a summary, not a count,
+not a carried-over conclusion. **The outcome waits for the referee** (RULES 35).
+
+Their grounds, reached separately: `TEAM.md`'s structural decision says "No
+definition has persistent `memory`. A watcher accumulating opinions between runs
+would break the blind exam" — **the named mechanism is a configuration key but
+the stated harm is wider than the key**, and opinions pasted into an instruction
+accumulate exactly as opinions held in memory do. And a watcher note is by its
+required format a result and an opinion, so an instruction carrying one carries
+a result, which RULES 3 forbids — juror 3 put it sharpest: a watcher handed its
+own earlier note **would be obliged by its own definition to report its
+instruction as a leak.**
+
+**All three wrote the strongest case against themselves and it is the same
+case:** the definition bars "the **other** watchers' notes" by name and is
+silent about a watcher's own, which invites the reading that its own are
+allowed; and RULES 3 sits under the heading about the old project, so "result"
+could be read as "result from outside Balıkçıl". Juror 3 said that on that
+reading the honest answer is "the documents do not settle it", weighed it, and
+did not adopt it.
+
+**Two consequences all three reached independently, and the coordinator will act
+on both:**
+1. **Each run must write to its own notes file.** If a later run were pointed at
+   the file already holding its earlier notes, appending would force it to read
+   them — the rule defeated by the file path. The naming is bookkeeping; the
+   non-sharing is what the rules force.
+2. **A watcher's "seen in N cards" is now a floor within its batch, not a count
+   over the set.** Juror 1 asked that each run's instruction say so, or the
+   counts will be misread. The cross-batch count becomes Sofia's arithmetic over
+   filed notes keyed by card number, which is where `TEAM.md` already puts it.
+
+**The cost is real and none of them hid it:** TACTICS 4 describes four watchers
+reading the whole set; batching makes that thirty-six readers of ninth-sized
+sets, and genuine cross-batch structure will only ever be visible to Sofia.
+Juror 1 called that "a real loss and the price of the rule I read."
+
+`2026-09-19 10:00 UTC` · **"interleaved" · flagged by three more agents, still recorded as non-blocking** ·
+Mateo flagged it, and now all three cross-run jurors flagged it unprompted, each
+asking that it not go unconvened. The coordinator's position is unchanged and is
+restated so it is not mistaken for neglect: **an order satisfying strict
+alternation also satisfies the looser reading, so the artefact is valid either
+way and the observation run is not gated by it.** It gates reuse where the kind
+is hidden — the blind exam — and that is where it must be convened, before Mode
+B runs and not after.
