@@ -101,6 +101,12 @@ ET = ZoneInfo("America/New_York")
 # threshold on any measurement.
 POLY_LIMIT_PER_TYPE = 20
 
+# Words that must appear in a Wikipedia article's own summary before its page
+# views may be attached to a coin. A guard against attaching the page views of
+# an unrelated article that happens to share the coin's name.
+SUBJECT_WORDS = {"cryptocurrency", "blockchain", "crypto", "token",
+                 "digital asset", "stablecoin", "memecoin", "meme coin"}
+
 # Addresses probed for exchange announcements. Each is recorded with whatever
 # it answered, so "we could not get announcements" is a measured statement.
 ANNOUNCEMENT_PROBES = [
@@ -334,16 +340,30 @@ def main() -> int:
     print("      " + ", ".join("%s=%s" % (s, names[s]["name"]) for s in symbols), flush=True)
 
     # -------------------------------------------------------------- Wikipedia -
-    # An article is accepted only when its title matches the coin name or the
-    # ticker exactly (case-insensitive). Pageviews of a merely related page are
-    # not the coin's pageviews, and attaching them would be an interpretation.
+    # An article is accepted only when ALL of these hold:
+    #   (a) CoinGecko returned a coin whose symbol equals the Binance base
+    #       ticker exactly, giving a coin *name*;
+    #   (b) an English Wikipedia article exists whose title equals that name
+    #       exactly (case-insensitive);
+    #   (c) the article's own summary contains one of SUBJECT_WORDS.
+    # (c) is a guard, not an interpretation: without it the ticker "NEWT"
+    # matches the amphibian and "NOK" matches the Norwegian krone, and their
+    # page views would silently become the coin's page views. The ticker itself
+    # is never used as a search term for the same reason.
     print("[3/5] Wikipedia pageviews", flush=True)
     wiki = {}
     for sym in symbols:
         base = base_ticker(sym)
-        cands = [c for c in [names[sym].get("name"), base] if c]
+        cands = [c for c in [names[sym].get("name")] if c]
         entry = {"symbol": sym, "article": None, "daily": {},
-                 "tried": [], "error": None, "source_url": None}
+                 "tried": [], "error": None, "source_url": None,
+                 "rule": "CoinGecko exact-symbol name -> exact Wikipedia title -> "
+                         "summary must mention one of %s" % sorted(SUBJECT_WORDS)}
+        if not cands:
+            entry["error"] = ("CoinGecko returned no coin whose symbol equals `%s`, so "
+                              "there is no coin name to look up on Wikipedia" % base)
+            wiki[sym] = entry
+            continue
         for cand in cands:
             surl = ("https://en.wikipedia.org/w/api.php?action=query&list=search"
                     "&srsearch=%s&srlimit=5&format=json" % urllib.parse.quote(cand))
@@ -356,14 +376,32 @@ def main() -> int:
             hits = json.loads(body).get("query", {}).get("search", [])
             titles = [h["title"] for h in hits]
             match = next((t for t in titles if t.lower() == cand.lower()), None)
-            entry["tried"].append({"query": cand, "top_hits": titles[:5],
-                                   "exact_title_match": match})
-            if match:
+            tried = {"query": cand, "top_hits": titles[:5], "exact_title_match": match,
+                     "subject_check": None}
+            entry["tried"].append(tried)
+            if not match:
+                continue
+            surl2 = ("https://en.wikipedia.org/api/rest_v1/page/summary/%s"
+                     % urllib.parse.quote(match.replace(" ", "_"), safe=""))
+            body2, err2 = fetch_and_record(
+                surl2, "raw/wikipedia/summary-%s.json" % re.sub(r"\W+", "_", match), manifest)
+            time.sleep(POLITE_SLEEP_S)
+            if err2:
+                tried["subject_check"] = "summary fetch failed: %s" % err2
+                continue
+            blob = json.loads(body2)
+            text = ("%s %s" % (blob.get("description") or "",
+                               blob.get("extract") or "")).lower()
+            hit = sorted(w for w in SUBJECT_WORDS if w in text)
+            tried["subject_check"] = {"words_found": hit,
+                                      "description": blob.get("description")}
+            if hit:
                 entry["article"] = match
                 break
         if entry["article"] is None:
-            entry["error"] = ("no English Wikipedia article whose title matches the "
-                              "coin name or ticker exactly; see 'tried'")
+            entry["error"] = ("no English Wikipedia article passed the rule "
+                              "(exact title match on the coin name, and a summary "
+                              "mentioning %s); see 'tried'" % sorted(SUBJECT_WORDS))
             wiki[sym] = entry
             continue
         art = urllib.parse.quote(entry["article"].replace(" ", "_"), safe="")

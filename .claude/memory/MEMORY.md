@@ -1,0 +1,1 @@
+- [User is an observer, do not ask questions](user-is-observer-no-questions.md) — only a wall leak or a broken rule reaches them.
