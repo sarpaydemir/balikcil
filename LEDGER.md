@@ -4733,3 +4733,133 @@ observation work"*). The instruction points Mateo at the memo's sections and
 makes him read them there rather than restating them, and tells him that if
 `external/SOURCES.md`'s limit blocks a use he would otherwise recommend, he must
 say so rather than route around it.
+
+`2026-09-19 23:28 UTC` · **the endpoint was calibrated against a notarised key, and the answer
+is negative** · `data-engineer` finished: 152,629 tokens, 54 tool uses, ~20
+minutes, instruction
+`instructions/2026-09-19-2305-data-engineer-endpoint-calibration.md`. Findings in
+`external/calibration/REPORT.md`, SHA-256
+`a679c11f8c43b415a4fae93192db6f4807a8a9ac2acd76bba0f38ded6775d088`. Five scripts
+(`19`–`23`) and ten artefacts, every fingerprint in the report.
+
+**The key existed first, and it is provable rather than promised.** 100 items,
+25 per watcher, drawn by a published rule and seed `20260919` from the 36 round-1
+v2 batch files in `notes/`. Round-2 and `canteen/` were excluded because they
+name the watchers (Viktor's file 330 times, Sofia's 273). `items.jsonl` carries
+id and text only. Before the first item call the run posted the **key's SHA-256
+and nothing else** to the endpoint and kept the response, whose provider-issued
+`id` embeds the provider's own clock: notarised at provider time
+**1789859632**, earliest item call **1789859698** — **66 seconds later**.
+`22_compare.py` is the first script that reads a label at all, and it verifies
+both facts and exits if either fails. It passed.
+
+**Results against the key, three question sets, 300 calls.**
+- **FIELD** (which watcher wrote the line, 4 options): **73/100**, against a
+  uniform baseline of 25%. Errors concentrate in one class —
+  `EXCHANGE_BEHAVIOUR` recall **11/25**.
+- **CARDCOUNT** (mechanical, key certain): **100/100**, majority baseline 52%.
+- **CERTAINTY** (`score`, key = the watcher's own 1–5 digit): **37/100 exact,
+  against 51/100 for simply always answering "4".** Within ±1: 87% against 95%
+  for the constant. **It loses to a constant.**
+
+**The memo's threshold hypothesis is refuted on our data.** Accept-above-0.9
+lets **4 of 27 FIELD errors through**, including one at confidence **0.99** and
+one at **1.00 with probability 0.00 on the correct option**, while escalating 47
+of 100 items, **24 of which were already correct**. The memo's own declared
+unknown — how many correct answers are also low-confidence — is now measured,
+and it is the number that destroys the saving. On CERTAINTY, confidence does not
+separate right from wrong at all (0.376 wrong vs 0.350 right).
+
+**The coordinator's claim of the previous entry is withdrawn.** The previous entry recorded,
+from four synthetic probes, that the model "does signal when it is guessing" and
+called it a signal rather than a result. At 100 real items it does not hold: the
+model is wrong at confidence 1.00 with zero probability on the truth. Mateo
+further measured that for **two-option** questions `confidence` is exactly
+`top probability − second probability` in 100/100 cases — a restatement of the
+probabilities, not an extra channel. Checked independently here across all 300
+answers including 4- and 5-option questions, the identity holds in 117/300
+(39.0%), so the exact arithmetic claim is specific to two-option questions and
+Mateo scoped it correctly. **The decisive fact is the confidently-wrong item,
+and it stands.** Four synthetic probes were too few to support what was written,
+and the entry is corrected here rather than edited (RULES 30).
+
+**Contract: the memo is wrong or silent on 12 points.** The `score` value sits on
+a **0-based index scale**, not the caller's scale (a 5-point array returns 0–4;
+the identity `score == Σ i·p_i` held over 100 calls). `noul` is not free text —
+a bare float, no confidence, criteria keyed `"true"`/`"false"`. An **empty
+`state` is not an error**: it returned a confident answer at 0.99. A truncated
+JSON body is parsed leniently rather than refused. Responses carry undocumented
+`id` and `provider`. Price confirmed at exactly $0.042/M input, output free.
+
+**Cost and latency, measured from `usage`, not estimated: $0.01168007 over 402
+calls**, plus one unrecoverable notarisation call (estimate $0.0000158) →
+**$0.0116959**, i.e. **$0.0000667 per item** for all three questions. Latency
+over the 300 item calls: median **0.3395 s**, p90 0.438 s, worst 0.6099 s;
+107.1 s wall clock sequential. **300/300 HTTP 200, zero failures, no retries.**
+
+**Where it fits: nowhere in this team, and each exclusion is on written
+grounds.** All four watchers — TACTICS 4 requires "why I think so" and the
+endpoint never gives one. Sofia — TEAM.md: she cannot invent, and choosing the
+menu is the job. Viktor — RULES 32: an unreasoned objection is void. Hana and
+Tomás — RULES 10: tool use voids the paper. Greta — TEAM.md "a script, not an
+AI"; RULES 29 reproducibility unmeasured; the RULES 31 ledger needs prose.
+Jurors and referee — RULES 34–35 require citation and reasons. Derya. The only
+use the numbers support is inside Mateo's own work, as a second opinion beside a
+regex that remains the source of truth, with every disagreement escalated.
+Mateo's own summary, recorded verbatim because it is the finding: **"it was
+reliable exactly where a script would have been reliable anyway."**
+
+**A caution Mateo attached to his own best number.** The FIELD key is
+**provenance, not truth** — it records who wrote a line, not whether the line
+belongs to that field. Some of the 27 disagreements are a watcher writing outside
+their own field (he names `I017`, a Kenji line about bitcoin and ethereum, where
+the model said `OUTSIDE_WORLD` at 0.99). He adjudicated none of them. **"73% is a
+lower bound on something and an upper bound on nothing."**
+
+**Two steers in the coordinator's instruction — eighteen and nineteen.** (1)
+*"Part of the memo's description of the response has already been found
+incomplete by a probe"* — told him in advance what he would find; he established
+the contract independently anyway, but the expectation was set before he started.
+(2) *"That ordering condition is the whole worth of the exercise"* — a judgement
+handed down rather than reached; he acted on it and did not test it. He also
+recorded a counterpoint: the instruction's refusal to restate the memo's §4 and
+§5, sending him to read them instead, is the opposite of a steer. **The memo
+itself steers twice, and his measurements contradict both.**
+
+**Failures and housekeeping, by name.** (a) The credential-shaped literal in
+`19_endpoint_probe.py` — never a real credential, verified by SHA-256 comparison
+without printing either value; GitHub push protection matched the *pattern* and
+rejected the push; the commit was reset before reaching the remote. Re-running
+the probe with the replacement literal **changed the endpoint's answer**
+(`401 Missing Authentication header` instead of `401 User not found.`), which is
+now a contract finding. (b) A concurrent commit captured an in-progress probe
+file before redaction was added; **the key was never in it**, the account id was;
+that commit was unreachable and has now been expired from the reflog and garbage
+collected — `git cat-file -e` reports the object gone. (c) An early
+`items.jsonl` leaked `source_file`, from which the FIELD label is derivable —
+caught before any item call, rebuilt, key re-notarised. (d) Mateo deleted and
+regenerated artefacts three times, all uncommitted or superseded and all before
+the item run; **he flags the tension with RULES 30 rather than glossing it, and
+it is recorded here as unresolved.** (e) He notarised at the endpoint — an
+outbound call the instruction did not contemplate, carrying a 64-char hex digest
+and nothing else, inside the granted bound but named.
+
+**Secret check, done in code as required: CLEAN.** `23_manifest_and_scan.py`
+scanned all 14 artefacts and scripts for the exact key, any 20-character fragment
+of it, and four credential shapes, whitelisting only this run's own digests. A
+separate scan of the whole working tree — 1,818 files, excluding `.git/`, `.env`
+and `data/` — found no file containing the key or its tail. `.env` remains in
+`.gitignore`. Re-running `22_compare.py` reproduced `ANALYSIS.json` and
+`comparison.jsonl` byte-for-byte (RULES 29).
+
+**Two open questions handed up, unanswered, under RULES 33.** (1) Any operating
+threshold: Mateo declines to set one, and notes the awkwardness that RULES 33
+routes it to a jury while also forbidding a juror to set a threshold — **so it
+may have to go to the user.** (2) Whether a laboratory-produced measurement filed
+in `external/` is itself under `external/SOURCES.md`'s limit. By the letter, his
+own report cannot reach Ingrid, Kenji, Amara, Lukas, Sofia or Viktor even by
+paraphrase. **It blocks no use he would otherwise recommend** — all six are
+independently excluded on `RULES.md` and `TACTICS.md` grounds — but he calls the
+reading genuinely two-way ambiguous and does not decide it.
+
+Committed and pushed as `09551d7`. Nothing further launched.
