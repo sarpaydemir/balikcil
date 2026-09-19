@@ -4208,3 +4208,63 @@ one is genuine independence, because it is Kenji's field against Lukas's.
 it**, because the instruction said to write it once: a mis-typed citation and an
 over-broad sentence about which cards he opened for what. "Neither affects a
 claim."
+
+`2026-09-19 13:20 UTC` · **THE CANTEEN · Viktor · 90 items examined, 52 red-stamped, one survivor** ·
+`canteen/2026-09-19-viktor.md`. He read all 40 watcher files, the overlap
+manifest, and opened 8 cards to verify his own stamps.
+
+**His own summary of the result, and the coordinator does not soften it:**
+
+> **"The honest result of round 1 is negative, and it is the most valuable thing
+> produced. Sofia's survivor list from the directional side should be empty.
+> **That is the observation working, not failing.**"**
+
+**He put the look-ahead stamps first, as his definition requires**, and three
+ideas died on enterability alone: one whose three supporting instances are all
+**after**-section readings; one whose trigger "is literally written on the
+card's After window", which TACTICS 6 makes unfireable in the exam; and one
+whose entry hour **is** a release hour published in advance, which RULES 16
+forbids as a fill.
+
+**The heaviest single stamp is one card holding two of an author's own ideas
+pointing opposite ways.** On `C104`: 7-day average hourly volume 72.29k, last
+before-hour volume 325.97k = **4.51×**, which fires Lukas's blow-off idea →
+**sell**; the median of the 23 preceding hours is about 27k, so the same hour is
+~12×, which fires his other idea → **buy**. The card is **large, +161.78%**, and
+the sell loses all of it.
+
+**The one survivor is a separator with no direction, and Viktor weakened it
+himself rather than letting it stand.** Lukas's magnitude gate — at least one
+before-hour of |chg| ≥ 5% — was reported by its author as firing on 0 of 17 calm
+cards and by Amara as 2. **Viktor opened four calm cards and all four fire it**,
+then applied RULES 13 to his own counterexamples: `C160` h−10 and `C300` h−15
+are **the same clock hour**, "so that is 4 calm cards / **3 distinct events**."
+He also found the restatement question unresolved — on `C168` the before window
+**already contains the ignition**, h−6 at +14.03% on 2.02M against 12–67k — and
+capped its recall: eight large cards have a before-window maximum hourly change
+of 2.70% or less, **including `C124` at +34.70%.**
+
+**What survives is not a rule. It is a list of zeros, blockers and
+conventions**, and he was precise about how each may be used: the
+baseline-funding null belongs on **the unknowns line and never as a blocker**,
+"because it would have blocked `C104` +161.78%, `C243` +140.96%, `C106`
++120.84%, `C100` +103.98%."
+
+**And he put a measurement against RULES 12 that nobody had joined up:**
+
+> **"Nothing has been collapsed for RULES 13, in any of the 40 files."** The
+> manifest measures **495 shared-hour pairs, 296 of 306 cards overlapping
+> something, only 10 independent cards, largest chain 20. "A shuffle over 306
+> un-collapsed cards will give a chance line that is too easy to beat."**
+
+That is the exam's chance line, RULES 12, threatened by the corpus's own
+structure — found by the skeptic, not by the coordinator.
+
+**He reported a slip in his own file rather than fixing it** ("§9 says 76
+round-1 items; the correct figure is 75"), because the instruction said write
+once. **And he reported the nearest thing to a steer in that instruction:**
+describing what `data/overlap/` measures "points at RULES 13 more specifically
+than a bare permission would." Accepted — the folder should have been named
+without saying what it contains.
+
+**He proposed no idea of his own and fixed no rule**, as his definition forbids.
