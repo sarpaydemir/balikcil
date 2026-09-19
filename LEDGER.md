@@ -3161,3 +3161,54 @@ cards in his batch with a clear whole-market component are named with their
 bitcoin and ethereum hours, and the eight up-moves his funding observations rest
 on are shown to be coin-specific — "BTC moved less than ±0.6% in each decisive
 hour."
+
+`2026-09-19 11:32 UTC` · **observation · Lukas · v2 batch 05 · finished** · 34 of 34, 90 notes,
+no steer found.
+
+**He explained, structurally, why every watcher keeps finding empty before
+windows.** In 6 of the 15 large cards **more than half the whole 24-hour move
+happened in roughly the last six hours of the after window.** `C237` is +8.0%
+after twenty hours and then runs +4.86%, +14.70%, +9.83% in the last three;
+`C123` is flat for twenty-one hours then +8.82%, +12.31%. His conclusion:
+**"The start hour marks the 24-hour window that *contains* the move, not the
+hour the move begins… it means a Before section can legitimately contain nothing
+at all."** Confidence 5.
+
+That is TACTICS 2's own construction read back. The laboratory is asking
+watchers to find a warning in a window that, by definition, need not contain
+one.
+
+**He measured four candidate signals and all four failed**, and one failure is
+instructive: the depth bid/ask ratio at the last before-hour looks like it hits
+on 11 of 15 large cards — until he checked the base rate and found it
+**bid-heavy on 16 of 19 calm cards too.** "Its apparent hit rate is fully
+explained by that base rate plus the fact that 12 of 15 large moves were up."
+He also measured the RULES 11 rival: **8 of 15**, and three-hour momentum
+**6 of 15, worse than a flip.**
+
+**The ratified calm-separation ruling has now appeared in the data.** `C084` and
+`C085` are **both FARTCOIN, both calm**, starting 33 hours apart, and `C084`'s
+hours +9…+23 are **identical rows** to `C085`'s hours −24…−10 — verified value
+by value. His reading: "TACTICS 2's 48-hour separation appears to have been
+applied between large moments but not between two calm ones."
+
+**He is exactly right, and it is not a defect.** The card-order jury's sibling
+question — whether TACTICS 2 requires a minimum distance between two calm
+moments — was put to three jurors and ratified **3–0: it does not.** Lukas has
+found the ruling's consequence in the corpus without having seen the ruling.
+Recorded here because the two must be read together: the overlap is the rule
+working as written, not the script misbehaving.
+
+**More label overlap, from a third direction:** the largest calm move in the
+batch, `C072` **−14.11%**, exceeds the smallest large move, `C003` **+7.72%**.
+"No absolute-percentage threshold can reproduce the labels."
+
+**Five data-quality items named**, including `C058` holding the identical bid
+depth 3.41k in 22 of 24 after-hours — he **excluded that card's depth from his
+statistics** rather than using it — and the batch-wide rounding of the trades
+column, which "caps what the trade-count column can be asked to do on the small
+coins."
+
+**Both his ideas are filed with their support stated as a count:** one rests on
+**1 card of 34**, the other on **2**. "The only shape in my field worth testing,
+not something I believe."
