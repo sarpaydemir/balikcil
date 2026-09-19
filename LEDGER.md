@@ -2550,3 +2550,62 @@ he made inherits it. Raw depth also spans about 600× between coins in the batch
 **He stated the coverage limit of his own comparison rather than hiding it:** the
 depth-trend comparison covers all 14 usable large cards but **only 7 of the 19
 calm cards**, "so that comparison is partial and I said so in the notes."
+
+`2026-09-19 11:07 UTC` · **v2 batch 02 complete · and three watchers independently found the same structural fact** ·
+Kenji **254,045** · Lukas 253,708 · Amara **251,299** · Ingrid 228,817 —
+**987,869 tokens** for batch 02. Measured. No denominator applied.
+
+**The finding of the day, reached three times without contact:** the cards are
+not independent observations. Kenji matched bitcoin and ethereum columns value
+for value and found **at least six time-overlapping pairs in batch 02 alone**,
+covering 11 of its 34 cards. Lukas found two pairs in the same batch. Amara
+found five groups. Their strongest cases:
+
+- **`C283`'s *after* section and `C116`'s *before* section are the same 24 clock
+  hours** (2026-02-10 14:00 → 02-11 14:00), bitcoin reading identically on both.
+  **One card's after window is another card's before window.** ZRO's +43.11% and
+  FHE's collapse are one event — and in opposite directions.
+- `C049` (large −9.81%), `C204` (calm −4.97%) and `C257` (calm −1.00%) overlap
+  in a chain of three.
+- `C224` (calm −6.29%) and `C183` (large −13.38%) share thirteen hours.
+- `C296` and `C046` are the same market day and name the same release.
+
+Kenji's conclusion, in his words: **"the 34 cards are not 34 independent
+observations, and overlapping hours do not guarantee the same label."**
+
+**Amara measured how much of the batch belongs to the market rather than to the
+coin:** 6 of the 15 large moments have a 24-hour bitcoin sum of about 4.8% or
+more with the coin moving the same way at 1.1×–2.8×. **`C018` is the sharpest:
+BCH's "large" +10.06% sits under ETH +12.3% over the same hours — the market
+moved more than the coin did.** And she gave the mirror image equal weight:
+`C283` +43.11% with bitcoin at −2.2, `C116` −69.08% with bitcoin at +1.4,
+`C174` +21.10% with no bitcoin hour above 0.49% — "and nothing in my field
+flagged any of them in advance."
+
+**She also caught look-ahead in her own work and reported the correction.** Her
+Wikipedia reading used a "start day" count whose hours include the move itself;
+re-run honestly on the previous full day, "the apparent pattern disappears."
+Nobody asked her to check that.
+
+**A by-product she flagged and which is worth keeping:** the identical bitcoin
+columns across overlapping cards are **a data-integrity check that passed.**
+
+**Second card found carrying an FOMC entry with no clock time** — `C291`, after
+`C105` in batch 01. RULES 16 needs the hour of a moment known in advance, and
+the calendar does not publish one for the release class most likely to move the
+market.
+
+`2026-09-19 11:07 UTC` · **Mateo running · the overlap map** · The overlap has now been found by
+eye three times, by three readers, in two batches, and Amara said plainly that
+she matched pairs "by eye, not systematically, so there may be more." **That is
+a measurement a script should make, not a reader.** Mateo is building the
+complete map over all 306 cards from the moment timestamps: every pair sharing a
+clock hour, the groups larger than two, how many cards take part, the
+distribution of overlap lengths — and a cross-check of the timestamp map against
+the bitcoin columns the watchers used, because if the two disagree that is a
+finding about the cards.
+
+His instruction **closes `notes/` to him explicitly**, so the measurement cannot
+be shaped by what a reader already believes it will find, and tells him to draw
+no conclusion about what the overlaps mean. The map is the deliverable; what the
+laboratory does with it is not his.
