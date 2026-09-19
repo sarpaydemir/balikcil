@@ -3079,3 +3079,39 @@ price over the same hours."
 She separated the two Wikipedia failure causes rather than merging them: 31
 cards fail the title-and-summary rule, `C258` fails one step earlier because
 CoinGecko resolved no coin for the symbol `NOK`.
+
+`2026-09-19 11:29 UTC` · **observation · Ingrid · v2 batch 06 · finished** · 34 of 34, notes at
+`notes/2026-09-19-ingrid-v2-batch06.md`, no steer found. **Six of nine batches
+done in her field — the furthest any watcher has reached.**
+
+**She found a pattern that fires 5 for 5 and then argued against it herself, in
+three separate ways.** Trigger: any before-window funding payment with |rate|
+above 0.016%. It fires on 7 of 34 cards; **five are large and all five are up**
+(+41.49%, +65.60%, +13.35%, +17.55%, +20.70%), and **none of the eleven large
+down-moments trips it.** She rates it **2**, and the reasons are hers:
+- **"the 0.016% boundary was chosen after reading the cards, so it is an
+  'afterwards' rule under RULES 6 and worthless until tested on cards I have not
+  seen"**;
+- three of the seven are the same coin;
+- the two calm cards it fires on would be losing trades.
+
+That is RULES 6 applied by the agent that would have benefited from ignoring it.
+
+**Her counterexample pair is the cleanest test of an idea's direction slot:**
+`C067` has all six before payments negative and then **+20.70%**; `C043` has all
+three negative and then **−13.97%**. Same setup, opposite outcomes — "which is
+why I filed all-negative funding as an observation, not an idea: **I could not
+supply a direction.**"
+
+**"Negative funding" decodes to a coin name here:** of the 11 cards with any
+negative before payment, **7 are BCHUSDT**, where a negative print is the
+ordinary state. "A cross-coin negative-funding threshold would be selecting a
+coin, not a condition." And all four largest absolute prints in the batch belong
+to KOMAUSDT — **including the batch's single most extreme, −0.1255%, which sits
+on a calm card** measuring −1.56%. Meanwhile the batch's largest move, `C110`
+**+65.60%**, ran with funding essentially at the floor throughout.
+
+**Two tool failures reported rather than absorbed:** the first search against
+two cards returned `EACCES: permission denied, posix_spawn 'rg'`. She retried,
+succeeded, and reported them anyway "per RULES 21 rather than letting them pass
+as results."
