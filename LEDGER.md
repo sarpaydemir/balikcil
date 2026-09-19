@@ -3629,3 +3629,48 @@ line before the move** — including the batch's **+135.21%** and **−51.75%**.
 `canteen/`, every instruction and definition sends them to `notes/`. He could
 not comply with both, followed the instruction, and flagged it. Still queued,
 still not blocking.
+
+`2026-09-19 11:52 UTC` · **observation · Amara · v2 batch 07 · finished** · 34 of 34, no steer
+found. **270,138 tokens.**
+
+**She tested her own one promising Wikipedia reading and reported that it
+fails.** `C047` shows a start-day view count of **162** against a prior-week
+maximum of 129, on a large moment — the only Wikipedia candidate in the batch.
+Her own disqualification: **"the number is daily and covers the move itself"**,
+so reading it at the signal hour is look-ahead; and **checked against the
+pre-start series it would have fired on neither of the two large BCH cards.**
+She ran the honest version of her own test and let it kill the finding. This is
+the second time she has caught look-ahead in the Wikipedia field by re-deriving
+it correctly.
+
+**Her attribution split, both halves counted:** in **8 of 13** large cards the
+coin moved 11–42% while ethereum stayed inside ±2.00 and bitcoin inside ±1.66 —
+**two of them moving opposite to the market.** In the other **5**, ethereum
+reached 5.37–9.18 and the coin moved in its direction at **1.6× to 3.5×**, "and
+per RULES 13 these should be attributed to one market event rather than to the
+coin."
+
+**The market state does not separate the classes, measured both ways:**
+|BTC24| spans 0.11–7.09 on large cards and 0.10–3.30 on calm — but **the two
+largest calm values beat nine of the thirteen large cards.** And **the biggest
+single-hour ethereum prints in any before window all belong to calm cards.**
+
+**The release calendar is at the base rate to within noise:** a release in the
+before window marks large moments at **43% against a 38% base rate**; in the
+after window at **exactly the base rate**; and **6 of the 13 large moments have
+no release at all.**
+
+**`C230` and `C277` share 22 hours** of market history, including the
+2025-12-09 15:00 hour that Ingrid and Kenji each found from their own fields.
+"They are one event, not two."
+
+**Fifth watcher-run to find the label overlap:** `C127` is calm at **−13.83%**,
+larger than the three smallest large moves in the batch (+11.23%, −11.25%,
+−11.58%). "The classification is coin-relative and the two ranges overlap."
+
+**She reported a tooling constraint rather than silently working around it:** the
+Edit tool is unavailable, so to correct a card-count error in her own notes she
+**rewrote the file in full**, and said so — "the file on disk is the corrected
+version." The instruction that told watchers to write once in full rather than
+correct in place exists because two earlier runs reached for a scratch file
+instead; she did it the intended way and documented it.
