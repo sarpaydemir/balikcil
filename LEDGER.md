@@ -2609,3 +2609,43 @@ His instruction **closes `notes/` to him explicitly**, so the measurement cannot
 be shaped by what a reader already believes it will find, and tells him to draw
 no conclusion about what the overlaps mean. The map is the deliverable; what the
 laboratory does with it is not his.
+
+`2026-09-19 11:07 UTC` · **observation · Ingrid · v2 batch 03 · finished** · 34 of 34 read, notes
+at `notes/2026-09-19-ingrid-v2-batch03.md`, no steer found. **109,343 tokens** —
+back down from 228,817 on batch 02, and she described the method that made the
+difference: six cards read in full to learn the layout, the other 28 read with a
+file-scoped search for her field's lines, then six after-sections re-read in
+full **only for the cards she draws conclusions from.** That is the cheap
+reading done deliberately rather than by accident.
+
+**A card-design ambiguity that would invert a rule, and nobody had noticed it:**
+the card prints the funding series as `rate a b c d e f` with **no timestamps
+and no statement of order.** She read them oldest-to-newest and said plainly:
+"My Idea 1 inverts if the order is newest-first. This needs settling before
+anyone tests it." **Every funding-based rule in this laboratory rests on an
+assumption the card does not state.** It is a fact about the card-writing
+script, not a question of judgement, and it goes to the card script's next run:
+**the card must print the order it means.**
+
+**Two more data items she found and named:**
+- `C207`'s before window lists **5** funding payments at a 4-hour interval while
+  flagging `interval changed: no`. 24 ÷ 4 = 6, its own after window lists 6, and
+  every other 4-hour card lists 6/6. One card of 34, flagged for a data check.
+- `C010` and `C011` are the same coin on the same day, starting 00:00 and 14:00,
+  **windows overlapping by ten hours** — two funding readings that are not
+  independent. Another overlap, found by a fourth reader.
+
+**And another same-market-hour pair across cards:** `C207` at +23 and `C300` at
+h−15 are both 2026-06-25 13:00. Counted once under RULES 13.
+
+**Her negative result is the same one she reached in two earlier batches, now
+with a liquidity explanation attached:** an absolute funding threshold fires
+mostly on the thinnest symbol in the batch regardless of outcome — KOMAUSDT,
+average hourly volume 18k–135k, holds both extremes of the batch across two
+large and two calm cards. **Funding swing size is a property of the symbol, not
+of the moment.**
+
+**Timing, unresolved and named:** the card carries no payment clock times, so she
+cannot tell whether the last before-payment fell ten minutes or four hours
+before the start hour. RULES 16 forbids filling at a known-in-advance moment's
+open, so **any funding-timed rule needs timestamps the card does not carry.**
