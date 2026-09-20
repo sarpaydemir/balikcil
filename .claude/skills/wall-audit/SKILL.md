@@ -118,7 +118,60 @@ Settings cannot block file reads via `Bash`. So:
   down as an open item at every audit** — an unclosed hole must not be
   forgotten.
 
-## 7 · Report
+## 7 · The outbound hole — the half the wall was never written for
+
+RULES 1 and 5 are written entirely about reading **into** this folder. Grep the
+whole of `RULES.md` for `network`, `internet`, `outside`, `send`, `external`,
+`api`. **If that search still returns nothing, the outbound half of the wall is
+still unwritten, and that is an open item to be reported at every audit** — not
+a failure, but a hole that must not be forgotten.
+
+### Who can physically reach outside
+
+Read the `tools:` line of every definition under `.claude/agents/`:
+
+- Which ones carry `Bash` or `WebFetch`? Those are the only roles that can make
+  a network call at all. Every other role is contained by its tool list, which
+  is mechanism, not promise.
+- If a role that previously could not reach the network has gained either tool,
+  that is **failed** unless a recorded decision says otherwise.
+
+### Is `exam/` closed by mechanism or only by instruction
+
+For each role that can reach the network, ask how `exam/` is held shut. If the
+answer is "the instruction says so", write that down as the weakest link **by
+name**. An instruction is not a mechanism, and instructions in this laboratory
+have leaked repeatedly.
+
+### Is there a live credential on disk
+
+- Is there a `.env` or similar? Is it in `.gitignore`? Verify with
+  `git check-ignore -v`, not by eye.
+- Has it ever been committed? `git log --all --oneline -- .env` — anything but
+  empty output is **failed**, and the credential must be treated as exposed and
+  rotated.
+- **Is a credential present that nothing currently uses?** An unused credential
+  next to a role that has `Bash` is capability with no benefit. Name it.
+
+### Scan the tree
+
+`scripts/23_manifest_and_scan.py` scans for an exact key, fragments of it, and
+credential *shapes*. Run the shape scan across the working tree:
+
+```
+grep -rlE 'sk-or-|sk-ant-|ghp_|github_pat_' --exclude-dir=.git --exclude-dir=data .
+```
+
+Expect hits in files that *define* these patterns — this skill, `CLAUDE.md`, the
+`ledger` skill, the scanner itself. **A hit anywhere else is failed.** A
+credential-shaped literal is a finding even when it is a deliberately fake test
+fixture: GitHub push protection matches the shape, and a blocked push is a
+stalled laboratory.
+
+**Never print a credential, or any fragment of one, in the report.** To compare
+two values, compare their SHA-256 digests.
+
+## 8 · Report
 
 To the user, in this order, plainly:
 

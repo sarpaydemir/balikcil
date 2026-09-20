@@ -4863,3 +4863,65 @@ independently excluded on `RULES.md` and `TACTICS.md` grounds — but he calls t
 reading genuinely two-way ambiguous and does not decide it.
 
 Committed and pushed as `09551d7`. Nothing further launched.
+
+`2026-09-20 00:00 UTC` · **the credential is gone, the record stays, and the audit grew a
+seventh item** · The user was asked whether to keep or delete the outside
+decision service after the calibration came back negative, and **approved the
+coordinator's recommendation: keep the record, cut the capability.**
+
+**Kept, deliberately:** `external/calibration/` (ten artefacts, every fingerprint
+in `REPORT.md`), `scripts/19`–`23`, and
+`external/2026-09-19-MEMO-cheap-decisions.md` with its `SOURCES.md` limit. The
+grounds are RULES 29–30: this is a measured result, reproducible byte-for-byte,
+and deleting it would mean that a future run repeats a $0.0117 experiment and
+may get a different number and believe it. **Being able to say "we tried it, we
+measured it, it did not serve us" costs nothing to keep and cannot be
+reconstructed once thrown away.**
+
+**Removed:** the value of `OPENROUTER_API_KEY` in `.env`. The file, the variable
+and `DECISION_MODEL` remain, with a comment recording the date, the reason and
+how to restore it. The reasoning was an asymmetry, not a fear: the benefit had
+fallen to near zero because the calibration excluded every role in `TEAM.md` on
+written grounds, while the cost of keeping it was a **live credential sitting
+beside the only role that carries `Bash`**. Restoring it takes the user five
+seconds; the risk of leaving it was small but permanent. `scripts/19`–`23` now
+fail cleanly for want of a key, which is the intended state.
+
+**What was verified rather than assumed.** A shape scan of the working tree for
+`sk-or-`, `sk-ant-`, `ghp_` and `github_pat_`, excluding `.git/` and `data/`,
+returns exactly three files — `CLAUDE.md`, `.claude/skills/ledger/SKILL.md` and
+`scripts/23_manifest_and_scan.py` — and in all three the match is the **pattern's
+own definition**, not a credential. `.env` remains in `.gitignore` and
+`git log --all -- .env` is still empty: it has never been committed.
+
+**A containment fact worth recording, because it is mechanism and not promise.**
+Of the nine agent definitions, **eight carry only `Read, Write, Glob, Grep` and
+therefore cannot make a network call at all.** Only `data-engineer` has `Bash`
+and `WebFetch`. The outbound path is confined to one role by its tool list, which
+no instruction can widen. **The weak link is that `exam/` is held shut against
+that one role by instruction alone** — and this coordinator's instructions have
+leaked nineteen times in this laboratory's life, every one caught by the
+receiving agent rather than by the coordinator. That is the same class of fault
+`R-04` was about, and it is recorded as open.
+
+**What was deliberately not done.** A blanket network block in `wall.sh` was
+considered and rejected: RULES 2 requires data to be downloaded from public
+sources, so cutting `data-engineer`'s outbound path would stop the laboratory. A
+wall that stops the work is not a wall, it is a halt.
+
+**`wall-audit` gained section 7, "The outbound hole — the half the wall was never
+written for"**, and the old section 7 became section 8. The skill had seven items
+and **not one of them looked at credentials or at what can leave the folder** —
+the audit was one-directional because the wall it audits is. The new section
+makes every audit: grep `RULES.md` for the outbound vocabulary and report the
+hole as open while that search returns nothing; read every `tools:` line and name
+which roles can reach the network at all; ask for each such role whether `exam/`
+is closed by mechanism or only by instruction, and write down the weakest link by
+name; verify `.gitignore` with `git check-ignore` rather than by eye; check
+whether the credential was ever committed; **ask whether a credential is present
+that nothing uses**; and run the shape scan, treating a hit outside the
+pattern-defining files as failed — **including a deliberately fake test fixture,
+because push protection matches the shape and a blocked push is a stalled
+laboratory.** It closes with the rule this laboratory learned the hard way today:
+never print a credential or any fragment of one, and compare two values by their
+SHA-256 digests.
