@@ -488,3 +488,91 @@ item); the ratified JQ-R04-GATE verdict,
   that the row does not name. Several of these state measured effects of
   options, or earlier choices on the open points.
   *Check: does the commission's file list equal the row's column?*
+
+---
+---
+
+# Section added by the sixth-fix run · 2026-10-01 — amendments to the fourth-fix and fifth-fix sections
+
+Mateo · data engineer · sixth-fix run · appended 2026-10-01 (system clock,
+RULES 23). **Nothing above this line was changed:** the first 28,525 bytes
+of this file are the file as the fifth review found it (SHA-256
+`120622002cf3bcb5811eda1f2f04611f275671c42c48a7b2b5a18bbb6a5dd8e1`).
+
+**How to read this file now.** A later run reads the fourth-fix section,
+the fifth-fix section **and this section**, and nothing earlier. This
+section **replaces** the fifth-fix A-0.1 and C-5 with the texts below,
+**adds** A-0.7 and A-0.8, and leaves every other item in force word for
+word (the fifth-fix A-0.4, which names JQ-R04-CONTENT-d, stays: that
+identifier is kept, and its file is now
+`exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md`). Nothing here is
+a trading rule, a threshold or a score. Source of every change:
+`exam-prep/REVIEW-5.md` (§ named at each item) and the coordinator's
+withdrawal, in the sixth-fix instruction, of the sentence "write it as a
+juror question in the group it bears on" where it conflicts with a review's
+ruling on couplings.
+
+---
+
+## A · Before any exam card is built — replaced and added items
+
+- **A-0.1 · Rulings** (replaces the fifth-fix A-0.1; REVIEW-5 §2, §3).
+  JQ-R04-GATE is ratified (`decisions/2026-10-01-jq-r04-gate/verdict.md`).
+  Each of these has an outcome ratified under RULES 33–35 and recorded in
+  `LEDGER.md`: JQ-R04-CARRIES-a and -b; JQ-R04-DATE-a, -b, -c;
+  JQ-R04-CONTENT-a, -b, -c; JQ-R04-CONTENT-d. **Order:** the JQ-R04-CARRIES
+  group is ratified before the DATE/CONTENT group is commissioned, and the
+  DATE/CONTENT group is given its ratification sentence. **Jurors:** the
+  JQ-R04-CARRIES group, the DATE/CONTENT group and JQ-R04-CONTENT-d have
+  three disjoint sets of jurors.
+  *Check: ten ratifications recorded, one per identifier, plus GATE's; was
+  the CARRIES ratification dated before the DATE/CONTENT commission; are
+  the three juror sets disjoint?*
+
+- **A-0.7 · Applying JQ-R04-CONTENT-a** (new; REVIEW-5 §2). Where the
+  ratified answer to JQ-R04-CONTENT-a permits leaving a column out when it
+  "carries a measured coin signature", whether a column carries one is
+  measured on the exam cards, before any exam card is used, exactly as the
+  ratified JQ-R04-CARRIES outcome defines it (which attack or attacks, on
+  which features). If that outcome needs a row the audit does not compute
+  (for example a column's own features as one set), the audit used is a
+  version of `scripts/29_identity_audit_exact.py` whose header names the
+  new row and the feature prefixes it holds. If the outcome uses the
+  nearest-neighbour attack and `cards_with_tied_nn` on a row it reads is
+  above zero, grade that attack with both versions (index tie-break and
+  tie-free, each against its own line); if they disagree on whether it
+  beats, **stop and tell the coordinator** (a possible open question; the
+  same stop as the fifth-fix A-0.4 step 3). The measurement and its result
+  are named in the exam manifest (A-7).
+  *Check: is the measurement the one the CARRIES outcome defines, with the
+  audit version named, and was any disagreement referred rather than
+  resolved?*
+
+- **A-0.8 · A gap named, not a requirement** (REVIEW-5 §5). The ratified
+  GATE verdict does not say which nearest-neighbour version is "the
+  attack". The fifth-fix A-0.4 step 3 stops on disagreement; A-0.7 stops
+  the same way. If either stop is reached, the point is an open question
+  (RULES 33) for the coordinator to refer; no run settles it.
+
+## C · Replaced
+
+- **C-5 · Files that must not reach a juror or a referee** (replaces the
+  fifth-fix C-5; REVIEW-5 §3, §7; the sixth-fix instruction item 3).
+  Whoever commissions a juror or a referee of any row in
+  `exam-prep/JUROR-QUESTIONS.md` gives only the files that row's "files a
+  juror needs" column names, gives `canteen/2026-09-19-sofia.md` only by
+  the line ranges it names, and gives of the JQ-R04-CARRIES verdict only its
+  ratification sentence. Never given to a juror or a referee:
+  `exam-prep/REVIEW.md`, `REVIEW-2.md`, `REVIEW-3.md`, `REVIEW-4.md`,
+  `REVIEW-5.md`, `VERDICT.md`, `HANDED-FORWARD.md`, `R-04-blindness.md`,
+  `N-1-collapse.md`, `decisions-and-open-questions.md`, any `*-FIX.md`, any
+  criteria file, `exam-prep/sixth-fix/pre-run-fingerprints.txt`, and
+  anything under `exam-prep/*/checks/`, `exam-prep/*/identity/`,
+  `exam-prep/*/collapse/`, `exam-prep/review-*/` or
+  `exam-prep/blind-proof/` — and, in general, nothing under `exam-prep/`
+  that the row does not name. A juror of one R-04 group is not given the
+  file of another R-04 group (JQ-R04-CARRIES, the DATE/CONTENT pair,
+  JQ-R04-CONTENT-d), nor its answers, beyond the one ratification sentence
+  above.
+  *Check: does the commission's file list equal the row's column, and are
+  the three R-04 groups' juror sets disjoint?*

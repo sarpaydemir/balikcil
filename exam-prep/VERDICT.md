@@ -642,3 +642,157 @@ FIFTH-FIX §5, six items. The ones that matter most: **R-04 is not solved**;
 correction**; **R4-9 could not be checked**.
 
 Nothing under `exam/` was read or written by this run.
+
+---
+---
+
+# Sixth-fix run · 2026-10-01 — acting on `exam-prep/REVIEW-5.md`, DATE and CONTENT rows only
+
+Mateo · data engineer · appended 2026-10-01 (system clock, RULES 23).
+**Nothing above this line was changed**: the first 34,212 bytes of this file
+are the file as the fifth review found it (SHA-256
+`e5652c57e33f2927bff875093aa01ff576899c5176f4fb88a87aef442ec2472e`). This
+section says what happened, not how; the working is in
+`exam-prep/sixth-fix/SIXTH-FIX.md`; what later runs must do is in the
+fourth-fix, fifth-fix and sixth-fix sections of `exam-prep/HANDED-FORWARD.md`,
+read together.
+
+## The two problems now
+
+| problem | fifth-fix verdict | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | NOT SOLVED | **NOT SOLVED.** Nothing was measured. The rulings R-04 now needs are JQ-R04-CARRIES-a and -b (new), JQ-R04-DATE-a … -c, JQ-R04-CONTENT-a … -c and JQ-R04-CONTENT-d; none is ratified. |
+| **N-1 · collapse before counting** | solved only under three conditions | **Not acted on by this run.** Its juror group is being answered now. |
+
+## Outcome of every REVIEW-5 item concerning the DATE and CONTENT rows
+
+Numbering: `exam-prep/sixth-fix/SIXTH-FIX.md` §1.
+
+| item | outcome |
+|---|---|
+| R5-1 | **Outside this run**; files untouched; index status corrected. |
+| R5-2 | **Done.** |
+| R5-3 | **Done.** |
+| R5-4 | **Referred to jurors** — JQ-R04-CARRIES-a, -b (new), to sit before the DATE/CONTENT group; **handed forward** (A-0.7). |
+| R5-5 | **Done.** |
+| R5-6 | **Done.** |
+| R5-7 | **Done** (with R5-10 and R5-12). |
+| R5-8 | **Done.** |
+| R5-9 | **Referred to jurors** (as R5-4). |
+| R5-10 | **Done**, by the coordinator's withdrawal of the earlier sentence. |
+| R5-11 | **Done.** |
+| R5-12 | **Done.** |
+| R5-13 | **Recorded**, not ruled; **referred to the coordinator** (below, item 2). |
+| R5-14 | **Recorded**; **handed forward** as a named gap (A-0.8). |
+| R5-15 | **Done** (with R5-4). |
+| R5-16 | **Recorded**; unchanged, with reason. |
+| R5-17 | **Recorded**; unchanged, with reason. |
+| R5-18 | **Done** for the DATE, CONTENT, CONTENT-d and CARRIES files; **cannot be done** for JQ-N1, JQ-CANTEEN-8 (being answered) and JQ-R04-GATE (ratified) — below, item 1. |
+| R5-19 | **Recorded.** |
+
+## The juror rows
+
+| identifier | outcome |
+|---|---|
+| JQ-N1-1 … -4 | unchanged (being answered; not this run's) |
+| JQ-CANTEEN-8 | unchanged (being answered; not this run's) |
+| JQ-R04-GATE | unchanged — **ratified** |
+| JQ-R04-CARRIES-a | **added** |
+| JQ-R04-CARRIES-b | **added** |
+| JQ-R04-DATE-a | corrected |
+| JQ-R04-DATE-b | corrected |
+| JQ-R04-DATE-c | corrected |
+| JQ-R04-CONTENT-a | corrected |
+| JQ-R04-CONTENT-b | corrected |
+| JQ-R04-CONTENT-c | corrected |
+| JQ-R04-CONTENT-d | corrected (moved to a file of its own; identifier kept) |
+| JQ-B1 | unchanged (withdrawn) |
+
+**Fitness, row by row** (SIXTH-FIX §4, against REVIEW-2's (i)–(v),
+REVIEW-4's (vi), no contradiction with the ratified GATE verdict, the
+coupling test, REVIEW-5's deletion test, and the instruction's pointer
+test): JQ-R04-DATE-a, -b, -c and JQ-R04-CONTENT-a, -b, -c — **fit**;
+JQ-R04-CONTENT-d — **fit by my tests**, with its scope contested and not
+ruled (R5-13); JQ-R04-CARRIES-a, -b — **fit by my tests**. None of these
+has been reviewed since this run; the CARRIES rows never have. "Fit" on
+(iii), (vi) and coupling is my judgement; a reviewer may draw the line
+elsewhere.
+
+**The order in which the groups must sit** (in the index, by identifier
+only): the JQ-N1 group with JQ-CANTEEN-8 now; JQ-R04-CARRIES-a and -b next,
+and before the DATE/CONTENT group; JQ-R04-DATE-a … -c with
+JQ-R04-CONTENT-a … -c only after JQ-R04-CARRIES is ratified, given its
+ratification sentence only; JQ-R04-CONTENT-d alone, at any time. The three
+R-04 groups have three disjoint sets of jurors.
+
+The index (`exam-prep/JUROR-QUESTIONS.md`, re-issued; the fifth-fix version
+kept byte for byte at `exam-prep/sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md`,
+every earlier one where it was) carries no wording, option or number of any
+question, and no reading list names a review, `VERDICT.md`,
+`HANDED-FORWARD.md` or a working file.
+
+Checked by `scripts/33_juror_file_check_sixth.py`, run `b0af115f117e9f68`: 328 checks, 0 failed (`exam-prep/sixth-fix/checks/juror-file-check-b0af115f117e9f68.md`). Three earlier records of the same checks (`354ffc0d8a910e0c`, `ddf02843e31ff328`, `7378a60fc1cccf97`, none failed) are kept and superseded; the first was made by a version whose check order depended on Python's hash seed, so its re-run stopped under RULES 30 (SIXTH-FIX §7).
+
+## Where I disagree with the fifth review (RULES 32)
+
+No disagreement. Extensions, each named with its reason in SIXTH-FIX §2:
+the GATE juror file's path is removed from part d, because that file shows
+the gate row's measured figures (E-2); CONTENT's section heading no longer
+defines "carries" (E-5); JQ-R04-CARRIES sits apart from part d as well as
+from the DATE/CONTENT group, because REVIEW-5 §3's structure holds between
+them too (SIXTH-FIX §4).
+
+## For the coordinator
+
+1. **Pointers this run could not remove.** JQ-N1 and JQ-CANTEEN-8, which
+   three jurors are answering now, name working files and script runs
+   (JQ-N1 lines 22, 86–87 and 148; JQ-CANTEEN-8 lines 100–101), and the
+   ratified JQ-R04-GATE file names `exam-prep/REVIEW.md` and
+   `exam-prep/R-04-blindness.md`. Each file tells the juror not to open
+   them; whether a juror did is for the referee's independence and
+   grounding checks. I changed none of them.
+2. **R5-13 — part d's scope.** If its referee judges that it decides
+   whether a measured coin signature may stay on exam cards ungraded — a
+   rule, not a definition — it goes to the user (RULES 33), not back to me.
+3. **The nearest-neighbour stop.** If either A-0.7 or the fifth-fix A-0.4
+   step 3 reaches its stop on exam material, which version of the attack
+   counts is an open question (RULES 33) for you to refer.
+4. **Identifiers carry subjects** (R3-16, still undecided); the new
+   identifier JQ-R04-CARRIES does too.
+5. **Review before commissioning** — the corrected and new rows say "not
+   reviewed since" / "never reviewed"; whether a sixth review precedes
+   commissioning is yours.
+
+## `RULES.md`
+
+**No change to `RULES.md` is required by anything this run did or referred.**
+The path named by earlier runs — a measured channel that cannot be removed,
+and whether RULES 9 accepts it, which is the user's — remains possible and
+has not been reached; part d's scope (item 2 above) is the point at which
+it would be.
+
+## A steer in the instruction I was given
+
+No result and no prediction. Named, because they choose a route:
+(1) "write it as a juror question that is answered **before** that group
+sits" chooses, for the gap REVIEW-5 §2 found, the route REVIEW-5 left to the
+coordinator ("a sub-part put to the same jurors, or something else"); I
+followed it (R5-4). (2) The withdrawal of the fifth instruction's sentence
+("the reviews' rulings on couplings govern") settles the conflict REVIEW-5
+§3 left to the coordinator, and so decides that part d leaves the
+DATE/CONTENT group; I followed it (R5-10). Both are the coordinator's to
+make. Mildly: "one jury waits on the files this run corrects" presumes the
+files can be corrected and puts weight on speed. "Three jurors are
+answering … now" is information, and it is why JQ-N1 and JQ-CANTEEN-8 were
+not touched. The git status supplied at start carried only commit subjects
+of the forms "work:" and "ledger:" and four untracked instruction file names;
+no result.
+
+## What this run did not do
+
+SIXTH-FIX §5, six items. The ones that matter most: **R-04 is not solved**;
+**nothing was measured on exam cards**; **no corrected or new row has been
+reviewed**; **three juror files this run may not touch still name working
+files**.
+
+Nothing under `exam/` was read or written by this run.

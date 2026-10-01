@@ -1,0 +1,2003 @@
+{
+ "checks": 328,
+ "failed": 0,
+ "inputs": [
+  "RULES.md",
+  "TACTICS.md",
+  "canteen/2026-09-19-sofia.md",
+  "decisions/2026-10-01-jq-r04-gate/verdict.md",
+  "exam-prep/HANDED-FORWARD.md",
+  "exam-prep/JUROR-QUESTIONS.md",
+  "exam-prep/fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md",
+  "exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+  "exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+  "exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md",
+  "exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md",
+  "exam-prep/fourth-fix/JUROR-QUESTIONS-as-of-third-fix.md",
+  "exam-prep/sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md",
+  "exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md",
+  "exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md",
+  "exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+  "exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+  "exam-prep/sixth-fix/pre-run-fingerprints.txt",
+  "exam-prep/sixth-fix/pre-run-scripts-fingerprints.txt",
+  "exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md",
+  "exam-prep/third-fix/juror-questions/JQ-R04-GATE.md",
+  "scripts/29_identity_audit_exact.py",
+  "scripts/33_juror_file_check_sixth.py",
+  "VERDICT.md prefix"
+ ],
+ "ok": 328,
+ "results": [
+  {
+   "check": "JQ-R04-DATE.md names no a run number",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a script path",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a review",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no VERDICT.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no HANDED-FORWARD.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a *-FIX.md file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a probe",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a manifest file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a checks folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no an identity folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no the GATE file, which states gate figures",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a snapshot",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md names no a criteria file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: every exam-prep path is on its own reading list",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: no other path",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a run number",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a script path",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a review",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no VERDICT.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no HANDED-FORWARD.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a *-FIX.md file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a probe",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a manifest file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a checks folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no an identity folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no the GATE file, which states gate figures",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a snapshot",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md names no a criteria file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: every exam-prep path is on its own reading list",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: no other path",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a run number",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a script path",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a review",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no VERDICT.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no HANDED-FORWARD.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a *-FIX.md file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a probe",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a manifest file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a checks folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no an identity folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no the GATE file, which states gate figures",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a snapshot",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md names no a criteria file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md: every exam-prep path is on its own reading list",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md: no other path",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a run number",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a script path",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a review",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no VERDICT.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no HANDED-FORWARD.md",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a *-FIX.md file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a probe",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a manifest file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a checks folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no an identity folder",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no the GATE file, which states gate figures",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a snapshot",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md names no a criteria file",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md: every exam-prep path is on its own reading list",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md: no other path",
+   "detail": "[]",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'part d' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'Part d' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'four parts' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'all four' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'fail the gate' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'fails the gate' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'ALL-removable' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: 'either attack beats' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: closing paragraph says where the rest is decided",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'part d' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'Part d' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'four parts' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'all four' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'fail the gate' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'fails the gate' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'ALL-removable' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: 'either attack beats' gone",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: closing paragraph says where the rest is decided",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "CONTENT: three parts in title",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "CONTENT: part a names JQ-R04-CARRIES as answered before",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "CONTENT: section heading no longer defines 'carries'",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "DATE: 'all three of its parts'",
+   "detail": "",
+   "group": "X",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: no new number outside NEW_NUMBERS",
+   "detail": "[]",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: allowed new numbers used",
+   "detail": "",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: no new number outside NEW_NUMBERS",
+   "detail": "[]",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: allowed new numbers used",
+   "detail": "",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md: no new number outside NEW_NUMBERS",
+   "detail": "[]",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d.md: allowed new numbers used",
+   "detail": "50, 51, 52",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md: no new number outside NEW_NUMBERS",
+   "detail": "[]",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES.md: allowed new numbers used",
+   "detail": "121, 50, 51, 52",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE.md: every decimal/thousands figure kept",
+   "detail": "[]",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT.md: every decimal/thousands figure kept",
+   "detail": "[]",
+   "group": "N",
+   "ok": true
+  },
+  {
+   "check": "RULES.md lines 34-35 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (RULES.md 34-35)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "RULES.md lines 41-41 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (RULES.md 41-41)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "RULES.md lines 51-52 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (RULES.md 51-52)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "TACTICS.md lines 50-51 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (TACTICS.md 50-51)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "TACTICS.md lines 55-62 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (TACTICS.md 55-62)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "TACTICS.md lines 101-107 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (TACTICS.md 101-107)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "RULES.md lines 41-41 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CARRIES.md (RULES.md 41-41)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "RULES.md lines 51-52 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CARRIES.md (RULES.md 51-52)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "RULES.md lines 119-121 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CARRIES.md (RULES.md 119-121)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "TACTICS.md lines 50-51 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CARRIES.md (TACTICS.md 50-51)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "TACTICS.md lines 56-56 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CARRIES.md (TACTICS.md 56-56)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "TACTICS.md lines 101-103 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CARRIES.md (TACTICS.md 101-103)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "exam-prep/third-fix/juror-questions/JQ-R04-GATE.md lines 55-57 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 55-57)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "exam-prep/third-fix/juror-questions/JQ-R04-GATE.md lines 64-66 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 64-66)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "decisions/2026-10-01-jq-r04-gate/verdict.md lines 72-72 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (decisions/2026-10-01-jq-r04-gate/verdict.md 72-72)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "scripts/29_identity_audit_exact.py lines 431-431 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (scripts/29_identity_audit_exact.py 431-431)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "scripts/29_identity_audit_exact.py lines 432-432 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (scripts/29_identity_audit_exact.py 432-432)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "scripts/29_identity_audit_exact.py lines 433-433 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (scripts/29_identity_audit_exact.py 433-433)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "scripts/29_identity_audit_exact.py lines 434-434 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT-d.md (scripts/29_identity_audit_exact.py 434-434)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "canteen/2026-09-19-sofia.md lines 114-118 as quoted",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "quote present in JQ-R04-CONTENT.md (canteen/2026-09-19-sofia.md 114-118)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "FORCED_FAMILIES are the four part d names",
+   "detail": "('volatility-frozen', 'funding-line', 'p7-shape', 'repeat-chg')",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "trades-level = column level + one 7-day feature",
+   "detail": "['trades:', 'p7:log_avg_trades']",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "repeat-trades holds only rep-trades:",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "shape-scale-free holds shape:",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "shape family covers trades and seven other named columns",
+   "detail": "['quote vol', 'trades', 'open int', 'depth -1%', 'depth +1%', 'L/S acct', 'top L/S pos', 'taker L/S']",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "one feature with prefix trades: (the median level)",
+   "detail": "{'trades:log_median_trades'}",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "two repeat features per column (distinct, maxrepeat)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "two shape features per column (sd of logs, lag-1 acf)",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "a constant or missing feature is not used",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "part d premise: every family of the named columns is inside the row",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "the audit does not compute a per-column row today",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "repeat-trades reads only the trades column",
+   "detail": "",
+   "group": "Q",
+   "ok": true
+  },
+  {
+   "check": "option 'yes' unchanged",
+   "detail": "",
+   "group": "D",
+   "ok": true
+  },
+  {
+   "check": "middle option unchanged",
+   "detail": "",
+   "group": "D",
+   "ok": true
+  },
+  {
+   "check": "question d unchanged but for naming the former parts",
+   "detail": "When the ratified answers to JQ-R04-DATE and to JQ-R04-CONTENT parts a\u2013c keep a field on the exam card, do the features the audit computes from that field count as families \"that must stay on the card",
+   "group": "D",
+   "ok": true
+  },
+  {
+   "check": "kept: Which features are computed from a field...",
+   "detail": "",
+   "group": "D",
+   "ok": true
+  },
+  {
+   "check": "kept: a question about a rule is the user's, n...",
+   "detail": "",
+   "group": "D",
+   "ok": true
+  },
+  {
+   "check": "every row present once",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "no stray digit in the index",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: list names no forbidden file",
+   "detail": "`exam-prep/fifth-fix/juror-questions/JQ-N1.md`, `exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md`, `RULES.md`, `TACT",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: list names no forbidden file",
+   "detail": "`exam-prep/fifth-fix/juror-questions/JQ-N1.md`, `exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md`, `RULES.md`, `TACT",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: list names no forbidden file",
+   "detail": "`exam-prep/fifth-fix/juror-questions/JQ-N1.md`, `exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md`, `RULES.md`, `TACT",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: list names no forbidden file",
+   "detail": "`exam-prep/fifth-fix/juror-questions/JQ-N1.md`, `exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md`, `RULES.md`, `TACT",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: list names no forbidden file",
+   "detail": "`exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md`, `exam-prep/fifth-fix/juror-questions/JQ-N1.md`, `RULES.md`, `TACT",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: listed file exists: exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-GATE: list names no forbidden file",
+   "detail": "`exam-prep/third-fix/juror-questions/JQ-R04-GATE.md`, `RULES.md`, `TACTICS.md`",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-GATE: listed file exists: exam-prep/third-fix/juror-questions/JQ-R04-GATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-GATE: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-GATE: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md`, `RULES.md`, `TACTICS.md`",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md`, `RULES.md`, `TACTICS.md`",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`, `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md`, `RULES.md",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: listed file exists: canteen/2026-09-19-sofia.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`, `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md`, `RULES.md",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: listed file exists: canteen/2026-09-19-sofia.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`, `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md`, `RULES.md",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: listed file exists: canteen/2026-09-19-sofia.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`, `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md`, `RULES.md",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: listed file exists: canteen/2026-09-19-sofia.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`, `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md`, `RULES.md",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: listed file exists: canteen/2026-09-19-sofia.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`, `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md`, `RULES.md",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: listed file exists: canteen/2026-09-19-sofia.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d: list names no forbidden file",
+   "detail": "`exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md`, `RULES.md`, `TACTICS.md`",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d: listed file exists: exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d: listed file exists: RULES.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d: listed file exists: TACTICS.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-B1: list names no forbidden file",
+   "detail": "\u2014",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: answer-together symmetric with JQ-N1-2",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: answer-together symmetric with JQ-N1-3",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: answer-together symmetric with JQ-N1-4",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-1: answer-together symmetric with JQ-CANTEEN-8",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: answer-together symmetric with JQ-N1-1",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: answer-together symmetric with JQ-N1-3",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: answer-together symmetric with JQ-N1-4",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-2: answer-together symmetric with JQ-CANTEEN-8",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: answer-together symmetric with JQ-N1-1",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: answer-together symmetric with JQ-N1-2",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: answer-together symmetric with JQ-N1-4",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-3: answer-together symmetric with JQ-CANTEEN-8",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: answer-together symmetric with JQ-N1-1",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: answer-together symmetric with JQ-N1-2",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: answer-together symmetric with JQ-N1-3",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-N1-4: answer-together symmetric with JQ-CANTEEN-8",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: answer-together symmetric with JQ-N1-1",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: answer-together symmetric with JQ-N1-2",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: answer-together symmetric with JQ-N1-3",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-CANTEEN-8: answer-together symmetric with JQ-N1-4",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a: answer-together symmetric with JQ-R04-CARRIES-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b: answer-together symmetric with JQ-R04-CARRIES-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: answer-together symmetric with JQ-R04-DATE-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: answer-together symmetric with JQ-R04-DATE-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: answer-together symmetric with JQ-R04-CONTENT-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: answer-together symmetric with JQ-R04-CONTENT-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: answer-together symmetric with JQ-R04-CONTENT-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: answer-together symmetric with JQ-R04-DATE-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: answer-together symmetric with JQ-R04-DATE-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: answer-together symmetric with JQ-R04-CONTENT-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: answer-together symmetric with JQ-R04-CONTENT-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: answer-together symmetric with JQ-R04-CONTENT-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: answer-together symmetric with JQ-R04-DATE-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: answer-together symmetric with JQ-R04-DATE-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: answer-together symmetric with JQ-R04-CONTENT-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: answer-together symmetric with JQ-R04-CONTENT-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: answer-together symmetric with JQ-R04-CONTENT-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: answer-together symmetric with JQ-R04-DATE-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: answer-together symmetric with JQ-R04-DATE-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: answer-together symmetric with JQ-R04-DATE-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: answer-together symmetric with JQ-R04-CONTENT-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: answer-together symmetric with JQ-R04-CONTENT-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: answer-together symmetric with JQ-R04-DATE-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: answer-together symmetric with JQ-R04-DATE-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: answer-together symmetric with JQ-R04-DATE-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: answer-together symmetric with JQ-R04-CONTENT-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: answer-together symmetric with JQ-R04-CONTENT-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: answer-together symmetric with JQ-R04-DATE-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: answer-together symmetric with JQ-R04-DATE-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: answer-together symmetric with JQ-R04-DATE-c",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: answer-together symmetric with JQ-R04-CONTENT-a",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: answer-together symmetric with JQ-R04-CONTENT-b",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d: list equals its group's 'What you open'",
+   "detail": "[]",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-a shares no group with a DATE/CONTENT row",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CARRIES-b shares no group with a DATE/CONTENT row",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d shares no group with a DATE/CONTENT row",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-d alone",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: waits for JQ-R04-CARRIES",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-a: canteen by line ranges only",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: waits for JQ-R04-CARRIES",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-b: canteen by line ranges only",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: waits for JQ-R04-CARRIES",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-CONTENT-c: canteen by line ranges only",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: waits for JQ-R04-CARRIES",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-a: canteen by line ranges only",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: waits for JQ-R04-CARRIES",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-b: canteen by line ranges only",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: waits for JQ-R04-CARRIES",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "JQ-R04-DATE-c: canteen by line ranges only",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "CONTENT file announces the ratification sentence",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "GATE ratified, verdict named",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "order section names every open group",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "earlier index kept: exam-prep/sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "earlier index kept: exam-prep/fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "earlier index kept: exam-prep/fourth-fix/JUROR-QUESTIONS-as-of-third-fix.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "earlier index kept: exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md",
+   "detail": "",
+   "group": "I",
+   "ok": true
+  },
+  {
+   "check": "appended, prefix unchanged: exam-prep/HANDED-FORWARD.md",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "re-issued, earlier kept: exam-prep/JUROR-QUESTIONS.md",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "appended, prefix unchanged: exam-prep/README.md",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "appended, prefix unchanged: exam-prep/VERDICT.md",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "every other snapshot file unchanged",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "no new exam-prep file outside sixth-fix/",
+   "detail": "[]",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "only new script is this one",
+   "detail": "['scripts/33_juror_file_check_sixth.py']",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "jury file unchanged: exam-prep/fifth-fix/juror-questions/JQ-N1.md",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "jury file unchanged: exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md",
+   "detail": "",
+   "group": "U",
+   "ok": true
+  },
+  {
+   "check": "scripts/__pycache__ holds nine names, none for script 29 or 33",
+   "detail": "['08_external_sources.cpython-314.pyc', '15_event_collapse.cpython-314.pyc', '16_identity_audit.cpython-314.pyc', '17_blind_cards.cpython-314.pyc', 'exam_24_acquire_archive.cpython-314.pyc', 'exam_25_acquire_external.cpython-314.pyc', 'exam_26_acquisition_record.cpython-314.pyc', 'lab_archive.cpython-314.pyc', 'lab_cards.cpython-314.pyc']",
+   "group": "U",
+   "ok": true
+  }
+ ],
+ "run": "7378a60fc1cccf97",
+ "run_full": "7378a60fc1cccf97d4fba2ca186c33a02427db535d5cd82b0d6766b064b303d6"
+}

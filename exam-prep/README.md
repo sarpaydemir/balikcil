@@ -111,3 +111,22 @@ New outputs live in `fifth-fix/` and in `scripts/32_juror_file_check_fifth.py`;
 nothing written by an earlier run was overwritten, apart from
 `JUROR-QUESTIONS.md`, whose earlier version is kept at
 `fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md`.
+
+---
+
+## Addendum · sixth-fix run, 2026-10-01
+
+Appended by Mateo (sixth-fix run); nothing above was changed (its first
+5,937 bytes still hash to `f25a710f…acbb`). After the fifth review
+(`REVIEW-5.md`), a sixth run acted on it for the DATE and CONTENT rows only.
+Read, in this order: `VERDICT.md` (its last appended section),
+`JUROR-QUESTIONS.md` (re-issued; earlier versions kept; it now states the
+order in which the juror groups sit), `HANDED-FORWARD.md` (**its fourth-fix,
+fifth-fix and sixth-fix sections together**: the sixth-fix section replaces
+A-0.1 and C-5 and adds A-0.7 and A-0.8), `sixth-fix/SIXTH-FIX.md`,
+`sixth-fix/criteria-written-before-correcting.md`,
+`sixth-fix/juror-questions/`, `sixth-fix/checks/`,
+`sixth-fix/FINGERPRINTS.md`. New outputs live in `sixth-fix/` and in
+`scripts/33_juror_file_check_sixth.py`; nothing written by an earlier run was
+overwritten, apart from `JUROR-QUESTIONS.md`, whose earlier version is kept
+at `sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md`.
