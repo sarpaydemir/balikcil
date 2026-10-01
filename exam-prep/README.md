@@ -130,3 +130,22 @@ A-0.1 and C-5 and adds A-0.7 and A-0.8), `sixth-fix/SIXTH-FIX.md`,
 `scripts/33_juror_file_check_sixth.py`; nothing written by an earlier run was
 overwritten, apart from `JUROR-QUESTIONS.md`, whose earlier version is kept
 at `sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md`.
+
+---
+
+## Addendum · seventh-fix run, 2026-10-01
+
+Appended by Mateo (seventh-fix run); nothing above was changed (its first
+6,936 bytes still hash to `923ec68d…d322`). After the sixth review
+(`REVIEW-6.md`), a seventh run acted on it for JQ-R04-CONTENT-d only, and
+corrected the index's statuses. Read, in this order: `VERDICT.md` (its last
+appended section), `USER-QUESTIONS.md` (new: questions for the user, not for
+jurors), `JUROR-QUESTIONS.md` (re-issued; earlier versions kept),
+`HANDED-FORWARD.md` (**its fourth-fix, fifth-fix, sixth-fix and seventh-fix
+sections together**: the seventh-fix section replaces A-0.1, C-5 and step 1
+of A-0.4), `seventh-fix/SEVENTH-FIX.md`,
+`seventh-fix/criteria-written-before-correcting.md`, `seventh-fix/checks/`,
+`seventh-fix/FINGERPRINTS.md`. New outputs live in `seventh-fix/`, in
+`USER-QUESTIONS.md` and in `scripts/34_seventh_fix_check.py`; nothing written
+by an earlier run was overwritten, apart from `JUROR-QUESTIONS.md`, whose
+earlier version is kept at `seventh-fix/JUROR-QUESTIONS-as-of-sixth-fix.md`.

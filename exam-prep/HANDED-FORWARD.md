@@ -576,3 +576,105 @@ ruling on couplings.
   above.
   *Check: does the commission's file list equal the row's column, and are
   the three R-04 groups' juror sets disjoint?*
+
+---
+---
+
+# Section added by the seventh-fix run · 2026-10-01 — amendments to the fourth-fix, fifth-fix and sixth-fix sections
+
+Mateo · data engineer · seventh-fix run · appended 2026-10-01 (system clock,
+RULES 23). **Nothing above this line was changed:** the first 33,483 bytes
+of this file are the file as the sixth review found it (SHA-256
+`cc6fcae398714c0f561765122429a5959d8bd38d87c24bf8374edff423e7d80f`).
+
+**How to read this file now.** A later run reads the fourth-fix, fifth-fix
+and sixth-fix sections **and this section**, and nothing earlier. This
+section **replaces** the sixth-fix A-0.1 and C-5, and **replaces step 1 and
+the check line** of the fifth-fix A-0.4; steps 2–5 of that A-0.4 and every
+other item stay in force word for word. Nothing here is a trading rule, a
+threshold or a score. Source of every change: `exam-prep/REVIEW-6.md` (§
+named at each item) and the withdrawal of JQ-R04-CONTENT-d from jurors by
+this run, whose subject is now question U-1 in `exam-prep/USER-QUESTIONS.md`
+(this run's working file, `exam-prep/seventh-fix/SEVENTH-FIX.md`, gives the
+reasons).
+
+---
+
+## A · Before any exam card is built — replaced items
+
+- **A-0.1 · Rulings and the user's answer** (replaces the sixth-fix A-0.1;
+  REVIEW-6 §1, §3). JQ-R04-GATE is ratified
+  (`decisions/2026-10-01-jq-r04-gate/verdict.md`). Each of these has an
+  outcome ratified under RULES 33–35 and recorded in `LEDGER.md`:
+  JQ-R04-CARRIES-a and -b; JQ-R04-DATE-a, -b, -c; JQ-R04-CONTENT-a, -b, -c.
+  **JQ-R04-CONTENT-d is withdrawn** and is not ratified by anyone; in its
+  place, **the user's answer to U-1** (`exam-prep/USER-QUESTIONS.md`), with
+  its part 2 where part 1 is B or C, is recorded in `LEDGER.md`. If the user
+  returns U-1 to jurors, a new juror row is written, reviewed and ratified
+  first, and its outcome takes the place of the user's answer below.
+  **Order:** the JQ-R04-CARRIES group is ratified before the DATE/CONTENT
+  group is commissioned, and the DATE/CONTENT group is given its
+  ratification sentence. **Jurors:** the JQ-R04-CARRIES group and the
+  DATE/CONTENT group have two disjoint sets of jurors.
+  *Check: eight ratifications recorded, one per identifier, plus GATE's;
+  the user's answer to U-1 recorded (or the ratification that replaces it);
+  the CARRIES ratification dated before the DATE/CONTENT commission; the
+  two juror sets disjoint?*
+
+- **A-0.4, step 1 · The row** (replaces step 1 of the fifth-fix A-0.4;
+  REVIEW-6 §2.1). `ALL-removable` is composed as the user's recorded answer
+  to U-1 says.
+  - **Answer A:** the row is every feature the audit computes minus the
+    four families in `FORCED_FAMILIES` of `scripts/29_identity_audit_exact.py`
+    (SHA-256 `cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f`):
+    `volatility-frozen`, `funding-line`, `p7-shape`, `repeat-chg`. Nothing
+    else is moved.
+  - **Answer B or C:** in addition, every feature computed from a field
+    that the answer, with the reach chosen in its part 2, leaves ungraded is
+    moved out. Under the **narrow** reach the fields considered are only the
+    bitcoin and ethereum columns, the release names, the release hour
+    offsets, the trade-count column and the price column, each as its own
+    ratified outcome says; under the **wide** reach, every field TACTICS 3
+    lists, each ratified outcome read as far as its words reach. Which
+    features are computed from which field is read from the audit's code
+    (`card_features()`), not chosen.
+  - The audit used is a version of `scripts/29_identity_audit_exact.py`
+    whose header lists the change and names, for every feature moved, the
+    field it is computed from, the ratified outcome or outcomes that allow
+    or keep that field on the card, and the part of the user's answer that
+    moves it.
+  - **Stops** — tell the coordinator, do not settle: a feature computed
+    from a field that moves and from one that does not; under the wide
+    reach, a field where it is unclear whether a ratified outcome's words
+    reach it; an answer "Other" that cannot be carried out as written.
+  - Every feature moved out is still reported with both attacks and named
+    in the exam manifest with its size (A-7); it is not graded.
+  *Check (replaces the fifth-fix A-0.4 check): is the row composed as the
+  user's recorded answer to U-1 says, with the audit version named and
+  every moved feature traced to a field, an outcome and a part of the
+  answer; was every stop referred rather than resolved; and does the row
+  pass by steps 2–4 of the fifth-fix A-0.4?*
+
+## C · Replaced
+
+- **C-5 · Files that must not reach a juror or a referee** (replaces the
+  sixth-fix C-5; REVIEW-6 §5). Whoever commissions a juror or a referee of
+  any row in `exam-prep/JUROR-QUESTIONS.md` gives only the files that row's
+  "files a juror needs" column names, gives `canteen/2026-09-19-sofia.md`
+  only by the line ranges it names, and gives of the JQ-R04-CARRIES verdict
+  only its ratification sentence. Never given to a juror or a referee:
+  `exam-prep/REVIEW.md`, `REVIEW-2.md`, `REVIEW-3.md`, `REVIEW-4.md`,
+  `REVIEW-5.md`, `REVIEW-6.md`, `VERDICT.md`, `HANDED-FORWARD.md`,
+  `USER-QUESTIONS.md`, `R-04-blindness.md`, `N-1-collapse.md`,
+  `decisions-and-open-questions.md`, any `*-FIX.md`, any criteria file,
+  `exam-prep/sixth-fix/pre-run-fingerprints.txt`, anything under
+  `exam-prep/seventh-fix/`, the withdrawn
+  `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md`, and anything
+  under `exam-prep/*/checks/`, `exam-prep/*/identity/`,
+  `exam-prep/*/collapse/`, `exam-prep/review-*/` or `exam-prep/blind-proof/`
+  — and, in general, nothing under `exam-prep/` that the row does not name.
+  A juror of one R-04 group is not given the file of the other R-04 group
+  (JQ-R04-CARRIES; the DATE/CONTENT pair), nor its answers, beyond the one
+  ratification sentence above.
+  *Check: does the commission's file list equal the row's column, and are
+  the two R-04 groups' juror sets disjoint?*
