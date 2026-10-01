@@ -5362,3 +5362,61 @@ are the second fix (396,707), review 2 (302,595), the third fix (495,960) and
 review 3 (267,281): **1,462,543** measured, summed by script. The first fix ran on
 2026-09-19 and is not in tonight's figure. The raw-data acquisition (125,411) is
 exam building, not exam preparation, and is also excluded.
+
+`2026-10-01 21:23 UTC` · **JURY · `JQ-R04-GATE` · RATIFIED · 3–0** · Folder
+`decisions/2026-10-01-jq-r04-gate/`. Jurors: `juror`, `opus`, effort `high`,
+55,846 / 56,109 / 56,826 tokens, about two and a half minutes each. Referee:
+`referee`, `haiku`, 38,940 tokens, instruction
+`instructions/2026-10-01-2120-referee-jq-r04-gate.md`.
+
+| file | SHA-256 |
+|---|---|
+| `juror-1.md` | `bd9ed62bc123dbd54692e7abd2fd4e5cf1bb344ece6c400c000732f3ad527f6a` |
+| `juror-2.md` | `5198a7b8bf046b6c4dcf92f851efadaccdaf14738a22b1bc3b2039693cb651c5` |
+| `juror-3.md` | `47c670696a4ad3f740a17164fc46c1f9009e76d640fcc5405bd49210298f5719` |
+| `verdict.md` | `2c0bfd3defa8a70009b096675b4d65417c512b7490700434738ebbc6b8058e2d` |
+
+**Outcome, as the referee states it:** *"The gate fails if either the
+nearest-neighbour attack or the pair AUC attack beats its own RULES 12 chance line
+on the exam cards."* **Split 3–0** (option C in the question file). All six checks
+passed per the referee. Confidence stated by the jurors: 3, 3 and 4 out of 5.
+
+**Grounds the three share, each cited by file and line:** RULES 9 (`RULES.md`
+line 41, the coin name and date are hidden) read as a requirement that fails if
+any valid measurement shows it broken; each attack held to its own RULES 12 line
+unchanged; and **reversibility** — a wrong fail costs re-blinding before the key
+is sealed, a wrong pass cannot be undone once the key is sealed and the draw
+"does not change" (`TACTICS.md` line 22). **The objection all three raised
+against themselves and overcame with reasons:** two tests at 1% each give a truly
+blind set up to about 2% chance of failing — an estimate by union bound, the
+correlation between the attacks unmeasured — which could be read as changing the
+RULES 12 line. None treated it as a blocker.
+
+**Left open by the jurors, by name (RULES 22):** which nearest-neighbour version
+counts where the numbering-dependent and tie-averaged scores differ — juror 1
+favours the tie-averaged one at confidence 2/5, jurors 2 and 3 leave it open. **If
+the two ever disagree on exam cards, that is a new open question.** The optional
+second part of the question (excluding neighbours that share clock hours) was
+answered by none of the three as part of the outcome.
+
+**A weakness in the ratification, named, not overridden.** **All three jurors
+reported steers in the question file itself** — it carries measured results (a
+table and a second-part figure), a passage stressing that nothing guarantees no
+other channel exists (which leans toward the strict reading), a precedent
+sentence pointing at option D, and one misquotation of RULES 13. **Juror 2 wrote
+that it may have been nudged.** Juror 3 judged the measured results favour no
+option. **The referee's verdict does not mention any of this**: a search of
+`verdict.md` for steer, leak, framing, nudge or RULES 3 returns nothing, and its
+independence check rests only on the jurors' different reasoning paths. RULES 35
+gives the ratification to the referee and the coordinator does not overrule it
+or shop for a second referee. Recorded so that a later reader knows **the
+independence check did not weigh a framing that all three jurors named.** The
+question file was written by the third fix run and ruled fit by review 3; the
+juror-question standard used by the reviews did not ask whether a question
+carries measured results. **Carried forward:** the next review is asked to judge
+the remaining juror files on that point too.
+
+**What follows:** the exam-card gate under `R-04` is graded by both attacks, each
+against its own RULES 12 line, and fails if either beats it. `R-04` stays not
+solved: its other questions (`JQ-R04-DATE`, `JQ-R04-CONTENT`) and engineering not
+yet found remain.
