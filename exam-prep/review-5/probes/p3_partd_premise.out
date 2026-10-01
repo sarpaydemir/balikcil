@@ -1,0 +1,27 @@
+audit SHA-256 cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f
+FORCED_FAMILIES ['volatility-frozen', 'funding-line', 'p7-shape', 'repeat-chg']
+prefixes left out of ALL-removable ['funding:', 'p7:price_pct', 'p7:range_pct', 'rep-chg:', 'volatility:']
+bitcoin/ethereum  BTC          inside [('btceth:', True, []), ('rep-btceth:', True, [])]
+bitcoin/ethereum  ETH          inside [('btceth:', True, []), ('rep-btceth:', True, [])]
+trade count       trades       inside [('trades:', True, []), ('rep-trades:', True, []), ('shape:', True, [])]
+price             close        inside [('price:', True, []), ('gran-close:', True, []), ('rep-close:', True, [])]
+other ranked      quote vol    inside [('volume:', True, []), ('rep-volume:', True, []), ('shape:', True, [])]
+other ranked      taker buy%   inside [('takerbuy:', True, []), ('rep-takerbuy:', True, [])]
+other ranked      open int     inside [('openint:', True, []), ('rep-openint:', True, []), ('shape:', True, [])]
+other ranked      L/S acct     inside [('ratio:', True, []), ('rep-ratio:', True, []), ('shape:', True, [])]
+other ranked      top L/S pos  inside [('ratio:', True, []), ('rep-ratio:', True, []), ('shape:', True, [])]
+other ranked      taker L/S    inside [('ratio:', True, []), ('rep-ratio:', True, []), ('shape:', True, [])]
+other ranked      depth -1%    inside [('depth:', True, []), ('rep-depth:', True, []), ('shape:', True, [])]
+other ranked      depth +1%    inside [('depth:', True, []), ('rep-depth:', True, []), ('shape:', True, [])]
+premise holds: True
+
+Instrument's stated grounds for the forced families (verbatim):
+ 426      "granularity-close": ["gran-close:"],
+ 427  }
+ 428  
+ 429  # The families a blinding may NOT remove, and why (the reviewed version typed
+ 430  # the first three inline; `repeat-chg` is added by K-2):
+ 431  #   volatility-frozen  the frozen book's S-1 reads `chg%` at 5.00% absolute
+ 432  #   funding-line       B-5, U-2 and U-3 are answered from it
+ 433  #   p7-shape           TACTICS 3 puts a previous-7-day summary on the card
+ 434  #   repeat-chg         it reads the same unchanged `chg%` column

@@ -1,0 +1,23 @@
+quote exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 55-57: in source lines True; in part d True
+quote exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 64-66: in source lines True; in part d True
+quote decisions/2026-10-01-jq-r04-gate/verdict.md 72-72: in source lines True; in part d True
+
+JQ-N1.md           canteen-looking line citations: []
+JQ-CANTEEN-8.md    canteen-looking line citations: [(203, 204), (918, 933), (920, 922), (926, 926)]
+JQ-R04-DATE.md     canteen-looking line citations: []
+JQ-R04-CONTENT.md  canteen-looking line citations: [(59, 59), (64, 66), (112, 120), (114, 120), (116, 118), (221, 225), (224, 225), (229, 234), (245, 246), (268, 270), (667, 671)]
+
+JQ-N1-1            canteen on list: none
+JQ-N1-2            canteen on list: none
+JQ-N1-3            canteen on list: none
+JQ-N1-4            canteen on list: none
+JQ-CANTEEN-8       canteen on list: none
+JQ-R04-GATE        canteen on list: none
+JQ-R04-DATE-a      canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-R04-DATE-b      canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-R04-DATE-c      canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-R04-CONTENT-a   canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-R04-CONTENT-b   canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-R04-CONTENT-c   canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-R04-CONTENT-d   canteen on list: ['112–120, 221–225, 245–246, 268–270 and 667–671']
+JQ-B1              canteen on list: none
