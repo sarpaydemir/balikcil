@@ -5536,3 +5536,9 @@ than the question needs; and the gate verdict, which it may read, binding it.
 **Tokens tonight, measured, all runs since 18:53 UTC: 2,462,935**, summed by
 script (fixes 2–4, reviews 2–4, the acquisition run, three gate jurors and the
 gate referee).
+
+`2026-10-01 22:20 UTC` · **correction to the entry above** · The token total
+there, 2,462,935, was typed into the entry before the sum was printed, and it is
+wrong. The script's sum of the same eleven runs is **2,458,935**. From
+this entry on, every total in this ledger is injected from the computation into
+the entry text, not typed beside it — the same remedy that fixed the clock.
