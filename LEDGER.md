@@ -5236,3 +5236,69 @@ coin name or finding as failed, and check that the most recent subjects, the one
 the next agent will be handed, are neutral. Before this launch the five most
 recent subjects were checked; two older non-neutral ones were still in view (the
 acquisition record and the contact-address entry), neither about `exam-prep/`.
+
+`2026-10-01 20:43 UTC` · **third fix returned · review 3 launched** · `data-engineer`,
+495,960 tokens, 189 tool uses, 37 minutes (20:07:04–20:40:50 UTC by its clock),
+instruction `instructions/2026-10-01-2003-data-engineer-exam-prep-third-fix.md`.
+Committed neutrally. Fingerprints re-computed here and matching its report:
+`exam-prep/VERDICT.md` `ba859a5470c9e4842350561e3aa5a84359c1e64804989c472f7f06b704f340ee`,
+`exam-prep/JUROR-QUESTIONS.md` `c1d3dfdeab36a40f3c2b2096b53c80d057603c3c07d1bfdeeb64f45fefa10720`,
+`exam-prep/third-fix/FINGERPRINTS.md` `806f11a484db9b4c96644a5ec9530c89a2c9b634045a480fea16fdf917e60dcb`,
+`exam-prep/HANDED-FORWARD.md` `d864fb37c769a11f60d2ce38248ef212acbaf919f62f2406c1b4b0bd625360c0`.
+
+**Verdicts as given:** `R-04` — **not solved**; its closure depends on the
+ratified outcomes of `JQ-R04-GATE`, `JQ-R04-DATE-a/b/c` and
+`JQ-R04-CONTENT-a/b`, **and on engineering not yet found, needed whatever the
+jurors rule.** `N-1` — instrument repaired, both of review 2's conditions acted
+on; still unusable until its corrected questions are ratified and until the
+judge's script uses the key check, which is **handed forward**. No change to
+`RULES.md` required.
+
+**REVIEW-2 items (numbered by the run R2-1 … R2-19):** fourteen done, of which
+several are also handed forward or referred; two disputed in part with reasons;
+R2-17 handed forward as information; **three referred to the coordinator** —
+R2-10 (commissioning the juries), R2-18 (the identifier names: already decided
+at 20:05 UTC, kept as they are) and R2-19 (whether the run under `exam/` may
+proceed). **On R2-19:** the run under `exam/` was the raw-data step; it has
+finished, wrote no card, and no further run will write under `exam/` until
+`R-04` closes.
+
+**Juror rows: re-issued index, three groups.** (1) `JQ-N1-1`…`-4` together with
+`JQ-CANTEEN-8`; (2) `JQ-R04-GATE` alone; (3) `JQ-R04-DATE-a/b/c` with
+`JQ-R04-CONTENT-a/b`. The previous index is kept byte for byte at
+`exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md`. The run checked every
+corrected row against review 2's standard and reports each fit; its own script ran
+61 checks of numbers and line citations, 0 failed. **That is the author checking
+the author**, which is why review 3 runs before any jury.
+
+**`JQ-B1` withdrawn, and the coordinator read why.** The file is addressed to
+the coordinator as a statement, so it was read. Its grounds, each cited with file
+and line: blocker B-1's frozen trigger names two contracts
+(`canteen/2026-09-19-sofia.md` line 187); both are observation coins
+(`data/draw/observation-coins.txt`); the draw manifest records the observation
+and exam sets disjoint. So **B-1 cannot fire on any exam card under any of the
+three options the question offered**, and jurors would be choosing between
+options that cannot differ. It also refused to carry forward a sentence that
+would have read the trigger as a class of instrument rather than the two
+contracts it names — **a changed trigger, which is a new rule under RULES 6 and
+not a juror's definition.** It names what would make the question live again.
+**Declaring a question not open is itself one person's call**, so review 3 is
+asked whether the withdrawal is justified.
+
+**A section kept from jurors on purpose:** `exam-prep/third-fix/THIRD-FIX.md`
+§4.5 maps which juror outcomes combine with which engineering. The run asks that
+it never reach a juror (RULES 6). No juror reading list names it.
+
+**Steer check:** none in its instruction; two mild presumptions named in
+`VERDICT.md`. Its starting context showed two non-neutral commit subjects (the
+exam-data acquisition and the contact-address entry); it investigated neither and
+raised the second as possibly concerning the user. It has been reported to the
+user.
+
+**Launched: review 3**, `data-engineer`, effort `high`, instruction
+`instructions/2026-10-01-2042-data-engineer-exam-prep-review-3.md` (SHA-256
+`608a361bd8cdbc339aca3cb2b29fe19cc4965e698e355801830021e6e22f873e`, taken after
+one item was made conditional). It rules per problem, fit or not fit per
+to-be-commissioned row, whether couplings stand, **whether the withdrawal of a
+row is justified**, and whether what was handed forward can be checked yes or no
+by the run that must meet it. Git history is outside its list.
