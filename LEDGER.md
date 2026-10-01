@@ -5420,3 +5420,52 @@ the remaining juror files on that point too.
 against its own RULES 12 line, and fails if either beats it. `R-04` stays not
 solved: its other questions (`JQ-R04-DATE`, `JQ-R04-CONTENT`) and engineering not
 yet found remain.
+
+`2026-10-01 21:50 UTC` · **fourth fix returned · narrow review 4 launched** · `data-engineer`,
+394,595 tokens, 98 tool uses, 31 minutes (21:22:37–21:48:41 UTC by its clock),
+instruction `instructions/2026-10-01-2118-data-engineer-exam-prep-fourth-fix.md`.
+Fingerprints re-computed here and matching: `exam-prep/VERDICT.md`
+`5ed3c26f56431a9c3705d100347f8a2c5162b01616f9200c4e6602e4aa243c4e`,
+`exam-prep/JUROR-QUESTIONS.md`
+`90c51c9e60f8c11a895b11cc6abc067504edb9e8abb11267502f56424c580dc0`;
+`exam-prep/fourth-fix/FINGERPRINTS.md`
+`477b595b4434f56728a2c5aab79aa1e3d34fdc91a65c88d97a107f59d0d90758` lists the rest.
+**It did not touch the gate question's file while that jury sat** (still
+`55e7b95c…16ce`).
+
+**Verdicts as given:** `R-04` **not solved**, and no route that closes it was
+found in this run. `N-1` instrument ready, **not usable** until the `JQ-N1` group
+with `JQ-CANTEEN-8` is ratified and the judge's script exists and meets what was
+handed forward. No `RULES.md` change. It disputes nothing in review 3.
+
+**Rows:** `JQ-N1-2`, `-3`, `-4`, `JQ-CANTEEN-8`, `JQ-R04-CONTENT-a`, `-b`
+corrected; **`JQ-R04-CONTENT-c` added** — the point review 3 found no row
+answered. Review 3 allowed a second route for it: the coordinator records a
+reason why it is engineering. **The coordinator does not take that route**: the
+run states the choice changes the numbers and no written rule settles it, which
+is RULES 33's own definition of an open question. 59 checks of figures and
+citations, 0 failed — the author checking the author again.
+
+**The section of `VERDICT.md` addressed to the coordinator was read**, and
+nothing else of it. Five points: (1) information that must not reach gate
+jurors or their referee — **confirmed not given**: neither reading list named
+`VERDICT.md` or `THIRD-FIX.md`; (2) a referee ratifying the `JQ-N1` group should
+check that its reading of RULES 13 does not contradict the gate jury's — **acted
+on**: from now on jurors and referees may read every ratified `verdict.md`,
+including the gate's, and referees are asked to say where an outcome contradicts
+one; (3) the engineering route for `JQ-R04-CONTENT-c` — declined, above; (4) the
+identifier-subject question — **already decided at 20:05 UTC, kept**; (5) both
+coupled groups can now be commissioned, `JQ-R04-CONTENT-c` unreviewed.
+
+**Review 4 launched before the juries**, instruction
+`instructions/2026-10-01-2150-data-engineer-exam-prep-review-4.md`, narrower than
+the three before it: fit or not fit per row still to be commissioned, the
+couplings, **any contradiction between those rows and the ratified gate
+verdict**, reproduction of the scripts the fourth run changed, and a ruling per
+problem. **It applies one test the earlier reviews did not state, drawn from
+what all three gate jurors reported:** a juror file carries no figure, passage or
+precedent that leans toward one of its options, and a figure appears only where
+the question cannot be answered without it. Grounds for reviewing before
+commissioning rather than letting jurors find faults: **jurors have no tool that
+can run anything, so a wrong figure in a juror file cannot be caught by a juror**
+— and a ratified decision resting on a wrong figure costs more than a review.
