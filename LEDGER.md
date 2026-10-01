@@ -5686,3 +5686,50 @@ Two remain, both handed forward: the judge's script meeting `HANDED-FORWARD`
 B-1 to B-5, and the sealed key checked for the tie the engine breaks by card id
 as text — which the ratified "lowest card number" now makes binding, because a
 text comparison of card ids of unequal width does not give the lowest number.
+
+`2026-10-01 23:13 UTC` · **sixth fix returned · a question that must sit first ·
+review 6 launched** · `data-engineer`, 288,672 tokens, 99 tool uses, 22 minutes
+(22:50:55–~23:12 UTC by its clock), instruction
+`instructions/2026-10-01-2251-data-engineer-exam-prep-sixth-fix.md`.
+`exam-prep/JUROR-QUESTIONS.md`
+`27a575273904701d8824bf9677baf046e0249c2789f7ffd7100c6b0d0fd96226` and
+`exam-prep/VERDICT.md` `e6e568e04208011041a0d3d1566b3727098d5644c51f7665abc3a5ca4f16f2a0`
+re-computed and matching. **The two files the N1 jurors were reading were
+byte-identical at its start and end**, by its own check. Script 33, run
+`b0af115f117e9f68`, 328 checks, 0 failed; **its first record exposed a defect in
+the run's own checker — output order depended on Python's hash seed — and the
+script stopped on a different byte stream under the same run number, as RULES 30
+requires.** Fixed, re-recorded, three superseded records kept.
+
+**New rows `JQ-R04-CARRIES-a` and `-b`**: the gap review 4 named and review 5
+ruled must be answered before the DATE/CONTENT group sits. **Order of sitting
+now:** `JQ-R04-CARRIES` first; then the DATE/CONTENT group, which is to be given
+only the ratification sentence of the CARRIES verdict; `JQ-R04-CONTENT-d` alone at
+any time; **three separate sets of jurors.** No disagreement with review 5; three
+extensions named.
+
+**From its section addressed to the coordinator, read:** (1) the ratified
+`JQ-N1` and gate files still name working files and script runs, each telling the
+juror not to open them — **every juror on both juries listed the files read and
+none opened them**; (2) **if the referee on `JQ-R04-CONTENT-d` judges it decides
+whether a measured coin signature may stay on exam cards ungraded — a rule, not a
+definition — it goes to the user (RULES 33)**: accepted, because a question about
+what a rule is goes to the user under the rule that rules change only after the
+user is asked; (3) if a nearest-neighbour stop is reached on exam material, which
+version of the attack counts is an open question for jurors — accepted and
+carried forward; (4) identifiers — unchanged decision; (5) review before
+commissioning — **yes**, again narrow.
+
+**Steers it reported:** two sentences of the coordinator's instruction chose
+routes review 5 had left to the coordinator — asking a needed point as a
+separate question beforehand, and the withdrawal deciding that part d leaves the
+group. **Both are the coordinator acting on what was referred to it, and are
+recorded as such.** "One jury waits" puts weight on speed: recorded, steer
+twenty-four.
+
+**Review 6 launched**, instruction
+`instructions/2026-10-01-2313-data-engineer-exam-prep-review-6.md` (SHA-256
+`fc497719ca73dccce5a33d9846ffc4c18fb4b40313f7db57fb93167c94a6bf09`): fit or not fit for every R-04 row to be commissioned or
+waiting; **inside or outside a juror's scope per row**; contradiction with either
+ratified verdict; the order and couplings; the sixth run's extensions. Both
+ratified verdicts bind it.
