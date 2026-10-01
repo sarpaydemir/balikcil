@@ -1,0 +1,18 @@
+ok   trades-level prefixes ['trades:', 'p7:log_avg_trades']
+ok   one 'trades:' feature, the log of the median 
+ok   p7:log_avg_trades read from the previous-7-day line 
+ok   repeat-trades = rep-trades: only 
+ok   only `trades` maps to repeat group 'trades' 
+ok   two repeat features per column (distinct, maxrepeat) 
+ok   shape-scale-free columns ['quote vol', 'trades', 'open int', 'depth -1%', 'depth +1%', 'L/S acct', 'top L/S pos', 'taker L/S']
+ok   two shape features per column (sd_log, acf1_log) 
+ok   shape-scale-free = shape: only 
+ok   families holding any trade-count feature ['trades-level', 'shape-scale-free', 'repeat-trades']
+ok   FORCED_FAMILIES 
+ok   p7-shape = price_pct, range_pct 
+ok   ALL-removable = every family not in FORCED_FAMILIES 
+ok   families of BTC/ETH, trades, close and the other ranked columns are all outside FORCED 
+ok   p7 features inside the row (log_avg_vol in volume-level, log_avg_trades in trades-level) 
+ok   a feature absent on any card, or constant, is dropped 
+ok   beats = strictly above the line 
+failed 0

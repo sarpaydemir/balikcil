@@ -1,0 +1,91 @@
+ok   src RULES.md 41-41: In the exam the coin name and the date are hidden.
+ok    in JQ-R04-CARRIES.md
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok    in JQ-R04-CONTENT.md
+ok   src RULES.md 51-52: The chance line is not invented. The answers are shuffled 1,000 times,
+ok    in JQ-R04-CARRIES.md
+ok    in JQ-R04-CONTENT-d.md
+ok   src RULES.md 119-121: A juror decides procedure and definition only: never a trading rule, n
+ok    in JQ-R04-CARRIES.md
+ok   src RULES.md 34-35: The rule is written first, the result is opened second. A rule is not 
+ok    in JQ-R04-CONTENT-d.md
+ok   src RULES.md 34-35: A rule is not changed after looking at a result.
+ok    in JQ-R04-CONTENT.md
+ok   src RULES.md 43-44: An agent sitting the exam cannot use tools and cannot read files.
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 50-51: the 24 hours before the start, hour by hour; plus a one-line summary o
+ok    in JQ-R04-CARRIES.md
+ok    in JQ-R04-CONTENT-d.md
+ok   src TACTICS.md 56-56: price, volume, trade count, taker buy/sell pressure
+ok    in JQ-R04-CARRIES.md
+ok    in JQ-R04-CONTENT.md
+ok   src TACTICS.md 55-62: price, volume, trade count, taker buy/sell pressure
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 55-62: open interest, long/short ratios (5-minute archive)
+ok    in JQ-R04-CONTENT-d.md
+ok   src TACTICS.md 55-62: funding rate, payment interval and its changes
+ok    in JQ-R04-CONTENT-d.md
+ok   src TACTICS.md 55-62: order book depth
+ok    in JQ-R04-CONTENT-d.md
+ok   src TACTICS.md 55-62: bitcoin and ethereum, over the same hours
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 55-62: US release calendar (inflation, employment, rate decision)
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 57-57: open interest, long/short ratios (5-minute archive)
+ok    in JQ-R04-CONTENT.md
+ok   src TACTICS.md 59-59: order book depth
+ok    in JQ-R04-CONTENT.md
+ok   src TACTICS.md 71-71: Numbers are rounded and the card is kept short.
+ok    in JQ-R04-CONTENT.md
+ok   src TACTICS.md 101-103: the coin name
+ok    in JQ-R04-CARRIES.md
+ok   src TACTICS.md 101-103: the date and time
+ok    in JQ-R04-CARRIES.md
+ok   src TACTICS.md 101-104: the price itself (converted to a number starting from 100)
+ok    in JQ-R04-CONTENT.md
+ok   src TACTICS.md 101-107: the coin name inside announcements
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 101-107: the Wikipedia number itself (given as a ratio to the coin's own averag
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 101-107: the date in the release calendar
+ok    in JQ-R04-CONTENT-d.md
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 107-107: the date in the release calendar
+ok    in JQ-R04-DATE.md
+ok   src TACTICS.md 103-103: the date and time
+ok    in JQ-R04-DATE.md
+ok   src decisions/2026-10-01-jq-r04-gate/verdict.md 72-72: The gate fails if either the nearest-neighbour attack or the pair AUC 
+ok    in JQ-R04-CONTENT-d.md
+ok   src exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 55-57: If `ALL-removable` beats its chance line on the exam cards, the cards 
+ok    in JQ-R04-CONTENT-d.md
+ok   src exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 64-66: `ALL-removable` is every feature in the audit's current list, minus th
+ok    in JQ-R04-CONTENT-d.md
+ok   src scripts/29_identity_audit_exact.py 431-431: the frozen book's S-1 reads `chg%` at 5.00% absolute
+ok    in JQ-R04-CONTENT-d.md
+ok   src scripts/29_identity_audit_exact.py 432-432: B-5, U-2 and U-3 are answered from it
+ok    in JQ-R04-CONTENT-d.md
+ok   src scripts/29_identity_audit_exact.py 433-433: TACTICS 3 puts a previous-7-day summary on the card
+ok    in JQ-R04-CONTENT-d.md
+ok   src scripts/29_identity_audit_exact.py 434-434: it reads the same unchanged `chg%` column
+ok    in JQ-R04-CONTENT-d.md
+ok   src canteen/2026-09-19-sofia.md 114-120: at least one row whose hourly close-to-close change is |5.00%| or more
+ok    in JQ-R04-CONTENT.md
+ok   src canteen/2026-09-19-sofia.md 221-225: Rule no: B-2 · the `taker L/S` column may not be read / Trigger : alwa
+ok    in JQ-R04-CONTENT.md
+ok   src canteen/2026-09-19-sofia.md 221-225: Exit : n/a. It lifts only when somebody checks the column against the 
+ok    in JQ-R04-CONTENT.md
+ok   src canteen/2026-09-19-sofia.md 245-246: any hour of the card prints `open int` = 0 between live neighbours. On
+ok    in JQ-R04-CONTENT.md
+ok   src canteen/2026-09-19-sofia.md 268-270: the `depth -1%` or `depth +1%` column repeats one identical value for 
+ok    in JQ-R04-CONTENT.md
+ok   src canteen/2026-09-19-sofia.md 667-671: The trade-count floor under `taker L/S`. No watcher names a number.
+ok    in JQ-R04-CONTENT.md
+ok   src canteen/2026-09-19-sofia.md 667-671: How determined: by Mateo/Nadia against the 5-minute taker archive, as 
+ok    in JQ-R04-CONTENT.md
+checks 90, failed 0
