@@ -796,3 +796,141 @@ reviewed**; **three juror files this run may not touch still name working
 files**.
 
 Nothing under `exam/` was read or written by this run.
+
+---
+---
+
+# Seventh-fix run · 2026-10-01 — acting on `exam-prep/REVIEW-6.md`, JQ-R04-CONTENT-d only
+
+Mateo · data engineer · appended 2026-10-01 (system clock, RULES 23).
+**Nothing above this line was changed**: the first 42,122 bytes of this file
+are the file as the sixth review found it (SHA-256
+`e6e568e04208011041a0d3d1566b3727098d5644c51f7665abc3a5ca4f16f2a0`). This
+section says what happened, not how; the working is in
+`exam-prep/seventh-fix/SEVENTH-FIX.md`; what later runs must do is in the
+fourth-fix, fifth-fix, sixth-fix and seventh-fix sections of
+`exam-prep/HANDED-FORWARD.md`, read together.
+
+## The two problems now
+
+| problem | sixth-fix verdict | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | NOT SOLVED | **NOT SOLVED.** Nothing was measured. R-04 now needs the ratified outcomes of JQ-R04-CARRIES-a, -b, JQ-R04-DATE-a … -c and JQ-R04-CONTENT-a … -c, **and the user's recorded answer to U-1** (`exam-prep/USER-QUESTIONS.md`), which takes the place of JQ-R04-CONTENT-d. None of these exists yet. |
+| **N-1 · collapse before counting** | not acted on | **Not acted on by this run.** Its juror group is ratified (`decisions/2026-10-01-jq-n1-canteen-8/verdict.md`); the index now says so. N-1's other conditions (the judge's script, HANDED-FORWARD B-1 … B-5) are unchanged. |
+
+## Outcome of every REVIEW-6 item
+
+Numbering: `exam-prep/seventh-fix/SEVENTH-FIX.md` §1.
+
+| item | outcome |
+|---|---|
+| R6-1 | **Outside this run**; file untouched; index status corrected. |
+| R6-2 | **Outside this run**; files untouched; index status corrected. |
+| R6-3 | **Outside this run**; recorded. |
+| R6-4 | **Outside this run**; recorded. |
+| R6-5 | **Outside this run**; recorded. |
+| R6-6 | **Done by withdrawal**: JQ-R04-CONTENT-d is withdrawn from jurors and **referred to the user** (U-1). |
+| R6-7 | **Done** (HANDED-FORWARD seventh-fix A-0.1 and A-0.4 step 1). R-04 still waits on the user's answer. |
+| R6-8 | **Done**, in U-1 and in HANDED-FORWARD seventh-fix A-0.4 step 1. |
+| R6-9 | **Done**; agreed. |
+| R6-10 | **Done**: classed **outside, as a whole** — one step beyond REVIEW-6 (reasons: SEVENTH-FIX §2). |
+| R6-11 | **Recorded**; U-1 contradicts neither ratified verdict. |
+| R6-12 | **Done** (index). |
+| R6-13 | **Outside this run**; **referred to the coordinator** (below, item 2). |
+| R6-14 | **Recorded.** |
+| R6-15 | **Recorded.** |
+| R6-16 | **Recorded.** |
+| R6-17 | **Recorded.** |
+| R6-18 | **Recorded.** |
+
+## JQ-R04-CONTENT-d
+
+**User question only.** No part of it remains a juror question, so no part
+of it has to meet the juror tests; its file is kept unchanged as a record,
+and the index marks the row **withdrawn**, pointing to U-1.
+`exam-prep/USER-QUESTIONS.md` **now exists** and holds U-1, written for a
+reader who has not seen `exam-prep/`, recommending nothing and carrying no
+measured figure. It has not been reviewed.
+
+## The juror rows
+
+| identifier | outcome |
+|---|---|
+| JQ-N1-1 … -4, JQ-CANTEEN-8 | unchanged — status corrected to **ratified** |
+| JQ-R04-GATE | unchanged — **ratified** |
+| JQ-R04-CARRIES-a, -b | unchanged — status corrected to **being answered**, ruled fit by the sixth review |
+| JQ-R04-DATE-a … -c | unchanged — **waiting** for the CARRIES ratification; ruled fit by the sixth review |
+| JQ-R04-CONTENT-a … -c | unchanged — **waiting** as DATE; ruled fit by the sixth review |
+| JQ-R04-CONTENT-d | **withdrawn** — referred to the user (U-1) |
+| JQ-B1 | unchanged (withdrawn) |
+
+The index (`exam-prep/JUROR-QUESTIONS.md`, re-issued; the sixth-fix version
+kept byte for byte at `exam-prep/seventh-fix/JUROR-QUESTIONS-as-of-sixth-fix.md`,
+every earlier one where it was) shows each row's true status, carries no
+wording, option or number of any question, and changes no reading list.
+
+Checked by `scripts/34_seventh_fix_check.py`, run `97f03e98c28ed3ad`: 100
+checks, 0 failed (`exam-prep/seventh-fix/checks/seventh-fix-check-97f03e98c28ed3ad.md`).
+
+## Where I go beyond the sixth review (RULES 32)
+
+REVIEW-6 §3 left part d's scope contested and called its option "no"
+inside. I class the whole row outside: with its two outside options gone it
+would offer one answer, which is not a question; and asked now, the rule
+question is answered before any exam card is measured (RULES 6). Reasons and
+the opposite case: SEVENTH-FIX §2. No disagreement with REVIEW-6 otherwise.
+
+## For the coordinator
+
+1. **U-1 goes to the user**, unread by you, as the instruction says. It
+   must not reach a juror or a referee (HANDED-FORWARD seventh-fix C-5).
+   The user may return it to jurors; U-1 says so.
+2. **R6-13.** The DATE/CONTENT reading lists give "the ratification
+   sentence" of JQ-R04-CARRIES, which has two parts. Whether the commission
+   gives one sentence per part is yours; this run did not touch those lists.
+3. **Two juror files this run may not touch now say something untrue**: the
+   closing paragraphs of JQ-R04-DATE and JQ-R04-CONTENT say that what
+   follows for a field that stays is decided by JQ-R04-CONTENT-d, "which
+   other jurors answer". It now goes to the user. Their operative clause
+   ("it is not yours to decide") stays true. Whether a run corrects them,
+   and a review checks it, before that group sits is yours.
+4. **`decisions/2026-10-01-jq-r04-date-content/`** appeared, untracked, in
+   `git status` during this run. I did not open it. If the DATE/CONTENT
+   group has been commissioned before JQ-R04-CARRIES is ratified, the order
+   in the index and in HANDED-FORWARD A-0.1 is broken. I cannot tell from a
+   name.
+5. **Review before use.** U-1 and this run's HANDED-FORWARD amendments are
+   not reviewed. Whether a review precedes bringing U-1 to the user is
+   yours.
+6. **`LEDGER.md`** — whether the two ratifications, and later the user's
+   answer, are written there I cannot check.
+
+## `RULES.md`
+
+**This run changes nothing in `RULES.md`.** The path earlier runs named — a
+measured channel that cannot be removed, and whether RULES 9 accepts it,
+which is the user's — **is now reached, in advance**: U-1 asks it before any
+exam card is measured. What the user answers, and whether it is recorded as
+a rule, is the user's.
+
+## A steer in the instruction I was given
+
+No result and no prediction. Named, mildly: the model-choice reason "a part
+of it may have to go to the user rather than to jurors" presumes the user
+route is possible and frames the answer as a split; I classed the whole row
+for the user, which the instruction allows ("If you judge … the whole of it
+outside, say so"), for reasons that do not rest on that sentence (SEVENTH-FIX
+§2). "Which review 6 ruled fit" and "three jurors are answering … now" are
+information; they are why the three juror files were left untouched and why
+the CARRIES status reads "being answered". The git status supplied at start
+carried commit subjects of the forms "work:", "ledger:" and "auto: working
+tree", three untracked instruction file names for JQ-R04-CARRIES jurors and
+this run's own; no result.
+
+## What this run did not do
+
+SEVENTH-FIX §4, eight items. The ones that matter most: **R-04 is not
+solved**; **nothing was measured on exam cards**; **U-1 is not reviewed**;
+**two juror files now carry a stale clause this run may not correct**.
+
+Nothing under `exam/` was read or written by this run.
