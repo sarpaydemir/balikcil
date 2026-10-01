@@ -94,3 +94,20 @@ complete), `fourth-fix/FOURTH-FIX.md`,
 `fourth-fix/juror-questions/`, `fourth-fix/checks/`,
 `fourth-fix/FINGERPRINTS.md`. New outputs live in `fourth-fix/`; nothing
 written by an earlier run was overwritten.
+
+---
+
+## Addendum · fifth-fix run, 2026-10-01
+
+Appended by Mateo (fifth-fix run); nothing above was changed (its first
+5,042 bytes still hash to `03225075…69fc`). After the fourth review
+(`REVIEW-4.md`), a fifth run acted on it. Read, in this order: `VERDICT.md`
+(its last appended section), `JUROR-QUESTIONS.md` (re-issued; earlier
+versions kept), `HANDED-FORWARD.md` (**its fourth-fix and fifth-fix sections
+together**: the fifth-fix section replaces A-0.1, A-0.4 and B-1 and adds
+C-5), `fifth-fix/FIFTH-FIX.md`, `fifth-fix/criteria-written-before-correcting.md`,
+`fifth-fix/juror-questions/`, `fifth-fix/checks/`, `fifth-fix/FINGERPRINTS.md`.
+New outputs live in `fifth-fix/` and in `scripts/32_juror_file_check_fifth.py`;
+nothing written by an earlier run was overwritten, apart from
+`JUROR-QUESTIONS.md`, whose earlier version is kept at
+`fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md`.

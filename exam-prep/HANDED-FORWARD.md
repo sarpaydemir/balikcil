@@ -393,3 +393,98 @@ first.
 | third-fix A-2's "`scripts/16_identity_audit.py`, third-fix version or later" | replaced by A-2: the exact audit, because the third-fix audit under-counts ties |
 | `N-1-collapse.md` §8 steps 1–6, SECOND-FIX §8 (judge), third-fix B-1 … B-5 | restated in B-1 … B-5 |
 | `R-04-blindness.md` §8 steps 1, 4, 5; third-fix A-0, A-1, A-3 … A-7 | restated in A-0 … A-7 |
+
+---
+---
+
+# Section added by the fifth-fix run · 2026-10-01 — amendments to the fourth-fix section
+
+Mateo · data engineer · fifth-fix run · appended 2026-10-01 (system clock,
+RULES 23). **Nothing above this line was changed:** the first 23,037 bytes of
+this file are the file as the fourth review found it (SHA-256
+`8ab30e59d2774e303199f26cff932914e980e2ff2773e7f97f0d36fbc4e8642b`).
+
+**How to read this file now.** A later run reads the fourth-fix section
+("the complete list in force") **and this section**, and nothing earlier.
+This section **replaces** the fourth-fix items A-0.1, A-0.4 and B-1 with the
+texts below and **adds** C-5; every other item of the fourth-fix section
+stays in force word for word. Nothing here is a trading rule, a threshold or
+a score. Source of every change: `exam-prep/REVIEW-4.md` (§ named at each
+item); the ratified JQ-R04-GATE verdict,
+`decisions/2026-10-01-jq-r04-gate/verdict.md`.
+
+---
+
+## A · Before any exam card is built — replaced items
+
+- **A-0.1 · Rulings** (replaces the fourth-fix A-0.1). JQ-R04-GATE is
+  ratified (`decisions/2026-10-01-jq-r04-gate/verdict.md`; whether its
+  ratification is written into `LEDGER.md` as RULES 35 requires was not
+  checked by this run, which may not open `LEDGER.md`). JQ-R04-DATE-a, -b,
+  -c and JQ-R04-CONTENT-a, -b, -c, **-d** (the last added by the fifth-fix
+  run) each have an outcome ratified under RULES 33–35 and recorded in
+  `LEDGER.md`.
+  *Check: eight ratifications recorded, one per identifier, and the GATE
+  ratification recorded too?* (Source: fourth-fix A-0.1; REVIEW-4 §4, §7
+  item 2.)
+
+- **A-0.4 · The gate** (replaces the fourth-fix A-0.4; REVIEW-4 §4, §7
+  item 3). The rule is the ratified one: **the gate fails if either the
+  nearest-neighbour attack or the pair AUC attack beats its own RULES 12
+  chance line on the exam cards**, on the row `ALL-removable`.
+  1. *The row.* `ALL-removable` is composed as the ratified outcome of
+     JQ-R04-CONTENT-d says. If that outcome takes any feature out of the
+     row, the audit used is a version of `scripts/29_identity_audit_exact.py`
+     whose header lists the change and names, for every feature moved, the
+     field it is computed from and the ratified outcome that keeps that field
+     on the card. If a feature is computed from a kept field **and** from a
+     field that is not kept, it is not moved: stop and tell the coordinator.
+     Every feature moved out is still reported with both attacks and named in
+     the exam manifest with its size (A-7); it is not graded.
+  2. *Pair AUC.* If it beats its line, the gate **has failed**, whatever the
+     nearest neighbour shows.
+  3. *Nearest neighbour.* If `cards_with_tied_nn` on the row is 0, the two
+     versions are one number; if it beats its line, the gate has failed. If
+     `cards_with_tied_nn` is above zero, grade it with both versions (index
+     tie-break and tie-free, each against its own line): both beat — the
+     gate has failed; neither beats — the nearest neighbour does not fail
+     the gate; they disagree — if step 2 has not already failed the gate,
+     the gate is **not graded** and the coordinator is told (a possible open
+     question; REVIEW-3 §7 A-2 gap 1, kept from the fourth-fix A-0.4).
+  4. The gate **passes** only when neither step 2 nor step 3 fails it and
+     step 3 is graded.
+  5. `ALL` is reported, and its excess over `ALL-removable` is named as the
+     forced residual (`R-04-blindness.md` §7), not graded.
+  *Check: is the row composed as the ratified JQ-R04-CONTENT-d outcome
+  says (with the audit version named), and does it pass by steps 2–4?*
+
+## B · The run that writes the judge's script (Greta) — replaced item
+
+- **B-1 · The event map** (replaces the fourth-fix B-1; adds REVIEW-4 §1
+  condition 3 and §6.3). Everything the fourth-fix B-1 says stays,
+  word for word, and in addition: **before building the map, read the
+  moments from the sealed key (after its hash check, B-2) and confirm either
+  that no coin has two moments at one start hour, or that every card id in
+  the key has the same number of characters.** The engine breaks a
+  same-coin, same-hour tie by the card id as a string; JQ-N1 says "card
+  number"; the two agree when either condition holds. Record which holds.
+  If neither holds, stop and tell the coordinator: do not build the map.
+  *Check: everything the fourth-fix B-1 checks, and is the tie check recorded
+  with one of the two conditions holding?*
+
+## C · Added
+
+- **C-5 · Files that must not reach a juror or a referee** (REVIEW-4 §7
+  items 4–6; REVIEW-3 §10 (a)). Whoever commissions a juror or a referee
+  of any row in `exam-prep/JUROR-QUESTIONS.md` gives only the files that
+  row's "files a juror needs" column names, and gives `canteen/2026-09-19-sofia.md`
+  only by the line ranges it names. Never given to a juror or a referee:
+  `exam-prep/REVIEW.md`, `REVIEW-2.md`, `REVIEW-3.md`, `REVIEW-4.md`,
+  `VERDICT.md`, `HANDED-FORWARD.md`, `R-04-blindness.md`,
+  `N-1-collapse.md`, `decisions-and-open-questions.md`, any `*-FIX.md`, any
+  criteria file, and anything under `exam-prep/*/checks/`,
+  `exam-prep/*/identity/`, `exam-prep/*/collapse/`, `exam-prep/review-*/`
+  or `exam-prep/blind-proof/` — and, in general, nothing under `exam-prep/`
+  that the row does not name. Several of these state measured effects of
+  options, or earlier choices on the open points.
+  *Check: does the commission's file list equal the row's column?*

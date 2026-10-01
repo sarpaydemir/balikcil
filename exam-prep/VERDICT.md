@@ -496,3 +496,149 @@ solved**; **nothing was measured on exam cards**; **no juror question is
 ratified**.
 
 Nothing under `exam/` was read or written by this run.
+
+---
+---
+
+# Fifth-fix run · 2026-10-01 — acting on `exam-prep/REVIEW-4.md`
+
+Mateo · data engineer · appended 2026-10-01 (system clock, RULES 23).
+**Nothing above this line was changed**: the first 26,243 bytes of this file
+are the file as the fourth review found it (SHA-256
+`5ed3c26f56431a9c3705d100347f8a2c5162b01616f9200c4e6602e4aa243c4e`). This
+section says what happened, not how; the working is in
+`exam-prep/fifth-fix/FIFTH-FIX.md`; what later runs must do is in the
+fourth-fix and fifth-fix sections of `exam-prep/HANDED-FORWARD.md`, read
+together.
+
+## The two problems now
+
+| problem | fourth review | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | NOT SOLVED | **NOT SOLVED.** JQ-R04-GATE is ratified; the seven other rulings R-04's standard now needs (HANDED-FORWARD fifth-fix A-0.1) are outstanding; under the ratified gate, the gate row as audited today does not pass on any blinded version of the observation cards (REVIEW-4 §1). The A-0.4 grading is restated against the ratified outcome. |
+| **N-1 · collapse before counting** | solved only under three conditions | **Solved only under the same three conditions.** (1) The JQ-N1 group's files are corrected; they still need review (if the coordinator wants one), commissioning and ratification. (2) The judge's script meets HANDED-FORWARD B-1 … B-5 — handed forward. (3) The tie check on the sealed key — handed forward in the replaced B-1. |
+
+## Outcome of every REVIEW-4 item
+
+Numbering: `exam-prep/fifth-fix/FIFTH-FIX.md` §1.
+
+| item | outcome |
+|---|---|
+| R4-1 | **Done.** |
+| R4-2 | **Done.** |
+| R4-3 | **Done.** |
+| R4-4 | **Done**, with one extension (FIFTH-FIX §2 E-2). |
+| R4-5 | **Referred to jurors** — JQ-R04-CONTENT-d (new); the dependent sentences in two files now point to it. |
+| R4-6 | **Done** (HANDED-FORWARD fifth-fix A-0.4 and A-0.1). |
+| R4-7 | **Done.** |
+| R4-8 | **Done.** |
+| R4-9 | **Cannot be done by this run** (the files that would show it are closed to me); **referred to the coordinator** (below, item 1). |
+| R4-10 | **Done** for every list this run writes (index; HANDED-FORWARD C-5); earlier commissions not visible. |
+| R4-11 | **Handed forward** (B-1, replaced). |
+| R4-12 | Files corrected; commissioning and ratification **referred to the coordinator**. |
+| R4-13 | **Handed forward** (in force). |
+| R4-14 | **Not acted on** (a named gap, not a requirement); **referred to the coordinator** (below, item 2). |
+| R4-15 | **Recorded.** |
+| R4-16 | **Recorded.** |
+| R4-17 | **Recorded**; nothing to do. |
+| R4-18 | R-04 not solved (above). |
+
+## The juror rows
+
+| identifier | outcome |
+|---|---|
+| JQ-N1-1 | corrected (shared part 4 item removed; its own part's text unchanged) |
+| JQ-N1-2 | corrected (as N1-1) |
+| JQ-N1-3 | corrected only in the file's shared closing paragraph; its own part's text unchanged |
+| JQ-N1-4 | corrected |
+| JQ-CANTEEN-8 | corrected |
+| JQ-R04-GATE | unchanged — **ratified**; not ruled, not to be commissioned again |
+| JQ-R04-DATE-a | corrected |
+| JQ-R04-DATE-b | corrected only in the file's shared closing paragraph; its own part's text unchanged |
+| JQ-R04-DATE-c | corrected only in the file's shared closing paragraph; its own part's text unchanged |
+| JQ-R04-CONTENT-a | corrected |
+| JQ-R04-CONTENT-b | corrected |
+| JQ-R04-CONTENT-c | corrected |
+| JQ-R04-CONTENT-d | **added** |
+| JQ-B1 | unchanged (withdrawn) |
+
+**Fitness, row by row** (FIFTH-FIX §4, against REVIEW-2's tests (i)–(v),
+REVIEW-4's test (vi) and no contradiction with the ratified GATE verdict):
+every row to be commissioned — JQ-N1-1 … -4, JQ-CANTEEN-8, JQ-R04-DATE-a …
+-c, JQ-R04-CONTENT-a … -d — is **fit by my ruling**; none has been reviewed
+since it was corrected, and JQ-R04-CONTENT-d has never been reviewed. The
+index (`exam-prep/JUROR-QUESTIONS.md`, re-issued; every earlier version kept
+byte for byte) carries no wording, option or number of any question, shows
+each row's status, and names in no reading list a review, `VERDICT.md`, a
+working file or a file stating measured effects of options; the canteen
+book is given only by the five line ranges the CONTENT file cites.
+`RULES.md` and `TACTICS.md` stay whole on every list: they are the texts the
+questions read, every answer must be grounded in them (RULES 34), "other"
+answers may rest on any of their lines, and they state no measurement and
+no earlier choice on an open point.
+
+Checked by `scripts/32_juror_file_check_fifth.py`, run `6a8b8a6dc1c92be7`:
+77 checks, 0 failed (`exam-prep/fifth-fix/checks/juror-file-check-6a8b8a6dc1c92be7.md`).
+
+## Where I disagree with the fourth review (RULES 32)
+
+1. **The part 4 table "can go to the referee"** (REVIEW-4 §2) against "none
+   may reach a juror or referee" (§7 item 6). I sent it nowhere: a referee
+   checks count, independence, grounding, split, objection and scope, and
+   none of these needs an option's effect (RULES 6, 35).
+2. **Part a's rows from the printed values.** REVIEW-4 lists rows 3–4 for
+   removal; I removed rows 1–2 as well, because its own instruction ("state
+   part a's premise without saying which rendering meets it") and REVIEW-3's
+   test (iii) both fail a file that shows only the rendering where the
+   signature exists (FIFTH-FIX E-2).
+3. **JQ-R04-DATE's closing paragraph** has the defect REVIEW-4 found in
+   CONTENT's; REVIEW-4 did not name it. Fixed the same way (E-3).
+
+## For the coordinator
+
+1. **R4-9 — "earlier verdicts".** The ratified GATE verdict says every
+   juror's grounding included "earlier verdicts". If that means
+   `exam-prep/VERDICT.md`, its third-fix section (point 2) carried
+   result-before-rule information about the gate. I cannot see the
+   commission or the answers. Whether the ratification stands under RULES 6
+   is not mine to decide.
+2. **R4-14 — a named gap.** JQ-R04-CONTENT does not say whether one attack
+   beating its line is enough for "carries a measured coin signature". It
+   changes nothing on today's material; it could on exam material. Whether
+   to put it to the same jurors before they sit is yours; I did not, because
+   the review did not require it.
+3. **Commissioning before review.** Every changed row says "not reviewed
+   since". Whether a fifth review precedes commissioning is yours.
+4. **Part d's scope.** If its referee judges that it decides whether a
+   measured coin signature may stay on exam cards ungraded — a rule, not a
+   definition — it goes to the user (RULES 33), not back to me.
+5. **`LEDGER.md`.** Whether JQ-R04-GATE's ratification is written there
+   (RULES 35) I could not check.
+
+## `RULES.md`
+
+**No change to `RULES.md` is required by anything this run did or referred.**
+The path named by earlier runs — a measured channel that cannot be removed,
+and whether RULES 9 accepts it, which is the user's — is now nearer: part d
+is the definitional reading of the gate that comes before it, and if part d
+is refused on scope, that path is reached. It has not been reached.
+
+## A steer in the instruction I was given
+
+No result, prediction or fix chosen for me. Named, mildly: "two juries wait
+on the files this run corrects" presumes the files can be corrected and puts
+weight on a quick finish. "Write it as a juror question in the group it
+bears on" settles a procedure REVIEW-4 §7 item 2 left to the coordinator
+("whether this is engineering or an open question is yours to record"); I
+followed it (R4-5) and say so here. "A ratified verdict now exists … It
+binds this run" is information, and it is why A-0.4 was restated. The git
+status supplied at start carried only commit subjects of the forms "work:",
+"ledger:" and "auto:", and an untracked instruction file name; no result.
+
+## What this run did not do
+
+FIFTH-FIX §5, six items. The ones that matter most: **R-04 is not solved**;
+**nothing was measured on exam cards**; **no row has been reviewed since
+correction**; **R4-9 could not be checked**.
+
+Nothing under `exam/` was read or written by this run.

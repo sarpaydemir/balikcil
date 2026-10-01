@@ -1,0 +1,412 @@
+{
+ "checks": [
+  {
+   "detail": "rebuilt from exam-prep/fourth-fix/juror-questions/JQ-N1.md by the builder equals the issued file",
+   "id": "R JQ-N1.md",
+   "ok": true
+  },
+  {
+   "detail": "rebuilt from exam-prep/fourth-fix/juror-questions/JQ-CANTEEN-8.md by the builder equals the issued file",
+   "id": "R JQ-CANTEEN-8.md",
+   "ok": true
+  },
+  {
+   "detail": "rebuilt from exam-prep/fourth-fix/juror-questions/JQ-R04-DATE.md by the builder equals the issued file",
+   "id": "R JQ-R04-DATE.md",
+   "ok": true
+  },
+  {
+   "detail": "rebuilt from exam-prep/fourth-fix/juror-questions/JQ-R04-CONTENT.md by the builder equals the issued file",
+   "id": "R JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'that is the convention the calibration below used'",
+   "id": "X JQ-N1.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'What the two ways do to the 1% boundary'",
+   "id": "X JQ-N1.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'How large random variation alone is'",
+   "id": "X JQ-N1.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'the 1% boundary ranges from 0.5458 to 0.6613'",
+   "id": "X JQ-N1.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'TACTICS 2 puts no minimum distance between two *calm* moments. None is'",
+   "id": "X JQ-CANTEEN-8.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'The first run removed these columns from its blinded cards and said it'",
+   "id": "X JQ-R04-DATE.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: '| from the values before rounding | typical level'",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: '| from the values before rounding | how many values repeat'",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'none that either attack finds when it is ranked from the values before'",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'If your answer to part c permits ranking from the values before roundi'",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: \"What the second way does to the trade-count column's measured coin sig\"",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'with its measured signature named in the exam manifest'",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "present in fourth-fix, absent in fifth-fix: 'if no permitted rendering removes a channel, the channel is named in t'",
+   "id": "X JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "numbers not in the fourth-fix file: [] (allowed: [])",
+   "id": "N JQ-N1.md",
+   "ok": true
+  },
+  {
+   "detail": "numbers not in the fourth-fix file: [] (allowed: [])",
+   "id": "N JQ-CANTEEN-8.md",
+   "ok": true
+  },
+  {
+   "detail": "numbers not in the fourth-fix file: [] (allowed: [])",
+   "id": "N JQ-R04-DATE.md",
+   "ok": true
+  },
+  {
+   "detail": "numbers not in the fourth-fix file: ['55', '64', '66', '72'] (allowed: ['55', '57', '64', '66', '72'])",
+   "id": "N JQ-R04-CONTENT.md",
+   "ok": true
+  },
+  {
+   "detail": "exam-prep/third-fix/juror-questions/JQ-R04-GATE.md lines 55-57 contain the quotation, and part d carries it: 'If `ALL-removable` beats its chance line on the exam cards, '",
+   "id": "Q quote",
+   "ok": true
+  },
+  {
+   "detail": "exam-prep/third-fix/juror-questions/JQ-R04-GATE.md lines 64-66 contain the quotation, and part d carries it: \"`ALL-removable` is every feature in the audit's current list\"",
+   "id": "Q quote",
+   "ok": true
+  },
+  {
+   "detail": "decisions/2026-10-01-jq-r04-gate/verdict.md lines 72-72 contain the quotation, and part d carries it: 'The gate fails if either the nearest-neighbour attack or the'",
+   "id": "Q quote",
+   "ok": true
+  },
+  {
+   "detail": "FORCED_FAMILIES in scripts/29_identity_audit_exact.py: ['volatility-frozen', 'funding-line', 'p7-shape', 'repeat-chg']",
+   "id": "Q forced list",
+   "ok": true
+  },
+  {
+   "detail": "feature prefixes left out of ALL-removable: ['funding:', 'p7:price_pct', 'p7:range_pct', 'rep-chg:', 'volatility:']",
+   "id": "Q forced prefixes",
+   "ok": true
+  },
+  {
+   "detail": "columns feeding rep-chg: ['chg%']",
+   "id": "Q rep-chg reads",
+   "ok": true
+  },
+  {
+   "detail": "volatility features are computed from: ['ch = col[\"chg%\"]']",
+   "id": "Q volatility reads",
+   "ok": true
+  },
+  {
+   "detail": "the p7-shape and funding-line feature lines read no table column",
+   "id": "Q p7/funding read no column",
+   "ok": true
+  },
+  {
+   "detail": "part d's premise sentence is the one these checks support",
+   "id": "Q premise sentence",
+   "ok": true
+  },
+  {
+   "detail": "rows: ['JQ-B1', 'JQ-CANTEEN-8', 'JQ-N1-1', 'JQ-N1-2', 'JQ-N1-3', 'JQ-N1-4', 'JQ-R04-CONTENT-a', 'JQ-R04-CONTENT-b', 'JQ-R04-CONTENT-c', 'JQ-R04-CONTENT-d', 'JQ-R04-DATE-a', 'JQ-R04-DATE-b', 'JQ-R04-DATE-c', 'JQ-R04-GATE']",
+   "id": "I rows",
+   "ok": true
+  },
+  {
+   "detail": "digits outside allowed contexts: []",
+   "id": "I no numbers",
+   "ok": true
+  },
+  {
+   "detail": "GATE row status: **ratified** — `decisions/2026-10-01-jq-r04-gate/verdict.md`; not to be commissioned again; its file is unchanged",
+   "id": "I GATE status",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-B1",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-CANTEEN-8",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-N1-1",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-N1-2",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-N1-3",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-N1-4",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-CONTENT-a",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-CONTENT-a",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-CONTENT-b",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-CONTENT-b",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-CONTENT-c",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-CONTENT-c",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-CONTENT-d",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-CONTENT-d",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-DATE-a",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-DATE-a",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-DATE-b",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-DATE-b",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-DATE-c",
+   "ok": true
+  },
+  {
+   "detail": "canteen given only by line ranges",
+   "id": "I canteen JQ-R04-DATE-c",
+   "ok": true
+  },
+  {
+   "detail": "forbidden patterns in list: []",
+   "id": "I list JQ-R04-GATE",
+   "ok": true
+  },
+  {
+   "detail": "CONTENT 'What you open' ranges: lines 112–120, 221–225, 245–246, 268–270 and 667–671 only",
+   "id": "I canteen ranges = CONTENT's",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md'] vs row ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md']",
+   "id": "I opens JQ-CANTEEN-8",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md'] vs row ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md']",
+   "id": "I opens JQ-N1-1",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md'] vs row ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md']",
+   "id": "I opens JQ-N1-2",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md'] vs row ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md']",
+   "id": "I opens JQ-N1-3",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md'] vs row ['RULES.md', 'TACTICS.md', 'exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md', 'exam-prep/fifth-fix/juror-questions/JQ-N1.md']",
+   "id": "I opens JQ-N1-4",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-CONTENT-a",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-CONTENT-b",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-CONTENT-c",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-CONTENT-d",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-DATE-a",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-DATE-b",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md'] vs row ['RULES.md', 'TACTICS.md', 'canteen/2026-09-19-sofia.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md', 'exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md']",
+   "id": "I opens JQ-R04-DATE-c",
+   "ok": true
+  },
+  {
+   "detail": "group's 'What you open' ['RULES.md', 'TACTICS.md', 'exam-prep/third-fix/juror-questions/JQ-R04-GATE.md'] vs row ['RULES.md', 'TACTICS.md', 'exam-prep/third-fix/juror-questions/JQ-R04-GATE.md']",
+   "id": "I opens JQ-R04-GATE",
+   "ok": true
+  },
+  {
+   "detail": "SHA-256 equals the one the index states",
+   "id": "I earlier exam-prep/fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md",
+   "ok": true
+  },
+  {
+   "detail": "SHA-256 equals the one the index states",
+   "id": "I earlier exam-prep/fourth-fix/JUROR-QUESTIONS-as-of-third-fix.md",
+   "ok": true
+  },
+  {
+   "detail": "SHA-256 equals the one the index states",
+   "id": "I earlier exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md",
+   "ok": true
+  },
+  {
+   "detail": "JQ-R04-GATE.md SHA-256 55e7b95c9bc4",
+   "id": "I GATE file unchanged",
+   "ok": true
+  },
+  {
+   "detail": "first 23037 bytes hash to the pre-run SHA-256",
+   "id": "U appended exam-prep/HANDED-FORWARD.md",
+   "ok": true
+  },
+  {
+   "detail": "first 5042 bytes hash to the pre-run SHA-256",
+   "id": "U appended exam-prep/README.md",
+   "ok": true
+  },
+  {
+   "detail": "first 26243 bytes hash to the pre-run SHA-256",
+   "id": "U appended exam-prep/VERDICT.md",
+   "ok": true
+  },
+  {
+   "detail": "files changed since the snapshot: []",
+   "id": "U unchanged",
+   "ok": true
+  },
+  {
+   "detail": "new files outside exam-prep/fifth-fix/: ['scripts/32_juror_file_check_fifth.py']",
+   "id": "U new files",
+   "ok": true
+  }
+ ],
+ "failed": 0,
+ "input_fingerprint": "6a8b8a6dc1c92be77c8bb1b96d1931af9bcde36998697243eab309ca6fa1c52b",
+ "inputs": {
+  "decisions/2026-10-01-jq-r04-gate/verdict.md": "2c0bfd3defa8a70009b096675b4d65417c512b7490700434738ebbc6b8058e2d",
+  "exam-prep/JUROR-QUESTIONS.md": "2e09076f475df688704f7788a33cdf77996016533fc92ffc1e0105f34237c715",
+  "exam-prep/fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md": "90c51c9e60f8c11a895b11cc6abc067504edb9e8abb11267502f56424c580dc0",
+  "exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md": "944c5d85ee547e93ae55ac8d5f10dab05bc5ebe593b3de03d9b092b40aa8d396",
+  "exam-prep/fifth-fix/juror-questions/JQ-N1.md": "071bf434f05cfc7e83b87b7698274f609a5bf28334b956fec95e64b50709497e",
+  "exam-prep/fifth-fix/juror-questions/JQ-R04-CONTENT.md": "df27e2553bc2e9b940df299a94c0b34f9d76244d340c592bd8773ad72ecf8a28",
+  "exam-prep/fifth-fix/juror-questions/JQ-R04-DATE.md": "4682f6d3aef330f76f205cc346df603eab661e443144adab1332bd17412d52ee",
+  "exam-prep/fifth-fix/make_fifth_fix_files.py": "3c94acb8b3d2cd3f59c22754052f2bf13497d26d6e607dac74e1354ab88c6f26",
+  "exam-prep/fifth-fix/pre-run-fingerprints.txt": "eb218fb8fc5f94a404f8aa6badfd5bdb28ad17749d321700cedcf32ae735297d",
+  "exam-prep/fourth-fix/JUROR-QUESTIONS-as-of-third-fix.md": "c1d3dfdeab36a40f3c2b2096b53c80d057603c3c07d1bfdeeb64f45fefa10720",
+  "exam-prep/fourth-fix/juror-questions/JQ-CANTEEN-8.md": "8ea8ee2a1db77a05e1cfb67ce01ae19475f72ca5d62646fca4c2f0cb81a5bbb3",
+  "exam-prep/fourth-fix/juror-questions/JQ-N1.md": "1f9e3bf4577abc07b8dec736a1e2eb92e046e3c05d6e8a30dbe1d1a3f888e6e7",
+  "exam-prep/fourth-fix/juror-questions/JQ-R04-CONTENT.md": "b337e5d9c326ae4739cedac34575783663f40d0961acae92de0dff9859fbb8db",
+  "exam-prep/fourth-fix/juror-questions/JQ-R04-DATE.md": "3625423923666f99a08b21969e975b72550ee2c1c42563a3ac592d689c0760be",
+  "exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md": "7020127c257b7addbae1fd6cbca0e4031accc3b28a4816980c5cd410532399d9",
+  "exam-prep/third-fix/juror-questions/JQ-R04-GATE.md": "55e7b95c9bc4beb7eb78418ed230270661d14ed92876bb13d047d1b853f816ce",
+  "scripts/29_identity_audit_exact.py": "cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f",
+  "scripts/32_juror_file_check_fifth.py": "235fd7c9d334fcb0e21d8de37b0adae64e0e3a7daa588de7c9de8740323d3402"
+ },
+ "run": "6a8b8a6dc1c92be7"
+}
