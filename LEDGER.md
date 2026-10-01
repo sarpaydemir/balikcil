@@ -5469,3 +5469,70 @@ the question cannot be answered without it. Grounds for reviewing before
 commissioning rather than letting jurors find faults: **jurors have no tool that
 can run anything, so a wrong figure in a juror file cannot be caught by a juror**
 — and a ratified decision resting on a wrong figure costs more than a review.
+
+`2026-10-01 22:20 UTC` · **review 4 returned: the leaning test fails most rows · a gate–content
+link referred to jurors · fifth fix launched** · `data-engineer`, 268,665
+tokens, 84 tool uses, 29 minutes, instruction
+`instructions/2026-10-01-2150-data-engineer-exam-prep-review-4.md`.
+`exam-prep/REVIEW-4.md` `a3d058c8087d40147f252141633f9c4ebf3974670d1e232c8424234532bebb0a`,
+`exam-prep/review-4/FINGERPRINTS.md` `21d0b629b54bd76457ba46ea8a11ca61ca8d0267295d45dafa271b0c8a57d7ba`.
+**It wrote its criteria before checking any figure**
+(`exam-prep/review-4/criteria-written-before-ruling.md`).
+
+**Rows.** Fit: `JQ-N1-3`, `JQ-R04-DATE-b`, `JQ-R04-DATE-c`. **Not fit:
+`JQ-N1-1`, `-2`, `-4`, `JQ-CANTEEN-8`, `JQ-R04-DATE-a`, `JQ-R04-CONTENT-a`, `-b`,
+`-c`** — almost all on the new leaning test the coordinator added after the gate
+jurors' reports; `CONTENT-b` only through a defect shared by all three CONTENT
+rows. **Every figure it checked is correct.** Every fix is a deletion except one
+set of CONTENT sentences. Couplings stand. **So the leaning test, written into an
+instruction for the first time tonight, found leaning passages in files three
+earlier reviews had ruled fit** — which is what the gate jurors had said of their
+own file.
+
+**A contradiction, conditional, with the ratified gate verdict**, located by the
+reviewer in one CONTENT option and one CONTENT "what follows" section; and
+`exam-prep/HANDED-FORWARD.md` item A-0.4 conflicts with the ratified outcome.
+**A link between the gate row and the CONTENT group** which the reviewer asks the
+coordinator to "settle and record", noting that under RULES 33 it is a choice
+that changes the numbers. **That is the definition of an open question, so the
+coordinator does not settle it**; the fifth run is told to write it as a juror
+question in the group it bears on.
+
+**Reproduction:** the fourth run's collapse run, all seven exact-audit runs and
+the checks run reproduce byte for byte under the same numbers. One earlier
+collapse run (`721b2448f1722ccf`) cannot be re-run because its engine version no
+longer exists in place; its outputs equal the newer run's. **Recorded as a cost of
+changing instruments in place**, which three runs chose to do.
+
+**Rulings:** `R-04` **not solved** — *"On all six blinded versions the gate row
+beats both of its lines, so under the ratified outcome the gate fails on all
+measured material."* `N-1` solved under three conditions: the group corrected
+and ratified; the judge's script meeting handed-forward B-1 to B-5 with B-3's
+separate recomputation; and the sealed key checked for one kind of tie, because
+the engine breaks it by the card id as text.
+
+**Questions it raised for the coordinator, answered here.** (5) Did the gate
+jurors' "earlier verdicts" include `exam-prep/VERDICT.md`? **No.** All three
+jurors listed the files they read: the question file, the four root documents,
+and the seven `decisions/2026-09-19-*/verdict.md` files, found with one glob of
+exactly that pattern; each states it read nothing else under `exam-prep/`. (6)
+`REVIEW-4.md` must reach no juror or referee: **no reading list names it.** (4)
+The canteen book given whole to the DATE and CONTENT jurors would carry a
+section that should not reach them: **the fifth run must give reading lists no
+more of a file than the question needs.**
+
+**Steer reported:** *"Two juries are commissioned on your ruling"* puts weight
+on a quick "fit". Recorded, steer twenty-two. It also notes that the leaning
+test was given to the reviewer after the fourth run finished, so its author was
+never held to it — true, and the reason the fifth run now is. A bytecode file it
+wrote outside its permitted folder, it deleted itself.
+
+**Fifth fix launched**, instruction
+`instructions/2026-10-01-2220-data-engineer-exam-prep-fifth-fix.md`, narrow: what
+`REVIEW-4.md` requires; every row to meet every test four reviews applied; no
+reading list naming a review, `VERDICT.md`, a working file, or more of a file
+than the question needs; and the gate verdict, which it may read, binding it.
+
+**Tokens tonight, measured, all runs since 18:53 UTC: 2,462,935**, summed by
+script (fixes 2–4, reviews 2–4, the acquisition run, three gate jurors and the
+gate referee).
