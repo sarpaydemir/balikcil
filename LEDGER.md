@@ -5355,3 +5355,10 @@ question's file or anything a gate juror is pointed at while the jury sits.**
 review 2, 3 of 11 by review 3. Instrument defects named by each review have
 been closed by the next run and each closure re-verified by the following review.
 Tokens on exam preparation tonight (runs 1–3 and reviews 2–3): 1,762,909 measured.
+
+`2026-10-01 21:18 UTC` · **correction to the entry above** · The token figure is wrong. It said
+"runs 1–3 and reviews 2–3: 1,762,909 measured". Tonight's exam-preparation runs
+are the second fix (396,707), review 2 (302,595), the third fix (495,960) and
+review 3 (267,281): **1,462,543** measured, summed by script. The first fix ran on
+2026-09-19 and is not in tonight's figure. The raw-data acquisition (125,411) is
+exam building, not exam preparation, and is also excluded.
