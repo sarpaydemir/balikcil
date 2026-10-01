@@ -5776,3 +5776,45 @@ user in `exam-prep/USER-QUESTIONS.md`**, in plain English, recommending nothing.
 Turkish by the reporter** — the user set the blindness arrangement for the
 coordinator, not for themselves, and a rule question is exactly what the user
 asked to be brought to them.
+
+`2026-10-01 23:35 UTC` · **JURY · `JQ-R04-CARRIES-a` and `-b` · RATIFIED · and the
+fourth jury sits** · Folder `decisions/2026-10-01-jq-r04-carries/`. Jurors:
+`juror`, `opus`, effort `high`, 60,634 / 62,690 / 64,784 tokens. Referee:
+`referee`, `haiku`, 54,853 tokens, instruction
+`instructions/2026-10-01-2329-referee-jq-r04-carries.md`.
+
+| file | SHA-256 |
+|---|---|
+| `juror-1.md` | `f76d8e975efff7f51d879eeff94ea34a576e8ca3e01018d4bf622ba494b6c276` |
+| `juror-2.md` | `84e8a907656987b6b1740fee969f9df48def826fd55cddada8d44901774d08f1` |
+| `juror-3.md` | `299931d9b6d2a8ec01a96a1d42b9fa40b7ed12f2ecbd9d06eaa6aa7a6d2a636b` |
+| `verdict.md` | `514a8d45038d3d7ad2feba3479c58d6e1da8e50358c799203f35b22cc246050a` |
+
+**Outcome, as the verdict states it (lines 107, 109):**
+- **`JQ-R04-CARRIES-a` — 3–0:** a column carries a measured coin signature when
+  **either** the pair AUC attack or the nearest-neighbour attack beats its own
+  RULES 12 chance line on the feature set part b names — consistent with the gate
+  verdict, which all three cited for coherence and none treated as settling it.
+- **`JQ-R04-CARRIES-b` — 2–1:** the test reads every feature computed from the
+  column's own printed values and nothing else, as one set; for the trade-count
+  column, its typical level, two repeat features and two shape features, not the
+  previous-7-day feature; the audit gains this set as a row of its own. Juror 3
+  answered "other" — that set plus every existing family made of the column alone
+  — and named option 1 as its fallback.
+**The objection all three raised and overcame:** two 1% lines give a combined
+false "carries" of up to about 2% — an estimate, unmeasured — and here, unlike
+at the gate, a false positive widens a permission to leave out a column TACTICS 3
+puts on the card. **For the first time tonight, no juror reported a steer in the
+question file.**
+
+**Jury 4 — the DATE/CONTENT group, six parts — three jurors launched**,
+instructions `instructions/2026-10-01-2334-juror-jq-r04-date-content-1.md` …
+`-3.md`, differing only in juror number and output (checked with `diff`). Files:
+`exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md`
+(`c053d81449411ae9cdb7d83376d74c21172409dd214360106533115e6452b42f`) and
+`JQ-R04-CONTENT.md` (`95d05d46c8e496e02ae63f2895661f668b332857c288c562e56cfcc2d5fdc0ab`),
+plus five line ranges of the canteen book. **The CARRIES folder is closed to them;
+both ratification sentences are quoted in their instruction verbatim**, extracted
+by `sed` from lines 107 and 109 of the verdict rather than typed, with the
+verdict's SHA-256 beside them, as the sixth run specified and review 6 corrected
+from singular to both parts.
