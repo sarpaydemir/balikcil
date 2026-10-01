@@ -5208,3 +5208,31 @@ not. Data-engineer instructions from now on also put `git log`, `git show` and
 commit messages outside what the run may look at, because a role with `Bash` can
 read further back than the subjects every agent is handed. Juries are not
 launched until the commit subjects an agent will be shown at launch are neutral.
+
+`2026-10-01 20:04 UTC` · **third fix run launched · wall-audit gains the commit-subject check**
+· `data-engineer`, effort `high`, instruction
+`instructions/2026-10-01-2003-data-engineer-exam-prep-third-fix.md` (SHA-256
+`c36fbca4938130cb970b9d191864a0e614448dae8831fd0fc4644c8b196cb3e4`, taken after
+three presumptions were removed from the draft and before launch: the reason line
+no longer says the questions are unfit, the row item is conditional on the review
+ruling any row unfit, and the `R-04` item is conditional on `R-04` not being
+closed). It acts on `exam-prep/REVIEW-2.md`, read by itself; items only a later
+run can meet are written as requirements where that run must find them and marked
+"handed forward". **Git history is now outside its reading list**, and it makes no
+commit. Its report gives, per juror-question identifier, only corrected,
+unchanged or cannot be corrected.
+
+**The question of whether identifiers revealing a question's subject breach the
+coordinator's blindness** (raised by review 2): the user's arrangement on
+2026-09-19 was that the coordinator is not told *how* the problems were solved.
+A subject is not a method. The identifiers are kept as they are, because renaming
+them would break every cross-reference in `REVIEW-2.md` and would not un-tell the
+coordinator anything. Recorded as the coordinator's reading of the user's own
+instruction, not as an answer to a laboratory open question.
+
+**`wall-audit` §2 gains "The channel every agent is handed: commit subjects"** —
+run `git log --format='%h %s' -30`, quote any subject carrying a verdict, count,
+coin name or finding as failed, and check that the most recent subjects, the ones
+the next agent will be handed, are neutral. Before this launch the five most
+recent subjects were checked; two older non-neutral ones were still in view (the
+acquisition record and the contact-address entry), neither about `exam-prep/`.

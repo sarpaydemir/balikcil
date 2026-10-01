@@ -61,6 +61,24 @@ Read every file under `instructions/` with this in mind:
 Report every sentence you find **by quoting it.** A leak is shown, not
 summarised.
 
+### The channel every agent is handed: commit subjects
+
+Every agent starts with the repository's most recent commit subjects in its
+context, and a role with `Bash` can read the whole history. **A commit subject is
+therefore a message to every role at once**, including roles that may not open
+the folder it describes. On 2026-10-01 a blind reviewer read the verdict it was
+meant to reach blind from a subject the coordinator wrote.
+
+```
+git log --format='%h %s' -30
+```
+
+Every subject must be neutral: `ledger: <timestamp>`, `work: <timestamp>`,
+`auto: working tree at <timestamp>`. **A subject carrying a verdict, a count, a
+coin name, a finding or a "solved / not solved" is failed** — quote it. History
+already pushed is not rewritten (RULES 30); the audit records it and checks that
+the most recent subjects, the ones the next agent will be handed, are neutral.
+
 ## 3 · Is there any trace of the old project (RULES 1)
 
 Search under `instructions/`, `notes/`, `canteen/`, `scripts/`, `reports/`:
