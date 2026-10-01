@@ -5901,3 +5901,36 @@ the N1 verdict.** The instruction was amended to say so before launch; the
 fingerprint above is of the amended text. **Carried forward: the run that builds
 exam cards must not be handed the DATE/CONTENT verdict whole**, because it quotes
 the canteen book; it needs that verdict's outcome only.
+
+`2026-10-01 23:57 UTC` · **review 7 overturns the routing: `JQ-R04-CONTENT-d` is a juror
+question, U-1 not fit for the user · the coordinator hands the scope dispute to
+the referee, as RULES 35 does · eighth fix launched** · Review 7:
+`data-engineer`, 166,369 tokens, 50 tool uses, 11 minutes.
+`exam-prep/REVIEW-7.md` `c643b4063fd6f6a54ecab1c812eb2ddb0d15e4b85d5aa7cb1b34fd07b669fae4`.
+Criteria written before ruling. All 18 quotations and citations in U-1 check out;
+14 of 14 seventh-fix fingerprints match.
+
+**Rulings:** (1) **the row belongs to jurors**, not the user — disagreeing with
+review 6 and with the seventh run; the user's matter is a possible later change
+to TACTICS 3 or 6, which arises only after a gate result. (2) **U-1 is not fit to
+be put to the user**, on seven named sections, including treating a pointer to a
+measured result with an invitation to look at it first as a RULES 6 fault. (3)
+One handed-forward item cannot be checked yes or no in every case. (4) The index
+is not true: CARRIES shown as being answered after its ratification. Steer
+twenty-six: "whether the row belongs to the user at all" framed doubt about the
+user route — **fair**, and recorded.
+
+**Three runs, three readings of one row's scope**: review 6 contested, the
+seventh run "outside", review 7 "inside". **The coordinator does not choose among
+them.** RULES 35 gives the scope check to the referee, and a question refused on
+scope goes to the user. So the row goes to jurors, written so that "outside what a
+juror may decide" is an answer a juror can give; U-1 is marked superseded but kept,
+to be returned to if the referee refuses on scope. **The user is therefore not
+woken tonight**: there is not yet a question the rules route to them.
+
+**Eighth fix launched**, instruction
+`instructions/2026-10-01-2357-data-engineer-exam-prep-eighth-fix.md` (SHA-256
+`a27056cb270d8bff2481749b60e1c529aaa8769b132bc74ab268e69e5526c26b`): `JQ-R04-CONTENT-d` made fit under every test seven reviews applied
+and consistent with all four ratified verdicts; the index made true; the
+handed-forward item made checkable; **no juror file may hand a juror a verdict's
+reasoning that quotes material the juror is otherwise denied.**
