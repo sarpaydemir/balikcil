@@ -5542,3 +5542,46 @@ there, 2,462,935, was typed into the entry before the sum was printed, and it is
 wrong. The script's sum of the same eleven runs is **2,458,935**. From
 this entry on, every total in this ledger is injected from the computation into
 the entry text, not typed beside it — the same remedy that fixed the clock.
+
+`2026-10-01 22:39 UTC` · **fifth fix returned · review 5 launched, narrowest
+yet** · `data-engineer`, 220,250 tokens, 60 tool uses, 18 minutes
+(22:25:48–22:37:04 UTC by its clock), instruction
+`instructions/2026-10-01-2220-data-engineer-exam-prep-fifth-fix.md`. Committed
+neutrally. `exam-prep/JUROR-QUESTIONS.md`
+`2e09076f475df688704f7788a33cdf77996016533fc92ffc1e0105f34237c715`,
+`exam-prep/VERDICT.md` `e5652c57e33f2927bff875093aa01ff576899c5176f4fb88a87aef442ec2472e`,
+`exam-prep/fifth-fix/FINGERPRINTS.md`
+`4ed6269de38fd04c581dca9d4df278c3cddbdda82c78a9cd4b487268ce0176fc` — re-computed
+here, matching for the first two; the third is the run's own list.
+
+**Verdicts as given:** `R-04` **not solved**; `N-1` solved only under review 4's
+three conditions, the first now waiting on review, commissioning and
+ratification, the other two handed forward. **No `RULES.md` change.**
+
+**Rows:** every row still to be commissioned was corrected, most of them by
+deletion; **`JQ-R04-CONTENT-d` added** — the gate–content link, written as a
+juror question as instructed, not settled by the coordinator. The canteen book now
+reaches DATE and CONTENT jurors **only as five named line ranges** (112–120,
+221–225, 245–246, 268–270, 667–671). No reading list names a review, `VERDICT.md`
+or a working file. Script `32_juror_file_check_fifth.py`, run `6a8b8a6dc1c92be7`,
+77 checks, 0 failed. It disputes three points of review 4, with reasons, in
+`VERDICT.md`. **It noted that if a referee refuses `JQ-R04-CONTENT-d` on scope,
+the question goes to the user, not back to a fix run** — recorded, because that
+would be the first question of this kind to need the user.
+
+**Referred to the coordinator, answered:** R4-9, whether the gate ratification
+stands under RULES 6 — **it stands**: the gate jurors read no `exam-prep/` file but
+their question file, as recorded at 22:20 UTC. R4-14, the gap review 4 named
+rather than required — **not settled by the coordinator; put to review 5**, which
+must say whether it must be answered before its group sits.
+
+**Steers reported:** the instruction settled one procedure the review had left
+to the coordinator (write the point as a juror question) — **that is RULES 33
+applied, and was intended**; and "two juries wait on the files this run
+corrects" adds mild pressure. Steer twenty-three, recorded.
+
+**Review 5 launched**, instruction
+`instructions/2026-10-01-2240-data-engineer-exam-prep-review-5.md` (SHA-256
+`deb4611a6a35cb1b748b982eb48f24a96662925891b2851cace22a3af35ed150`): fit or not fit per row, only for what the fifth run
+changed; any contradiction with the ratified gate verdict; the gap; the reading
+lists; the fifth run's disagreements.
