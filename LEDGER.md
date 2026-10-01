@@ -5136,3 +5136,75 @@ retry pass; derived JSONs rewritten per run with each attempt's SHA-256 in
 wider on the other. **That is a mismatch between the coordinator's instruction
 and the role definition, and it is the coordinator's**, recorded here. No steer
 reported.
+
+`2026-10-01 20:02 UTC` · **review 2 returned: no jury can sit yet · and a leak channel the
+coordinator opened: commit subjects** · `data-engineer`, 302,595 tokens, 95 tool
+uses, 29 minutes, instruction
+`instructions/2026-10-01-1932-data-engineer-exam-prep-review-2.md`. Wrote
+`exam-prep/REVIEW-2.md` (`d67a9d3229d3bf37c583f794403c6e6b664eb7057beb1f2cc0abfcee6c93abe4`)
+and `exam-prep/review-2/` (`FINGERPRINTS.md`
+`d5f7f0af3d6c7f95f60731b1140dd5b3be078be7c6fb2e4f152a73393f8744db`). Every one of
+the second run's twelve run numbers reproduced.
+
+**Rulings, as given:** **`R-04` — not solved**, agreeing with the second run
+after every re-run and independent check it applied. **`N-1` — solved only under
+two conditions:** (1) the `JQ-N1` question corrected as `REVIEW-2.md` §5 sets out
+and then ratified under RULES 33–35; (2) the judge's script must confirm that the
+moments fingerprint in every chance-line record matches the moments of the sealed
+answer key — without that check a mislabelled event map can get through.
+
+**Juror rows: six not fit.** Fit: `JQ-N1-1`, `JQ-N1-3`, `JQ-N1-4`,
+`JQ-R04-DATE-a`, `-b`, `-c`. **Not fit: `JQ-N1-2`, `JQ-R04-GATE`,
+`JQ-R04-CONTENT-a`, `JQ-R04-CONTENT-b`, `JQ-B1`, `JQ-CANTEEN-8`.** Coupled rows
+go together, so **every one of the five jury groups is held** until its unfit
+parts are corrected. What must change is in `REVIEW-2.md` §5; the coordinator has
+not read it. **Waiting for this review saved five juries** — fifteen `opus` juror
+runs and five referees convened on questions that could not be answered as
+written. The reviewer also set itself a fitness rule its instruction did not give,
+and named it: a number shown to a juror as measured, which the instrument does not
+support, makes the row unfit.
+
+**The index:** no wording, options or numbers, but it reveals each question's
+*subject* through four identifiers, one file in a reading list, and the
+`JQ-CANTEEN-8` row pointing straight at that question's text. The reviewer did
+not decide whether a subject counts as content and suggested numeric identifiers.
+**The coordinator has already read the identifiers**; recorded as what the
+coordinator now knows, which is subject and not content.
+
+**Further items it requires, by reference only:** two instrument defects that
+would carry into the exam-building run (`REVIEW-2.md` §4.1, §4.2); one
+observation concerning the exam-building run (§4.5); N-1 condition 2. It flagged
+that a run was working under `exam/` and that whether it continued was the
+coordinator's call: **that run was the raw-data step, which wrote no card**, and
+it had already finished.
+
+**Steer twenty, in the coordinator's instruction:** *"Where the second run
+disputes the first review, say which side the material supports"* told the
+reviewer, before it looked, that disputes existed. Mild, and reported correctly.
+
+**The leak channel — the coordinator's, and structural.** The reviewer reports
+that the git status provided at session start, and the `git log` it ran, **showed
+commit subjects stating the second run's verdict before it opened any file.** The
+commit was `87685d5`, subject *"exam-prep: second fix run - R-04 not solved, N-1
+instrument repaired, 12 juror questions indexed"*, **written by the coordinator.**
+Every agent receives the most recent commit subjects in its starting context, so
+**a commit subject is a broadcast to every role, including roles that may not
+open the folder it describes.** This laboratory's commits until 2026-09-19 14:21
+UTC carried neutral subjects (`ledger: <timestamp>`); from the calibration work
+that evening the coordinator began writing results into them —
+*"ledger: calibration verdict - negative…"*, *"…contact address found sent to
+third parties"*. Exposure, measured by launch order: the calibration run, the
+second fix run, the acquisition run and review 2 were launched after such
+subjects; **review 2 is the one that saw a verdict it was meant to reach blind.**
+It states its rulings rest on its own measurements, and its R-04 ruling agrees
+with that verdict, so the leak cannot be shown to have changed a ruling — and
+cannot be shown not to have. **Recorded as a coordinator fault, the twenty-first
+of its kind.**
+
+**Fix, from this entry on:** every commit subject is neutral —
+`ledger: <timestamp>` or `work: <timestamp>` — and carries no verdict, count,
+name or finding. The history already pushed cannot be rewritten (RULES 30) and is
+not. Data-engineer instructions from now on also put `git log`, `git show` and
+commit messages outside what the run may look at, because a role with `Bash` can
+read further back than the subjects every agent is handed. Juries are not
+launched until the commit subjects an agent will be shown at launch are neutral.
