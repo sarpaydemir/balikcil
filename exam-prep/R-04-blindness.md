@@ -401,3 +401,16 @@ Appended by Mateo (third-fix run). Nothing above was changed; the first
 - §8 is superseded, where it differs, by `exam-prep/HANDED-FORWARD.md`
   section A.
 - R-04 remains **not solved**; `exam-prep/VERDICT.md`, last section.
+
+## Addendum · fourth-fix run, 2026-10-01
+
+Appended by Mateo (fourth-fix run). Nothing above was changed; the first
+21,926 bytes of this file are the file as the third review found it (SHA-256
+`d59b5b52…f5e6`).
+
+- §8 and the earlier addenda's pointers are superseded by the fourth-fix
+  section of `exam-prep/HANDED-FORWARD.md`, which restates §8 step 4 (A-0.6)
+  and says, checkably, what closes R-04 against §2's standard (A-0).
+- The audit is now `scripts/29_identity_audit_exact.py` (distances compared
+  exactly); `exam-prep/fourth-fix/FOURTH-FIX.md` §4, §5.
+- R-04 remains **not solved**; `exam-prep/VERDICT.md`, last section.

@@ -77,6 +77,38 @@ in exam-prep/collapse/run-756cf4ea156d92c3/ are kept untouched.
      --moments CSV) and nothing else changed; events.csv, the summary and the
      calibration are expected byte-identical to run 756cf4ea156d92c3.
 
+Changes made in the fourth-fix run (2026-10-01), acting on exam-prep/REVIEW-3.md
+---------------------------------------------------------------------------------
+The version REVIEW-3 reviewed has SHA-256 e59cecb7...2fe6; its run
+`bec532fa008e0e01` and outputs are kept untouched. Criteria written before
+measuring: exam-prep/fourth-fix/criteria-written-before-measuring.md (K-14,
+K-15).
+ 10. The key check no longer reads a method of the object it checks
+     (REVIEW-3 §4.2: replacing moments_sha256() on the instance, or
+     overriding it in a subclass, let a map built from forged moments through
+     with the true key). chance_line() and verify_event_map() refuse any
+     object whose type is not exactly EventMap -- no subclass -- and
+     chance_line() computes the moments fingerprint, the event-map
+     fingerprint and the record from module functions over the map's data
+     (_tuple_fingerprint(), event_map_fingerprint()), never from a method of
+     the map. verify_event_map() also refuses a map whose configuration label
+     is not the one its own fields make. What no in-process check can stop --
+     a caller who edits this module's functions, or writes his own shuffle --
+     is why exam-prep/HANDED-FORWARD.md also requires an independent
+     recomputation of the event-map fingerprint from the sealed key.
+ 11. "Keep the latest" as worded (REVIEW-3 §4.3). collapse() takes
+     `same_coin_keep`: "earliest" (default; the existing code path, unchanged)
+     or "latest", allowed only with greedy-clique and cross-coin. "latest" is
+     _greedy_literal(): JQ-N1 part 2 read word for word, over EVERY clock hour
+     -- in each round the hour covered by the most coins among the still-
+     unassigned moments wins, ties to the earliest hour; of each coin's
+     moments covering that hour, the latest (start hour, then card number)
+     joins the event. It is NOT the engine's anchored-window loop with the
+     choice reversed, which REVIEW-3 q1 showed is a different rule. The
+     configuration label of such a map ends in "+latest". Checked against
+     REVIEW-3 q1's and REVIEW-2 p1b's literal implementations
+     (scripts/30_fourth_fix_checks.py, H-2).
+
 Rules implemented
 -----------------
 RULES 13  : "Moments occurring in several coins in the same hour count as a
@@ -208,12 +240,15 @@ class EventMap(list):
     .moments and the configuration before using it.
     """
 
-    def __init__(self, events, definition, resolution, scope, moments):
+    def __init__(self, events, definition, resolution, scope, moments,
+                 same_coin_keep="earliest"):
         super().__init__([sorted(ev) for ev in events])
         self.definition = definition
         self.resolution = resolution
         self.scope = scope
-        self.config = "%s/%s/%s" % (definition, resolution, scope)
+        self.same_coin_keep = same_coin_keep
+        self.config = config_label(definition, resolution, scope,
+                                   same_coin_keep)
         self.moments = tuple(sorted((m["id"], m["coin"],
                                      fmt_hour(m["start_dt"]))
                                     for m in moments))
@@ -228,6 +263,29 @@ class EventMap(list):
             {"config": self.config, "moments": list(self.moments),
              "events": sorted(list(ev) for ev in self)},
             sort_keys=True).encode()).hexdigest()
+
+
+def config_label(definition, resolution, scope, same_coin_keep="earliest"):
+    """The configuration string. "earliest" adds nothing, so every label
+    written before the fourth-fix run is unchanged; "latest" adds "+latest".
+    """
+    lab = "%s/%s/%s" % (definition, resolution, scope)
+    return lab + "+latest" if same_coin_keep == "latest" else lab
+
+
+def _tuple_fingerprint(tup):
+    """SHA-256 of a moments tuple, by the formula moments_sha256() uses."""
+    return hashlib.sha256(json.dumps(list(tup)).encode()).hexdigest()
+
+
+def event_map_fingerprint(em):
+    """SHA-256 of an EventMap's configuration, moments and events, by the
+    formula EventMap.sha256() uses, computed without calling a method of the
+    map (fourth-fix run, REVIEW-3 §4.2)."""
+    return hashlib.sha256(json.dumps(
+        {"config": em.config, "moments": list(em.moments),
+         "events": sorted(list(ev) for ev in list.__iter__(em))},
+        sort_keys=True).encode()).hexdigest()
 
 
 def identity_map(moments):
@@ -258,15 +316,23 @@ def verify_event_map(em):
     """Re-derive an EventMap from its own moments and configuration and
     refuse it if the events differ. A map edited by hand, or one carrying a
     configuration that did not make it, is refused."""
-    if not isinstance(em, EventMap):
+    # fourth-fix run: exactly EventMap, no subclass (REVIEW-3 §4.2)
+    if type(em) is not EventMap:
         raise TypeError("events must be an EventMap returned by collapse() "
                         "or identity_map(), not a %s" % type(em).__name__)
+    keep = getattr(em, "same_coin_keep", "earliest")
+    if em.config != config_label(em.definition, em.resolution, em.scope,
+                                 keep):
+        raise ValueError("the event map's configuration label %r is not the "
+                         "one its own fields make" % em.config)
     ms = _moments_from_tuple(em.moments)
     if em.config == "none/none/none":
         again = identity_map(ms)
     else:
-        again = collapse(ms, em.definition, em.resolution, em.scope)
-    if sorted(list(ev) for ev in again) != sorted(list(ev) for ev in em):
+        again = collapse(ms, em.definition, em.resolution, em.scope,
+                         same_coin_keep=keep)
+    if sorted(list(ev) for ev in again) != \
+            sorted(list(ev) for ev in list.__iter__(em)):
         raise ValueError("the event map does not match what its own "
                          "configuration %s makes from its own moments"
                          % em.config)
@@ -274,27 +340,102 @@ def verify_event_map(em):
 
 
 def collapse(moments, definition="start-hour", resolution="component",
-             scope="any"):
+             scope="any", same_coin_keep="earliest"):
     """moments: list of dicts with id, coin, start_dt (datetime).
 
     Returns an EventMap: a list of events, each a list of moment ids, that
     partition the input exactly once, carrying the configuration that made
     it. Deterministic: no randomness.
+
+    same_coin_keep (fourth-fix run): under greedy-clique with cross-coin,
+    which moment of a coin joins an event when two or more of that coin's
+    moments cover the chosen hour -- "earliest" (default, the existing path)
+    or "latest" (_greedy_literal()). Refused with any other configuration.
     """
-    return EventMap(_collapse_lists(moments, definition, resolution, scope),
-                    definition, resolution, scope, moments)
+    return EventMap(_collapse_lists(moments, definition, resolution, scope,
+                                    same_coin_keep),
+                    definition, resolution, scope, moments, same_coin_keep)
 
 
-def _collapse_lists(moments, definition, resolution, scope):
-    """The reviewed collapse() body, unchanged: returns plain lists."""
+def _whole_hour_index(t):
+    """A start time as an integer clock-hour index; refuses a time that is
+    not on the hour (a "clock hour" is then not defined)."""
+    # utctimetuple(): an aware time is converted to UTC, a naive one is read
+    # as it stands -- never through the machine's local time zone
+    import calendar
+    tt = t.utctimetuple()
+    if tt.tm_min or tt.tm_sec or t.microsecond:
+        raise ValueError("start time %s is not on a whole hour" % t)
+    return calendar.timegm(tt) // 3600
+
+
+def _greedy_literal(moments, gap, keep):
+    """Greedy-clique under cross-coin, read word for word from JQ-N1 part 2
+    (fourth-fix run, REVIEW-3 §4.3): in each round EVERY clock hour from the
+    earliest still-unassigned start to the latest start plus `gap` is a
+    candidate; a moment starting at hour s covers hours s .. s+gap (for
+    card-span this is the card's span shifted by a constant 24 h, which
+    changes neither the coverage counts nor which hour is earliest); the
+    hour covered by the most COINS wins, ties to the earliest hour (at one
+    hour there is only one set, so the card-number tie-break is never
+    reached); of each coin's moments covering that hour, the `keep` one
+    ("latest" or "earliest", by start hour, then card number) joins the
+    event; repeat. The engine uses this for "latest"; "earliest" is here
+    only so the check script can compare it with the engine's own path.
+    """
+    import bisect
+    if keep not in ("earliest", "latest"):
+        raise ValueError("same_coin_keep must be 'earliest' or 'latest'")
+    left = sorted(((_whole_hour_index(m["start_dt"]), m["id"], m["coin"])
+                   for m in moments))
+    events = []
+    while left:
+        hs = [x[0] for x in left]
+        best = None
+        for H in range(hs[0], hs[-1] + gap + 1):
+            lo = bisect.bisect_left(hs, H - gap)
+            hi = bisect.bisect_right(hs, H)
+            if lo >= hi:
+                continue
+            n_coins = len({x[2] for x in left[lo:hi]})
+            if best is None or (-n_coins, H) < best[0]:
+                best = ((-n_coins, H), lo, hi)
+        _, lo, hi = best
+        chosen = {}
+        for x in left[lo:hi]:            # sorted by (start hour, id)
+            if keep == "earliest":
+                chosen.setdefault(x[2], x)
+            else:
+                chosen[x[2]] = x         # the last one seen is the latest
+        ids = {x[1] for x in chosen.values()}
+        events.append(sorted(ids))
+        left = [x for x in left if x[1] not in ids]
+    events.sort(key=lambda g: g[0])
+    return events
+
+
+def _collapse_lists(moments, definition, resolution, scope,
+                    same_coin_keep="earliest"):
+    """The reviewed collapse() body, unchanged for "earliest": returns plain
+    lists. "latest" goes to _greedy_literal() (fourth-fix run)."""
     if definition not in DEFINITIONS:
         raise ValueError("unknown definition %r" % definition)
     if resolution not in RESOLUTIONS:
         raise ValueError("unknown resolution %r" % resolution)
     if scope not in SCOPES:
         raise ValueError("unknown scope %r" % scope)
+    if same_coin_keep not in ("earliest", "latest"):
+        raise ValueError("unknown same_coin_keep %r" % same_coin_keep)
 
     gap = DEFINITIONS[definition]
+    if same_coin_keep == "latest":
+        if not (resolution == "greedy-clique" and scope == "cross-coin"
+                and definition != "start-hour"):
+            raise ValueError("same_coin_keep='latest' exists only for "
+                             "greedy-clique with cross-coin under move-window "
+                             "or card-span; %s/%s/%s has no such choice"
+                             % (definition, resolution, scope))
+        return _greedy_literal(moments, gap, "latest")
     items = sorted(moments, key=lambda m: (m["start_dt"], m["id"]))
 
     def joinable(a, b):
@@ -512,12 +653,18 @@ def chance_line(answers, labels, events, id_order, mode,
     """
     if mode not in ("block", "representative"):
         raise ValueError("mode must be 'block' or 'representative'")
+    # fourth-fix run (REVIEW-3 §4.2): exactly EventMap, and every fingerprint
+    # computed here by module functions, never by a method of the map
+    if type(events) is not EventMap:
+        raise TypeError("events must be an EventMap returned by collapse() "
+                        "or identity_map(), not a %s" % type(events).__name__)
     verify_event_map(events)
+    map_moments_sha = _tuple_fingerprint(events.moments)
     if not isinstance(key_moments_sha256, str) or \
-            key_moments_sha256 != events.moments_sha256():
+            key_moments_sha256 != map_moments_sha:
         raise ValueError("the event map was not made from the moments of the "
                          "answer key: its moments fingerprint %s is not the "
-                         "key's %r" % (events.moments_sha256()[:16],
+                         "key's %r" % (map_moments_sha[:16],
                                        str(key_moments_sha256)[:16]))
     if not (len(answers) == len(labels) == len(id_order)):
         raise ValueError("answers, labels and id_order must be the same length")
@@ -527,8 +674,8 @@ def chance_line(answers, labels, events, id_order, mode,
     if sorted(m[0] for m in events.moments) != sorted(id_order):
         raise ValueError("the event map was made from different moments")
     rec = {"mode": mode, "config": events.config,
-           "event_map_sha256": events.sha256(),
-           "moments_sha256": events.moments_sha256(),
+           "event_map_sha256": event_map_fingerprint(events),
+           "moments_sha256": map_moments_sha,
            "cards": len(id_order), "events": len(events),
            "identity_partition": all(len(ev) == 1 for ev in events),
            "shuffles": shuffles, "top_fraction": fraction, "seed": seed,

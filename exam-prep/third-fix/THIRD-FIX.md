@@ -557,3 +557,18 @@ finding: REVIEW-2 decided nothing. I did not rename, for the reasons in R2-18.
 ## 9 · Fingerprints
 
 `exam-prep/third-fix/FINGERPRINTS.md`.
+
+---
+
+## Addendum · fourth-fix run, 2026-10-01 — read before relying on anything above
+
+Appended by Mateo (fourth-fix run). Nothing above was changed; the first
+37,391 bytes of this file are the file as the third review found it (SHA-256
+`98f7bbaa…092e`). Corrections, each with what was claimed, what it is now and
+why: `exam-prep/fourth-fix/FOURTH-FIX.md` §5, rows C4-1 to C4-6. In short:
+R2-1's "keep the latest" figures (12 and 30) are not of JQ-N1's wording (4
+and 21; 124 events at card-span) (C4-1); §4.4's nearest-neighbour tie-free
+figures and the K-5 pair-AUC acceptance figures were computed with distances
+compared in floating point, and their exact values differ slightly; no
+verdict changes (C4-2 … C4-4). §8's requirements are superseded by the
+fourth-fix section of `exam-prep/HANDED-FORWARD.md`.

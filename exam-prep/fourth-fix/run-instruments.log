@@ -1,0 +1,31 @@
+start 2026-10-01T21:26:01Z
+free bytes 12400771072
+a2e16ff0f8f2a7a6e908a0001be06e61664c87fca50b68f93367e9a63c1b2964  scripts/15_event_collapse.py
+cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f  scripts/29_identity_audit_exact.py
+96b0eb01c502a40b4e76c864681763206ba627b268eedb7eb19984f81d9b928e  scripts/lab_cards.py
+run 721b2448f1722ccf: 306 moments, 11 configurations -> exam-prep/fourth-fix/collapse/run-721b2448f1722ccf
+collapse done 2026-10-01T21:26:59Z
+run 9777f422fd2d2b41: 306 cards, 26 families
+audit raw done 2026-10-01T21:28:40Z
+run 9ff0ffec3fe21ebe: 306 cards, 26 families
+audit strict-flags done 2026-10-01T21:30:19Z
+run 989b8f21b23e0310: 306 cards, 26 families
+audit ratio done 2026-10-01T21:31:32Z
+run 446adf64f8e8235c: 306 cards, 26 families
+audit rank done 2026-10-01T21:32:57Z
+run 45d062efe77c9251: 306 cards, 26 families
+audit strict done 2026-10-01T21:34:39Z
+run 762815a877c19551: 306 cards, 26 families
+audit k1 done 2026-10-01T21:36:21Z
+run d6557e91f9f97f7b: 306 cards, 26 families
+end 2026-10-01T21:38:00Z
+# --- added after the batch, by hand (fourth-fix run) ---
+# scripts/15_event_collapse.py was changed once more after the collapse step
+# above (the hour index of _greedy_literal() no longer reads the machine's
+# local time zone; SHA-256 a2e16ff0… -> 002bb406…). The collapse step was then
+# re-run alone with the same command:
+#   python3 scripts/15_event_collapse.py --out exam-prep/fourth-fix/collapse
+#   -> run a0ecf6970d86b199. Its three CSVs, and those of run 721b2448f1722ccf,
+#   are byte-identical to run bec532fa008e0e01's (checked with cmp).
+# Run 721b2448f1722ccf is kept as history (RULES 30); a0ecf6970d86b199 is the
+# run of the final engine.

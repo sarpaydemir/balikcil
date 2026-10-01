@@ -300,3 +300,18 @@ Appended by Mateo (third-fix run). Nothing above was changed; the first
   together with the calm-overlap question, `JQ-CANTEEN-8.md`.
 - §8 is superseded, where it differs, by `exam-prep/HANDED-FORWARD.md`
   section B.
+
+## Addendum · fourth-fix run, 2026-10-01
+
+Appended by Mateo (fourth-fix run). Nothing above was changed; the first
+14,545 bytes of this file are the file as the third review found it (SHA-256
+`b5a80e7d…b460`).
+
+- The engine's key check no longer reads a method of the map it checks, and
+  `collapse()` offers "keep the latest" under greedy-clique with cross-coin,
+  implemented over every clock hour (`exam-prep/fourth-fix/FOURTH-FIX.md`
+  R3-2, R3-3).
+- §7's questions are now asked by `exam-prep/fourth-fix/juror-questions/JQ-N1.md`
+  with `JQ-CANTEEN-8.md` beside it.
+- §8 is superseded by the fourth-fix section of `exam-prep/HANDED-FORWARD.md`,
+  section B.

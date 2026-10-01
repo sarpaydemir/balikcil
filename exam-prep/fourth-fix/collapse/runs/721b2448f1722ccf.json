@@ -1,0 +1,167 @@
+{
+ "block_shuffle_selftest": {
+  "by_config": {
+   "card-span/component/any": {
+    "cards_in_immovable_events": 23,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 58,
+    "immovable_events": 2,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "card-span/component/cross-coin": {
+    "cards_in_immovable_events": 44,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 62,
+    "immovable_events": 3,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "card-span/greedy-clique/any": {
+    "cards_in_immovable_events": 0,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 116,
+    "immovable_events": 0,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "card-span/greedy-clique/cross-coin": {
+    "cards_in_immovable_events": 0,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 125,
+    "immovable_events": 0,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "move-window/component/any": {
+    "cards_in_immovable_events": 8,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 131,
+    "immovable_events": 1,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "move-window/component/cross-coin": {
+    "cards_in_immovable_events": 8,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 136,
+    "immovable_events": 1,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "move-window/greedy-clique/any": {
+    "cards_in_immovable_events": 5,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 161,
+    "immovable_events": 1,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "move-window/greedy-clique/cross-coin": {
+    "cards_in_immovable_events": 5,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 168,
+    "immovable_events": 1,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "none/none/none": {
+    "cards_in_immovable_events": 0,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 306,
+    "immovable_events": 0,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "start-hour/component/any": {
+    "cards_in_immovable_events": 0,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 289,
+    "immovable_events": 0,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   },
+   "start-hour/component/cross-coin": {
+    "cards_in_immovable_events": 0,
+    "draws": 1000,
+    "event_constant_preserved": 1000,
+    "events": 289,
+    "immovable_events": 0,
+    "permutation_ok": 1000,
+    "seed": 20260913,
+    "single_source_ok": 1000
+   }
+  },
+  "review_example": {
+   "cards_in_immovable_events": 6,
+   "draws": 1000,
+   "event_constant_preserved": 1000,
+   "events": 3,
+   "immovable_events": 3,
+   "permutation_ok": 1000,
+   "seed": 20260913,
+   "single_source_ok": 1000
+  }
+ },
+ "configurations": 11,
+ "event_map_sha256_by_config": {
+  "card-span/component/any": "021cab6b1ab37fba28662247ee5525c4f9db0462f1f738eb8d2f7b5ec3fc1ce5",
+  "card-span/component/cross-coin": "ef23b18dadda731bc099fa78221808f003d320206cec752f060f6f2e4597e280",
+  "card-span/greedy-clique/any": "8975e82152ecdd51aa6c271dc9fc074a8149912ffbf14173a15e9408088d1a70",
+  "card-span/greedy-clique/cross-coin": "4bf1703b67ba13d6f5b23fea16c308b35bbc664306242a6390ddfb0fe7b27e33",
+  "move-window/component/any": "960cae8b8183c845c65e787e4b4f5acf211929f73d7e5e0227cbe51a5d8c62ba",
+  "move-window/component/cross-coin": "75b0f00e3e8aeedb307a9ac60baf7fdd1afc67dd78138e8f539d39565bb55691",
+  "move-window/greedy-clique/any": "90710a493e18689a87a984d02b3eb22d6263c33e441001340c1ee000fc926381",
+  "move-window/greedy-clique/cross-coin": "69a4a2e0cacf1f8c3268df24e8edd31960e96d09395460596602bf421c2a9d91",
+  "none/none/none": "3d904d31acf871084d211e79f02a1c1cde63b88917433ffd733b569c9608c796",
+  "start-hour/component/any": "9658402b1c3e68b1be36398fbc7594395a515a3b00cff9b4bcae3d582c6b2bb0",
+  "start-hour/component/cross-coin": "64b2b25e9941400ea0aa06ff1f24f614c12bf52b35abdae67d0149aad67c05dc"
+ },
+ "events_by_config": {
+  "card-span/component/any": 58,
+  "card-span/component/cross-coin": 62,
+  "card-span/greedy-clique/any": 116,
+  "card-span/greedy-clique/cross-coin": 125,
+  "move-window/component/any": 131,
+  "move-window/component/cross-coin": 136,
+  "move-window/greedy-clique/any": 161,
+  "move-window/greedy-clique/cross-coin": 168,
+  "none/none/none": 306,
+  "start-hour/component/any": 289,
+  "start-hour/component/cross-coin": 289
+ },
+ "input_fingerprint": "721b2448f1722ccf6c68a4f28b15a5f3a6401a92a37b1f44638b533f38d0de7f",
+ "key_moments_sha256": "7c900a10b379b85edb0eed000d698997cdc87e4733f7f3da25c9ed3080eb14f6",
+ "moments": 306,
+ "output_dir": "exam-prep/fourth-fix/collapse/run-721b2448f1722ccf",
+ "output_sha256": {
+  "collapse-summary.csv": "94d9205c77918551b4fbe0df9806abdf14d0599ae96ed911553e446652676bcd",
+  "events.csv": "7d887b831847b8838735ec0db334238cda51d9709ec6d7c97a1aa12f1faba727",
+  "shuffle-calibration.csv": "0c4b27f9556086644ff5ad9137322a06854f64b78daf9bf1babebd73115b5cd7"
+ },
+ "run": "721b2448f1722ccf",
+ "script_sha256": "a2e16ff0f8f2a7a6e908a0001be06e61664c87fca50b68f93367e9a63c1b2964",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "top_fraction": 0.01
+}

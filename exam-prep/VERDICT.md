@@ -358,3 +358,141 @@ closed**; **nothing was measured on exam cards**; **no juror question is
 ratified**.
 
 Nothing under `exam/` was read or written by this run.
+
+---
+---
+
+# Fourth-fix run · 2026-10-01 — acting on `exam-prep/REVIEW-3.md`
+
+Mateo · data engineer · appended 2026-10-01 (system clock, RULES 23).
+**Nothing above this line was changed**: the first 19,176 bytes of this file
+are the file as the third review found it (SHA-256
+`ba859a5470c9e4842350561e3aa5a84359c1e64804989c472f7f06b704f340ee`). This
+section says what happened, not how; the working is in
+`exam-prep/fourth-fix/FOURTH-FIX.md`, and what later runs must do is in the
+last section of `exam-prep/HANDED-FORWARD.md`, which is complete on its own.
+
+## The two problems now
+
+| problem | third-fix verdict | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | NOT SOLVED | **NOT SOLVED.** The audit now compares distances exactly; on every blinded version of the observation cards the acceptance-gate row still beats both of its lines, with the same figures as before. What closes R-04 is now written as a checkable standard (HANDED-FORWARD, fourth-fix section, A-0). |
+| **N-1 · collapse before counting** | not usable yet | **The instrument is ready; N-1 is not usable yet.** The engine's key check no longer trusts the object it checks, and both "earliest" and "latest" conventions are implemented and checked. What remains is the jurors' and the referee's (JQ-N1 group with JQ-CANTEEN-8) and the judge's script (HANDED-FORWARD B-1 … B-5). |
+
+## Outcome of every REVIEW-3 item
+
+Numbering: `exam-prep/fourth-fix/FOURTH-FIX.md` §1.
+
+| item | outcome |
+|---|---|
+| R3-1 | **Done**; ratification **referred to jurors** (JQ-N1 group). |
+| R3-2 | **Done** in the engine, and **handed forward** (B-3's independent recomputation). |
+| R3-3 | **Done** in the engine; its use **handed forward** (B-1). |
+| R3-4 | **Done** (new audit script; figures replaced); **handed forward** (A-2). |
+| R3-5 | **Done.** |
+| R3-6 | **Referred to jurors** — JQ-R04-CONTENT-c. |
+| R3-7 | **Done**; commissioning **referred to the coordinator**. |
+| R3-8 | **Handed forward** (A-0, A-0.1 … A-0.6). |
+| R3-9 | **Handed forward** (A-0.2, A-1). |
+| R3-10 | **Handed forward** (A-0.4, A-2); the choice itself **not made** — a disagreement goes to the coordinator. |
+| R3-11 | **Done.** |
+| R3-12 | **Done** (not required). |
+| R3-13 | **Referred to the coordinator** (below). |
+| R3-14 | **Handed forward** as information, not as a requirement. |
+| R3-15 | **Handed forward** as information; nothing decided. |
+| R3-16 | **Not done**; still **referred to the coordinator**. |
+| R3-17 | **Referred to the coordinator** (below). |
+| R3-18 | **Done** where a juror sees such a verdict. |
+
+## The juror rows
+
+| identifier | outcome |
+|---|---|
+| JQ-N1-1 | unchanged (fit) |
+| JQ-N1-2 | corrected — checked: fit |
+| JQ-N1-3 | corrected — checked: fit |
+| JQ-N1-4 | corrected — checked: fit |
+| JQ-CANTEEN-8 | corrected — checked: fit |
+| JQ-R04-GATE | unchanged (fit); **not touched** |
+| JQ-R04-DATE-a | unchanged (fit) |
+| JQ-R04-DATE-b | unchanged (fit) |
+| JQ-R04-DATE-c | unchanged (fit) |
+| JQ-R04-CONTENT-a | corrected — checked: fit |
+| JQ-R04-CONTENT-b | corrected — checked: fit |
+| JQ-R04-CONTENT-c | added — checked: fit |
+| JQ-B1 | unchanged (withdrawn) |
+
+"Unchanged" rows whose file had to be re-issued (because a file they point
+to moved) keep their text word for word; that is checked. Every row was
+checked against the standard the reviews applied (FOURTH-FIX §3), and every
+number and line citation in the files issued by this run against its source
+(`scripts/31_juror_file_check_fourth.py`, run `4b4d4795eb488c94`: 59 checks,
+0 failed). `exam-prep/JUROR-QUESTIONS.md` is re-issued; it carries no
+wording, options or numbers of any question, and both earlier versions are
+kept byte for byte.
+
+**JQ-R04-GATE does not need to change.** Its file was not touched (SHA-256
+still `55e7b95c…16ce`). Every figure in its table equals the exact audit's,
+and its statement that no card on the gate row has an exactly tied nearest
+neighbour holds under exact arithmetic on all five versions it shows. The
+one gap the third review found around it — which nearest-neighbour version
+grades if an exam gate row has a tie — is handled outside the question:
+HANDED-FORWARD A-0.4 and A-2 compute both and stop if they disagree. If the
+coordinator prefers jurors to settle that in advance, it would be a new
+question, not a change to this file.
+
+## For the coordinator
+
+1. **R3-17.** The third-fix section of this file ("What R-04's closure
+   depends on", point 2) and `exam-prep/third-fix/THIRD-FIX.md` §4.5 say
+   which readings of the gate fail on the material measured so far. Neither
+   may reach a JQ-R04-GATE juror or its referee (RULES 6). I cannot see
+   whether either was included in their commission.
+2. **R3-13.** A referee ratifying both JQ-R04-GATE (its optional second
+   part) and the JQ-N1 group should check that their two readings of
+   RULES 13 do not contradict each other.
+3. **R3-6.** The third review allowed a second route for the rank-source
+   question: the coordinator records a reason why it is engineering. I wrote
+   it as a juror question instead (JQ-R04-CONTENT-c) because the choice
+   changes the numbers and no written rule settles it; the other route
+   remains the coordinator's.
+4. **R3-16.** Whether a subject in an identifier is content is still
+   undecided.
+5. **R3-7.** Both coupled groups can now be commissioned; JQ-R04-CONTENT-c is
+   new and has not yet been reviewed.
+
+## Where I disagree with the third review (RULES 32)
+
+No disagreement. One extension: the floating-point comparison the review
+found in the nearest-neighbour ties also set the pair-AUC ranks; five
+pair-AUC figures shown to jurors moved in the third or fourth decimal and no verdict changed
+(FOURTH-FIX C4-3).
+
+## `RULES.md`
+
+**No change to `RULES.md` is required by anything this run did or referred.**
+The path named by the second-fix and third-fix runs (a measured channel that
+cannot be removed, and whether RULES 9 accepts it) remains possible and has
+not been reached.
+
+## A steer in the instruction I was given
+
+I found no result, no prediction and no fix chosen for me. Mild
+presumptions, named: the reason given for the model choice ("two juries wait
+on the questions this run is responsible for, and the exam's instruments
+inherit whatever this run leaves wrong") presumes something is left wrong;
+"for each juror-question row the third review rules not fit, if any" and
+"if anything would require changing a rule" presume nothing. "Where the
+review says a point belongs to jurors, write it as a juror question in the
+group the review names" directs procedure, not an outcome; I followed it for
+the rank source and say so above (item 3). The instruction tells me jurors
+are answering JQ-R04-GATE now; that is information, and it is why script 16
+and the GATE file were left untouched.
+
+## What this run did not do
+
+FOURTH-FIX §7, nine items. The ones that matter most: **R-04 is not
+solved**; **nothing was measured on exam cards**; **no juror question is
+ratified**.
+
+Nothing under `exam/` was read or written by this run.

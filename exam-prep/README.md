@@ -79,3 +79,18 @@ do), `third-fix/THIRD-FIX.md`, `third-fix/criteria-written-before-measuring.md`,
 `third-fix/juror-questions/`, `third-fix/checks/`, `third-fix/FINGERPRINTS.md`.
 New outputs live in `third-fix/` and in `collapse/run-bec532fa008e0e01/`;
 nothing written by an earlier run was overwritten.
+
+---
+
+## Addendum · fourth-fix run, 2026-10-01
+
+Appended by Mateo (fourth-fix run); nothing above was changed (its first
+4,375 bytes still hash to `4daca76f…032a`). After the third review
+(`REVIEW-3.md`), a fourth run acted on it. Read, in this order: `VERDICT.md`
+(its last appended section), `JUROR-QUESTIONS.md` (re-issued; earlier
+versions kept), `HANDED-FORWARD.md` (**its last section only**: it is
+complete), `fourth-fix/FOURTH-FIX.md`,
+`fourth-fix/criteria-written-before-measuring.md`,
+`fourth-fix/juror-questions/`, `fourth-fix/checks/`,
+`fourth-fix/FINGERPRINTS.md`. New outputs live in `fourth-fix/`; nothing
+written by an earlier run was overwritten.

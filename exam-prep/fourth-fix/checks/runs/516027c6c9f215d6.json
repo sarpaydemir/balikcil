@@ -1,0 +1,2091 @@
+{
+ "input_fingerprint": "516027c6c9f215d6930eb88080a9939cd0ca10c6786340a483fd02b548a2e2eb",
+ "results": {
+  "H-1": {
+   "all_as_expected": true,
+   "attempts": [
+    {
+     "as_expected": true,
+     "attempt": "q4-0 true map, true key",
+     "detail": "events 58, key_check matched, record event_map_sha256 021cab6b1ab3\u2026",
+     "expected": "accepted",
+     "result": "accepted"
+    },
+    {
+     "as_expected": true,
+     "attempt": "q4-1 one coin changed, true key",
+     "detail": "ValueError: the event map was not made from the moments of the answer key: its moments finge",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "q4-2 extra moment, true key",
+     "detail": "ValueError: the event map was not made from the moments of the answer key: its moments finge",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "q4-3 forged hour, instance method patched to return the key",
+     "detail": "ValueError: the event map was not made from the moments of the answer key: its moments finge",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "q4-4 forged hour, subclass overriding moments_sha256()",
+     "detail": "TypeError: events must be an EventMap returned by collapse() or identity_map(), not a EM",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "q4-5 forged hour, .moments overwritten with the true tuple",
+     "detail": "ValueError: the event map does not match what its own configuration card-span/component/any ",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-6 TRUE map wrapped in a subclass, true key",
+     "detail": "TypeError: events must be an EventMap returned by collapse() or identity_map(), not a EM",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "G1 forged hours (half the moments moved 1,000 h), true key",
+     "detail": "ValueError: the event map was not made from the moments of the answer key: its moments finge",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "G1 key omitted",
+     "detail": "TypeError: chance_line() missing 1 required keyword-only argument: 'key_moments_sha256'",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "G1 key None",
+     "detail": "ValueError: the event map was not made from the moments of the answer key: its moments finge",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-8 configuration label changed after construction",
+     "detail": "ValueError: the event map's configuration label 'card-span/greedy-clique/cross-coin' is not ",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-9 same_coin_keep changed after construction",
+     "detail": "ValueError: the event map's configuration label 'card-span/greedy-clique/cross-coin' is not ",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-10 a plain list of events",
+     "detail": "TypeError: events must be an EventMap returned by collapse() or identity_map(), not a list",
+     "expected": "refused",
+     "result": "refused"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-11 true map, instance sha256() patched to a constant",
+     "detail": "events 58, key_check matched, record event_map_sha256 021cab6b1ab3\u2026",
+     "expected": "accepted",
+     "result": "accepted"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-12 'latest' card-span map, true key",
+     "detail": "events 124, key_check matched, record event_map_sha256 c8164274b16f\u2026",
+     "expected": "accepted",
+     "result": "accepted"
+    },
+    {
+     "as_expected": true,
+     "attempt": "H1-13 'latest' requested with component",
+     "detail": "ValueError: same_coin_keep='latest' exists only for greedy-clique with cross-coin under move",
+     "expected": "refused",
+     "result": "refused"
+    }
+   ],
+   "patched_sha256_not_in_record": true,
+   "record_event_map_sha256_equals_method": true
+  },
+  "H-2": {
+   "accepted": true,
+   "observation": {
+    "card-span": {
+     "engine_earliest_events": 125,
+     "engine_latest_events": 124,
+     "events_in_one_partition_only_latest_vs_earliest": 21,
+     "latest_equals_p1b": true,
+     "latest_equals_q1_literal": true,
+     "literal_earliest_equals_engine_earliest": true,
+     "table_row": {
+      "block_cards_in_immovable_events": 0,
+      "block_immovable_events": 0,
+      "events": 124,
+      "events_holding_2plus_cards_of_one_coin": 0,
+      "events_holding_both_kinds": 60,
+      "events_of_1_card": 39,
+      "largest_event": 7,
+      "largest_same_coin_count": 1
+     }
+    },
+    "move-window": {
+     "engine_earliest_events": 168,
+     "engine_latest_events": 168,
+     "events_in_one_partition_only_latest_vs_earliest": 4,
+     "latest_equals_p1b": true,
+     "latest_equals_q1_literal": true,
+     "literal_earliest_equals_engine_earliest": true,
+     "table_row": {
+      "block_cards_in_immovable_events": 5,
+      "block_immovable_events": 1,
+      "events": 168,
+      "events_holding_2plus_cards_of_one_coin": 0,
+      "events_holding_both_kinds": 50,
+      "events_of_1_card": 78,
+      "largest_event": 6,
+      "largest_same_coin_count": 1
+     }
+    }
+   },
+   "random": {
+    "card-span: latest vs q1 literal": 0,
+    "card-span: literal earliest vs engine earliest": 0,
+    "move-window: latest vs q1 literal": 0,
+    "move-window: literal earliest vs engine earliest": 0
+   }
+  },
+  "H-3": {
+   "accepted": true,
+   "q2": {
+    "blinded-strict-flags": [
+     {
+      "audit_line": "0.1797",
+      "audit_tie_free": "0.1471",
+      "audit_tied": "20",
+      "equal": true,
+      "family": "price-level",
+      "q2_line": "0.1797",
+      "q2_tie_free": "0.1471",
+      "q2_tied_exact": "20"
+     },
+     {
+      "audit_line": "0.1765",
+      "audit_tie_free": "0.1601",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "volatility-frozen",
+      "q2_line": "0.1765",
+      "q2_tie_free": "0.1601",
+      "q2_tied_exact": "0"
+     },
+     {
+      "audit_line": "0.1285",
+      "audit_tie_free": "0.1186",
+      "audit_tied": "306",
+      "equal": true,
+      "family": "volume-level",
+      "q2_line": "0.1285",
+      "q2_tie_free": "0.1186",
+      "q2_tied_exact": "306"
+     },
+     {
+      "audit_line": "0.1403",
+      "audit_tie_free": "0.1541",
+      "audit_tied": "300",
+      "equal": true,
+      "family": "trades-level",
+      "q2_line": "0.1403",
+      "q2_tie_free": "0.1541",
+      "q2_tied_exact": "300"
+     },
+     {
+      "audit_line": "0.1310",
+      "audit_tie_free": "0.1420",
+      "audit_tied": "303",
+      "equal": true,
+      "family": "openint-level",
+      "q2_line": "0.1310",
+      "q2_tie_free": "0.1420",
+      "q2_tied_exact": "303"
+     },
+     {
+      "audit_line": "0.1313",
+      "audit_tie_free": "0.1471",
+      "audit_tied": "305",
+      "equal": true,
+      "family": "depth-level",
+      "q2_line": "0.1313",
+      "q2_tie_free": "0.1471",
+      "q2_tied_exact": "305"
+     },
+     {
+      "audit_line": "0.1648",
+      "audit_tie_free": "0.1345",
+      "audit_tied": "167",
+      "equal": true,
+      "family": "ratio-level",
+      "q2_line": "0.1648",
+      "q2_tie_free": "0.1345",
+      "q2_tied_exact": "167"
+     },
+     {
+      "audit_line": "0.1311",
+      "audit_tie_free": "0.1198",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "taker-buy",
+      "q2_line": "0.1311",
+      "q2_tie_free": "0.1198",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1248",
+      "audit_tie_free": "0.1519",
+      "audit_tied": "305",
+      "equal": true,
+      "family": "funding-line",
+      "q2_line": "0.1248",
+      "q2_tie_free": "0.1519",
+      "q2_tied_exact": "305"
+     },
+     {
+      "audit_line": "0.1797",
+      "audit_tie_free": "0.1503",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "p7-shape",
+      "q2_line": "0.1797",
+      "q2_tie_free": "0.1503",
+      "q2_tied_exact": "0"
+     },
+     {
+      "audit_line": "0.1732",
+      "audit_tie_free": "0.1471",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "shape-scale-free",
+      "q2_line": "0.1732",
+      "q2_tie_free": "0.1471",
+      "q2_tied_exact": "0"
+     },
+     {
+      "audit_line": "0.1387",
+      "audit_tie_free": "0.1408",
+      "audit_tied": "293",
+      "equal": true,
+      "family": "repeat-close",
+      "q2_line": "0.1387",
+      "q2_tie_free": "0.1408",
+      "q2_tied_exact": "293"
+     },
+     {
+      "audit_line": "0.1345",
+      "audit_tie_free": "0.1429",
+      "audit_tied": "301",
+      "equal": true,
+      "family": "repeat-chg",
+      "q2_line": "0.1345",
+      "q2_tie_free": "0.1429",
+      "q2_tied_exact": "301"
+     },
+     {
+      "audit_line": "0.1298",
+      "audit_tie_free": "0.1297",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "repeat-volume",
+      "q2_line": "0.1298",
+      "q2_tie_free": "0.1297",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1619",
+      "audit_tie_free": "0.2134",
+      "audit_tied": "236",
+      "equal": true,
+      "family": "repeat-trades",
+      "q2_line": "0.1619",
+      "q2_tie_free": "0.2134",
+      "q2_tied_exact": "236"
+     },
+     {
+      "audit_line": "0.1327",
+      "audit_tie_free": "0.1212",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "repeat-takerbuy",
+      "q2_line": "0.1327",
+      "q2_tie_free": "0.1212",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1427",
+      "audit_tie_free": "0.2028",
+      "audit_tied": "289",
+      "equal": true,
+      "family": "repeat-openint",
+      "q2_line": "0.1427",
+      "q2_tie_free": "0.2028",
+      "q2_tied_exact": "289"
+     },
+     {
+      "audit_line": "0.1765",
+      "audit_tie_free": "0.1863",
+      "audit_tied": "5",
+      "equal": true,
+      "family": "repeat-ratio",
+      "q2_line": "0.1765",
+      "q2_tie_free": "0.1863",
+      "q2_tied_exact": "5"
+     },
+     {
+      "audit_line": "0.1423",
+      "audit_tie_free": "0.2147",
+      "audit_tied": "273",
+      "equal": true,
+      "family": "repeat-depth",
+      "q2_line": "0.1423",
+      "q2_tie_free": "0.2147",
+      "q2_tied_exact": "273"
+     },
+     {
+      "audit_line": "0.1337",
+      "audit_tie_free": "0.1948",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "granularity-close",
+      "q2_line": "0.1337",
+      "q2_tie_free": "0.1948",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1699",
+      "audit_tie_free": "0.4085",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "ALL-removable",
+      "q2_line": "0.1699",
+      "q2_tie_free": "0.4085",
+      "q2_tied_exact": "0"
+     }
+    ],
+    "blinded-strict-flags-k1": [
+     {
+      "audit_line": "0.1403",
+      "audit_tie_free": "0.1541",
+      "audit_tied": "300",
+      "equal": true,
+      "family": "trades-level",
+      "q2_line": "0.1403",
+      "q2_tie_free": "0.1541",
+      "q2_tied_exact": "300"
+     },
+     {
+      "audit_line": "0.1401",
+      "audit_tie_free": "0.1510",
+      "audit_tied": "293",
+      "equal": true,
+      "family": "repeat-close",
+      "q2_line": "0.1401",
+      "q2_tie_free": "0.1510",
+      "q2_tied_exact": "293"
+     },
+     {
+      "audit_line": "0.1619",
+      "audit_tie_free": "0.2134",
+      "audit_tied": "236",
+      "equal": true,
+      "family": "repeat-trades",
+      "q2_line": "0.1619",
+      "q2_tie_free": "0.2134",
+      "q2_tied_exact": "236"
+     },
+     {
+      "audit_line": "0.1567",
+      "audit_tie_free": "0.2525",
+      "audit_tied": "257",
+      "equal": true,
+      "family": "granularity-close",
+      "q2_line": "0.1567",
+      "q2_tie_free": "0.2525",
+      "q2_tied_exact": "257"
+     },
+     {
+      "audit_line": "0.1765",
+      "audit_tie_free": "0.4346",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "ALL-removable",
+      "q2_line": "0.1765",
+      "q2_tie_free": "0.4346",
+      "q2_tied_exact": "0"
+     }
+    ],
+    "blinded-strict-flags-unrounded": [
+     {
+      "audit_line": "0.1797",
+      "audit_tie_free": "0.1471",
+      "audit_tied": "20",
+      "equal": true,
+      "family": "price-level",
+      "q2_line": "0.1797",
+      "q2_tie_free": "0.1471",
+      "q2_tied_exact": "20"
+     },
+     {
+      "audit_line": "0.1765",
+      "audit_tie_free": "0.1601",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "volatility-frozen",
+      "q2_line": "0.1765",
+      "q2_tie_free": "0.1601",
+      "q2_tied_exact": "0"
+     },
+     {
+      "audit_line": "0.1256",
+      "audit_tie_free": "0.1256",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "trades-level",
+      "q2_line": "0.1256",
+      "q2_tie_free": "0.1256",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1250",
+      "audit_tie_free": "0.1202",
+      "audit_tied": "306",
+      "equal": true,
+      "family": "ratio-level",
+      "q2_line": "0.1250",
+      "q2_tie_free": "0.1202",
+      "q2_tied_exact": "306"
+     },
+     {
+      "audit_line": "0.1248",
+      "audit_tie_free": "0.1519",
+      "audit_tied": "305",
+      "equal": true,
+      "family": "funding-line",
+      "q2_line": "0.1248",
+      "q2_tie_free": "0.1519",
+      "q2_tied_exact": "305"
+     },
+     {
+      "audit_line": "0.1797",
+      "audit_tie_free": "0.1503",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "p7-shape",
+      "q2_line": "0.1797",
+      "q2_tie_free": "0.1503",
+      "q2_tied_exact": "0"
+     },
+     {
+      "audit_line": "0.1765",
+      "audit_tie_free": "0.1373",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "shape-scale-free",
+      "q2_line": "0.1765",
+      "q2_tie_free": "0.1373",
+      "q2_tied_exact": "0"
+     },
+     {
+      "audit_line": "0.1387",
+      "audit_tie_free": "0.1408",
+      "audit_tied": "293",
+      "equal": true,
+      "family": "repeat-close",
+      "q2_line": "0.1387",
+      "q2_tie_free": "0.1408",
+      "q2_tied_exact": "293"
+     },
+     {
+      "audit_line": "0.1345",
+      "audit_tie_free": "0.1429",
+      "audit_tied": "301",
+      "equal": true,
+      "family": "repeat-chg",
+      "q2_line": "0.1345",
+      "q2_tie_free": "0.1429",
+      "q2_tied_exact": "301"
+     },
+     {
+      "audit_line": "0.1248",
+      "audit_tie_free": "0.1210",
+      "audit_tied": "306",
+      "equal": true,
+      "family": "repeat-trades",
+      "q2_line": "0.1248",
+      "q2_tie_free": "0.1210",
+      "q2_tied_exact": "306"
+     },
+     {
+      "audit_line": "0.1285",
+      "audit_tie_free": "0.1221",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "repeat-openint",
+      "q2_line": "0.1285",
+      "q2_tie_free": "0.1221",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1282",
+      "audit_tie_free": "0.1220",
+      "audit_tied": "306",
+      "equal": true,
+      "family": "repeat-ratio",
+      "q2_line": "0.1282",
+      "q2_tie_free": "0.1220",
+      "q2_tied_exact": "306"
+     },
+     {
+      "audit_line": "0.1291",
+      "audit_tie_free": "0.1194",
+      "audit_tied": "302",
+      "equal": true,
+      "family": "repeat-depth",
+      "q2_line": "0.1291",
+      "q2_tie_free": "0.1194",
+      "q2_tied_exact": "302"
+     },
+     {
+      "audit_line": "0.1337",
+      "audit_tie_free": "0.1948",
+      "audit_tied": "304",
+      "equal": true,
+      "family": "granularity-close",
+      "q2_line": "0.1337",
+      "q2_tie_free": "0.1948",
+      "q2_tied_exact": "304"
+     },
+     {
+      "audit_line": "0.1765",
+      "audit_tie_free": "0.2386",
+      "audit_tied": "0",
+      "equal": true,
+      "family": "ALL-removable",
+      "q2_line": "0.1765",
+      "q2_tie_free": "0.2386",
+      "q2_tied_exact": "0"
+     }
+    ]
+   },
+   "sets": {
+    "blinded-rank": {
+     "cells_differing": [
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.150327",
+       "family": "funding-line",
+       "third_fix": "0.153595"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.592675",
+       "family": "funding-line",
+       "third_fix": "0.592679"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511202",
+       "family": "funding-line",
+       "third_fix": "0.5112"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "186",
+       "family": "funding-line",
+       "third_fix": "184"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.088235",
+       "family": "funding-line",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_high",
+       "exact": "0.535948",
+       "family": "funding-line",
+       "third_fix": "0.53268"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.182594",
+       "family": "funding-line",
+       "third_fix": "0.183139"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.162494",
+       "family": "funding-line",
+       "third_fix": "0.162366"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.541608",
+       "family": "repeat-close",
+       "third_fix": "0.542144"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.510755",
+       "family": "repeat-close",
+       "third_fix": "0.510666"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512968",
+       "family": "repeat-chg",
+       "third_fix": "0.512879"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505981",
+       "family": "repeat-volume",
+       "third_fix": "0.506038"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511495",
+       "family": "repeat-volume",
+       "third_fix": "0.511512"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.22549",
+       "family": "repeat-trades",
+       "third_fix": "0.232026"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.585348",
+       "family": "repeat-trades",
+       "third_fix": "0.58522"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512775",
+       "family": "repeat-trades",
+       "third_fix": "0.512746"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "236",
+       "family": "repeat-trades",
+       "third_fix": "231"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.078431",
+       "family": "repeat-trades",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.213445",
+       "family": "repeat-trades",
+       "third_fix": "0.22216"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.161858",
+       "family": "repeat-trades",
+       "third_fix": "0.16227"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505313",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.505484"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512732",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.513182"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.621996",
+       "family": "repeat-openint",
+       "third_fix": "0.621051"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513399",
+       "family": "repeat-openint",
+       "third_fix": "0.513329"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.142742",
+       "family": "repeat-openint",
+       "third_fix": "0.141941"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "5",
+       "family": "repeat-ratio",
+       "third_fix": "4"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.535053",
+       "family": "repeat-depth",
+       "third_fix": "0.535063"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513322",
+       "family": "repeat-depth",
+       "third_fix": "0.51332"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.599532",
+       "family": "granularity-close",
+       "third_fix": "0.596809"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512967",
+       "family": "granularity-close",
+       "third_fix": "0.513207"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.194823",
+       "family": "granularity-close",
+       "third_fix": "0.194551"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.133656",
+       "family": "granularity-close",
+       "third_fix": "0.133443"
+      }
+     ],
+     "exact_run": "446adf64f8e8235c",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.513237",
+      "cards_with_tied_nn": "0",
+      "features_used": "47",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.169935",
+      "nn_same_coin_accuracy": "0.447712",
+      "nn_tie_free": "0.447712",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.169935",
+      "pair_auc": "0.581433"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "96f1d17e27b8afaf"
+    },
+    "blinded-ratio": {
+     "cells_differing": [
+      {
+       "column": "pair_auc",
+       "exact": "0.526249",
+       "family": "trades-level",
+       "third_fix": "0.52623"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513459",
+       "family": "trades-level",
+       "third_fix": "0.513451"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.150327",
+       "family": "funding-line",
+       "third_fix": "0.153595"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.592675",
+       "family": "funding-line",
+       "third_fix": "0.592679"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511202",
+       "family": "funding-line",
+       "third_fix": "0.5112"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "186",
+       "family": "funding-line",
+       "third_fix": "184"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.088235",
+       "family": "funding-line",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_high",
+       "exact": "0.535948",
+       "family": "funding-line",
+       "third_fix": "0.53268"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.182594",
+       "family": "funding-line",
+       "third_fix": "0.183139"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.162494",
+       "family": "funding-line",
+       "third_fix": "0.162366"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.541608",
+       "family": "repeat-close",
+       "third_fix": "0.542144"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.510755",
+       "family": "repeat-close",
+       "third_fix": "0.510666"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512968",
+       "family": "repeat-chg",
+       "third_fix": "0.512879"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.22549",
+       "family": "repeat-trades",
+       "third_fix": "0.232026"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.585348",
+       "family": "repeat-trades",
+       "third_fix": "0.58522"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512775",
+       "family": "repeat-trades",
+       "third_fix": "0.512746"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "236",
+       "family": "repeat-trades",
+       "third_fix": "231"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.078431",
+       "family": "repeat-trades",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.213445",
+       "family": "repeat-trades",
+       "third_fix": "0.22216"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.161858",
+       "family": "repeat-trades",
+       "third_fix": "0.16227"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505313",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.505484"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512732",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.513182"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.104575",
+       "family": "repeat-openint",
+       "third_fix": "0.111111"
+      },
+      {
+       "column": "nn_chance_1pct",
+       "exact": "0.173203",
+       "family": "repeat-openint",
+       "third_fix": "0.169935"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.534734",
+       "family": "repeat-openint",
+       "third_fix": "0.53459"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512364",
+       "family": "repeat-openint",
+       "third_fix": "0.512409"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "284",
+       "family": "repeat-openint",
+       "third_fix": "283"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.114634",
+       "family": "repeat-openint",
+       "third_fix": "0.11507"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.148424",
+       "family": "repeat-openint",
+       "third_fix": "0.148615"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "5",
+       "family": "repeat-ratio",
+       "third_fix": "3"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.538307",
+       "family": "repeat-depth",
+       "third_fix": "0.538332"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512936",
+       "family": "repeat-depth",
+       "third_fix": "0.512939"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.181438",
+       "family": "repeat-depth",
+       "third_fix": "0.18171"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.149987",
+       "family": "repeat-depth",
+       "third_fix": "0.149343"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.599532",
+       "family": "granularity-close",
+       "third_fix": "0.596809"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512967",
+       "family": "granularity-close",
+       "third_fix": "0.513207"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.194823",
+       "family": "granularity-close",
+       "third_fix": "0.194551"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.133656",
+       "family": "granularity-close",
+       "third_fix": "0.133443"
+      }
+     ],
+     "exact_run": "989b8f21b23e0310",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.5126",
+      "cards_with_tied_nn": "0",
+      "features_used": "40",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.173203",
+      "nn_same_coin_accuracy": "0.405229",
+      "nn_tie_free": "0.405229",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.173203",
+      "pair_auc": "0.615496"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "12b07f79e74f0be7"
+    },
+    "blinded-strict": {
+     "cells_differing": [
+      {
+       "column": "pair_auc",
+       "exact": "0.52952",
+       "family": "trades-level",
+       "third_fix": "0.529516"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513493",
+       "family": "trades-level",
+       "third_fix": "0.513496"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.150327",
+       "family": "funding-line",
+       "third_fix": "0.153595"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.592675",
+       "family": "funding-line",
+       "third_fix": "0.592679"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511202",
+       "family": "funding-line",
+       "third_fix": "0.5112"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "186",
+       "family": "funding-line",
+       "third_fix": "184"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.088235",
+       "family": "funding-line",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_high",
+       "exact": "0.535948",
+       "family": "funding-line",
+       "third_fix": "0.53268"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.182594",
+       "family": "funding-line",
+       "third_fix": "0.183139"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.162494",
+       "family": "funding-line",
+       "third_fix": "0.162366"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.541608",
+       "family": "repeat-close",
+       "third_fix": "0.542144"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.510755",
+       "family": "repeat-close",
+       "third_fix": "0.510666"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512968",
+       "family": "repeat-chg",
+       "third_fix": "0.512879"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505981",
+       "family": "repeat-volume",
+       "third_fix": "0.506038"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511495",
+       "family": "repeat-volume",
+       "third_fix": "0.511512"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.22549",
+       "family": "repeat-trades",
+       "third_fix": "0.232026"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.585348",
+       "family": "repeat-trades",
+       "third_fix": "0.58522"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512775",
+       "family": "repeat-trades",
+       "third_fix": "0.512746"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "236",
+       "family": "repeat-trades",
+       "third_fix": "231"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.078431",
+       "family": "repeat-trades",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.213445",
+       "family": "repeat-trades",
+       "third_fix": "0.22216"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.161858",
+       "family": "repeat-trades",
+       "third_fix": "0.16227"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.50287",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.502733"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513118",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.513045"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.132718",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.132817"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.621996",
+       "family": "repeat-openint",
+       "third_fix": "0.621051"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513399",
+       "family": "repeat-openint",
+       "third_fix": "0.513329"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.142742",
+       "family": "repeat-openint",
+       "third_fix": "0.141941"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "5",
+       "family": "repeat-ratio",
+       "third_fix": "4"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.535053",
+       "family": "repeat-depth",
+       "third_fix": "0.535063"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513322",
+       "family": "repeat-depth",
+       "third_fix": "0.51332"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.599532",
+       "family": "granularity-close",
+       "third_fix": "0.596809"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512967",
+       "family": "granularity-close",
+       "third_fix": "0.513207"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.194823",
+       "family": "granularity-close",
+       "third_fix": "0.194551"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.133656",
+       "family": "granularity-close",
+       "third_fix": "0.133443"
+      }
+     ],
+     "exact_run": "45d062efe77c9251",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.513603",
+      "cards_with_tied_nn": "0",
+      "features_used": "44",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.169935",
+      "nn_same_coin_accuracy": "0.408497",
+      "nn_tie_free": "0.408497",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.169935",
+      "pair_auc": "0.574149"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "1f2ae3cf3a5b2044"
+    },
+    "blinded-strict-flags": {
+     "cells_differing": [
+      {
+       "column": "pair_auc",
+       "exact": "0.52952",
+       "family": "trades-level",
+       "third_fix": "0.529516"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513493",
+       "family": "trades-level",
+       "third_fix": "0.513496"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.541608",
+       "family": "repeat-close",
+       "third_fix": "0.542144"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.510755",
+       "family": "repeat-close",
+       "third_fix": "0.510666"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512968",
+       "family": "repeat-chg",
+       "third_fix": "0.512879"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505981",
+       "family": "repeat-volume",
+       "third_fix": "0.506038"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511495",
+       "family": "repeat-volume",
+       "third_fix": "0.511512"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.22549",
+       "family": "repeat-trades",
+       "third_fix": "0.232026"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.585348",
+       "family": "repeat-trades",
+       "third_fix": "0.58522"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512775",
+       "family": "repeat-trades",
+       "third_fix": "0.512746"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "236",
+       "family": "repeat-trades",
+       "third_fix": "231"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.078431",
+       "family": "repeat-trades",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.213445",
+       "family": "repeat-trades",
+       "third_fix": "0.22216"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.161858",
+       "family": "repeat-trades",
+       "third_fix": "0.16227"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.50287",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.502733"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513118",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.513045"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.132718",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.132817"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.621996",
+       "family": "repeat-openint",
+       "third_fix": "0.621051"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513399",
+       "family": "repeat-openint",
+       "third_fix": "0.513329"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.142742",
+       "family": "repeat-openint",
+       "third_fix": "0.141941"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "5",
+       "family": "repeat-ratio",
+       "third_fix": "4"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.535053",
+       "family": "repeat-depth",
+       "third_fix": "0.535063"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513322",
+       "family": "repeat-depth",
+       "third_fix": "0.51332"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.599532",
+       "family": "granularity-close",
+       "third_fix": "0.596809"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512967",
+       "family": "granularity-close",
+       "third_fix": "0.513207"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.194823",
+       "family": "granularity-close",
+       "third_fix": "0.194551"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.133656",
+       "family": "granularity-close",
+       "third_fix": "0.133443"
+      }
+     ],
+     "exact_run": "9ff0ffec3fe21ebe",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.513603",
+      "cards_with_tied_nn": "0",
+      "features_used": "44",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.169935",
+      "nn_same_coin_accuracy": "0.408497",
+      "nn_tie_free": "0.408497",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.169935",
+      "pair_auc": "0.574149"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "e05144718b909704"
+    },
+    "blinded-strict-flags-k1": {
+     "cells_differing": [
+      {
+       "column": "pair_auc",
+       "exact": "0.52952",
+       "family": "trades-level",
+       "third_fix": "0.529516"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513493",
+       "family": "trades-level",
+       "third_fix": "0.513496"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.563862",
+       "family": "repeat-close",
+       "third_fix": "0.563626"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512765",
+       "family": "repeat-close",
+       "third_fix": "0.512749"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512968",
+       "family": "repeat-chg",
+       "third_fix": "0.512879"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505981",
+       "family": "repeat-volume",
+       "third_fix": "0.506038"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511495",
+       "family": "repeat-volume",
+       "third_fix": "0.511512"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.22549",
+       "family": "repeat-trades",
+       "third_fix": "0.232026"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.585348",
+       "family": "repeat-trades",
+       "third_fix": "0.58522"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512775",
+       "family": "repeat-trades",
+       "third_fix": "0.512746"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "236",
+       "family": "repeat-trades",
+       "third_fix": "231"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.078431",
+       "family": "repeat-trades",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.213445",
+       "family": "repeat-trades",
+       "third_fix": "0.22216"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.161858",
+       "family": "repeat-trades",
+       "third_fix": "0.16227"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.50287",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.502733"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513118",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.513045"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.132718",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.132817"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.621996",
+       "family": "repeat-openint",
+       "third_fix": "0.621051"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513399",
+       "family": "repeat-openint",
+       "third_fix": "0.513329"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.142742",
+       "family": "repeat-openint",
+       "third_fix": "0.141941"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "5",
+       "family": "repeat-ratio",
+       "third_fix": "4"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.535053",
+       "family": "repeat-depth",
+       "third_fix": "0.535063"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513322",
+       "family": "repeat-depth",
+       "third_fix": "0.51332"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.20915",
+       "family": "granularity-close",
+       "third_fix": "0.215686"
+      },
+      {
+       "column": "nn_chance_1pct",
+       "exact": "0.176471",
+       "family": "granularity-close",
+       "third_fix": "0.173203"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.630346",
+       "family": "granularity-close",
+       "third_fix": "0.630049"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512305",
+       "family": "granularity-close",
+       "third_fix": "0.512271"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "257",
+       "family": "granularity-close",
+       "third_fix": "256"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.04902",
+       "family": "granularity-close",
+       "third_fix": "0.052288"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.252484",
+       "family": "granularity-close",
+       "third_fix": "0.254526"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.156651",
+       "family": "granularity-close",
+       "third_fix": "0.154744"
+      }
+     ],
+     "exact_run": "762815a877c19551",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.51371",
+      "cards_with_tied_nn": "0",
+      "features_used": "44",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.176471",
+      "nn_same_coin_accuracy": "0.434641",
+      "nn_tie_free": "0.434641",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.176471",
+      "pair_auc": "0.577011"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "ded6a9caaf77d910"
+    },
+    "blinded-strict-flags-unrounded": {
+     "cells_differing": [
+      {
+       "column": "pair_auc",
+       "exact": "0.541608",
+       "family": "repeat-close",
+       "third_fix": "0.542144"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.510755",
+       "family": "repeat-close",
+       "third_fix": "0.510666"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512968",
+       "family": "repeat-chg",
+       "third_fix": "0.512879"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.507119",
+       "family": "repeat-depth",
+       "third_fix": "0.507118"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.599532",
+       "family": "granularity-close",
+       "third_fix": "0.596809"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512967",
+       "family": "granularity-close",
+       "third_fix": "0.513207"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.194823",
+       "family": "granularity-close",
+       "third_fix": "0.194551"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.133656",
+       "family": "granularity-close",
+       "third_fix": "0.133443"
+      }
+     ],
+     "exact_run": "d6557e91f9f97f7b",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.51371",
+      "cards_with_tied_nn": "0",
+      "features_used": "26",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.176471",
+      "nn_same_coin_accuracy": "0.238562",
+      "nn_tie_free": "0.238562",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.176471",
+      "pair_auc": "0.545585"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "34095384f8b94ab7"
+    },
+    "raw-observation": {
+     "cells_differing": [
+      {
+       "column": "pair_auc",
+       "exact": "0.712365",
+       "family": "trades-level",
+       "third_fix": "0.71236"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512173",
+       "family": "trades-level",
+       "third_fix": "0.51217"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.719538",
+       "family": "funding-line",
+       "third_fix": "0.719539"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.563862",
+       "family": "repeat-close",
+       "third_fix": "0.563626"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513194",
+       "family": "repeat-close",
+       "third_fix": "0.513268"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.523354",
+       "family": "repeat-chg",
+       "third_fix": "0.523074"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513649",
+       "family": "repeat-chg",
+       "third_fix": "0.51347"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.505981",
+       "family": "repeat-volume",
+       "third_fix": "0.506038"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512135",
+       "family": "repeat-volume",
+       "third_fix": "0.512154"
+      },
+      {
+       "column": "nn_same_coin_accuracy",
+       "exact": "0.205882",
+       "family": "repeat-trades",
+       "third_fix": "0.215686"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.585348",
+       "family": "repeat-trades",
+       "third_fix": "0.58522"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513105",
+       "family": "repeat-trades",
+       "third_fix": "0.513129"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "236",
+       "family": "repeat-trades",
+       "third_fix": "231"
+      },
+      {
+       "column": "nn_tie_low",
+       "exact": "0.078431",
+       "family": "repeat-trades",
+       "third_fix": "0.091503"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.213445",
+       "family": "repeat-trades",
+       "third_fix": "0.22216"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.162172",
+       "family": "repeat-trades",
+       "third_fix": "0.163043"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.50287",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.502733"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.511422",
+       "family": "repeat-takerbuy",
+       "third_fix": "0.511336"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.621996",
+       "family": "repeat-openint",
+       "third_fix": "0.621051"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.51359",
+       "family": "repeat-openint",
+       "third_fix": "0.513538"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.144287",
+       "family": "repeat-openint",
+       "third_fix": "0.143574"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512058",
+       "family": "repeat-ratio",
+       "third_fix": "0.512059"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "5",
+       "family": "repeat-ratio",
+       "third_fix": "4"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.535053",
+       "family": "repeat-depth",
+       "third_fix": "0.535063"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513996",
+       "family": "repeat-depth",
+       "third_fix": "0.513994"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.497578",
+       "family": "repeat-btceth",
+       "third_fix": "0.497586"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.512524",
+       "family": "repeat-btceth",
+       "third_fix": "0.512573"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "271",
+       "family": "repeat-btceth",
+       "third_fix": "269"
+      },
+      {
+       "column": "nn_tie_free",
+       "exact": "0.114688",
+       "family": "repeat-btceth",
+       "third_fix": "0.11594"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.149097",
+       "family": "repeat-btceth",
+       "third_fix": "0.149852"
+      },
+      {
+       "column": "pair_auc",
+       "exact": "0.716709",
+       "family": "granularity-close",
+       "third_fix": "0.716714"
+      },
+      {
+       "column": "auc_chance_1pct",
+       "exact": "0.513759",
+       "family": "granularity-close",
+       "third_fix": "0.513752"
+      },
+      {
+       "column": "cards_with_tied_nn",
+       "exact": "295",
+       "family": "granularity-close",
+       "third_fix": "294"
+      },
+      {
+       "column": "nn_tie_free_chance_1pct",
+       "exact": "0.140266",
+       "family": "granularity-close",
+       "third_fix": "0.141389"
+      }
+     ],
+     "exact_run": "9777f422fd2d2b41",
+     "features_used_identical": true,
+     "gate_row": {
+      "auc_beats_chance": "YES",
+      "auc_chance_1pct": "0.512713",
+      "cards_with_tied_nn": "0",
+      "features_used": "56",
+      "nn_beats_chance": "YES",
+      "nn_chance_1pct": "0.173203",
+      "nn_same_coin_accuracy": "0.624183",
+      "nn_tie_free": "0.624183",
+      "nn_tie_free_beats_chance": "YES",
+      "nn_tie_free_chance_1pct": "0.173203",
+      "pair_auc": "0.706435"
+     },
+     "hour_linkage_identical": true,
+     "t4_identical": true,
+     "third_fix_run": "4858581e2eb08704"
+    }
+   }
+  },
+  "H-4": {
+   "by_column": {
+    "L/S acct": {
+     "cards_where_renderings_differ": 304,
+     "cards_with_a_printed_tie": 304,
+     "cards_with_an_hour_ranked_apart": 304,
+     "hours_tied_on_raw_card": 4884,
+     "hours_tied_on_raw_card_ranked_apart": 4860
+    },
+    "depth +1%": {
+     "cards_where_renderings_differ": 78,
+     "cards_with_a_printed_tie": 78,
+     "cards_with_an_hour_ranked_apart": 78,
+     "hours_tied_on_raw_card": 368,
+     "hours_tied_on_raw_card_ranked_apart": 365
+    },
+    "depth -1%": {
+     "cards_where_renderings_differ": 62,
+     "cards_with_a_printed_tie": 66,
+     "cards_with_an_hour_ranked_apart": 62,
+     "hours_tied_on_raw_card": 339,
+     "hours_tied_on_raw_card_ranked_apart": 275
+    },
+    "open int": {
+     "cards_where_renderings_differ": 190,
+     "cards_with_a_printed_tie": 192,
+     "cards_with_an_hour_ranked_apart": 190,
+     "hours_tied_on_raw_card": 1309,
+     "hours_tied_on_raw_card_ranked_apart": 1302
+    },
+    "quote vol": {
+     "cards_where_renderings_differ": 48,
+     "cards_with_a_printed_tie": 48,
+     "cards_with_an_hour_ranked_apart": 48,
+     "hours_tied_on_raw_card": 119,
+     "hours_tied_on_raw_card_ranked_apart": 119
+    },
+    "taker L/S": {
+     "cards_where_renderings_differ": 267,
+     "cards_with_a_printed_tie": 267,
+     "cards_with_an_hour_ranked_apart": 267,
+     "hours_tied_on_raw_card": 1482,
+     "hours_tied_on_raw_card_ranked_apart": 1482
+    },
+    "taker buy%": {
+     "cards_where_renderings_differ": 227,
+     "cards_with_a_printed_tie": 227,
+     "cards_with_an_hour_ranked_apart": 227,
+     "hours_tied_on_raw_card": 798,
+     "hours_tied_on_raw_card_ranked_apart": 798
+    },
+    "top L/S pos": {
+     "cards_where_renderings_differ": 306,
+     "cards_with_a_printed_tie": 306,
+     "cards_with_an_hour_ranked_apart": 306,
+     "hours_tied_on_raw_card": 5626,
+     "hours_tied_on_raw_card_ranked_apart": 5626
+    },
+    "trades": {
+     "cards_where_renderings_differ": 298,
+     "cards_with_a_printed_tie": 299,
+     "cards_with_an_hour_ranked_apart": 298,
+     "hours_tied_on_raw_card": 4585,
+     "hours_tied_on_raw_card_ranked_apart": 4567
+    }
+   },
+   "cards": 306,
+   "total": {
+    "cards_with_any_hour_ranked_apart": 306,
+    "hours_tied_on_raw_card_ranked_apart": 19394
+   }
+  },
+  "H-5": {
+   "coin_start_hours_with_2plus_moments": 0
+  }
+ },
+ "run": "516027c6c9f215d6",
+ "script_sha256": "817d64925dd9266a60e4c3e306e06fe1f07f5a94998232e109e5d2afd6561c1a"
+}
