@@ -4975,3 +4975,11 @@ coins wait for the juries, because open questions on how events are counted may
 bear on how moments are selected. The juries wait for Run 1's index. **The order
 of work tonight is: fix → independent review → juries on whatever is referred →
 apply the outcomes → moments and cards.**
+
+`2026-10-01 18:55 UTC` · **correction to the entry above** · It says the SHA-256
+`5107c2dd…a6e2` of the Run 1 instruction was taken *before* the one-sentence
+edit. That is wrong: the edit and the fingerprint were issued together, and
+re-computing now gives the same `5107c2dd7177a8669f72fa5d4671db3b83b8505b174ef64710b15a2f39efe6a2`,
+so it is the fingerprint of the **edited** text — which is also the text sent to
+the agent. The saved copy and the sent text are the same (RULES 4). Run 2's saved
+instruction: `4984e91f6f9a52cef1ac7a4aedd671e683a33e576e1169ba5d4e8f64bee57a94`.
