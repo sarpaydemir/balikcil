@@ -5629,3 +5629,60 @@ the files the sitting jury reads or the ratified gate file; and **a point that m
 be answered before a group, if it is a choice changing the numbers that no rule
 settles, is written as a juror question to sit first**, with the order plain in
 the index.
+
+`2026-10-01 22:58 UTC` · **JURY · `JQ-N1-1…4` with `JQ-CANTEEN-8` · RATIFIED** ·
+Folder `decisions/2026-10-01-jq-n1-canteen-8/`. Jurors: `juror`, `opus`, effort
+`high`, 71,078 / 73,555 / 68,438 tokens. Referee: `referee`, `haiku`, 55,469
+tokens, instruction `instructions/2026-10-01-2254-referee-jq-n1-canteen-8.md`.
+
+| file | SHA-256 |
+|---|---|
+| `juror-1.md` | `96606c03943922a58031e907994f88bc6f0e91879f496e9af5b1a98934e0c536` |
+| `juror-2.md` | `251ae0e0c1a2cb8882d9cbd696409c6f00190253286ffb05ff9ef34d6c784a75` |
+| `juror-3.md` | `3dae1cfa2ebe80881948b94c7de17505815ed4efcf39d472f343f9dcfe975f28` |
+| `verdict.md` | `aa15ac0dbaaefec007dfb9890189e4f1a24fa949fcfece1fb7efce4459573305` |
+
+**Outcome, part by part, with the split in numbers (RULES 35):**
+
+| part | ratified outcome | split |
+|---|---|---|
+| `JQ-N1-1` | **start-hour** — a moment's hour is the hour its 24-hour movement began (`TACTICS.md` line 44) | **3–0** |
+| `JQ-N1-2` | **does not arise** under start-hour | **3–0** |
+| `JQ-N1-3` | **`any`** — two cards with the same start hour count as one event whether or not they are the same coin | **2–1** |
+| `JQ-N1-4` | **representative** — each event counts once; it is represented by its earliest card by start hour, the lowest card number where start hours match, and carries that card's sealed label | **2–1** |
+| `JQ-CANTEEN-8` a | **yes** — two calm moments of one coin may overlap | **3–0** |
+| `JQ-CANTEEN-8` b | **does not arise** | **3–0** |
+
+The referee found the parts consistent with one another under start-hour, and
+**part a of `JQ-CANTEEN-8` consistent with the ratified calm-separation verdict
+of 2026-09-19** (*"Section 2 of TACTICS.md requires no minimum distance between
+two calm moments of the same coin"*, 3–0).
+
+**The question had already been answered once, and only the jurors noticed.**
+All three jurors found, through the settled-law permission added to the template
+tonight, that `JQ-CANTEEN-8` part a had been ratified 3–0 on 2026-09-19, and
+that the question file — written without access to `decisions/` — offered "no"
+as an open option without mentioning it. The canteen chair had raised it as open
+after that jury sat; nobody in `exam-prep/` could see the earlier verdict. **Had
+the jurors not been allowed to read ratified verdicts, the laboratory could have
+ratified the opposite of its own earlier decision.**
+
+**Minority positions, recorded:** on part 3, juror 3 — two moments of one coin
+are not one event (`cross-coin`); on part 4, juror 1 — `block`, keeping every
+answer in the shuffle, on RULES 12's "the answers are shuffled". **The strongest
+case all three put against start-hour:** RULES 13's purpose sentence — if the
+whole market moved together, that is one event — while each coin's start hour is
+chosen separately, so one market-wide move spanning adjacent start hours would be
+counted more than once. **How often that happens is not measured** (RULES 22).
+
+**The same weakness as the gate jury, again.** Every juror reported that both
+question files carry measured observation-card counts, and juror 2 named bolded
+figures and a passage on which combinations can be carried out as pointing
+toward some options. The referee's independence check rests on the jurors' rule
+citations and does not weigh these reports. Recorded, not overridden.
+
+**What follows for `N-1`:** its first condition is met — the group is ratified.
+Two remain, both handed forward: the judge's script meeting `HANDED-FORWARD`
+B-1 to B-5, and the sealed key checked for the tie the engine breaks by card id
+as text — which the ratified "lowest card number" now makes binding, because a
+text comparison of card ids of unequal width does not give the lowest number.
