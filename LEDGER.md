@@ -5733,3 +5733,46 @@ twenty-four.
 waiting; **inside or outside a juror's scope per row**; contradiction with either
 ratified verdict; the order and couplings; the sixth run's extensions. Both
 ratified verdicts bind it.
+
+`2026-10-01 23:27 UTC` · **review 6 returned · the third jury sits · seventh fix
+on the one unfit row** · Review 6: `data-engineer`, 204,666 tokens, 51 tool
+uses, 12 minutes, instruction
+`instructions/2026-10-01-2313-data-engineer-exam-prep-review-6.md`.
+`exam-prep/REVIEW-6.md` `32543b39fd724fe0e19fcd79732ca7d0d61efb544860df7cb2f2e83cc09612ed`.
+Criteria fixed before any juror file was opened. 26 of 26 sixth-fix fingerprints
+match; quotation probe 90 checks, 0 failed.
+
+**Rulings: eight of nine fit, all eight inside a juror's scope** —
+`JQ-R04-CARRIES-a`, `-b`; `JQ-R04-DATE-a`, `-b`, `-c`; `JQ-R04-CONTENT-a` (fit
+provided CARRIES is ratified first, as the index orders), `-b`, `-c`. **Not fit:
+`JQ-R04-CONTENT-d`**, on determinacy (two options need a further choice that
+changes the numbers) and on one leaning item no longer needed. **Its scope is
+contested**: one option is inside a juror's scope; on the reviewer's reading the
+other two would reach a point reserved for the user. No contradiction with either
+ratified verdict. Order and couplings stand, with three notes: the index still
+showed the `JQ-N1` rows as being answered; "the ratification sentence" is singular
+while CARRIES has two parts — **the DATE/CONTENT commission will carry every
+ratification sentence covering both parts**; if CARRIES is refused, DATE/CONTENT
+waits. **`R-04` cannot close until `JQ-R04-CONTENT-d` is settled.** Steer
+twenty-five: "a fault … can only be caught here" puts weight on finding faults.
+
+**Jury 3 of the night — `JQ-R04-CARRIES-a` and `-b` — three jurors launched**,
+instructions `instructions/2026-10-01-2325-juror-jq-r04-carries-1.md` … `-3.md`,
+differing only in juror number and output file (checked with `diff`), from
+`exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md`
+(`7532779b81422a0ef5833771a351f80fd2bfccd7968ce0c75a15698e76f0d19f`). Settled law
+available: the seven 2026-09-19 verdicts, the gate verdict and the N1 verdict.
+Output `decisions/2026-10-01-jq-r04-carries/`. **The DATE/CONTENT jurors, when
+they sit, are closed to that folder** and receive the ratification sentences
+quoted in their instruction, as the sixth run specified.
+
+**Seventh fix launched in parallel, `JQ-R04-CONTENT-d` only**, instruction
+`instructions/2026-10-01-2327-data-engineer-exam-prep-seventh-fix.md` (SHA-256
+`f024aa13f3f6e2f7c03b3ca179bee465f06961efd27ef7fd7db7b3acfc607017`). It may not touch the CARRIES, DATE or CONTENT files.
+**Whatever part of the row is inside a juror's scope stays a juror question;
+whatever would make or change a rule is written instead as a question for the
+user in `exam-prep/USER-QUESTIONS.md`**, in plain English, recommending nothing.
+**The coordinator will carry that file to the user unread and have it put into
+Turkish by the reporter** — the user set the blindness arrangement for the
+coordinator, not for themselves, and a rule question is exactly what the user
+asked to be brought to them.
