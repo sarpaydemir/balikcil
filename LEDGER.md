@@ -4983,3 +4983,77 @@ re-computing now gives the same `5107c2dd7177a8669f72fa5d4671db3b83b8505b174ef64
 so it is the fingerprint of the **edited** text — which is also the text sent to
 the agent. The saved copy and the sent text are the same (RULES 4). Run 2's saved
 instruction: `4984e91f6f9a52cef1ac7a4aedd671e683a33e576e1169ba5d4e8f64bee57a94`.
+
+`2026-10-01 19:32 UTC` · **second fix run returned: `R-04` NOT SOLVED, `N-1` instrument
+repaired but blocked on jurors · independent second review launched** ·
+`data-engineer`, 396,707 tokens, 115 tool uses, 37 minutes (19:00:12–19:30:37
+UTC by its own clock). Committed as `87685d5`; the run itself made no commit.
+`exam-prep/VERDICT.md` `d83c2b85fe8548634193fa60d8c98e090559b7211f6066b21727a4482835fab5`,
+`exam-prep/JUROR-QUESTIONS.md` `7020127c257b7addbae1fd6cbca0e4031accc3b28a4816980c5cd410532399d9`,
+`exam-prep/second-fix/FINGERPRINTS.md` `5fb745ab65c38ad28708006bbe796157bb90bf90706b4df733e853bb4a0ab9d3`
+(lists every other file it wrote) — all three re-computed here and matching its
+report. Twelve run numbers, each re-run returning "already recorded, nothing
+written".
+
+**Verdicts, as the run gave them and no further:**
+- **`R-04` — NOT SOLVED.** This reverses the first run's "SOLVED". The run
+  states the remaining channel is open and that the route which might close it
+  was not tried in this run.
+- **`N-1` — instrument repaired and tested; every defect the first review found
+  is closed; it cannot be used until jurors rule on the counting definition.**
+- **No change to `RULES.md` is needed** by anything done or referred. One future
+  path where a RULES 9 question could reach the user is named in `VERDICT.md`;
+  nothing has reached it.
+
+**Every first-review item now has a stated outcome** — done, partly done,
+referred, or disputed. **Four statements of the first review are disputed with
+reasons.** Thirteen earlier claims are corrected, each showing what was claimed,
+what it is now and why; every earlier file keeps its original bytes with an
+addendum appended, and the leading bytes still hash to the review's values
+(RULES 30). Scripts `15`–`18` were changed in place and `24`–`25` added; one
+function now returns a different type, so old callers fail loudly rather than
+silently. The run wrote its own criteria before measuring. Eleven decisions the
+instruction did not cover are listed in its `SECOND-FIX.md` §9.
+
+**The juror-question index works as intended.** Twelve rows, carrying only
+identifiers, pointers, couplings and reading lists. The coordinator read it and
+learned no question's content. Grouped by coupling, it is **five juries**: the
+four `JQ-N1` parts together; the three `JQ-R04-DATE` parts with the two
+`JQ-R04-CONTENT` parts; `JQ-R04-GATE` alone; `JQ-B1` alone; `JQ-CANTEEN-8`
+alone. Ten rows are new; two were already open in the canteen book and were
+indexed so that none is lost. The run could not see this ledger to tell whether
+those two had already been put to jurors. **Checked here:** the seven folders
+under `decisions/` are calm separation, card-order requirement, effort level,
+large-moment selection, tokenized equity, watcher across runs and zero-trade
+contracts. The calm-separation jury sat at 07:15 UTC on 2026-09-19, six hours
+before the canteen froze, on a question put by the coordinator. **Whether the
+canteen's later question is the same question is itself a judgement the
+coordinator does not make alone (RULES 33)**, so the canteen rows go to jurors
+with every prior ratified verdict available to them.
+
+**What it could not do, by name:** close `R-04`; measure anything on exam cards;
+measure the adversary without tools; write the exam manifest, which lives under
+`exam/` and which its `SECOND-FIX.md` §8 requires the next run to write; check
+the ledger; fix two named weaknesses in the audit (`SECOND-FIX.md` §4, items
+3–4); and add one channel it found to the gate — before measuring, it committed
+in writing not to add it in this run, and recommends that the next run add it.
+**That last one is the run binding itself before seeing the result, which is
+RULES 6 applied to its own work.**
+
+**Steer check:** it found no result, prediction or chosen fix in its
+instruction; `VERDICT.md` names two mild presumptions. It read `CLAUDE.md`,
+which was neither on its allowed list nor its forbidden list — recorded, not
+faulted. It saw the concurrent run's file names and commit subjects in
+`git status`, and opened none of those files. Its new scripts are numbered `24`
+and `25` while the concurrent run's are `exam_24_*` onward; no file collides, but
+a reader can be confused.
+
+**Launched: review 2.** `data-engineer`, effort `high`, instruction
+`instructions/2026-10-01-1932-data-engineer-exam-prep-review-2.md`. Same
+blindness as before: it reports a ruling per problem and **fit or not fit per
+juror-question identifier**, and nothing about method or question content. **The
+juries wait for it**, because the first review found a referred question that
+could not produce the outcome it offered; a jury convened on an unfit question
+costs three `opus` runs and a referee for nothing. Wording removed from this
+instruction compared with the first review's: *"Look for what is not there"*
+and *"right or a dodge"*, both reported as steers last time.

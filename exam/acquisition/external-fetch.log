@@ -27,3 +27,30 @@ run_id 131fee310d4caa3349d8f96a058ec7c8bb419d341650e2876d65a22ab8a2c3ae started 
 [5/5] announcement probes
       binance announcement RSS                 HTTP 202 with a zero-length body (the host answered but returned nothing)
       binance announcement list page           HTTP 202 with a zero-length body (the host answered but returned nothing)
+      upbit open API notices                   HTTP 404 Not Found
+      upbit api-manager notices                HTTP 404 Not Found
+      bithumb public API notices               1196 bytes
+      bithumb public API notices, paged        1196 bytes
+finished 2026-10-01T19:32:11Z  fetch failures 22
+  FAILED raw/bls/2025-08.html  HTTP 403 Forbidden
+  FAILED raw/bls/2025-09.html  HTTP 403 Forbidden
+  FAILED raw/bls/2025-10.html  HTTP 403 Forbidden
+  FAILED raw/bls/2025-11.html  HTTP 403 Forbidden
+  FAILED raw/bls/2025-12.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-01.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-02.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-03.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-04.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-05.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-06.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-07.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-08.html  HTTP 403 Forbidden
+  FAILED raw/bls/2026-09.html  HTTP 403 Forbidden
+  FAILED raw/coingecko/SWARMS.json  HTTP 429 Too Many Requests
+  FAILED raw/coingecko/PROM.json  HTTP 429 Too Many Requests
+  FAILED raw/wikipedia/search-Bitlayer.json  HTTP 429 Too Many Requests
+  FAILED raw/wikipedia/search-SuperVerse.json  HTTP 429 Too Many Requests
+  FAILED raw/announcements/binance_announcement_RSS.txt  HTTP 202 with a zero-length body (the host answered but returned nothing)
+  FAILED raw/announcements/binance_announcement_list_page.txt  HTTP 202 with a zero-length body (the host answered but returned nothing)
+  FAILED raw/announcements/upbit_open_API_notices.txt  HTTP 404 Not Found
+  FAILED raw/announcements/upbit_api_manager_notices.txt  HTTP 404 Not Found
