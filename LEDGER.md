@@ -5818,3 +5818,86 @@ both ratification sentences are quoted in their instruction verbatim**, extracte
 by `sed` from lines 107 and 109 of the verdict rather than typed, with the
 verdict's SHA-256 beside them, as the sixth run specified and review 6 corrected
 from singular to both parts.
+
+`2026-10-01 23:46 UTC` · **JURY · DATE/CONTENT group · RATIFIED · `JQ-R04-CONTENT-d` becomes a
+question for the user · review 7 and the exam moments launched** · Folder
+`decisions/2026-10-01-jq-r04-date-content/`. Jurors: `juror`, `opus`, effort
+`high`, 99,753 / 96,480 / 90,991 tokens. Referee: `referee`, `haiku`, 52,780
+tokens, instruction `instructions/2026-10-01-2342-referee-jq-r04-date-content.md`
+— **amended before launch to let the referee read the whole CARRIES verdict** for
+its consistency check, since the jurors had only its two quoted sentences.
+
+| file | SHA-256 |
+|---|---|
+| `juror-1.md` | `95e5a72fb1504c1e5ab4c05d7441294d798766c26ab54d2cbf813a7dbc01bc8e` |
+| `juror-2.md` | `d5ab581919ba6022c8b15452c3534d86ff57146425f5b36a99766b6e72b17f71` |
+| `juror-3.md` | `39f2dae62112896a3fa2ee247e7634d7dded8475efc756d36fffc80a5a4361d0` |
+| `verdict.md` | `d465a0d37366c10249eea2492f5a27b23f4c4eaf7811f2a4b0aa7873132fb769` |
+
+**Outcome, part by part, as the referee reports it:**
+
+| part | ratified outcome | split |
+|---|---|---|
+| `JQ-R04-DATE-a` | **no** — RULES 9 and TACTICS 6 do not require removing the bitcoin/ethereum columns | **3–0** |
+| `JQ-R04-DATE-b` | **no** — release names are not "the date in the release calendar" | **3–0** |
+| `JQ-R04-DATE-c` | **no** — offsets revealing clock time are not covered | **3–0** |
+| `JQ-R04-CONTENT-a` | **yes** — the blinding may leave out a column that carries a measured coin signature, in the case posed | **2–1** |
+| `JQ-R04-CONTENT-b` | b1 permitted **3–0**; b2 permitted **2–1**; b3 permitted only through CONTENT-a **2–1** | |
+| `JQ-R04-CONTENT-c` | **no** — ranks must come from the values the card prints | **3–0** |
+
+**Minority and qualifications, recorded because they bind how the outcome is
+read.** On CONTENT-a, juror 2 answered no: no written line gives the blinding a
+removal act, and **a condition that depends on what the frozen canteen book reads
+makes exam-card content depend on the canteen, which `TEAM.md` lines 70–71 exist
+to prevent** — juror 2 also warned that a "no" might leave a gate no permitted
+act can pass. **Juror 3, in the majority, attached a qualification of the same
+kind: only the measurement may justify leaving a column out, and "nothing the
+canteen book reads it" must play no part.** Juror 1 confined its yes to the exact
+case posed and to permission, not requirement. **Whether the ratified "yes"
+carries the canteen-dependent condition or juror 3's qualification is not settled
+by the referee's summary**, and it is named here as unresolved (RULES 22) for the
+run that applies it. Every juror again reported measured results in the question
+files and some leaning passages; two disclosed a glob scoped to the verdict
+pattern. The referee did not weigh the steer reports — the third time tonight.
+
+**Unresolved by name, from the jurors (RULES 22):** whether a candidate without
+tools can date or time a card from the bitcoin/ethereum columns, release names or
+offsets; whether cards sharing hours hint at the label through market-wide moves;
+whether any other frozen rule reads the price column; the precision at which the
+raw card prints price; whether TACTICS 3's "(inflation, employment, rate
+decision)" limits which releases belong on the card.
+
+**Seventh fix:** `data-engineer`, 259,094 tokens, 50 tool uses, 16 minutes,
+instruction `instructions/2026-10-01-2327-data-engineer-exam-prep-seventh-fix.md`.
+**It judged the whole of `JQ-R04-CONTENT-d` outside a juror's scope** — one step
+beyond review 6, which had found one option inside — and wrote it as **U-1** in
+`exam-prep/USER-QUESTIONS.md` (`bcc09ad8ff38f90e064d7cf781ab8081d4514a6a981c17b642e5f9927b7a429b`). The coordinator has not opened that
+file. `R-04` cannot close until the user answers. Script 34, run
+`97f03e98c28ed3ad`, 100 checks, 0 failed, reproducible under a different hash
+seed. **Two points it raised, answered:** the DATE and CONTENT juror files say
+part d is answered "by other jurors", now untrue; those jurors have sat, and
+their clause "not yours to decide" stayed true, so no outcome rests on it.
+And whether the DATE/CONTENT group sat before CARRIES was ratified: **it did
+not** — CARRIES was ratified at about 23:31 UTC, the DATE/CONTENT jurors
+launched at 23:34 UTC.
+
+**Review 7 launched**, instruction
+`instructions/2026-10-01-2345-data-engineer-exam-prep-review-7.md` (SHA-256
+`c9da994e96bbd23648df029539e62450c87926db7c81103d826fa574320398ab`): whether the row belongs to the user at all; **whether U-1 is fit to
+put to the user — true, complete, leaning toward no answer, and carrying no result
+that would let the user choose the rule after seeing which answer passes (RULES
+6)**; whether what was handed forward is checkable; whether the index is true.
+
+**Exam moments launched**, `data-engineer` Mode B step 2, instruction
+`instructions/2026-10-01-2346-data-engineer-exam-moments.md` (SHA-256
+`518c2a706b65fb7e844743f8eecd104bc8fe84a0638ced2054ee2b5845b04a29`): the exam coins' moments by the observation procedure, the
+moment-day data, and the pool by line number — **choosing no moment for a card**,
+and naming it an open question if the rules do not say how 400 are drawn from the
+pool. **Before launch the coordinator counted canteen references in every
+ratified verdict**: 2026-10-01 DATE/CONTENT verdict 5; N1 verdict 12, all of them
+the identifier `CANTEEN-8` or calm-overlap procedure; the rest 0 or 2. **Mode B
+may not see the canteen book, so the run may read only the 2026-09-19 verdicts and
+the N1 verdict.** The instruction was amended to say so before launch; the
+fingerprint above is of the amended text. **Carried forward: the run that builds
+exam cards must not be handed the DATE/CONTENT verdict whole**, because it quotes
+the canteen book; it needs that verdict's outcome only.
