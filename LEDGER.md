@@ -4925,3 +4925,53 @@ because push protection matches the shape and a blocked push is a stalled
 laboratory.** It closes with the rule this laboratory learned the hard way today:
 never print a credential or any fragment of one, and compare two values by their
 SHA-256 digests.
+
+`2026-10-01 18:55 UTC` · **the laboratory resumes after eleven idle days · two runs launched in
+parallel** · The previous entry is dated 2026-09-20. The clock now reads
+2026-10-01; `git log` and `reports/git-push.log` show nothing happened in between.
+**User decision:** *"devam edebilirsin sabaha kadar serbest"* — the coordinator
+may continue unattended until morning. The user changed the coordinator's own
+model and effort before saying so; agent definitions are untouched and every role
+still runs on `opus` at the effort its definition fixes.
+
+**State taken up:** the bottom of this ledger — the exam is unbuilt; the review
+of the pre-exam work ruled `R-04` solved only under conditions and `N-1` not
+solved; the review lists what must be acted on before any exam card exists.
+
+**Run 1 — acting on the review.** `data-engineer`, effort `high`, instruction
+`instructions/2026-10-01-1853-data-engineer-exam-prep-second-fix.md` (SHA-256 of
+the saved copy `5107c2dd7177a8669f72fa5d4671db3b83b8505b174ef64710b15a2f39efe6a2`
+before a one-sentence edit, recorded here because the edit happened after the
+fingerprint was taken: the sentence about items needing `exam/` was made
+conditional, so that it no longer implies the review contains such an item). The
+instruction **does not restate the review**; it sends the run to read
+`exam-prep/REVIEW.md` itself, allows reasoned disagreement with the reviewer
+(RULES 32), and fixes only what must be true at the end: every review item has a
+stated outcome; nothing earlier claimed disappears; open questions are referred,
+not answered, and are readable by a juror who opens nothing else in
+`exam-prep/`. **It must also write `exam-prep/JUROR-QUESTIONS.md`, an index
+carrying only identifiers, file-and-section pointers, which questions are coupled,
+and each question's reading list — no wording, no options, no numbers** — so that
+the coordinator can commission jurors without learning what any question says.
+The coordinator still has not read the working or the review.
+
+**Run 2 — raw data for the exam coins, in parallel.** `data-engineer`, **Mode
+B, first step only**, effort `high`, instruction
+`instructions/2026-10-01-1855-data-engineer-exam-data-acquisition.md`. Raw data
+over the TACTICS §0 period for the coins in `exam/draw/exam-coins.txt`, **as far
+as it does not depend on which moments are chosen** — no moments, no cards, no
+key, no blinding. Grounds for running it now: it is script work the exam needs
+whatever the jurors decide, and it does not touch any artefact RULES 6 or the
+review requires to wait. Safeguards: `exam/data/` was added to `.gitignore`
+**before** launch and verified with `git check-ignore`; the run may not modify any
+existing script (Run 1 may be changing them), only add new ones prefixed `exam_`;
+**no exam coin name may appear in any file outside `exam/`**; and its report to
+the coordinator refers to exam coins by line number only, because this ledger is
+a document watchers can be pointed at. Free disk at launch: 12 GB of 38 GB;
+`data/` holds 451 MB for the ten observation coins.
+
+**Not yet started, and why.** Moment finding and order-book download for the exam
+coins wait for the juries, because open questions on how events are counted may
+bear on how moments are selected. The juries wait for Run 1's index. **The order
+of work tonight is: fix → independent review → juries on whatever is referred →
+apply the outcomes → moments and cards.**

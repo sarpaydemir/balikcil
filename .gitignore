@@ -4,3 +4,6 @@ data/
 
 # Secrets never enter git
 .env
+
+# Raw exam-coin downloads are re-downloadable and large; manifests stay in git
+exam/data/
