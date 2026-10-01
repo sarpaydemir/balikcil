@@ -147,10 +147,12 @@ not a measurement.
    figures exist and that looking first is the user's choice. A reviewer
    may prefer the path removed.
 6. **`decisions/2026-10-01-jq-r04-date-content/`** appeared, untracked, in
-   `git status` during this run. I did not open it. If it means the
-   DATE/CONTENT group has been commissioned before JQ-R04-CARRIES is
-   ratified, that would break the order the index and A-0.1 set; I cannot
-   tell from a name.
+   `git status` during this run; by 23:42:50Z it listed `juror-1.md`, and an
+   untracked instruction `instructions/2026-10-01-2342-referee-jq-r04-date-content.md`
+   had appeared. I opened neither. If they mean the DATE/CONTENT group has
+   been commissioned, or sent to a referee, before JQ-R04-CARRIES is
+   ratified, that breaks the order the index and A-0.1 set; I cannot tell
+   from names.
 7. **Three files of this run were already tracked by git** when I ran
    `git ls-files` (the criteria file and the two pre-run snapshots). I made
    no commit; some other process did. I did not look at any commit.

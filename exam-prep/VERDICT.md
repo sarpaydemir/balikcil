@@ -895,10 +895,15 @@ the opposite case: SEVENTH-FIX §2. No disagreement with REVIEW-6 otherwise.
    ("it is not yours to decide") stays true. Whether a run corrects them,
    and a review checks it, before that group sits is yours.
 4. **`decisions/2026-10-01-jq-r04-date-content/`** appeared, untracked, in
-   `git status` during this run. I did not open it. If the DATE/CONTENT
-   group has been commissioned before JQ-R04-CARRIES is ratified, the order
-   in the index and in HANDED-FORWARD A-0.1 is broken. I cannot tell from a
-   name.
+   `git status` during this run; by 23:42:50Z it listed
+   `juror-1.md`, and an untracked instruction named
+   `instructions/2026-10-01-2342-referee-jq-r04-date-content.md` had
+   appeared. I opened neither. My instruction says the DATE/CONTENT group
+   waits on JQ-R04-CARRIES, which jurors are still answering. If the
+   DATE/CONTENT group has been commissioned, or is going to a referee,
+   before JQ-R04-CARRIES is ratified, the order in the index and in
+   HANDED-FORWARD A-0.1 is broken, and its jurors read the stale clause of
+   item 3. I cannot tell from names.
 5. **Review before use.** U-1 and this run's HANDED-FORWARD amendments are
    not reviewed. Whether a review precedes bringing U-1 to the user is
    yours.
