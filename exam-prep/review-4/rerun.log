@@ -1,0 +1,27 @@
+start 2026-10-01T21:57:10Z
+free bytes 12396146688
+002bb40639dee684fd4b7c653d2db45ec2c4527ade38d565e765619a9eebf4e6  scripts/15_event_collapse.py
+cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f  scripts/29_identity_audit_exact.py
+817d64925dd9266a60e4c3e306e06fe1f07f5a94998232e109e5d2afd6561c1a  scripts/30_fourth_fix_checks.py
+d0e23b5c1c0dcbf401b90387e28c37b25f5ffe394fb45e026d8806d305516ed2  scripts/31_juror_file_check_fourth.py
+96b0eb01c502a40b4e76c864681763206ba627b268eedb7eb19984f81d9b928e  scripts/lab_cards.py
+run a0ecf6970d86b199: 306 moments, 11 configurations -> exam-prep/review-4/rerun/collapse/run-a0ecf6970d86b199
+collapse done 2026-10-01T21:58:09Z
+run 9777f422fd2d2b41: 306 cards, 26 families
+audit raw done 2026-10-01T22:00:22Z
+run 9ff0ffec3fe21ebe: 306 cards, 26 families
+audit strict-flags done 2026-10-01T22:02:40Z
+run 989b8f21b23e0310: 306 cards, 26 families
+audit ratio done 2026-10-01T22:04:18Z
+run 446adf64f8e8235c: 306 cards, 26 families
+audit rank done 2026-10-01T22:05:57Z
+run 45d062efe77c9251: 306 cards, 26 families
+audit strict done 2026-10-01T22:07:47Z
+run 762815a877c19551: 306 cards, 26 families
+audit k1 done 2026-10-01T22:09:34Z
+run d6557e91f9f97f7b: 306 cards, 26 families
+audits done 2026-10-01T22:11:24Z
+run 516027c6c9f215d6 written: exam-prep/review-4/rerun/checks/fourth-fix-checks-516027c6c9f215d6.md
+30 done 2026-10-01T22:12:32Z
+run 94890bb9bf623a10: 59 checks, 0 failed
+end 2026-10-01T22:12:33Z

@@ -1,0 +1,8 @@
+strict-flags | trades-level | exact AUC 0.529520 | audit 0.52952 | equal at 6 dp: True
+strict-flags | repeat-trades | exact AUC 0.585348 | audit 0.585348 | equal at 6 dp: True
+strict-flags | repeat-close | exact AUC 0.541608 | audit 0.541608 | equal at 6 dp: True
+strict-flags | granularity-close | exact AUC 0.599532 | audit 0.599532 | equal at 6 dp: True
+strict-flags-k1 | repeat-close | exact AUC 0.563862 | audit 0.563862 | equal at 6 dp: True
+strict-flags-k1 | granularity-close | exact AUC 0.630346 | audit 0.630346 | equal at 6 dp: True
+strict-flags-unrounded | trades-level | exact AUC 0.499688 | audit 0.499688 | equal at 6 dp: True
+strict-flags-unrounded | repeat-trades | exact AUC 0.501160 | audit 0.50116 | equal at 6 dp: True

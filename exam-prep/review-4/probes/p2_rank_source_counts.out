@@ -1,0 +1,11 @@
+| column | hours tied on the raw card | of those, ranked apart | cards with such an hour | (tied hours whose token is not a number) |
+| quote vol | 119 | 119 | 48 | 0 |
+| trades | 4585 | 4567 | 298 | 0 |
+| taker buy% | 798 | 798 | 227 | 0 |
+| open int | 1309 | 1302 | 190 | 0 |
+| L/S acct | 4884 | 4860 | 304 | 0 |
+| top L/S pos | 5626 | 5626 | 306 | 0 |
+| taker L/S | 1482 | 1482 | 267 | 0 |
+| depth -1% | 339 | 275 | 62 | 0 |
+| depth +1% | 368 | 365 | 78 | 0 |
+cards with at least one hour ranked apart in any column: 306 of 306

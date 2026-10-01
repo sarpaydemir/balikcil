@@ -1,0 +1,20 @@
+143c143
+<     (counted over both partitions). Source: `__CHECKS__`, H-2.
+---
+>     (counted over both partitions). Source: `exam-prep/fourth-fix/checks/fourth-fix-checks-516027c6c9f215d6.md`, H-2.
+148c148,151
+< __LATEST_TABLE__
+---
+> | reading / resolution / scope | events (from 306 cards) | events of 1 card | largest event | events holding a `large` and a `calm` card | events holding 2+ cards of the **same** coin | largest same-coin count in one event |
+> |---|---|---|---|---|---|---|
+> | move-window / greedy-clique / cross-coin, keep latest | 168 | 78 | 6 | 50 | 0 | 1 |
+> | card-span / greedy-clique / cross-coin, keep latest | 124 | 39 | 7 | 60 | 0 | 1 |
+200c203
+<   unchanged, and their runs `bec532fa008e0e01` and `__COLLAPSE_RUN__`
+---
+>   unchanged, and their runs `bec532fa008e0e01` and `a0ecf6970d86b199`
+209c212,213
+<   306; 0 under card-span/greedy-clique.
+---
+>   306; 0 under card-span/greedy-clique. With part 2's "latest" convention:
+>   1 event (5 cards) under move-window, 0 under card-span (source as in part 2).

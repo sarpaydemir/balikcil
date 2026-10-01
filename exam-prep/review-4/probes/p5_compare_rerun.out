@@ -1,0 +1,124 @@
+differs     exam-prep/fourth-fix/collapse/runs/a0ecf6970d86b199.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199",
+       + "output_dir": "exam-prep/review-4/rerun/collapse/run-a0ecf6970d86b199",
+differs     exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/collapse-manifest.md (12 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:27:09Z |
+       -| free disk space at start (bytes) | 12400275456 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T21:57:10Z |
+       +| free disk space at start (bytes) | 12396142592 |
+       -Run records live in `runs/`, one JSON per run number, append-only (RULES 30). Records present when this manifest was written: `721b2448f1722ccf`, `a0ecf6970d86b199`. The outputs of run `386d234b85269a21` (the version re
+       +Run records live in `runs/`, one JSON per run number, append-only (RULES 30). Records present when this manifest was written: `a0ecf6970d86b199`. The outputs of run `386d234b85269a21` (the version reviewed in `exam-prep
+       -| `exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/events.csv` | 3366 | `7d887b831847b8838735ec0db334238cda51d9709ec6d7c97a1aa12f1faba727` |
+       -| `exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/collapse-summary.csv` | 11 | `94d9205c77918551b4fbe0df9806abdf14d0599ae96ed911553e446652676bcd` |
+       -| `exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/shuffle-calibration.csv` | 22 | `0c4b27f9556086644ff5ad9137322a06854f64b78daf9bf1babebd73115b5cd7` |
+       +| `exam-prep/review-4/rerun/collapse/run-a0ecf6970d86b199/events.csv` | 3366 | `7d887b831847b8838735ec0db334238cda51d9709ec6d7c97a1aa12f1faba727` |
+       +| `exam-prep/review-4/rerun/collapse/run-a0ecf6970d86b199/collapse-summary.csv` | 11 | `94d9205c77918551b4fbe0df9806abdf14d0599ae96ed911553e446652676bcd` |
+       +| `exam-prep/review-4/rerun/collapse/run-a0ecf6970d86b199/shuffle-calibration.csv` | 22 | `0c4b27f9556086644ff5ad9137322a06854f64b78daf9bf1babebd73115b5cd7` |
+CSV/SHA DIFFERS exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/collapse-manifest.md.sha256
+identical   exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/collapse-summary.csv
+identical   exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/events.csv
+identical   exam-prep/fourth-fix/collapse/run-a0ecf6970d86b199/shuffle-calibration.csv
+identical   exam-prep/fourth-fix/identity/run-d6557e91f9f97f7b/hour-linkage-blinded-strict-flags-unrounded.csv
+identical   exam-prep/fourth-fix/identity/run-d6557e91f9f97f7b/identity-audit-blinded-strict-flags-unrounded.csv
+differs     exam-prep/fourth-fix/identity/run-d6557e91f9f97f7b/identity-audit-blinded-strict-flags-unrounded.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:36:21Z |
+       -| free disk space at start (bytes) | 12399095808 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T22:09:35Z |
+       +| free disk space at start (bytes) | 12394803200 |
+       -| `exam-prep/fourth-fix/identity/run-d6557e91f9f97f7b/identity-audit-blinded-strict-flags-unrounded.csv` | `35ce82973f425de3cefdda6685e71e3adb30e7eb1c798ab7746919f5a4496401` |
+       -| `exam-prep/fourth-fix/identity/run-d6557e91f9f97f7b/hour-linkage-blinded-strict-flags-unrounded.csv` | `0b80b6d6460c1eb65284e490173e000cb05e5b21b3f4220e39faeb8a54f8ed4f` |
+       +| `exam-prep/review-4/rerun/identity/run-d6557e91f9f97f7b/identity-audit-blinded-strict-flags-unrounded.csv` | `35ce82973f425de3cefdda6685e71e3adb30e7eb1c798ab7746919f5a4496401` |
+       +| `exam-prep/review-4/rerun/identity/run-d6557e91f9f97f7b/hour-linkage-blinded-strict-flags-unrounded.csv` | `0b80b6d6460c1eb65284e490173e000cb05e5b21b3f4220e39faeb8a54f8ed4f` |
+differs     exam-prep/fourth-fix/identity/runs/446adf64f8e8235c.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-446adf64f8e8235c",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-446adf64f8e8235c",
+differs     exam-prep/fourth-fix/identity/runs/45d062efe77c9251.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-45d062efe77c9251",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-45d062efe77c9251",
+differs     exam-prep/fourth-fix/identity/runs/762815a877c19551.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-762815a877c19551",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-762815a877c19551",
+differs     exam-prep/fourth-fix/identity/runs/9777f422fd2d2b41.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-9777f422fd2d2b41",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-9777f422fd2d2b41",
+differs     exam-prep/fourth-fix/identity/runs/989b8f21b23e0310.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-989b8f21b23e0310",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-989b8f21b23e0310",
+differs     exam-prep/fourth-fix/identity/runs/9ff0ffec3fe21ebe.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-9ff0ffec3fe21ebe",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-9ff0ffec3fe21ebe",
+differs     exam-prep/fourth-fix/identity/runs/d6557e91f9f97f7b.json (2 changed lines)
+       - "output_dir": "exam-prep/fourth-fix/identity/run-d6557e91f9f97f7b",
+       + "output_dir": "exam-prep/review-4/rerun/identity/run-d6557e91f9f97f7b",
+identical   exam-prep/fourth-fix/identity/run-762815a877c19551/hour-linkage-blinded-strict-flags-k1.csv
+identical   exam-prep/fourth-fix/identity/run-762815a877c19551/identity-audit-blinded-strict-flags-k1.csv
+differs     exam-prep/fourth-fix/identity/run-762815a877c19551/identity-audit-blinded-strict-flags-k1.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:34:39Z |
+       -| free disk space at start (bytes) | 12399202304 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T22:07:47Z |
+       +| free disk space at start (bytes) | 12394840064 |
+       -| `exam-prep/fourth-fix/identity/run-762815a877c19551/identity-audit-blinded-strict-flags-k1.csv` | `fb62f56ce13407a0d612ed49ce80245690ef674944b126d9f61c663f8877ea65` |
+       -| `exam-prep/fourth-fix/identity/run-762815a877c19551/hour-linkage-blinded-strict-flags-k1.csv` | `8e67cfcbf6eebc5af1682383ac9382badf815b71d26cb48d5b444fcc84095f61` |
+       +| `exam-prep/review-4/rerun/identity/run-762815a877c19551/identity-audit-blinded-strict-flags-k1.csv` | `fb62f56ce13407a0d612ed49ce80245690ef674944b126d9f61c663f8877ea65` |
+       +| `exam-prep/review-4/rerun/identity/run-762815a877c19551/hour-linkage-blinded-strict-flags-k1.csv` | `8e67cfcbf6eebc5af1682383ac9382badf815b71d26cb48d5b444fcc84095f61` |
+identical   exam-prep/fourth-fix/identity/run-9777f422fd2d2b41/hour-linkage-raw-observation.csv
+identical   exam-prep/fourth-fix/identity/run-9777f422fd2d2b41/identity-audit-raw-observation.csv
+differs     exam-prep/fourth-fix/identity/run-9777f422fd2d2b41/identity-audit-raw-observation.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:26:59Z |
+       -| free disk space at start (bytes) | 12400291840 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T21:58:10Z |
+       +| free disk space at start (bytes) | 12395479040 |
+       -| `exam-prep/fourth-fix/identity/run-9777f422fd2d2b41/identity-audit-raw-observation.csv` | `7623e3052d391ff5dda7af45488d46b97b0bab6a3b7ca11187caac84dd323af9` |
+       -| `exam-prep/fourth-fix/identity/run-9777f422fd2d2b41/hour-linkage-raw-observation.csv` | `d591bebacbb18592695509c08d2da0861d9ec1a2ff2a3d6020aad31e6484facd` |
+       +| `exam-prep/review-4/rerun/identity/run-9777f422fd2d2b41/identity-audit-raw-observation.csv` | `7623e3052d391ff5dda7af45488d46b97b0bab6a3b7ca11187caac84dd323af9` |
+       +| `exam-prep/review-4/rerun/identity/run-9777f422fd2d2b41/hour-linkage-raw-observation.csv` | `d591bebacbb18592695509c08d2da0861d9ec1a2ff2a3d6020aad31e6484facd` |
+identical   exam-prep/fourth-fix/identity/run-45d062efe77c9251/hour-linkage-blinded-strict.csv
+identical   exam-prep/fourth-fix/identity/run-45d062efe77c9251/identity-audit-blinded-strict.csv
+differs     exam-prep/fourth-fix/identity/run-45d062efe77c9251/identity-audit-blinded-strict.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:32:57Z |
+       -| free disk space at start (bytes) | 12399296512 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T22:05:57Z |
+       +| free disk space at start (bytes) | 12394881024 |
+       -| `exam-prep/fourth-fix/identity/run-45d062efe77c9251/identity-audit-blinded-strict.csv` | `0651b1de1eb6d1af844b91d00bdad4a229a9c38c855899678394aad19bdaa171` |
+       -| `exam-prep/fourth-fix/identity/run-45d062efe77c9251/hour-linkage-blinded-strict.csv` | `b590bc5d04b4f84892454165db1069f02f105734595d3df38dfa720800c1dab7` |
+       +| `exam-prep/review-4/rerun/identity/run-45d062efe77c9251/identity-audit-blinded-strict.csv` | `0651b1de1eb6d1af844b91d00bdad4a229a9c38c855899678394aad19bdaa171` |
+       +| `exam-prep/review-4/rerun/identity/run-45d062efe77c9251/hour-linkage-blinded-strict.csv` | `b590bc5d04b4f84892454165db1069f02f105734595d3df38dfa720800c1dab7` |
+identical   exam-prep/fourth-fix/identity/run-989b8f21b23e0310/hour-linkage-blinded-ratio.csv
+identical   exam-prep/fourth-fix/identity/run-989b8f21b23e0310/identity-audit-blinded-ratio.csv
+differs     exam-prep/fourth-fix/identity/run-989b8f21b23e0310/identity-audit-blinded-ratio.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:30:19Z |
+       -| free disk space at start (bytes) | 12399546368 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T22:02:40Z |
+       +| free disk space at start (bytes) | 12395122688 |
+       -| `exam-prep/fourth-fix/identity/run-989b8f21b23e0310/identity-audit-blinded-ratio.csv` | `5967aaf480641f849ee522a62186b828bbef58ee4b23ba2c804bee52631f04f8` |
+       -| `exam-prep/fourth-fix/identity/run-989b8f21b23e0310/hour-linkage-blinded-ratio.csv` | `a240267eaf15370330de90357275ab111b21d8a096352d4bd8a753da7162b2a1` |
+       +| `exam-prep/review-4/rerun/identity/run-989b8f21b23e0310/identity-audit-blinded-ratio.csv` | `5967aaf480641f849ee522a62186b828bbef58ee4b23ba2c804bee52631f04f8` |
+       +| `exam-prep/review-4/rerun/identity/run-989b8f21b23e0310/hour-linkage-blinded-ratio.csv` | `a240267eaf15370330de90357275ab111b21d8a096352d4bd8a753da7162b2a1` |
+identical   exam-prep/fourth-fix/identity/run-9ff0ffec3fe21ebe/hour-linkage-blinded-strict-flags.csv
+identical   exam-prep/fourth-fix/identity/run-9ff0ffec3fe21ebe/identity-audit-blinded-strict-flags.csv
+differs     exam-prep/fourth-fix/identity/run-9ff0ffec3fe21ebe/identity-audit-blinded-strict-flags.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:28:40Z |
+       -| free disk space at start (bytes) | 12399742976 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T22:00:22Z |
+       +| free disk space at start (bytes) | 12395274240 |
+       -| `exam-prep/fourth-fix/identity/run-9ff0ffec3fe21ebe/identity-audit-blinded-strict-flags.csv` | `1f5dd2f5035c00ceb28f32fa002b5292696a5c48ed7aa611eb33ec99cf73aeef` |
+       -| `exam-prep/fourth-fix/identity/run-9ff0ffec3fe21ebe/hour-linkage-blinded-strict-flags.csv` | `d9ca80df12a1ec6100a8d68aa5cb9346f068745ec22302ac0f80613d24780e41` |
+       +| `exam-prep/review-4/rerun/identity/run-9ff0ffec3fe21ebe/identity-audit-blinded-strict-flags.csv` | `1f5dd2f5035c00ceb28f32fa002b5292696a5c48ed7aa611eb33ec99cf73aeef` |
+       +| `exam-prep/review-4/rerun/identity/run-9ff0ffec3fe21ebe/hour-linkage-blinded-strict-flags.csv` | `d9ca80df12a1ec6100a8d68aa5cb9346f068745ec22302ac0f80613d24780e41` |
+identical   exam-prep/fourth-fix/identity/run-446adf64f8e8235c/hour-linkage-blinded-rank.csv
+identical   exam-prep/fourth-fix/identity/run-446adf64f8e8235c/identity-audit-blinded-rank.csv
+differs     exam-prep/fourth-fix/identity/run-446adf64f8e8235c/identity-audit-blinded-rank.md (8 changed lines)
+       -| written at (system clock, UTC, RULES 23) | 2026-10-01T21:31:32Z |
+       -| free disk space at start (bytes) | 12399480832 |
+       +| written at (system clock, UTC, RULES 23) | 2026-10-01T22:04:18Z |
+       +| free disk space at start (bytes) | 12394934272 |
+       -| `exam-prep/fourth-fix/identity/run-446adf64f8e8235c/identity-audit-blinded-rank.csv` | `76b8bdc711e81d351aac21a24cb9978869bc74c64b871901769f3f4f6fc1e7e3` |
+       -| `exam-prep/fourth-fix/identity/run-446adf64f8e8235c/hour-linkage-blinded-rank.csv` | `569315b097a99d2245dcebfaf123ac577db7e689e47aeb891e55535c3356651a` |
+       +| `exam-prep/review-4/rerun/identity/run-446adf64f8e8235c/identity-audit-blinded-rank.csv` | `76b8bdc711e81d351aac21a24cb9978869bc74c64b871901769f3f4f6fc1e7e3` |
+       +| `exam-prep/review-4/rerun/identity/run-446adf64f8e8235c/hour-linkage-blinded-rank.csv` | `569315b097a99d2245dcebfaf123ac577db7e689e47aeb891e55535c3356651a` |
+differs     exam-prep/fourth-fix/checks/fourth-fix-checks-516027c6c9f215d6.md (2 changed lines)
+       -Written by `scripts/30_fourth_fix_checks.py` at 2026-10-01T21:38:08Z (system clock, RULES 23); free disk at start 12399026176 bytes. Criteria: `exam-prep/fourth-fix/criteria-written-before-measuring.md`.
+       +Written by `scripts/30_fourth_fix_checks.py` at 2026-10-01T22:11:24Z (system clock, RULES 23); free disk at start 12394766336 bytes. Criteria: `exam-prep/fourth-fix/criteria-written-before-measuring.md`.
+NO COUNTERPART exam-prep/review-4/rerun/checks/juror-file-check-94890bb9bf623a10.md
+identical   exam-prep/fourth-fix/checks/runs/516027c6c9f215d6.json
+NO COUNTERPART exam-prep/review-4/rerun/checks/runs/94890bb9bf623a10.json

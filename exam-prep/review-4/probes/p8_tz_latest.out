@@ -1,0 +1,4 @@
+TZ=UTC ('UTC', 'UTC') | move-window/earliest 168 69a4a2e0cacf1f8c | move-window/latest 168 f6ce536cc1e3ff12 | card-span/earliest 125 4bf1703b67ba13d6 | card-span/latest 124 c8164274b16ff86f
+TZ=Pacific/Chatham ('+1245', '+1345') | move-window/earliest 168 69a4a2e0cacf1f8c | move-window/latest 168 f6ce536cc1e3ff12 | card-span/earliest 125 4bf1703b67ba13d6 | card-span/latest 124 c8164274b16ff86f
+TZ=America/St_Johns ('NST', 'NDT') | move-window/earliest 168 69a4a2e0cacf1f8c | move-window/latest 168 f6ce536cc1e3ff12 | card-span/earliest 125 4bf1703b67ba13d6 | card-span/latest 124 c8164274b16ff86f
+TZ=Asia/Kathmandu ('+0545', '+0545') | move-window/earliest 168 69a4a2e0cacf1f8c | move-window/latest 168 f6ce536cc1e3ff12 | card-span/earliest 125 4bf1703b67ba13d6 | card-span/latest 124 c8164274b16ff86f
