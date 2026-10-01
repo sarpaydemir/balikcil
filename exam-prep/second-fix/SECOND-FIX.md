@@ -370,3 +370,25 @@ kinds, the label the ratified rule gives it.
    `scripts/exam_25_*`) were not opened; my own new scripts are numbered `24_`
    and `25_`, which sit next to theirs by number — no file collides, but the
    numbering can confuse a reader.
+
+---
+
+## Addendum · third-fix run, 2026-10-01 — read before relying on anything above
+
+Appended by Mateo (third-fix run). Nothing above was changed; the first
+25,076 bytes of this file are exactly the file as the second review found it
+(SHA-256 `40cc4b76…94a7`). Corrections, each with what was claimed, what it
+is now and why: `exam-prep/third-fix/THIRD-FIX.md` §5, rows C3-1 to C3-13. In
+short:
+
+- §3's K-1 table: the granularity nearest-neighbour figure at 2 decimals is a
+  floating-point artefact, and the `repeat-close` nearest-neighbour figure at
+  3 decimals depends on card order; recomputed order-free against their own
+  lines, both still beat (C3-1).
+- §4 item 1: "block above representative in two rows" is not supported
+  (C3-2); §4 item 2's noise statement is understated for the representative
+  column (C3-3); §4 item 4's "not biased" needs the qualification in C3-4.
+- §2 C-4, §5 rows 3 and 11, §8 step 3: C3-5, C3-6, C3-8, C3-7.
+- §8 is superseded, where it differs, by `exam-prep/HANDED-FORWARD.md`.
+- The juror files in `second-fix/juror-questions/` are kept unchanged and are
+  superseded, for juror use, through `exam-prep/JUROR-QUESTIONS.md`.

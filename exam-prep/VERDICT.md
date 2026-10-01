@@ -224,3 +224,137 @@ SECOND-FIX §10, nine items. The two that matter most: **R-04 is not solved**,
 and **nothing was measured on exam cards.**
 
 Nothing under `exam/` was read or written by this run.
+
+---
+---
+
+# Third-fix run · 2026-10-01 — acting on `exam-prep/REVIEW-2.md`
+
+Mateo · data engineer · appended 2026-10-01 (system clock, RULES 23).
+**Nothing above this line was changed**: the first 12,256 bytes of this file
+are the file as the second review found it (SHA-256
+`d83c2b85fe8548634193fa60d8c98e090559b7211f6066b21727a4482835fab5`). This
+section says what happened, not how; the working is in
+`exam-prep/third-fix/THIRD-FIX.md`, and what later runs must do is in
+`exam-prep/HANDED-FORWARD.md`.
+
+## The two problems now
+
+| problem | second-fix verdict | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | NOT SOLVED | **NOT SOLVED.** The acceptance-gate row still beats its chance line on both attacks on every blinded version of the observation cards, including a new version built this run that ranks the unrounded source values; that version reduces the leak and does not close it. |
+| **N-1 · collapse before counting** | instrument repaired; not yet usable | **The instrument is repaired and both of the second review's conditions are acted on, but N-1 is not usable yet:** the corrected counting questions await jurors and the referee (condition 1), and the key check is now enforced by the engine while its correct use is handed forward to the judge's script (condition 2). |
+
+## Outcome of every REVIEW-2 item
+
+Numbering: `exam-prep/third-fix/THIRD-FIX.md` §1.
+
+| item | outcome |
+|---|---|
+| R2-1 | **Done**; ratification **referred to jurors**. |
+| R2-2 | **Done** in the engine; **handed forward** (HANDED-FORWARD B-2). |
+| R2-3 | **Done.** |
+| R2-4 | **Done.** |
+| R2-5 | **Done**; the review's re-marking **disputed in part** (D-1). |
+| R2-6 | **Done** (withdrawn, reduced to a statement); the check on the exam set **handed forward** (A-5). |
+| R2-7 | **Done.** |
+| R2-8 | **Done.** |
+| R2-9 | **Done.** |
+| R2-10 | **Done**; commissioning **referred to the coordinator**. |
+| R2-11 | **Done**; **handed forward** (A-3). |
+| R2-12 | **Done**; **handed forward** (A-4). |
+| R2-13 | **Done.** |
+| R2-14 | **Done** (correction recorded). |
+| R2-15 | **Done** (correction recorded). |
+| R2-16 | **Done** (correction recorded); **disputed in part** (D-1). |
+| R2-17 | **Handed forward** as information, not as a requirement. |
+| R2-18 | **Not done**; **referred to the coordinator** (THIRD-FIX R2-18). |
+| R2-19 | R-04 **not closed** — what closure depends on is below, and the work that depends on no juror answer was done; whether the run working under `exam/` may proceed is **referred to the coordinator**. |
+
+## The juror rows
+
+| identifier | outcome |
+|---|---|
+| JQ-N1-1 | unchanged (fit) |
+| JQ-N1-2 | corrected — checked: fit |
+| JQ-N1-3 | corrected — checked: fit |
+| JQ-N1-4 | corrected — checked: fit |
+| JQ-CANTEEN-8 | corrected (written out as a juror file) — checked: fit |
+| JQ-R04-GATE | corrected — checked: fit |
+| JQ-R04-DATE-a | unchanged (fit) |
+| JQ-R04-DATE-b | corrected — checked: fit |
+| JQ-R04-DATE-c | unchanged (fit) |
+| JQ-R04-CONTENT-a | corrected — checked: fit |
+| JQ-R04-CONTENT-b | corrected — checked: fit |
+| JQ-B1 | corrected by withdrawal: it is a statement, not a juror question |
+
+Every corrected row was checked against the five tests REVIEW-2 applied
+(THIRD-FIX §3), and every number and line citation in the corrected files
+against its source (`scripts/28_juror_file_check.py`, run
+`bbb740248b0c8717`: 61 checks, 0 failed). `exam-prep/JUROR-QUESTIONS.md` was
+re-issued; it carries no wording, options or numbers of any question, and its
+earlier version is kept byte for byte at
+`exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md`.
+
+## What R-04's closure depends on
+
+1. The ratified outcomes of **JQ-R04-GATE**, **JQ-R04-DATE-a**,
+   **JQ-R04-DATE-b**, **JQ-R04-DATE-c**, **JQ-R04-CONTENT-a** and
+   **JQ-R04-CONTENT-b**.
+2. **And on engineering not yet found.** On today's material, under any
+   reading of the gate that involves pair AUC, the gate row still beats its
+   line even when the features of the price column and of the trade-count
+   column are both taken out. Which outcomes would combine with which
+   engineering is recorded in THIRD-FIX §4.5, marked **not for juror files**:
+   a juror who saw it could choose a definition by its effect (RULES 6), so
+   it must not be put in an instruction to a juror.
+3. If no engineering closes what is left, whether a measured channel that
+   cannot be removed is acceptable under RULES 9 is a question about a rule,
+   which is the user's. That point has not been reached.
+
+Done now, because it depends on no juror answer: the granularity channel is
+inside the gate's feature list; the nearest-neighbour score has an order-free
+version with its own line; the audit's clock-hour test now sees ranked
+columns; and the second run's untried engineering route — ranking the
+unrounded source values — was built, guarded and audited (THIRD-FIX §4).
+
+## Where I disagree with the second review (RULES 32)
+
+- **D-1.** REVIEW-2 rightly found that two nearest-neighbour "beats" printed
+  by the second run were not properties of the cards, but its replacement
+  verdicts ("does not beat") compare an order-free figure with the chance
+  line of the order-dependent statistic. A permutation line belongs to the
+  statistic it was drawn for; against the order-free statistic's own line
+  both cells beat. Reasoning and numbers: THIRD-FIX §6.
+- **D-2.** Not a disagreement: REVIEW-2 §6 decided nothing about the
+  identifiers, and I did not rename them (THIRD-FIX R2-18).
+
+## `RULES.md`
+
+**No change to `RULES.md` is required by anything this run did or referred.**
+The path named by the second-fix run remains possible and is restated in
+point 3 above; it has not been reached.
+
+## A steer in the instruction I was given
+
+I found no result, no prediction and no fix chosen for me. Two mild
+presumptions, named: "if an item can only be met by a run that does not
+exist yet" presumes such items exist (two do: R2-2 and R2-6's exam-set
+check); "if `R-04` is not closed when you finish" presumes it may not be
+(it is not, for the reasons above, which do not rest on that sentence).
+
+Separately, and not in the instruction: the context my session started with
+showed recent commit subjects of this repository, and I read them before
+opening any file. Two of them say that exam data has been acquired by a run
+under `exam/` (consistent with REVIEW-2 §7 item 1); one of those also says
+that a "contact address" was "found sent to third parties". Neither bears on R-04 or N-1 and I looked no
+further (git history is closed to me). I name the second because it may
+concern the user and I cannot tell whether the coordinator knows of it.
+
+## What this run did not do
+
+THIRD-FIX §7a, twelve items. The ones that matter most: **R-04 is not
+closed**; **nothing was measured on exam cards**; **no juror question is
+ratified**.
+
+Nothing under `exam/` was read or written by this run.

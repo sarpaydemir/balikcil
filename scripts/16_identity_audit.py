@@ -76,6 +76,43 @@ and outputs in exam-prep/identity/ are kept untouched.
      that is open question JQ-R04-GATE
      (exam-prep/second-fix/juror-questions/JQ-R04-GATE.md).
   6. Outputs go to <out>/run-<run16>/ and are never overwritten (RULES 30).
+
+Changes made in the third-fix run (2026-10-01), acting on exam-prep/REVIEW-2.md
+--------------------------------------------------------------------------------
+The version reviewed by REVIEW-2 has SHA-256 4dfd9fd1...7a91 (recorded in
+exam-prep/review-2/FINGERPRINTS.md); its runs and outputs are kept untouched.
+Criteria written before these changes were measured:
+exam-prep/third-fix/criteria-written-before-measuring.md (K-5, K-6, K-7).
+  7. Nearest neighbour without card-order dependence (REVIEW-2 §4.1, K-6).
+     The reviewed nearest-neighbour score breaks distance ties by the lowest
+     card index, so with whole-number features it is a property of the card
+     numbering. That score is still computed and printed unchanged (column
+     `nn_same_coin_accuracy`), and next to it:
+       - `nn_tie_free`: for every card, the share of its equally-nearest other
+         cards that are the same coin, averaged over cards -- the exact mean of
+         the reviewed score over every tie-break; it does not depend on card
+         order. Its own chance line is computed from the same 1,000 label
+         shuffles (`nn_tie_free_chance_1pct`).
+       - `nn_tie_low` / `nn_tie_high`: the lowest and highest value the
+         reviewed score can take over all tie-breaks, and
+         `cards_with_tied_nn`, the number of cards whose nearest neighbour is
+         not unique.
+     Where there are no ties the three scores are equal.
+  8. The K-4 granularity probe joins the audit as family `granularity-close`
+     (REVIEW-2 §4.2, K-5): the smallest non-zero difference between two
+     printed `close` values of a card's before table, computed on the printed
+     decimal text with exact decimal arithmetic -- not on parsed floats, which
+     is the defect REVIEW-2 found in 25_instrument_checks.py E-3. `close` is
+     not printed unchanged (it is rebased), so by K-2's rule the family is
+     removable and sits inside `ALL` and `ALL-removable`.
+  9. T4 also counts by the day a release falls (card start hour + the printed
+     offset), not only by the day the card starts (REVIEW-2 §4.4). A name
+     printed without an offset is keyed by the card's start day, as stated
+     in the report. Both are within-set counts, not publication frequency.
+ 10. T3 strips the unit suffix of a blinded column name (`quote vol r` ->
+     `quote vol`), as card_features() already did, so its `quote vol` row
+     sees the ranked column on a blinded set instead of reporting it as not
+     printed (SECOND-FIX §4 item 3 named this blind spot and left it).
 """
 
 import argparse
@@ -90,6 +127,7 @@ import re
 import shutil
 import sys
 from collections import defaultdict
+from decimal import Decimal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lab_cards  # noqa: E402
@@ -276,7 +314,51 @@ def card_features(c):
         f["rep-%s:%s:distinct" % (tag, name)] = float(len(set(vals)))
         f["rep-%s:%s:maxrepeat" % (tag, name)] = float(
             max(vals.count(v) for v in set(vals)))
+
+    # granularity of the printed `close` (third-fix run, K-5): exact decimal
+    # arithmetic on the printed text, never on parsed floats
+    if has("close"):
+        toks = exact_before_tokens(c["path"], "close")
+        vals = sorted({v for v in toks if v is not None})
+        steps = [b2 - a2 for a2, b2 in zip(vals, vals[1:]) if b2 - a2 > 0]
+        f["gran-close:min_step"] = float(min(steps)) if steps else 0.0
     return f
+
+
+def _exact_number(tok):
+    """The printed number as an exact Decimal ('122.69k' -> 122690)."""
+    tok = tok.strip()
+    if tok in (".", "", "-"):
+        return None
+    mult = {"k": Decimal(1000), "M": Decimal(10) ** 6,
+            "G": Decimal(10) ** 9, "B": Decimal(10) ** 9}
+    if tok[-1] in mult:
+        return Decimal(tok[:-1]) * mult[tok[-1]]
+    return Decimal(tok)
+
+
+def exact_before_tokens(path, colname):
+    """The printed values of one column of the before table, as exact
+    Decimals, read from the card text itself (third-fix run, K-5)."""
+    with open(path, encoding="utf-8") as fh:
+        lines = fh.read().split("\n")
+    i0 = lines.index("## Before")
+    for i in range(i0, len(lines)):
+        if lines[i].startswith("| h |"):
+            head = [x.strip() for x in lines[i].strip().strip("|").split("|")]
+            # a blinded header may carry a unit suffix; `close` never does
+            k = head.index(colname)
+            out = []
+            j = i + 2
+            while j < len(lines) and lines[j].startswith("|"):
+                cells = [x.strip() for x in
+                         lines[j].strip().strip("|").split("|")]
+                out.append(_exact_number(cells[k]))
+                j += 1
+            if len(out) != 24:
+                die("%s: before table has %d rows" % (path, len(out)))
+            return out
+    die("%s: no before table" % path)
 
 
 # Which repeat-structure family each printed column belongs to (K-2).
@@ -311,6 +393,7 @@ FAMILIES = {
     "repeat-ratio": ["rep-ratio:"],
     "repeat-depth": ["rep-depth:"],
     "repeat-btceth": ["rep-btceth:"],
+    "granularity-close": ["gran-close:"],
 }
 
 # The families a blinding may NOT remove, and why (the reviewed version typed
@@ -396,6 +479,40 @@ def nn_accuracy(nn_idx, labels):
                if labels[j] == labels[i]) / len(labels)
 
 
+def nearest_tie_sets(dists):
+    """For every card, ALL other cards at its smallest distance (third-fix
+    run, K-6). Distances do not change when labels are shuffled, so this is
+    computed once."""
+    n = len(dists)
+    out = []
+    for i in range(n):
+        row = dists[i]
+        best = min(row[j] for j in range(n) if j != i)
+        out.append([j for j in range(n) if j != i and row[j] == best])
+    return out
+
+
+def nn_tie_free(tsets, labels):
+    """Mean over cards of the share of equally-nearest cards that are the
+    same coin: the exact average of nn_accuracy() over every tie-break, and
+    independent of card order (K-6)."""
+    s = 0.0
+    for i, t in enumerate(tsets):
+        li = labels[i]
+        s += sum(1 for j in t if labels[j] == li) / len(t)
+    return s / len(labels)
+
+
+def nn_tie_range(tsets, labels):
+    """The lowest and highest value nn_accuracy() can take over all
+    tie-breaks (K-6)."""
+    lo = sum(1 for i, t in enumerate(tsets)
+             if all(labels[j] == labels[i] for j in t))
+    hi = sum(1 for i, t in enumerate(tsets)
+             if any(labels[j] == labels[i] for j in t))
+    return lo / len(labels), hi / len(labels)
+
+
 def pair_ranks(dists):
     """Average rank of every pair distance, smallest first. Ranks do not
     change when the labels are shuffled."""
@@ -452,7 +569,10 @@ def quantile_top(values, fraction):
 # ---------------------------------------------------------------------------
 
 def run_fingerprints(c, colnames):
-    col = c["cols"]
+    # third-fix run: a blinded card prints a ranked column as e.g.
+    # `quote vol r`; the suffix is stripped as card_features() does, so T3
+    # sees the column (SECOND-FIX §4 item 3 named this blind spot)
+    col = {re.sub(r" (x|r|dev)$", "", k): v for k, v in c["cols"].items()}
     if any(cn not in col for cn in colnames):
         return set()
     n = len(col["h"])
@@ -549,22 +669,32 @@ def main():
                 "nn_same_coin_accuracy": "", "nn_chance_1pct": "",
                 "nn_beats_chance": "no features left after blinding",
                 "pair_auc": "", "auc_chance_1pct": "",
-                "auc_beats_chance": "no features left after blinding"})
+                "auc_beats_chance": "no features left after blinding",
+                "cards_with_tied_nn": "", "nn_tie_low": "",
+                "nn_tie_high": "", "nn_tie_free": "",
+                "nn_tie_free_chance_1pct": "",
+                "nn_tie_free_beats_chance":
+                    "no features left after blinding"})
             continue
         dists = pair_distances(vecs)
         nn_idx = nearest_neighbours(dists)
+        tsets = nearest_tie_sets(dists)
         rank, total_pairs = pair_ranks(dists)
         obs_nn = nn_accuracy(nn_idx, coins)
+        obs_tf = nn_tie_free(tsets, coins)
+        tie_lo, tie_hi = nn_tie_range(tsets, coins)
         obs_auc = pair_auc(rank, total_pairs, coins)
         rng = random.Random(SEED)
         perm = list(coins)
-        null_nn, null_auc = [], []
+        null_nn, null_auc, null_tf = [], [], []
         for _ in range(SHUFFLES):
             rng.shuffle(perm)
             null_nn.append(nn_accuracy(nn_idx, perm))
             null_auc.append(pair_auc(rank, total_pairs, perm))
+            null_tf.append(nn_tie_free(tsets, perm))
         nn_line = quantile_top(null_nn, TOP_FRACTION)
         auc_line = quantile_top(null_auc, TOP_FRACTION)
+        tf_line = quantile_top(null_tf, TOP_FRACTION)
         rows.append({
             "card_set": args.label, "test": "T1+T2", "family": fam,
             "features_used": len(used), "feature_names": " ".join(used),
@@ -574,7 +704,13 @@ def main():
             "nn_beats_chance": "YES" if obs_nn > nn_line else "no",
             "pair_auc": round(obs_auc, 6),
             "auc_chance_1pct": round(auc_line, 6),
-            "auc_beats_chance": "YES" if obs_auc > auc_line else "no"})
+            "auc_beats_chance": "YES" if obs_auc > auc_line else "no",
+            "cards_with_tied_nn": sum(1 for t in tsets if len(t) > 1),
+            "nn_tie_low": round(tie_lo, 6),
+            "nn_tie_high": round(tie_hi, 6),
+            "nn_tie_free": round(obs_tf, 6),
+            "nn_tie_free_chance_1pct": round(tf_line, 6),
+            "nn_tie_free_beats_chance": "YES" if obs_tf > tf_line else "no"})
 
     # ---- T3 ----------------------------------------------------------------
     def hourset(c):
@@ -660,12 +796,35 @@ def main():
         for x in nm:
             days[x].add(c["start_hour_utc"][:10])
     one_day = sorted(x for x, d in days.items() if len(d) == 1)
+    # third-fix run (REVIEW-2 §4.4): the same count by the day the release
+    # falls, card start hour + printed offset. A name printed without an
+    # offset is keyed by ("no offset", the card's start day).
+    rdays = defaultdict(set)
+    for c, txt in zip(cards, rel):
+        if txt in (NONE_REL, ""):
+            continue
+        t0 = hourset(c)
+        for p in txt.split(";"):
+            p = p.strip()
+            mo = re.search(r"\(([-+]\d+) h\)$", p)
+            x = re.sub(r"\s*\((?:[-+]\d+ h|the calendar publishes no clock "
+                       r"time)\)$", "", p)
+            if mo:
+                rdays[x].add((t0 + dt.timedelta(hours=int(mo.group(1))))
+                             .strftime("%Y-%m-%d"))
+            else:
+                rdays[x].add("no offset " + c["start_hour_utc"][:10])
+    one_rday = sorted(x for x, d in rdays.items() if len(d) == 1)
     t4 = {"cards_printing_a_release_name":
               sum(1 for nm in names_by_card if nm),
           "distinct_release_names": len(days),
           "names_on_exactly_one_calendar_day_of_this_set": one_day,
           "cards_carrying_such_a_name":
-              sum(1 for nm in names_by_card if any(x in one_day for x in nm))}
+              sum(1 for nm in names_by_card if any(x in one_day for x in nm)),
+          "names_on_exactly_one_release_day_of_this_set": one_rday,
+          "cards_carrying_such_a_name_by_release_day":
+              sum(1 for nm in names_by_card
+                  if any(x in one_rday for x in nm))}
 
     # ---- write (RULES 30: a run directory is written once) ----------------
     import io
@@ -694,6 +853,9 @@ def main():
             "families_leaking_nn":
                 sorted(r["family"] for r in rows
                        if r["nn_beats_chance"] == "YES"),
+            "families_leaking_nn_tie_free":
+                sorted(r["family"] for r in rows
+                       if r["nn_tie_free_beats_chance"] == "YES"),
             "forced_families": list(FORCED_FAMILIES),
             "t4_release_names": t4,
             "output_sha256": data_sha,
@@ -768,12 +930,39 @@ def main():
                     r["nn_beats_chance"], r["pair_auc"],
                     r["auc_chance_1pct"], r["auc_beats_chance"]))
     A.append("")
+    A.append("### Nearest neighbour and tied distances (third-fix run)")
+    A.append("")
+    A.append("The nearest-neighbour score above breaks a distance tie by the "
+             "lowest card index, so where features tie it depends on how the "
+             "cards are numbered (REVIEW-2 §4.1). `tie range` is the lowest "
+             "and highest value that score can take over every tie-break; "
+             "`tie-free` is its exact mean over every tie-break, which does "
+             "not depend on card order, with its own chance line from the "
+             "same %d shuffles. Where no card has a tied nearest neighbour "
+             "the three agree." % SHUFFLES)
+    A.append("")
+    A.append("| feature family | cards with a tied nearest neighbour | "
+             "nearest-neighbour (index tie-break) | tie range | tie-free | "
+             "chance line | beats chance |")
+    A.append("|---|---|---|---|---|---|---|")
+    for r in rows:
+        if r["features_used"] == 0:
+            A.append("| `%s` | | | | | | %s |" % (r["family"],
+                                                 r["nn_tie_free_beats_chance"]))
+            continue
+        A.append("| `%s` | %s | %s | %s – %s | %s | %s | %s |"
+                 % (r["family"], r["cards_with_tied_nn"],
+                    r["nn_same_coin_accuracy"], r["nn_tie_low"],
+                    r["nn_tie_high"], r["nn_tie_free"],
+                    r["nn_tie_free_chance_1pct"],
+                    r["nn_tie_free_beats_chance"]))
+    A.append("")
     A.append("## The gate rows — `ALL-removable`, both attacks")
     A.append("")
     A.append("`ALL-removable` is every family except the forced ones (%s). "
              "Both attacks are printed. **This report does not say which of "
              "them decides the acceptance gate**; that is open question "
-             "JQ-R04-GATE (`exam-prep/second-fix/juror-questions/"
+             "JQ-R04-GATE (`exam-prep/third-fix/juror-questions/"
              "JQ-R04-GATE.md`)." % ", ".join("`%s`" % f
                                               for f in FORCED_FAMILIES))
     A.append("")
@@ -784,6 +973,11 @@ def main():
             A.append("| nearest-neighbour same-coin | %s | %s | %s |"
                      % (r["nn_same_coin_accuracy"], r["nn_chance_1pct"],
                         r["nn_beats_chance"]))
+            A.append("| nearest-neighbour same-coin, tie-free (%s cards with "
+                     "a tied nearest neighbour) | %s | %s | %s |"
+                     % (r["cards_with_tied_nn"], r["nn_tie_free"],
+                        r["nn_tie_free_chance_1pct"],
+                        r["nn_tie_free_beats_chance"]))
             A.append("| pair AUC | %s | %s | %s |"
                      % (r["pair_auc"], r["auc_chance_1pct"],
                         r["auc_beats_chance"]))
@@ -821,6 +1015,17 @@ def main():
              "%d |" % len(one_day))
     A.append("| cards carrying such a name | %d |"
              % t4["cards_carrying_such_a_name"])
+    A.append("| names that fall on exactly one release day of this set "
+             "(card start hour + printed offset; a name printed without an "
+             "offset is keyed by the card's start day) | %d |"
+             % len(one_rday))
+    A.append("| cards carrying such a name | %d |"
+             % t4["cards_carrying_such_a_name_by_release_day"])
+    A.append("")
+    A.append("The first two rows of counts above are by the day the card "
+             "starts (the second-fix definition); the last two by the day the "
+             "release falls (third-fix). Both measure uniqueness **within this "
+             "card set**, not how often a release is published.")
     A.append("")
     A.append("## Fingerprints")
     A.append("")

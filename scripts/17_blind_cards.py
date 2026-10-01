@@ -72,6 +72,23 @@ over the card set, at which no card prints two equal rebased values where
 the raw card printed two different ones (REVIEW §3.2: the reviewed rendering
 manufactures such ties, and they are a coin signature).
 
+Change made in the third-fix run (2026-10-01), acting on exam-prep/REVIEW-2.md
+--------------------------------------------------------------------------------
+The version REVIEW-2 reviewed has SHA-256 b2853b66...0dbed. One option is
+added, `--rank-source`, default `printed` = the existing behaviour, so every
+earlier command line produces the same card text. `--rank-source unrounded`
+implements criterion K-10 of exam-prep/third-fix/criteria-written-before-
+measuring.md: with `--levels rank` (and `--takerbuy rank`), each ranked column
+is ranked on the value the card writer had BEFORE it rounded it -- the hourly
+klines (quote volume, trade count, taker-buy share) and the card writer's own
+hourly caches of the 5-minute metrics and the order-book depth, read from
+data/observation/ and never written. Guards, each stopping the script:
+every source value, formatted with scripts/09_write_cards.py's own functions,
+must give exactly the token the raw card prints; the before-window hours
+printing an open-interest zero (B-3) and the before-window hours inside a run
+of three or more identical depth values (B-4) must be the same on the raw and
+the blinded card.
+
 No threshold, score or trading rule is defined anywhere in this file.
 """
 
@@ -330,12 +347,114 @@ def choose_close_dp(cards, mode):
     return int(mode), table
 
 
+def run_hours(vals):
+    """The positions that sit inside a run of RUN_LEN or more identical
+    consecutive values (B-4's pattern)."""
+    out = set()
+    i = 0
+    while i < len(vals):
+        j = i
+        while j + 1 < len(vals) and vals[j + 1] == vals[i]:
+            j += 1
+        if j - i + 1 >= RUN_LEN:
+            out.update(range(i, j + 1))
+        i = j + 1
+    return out
+
+
+def unrounded_sources(cards):
+    """K-10: the unrounded value of every ranked column for every before hour
+    of every card, read from the same sources the card writer read, and
+    checked token by token against the printed raw card. Returns
+    ({card: {column: [24 values]}}, [(input name, sha256), ...])."""
+    import importlib.util
+    here = os.path.dirname(os.path.abspath(__file__))
+    spec = importlib.util.spec_from_file_location(
+        "w9", os.path.join(here, "09_write_cards.py"))
+    w9 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(w9)
+    hour = w9.HOUR_MS
+    inputs = [("scripts/09_write_cards.py",
+               sha256_file(os.path.join(here, "09_write_cards.py")))]
+    per_coin = {}
+
+    def cache(kind, sym, raw_dir):
+        path = os.path.join(w9.DERIVED, kind, "%s.json" % sym)
+        d = os.path.join(w9.OBS, raw_dir, sym)
+        files = sorted(os.listdir(d)) if os.path.isdir(d) else []
+        with open(path, encoding="utf-8") as fh:
+            cc = json.load(fh)
+        if cc.get("files") != files:
+            die("K-10: %s does not match the files in %s; it is not "
+                "rebuilt here" % (path, d))
+        inputs.append((os.path.relpath(path, REPO), sha256_file(path)))
+        return {int(k): v for k, v in cc["hours"].items()}
+
+    out = {}
+    for c in cards:
+        sym = c["coin"]
+        if sym not in per_coin:
+            kd = os.path.join(w9.OBS, "klines_1h", sym)
+            for f in sorted(os.listdir(kd)):
+                if f.endswith(".zip"):
+                    inputs.append((os.path.relpath(os.path.join(kd, f), REPO),
+                                   sha256_file(os.path.join(kd, f))))
+            per_coin[sym] = (w9.load_klines(sym),
+                             cache("metrics-hourly", sym, "metrics"),
+                             cache("bookdepth-hourly", sym, "bookDepth"))
+        bars, met, bd = per_coin[sym]
+        t0 = int(dt.datetime.strptime(c["start_hour_utc"], "%Y-%m-%dT%H:%MZ")
+                 .replace(tzinfo=dt.timezone.utc).timestamp() * 1000)
+        hours = [t0 - (24 - k) * hour for k in range(24)]
+        src = {nm: [] for nm in ("quote vol", "trades", "taker buy%",
+                                 "open int", "L/S acct", "top L/S pos",
+                                 "taker L/S", "depth -1%", "depth +1%")}
+        for i, hh in enumerate(hours):
+            b = bars.get(hh)
+            m = met.get(hh) or {}
+            d = bd.get(hh) or {}
+            vals = {"quote vol": b["qvol"] if b else None,
+                    "trades": float(b["count"]) if b else None,
+                    "taker buy%": b["taker_buy_pct"] if b else None,
+                    "open int": m.get("oi"), "L/S acct": m.get("ls_acct"),
+                    "top L/S pos": m.get("top_ls_pos"),
+                    "taker L/S": m.get("taker_ls"),
+                    "depth -1%": d.get("bid1"), "depth +1%": d.get("ask1")}
+            fmt = {"quote vol": w9.human(vals["quote vol"])
+                   if b else ".",
+                   "trades": w9.human(vals["trades"], 0) if b else ".",
+                   "taker buy%": w9.num(vals["taker buy%"], 1)
+                   if b else ".",
+                   "open int": w9.human(vals["open int"]),
+                   "L/S acct": w9.num(vals["L/S acct"]),
+                   "top L/S pos": w9.num(vals["top L/S pos"]),
+                   "taker L/S": w9.num(vals["taker L/S"]),
+                   "depth -1%": w9.human(vals["depth -1%"]),
+                   "depth +1%": w9.human(vals["depth +1%"])}
+            printed_row = c["before_rows_text"][i]
+            cells = [x.strip() for x in printed_row.strip().strip("|")
+                     .split("|")]
+            names = lab_cards.COLUMNS
+            for nm in src:
+                tok = cells[names.index(nm)]
+                if fmt[nm] != tok:
+                    die("K-10 guard 1: %s h%+d `%s`: source formats as %r, "
+                        "the card prints %r" % (c["card"], i - 24, nm,
+                                                fmt[nm], tok))
+                src[nm].append(vals[nm])
+        out[c["card"]] = src
+    return out, sorted(set(inputs))
+
+
 def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
-               p7_mode, close_dp=CLOSE_DP_REVIEWED):
-    """Returns (text, diagnostics)."""
+               p7_mode, close_dp=CLOSE_DP_REVIEWED, src=None):
+    """Returns (text, diagnostics). `src` (third-fix, K-10): the unrounded
+    source values of the ranked columns, one list of 24 per column name; when
+    given, ranks are computed on them instead of on the printed values."""
     col = c["before"]
     n = len(col["h"])
     diag = {}
+    rk_in = src if src is not None else col
 
     # --- price: TACTICS 6, "converted to a number starting from 100" -------
     close = rebased_close(c)
@@ -345,6 +464,7 @@ def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
     for name in LEVEL_COLUMNS:
         vals = col[name]
         if levels == "rank":
+            vals = rk_in[name]
             nonzero = [v for v in vals if v != 0]
             if nonzero:
                 rk = ranks(vals)
@@ -365,7 +485,7 @@ def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
         taker = ["%+.1f" % (v - med) for v in col["taker buy%"]]
         taker_header = "taker buy% dev"
     elif takerbuy_mode == "rank":
-        taker = ["%.1f" % r for r in ranks(col["taker buy%"])]
+        taker = ["%.1f" % r for r in ranks(rk_in["taker buy%"])]
         taker_header = "taker buy% r"
     else:
         taker = ["%.1f" % v for v in col["taker buy%"]]
@@ -469,6 +589,9 @@ def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
     diag["raw_oi_zero_rows"] = sum(1 for v in col["open int"] if v == 0)
     zero_printed = sum(1 for v in printed["open int"] if float(v) == 0.0)
     diag["blind_oi_zero_rows"] = zero_printed
+    diag["printed_depth"] = {nm: printed[nm] for nm in ("depth -1%",
+                                                        "depth +1%")}
+    diag["printed_oi"] = printed["open int"]
     diag["raw_max_abs_chg"] = max(abs(v) for v in col["chg%"])
     diag["blind_max_abs_chg"] = max(abs(float(r.split("|")[3].strip()))
                                     for r in rows)
@@ -486,6 +609,11 @@ def main():
     ap.add_argument("--takerbuy", choices=("centred", "rank", "raw"),
                     default="centred")
     ap.add_argument("--p7", choices=("full", "no-scale"), default="full")
+    ap.add_argument("--rank-source", choices=("printed", "unrounded"),
+                    default="printed",
+                    help="third-fix, K-10: rank the printed values (default, "
+                         "the reviewed behaviour) or the unrounded source "
+                         "values")
     ap.add_argument("--close-dp", default=str(CLOSE_DP_REVIEWED),
                     help="'2' (the reviewed rendering) or 'no-new-ties' "
                          "(criterion K-1)")
@@ -505,6 +633,13 @@ def main():
               "close_dp=%s->%d"
               % (args.levels, args.btceth, args.funding, args.takerbuy,
                  args.p7, RATIO_DP, args.close_dp, close_dp))
+    sources = {}
+    source_inputs = []
+    if args.rank_source == "unrounded":
+        if args.levels != "rank":
+            die("--rank-source unrounded needs --levels rank")
+        config += ";rank_source=unrounded"
+        sources, source_inputs = unrounded_sources(cards)
     script_sha = sha256_file(os.path.abspath(__file__))
     h = hashlib.sha256()
     h.update(("script:" + script_sha + "\n").encode())
@@ -512,6 +647,8 @@ def main():
         os.path.dirname(os.path.abspath(__file__)),
         "lab_cards.py")) + "\n").encode())
     h.update(("config:" + config + ";seed:%d\n" % SEED).encode())
+    for name, sha in source_inputs:
+        h.update(("source:%s:%s\n" % (name, sha)).encode())
     for c in cards:
         h.update(("%s:%s\n" % (c["card"], c["sha256"])).encode())
     run_full = h.hexdigest()
@@ -537,7 +674,7 @@ def main():
         try:
             text, diag = build_card(c, cid, args.levels, args.btceth,
                                     args.funding, args.takerbuy, args.p7,
-                                    close_dp)
+                                    close_dp, sources.get(c["card"]))
         except ValueError as e:
             die(str(e))
         path = os.path.join(out_cards, cid + ".md")
@@ -580,6 +717,29 @@ def main():
                if d["raw_oi_zero_rows"] != d["blind_oi_zero_rows"]]
     lost_chg = [d["card"] for d in diags
                 if abs(d["raw_max_abs_chg"] - d["blind_max_abs_chg"]) >= 1e-9]
+    if args.rank_source == "unrounded":
+        b3_moved, b4_moved = [], []
+        for c, d in zip(cards, diags):
+            col = c["before"]
+            if [v == 0 for v in col["open int"]] != \
+                    [t == "0" for t in d["printed_oi"]]:
+                b3_moved.append(d["card"])
+            for nm in ("depth -1%", "depth +1%"):
+                if run_hours(col[nm]) != run_hours(d["printed_depth"][nm]):
+                    b4_moved.append("%s(%s)" % (d["card"], nm))
+        survived["B-3 · cards whose open-interest zero hours differ, raw vs "
+                 "blinded (K-10)"] = len(b3_moved)
+        survived["B-4 · depth columns whose run hours differ, raw vs "
+                 "blinded (K-10)"] = len(b4_moved)
+        if b3_moved:
+            die("K-10 guard 2: the open-interest zero hours differ on %d "
+                "card(s): %s" % (len(b3_moved), " ".join(b3_moved[:20])))
+        if b4_moved:
+            die("K-10 guard 3: the B-4 run hours differ on %d depth "
+                "column(s): %s" % (len(b4_moved), " ".join(b4_moved[:40])))
+    for d in diags:
+        d.pop("printed_depth", None)
+        d.pop("printed_oi", None)
     if lost_oi:
         die("the blinding destroyed the B-3 zero on %d card(s): %s"
             % (len(lost_oi), " ".join(lost_oi[:10])))

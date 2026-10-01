@@ -56,6 +56,27 @@ The version reviewed is git commit 7735d08, SHA-256 f3de2358...fb12; its run
      largest such count (REVIEW §4.4), and the events and cards a block
      shuffle cannot move.
 
+Changes made in the third-fix run (2026-10-01), acting on exam-prep/REVIEW-2.md
+--------------------------------------------------------------------------------
+The version REVIEW-2 reviewed has SHA-256 a0bcc600...8280 (recorded in
+exam-prep/review-2/FINGERPRINTS.md); its run `756cf4ea156d92c3` and outputs
+in exam-prep/collapse/run-756cf4ea156d92c3/ are kept untouched.
+  7. chance_line() takes a REQUIRED keyword argument `key_moments_sha256` and
+     refuses to run unless it equals the fingerprint of the moments the event
+     map was made from (REVIEW-2 §4.3: an event map built by collapse() from
+     forged moments was accepted under a collapsed label). The judge computes
+     that value with moments_fingerprint() from the moments read out of the
+     SEALED ANSWER KEY -- never from the event map itself, which would check
+     nothing. The record carries `key_moments_sha256` and
+     `key_check: "matched"`. This makes the comparison impossible to forget;
+     it cannot by itself prove that the caller read the key, which is why
+     exam-prep/HANDED-FORWARD.md requires it of the judge's script.
+  8. moments_fingerprint(moments): the same canonical fingerprint as
+     EventMap.moments_sha256(), computable from a plain moment list.
+  9. main() passes the fingerprint of the moments it read (the cards, or the
+     --moments CSV) and nothing else changed; events.csv, the summary and the
+     calibration are expected byte-identical to run 756cf4ea156d92c3.
+
 Rules implemented
 -----------------
 RULES 13  : "Moments occurring in several coins in the same hour count as a
@@ -216,6 +237,17 @@ def identity_map(moments):
     """
     return EventMap([[m["id"]] for m in moments], "none", "none", "none",
                     moments)
+
+
+def moments_fingerprint(moments):
+    """The fingerprint EventMap.moments_sha256() carries, computed from a
+    plain list of moments (dicts with id, coin, start_dt). The judge calls
+    this on the moments read from the sealed answer key and passes the result
+    to chance_line() as `key_moments_sha256` (third-fix run, REVIEW-2 §4.3).
+    """
+    tup = sorted((m["id"], m["coin"], fmt_hour(m["start_dt"]))
+                 for m in moments)
+    return hashlib.sha256(json.dumps(tup).encode()).hexdigest()
 
 
 def _moments_from_tuple(tup):
@@ -442,7 +474,7 @@ def quantile_top(values, fraction):
 
 def chance_line(answers, labels, events, id_order, mode,
                 representatives=None, shuffles=SHUFFLES,
-                fraction=TOP_FRACTION, seed=SEED):
+                fraction=TOP_FRACTION, seed=SEED, *, key_moments_sha256):
     """The RULES 12 chance line, computed so that it CANNOT be computed
     without an event map, and so that its result carries the map.
 
@@ -472,11 +504,21 @@ def chance_line(answers, labels, events, id_order, mode,
     them -- mode, config, event_map_sha256, moments_sha256, cards, events,
     n_in_null, identity_partition, immovable_events, cards_in_immovable_events
     (block mode), representatives_sha256 (representative mode), shuffles,
-    top_fraction, seed, engine_sha256.
+    top_fraction, seed, engine_sha256, key_moments_sha256, key_check.
+
+    key_moments_sha256 (required, keyword only; third-fix run): the
+    moments_fingerprint() of the moments read from the sealed answer key. The
+    function refuses unless the event map was made from exactly those moments.
     """
     if mode not in ("block", "representative"):
         raise ValueError("mode must be 'block' or 'representative'")
     verify_event_map(events)
+    if not isinstance(key_moments_sha256, str) or \
+            key_moments_sha256 != events.moments_sha256():
+        raise ValueError("the event map was not made from the moments of the "
+                         "answer key: its moments fingerprint %s is not the "
+                         "key's %r" % (events.moments_sha256()[:16],
+                                       str(key_moments_sha256)[:16]))
     if not (len(answers) == len(labels) == len(id_order)):
         raise ValueError("answers, labels and id_order must be the same length")
     flat = sorted(c for ev in events for c in ev)
@@ -490,7 +532,9 @@ def chance_line(answers, labels, events, id_order, mode,
            "cards": len(id_order), "events": len(events),
            "identity_partition": all(len(ev) == 1 for ev in events),
            "shuffles": shuffles, "top_fraction": fraction, "seed": seed,
-           "engine_sha256": sha256_file(ENGINE_PATH)}
+           "engine_sha256": sha256_file(ENGINE_PATH),
+           "key_moments_sha256": key_moments_sha256,
+           "key_check": "matched"}
     rng = random.Random(seed)
     null = []
     if mode == "block":
@@ -580,6 +624,9 @@ def main():
         die("duplicate moment ids in the input")
     by_id = {m["id"]: m for m in moments}
     id_order = sorted(ids)
+    # third-fix run: the fingerprint of the moments this run read (the cards,
+    # or the --moments CSV); every chance_line() call is checked against it
+    key_sha = moments_fingerprint(moments)
 
     # ---- run number (RULES 29) --------------------------------------------
     script_sha = sha256_file(os.path.abspath(__file__))
@@ -719,7 +766,8 @@ def main():
 
             # The block column goes through chance_line(), the interface a
             # judge imports, so the record it returns is exercised here too.
-            blk = chance_line(answers, labels, events, id_order, "block")
+            blk = chance_line(answers, labels, events, id_order, "block",
+                              key_moments_sha256=key_sha)
             if blk["config"] != cfg or abs(blk["observed"] - observed) > 1e-12:
                 die("chance_line record disagrees with the calibration on %s"
                     % cfg)
@@ -795,6 +843,7 @@ def main():
         "output_sha256": data_sha,
         "output_dir": os.path.relpath(run_dir, REPO),
         "script_sha256": script_sha,
+        "key_moments_sha256": key_sha,
     }
     rec_path = os.path.join(runs_dir, run16 + ".json")
     if os.path.exists(rec_path):

@@ -1,0 +1,17 @@
+start 2026-10-01T20:12:52Z
+free bytes 12423520256
+run bec532fa008e0e01: 306 moments, 11 configurations -> exam-prep/collapse/run-bec532fa008e0e01
+collapse done 2026-10-01T20:13:59Z
+run f7f3e1f961a52e5d: 306 cards, 26 families
+run 6e8b25a450781c63: 306 cards, 26 families
+audit strict-flags done 2026-10-01T20:17:40Z
+run d0abcbf4eb7fc2ca: 306 cards, 26 families
+audit ratio done 2026-10-01T20:18:58Z
+run c3fc7b1843bc3b06: 306 cards, 26 families
+audit rank done 2026-10-01T20:20:29Z
+run 11a116e2282cbe57: 306 cards, 26 families
+audit strict done 2026-10-01T20:22:12Z
+run fff5f53e56b89b90: 306 cards, 26 families
+run 950da2e6f7395aac
+run 81d8696eeefbf26d
+end 2026-10-01T20:23:56Z

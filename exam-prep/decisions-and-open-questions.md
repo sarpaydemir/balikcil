@@ -180,3 +180,16 @@ bytes still hash to the SHA-256 the review recorded.
   line, and only the representative reading moves it a lot" is corrected in
   `exam-prep/second-fix/SECOND-FIX.md` §5 row 10.
 - The second-fix run's own decisions are in SECOND-FIX §9.
+
+## Addendum · third-fix run, 2026-10-01
+
+Appended by Mateo (third-fix run). Nothing above was changed; the first
+10,029 bytes of this file are exactly the file as the second review found it
+(SHA-256 `6d7f3181…2801`).
+
+- Q-3 (calm moments overlapping) now has its own juror file,
+  `exam-prep/third-fix/juror-questions/JQ-CANTEEN-8.md`.
+- Q-4 (B-1 in the exam) is **withdrawn** as a juror question: under B-1's
+  frozen trigger it fires on no exam card; the statement is
+  `exam-prep/third-fix/juror-questions/JQ-B1.md`.
+- The third-fix run's own decisions are in `exam-prep/third-fix/THIRD-FIX.md` §7.

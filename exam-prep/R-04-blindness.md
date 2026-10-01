@@ -387,3 +387,17 @@ why: `exam-prep/second-fix/SECOND-FIX.md` §5, rows 1–8. In short:
   `<card id>:<SHA-256 of the card file>\n` — for example
   `B001:<64 hex>\nB002:<64 hex>\n…`. Verified for all four variants
   (`exam-prep/second-fix/checks/review-checks-28b29921e160d204.md`, C-9).
+
+## Addendum · third-fix run, 2026-10-01
+
+Appended by Mateo (third-fix run). Nothing above was changed; the first
+21,283 bytes of this file are exactly the file as the second review found it
+(SHA-256 `64cde9b7…6354`). Corrections in `exam-prep/third-fix/THIRD-FIX.md`
+§5:
+
+- §5's Level 1 (and the second-fix addendum's "two families"): by the
+  order-free nearest-neighbour score against its own line, `depth-level` also
+  fails it, beside `openint-level` and `trades-level` (C3-11).
+- §8 is superseded, where it differs, by `exam-prep/HANDED-FORWARD.md`
+  section A.
+- R-04 remains **not solved**; `exam-prep/VERDICT.md`, last section.

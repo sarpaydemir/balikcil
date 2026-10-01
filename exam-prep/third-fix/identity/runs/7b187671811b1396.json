@@ -1,0 +1,27 @@
+{
+ "cards": 306,
+ "input_fingerprint": "7b187671811b1396d9196f93e26cdee49d37933ccd59b82a436cdedc7fa65b86",
+ "label": "blinded-strict-flags-k1",
+ "rows": [
+  {
+   "beats_chance": "YES",
+   "card_set": "blinded-strict-flags-k1",
+   "chance_1pct": 0.176471,
+   "features_used": 44,
+   "nn_same_coin_accuracy": 0.434641,
+   "null_mean": 0.119797,
+   "time_overlapping_neighbours_forbidden": "no"
+  },
+  {
+   "beats_chance": "YES",
+   "card_set": "blinded-strict-flags-k1",
+   "chance_1pct": 0.176471,
+   "features_used": 44,
+   "nn_same_coin_accuracy": 0.424837,
+   "null_mean": 0.119951,
+   "time_overlapping_neighbours_forbidden": "yes"
+  }
+ ],
+ "run": "7b187671811b1396",
+ "script_sha256": "9db9f7b06cb773fe269603882576f01a89af8ac092ed01773cbc63cbf4acb429"
+}

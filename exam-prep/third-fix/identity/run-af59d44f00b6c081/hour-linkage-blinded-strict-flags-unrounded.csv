@@ -1,0 +1,6 @@
+card_set,test,columns,pairs,truly_sharing_hours,detected_of_those,detection_rate,false_positives,false_positive_rate,note
+blinded-strict-flags-unrounded,T3,BTC+ETH,0,0,0,,0,,column(s) not printed on this card set
+blinded-strict-flags-unrounded,T3,chg%,46665,495,10,0.020202,1,2.2e-05,3 consecutive identical rows
+blinded-strict-flags-unrounded,T3,close,46665,495,0,0.0,2,4.3e-05,3 consecutive identical rows
+blinded-strict-flags-unrounded,T3,quote vol,0,0,0,,0,,column(s) not printed on this card set
+blinded-strict-flags-unrounded,T3,bullet:US releases,46665,495,8,0.016162,15,0.000325,"the whole bullet text identical, the default 'none' text excluded"

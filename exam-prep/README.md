@@ -64,3 +64,18 @@ review (`REVIEW.md`), a second run acted on it. Read, in this order:
 `second-fix/FINGERPRINTS.md`. New outputs live in `second-fix/` and in
 `collapse/run-756cf4ea156d92c3/`; nothing written by the first run was
 overwritten.
+
+---
+
+## Addendum · third-fix run, 2026-10-01
+
+Appended by Mateo (third-fix run); nothing above was changed (its first 3,605
+bytes still hash to `c704496b…9d375`). After the second review
+(`REVIEW-2.md`), a third run acted on it. Read, in this order: `VERDICT.md`
+(its last appended section), `JUROR-QUESTIONS.md` (re-issued; the earlier
+index is kept at `third-fix/JUROR-QUESTIONS-as-of-second-fix.md`),
+`HANDED-FORWARD.md` (what the exam-building run and the judge's script must
+do), `third-fix/THIRD-FIX.md`, `third-fix/criteria-written-before-measuring.md`,
+`third-fix/juror-questions/`, `third-fix/checks/`, `third-fix/FINGERPRINTS.md`.
+New outputs live in `third-fix/` and in `collapse/run-bec532fa008e0e01/`;
+nothing written by an earlier run was overwritten.

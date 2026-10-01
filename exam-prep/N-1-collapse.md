@@ -287,3 +287,16 @@ with what was claimed, what it is now and why:
   `exam-prep/second-fix/juror-questions/JQ-N1.md`; jurors should answer that
   file, not §7 above.
 - §8 is superseded where it differs by SECOND-FIX §8.
+
+## Addendum · third-fix run, 2026-10-01
+
+Appended by Mateo (third-fix run). Nothing above was changed; the first
+13,980 bytes of this file are exactly the file as the second review found it
+(SHA-256 `7dee08bd…c50e`).
+
+- `chance_line()` now requires `key_moments_sha256` (REVIEW-2 §4.3);
+  `exam-prep/third-fix/THIRD-FIX.md` R2-2.
+- §7's questions are now asked by `exam-prep/third-fix/juror-questions/JQ-N1.md`,
+  together with the calm-overlap question, `JQ-CANTEEN-8.md`.
+- §8 is superseded, where it differs, by `exam-prep/HANDED-FORWARD.md`
+  section B.
