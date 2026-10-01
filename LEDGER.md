@@ -5057,3 +5057,82 @@ could not produce the outcome it offered; a jury convened on an unfit question
 costs three `opus` runs and a referee for nothing. Wording removed from this
 instruction compared with the first review's: *"Look for what is not there"*
 and *"right or a dodge"*, both reported as steers last time.
+
+`2026-10-01 19:37 UTC` · **exam-coin raw data acquired · three source failures · and the
+user's e-mail address was found to have been sent to eleven third-party hosts** ·
+`data-engineer`, Mode B step 1, 125,411 tokens, 44 tool uses, ~40 minutes,
+instruction `instructions/2026-10-01-1855-data-engineer-exam-data-acquisition.md`.
+Records in `exam/acquisition/`; raw files in `exam/data/` (git-ignored, confirmed
+with `git check-ignore`). Exam coins are named here only by line number in
+`exam/draw/exam-coins.txt` (SHA-256 `b92a2212c166dc61a6aed6f0533d4b9031924cb7f865d0687d748039c2a25f50`).
+
+**Archive: complete and verified.** Disk free at start 12,576,145,408 bytes;
+download measured at 80,989,882 bytes before fetching. **7,162 of 7,162 files
+OK**, 0 failed — 256 `klines_1h`, 223 `fundingRate`, 6,683 `metrics` — each
+checked against the archive's own `.CHECKSUM`, then independently re-hashed with
+a zip CRC test: 0 mismatches. Archive run `8fec81930e5779ca…`, manifest
+`e040405b7942c4303b2ed53534ba95c5debdfbfac2cac37474216f1bfe22b12e`. **1,304
+files the archive does not hold**, all on lines 9, 14 and 17–20: lines 17–20
+begin trading inside the period (2025-10, 2026-04, 2026-04, 2026-08); line 14 has
+all 13 kline months but funding stops after 2026-01 and metrics are missing 209
+days inside 2026-01-07 → 2026-08-07. `bookDepth` was listed and not downloaded:
+3,060,188,121 bytes across the whole span; it waits for moment selection. New
+scripts `exam_24`–`exam_26`; no existing script modified; no exam symbol in any
+script or its bytecode, by the run's own scan.
+
+**External sources: three failures, by name (RULES 20–22).**
+1. **US release calendar (BLS): `HTTP 403 Forbidden`** on all 14 monthly pages,
+   both attempts. The observation run's log for the same source reads *"206
+   releases, 0 errors"*. The difference between the two runs is the User-Agent —
+   see below. **The cause is not measured.**
+2. **FOMC parser defect in `scripts/08_external_sources.py`**, found by this run
+   and not fixed (it may not modify 08). In the 2025-08 → 2026-09 window it parsed
+   5 statement dates; the raw page it kept also carries statement links dated
+   2025-08-22, 2025-10-29, 2026-03-18, 2026-06-17 and 2026-09-16, which were not
+   parsed. **The observation cards were written with the same parser**, so the
+   same omission is in the material the watchers read. What the omitted links are
+   was not checked, and the coordinator does not judge it.
+3. **Announcements:** Binance `HTTP 202 with a zero-length body`, Upbit
+   `HTTP 404`, Bithumb only its 5 most recent notices. **Identical to the
+   observation run's log**, so observation and exam cards are consistent: neither
+   carries announcements. A source failure, not "no announcements".
+Also: Wikipedia — no article passed 08's guard rule on any exam line, so 0
+page-view series (the observation cards had Wikipedia on one coin only).
+CoinGecko name not found for lines 14, 17, 20. Polymarket: 936 histories, matched
+on 12 of 20 lines. Two transient `429`s cleared on retry and stay in the manifest.
+
+**The e-mail address — reported to the user as an outbound leak.** The run
+declined to send 08's User-Agent to third-party hosts **because it carries the
+user's e-mail address**, and used `lab_archive.USER_AGENT`
+(`"balikcil-lab/1.0 (research; public archive)"`) instead. Verified here:
+`scripts/08_external_sources.py` line 77 sets
+`UA = "balikcil-lab/1.0 (research; contact <user's address>)"`, and 08 contacts
+**eleven hosts**: `api.bithumb.com`, `api.coingecko.com`, `api-manager.upbit.com`,
+`api.upbit.com`, `clob.polymarket.com`, `en.wikipedia.org`,
+`gamma-api.polymarket.com`, `wikimedia.org`, `www.binance.com`, `www.bls.gov`,
+`www.federalreserve.gov`. The observation run sent it to all of them on
+2026-09-19. **`grep` of this ledger for any decision about the address, a contact
+address or the User-Agent returns nothing.** No rule covered it, because the
+outbound half of the wall was unwritten until 2026-09-19 evening. It cannot be
+recalled. **Default from now on: the address is not sent.** Every further fetch
+uses the generic agent unless the user decides otherwise. The likely price is the
+BLS calendar for the exam cards, and that is unmeasured.
+
+**Consequence held, not decided.** If the exam cards cannot carry the BLS
+releases, they differ from the observation cards; and the FOMC omission is in
+both. **Whether either matters depends on what the jury on the release-calendar
+date channel (`JQ-R04-DATE`) rules about that line on exam cards**, so no
+separate question is raised yet. If that jury leaves the calendar line on the
+cards, the calendar's content on exam cards becomes an open question under
+RULES 33.
+
+**Decisions the run took that its instruction did not cover**, recorded: full
+daily `metrics` span instead of moment days (a superset needing no moment
+choice); BTC and ETH klines fetched fresh into `exam/data/`; the 2025-08 lookback
+month included as 05 and 07 do; Polymarket histories kept for the whole span; one
+retry pass; derived JSONs rewritten per run with each attempt's SHA-256 in
+`runs.jsonl`. **It noted that its Mode B definition lists `cards/` and not
+`data/`, and that it followed the instruction**, which was stricter on one and
+wider on the other. **That is a mismatch between the coordinator's instruction
+and the role definition, and it is the coordinator's**, recorded here. No steer
+reported.
