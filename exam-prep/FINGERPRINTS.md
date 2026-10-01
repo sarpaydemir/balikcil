@@ -75,3 +75,16 @@ A manifest carries the time it was written, so re-running a script rewrites its 
 | `exam-prep/R-04-blindness.md` | `c20f9c5b6ea5ed6900eade6f844b01b2fca06db98dd9862dbda239d4e4b731d7` |
 | `exam-prep/README.md` | `d315670d9b6cfc66f9e9551d54ba4c7a82dcef46cb307cfeba586b8ac66fcd3f` |
 | `exam-prep/VERDICT.md` | `c5bd5532615ee28fc3016ba2cc07246b428c5d19dcb8b580df5d5752ccb96cf0` |
+
+---
+
+## Addendum · second-fix run, 2026-10-01
+
+Appended by Mateo (second-fix run); nothing above was changed (the first
+8006 bytes of this file hash to `06ce674f2c051929a341105c76cce36c1ef1723eeeb876e109e25303c0dffad7`). The hashes above are the
+files as of 2026-09-19T14:19:30Z. Since then `VERDICT.md`, `README.md`,
+`R-04-blindness.md`, `N-1-collapse.md`, `decisions-and-open-questions.md`
+and this file have had an addendum appended (their leading bytes are
+unchanged), and `scripts/15`–`18` were changed. Current fingerprints, and
+the leading-byte check for every appended file:
+`exam-prep/second-fix/FINGERPRINTS.md`.

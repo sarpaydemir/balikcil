@@ -26,6 +26,12 @@ RULES 29 / 30 : run number = SHA-256 of the inputs; records are append-only.
 Constants: SHUFFLES, TOP_FRACTION, SEED and the overlap width all come from
 the same places as in 15_event_collapse.py and 16_identity_audit.py; none is
 chosen here.  No trading rule, threshold or score is defined in this file.
+
+Change made in the second-fix run (2026-10-01): the families left out of
+`ALL-removable` are read from 16_identity_audit.FORCED_FAMILIES instead of
+being typed here a second time, so the two scripts cannot disagree; outputs
+go to <out>/run-<run16>/ and are never overwritten (RULES 30). The version
+reviewed is git commit 7735d08 (SHA-256 52ebb0a1...2015).
 """
 
 import argparse
@@ -90,8 +96,7 @@ def main():
     allkeys = sorted({k for f in feats for k in f})
     # the same feature set the audit calls ALL-removable
     prefixes = sorted({p for k, v in ia.FAMILIES.items()
-                       if k not in ("volatility-frozen", "funding-line",
-                                    "p7-shape")
+                       if k not in ia.FORCED_FAMILIES
                        for p in v})
     keys = ia.select({k: 1 for k in allkeys}, prefixes)
     vecs, used = ia.standardise(feats, keys)
@@ -142,8 +147,8 @@ def main():
     run_full = h.hexdigest()
     run16 = run_full[:16]
 
-    os.makedirs(args.out, exist_ok=True)
     runs_dir = os.path.join(args.out, "runs")
+    run_dir = os.path.join(args.out, "run-" + run16)
     os.makedirs(runs_dir, exist_ok=True)
     core = {"run": run16, "input_fingerprint": run_full, "label": args.label,
             "cards": n, "rows": rows, "script_sha256": script_sha}
@@ -156,6 +161,13 @@ def main():
             sys.stderr.write("STOP: run record %s disagrees on %s (RULES 30)\n"
                              % (rec, ", ".join(sorted(differ))))
             sys.exit(1)
+        sys.stderr.write("run %s already recorded; nothing written\n" % run16)
+        return
+    if os.path.exists(run_dir):
+        sys.stderr.write("STOP: %s exists without a run record (RULES 30)\n"
+                         % run_dir)
+        sys.exit(1)
+    os.makedirs(run_dir)
 
     A = ["# Residual diagnostic — card set `%s`" % args.label, "",
          "Written by `scripts/18_residual_diagnostic.py`. It asks one "
@@ -168,7 +180,8 @@ def main():
          "| written at (system clock, UTC, RULES 23) | %s |"
          % started.strftime("%Y-%m-%dT%H:%M:%SZ"),
          "| cards | %d |" % n,
-         "| feature set | the audit's `ALL-removable` |",
+         "| feature set | the audit's `ALL-removable` (forced families "
+         "left out: %s) |" % ", ".join("`%s`" % f for f in ia.FORCED_FAMILIES),
          "| shuffles (RULES 12) | %d |" % SHUFFLES,
          "| seed | `%d` |" % SEED,
          "| `scripts/18_residual_diagnostic.py` SHA-256 | `%s` |" % script_sha,
@@ -183,7 +196,7 @@ def main():
                     r["features_used"], r["nn_same_coin_accuracy"],
                     r["chance_1pct"], r["null_mean"], r["beats_chance"]))
     A.append("")
-    with open(os.path.join(args.out,
+    with open(os.path.join(run_dir,
                            "residual-diagnostic-%s.md" % args.label),
               "w", encoding="utf-8") as fh:
         fh.write("\n".join(A) + "\n")

@@ -164,3 +164,19 @@ I write them down rather than leave them unsaid:
 
 Nothing in the instruction told me which fix to choose, and I was not told what
 the other roles concluded beyond the two canteen files I was pointed at.
+
+---
+
+## Addendum · second-fix run, 2026-10-01
+
+Appended by Mateo (second-fix run). Nothing above was changed; its first 9,332
+bytes still hash to the SHA-256 the review recorded.
+
+- Q-1 is re-issued as `exam-prep/second-fix/juror-questions/JQ-N1.md`; Q-2 as
+  part a of `JQ-R04-DATE.md`; Q-4 as `JQ-B1.md`; Q-5 as part a of
+  `JQ-R04-CONTENT.md`; Q-3 is indexed as JQ-CANTEEN-8. All are listed in
+  `exam-prep/JUROR-QUESTIONS.md`.
+- §C item 3's "cluster-level permutation on its own barely moves the chance
+  line, and only the representative reading moves it a lot" is corrected in
+  `exam-prep/second-fix/SECOND-FIX.md` §5 row 10.
+- The second-fix run's own decisions are in SECOND-FIX §9.

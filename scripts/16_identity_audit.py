@@ -50,6 +50,32 @@ RUN_LEN = 3          T3 asks for three consecutive identical rows. Three is the
                      here; it is the shortest run any watcher card-verified.
 
 No threshold, score or trading rule is defined anywhere in this file.
+
+Changes made in the second-fix run (2026-10-01), acting on exam-prep/REVIEW.md
+------------------------------------------------------------------------------
+The version reviewed is git commit 7735d08 (SHA-256 4c4928b8...a371); its runs
+and outputs in exam-prep/identity/ are kept untouched.
+  1. Repeat-structure features (REVIEW §3.2 and §3.6 item 2, criterion K-2 of
+     exam-prep/second-fix/criteria-written-before-measuring.md): for every
+     column printed in the before table except `h`, the number of distinct
+     printed values over the 24 rows and the largest number of rows sharing
+     one printed value. One family per column group, `repeat-<group>`.
+     `repeat-chg` reads `chg%`, which is printed unchanged for the frozen
+     book's S-1, so it is forced and stays out of `ALL-removable`; every other
+     `repeat-*` family is removable and is inside it.
+  2. FORCED_FAMILIES names, once, the families left out of `ALL-removable`;
+     18_residual_diagnostic.py reads it from here instead of retyping it.
+  3. T3 gains a bullet-line row: the US release line, exact match, the
+     default "none" text excluded (REVIEW §1.1: the reviewed T3 looked at
+     columns only).
+  4. T4, new: release names that occur on exactly one calendar day of the
+     card set, and the cards that carry one (REVIEW §3.4). It needs the truth
+     file; it is a count, not an attack with a chance line.
+  5. The report prints the gate rows (`ALL-removable`, both attacks) in a
+     section of their own and does not say which attack decides the gate:
+     that is open question JQ-R04-GATE
+     (exam-prep/second-fix/juror-questions/JQ-R04-GATE.md).
+  6. Outputs go to <out>/run-<run16>/ and are never overwritten (RULES 30).
 """
 
 import argparse
@@ -60,6 +86,7 @@ import json
 import math
 import os
 import random
+import re
 import shutil
 import sys
 from collections import defaultdict
@@ -239,7 +266,26 @@ def card_features(c):
     wiki = b.get("Wikipedia page views")
     f["wikipedia:present"] = (0.0 if wiki is None
                               else (0.0 if wiki.startswith("MISSING") else 1.0))
+
+    # repeat structure of every printed column (second-fix run, K-2)
+    for name in sorted(col):
+        if name == "h" or name not in REPEAT_GROUP:
+            continue
+        vals = [repr(x) for x in col[name]]
+        tag = REPEAT_GROUP[name]
+        f["rep-%s:%s:distinct" % (tag, name)] = float(len(set(vals)))
+        f["rep-%s:%s:maxrepeat" % (tag, name)] = float(
+            max(vals.count(v) for v in set(vals)))
     return f
+
+
+# Which repeat-structure family each printed column belongs to (K-2).
+REPEAT_GROUP = {"close": "close", "chg%": "chg", "quote vol": "volume",
+                "trades": "trades", "taker buy%": "takerbuy",
+                "open int": "openint", "L/S acct": "ratio",
+                "top L/S pos": "ratio", "taker L/S": "ratio",
+                "depth -1%": "depth", "depth +1%": "depth",
+                "BTC": "btceth", "ETH": "btceth"}
 
 
 FAMILIES = {
@@ -256,7 +302,25 @@ FAMILIES = {
     "p7-shape": ["p7:price_pct", "p7:range_pct"],
     "btc-eth": ["btceth:"],
     "shape-scale-free": ["shape:"],
+    "repeat-close": ["rep-close:"],
+    "repeat-chg": ["rep-chg:"],
+    "repeat-volume": ["rep-volume:"],
+    "repeat-trades": ["rep-trades:"],
+    "repeat-takerbuy": ["rep-takerbuy:"],
+    "repeat-openint": ["rep-openint:"],
+    "repeat-ratio": ["rep-ratio:"],
+    "repeat-depth": ["rep-depth:"],
+    "repeat-btceth": ["rep-btceth:"],
 }
+
+# The families a blinding may NOT remove, and why (the reviewed version typed
+# the first three inline; `repeat-chg` is added by K-2):
+#   volatility-frozen  the frozen book's S-1 reads `chg%` at 5.00% absolute
+#   funding-line       B-5, U-2 and U-3 are answered from it
+#   p7-shape           TACTICS 3 puts a previous-7-day summary on the card
+#   repeat-chg         it reads the same unchanged `chg%` column
+FORCED_FAMILIES = ("volatility-frozen", "funding-line", "p7-shape",
+                   "repeat-chg")
 # "ALL" and "ALL-except-frozen" are built from the families, not typed again.
 
 
@@ -470,8 +534,7 @@ def main():
     # `p7-shape` because TACTICS 3 puts a previous-7-day summary on the card.
     fam_specs.append(("ALL-removable",
                       sorted({p for k, v in FAMILIES.items()
-                              if k not in ("volatility-frozen", "funding-line",
-                                           "p7-shape")
+                              if k not in FORCED_FAMILIES
                               for p in v})))
 
     rows = []
@@ -557,38 +620,109 @@ def main():
                                                 if nonshar else ""),
                         "note": "%d consecutive identical rows" % RUN_LEN})
 
-    # ---- write -------------------------------------------------------------
-    os.makedirs(args.out, exist_ok=True)
+    # ---- T3 on a bullet line: the US release line (second-fix run) -------
+    NONE_REL = "none in these hours."
+    rel = [c["bullets"].get("US releases", "") for c in cards]
+    n = len(cards)
+    shar = det = fp = nonshar = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            gap = abs((t0s[i] - t0s[j]).total_seconds()) / 3600.0
+            hit = rel[i] == rel[j] and rel[i] not in (NONE_REL, "")
+            if gap <= 47:
+                shar += 1
+                det += 1 if hit else 0
+            else:
+                nonshar += 1
+                fp += 1 if hit else 0
+    t3_rows.append({"card_set": args.label, "test": "T3",
+                    "columns": "bullet:US releases",
+                    "pairs": n * (n - 1) // 2, "truly_sharing_hours": shar,
+                    "detected_of_those": det,
+                    "detection_rate": round(det / shar, 6) if shar else "",
+                    "false_positives": fp,
+                    "false_positive_rate": (round(fp / nonshar, 6)
+                                            if nonshar else ""),
+                    "note": "the whole bullet text identical, the default "
+                            "'none' text excluded"})
+
+    # ---- T4: release names that sit on one calendar day of this set -------
+    names_by_card = []
+    for txt in rel:
+        if txt in (NONE_REL, ""):
+            names_by_card.append([])
+            continue
+        names_by_card.append([re.sub(r"\s*\((?:[-+]\d+ h|the calendar "
+                                     r"publishes no clock time)\)$", "",
+                                     p.strip()) for p in txt.split(";")])
+    days = defaultdict(set)
+    for c, nm in zip(cards, names_by_card):
+        for x in nm:
+            days[x].add(c["start_hour_utc"][:10])
+    one_day = sorted(x for x, d in days.items() if len(d) == 1)
+    t4 = {"cards_printing_a_release_name":
+              sum(1 for nm in names_by_card if nm),
+          "distinct_release_names": len(days),
+          "names_on_exactly_one_calendar_day_of_this_set": one_day,
+          "cards_carrying_such_a_name":
+              sum(1 for nm in names_by_card if any(x in one_day for x in nm))}
+
+    # ---- write (RULES 30: a run directory is written once) ----------------
+    import io
+
+    def csv_text(rr):
+        buf = io.StringIO()
+        w = csv.DictWriter(buf, fieldnames=list(rr[0].keys()),
+                           lineterminator="\n")
+        w.writeheader()
+        w.writerows(rr)
+        return buf.getvalue()
+
+    run_dir = os.path.join(args.out, "run-" + run16)
     runs_dir = os.path.join(args.out, "runs")
-    os.makedirs(runs_dir, exist_ok=True)
+    csv_name = "identity-audit-%s.csv" % args.label
+    t3_name = "hour-linkage-%s.csv" % args.label
+    data = {csv_name: csv_text(rows), t3_name: csv_text(t3_rows)}
+    data_sha = {k: hashlib.sha256(v.encode("utf-8")).hexdigest()
+                for k, v in data.items()}
     core = {"run": run16, "input_fingerprint": run_full,
             "card_set": args.label, "cards": len(cards),
             "shuffles": SHUFFLES, "seed": SEED, "top_fraction": TOP_FRACTION,
             "families_leaking":
                 sorted(r["family"] for r in rows
                        if r["auc_beats_chance"] == "YES"),
+            "families_leaking_nn":
+                sorted(r["family"] for r in rows
+                       if r["nn_beats_chance"] == "YES"),
+            "forced_families": list(FORCED_FAMILIES),
+            "t4_release_names": t4,
+            "output_sha256": data_sha,
+            "output_dir": os.path.relpath(run_dir, REPO),
             "script_sha256": script_sha}
     rec_path = os.path.join(runs_dir, run16 + ".json")
     if os.path.exists(rec_path):
         with open(rec_path, encoding="utf-8") as fh:
             old = json.load(fh)
-        differ = [k for k, v in core.items() if old.get(k) != v]
+        differ = [k for k, v in json.loads(json.dumps(core)).items()
+                  if old.get(k) != v]
         if differ:
             die("run record %s exists and disagrees on %s (RULES 30)"
                 % (rec_path, ", ".join(sorted(differ))))
-
-    csv_path = os.path.join(args.out, "identity-audit-%s.csv" % args.label)
-    with open(csv_path, "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()),
-                           lineterminator="\n")
-        w.writeheader()
-        w.writerows(rows)
-    t3_path = os.path.join(args.out, "hour-linkage-%s.csv" % args.label)
-    with open(t3_path, "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(t3_rows[0].keys()),
-                           lineterminator="\n")
-        w.writeheader()
-        w.writerows(t3_rows)
+        sys.stderr.write("run %s already recorded with identical results; "
+                         "nothing written\n" % run16)
+        return
+    for name in data:
+        pth = os.path.join(run_dir, name)
+        if os.path.exists(pth) and sha256_file(pth) != data_sha[name]:
+            die("%s exists with different content (RULES 30)" % pth)
+    os.makedirs(run_dir, exist_ok=True)
+    os.makedirs(runs_dir, exist_ok=True)
+    for name, text in data.items():
+        with open(os.path.join(run_dir, name), "w", encoding="utf-8",
+                  newline="") as fh:
+            fh.write(text)
+    csv_path = os.path.join(run_dir, csv_name)
+    t3_path = os.path.join(run_dir, t3_name)
 
     A = []
     A.append("# Identity audit — card set `%s`" % args.label)
@@ -634,6 +768,26 @@ def main():
                     r["nn_beats_chance"], r["pair_auc"],
                     r["auc_chance_1pct"], r["auc_beats_chance"]))
     A.append("")
+    A.append("## The gate rows — `ALL-removable`, both attacks")
+    A.append("")
+    A.append("`ALL-removable` is every family except the forced ones (%s). "
+             "Both attacks are printed. **This report does not say which of "
+             "them decides the acceptance gate**; that is open question "
+             "JQ-R04-GATE (`exam-prep/second-fix/juror-questions/"
+             "JQ-R04-GATE.md`)." % ", ".join("`%s`" % f
+                                              for f in FORCED_FAMILIES))
+    A.append("")
+    A.append("| attack | observed | chance line (best 1%) | beats it |")
+    A.append("|---|---|---|---|")
+    for r in rows:
+        if r["family"] == "ALL-removable":
+            A.append("| nearest-neighbour same-coin | %s | %s | %s |"
+                     % (r["nn_same_coin_accuracy"], r["nn_chance_1pct"],
+                        r["nn_beats_chance"]))
+            A.append("| pair AUC | %s | %s | %s |"
+                     % (r["pair_auc"], r["auc_chance_1pct"],
+                        r["auc_beats_chance"]))
+    A.append("")
     A.append("## T3 — does the card say which clock hours it covers?")
     A.append("")
     A.append("Two cards are \"detected\" as covering the same hours when they "
@@ -652,6 +806,22 @@ def main():
                     r["false_positives"], r["false_positive_rate"],
                     r["note"]))
     A.append("")
+    A.append("## T4 — release names that sit on one calendar day of this set")
+    A.append("")
+    A.append("A count, not an attack: a release that a reader can date from "
+             "public knowledge dates the card that prints it (REVIEW §3.4). "
+             "Computed against the truth file.")
+    A.append("")
+    A.append("| quantity | count |")
+    A.append("|---|---|")
+    A.append("| cards printing at least one release name | %d of %d |"
+             % (t4["cards_printing_a_release_name"], len(cards)))
+    A.append("| distinct release names | %d |" % t4["distinct_release_names"])
+    A.append("| names that occur on exactly one calendar day of this set | "
+             "%d |" % len(one_day))
+    A.append("| cards carrying such a name | %d |"
+             % t4["cards_carrying_such_a_name"])
+    A.append("")
     A.append("## Fingerprints")
     A.append("")
     A.append("| file | SHA-256 |")
@@ -660,7 +830,7 @@ def main():
         A.append("| `%s` | `%s` |" % (os.path.relpath(p, REPO),
                                       sha256_file(p)))
     A.append("")
-    md_path = os.path.join(args.out, "identity-audit-%s.md" % args.label)
+    md_path = os.path.join(run_dir, "identity-audit-%s.md" % args.label)
     with open(md_path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(A) + "\n")
     with open(rec_path, "w", encoding="utf-8") as fh:

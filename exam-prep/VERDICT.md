@@ -109,3 +109,118 @@ and the full reasoning are in `exam-prep/decisions-and-open-questions.md` §C.
 | `scripts/15_event_collapse.py` `16_identity_audit.py` `17_blind_cards.py` `18_residual_diagnostic.py` `lab_cards.py` | the instruments |
 
 Nothing under `exam/` was read or written by this run.
+
+---
+---
+
+# Second-fix run · 2026-10-01 — acting on `exam-prep/REVIEW.md`
+
+Mateo · data engineer · appended 2026-10-01 (system clock, RULES 23). **Nothing
+above this line was changed.** The text above is the first run's verdict of
+2026-09-19; its SHA-256 as reviewed was
+`c5bd5532615ee28fc3016ba2cc07246b428c5d19dcb8b580df5d5752ccb96cf0` and its
+first 5,512 bytes still hash to that value. Where this section corrects a claim
+above, it says what was claimed, what it is now and why. The working is in
+`exam-prep/second-fix/SECOND-FIX.md`; this section says what happened, not how.
+
+## The two problems now
+
+| problem | earlier in this file | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | "SOLVED, against the standard written below, with a residual that is measured and named and not zero" | **NOT SOLVED.** The review's conditions were acted on, and the measurement the review required, applied to every printed column as it asked, shows a removable coin-identity channel that no earlier file named — one family of it is, by pair AUC, larger than any channel named before on the blinded cards; the acceptance gate fails on the observation cards under every reading of it. Not closable in this run. SECOND-FIX §4. |
+| **N-1 · collapse before counting** | "SOLVED as far as one person is allowed to solve it" (the review: "Not solved") | **Instrument repaired, tested, and the defects the review found are closed. Not yet usable**: the counting definition is open and referred (JQ-N1). SECOND-FIX §3. |
+
+Corrections of the four standard lines marked "Met" above:
+
+- R-04 line 1 ("Met") — **not met**: two level families beat a chance line on
+  the recommended blinding, not one. Why: review §3.1, re-measured.
+- R-04 line 2 ("Met") — **met for columns only**; the line was written about
+  columns and a bullet line carries a date channel, now referred (JQ-R04-DATE).
+- N-1 line 4 ("Met — the function refuses") — **was met only in its literal
+  wording**; it is now met as the review asked. Why: review §4.3, re-measured.
+- N-1 line 3 and 5 stand. Line 5's measurement is corrected: SECOND-FIX §5
+  row 10.
+
+All thirteen corrections, each with its source: SECOND-FIX §5.
+
+## Outcome of every review item
+
+| review item | outcome |
+|---|---|
+| §3.6 item 1 | **Referred to jurors** — JQ-R04-GATE. |
+| §3.6 item 2 | **Partly done.** Named with its numbers: done. The audit extended to every printed column: done. Closed: **not done** — the rendering route was tried and measured, and did not close it; the remaining routes change what TACTICS 6 shows and are **referred** (JQ-R04-CONTENT part b). Recording it in the exam manifest: **not done** (the manifest lives under `exam/`); required of the exam-building run (SECOND-FIX §8). |
+| §3.6 item 3 | **Referred to jurors** — JQ-R04-DATE part b (with parts a and c). |
+| §4.5 item 1 | **Done.** |
+| §4.5 item 2 | **Done.** |
+| §4.5 item 3 | **Done**, and **referred** — JQ-N1. |
+| §4.5 item 4 | **Done.** |
+| §1.1, first defect | **Done.** |
+| §1.1, second defect | **Referred** with §3.6 item 1. |
+| §1.2 | **Done** (with §4.5 items 2 and 4). |
+| §2.3 | **Done.** |
+| §3.1 | **Done** (correction recorded). |
+| §3.5(a) | **Done** (correction recorded). |
+| §3.5(b) | **Done** (correction recorded). |
+| §4.2, last paragraph | **Done** (in JQ-N1). |
+| §4.3 | **Done** (with §4.5 item 4). One part cannot be done in code and is named: a caller can always write his own shuffle outside the module. |
+
+## Where I dispute the review, with reasons (RULES 32)
+
+1. **§4.2, "the bug is real and the §6 conclusion survives it."** Disputed in
+   part. After the repair the spread of the block line against the card-level
+   line roughly doubles, and in two configurations the block line ends above
+   the representative line, which the review says it stays "far below".
+   Differences of the size the first run called "barely moves" are within the
+   random variation measured between two draws of one and the same null.
+   Numbers: SECOND-FIX §4 item 1 and 2.
+2. **§4.3, last table row, "reproduces the un-collapsed card-level line
+   exactly" in both modes.** True in representative mode; in block mode the
+   reviewed code drew from the same distribution but gave a different line.
+   Minor. SECOND-FIX §2, C-10.
+3. **§3.2 and §3.6 item 2, that the `close` channel is "removable" by a
+   rendering choice.** The manufactured part is removable and was removed; the
+   column's coin signature was not, and grew. SECOND-FIX §3.
+4. **§3.6, "With those three discharged, what remains is what the document
+   already says honestly."** Disputed: the audit extension the review itself
+   required shows a further channel. SECOND-FIX §4.
+
+## Open questions referred
+
+Twelve rows, indexed for the coordinator in `exam-prep/JUROR-QUESTIONS.md`.
+Ten are written by this run in `exam-prep/second-fix/juror-questions/`. Two
+were already open in the canteen book and are indexed so that none is lost:
+JQ-B1 (re-written here so a juror can answer it standalone) and JQ-CANTEEN-8
+(read from the canteen book directly). I cannot see `LEDGER.md`, so I cannot
+tell whether either of those two was already put to jurors.
+
+Everything referred is procedure or definition. Nothing in scope of a juror
+was kept back, and nothing outside it — no threshold, score or trading rule —
+was referred.
+
+## `RULES.md`
+
+**No change to `RULES.md` is required by anything this run did or referred.**
+One path is named so it is not discovered late: if the jurors rule that no
+field TACTICS 3 puts on a card may be removed or recomputed, and the
+engineering route named in SECOND-FIX §4 does not close the remaining channel,
+then the exam cannot be made blind by the laboratory's own measure while every
+TACTICS field stays. Whether a named, measured channel is acceptable under
+RULES 9 at that point is a question about a rule, which is the user's, not a
+juror's. Nothing has reached that point.
+
+## A steer in the instruction I was given
+
+I found no result, no prediction and no fix chosen for me. Two mild
+presumptions, named rather than left unsaid: the index requirement ("one row
+per open question that jurors must answer before the exam") presumes there
+will be open questions — there are, for reasons the review itself states; and
+the instruction's file name, which I saw in `git status` without opening the
+file, calls this run a "second fix", which presumes a fix is what is needed —
+for R-04 this run's finding is that it is not yet fixable here.
+
+## What this run did not do
+
+SECOND-FIX §10, nine items. The two that matter most: **R-04 is not solved**,
+and **nothing was measured on exam cards.**
+
+Nothing under `exam/` was read or written by this run.

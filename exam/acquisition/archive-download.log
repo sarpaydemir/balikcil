@@ -1,0 +1,91 @@
+run_id 8fec81930e5779ca988bd0f320759d133734f92b6844d74257a6977b57407156  started 2026-10-01T19:01:34Z  coins 20
+listed     exam coin line 1
+listed     exam coin line 2
+listed     exam coin line 3
+listed     exam coin line 4
+listed     exam coin line 5
+listed     exam coin line 6
+listed     exam coin line 7
+listed     exam coin line 8
+listed     exam coin line 9
+listed     exam coin line 10
+listed     exam coin line 11
+listed     exam coin line 12
+listed     exam coin line 13
+listed     exam coin line 14
+listed     exam coin line 15
+listed     exam coin line 16
+listed     exam coin line 17
+listed     exam coin line 18
+listed     exam coin line 19
+listed     exam coin line 20
+listed 1   reference
+listed 2   reference
+{
+ "by_kind": {
+  "fundingRate": {
+   "files": 223,
+   "bytes": 301823
+  },
+  "klines_1h": {
+   "files": 256,
+   "bytes": 8155573
+  },
+  "metrics": {
+   "files": 6683,
+   "bytes": 72532486
+  }
+ },
+ "disk": {
+  "checked_at_utc": "2026-10-01T19:04:46Z",
+  "path": "exam/data",
+  "free_bytes": 12573360128,
+  "total_bytes": 39956590592,
+  "measured_download_bytes": 80989882,
+  "size_note": "not an estimate: byte sizes come from the archive's own listing",
+  "required_free_bytes_with_headroom": 404949410,
+  "headroom_factor": 5.0,
+  "fits": true
+ },
+ "not_in_archive": 1304,
+ "listing_errors": 0
+}
+  250/7162  {'ok': 250, 'skipped': 0, 'failed': 0}  2026-10-01T19:05:11Z
+  500/7162  {'ok': 500, 'skipped': 0, 'failed': 0}  2026-10-01T19:05:38Z
+  750/7162  {'ok': 750, 'skipped': 0, 'failed': 0}  2026-10-01T19:06:01Z
+  1000/7162  {'ok': 1000, 'skipped': 0, 'failed': 0}  2026-10-01T19:06:25Z
+  1250/7162  {'ok': 1250, 'skipped': 0, 'failed': 0}  2026-10-01T19:06:49Z
+  1500/7162  {'ok': 1500, 'skipped': 0, 'failed': 0}  2026-10-01T19:07:11Z
+  1750/7162  {'ok': 1750, 'skipped': 0, 'failed': 0}  2026-10-01T19:07:35Z
+  2000/7162  {'ok': 2000, 'skipped': 0, 'failed': 0}  2026-10-01T19:07:58Z
+  2250/7162  {'ok': 2250, 'skipped': 0, 'failed': 0}  2026-10-01T19:08:21Z
+  2500/7162  {'ok': 2500, 'skipped': 0, 'failed': 0}  2026-10-01T19:08:44Z
+  2750/7162  {'ok': 2750, 'skipped': 0, 'failed': 0}  2026-10-01T19:09:08Z
+  3000/7162  {'ok': 3000, 'skipped': 0, 'failed': 0}  2026-10-01T19:09:31Z
+  3250/7162  {'ok': 3250, 'skipped': 0, 'failed': 0}  2026-10-01T19:09:55Z
+  3500/7162  {'ok': 3500, 'skipped': 0, 'failed': 0}  2026-10-01T19:10:19Z
+  3750/7162  {'ok': 3750, 'skipped': 0, 'failed': 0}  2026-10-01T19:10:42Z
+  4000/7162  {'ok': 4000, 'skipped': 0, 'failed': 0}  2026-10-01T19:11:05Z
+  4250/7162  {'ok': 4250, 'skipped': 0, 'failed': 0}  2026-10-01T19:11:28Z
+  4500/7162  {'ok': 4500, 'skipped': 0, 'failed': 0}  2026-10-01T19:11:51Z
+  4750/7162  {'ok': 4750, 'skipped': 0, 'failed': 0}  2026-10-01T19:12:15Z
+  5000/7162  {'ok': 5000, 'skipped': 0, 'failed': 0}  2026-10-01T19:12:39Z
+  5250/7162  {'ok': 5250, 'skipped': 0, 'failed': 0}  2026-10-01T19:13:01Z
+  5500/7162  {'ok': 5500, 'skipped': 0, 'failed': 0}  2026-10-01T19:13:24Z
+  5750/7162  {'ok': 5750, 'skipped': 0, 'failed': 0}  2026-10-01T19:13:49Z
+  6000/7162  {'ok': 6000, 'skipped': 0, 'failed': 0}  2026-10-01T19:14:12Z
+  6250/7162  {'ok': 6250, 'skipped': 0, 'failed': 0}  2026-10-01T19:14:35Z
+  6500/7162  {'ok': 6500, 'skipped': 0, 'failed': 0}  2026-10-01T19:14:59Z
+  6750/7162  {'ok': 6750, 'skipped': 0, 'failed': 0}  2026-10-01T19:15:24Z
+  7000/7162  {'ok': 7000, 'skipped': 0, 'failed': 0}  2026-10-01T19:15:47Z
+{
+ "finished_at_utc": "2026-10-01T19:16:02Z",
+ "counts_this_attempt": {
+  "ok": 7162,
+  "skipped": 0,
+  "failed": 0
+ },
+ "files_wanted": 7162,
+ "files_verified_on_disk": 7162,
+ "outcome": "complete"
+}

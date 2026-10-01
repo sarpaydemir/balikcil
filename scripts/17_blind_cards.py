@@ -48,6 +48,29 @@ RATIO_DP = 3        chosen by measurement, not by taste: it is the smallest
                     measures 2, 3 and 4 decimals on every run and writes the
                     counts into the manifest, so the choice is checkable.
 RUN_LEN = 3         the run length B-4 uses; taken from the frozen book.
+CLOSE_DP_REVIEWED = 2
+                    the rebased-`close` decimals of the version reviewed in
+                    exam-prep/REVIEW.md. `--close-dp 2` reproduces it exactly.
+CLOSE_DP_SEARCH_MAX = 10
+                    a safety stop, not a threshold: `--close-dp no-new-ties`
+                    searches upward from 2 and stops the script if no number
+                    of decimals up to this one manufactures zero ties. The
+                    number actually needed depends on the card set (the raw
+                    card prints `close` to 6 significant figures, and how far
+                    the price sits from its h-24 value matters) and is
+                    computed, not assumed.
+
+Change made in the second-fix run (2026-10-01), acting on exam-prep/REVIEW.md
+------------------------------------------------------------------------------
+The version reviewed is git commit 7735d08 (SHA-256 ee064204...9515). One
+option is added, `--close-dp`, default `2` = the reviewed rendering, so every
+earlier command line still produces the same card text (checked by
+scripts/25_instrument_checks.py). `--close-dp no-new-ties` implements
+criterion K-1 of exam-prep/second-fix/criteria-written-before-measuring.md:
+the rebased `close` is printed at the smallest number of decimals, uniform
+over the card set, at which no card prints two equal rebased values where
+the raw card printed two different ones (REVIEW §3.2: the reviewed rendering
+manufactures such ties, and they are a coin signature).
 
 No threshold, score or trading rule is defined anywhere in this file.
 """
@@ -69,6 +92,8 @@ import lab_cards  # noqa: E402
 SEED = 20260913
 RATIO_DP = 3
 RUN_LEN = 3
+CLOSE_DP_REVIEWED = 2
+CLOSE_DP_SEARCH_MAX = 10
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -267,19 +292,53 @@ FUNDING = {"summary": funding_summary,
            "raw": funding_raw}
 
 
+def rebased_close(c):
+    col = c["before"]
+    base = col["close"][0]
+    if base is None or base <= 0:
+        raise ValueError("%s: cannot rebase price, h-24 close is %r"
+                         % (c["card"], base))
+    return [v / base * 100.0 for v in col["close"]]
+
+
+def manufactured_ties(c, dp):
+    """Pairs of before-window hours that print the same rebased `close` at
+    `dp` decimals although the raw card printed two different values."""
+    raw = c["before"]["close"]
+    reb = ["%.*f" % (dp, v) for v in rebased_close(c)]
+    n = 0
+    for i in range(len(raw)):
+        for j in range(i + 1, len(raw)):
+            if reb[i] == reb[j] and raw[i] != raw[j]:
+                n += 1
+    return n
+
+
+def choose_close_dp(cards, mode):
+    """Returns (dp, table) where table maps each dp tried to the number of
+    cards on which it manufactures at least one tie."""
+    table = {}
+    for dp in range(CLOSE_DP_REVIEWED, CLOSE_DP_SEARCH_MAX + 1):
+        table[dp] = sum(1 for c in cards if manufactured_ties(c, dp) > 0)
+        if mode == "no-new-ties" and table[dp] == 0:
+            return dp, table
+        if mode != "no-new-ties" and dp >= max(int(mode), 4):
+            break
+    if mode == "no-new-ties":
+        die("no number of decimals up to %d stops the rebased close from "
+            "manufacturing ties" % CLOSE_DP_SEARCH_MAX)
+    return int(mode), table
+
+
 def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
-               p7_mode):
+               p7_mode, close_dp=CLOSE_DP_REVIEWED):
     """Returns (text, diagnostics)."""
     col = c["before"]
     n = len(col["h"])
     diag = {}
 
     # --- price: TACTICS 6, "converted to a number starting from 100" -------
-    base = col["close"][0]
-    if base is None or base <= 0:
-        raise ValueError("%s: cannot rebase price, h-24 close is %r"
-                         % (c["card"], base))
-    close = [v / base * 100.0 for v in col["close"]]
+    close = rebased_close(c)
 
     # --- the level-carrying columns ----------------------------------------
     printed = {}
@@ -325,7 +384,7 @@ def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
     rows = []
     for i in range(n):
         cells = ["%+d" % col["h"][i] if col["h"][i] < 0 else "+%d" % col["h"][i],
-                 "%.2f" % close[i], "%+.2f" % col["chg%"][i],
+                 "%.*f" % (close_dp, close[i]), "%+.2f" % col["chg%"][i],
                  printed["quote vol"][i], printed["trades"][i], taker[i],
                  printed["open int"][i], printed["L/S acct"][i],
                  printed["top L/S pos"][i], printed["taker L/S"][i],
@@ -365,7 +424,11 @@ def build_card(c, cid, levels, btceth, funding_mode, takerbuy_mode,
     A.append("|---|---|")
     A.append("| sections | before = the 24 h ending at the start hour |")
     A.append("")
-    A.append(LEGEND_RANK if levels == "rank" else LEGEND)
+    legend = LEGEND_RANK if levels == "rank" else LEGEND
+    if close_dp != CLOSE_DP_REVIEWED:
+        legend = legend.replace("`close` starts at 100.00",
+                                "`close` starts at %.*f" % (close_dp, 100.0))
+    A.append(legend)
     A.append("")
     A.append("## Before")
     A.append("")
@@ -423,7 +486,12 @@ def main():
     ap.add_argument("--takerbuy", choices=("centred", "rank", "raw"),
                     default="centred")
     ap.add_argument("--p7", choices=("full", "no-scale"), default="full")
+    ap.add_argument("--close-dp", default=str(CLOSE_DP_REVIEWED),
+                    help="'2' (the reviewed rendering) or 'no-new-ties' "
+                         "(criterion K-1)")
     args = ap.parse_args()
+    if args.close_dp != "no-new-ties" and not args.close_dp.isdigit():
+        die("--close-dp must be a whole number or 'no-new-ties'")
 
     started = dt.datetime.now(dt.timezone.utc)
     free_bytes = shutil.disk_usage(REPO).free
@@ -432,9 +500,11 @@ def main():
     if not cards:
         die("no cards in %s" % args.cards)
 
-    config = ("levels=%s;btceth=%s;funding=%s;takerbuy=%s;p7=%s;ratio_dp=%d"
+    close_dp, close_dp_table = choose_close_dp(cards, args.close_dp)
+    config = ("levels=%s;btceth=%s;funding=%s;takerbuy=%s;p7=%s;ratio_dp=%d;"
+              "close_dp=%s->%d"
               % (args.levels, args.btceth, args.funding, args.takerbuy,
-                 args.p7, RATIO_DP))
+                 args.p7, RATIO_DP, args.close_dp, close_dp))
     script_sha = sha256_file(os.path.abspath(__file__))
     h = hashlib.sha256()
     h.update(("script:" + script_sha + "\n").encode())
@@ -466,7 +536,8 @@ def main():
         cid = assign[c["card"]]
         try:
             text, diag = build_card(c, cid, args.levels, args.btceth,
-                                    args.funding, args.takerbuy, args.p7)
+                                    args.funding, args.takerbuy, args.p7,
+                                    close_dp)
         except ValueError as e:
             die(str(e))
         path = os.path.join(out_cards, cid + ".md")
@@ -535,7 +606,10 @@ def main():
 
     core = {"run": run16, "input_fingerprint": run_full, "config": config,
             "label": args.label, "cards": len(cards), "seed": SEED,
-            "survived": survived, "script_sha256": script_sha}
+            "survived": survived, "script_sha256": script_sha,
+            "close_dp": close_dp,
+            "close_dp_manufactured_ties": {str(k): v for k, v
+                                           in close_dp_table.items()}}
     rec_path = os.path.join(runs_dir, run16 + ".json")
     if os.path.exists(rec_path):
         with open(rec_path, encoding="utf-8") as fh:
@@ -575,8 +649,9 @@ def main():
     A.append("| card number | `C###`, in moment order | `B###`, shuffled "
              "with the draw seed, so the number carries no time |")
     A.append("| After section | printed | removed (TACTICS 6) |")
-    A.append("| `close` | the coin's price | rebased so h-24 = 100.00 "
-             "(TACTICS 6) |")
+    A.append("| `close` | the coin's price | rebased so h-24 = %.*f, %d "
+             "decimals (TACTICS 6; `--close-dp %s`) |"
+             % (close_dp, 100.0, close_dp, args.close_dp))
     A.append("| `chg%` | hourly percentage change | **unchanged** — the frozen "
              "canteen book's S-1 reads it at 5.00% absolute (RULES 6) |")
     for nm in LEVEL_COLUMNS:
@@ -625,6 +700,16 @@ def main():
         A.append("| %d | %d |" % (dp, dp_table[dp]))
     A.append("")
     A.append("`RATIO_DP` is set to %d." % RATIO_DP)
+    A.append("")
+    A.append("## The decimals of the rebased `close`")
+    A.append("")
+    A.append("| decimals | cards on which two hours print the same rebased "
+             "`close` although the raw card printed two different values |")
+    A.append("|---|---|")
+    for dp in sorted(close_dp_table):
+        A.append("| %d | %d |" % (dp, close_dp_table[dp]))
+    A.append("")
+    A.append("`--close-dp %s` -> %d decimals." % (args.close_dp, close_dp))
     A.append("")
     A.append("## Fingerprints")
     A.append("")

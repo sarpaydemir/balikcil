@@ -360,3 +360,30 @@ scripts from earlier in this session, kept rather than deleted (RULES 30). One
 directory, `exam-prep/blind-proof/ratio`, was deleted and rebuilt once during
 this session after a literal `1%%` was found in a card line; that deletion is
 recorded here rather than hidden.
+
+---
+
+## Addendum · second-fix run, 2026-10-01 — read before relying on anything above
+
+Appended by Mateo (second-fix run). Nothing above was changed; the text above
+is the first run's, and its first 19,807 bytes still hash to the SHA-256 the
+review recorded. Corrections, each with what was claimed, what it is now and
+why: `exam-prep/second-fix/SECOND-FIX.md` §5, rows 1–8. In short:
+
+- **R-04 is not solved** (SECOND-FIX §4). The verdict is in
+  `exam-prep/VERDICT.md`, appended section.
+- §5's Level 1 sentence: not met on two families (`openint-level` and
+  `trades-level`), not one (row 2).
+- §2's clock-hour line is amended from "column" to "field" (SECOND-FIX §7);
+  the release-name and hour-offset channels are referred (row 3).
+- §7 item 5's "about two-fifths": 23.7% of the excess over the null mean,
+  85.7% of the excess over the 1% line (row 5).
+- §8 step 3's gate is under-specified and referred (row 4); §8 as a whole is
+  superseded where it differs by SECOND-FIX §8.
+- §8 item 4's card list: C018, C019, C041, C058, C059 — not C017 (row 6).
+- §9 item 3: not true for the release-name channel (row 7).
+- **§10, the recipe for the combined card fingerprints above** (review §2.3):
+  SHA-256 over the concatenation, in card-id order, of
+  `<card id>:<SHA-256 of the card file>\n` — for example
+  `B001:<64 hex>\nB002:<64 hex>\n…`. Verified for all four variants
+  (`exam-prep/second-fix/checks/review-checks-28b29921e160d204.md`, C-9).

@@ -1,0 +1,29 @@
+run_id 131fee310d4caa3349d8f96a058ec7c8bb419d341650e2876d65a22ab8a2c3ae started 2026-10-01T19:03:02Z coins 20
+[1/5] US release calendar
+      24 releases, 14 errors
+[2/5] coin names
+[3/5] Wikipedia pageviews
+[4/5] prediction market
+      line  1 seen 155 matched  0 overlapping  0
+      line  2 seen 301 matched 301 overlapping 301
+      line  3 seen 426 matched  7 overlapping  4
+      line  4 seen  55 matched 49 overlapping 43
+      line  5 seen 450 matched 400 overlapping 241
+      line  6 seen 235 matched 17 overlapping  0
+      line  7 seen  24 matched  0 overlapping  0
+      line  8 seen 181 matched  0 overlapping  0
+      line  9 seen   0 matched  0 overlapping  0
+      line 10 seen 565 matched  0 overlapping  0
+      line 11 seen 110 matched 76 overlapping  0
+      line 12 seen 263 matched 30 overlapping 12
+      line 13 seen 234 matched 29 overlapping 26
+      line 14 seen   0 matched  0 overlapping  0
+      line 15 seen 281 matched 281 overlapping 153
+      line 16 seen  52 matched  0 overlapping  0
+      line 17 seen 224 matched 224 overlapping 50
+      line 18 seen 115 matched 95 overlapping 86
+      line 19 seen 328 matched 26 overlapping 20
+      line 20 seen 699 matched  0 overlapping  0
+[5/5] announcement probes
+      binance announcement RSS                 HTTP 202 with a zero-length body (the host answered but returned nothing)
+      binance announcement list page           HTTP 202 with a zero-length body (the host answered but returned nothing)

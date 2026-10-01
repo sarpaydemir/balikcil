@@ -51,3 +51,16 @@ it came from.
 `exam/` — not read, not written. `decisions/`, `instructions/`, `LEDGER.md`,
 `reports/` — not read. Nothing outside the Balıkçıl folder was read, with any
 tool or from the command line.
+
+---
+
+## Addendum · second-fix run, 2026-10-01
+
+Appended by Mateo (second-fix run); nothing above was changed. After the
+review (`REVIEW.md`), a second run acted on it. Read, in this order:
+`VERDICT.md` (its appended section), `JUROR-QUESTIONS.md`,
+`second-fix/SECOND-FIX.md`, `second-fix/criteria-written-before-measuring.md`,
+`second-fix/juror-questions/`, `second-fix/checks/`,
+`second-fix/FINGERPRINTS.md`. New outputs live in `second-fix/` and in
+`collapse/run-756cf4ea156d92c3/`; nothing written by the first run was
+overwritten.

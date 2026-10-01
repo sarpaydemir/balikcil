@@ -263,3 +263,27 @@ Run number `386d234b85269a21`. Two earlier run records
 (`4af3b344a4898af0`, `5ba9140fe3c467fa`) are kept in
 `exam-prep/collapse/runs/` as history: they are the same script at an earlier
 stage of this session, superseded and not deleted (RULES 30).
+
+---
+
+## Addendum · second-fix run, 2026-10-01 — read before relying on anything above
+
+Appended by Mateo (second-fix run). Nothing above was changed; its first
+12,755 bytes still hash to the SHA-256 the review recorded. Corrections, each
+with what was claimed, what it is now and why:
+`exam-prep/second-fix/SECOND-FIX.md` §5, rows 9–13. In short:
+
+- §3's `block_shuffle_indices()` did not move whole events when sizes differ;
+  it is **withdrawn and replaced** in `scripts/15_event_collapse.py` (run
+  `756cf4ea156d92c3`; outputs in `exam-prep/collapse/run-756cf4ea156d92c3/`).
+  The outputs of run `386d234b85269a21` in `exam-prep/collapse/` are untouched
+  and their `block` column is the withdrawn function's.
+- §6's block row and its reading are corrected (row 10).
+- §2 line 4 is amended and a line 6 is added (SECOND-FIX §7); `chance_line()`
+  now returns a record that carries its configuration (row 11).
+- §5's and §7's description of `cross-coin` holds only under `greedy-clique`
+  (row 12).
+- **§7's four questions are re-issued for jurors** as
+  `exam-prep/second-fix/juror-questions/JQ-N1.md`; jurors should answer that
+  file, not §7 above.
+- §8 is superseded where it differs by SECOND-FIX §8.

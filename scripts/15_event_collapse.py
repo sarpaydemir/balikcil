@@ -11,16 +11,50 @@ does to a shuffle: the 1% boundary of the null distribution under a card-level
 shuffle (what TACTICS 7 says today, uncollapsed) against a cluster-level
 (block) shuffle over the events.
 
-It also exposes `collapse()` and `block_shuffle_indices()` so the later judge
-script imports the same code instead of writing the rule a second time.
+It also exposes `collapse()`, `identity_map()`, `block_shuffle_indices()`,
+`check_block_shuffle()` and `chance_line()` so the later judge script imports
+the same code instead of writing the rule a second time.
 
 Input   : cards/C###.md  (default)  -- or --moments CSV with columns
           id,coin,kind,start_hour_utc  (ISO, e.g. 2026-05-07T20:00Z)
-Output  : exam-prep/collapse/events.csv
-          exam-prep/collapse/collapse-summary.csv
-          exam-prep/collapse/shuffle-calibration.csv
-          exam-prep/collapse/collapse-manifest.md
-          exam-prep/collapse/runs/<run16>.json   (append-only)
+Output  : <out>/run-<run16>/events.csv
+          <out>/run-<run16>/collapse-summary.csv
+          <out>/run-<run16>/shuffle-calibration.csv
+          <out>/run-<run16>/collapse-manifest.md
+          <out>/runs/<run16>.json   (append-only)
+          (<out> defaults to exam-prep/collapse.)
+
+Changes made in the second-fix run (2026-10-01), acting on exam-prep/REVIEW.md
+------------------------------------------------------------------------------
+The version reviewed is git commit 7735d08, SHA-256 f3de2358...fb12; its run
+`386d234b85269a21` and its outputs in exam-prep/collapse/ are kept untouched.
+  1. block_shuffle_indices() is replaced (REVIEW §4.2). The reviewed version
+     paired card positions index by index across events of different sizes,
+     so it did not keep events whole. The replacement moves an event only onto
+     an event of the same size, so every event reads all its answers from one
+     source event and keeps its internal pattern. An event whose size no other
+     event shares cannot move; check_block_shuffle() counts those.
+  2. check_block_shuffle() tests the contract the docstring states (REVIEW
+     §4.5 item 2). main() runs it on every configuration and on the review's
+     three-event example before measuring, and stops on any failure.
+     chance_line() also checks every block draw it makes.
+  3. collapse() returns an EventMap: a list of events that also carries the
+     configuration that made it and the moments it was made from.
+     chance_line() refuses anything else, re-derives the map from its own
+     moments and configuration before using it, and returns a record that
+     carries the configuration, the event-map fingerprint and the counts
+     (REVIEW §4.3, §4.5 item 4). The uncollapsed map can still be had, but
+     only as identity_map(), which labels itself `none/none/none`.
+  4. representative mode takes the full event map plus the caller's choice of
+     one representative per event, instead of a pre-reduced list, so that the
+     configuration survives into the record. Which card represents an event,
+     and what label an event holding both kinds carries, remain open
+     questions (exam-prep/second-fix/juror-questions/JQ-N1.md); this file
+     does not choose either.
+  5. Outputs go to a per-run directory and are never overwritten (RULES 30).
+  6. The summary gains: events holding two or more cards of one coin, the
+     largest such count (REVIEW §4.4), and the events and cards a block
+     shuffle cannot move.
 
 Rules implemented
 -----------------
@@ -47,6 +81,9 @@ SEED = 20260913        TACTICS 1's draw number, "written before the draw; it
                        does not change". Not a number chosen here.
 MOVE_WINDOW_HOURS = 24 TACTICS 2: a moment is a 24-hour movement.
 CARD_SPAN_HOURS  = 48  TACTICS 3 / the card text: before 24 h + after 24 h.
+SELFTEST_DRAWS = 1000  the number of block draws each self-test makes: RULES
+                       12's shuffle count, so the test sees every draw a
+                       chance line would make.
 
 No threshold, score or trading rule is defined anywhere in this file.
 """
@@ -70,11 +107,13 @@ TOP_FRACTION = 0.01
 SEED = 20260913
 MOVE_WINDOW_HOURS = 24
 CARD_SPAN_HOURS = 48
+SELFTEST_DRAWS = 1000
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CARDS_DIR = os.path.join(REPO, "cards")
 OUT_DIR = os.path.join(REPO, "exam-prep", "collapse")
 RUNS_DIR = os.path.join(OUT_DIR, "runs")
+ENGINE_PATH = os.path.abspath(__file__)
 
 # The candidate readings of "in the same hour".  Each is a (name, rule) pair.
 #   start-hour  : the moments begin in the same clock hour.
@@ -134,16 +173,88 @@ def fmt_hour(t):
 
 
 # ---------------------------------------------------------------------------
-# The engine.  These two functions are the ones a later script imports.
+# The engine.  These are the functions a later script imports.
 # ---------------------------------------------------------------------------
+
+class EventMap(list):
+    """A partition of moment ids into events that remembers how it was made.
+
+    It is a list of events (each a sorted list of ids), so it can be used
+    wherever the reviewed version's plain list was used. It also carries:
+      .definition .resolution .scope .config   the configuration
+      .moments   a tuple of (id, coin, start hour) it was made from
+    chance_line() accepts nothing else, and re-derives the map from
+    .moments and the configuration before using it.
+    """
+
+    def __init__(self, events, definition, resolution, scope, moments):
+        super().__init__([sorted(ev) for ev in events])
+        self.definition = definition
+        self.resolution = resolution
+        self.scope = scope
+        self.config = "%s/%s/%s" % (definition, resolution, scope)
+        self.moments = tuple(sorted((m["id"], m["coin"],
+                                     fmt_hour(m["start_dt"]))
+                                    for m in moments))
+
+    def moments_sha256(self):
+        return hashlib.sha256(json.dumps(
+            list(self.moments)).encode()).hexdigest()
+
+    def sha256(self):
+        """Fingerprint of the configuration, the moments and the events."""
+        return hashlib.sha256(json.dumps(
+            {"config": self.config, "moments": list(self.moments),
+             "events": sorted(list(ev) for ev in self)},
+            sort_keys=True).encode()).hexdigest()
+
+
+def identity_map(moments):
+    """The un-collapsed map: every moment its own event. It exists so that a
+    card-level line can be computed on purpose and labelled as such; its
+    configuration is `none/none/none` and every record made from it says so.
+    """
+    return EventMap([[m["id"]] for m in moments], "none", "none", "none",
+                    moments)
+
+
+def _moments_from_tuple(tup):
+    return [{"id": i, "coin": c, "start_dt": parse_hour(t)} for i, c, t in tup]
+
+
+def verify_event_map(em):
+    """Re-derive an EventMap from its own moments and configuration and
+    refuse it if the events differ. A map edited by hand, or one carrying a
+    configuration that did not make it, is refused."""
+    if not isinstance(em, EventMap):
+        raise TypeError("events must be an EventMap returned by collapse() "
+                        "or identity_map(), not a %s" % type(em).__name__)
+    ms = _moments_from_tuple(em.moments)
+    if em.config == "none/none/none":
+        again = identity_map(ms)
+    else:
+        again = collapse(ms, em.definition, em.resolution, em.scope)
+    if sorted(list(ev) for ev in again) != sorted(list(ev) for ev in em):
+        raise ValueError("the event map does not match what its own "
+                         "configuration %s makes from its own moments"
+                         % em.config)
+    return True
+
 
 def collapse(moments, definition="start-hour", resolution="component",
              scope="any"):
     """moments: list of dicts with id, coin, start_dt (datetime).
 
-    Returns a list of events; each event is a list of moment ids, and the
-    events partition the input exactly once. Deterministic: no randomness.
+    Returns an EventMap: a list of events, each a list of moment ids, that
+    partition the input exactly once, carrying the configuration that made
+    it. Deterministic: no randomness.
     """
+    return EventMap(_collapse_lists(moments, definition, resolution, scope),
+                    definition, resolution, scope, moments)
+
+
+def _collapse_lists(moments, definition, resolution, scope):
+    """The reviewed collapse() body, unchanged: returns plain lists."""
     if definition not in DEFINITIONS:
         raise ValueError("unknown definition %r" % definition)
     if resolution not in RESOLUTIONS:
@@ -221,6 +332,11 @@ def collapse(moments, definition="start-hour", resolution="component",
     return events
 
 
+def _blocks(events, id_order):
+    pos = {cid: i for i, cid in enumerate(id_order)}
+    return [sorted(pos[c] for c in ev) for ev in events]
+
+
 def block_shuffle_indices(events, id_order, rng):
     """One cluster-level (block) permutation.
 
@@ -228,17 +344,92 @@ def block_shuffle_indices(events, id_order, rng):
     card's answer is read for card i. Whole events keep their internal
     pattern; only whole events are moved. This is what a shuffle must do when
     the cards inside an event are not independent observations (RULES 13).
+
+    How (second-fix run, replacing the reviewed version -- REVIEW §4.2): an
+    event is moved only onto an event of the SAME SIZE, because only then can
+    every card of the target read one card of the source. Inside a pair of
+    events the k-th card (in `id_order` position) reads the k-th card. Sizes
+    are visited in the order in which they first occur in `events`; for each
+    size the events of that size are shuffled once with `rng`.
+
+    Consequence, stated rather than hidden: an event whose size no other
+    event shares cannot move at all. check_block_shuffle() counts those
+    events and the cards in them.
     """
-    pos = {cid: i for i, cid in enumerate(id_order)}
-    blocks = [[pos[c] for c in ev] for ev in events]
-    order = list(range(len(blocks)))
-    rng.shuffle(order)
-    slots = [p for b in blocks for p in b]          # target positions
-    donors = [p for i in order for p in blocks[i]]  # source positions
+    blocks = _blocks(events, id_order)
+    bysize = {}
+    for k, b in enumerate(blocks):
+        bysize.setdefault(len(b), []).append(k)
     out = [None] * len(id_order)
-    for s, d in zip(slots, donors):
-        out[s] = d
+    for size, ks in bysize.items():
+        tgt = list(ks)
+        rng.shuffle(tgt)
+        for a, b in zip(ks, tgt):
+            for s, d in zip(blocks[a], blocks[b]):
+                out[s] = d
+    if any(o is None for o in out):
+        raise ValueError("block shuffle left a card without a source; the "
+                         "events do not cover id_order")
     return out
+
+
+def _check_one_draw(idx, blocks, n):
+    """True if a draw is a permutation in which every event reads all its
+    answers from exactly one source event of the same size."""
+    if sorted(idx) != list(range(n)):
+        return False, "not a permutation of the card positions"
+    owner = {}
+    for k, b in enumerate(blocks):
+        for p in b:
+            owner[p] = k
+    for b in blocks:
+        src = {owner[idx[p]] for p in b}
+        if len(src) != 1:
+            return False, "an event read its answers from %d source events" \
+                % len(src)
+        if len(blocks[src.pop()]) != len(b):
+            return False, "an event read from a source of a different size"
+    return True, ""
+
+
+def check_block_shuffle(events, id_order, draws=SELFTEST_DRAWS, seed=SEED):
+    """The test REVIEW §4.5 item 2 asks for, and two more.
+
+    On `draws` draws of block_shuffle_indices():
+      (a) every draw is a permutation of the card positions;
+      (b) every event reads all its answers from one source event of its own
+          size;
+      (c) an answer vector that is constant inside each event (a different
+          value per event) is still constant inside each event.
+    Raises ValueError on the first failure. Returns the counts, plus how many
+    events (and cards) can never move because no other event shares their
+    size.
+    """
+    blocks = _blocks(events, id_order)
+    n = len(id_order)
+    const = [None] * n
+    for k, b in enumerate(blocks):
+        for p in b:
+            const[p] = k
+    rng = random.Random(seed)
+    for t in range(draws):
+        idx = block_shuffle_indices(events, id_order, rng)
+        ok, why = _check_one_draw(idx, blocks, n)
+        if not ok:
+            raise ValueError("block shuffle draw %d: %s" % (t, why))
+        permuted = [const[i] for i in idx]
+        for b in blocks:
+            if len({permuted[p] for p in b}) != 1:
+                raise ValueError("block shuffle draw %d: an event-constant "
+                                 "vector stopped being event-constant" % t)
+    sizes = Counter(len(b) for b in blocks)
+    immovable = [b for b in blocks if sizes[len(b)] == 1]
+    return {"draws": draws, "seed": seed,
+            "permutation_ok": draws, "single_source_ok": draws,
+            "event_constant_preserved": draws,
+            "events": len(blocks),
+            "immovable_events": len(immovable),
+            "cards_in_immovable_events": sum(len(b) for b in immovable)}
 
 
 def quantile_top(values, fraction):
@@ -249,51 +440,104 @@ def quantile_top(values, fraction):
     return s[idx]
 
 
-def chance_line(answers, labels, events, id_order, mode, shuffles=SHUFFLES,
+def chance_line(answers, labels, events, id_order, mode,
+                representatives=None, shuffles=SHUFFLES,
                 fraction=TOP_FRACTION, seed=SEED):
     """The RULES 12 chance line, computed so that it CANNOT be computed
-    without an event map.
+    without an event map, and so that its result carries the map.
 
     answers / labels : one entry per id, in `id_order`.
-    events           : the partition returned by collapse().
+    events           : an EventMap from collapse() or identity_map(). A plain
+                       list is refused. The map is re-derived from its own
+                       moments and configuration before use.
     mode             : "block"          -- keep every card, permute whole
                                            events (cluster-level permutation);
-                       "representative" -- keep one card per event (earliest
-                                           start hour is chosen by the caller,
-                                           so the caller passes the reduced
-                                           lists and events of size 1).
+                       "representative" -- keep one card per event; the
+                                           caller names it in
+                                           `representatives` (one id per
+                                           event). Which card that is, and
+                                           which label an event holding both
+                                           kinds carries (pass it as that
+                                           card's entry in `labels`), are
+                                           open questions this function does
+                                           not answer.
     There is deliberately no card-level mode and no default mode: TACTICS 7
     says a moment appearing in several cards in the same hour counts as a
-    single event, and a judge who wants the un-collapsed line has to write it
-    himself rather than pick it off a default.
+    single event. The un-collapsed line can only be had by passing
+    identity_map(), and the record then says `none/none/none` and
+    `identity_partition: true`.
 
-    Returns (observed, boundary, null_distribution).
+    Returns a dict (the second-fix run changed this from a 3-tuple, REVIEW
+    §4.5 item 4): observed, boundary, null, and the record of what produced
+    them -- mode, config, event_map_sha256, moments_sha256, cards, events,
+    n_in_null, identity_partition, immovable_events, cards_in_immovable_events
+    (block mode), representatives_sha256 (representative mode), shuffles,
+    top_fraction, seed, engine_sha256.
     """
     if mode not in ("block", "representative"):
         raise ValueError("mode must be 'block' or 'representative'")
+    verify_event_map(events)
     if not (len(answers) == len(labels) == len(id_order)):
         raise ValueError("answers, labels and id_order must be the same length")
     flat = sorted(c for ev in events for c in ev)
-    if flat != sorted(id_order):
+    if flat != sorted(id_order) or len(set(id_order)) != len(id_order):
         raise ValueError("the events do not partition id_order exactly")
-    observed = sum(1 for a, l in zip(answers, labels) if a == l) / len(labels)
+    if sorted(m[0] for m in events.moments) != sorted(id_order):
+        raise ValueError("the event map was made from different moments")
+    rec = {"mode": mode, "config": events.config,
+           "event_map_sha256": events.sha256(),
+           "moments_sha256": events.moments_sha256(),
+           "cards": len(id_order), "events": len(events),
+           "identity_partition": all(len(ev) == 1 for ev in events),
+           "shuffles": shuffles, "top_fraction": fraction, "seed": seed,
+           "engine_sha256": sha256_file(ENGINE_PATH)}
     rng = random.Random(seed)
     null = []
     if mode == "block":
-        for _ in range(shuffles):
+        observed = sum(1 for a, l in zip(answers, labels)
+                       if a == l) / len(labels)
+        blocks = _blocks(events, id_order)
+        for t in range(shuffles):
             idx = block_shuffle_indices(events, id_order, rng)
+            ok, why = _check_one_draw(idx, blocks, len(id_order))
+            if not ok:
+                raise ValueError("block draw %d: %s" % (t, why))
             null.append(sum(1 for i, l in zip(idx, labels)
                             if answers[i] == l) / len(labels))
+        sizes = Counter(len(b) for b in blocks)
+        rec["immovable_events"] = sum(1 for b in blocks if sizes[len(b)] == 1)
+        rec["cards_in_immovable_events"] = sum(len(b) for b in blocks
+                                               if sizes[len(b)] == 1)
+        rec["n_in_null"] = len(id_order)
     else:
-        if any(len(ev) != 1 for ev in events):
-            raise ValueError("representative mode needs one card per event; "
-                             "reduce the inputs before calling")
-        perm = list(answers)
+        if representatives is None:
+            raise ValueError("representative mode needs `representatives`: "
+                             "one id per event, chosen by the caller")
+        reps = list(representatives)
+        owner = {c: k for k, ev in enumerate(events) for c in ev}
+        if (len(reps) != len(events) or len(set(reps)) != len(reps)
+                or any(r not in owner for r in reps)
+                or len({owner[r] for r in reps}) != len(events)):
+            raise ValueError("`representatives` must name exactly one card "
+                             "of every event")
+        pos = {c: i for i, c in enumerate(id_order)}
+        rep_sorted = sorted(reps, key=lambda c: pos[c])
+        r_answers = [answers[pos[c]] for c in rep_sorted]
+        r_labels = [labels[pos[c]] for c in rep_sorted]
+        observed = sum(1 for a, l in zip(r_answers, r_labels)
+                       if a == l) / len(r_labels)
+        perm = list(r_answers)
         for _ in range(shuffles):
             rng.shuffle(perm)
-            null.append(sum(1 for a, l in zip(perm, labels)
-                            if a == l) / len(labels))
-    return observed, quantile_top(null, fraction), null
+            null.append(sum(1 for a, l in zip(perm, r_labels)
+                            if a == l) / len(r_labels))
+        rec["representatives_sha256"] = hashlib.sha256(
+            json.dumps(rep_sorted).encode()).hexdigest()
+        rec["n_in_null"] = len(rep_sorted)
+    rec["observed"] = observed
+    rec["boundary"] = quantile_top(null, fraction)
+    rec["null"] = null
+    return rec
 
 
 # ---------------------------------------------------------------------------
@@ -358,22 +602,46 @@ def main():
             for s in SCOPES:
                 configs.append((d, r, s))
 
+    # ---- the block-shuffle self-test on the review's own example ----------
+    # (REVIEW §4.2: events [[c0,c1,c2],[c3],[c4,c5]].) Run before anything
+    # is measured; any failure stops the script.
+    try:
+        ex_moments = [{"id": "c%d" % i, "coin": "x", "kind": "calm",
+                       "start_dt": parse_hour("2026-01-01T00:00Z")}
+                      for i in range(6)]
+        ex_ids = ["c0", "c1", "c2", "c3", "c4", "c5"]
+        ex_events = EventMap([["c0", "c1", "c2"], ["c3"], ["c4", "c5"]],
+                             "example", "example", "example", ex_moments)
+        selftest_example = check_block_shuffle(ex_events, ex_ids)
+    except ValueError as e:
+        die("block-shuffle self-test failed on the review's example: %s" % e)
+
     event_rows = []
     summary_rows = []
     partitions = {}
+    selftests = {}
     for (d, r, s) in configs:
         cfg = "%s/%s/%s" % (d, r, s)
         if d == "none":
-            events = [[i] for i in id_order]
+            events = identity_map(moments)
         else:
             events = collapse(moments, d, r, s)
+        if events.config != cfg:
+            die("configuration label mismatch: %s vs %s" % (events.config,
+                                                             cfg))
         # the partition must be exact -- check it, do not assume it
         flat = [c for ev in events for c in ev]
         if sorted(flat) != id_order:
             die("configuration %s did not partition the moments exactly" % cfg)
         partitions[cfg] = events
+        try:
+            selftests[cfg] = check_block_shuffle(events, id_order)
+        except ValueError as e:
+            die("block-shuffle self-test failed on %s: %s" % (cfg, e))
 
         sizes = Counter(len(ev) for ev in events)
+        same_coin = [max(Counter(by_id[c]["coin"] for c in ev).values())
+                     for ev in events]
         mixed_kind = sum(1 for ev in events
                          if len({by_id[c]["kind"] for c in ev}) > 1)
         mixed_coin = sum(1 for ev in events
@@ -394,6 +662,13 @@ def main():
             "cards_in_events_of_size_1": singletons,
             "size_histogram": " ".join("%d:%d" % (k, sizes[k])
                                        for k in sorted(sizes)),
+            "events_holding_2plus_cards_of_one_coin":
+                sum(1 for x in same_coin if x >= 2),
+            "largest_same_coin_count_in_one_event": max(same_coin),
+            "block_immovable_events": selftests[cfg]["immovable_events"],
+            "block_cards_in_immovable_events":
+                selftests[cfg]["cards_in_immovable_events"],
+            "event_map_sha256": events.sha256(),
         })
         for i, ev in enumerate(sorted(events, key=lambda g: (
                 min(by_id[c]["start_dt"] for c in g), g[0])), 1):
@@ -442,12 +717,13 @@ def main():
                 null_card.append(sum(1 for a, l in zip(perm, labels)
                                      if a == l) / len(labels))
 
-            rng_block = random.Random(SEED)
-            null_block = []
-            for _ in range(SHUFFLES):
-                idx = block_shuffle_indices(events, id_order, rng_block)
-                null_block.append(sum(1 for i, l in zip(idx, labels)
-                                      if answers[i] == l) / len(labels))
+            # The block column goes through chance_line(), the interface a
+            # judge imports, so the record it returns is exercised here too.
+            blk = chance_line(answers, labels, events, id_order, "block")
+            if blk["config"] != cfg or abs(blk["observed"] - observed) > 1e-12:
+                die("chance_line record disagrees with the calibration on %s"
+                    % cfg)
+            null_block = blk["null"]
 
             # Mode A -- representative collapse: keep ONE card per event
             # (the earliest start hour, ties by lowest id) and shuffle over
@@ -482,45 +758,79 @@ def main():
                 "block_shuffle_1pct_boundary": round(
                     quantile_top(null_block, TOP_FRACTION), 6),
                 "block_shuffle_max": round(max(null_block), 6),
+                "block_immovable_events": blk["immovable_events"],
+                "block_cards_in_immovable_events":
+                    blk["cards_in_immovable_events"],
+                "event_map_sha256": blk["event_map_sha256"],
             })
 
-    # ---- write -------------------------------------------------------------
-    os.makedirs(args.out, exist_ok=True)
-    runs_dir = os.path.join(args.out, "runs")
-    os.makedirs(runs_dir, exist_ok=True)
+    # ---- write (RULES 30: a run directory is written once) ------------------
+    import io
 
+    def csv_text(rows):
+        buf = io.StringIO()
+        w = csv.DictWriter(buf, fieldnames=list(rows[0].keys()),
+                           lineterminator="\n")
+        w.writeheader()
+        w.writerows(rows)
+        return buf.getvalue()
+
+    data = {"events.csv": csv_text(event_rows),
+            "collapse-summary.csv": csv_text(summary_rows),
+            "shuffle-calibration.csv": csv_text(calib_rows)}
+    data_sha = {k: hashlib.sha256(v.encode("utf-8")).hexdigest()
+                for k, v in data.items()}
+
+    runs_dir = os.path.join(args.out, "runs")
+    run_dir = os.path.join(args.out, "run-" + run16)
     core = {
         "run": run16, "input_fingerprint": run_full,
         "moments": len(id_order), "configurations": len(configs),
         "shuffles": SHUFFLES, "seed": SEED, "top_fraction": TOP_FRACTION,
         "events_by_config": {r["config"]: r["events"] for r in summary_rows},
+        "event_map_sha256_by_config": {r["config"]: r["event_map_sha256"]
+                                       for r in summary_rows},
+        "block_shuffle_selftest": {"review_example": selftest_example,
+                                   "by_config": selftests},
+        "output_sha256": data_sha,
+        "output_dir": os.path.relpath(run_dir, REPO),
         "script_sha256": script_sha,
     }
     rec_path = os.path.join(runs_dir, run16 + ".json")
     if os.path.exists(rec_path):
         with open(rec_path, encoding="utf-8") as fh:
             old = json.load(fh)
-        differ = [k for k, v in core.items() if old.get(k) != v]
+        differ = [k for k, v in json.loads(json.dumps(core)).items()
+                  if old.get(k) != v]
         if differ:
             die("run record %s exists and disagrees on %s (RULES 30: records "
                 "are append-only); no output file was touched"
                 % (rec_path, ", ".join(sorted(differ))))
+        for name, text in data.items():
+            p = os.path.join(run_dir, name)
+            if not os.path.exists(p) or sha256_file(p) != data_sha[name]:
+                die("run %s is recorded but %s is missing or differs"
+                    % (run16, p))
+        sys.stderr.write("run %s is already recorded with identical outputs; "
+                         "nothing written\n" % run16)
+        return
+    for name in data:
+        p = os.path.join(run_dir, name)
+        if os.path.exists(p) and sha256_file(p) != data_sha[name]:
+            die("%s exists with different content and no run record "
+                "(RULES 30)" % p)
+    os.makedirs(run_dir, exist_ok=True)
+    os.makedirs(runs_dir, exist_ok=True)
     prior = sorted(f[:-5] for f in os.listdir(runs_dir) if f.endswith(".json"))
     if run16 not in prior:
         prior.append(run16)
-
-    def write_csv(path, rows, fields):
-        with open(path, "w", newline="", encoding="utf-8") as fh:
-            w = csv.DictWriter(fh, fieldnames=fields, lineterminator="\n")
-            w.writeheader()
-            w.writerows(rows)
-
-    ev_path = os.path.join(args.out, "events.csv")
-    write_csv(ev_path, event_rows, list(event_rows[0].keys()))
-    sm_path = os.path.join(args.out, "collapse-summary.csv")
-    write_csv(sm_path, summary_rows, list(summary_rows[0].keys()))
-    cb_path = os.path.join(args.out, "shuffle-calibration.csv")
-    write_csv(cb_path, calib_rows, list(calib_rows[0].keys()))
+    for name, text in data.items():
+        with open(os.path.join(run_dir, name), "w", encoding="utf-8",
+                  newline="") as fh:
+            fh.write(text)
+    ev_path = os.path.join(run_dir, "events.csv")
+    sm_path = os.path.join(run_dir, "collapse-summary.csv")
+    cb_path = os.path.join(run_dir, "shuffle-calibration.csv")
 
     # ---- manifest ----------------------------------------------------------
     A = []
@@ -529,8 +839,8 @@ def main():
     A.append("Written by `scripts/15_event_collapse.py`. It builds every "
              "candidate reading of RULES 13's \"the same hour\" and measures "
              "each. **It chooses none of them.** The choice is an open "
-             "question under RULES 33 and is stated in "
-             "`exam-prep/N-1-collapse.md`.")
+             "question under RULES 33; see "
+             "`exam-prep/second-fix/juror-questions/JQ-N1.md`.")
     A.append("")
     A.append("## Run")
     A.append("")
@@ -553,7 +863,21 @@ def main():
     A.append("")
     A.append("Run records live in `runs/`, one JSON per run number, "
              "append-only (RULES 30). Records present when this manifest was "
-             "written: %s." % ", ".join("`%s`" % p for p in prior))
+             "written: %s. The outputs of run `386d234b85269a21` (the version "
+             "reviewed in `exam-prep/REVIEW.md`) are the files directly in "
+             "`exam-prep/collapse/` and are not touched by later runs; every "
+             "later run writes into its own `run-<number>/` directory."
+             % ", ".join("`%s`" % p for p in prior))
+    A.append("")
+    A.append("## The block-shuffle self-test")
+    A.append("")
+    A.append("Before anything is measured the script checks, on %d draws per "
+             "event map (seed `%d`), that every block draw is a permutation, "
+             "that every event reads all its answers from one source event "
+             "of its own size, and that an event-constant answer vector stays "
+             "event-constant. It stops on the first failure. It passed on the "
+             "review's three-event example and on all %d configurations."
+             % (SELFTEST_DRAWS, SEED, len(configs)))
     A.append("")
     A.append("## The candidate readings")
     A.append("")
@@ -576,27 +900,37 @@ def main():
              "\"groups sharing an hour\", so some deterministic rule is needed "
              "and this one is written down so it can be disagreed with.")
     A.append("")
-    A.append("`any` = two moments of the same coin may merge. `cross-coin` = "
-             "they may not, because RULES 13 says \"in several coins\" and "
-             "same-coin spacing is a separate open question.")
+    A.append("`any` = two moments of the same coin may be joined directly. "
+             "`cross-coin` = two moments of the same coin are never joined "
+             "**directly**. Under `greedy-clique` that means no event holds "
+             "two moments of one coin. Under `component` it does **not**: a "
+             "component is a chain, and two moments of one coin still land in "
+             "one event when both are joined to a moment of another coin. The "
+             "column \"events holding 2+ cards of one coin\" below counts it.")
     A.append("")
     A.append("## What each reading counts")
     A.append("")
     A.append("| configuration | events | cards per event | events of size 1 | "
              "largest event | events holding both kinds | events holding more "
-             "than one coin |")
-    A.append("|---|---|---|---|---|---|---|")
+             "than one coin | events holding 2+ cards of one coin | largest "
+             "same-coin count | block: events that cannot move | block: cards "
+             "in them |")
+    A.append("|---|---|---|---|---|---|---|---|---|---|---|")
     for r in summary_rows:
-        A.append("| `%s` | %d | %.2f | %d | %d | %d | %d |"
+        A.append("| `%s` | %d | %.2f | %d | %d | %d | %d | %d | %d | %d | %d |"
                  % (r["config"], r["events"], r["cards_per_event_mean"],
                     r["events_of_size_1"], r["largest_event"],
                     r["events_holding_both_kinds"],
-                    r["events_holding_more_than_one_coin"]))
+                    r["events_holding_more_than_one_coin"],
+                    r["events_holding_2plus_cards_of_one_coin"],
+                    r["largest_same_coin_count_in_one_event"],
+                    r["block_immovable_events"],
+                    r["block_cards_in_immovable_events"]))
     A.append("")
-    A.append("\"Events holding both kinds\" is the count that matters for a "
-             "judge: an event holding a `large` card and a `calm` card has no "
-             "single label, so a scheme that replaces an event by one answer "
-             "cannot be used on it. The column is measured, not argued.")
+    A.append("\"Events holding both kinds\": an event holding a `large` card "
+             "and a `calm` card has no single label. \"Block: events that "
+             "cannot move\": an event whose size no other event shares is "
+             "mapped onto itself in every block draw.")
     A.append("")
     A.append("## What collapsing does to a shuffle")
     A.append("")
@@ -606,9 +940,11 @@ def main():
              "card, `synthetic-event-constant` is one coin flip per event of "
              "the same configuration, repeated on every card in it. No rule "
              "from the canteen book is evaluated here and no result about any "
-             "rule is produced. The point of the table is the **width of the "
-             "null**, which is a property of the shuffle scheme and the "
-             "labels, not of any signal." % SEED)
+             "rule is produced. The block column is computed through "
+             "`chance_line()`. The representative column keeps, for this "
+             "calibration only, the earliest card of each event (ties: lowest "
+             "id); that is not a ruling on which card represents an event."
+             % SEED)
     A.append("")
     A.append("| configuration | predictor | n cards | card-level shuffle · "
              "1% boundary | cluster-level (block) shuffle · 1% boundary | "
@@ -622,13 +958,6 @@ def main():
                     r["representative_n"],
                     r["representative_shuffle_1pct_boundary"]))
     A.append("")
-    A.append("The last column is the one that moves. Keeping every card and "
-             "only permuting whole events (the middle column) barely widens "
-             "the null, because the overlapping cards do not carry the same "
-             "label — see the \"events holding both kinds\" column above. "
-             "Replacing each event by one card (the last column) widens it a "
-             "great deal, because the null is then drawn over n = events.")
-    A.append("")
     A.append("## Fingerprints")
     A.append("")
     A.append("| file | rows | SHA-256 |")
@@ -638,7 +967,7 @@ def main():
         A.append("| `%s` | %d | `%s` |"
                  % (os.path.relpath(p, REPO), n, sha256_file(p)))
     A.append("")
-    man_path = os.path.join(args.out, "collapse-manifest.md")
+    man_path = os.path.join(run_dir, "collapse-manifest.md")
     with open(man_path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(A) + "\n")
     with open(man_path + ".sha256", "w", encoding="utf-8") as fh:
@@ -647,8 +976,9 @@ def main():
     with open(rec_path, "w", encoding="utf-8") as fh:
         json.dump(core, fh, indent=1, sort_keys=True)
         fh.write("\n")
-    sys.stderr.write("run %s: %d moments, %d configurations\n"
-                     % (run16, len(id_order), len(configs)))
+    sys.stderr.write("run %s: %d moments, %d configurations -> %s\n"
+                     % (run16, len(id_order), len(configs),
+                        os.path.relpath(run_dir, REPO)))
 
 
 if __name__ == "__main__":

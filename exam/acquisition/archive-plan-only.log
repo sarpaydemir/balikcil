@@ -1,0 +1,52 @@
+run_id 8fec81930e5779ca988bd0f320759d133734f92b6844d74257a6977b57407156  started 2026-10-01T18:57:59Z  coins 20
+listed     exam coin line 1
+listed     exam coin line 2
+listed     exam coin line 3
+listed     exam coin line 4
+listed     exam coin line 5
+listed     exam coin line 6
+listed     exam coin line 7
+listed     exam coin line 8
+listed     exam coin line 9
+listed     exam coin line 10
+listed     exam coin line 11
+listed     exam coin line 12
+listed     exam coin line 13
+listed     exam coin line 14
+listed     exam coin line 15
+listed     exam coin line 16
+listed     exam coin line 17
+listed     exam coin line 18
+listed     exam coin line 19
+listed     exam coin line 20
+listed 1   reference
+listed 2   reference
+{
+ "by_kind": {
+  "fundingRate": {
+   "files": 223,
+   "bytes": 301823
+  },
+  "klines_1h": {
+   "files": 256,
+   "bytes": 8155573
+  },
+  "metrics": {
+   "files": 6683,
+   "bytes": 72532486
+  }
+ },
+ "disk": {
+  "checked_at_utc": "2026-10-01T19:01:16Z",
+  "path": "exam/data",
+  "free_bytes": 12576145408,
+  "total_bytes": 39956590592,
+  "measured_download_bytes": 80989882,
+  "size_note": "not an estimate: byte sizes come from the archive's own listing",
+  "required_free_bytes_with_headroom": 404949410,
+  "headroom_factor": 5.0,
+  "fits": true
+ },
+ "not_in_archive": 1304,
+ "listing_errors": 0
+}

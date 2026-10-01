@@ -1,0 +1,68 @@
+{
+ "card_set": "blinded-rank",
+ "cards": 306,
+ "families_leaking": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "funding-line",
+  "openint-level",
+  "p7-shape",
+  "repeat-chg",
+  "repeat-close",
+  "repeat-depth",
+  "repeat-openint",
+  "repeat-ratio",
+  "repeat-trades",
+  "taker-buy",
+  "trades-level",
+  "volatility-frozen",
+  "volume-level"
+ ],
+ "families_leaking_nn": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "repeat-depth",
+  "repeat-ratio",
+  "repeat-trades",
+  "repeat-volume",
+  "trades-level",
+  "volume-level"
+ ],
+ "forced_families": [
+  "volatility-frozen",
+  "funding-line",
+  "p7-shape",
+  "repeat-chg"
+ ],
+ "input_fingerprint": "5fce3f6fbe815baee9ed7d075fa14a0b631e2facdb278fa701c7969e166c37b8",
+ "output_dir": "exam-prep/second-fix/identity/run-5fce3f6fbe815bae",
+ "output_sha256": {
+  "hour-linkage-blinded-rank.csv": "11f07aa54741e567e5235796b761959e8b662ae2570ac79f36c2b69088386b50",
+  "identity-audit-blinded-rank.csv": "a90d32ebf5fc26018ac1f827df50efe82df3d66fe0197acd397356c7f5f4156e"
+ },
+ "run": "5fce3f6fbe815bae",
+ "script_sha256": "4dfd9fd12de458e499ceeea88d9f445d10f853fd21ccb22dc407185a5b767a91",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "t4_release_names": {
+  "cards_carrying_such_a_name": 13,
+  "cards_printing_a_release_name": 100,
+  "distinct_release_names": 30,
+  "names_on_exactly_one_calendar_day_of_this_set": [
+   "Census of Fatal Occupational Injuries",
+   "Employer Costs for Employee Compensation",
+   "Employer-Reported Workplace Injuries and Illnesses (Annual)",
+   "Labor Force Characteristics of Foreign-born Workers",
+   "Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial",
+   "Productivity and Costs by Industry: Wholesale Trade and Retail Trade",
+   "Productivity by State",
+   "Summer Youth Labor Force",
+   "Total Factor Productivity",
+   "Usual Weekly Earnings of Wage and Salary Workers",
+   "Work Experience of the Population (Annual)"
+  ]
+ },
+ "top_fraction": 0.01
+}
