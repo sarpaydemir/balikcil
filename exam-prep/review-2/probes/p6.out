@@ -1,0 +1,14 @@
+gate row variants on strict-flags | features | nearest neighbour | pair AUC
+second-fix ALL-removable (as audited)                          | 43 | nn 0.392157 line 0.169935 BEATS | AUC 0.569908 line 0.513821 BEATS
+... with repeat-depth forced                                   | 39 | nn 0.362745 line 0.169935 BEATS | AUC 0.560509 line 0.514104 BEATS
+... with repeat-openint forced                                 | 41 | nn 0.316993 line 0.173203 BEATS | AUC 0.553605 line 0.513930 BEATS
+... with repeat-close forced                                   | 41 | nn 0.352941 line 0.169935 BEATS | AUC 0.561925 line 0.513831 BEATS
+... with repeat-depth, -openint, -close forced                 | 35 | nn 0.284314 line 0.166667 BEATS | AUC 0.535269 line 0.514174 BEATS
+first-run feature set (every repeat-* family excluded)         | 23 | nn 0.189542 line 0.166667 BEATS | AUC 0.504928 line 0.513011 no
+first-run feature set + repeat-close only                      | 25 | nn 0.245098 line 0.173203 BEATS | AUC 0.517172 line 0.514068 BEATS
+first-run feature set + repeat-depth only                      | 27 | nn 0.225490 line 0.173203 BEATS | AUC 0.518505 line 0.513859 BEATS
+first-run feature set + repeat-openint only                    | 25 | nn 0.251634 line 0.176471 BEATS | AUC 0.527980 line 0.513318 BEATS
+first-run feature set + repeat-ratio only                      | 29 | nn 0.271242 line 0.166667 BEATS | AUC 0.525010 line 0.512919 BEATS
+first-run feature set + repeat-takerbuy only                   | 25 | nn 0.186275 line 0.173203 BEATS | AUC 0.504617 line 0.514221 no
+first-run feature set + repeat-trades only                     | 25 | nn 0.202614 line 0.169935 BEATS | AUC 0.518238 line 0.514489 BEATS
+first-run feature set + repeat-volume only                     | 25 | nn 0.196078 line 0.169935 BEATS | AUC 0.507742 line 0.513588 no

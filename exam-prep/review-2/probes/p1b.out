@@ -1,0 +1,2 @@
+p1b move-window/greedy-clique/cross-coin: events earliest-rule 168, latest-rule 168, events not shared by both 4; table row earliest 50; latest 50
+p1b card-span/greedy-clique/cross-coin: events earliest-rule 125, latest-rule 124, events not shared by both 21; table row earliest 60; latest 60

@@ -1,0 +1,12 @@
+config,definition,resolution,scope,cards,events,cards_per_event_mean,events_of_size_1,largest_event,events_holding_both_kinds,events_holding_more_than_one_coin,cards_in_events_of_size_1,size_histogram,events_holding_2plus_cards_of_one_coin,largest_same_coin_count_in_one_event,block_immovable_events,block_cards_in_immovable_events,event_map_sha256
+none/none/none,none,none,none,306,306,1.0,306,1,0,0,306,1:306,0,1,0,0,3d904d31acf871084d211e79f02a1c1cde63b88917433ffd733b569c9608c796
+start-hour/component/any,start-hour,component,any,306,289,1.0588,274,3,2,15,274,1:274 2:13 3:2,0,1,0,0,9658402b1c3e68b1be36398fbc7594395a515a3b00cff9b4bcae3d582c6b2bb0
+start-hour/component/cross-coin,start-hour,component,cross-coin,306,289,1.0588,274,3,2,15,274,1:274 2:13 3:2,0,1,0,0,64b2b25e9941400ea0aa06ff1f24f614c12bf52b35abdae67d0149aad67c05dc
+move-window/component/any,move-window,component,any,306,131,2.3359,49,8,52,80,49,1:49 2:34 3:22 4:16 5:6 7:3 8:1,15,2,1,8,960cae8b8183c845c65e787e4b4f5acf211929f73d7e5e0227cbe51a5d8c62ba
+move-window/component/cross-coin,move-window,component,cross-coin,306,136,2.25,56,8,52,80,56,1:56 2:33 3:22 4:16 5:5 7:3 8:1,10,2,1,8,75b0f00e3e8aeedb307a9ac60baf7fdd1afc67dd78138e8f539d39565bb55691
+move-window/greedy-clique/any,move-window,greedy-clique,any,306,161,1.9006,68,6,49,88,68,1:68 2:56 3:27 4:7 5:1 6:2,10,2,1,5,90710a493e18689a87a984d02b3eb22d6263c33e441001340c1ee000fc926381
+move-window/greedy-clique/cross-coin,move-window,greedy-clique,cross-coin,306,168,1.8214,78,6,50,90,78,1:78 2:55 3:27 4:5 5:1 6:2,0,1,1,5,69a4a2e0cacf1f8c3268df24e8edd31960e96d09395460596602bf421c2a9d91
+card-span/component/any,card-span,component,any,306,58,5.2759,10,20,37,47,10,1:10 2:10 3:6 4:4 5:5 6:7 7:4 8:1 9:2 10:2 11:2 12:2 15:1 20:2,25,5,2,23,021cab6b1ab37fba28662247ee5525c4f9db0462f1f738eb8d2f7b5ec3fc1ce5
+card-span/component/cross-coin,card-span,component,cross-coin,306,62,4.9355,13,20,39,49,13,1:13 2:9 3:6 4:5 5:6 6:7 7:4 8:2 9:1 10:2 11:3 12:2 15:1 20:1,26,4,3,44,ef23b18dadda731bc099fa78221808f003d320206cec752f060f6f2e4597e280
+card-span/greedy-clique/any,card-span,greedy-clique,any,306,116,2.6379,32,7,56,83,32,1:32 2:26 3:29 4:17 5:7 6:3 7:2,13,3,0,0,8975e82152ecdd51aa6c271dc9fc074a8149912ffbf14173a15e9408088d1a70
+card-span/greedy-clique/cross-coin,card-span,greedy-clique,cross-coin,306,125,2.448,41,7,60,84,41,1:41 2:27 3:31 4:18 5:4 6:2 7:2,0,1,0,0,4bf1703b67ba13d6f5b23fea16c308b35bbc664306242a6390ddfb0fe7b27e33

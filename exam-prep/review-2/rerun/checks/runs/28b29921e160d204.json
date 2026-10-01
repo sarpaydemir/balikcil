@@ -1,0 +1,546 @@
+{
+ "input_fingerprint": "28b29921e160d204c3e9b501a1c56691be42c528d22b4e8d0947ce26ae30b80d",
+ "results": {
+  "C-1": [
+   {
+    "auc": "0.528896",
+    "auc_beats": "YES",
+    "auc_line": "0.512822",
+    "family": "volume-level",
+    "nn": "0.186275",
+    "nn_beats": "YES",
+    "nn_line": "0.179739",
+    "variant": "ratio"
+   },
+   {
+    "auc": "0.52623",
+    "auc_beats": "YES",
+    "auc_line": "0.513451",
+    "family": "trades-level",
+    "nn": "0.212418",
+    "nn_beats": "YES",
+    "nn_line": "0.176471",
+    "variant": "ratio"
+   },
+   {
+    "auc": "0.505179",
+    "auc_beats": "YES",
+    "auc_line": "0.503379",
+    "family": "openint-level",
+    "nn": "0.127451",
+    "nn_beats": "no",
+    "nn_line": "0.133987",
+    "variant": "ratio"
+   },
+   {
+    "auc": "0.563111",
+    "auc_beats": "YES",
+    "auc_line": "0.513622",
+    "family": "taker-buy",
+    "nn": "0.166667",
+    "nn_beats": "no",
+    "nn_line": "0.179739",
+    "variant": "ratio"
+   },
+   {
+    "auc": "0.527862",
+    "auc_beats": "YES",
+    "auc_line": "0.512206",
+    "family": "volume-level",
+    "nn": "0.183007",
+    "nn_beats": "YES",
+    "nn_line": "0.179739",
+    "variant": "rank"
+   },
+   {
+    "auc": "0.529441",
+    "auc_beats": "YES",
+    "auc_line": "0.513128",
+    "family": "trades-level",
+    "nn": "0.196078",
+    "nn_beats": "YES",
+    "nn_line": "0.179739",
+    "variant": "rank"
+   },
+   {
+    "auc": "0.513841",
+    "auc_beats": "YES",
+    "auc_line": "0.511796",
+    "family": "openint-level",
+    "nn": "0.130719",
+    "nn_beats": "no",
+    "nn_line": "0.153595",
+    "variant": "rank"
+   },
+   {
+    "auc": "0.563111",
+    "auc_beats": "YES",
+    "auc_line": "0.513622",
+    "family": "taker-buy",
+    "nn": "0.166667",
+    "nn_beats": "no",
+    "nn_line": "0.179739",
+    "variant": "rank"
+   },
+   {
+    "auc": "0.529516",
+    "auc_beats": "YES",
+    "auc_line": "0.513496",
+    "family": "trades-level",
+    "nn": "0.130719",
+    "nn_beats": "no",
+    "nn_line": "0.166667",
+    "variant": "strict"
+   },
+   {
+    "auc": "0.513841",
+    "auc_beats": "YES",
+    "auc_line": "0.511796",
+    "family": "openint-level",
+    "nn": "0.130719",
+    "nn_beats": "no",
+    "nn_line": "0.153595",
+    "variant": "strict"
+   },
+   {
+    "auc": "0.529516",
+    "auc_beats": "YES",
+    "auc_line": "0.513496",
+    "family": "trades-level",
+    "nn": "0.130719",
+    "nn_beats": "no",
+    "nn_line": "0.166667",
+    "variant": "strict-flags"
+   },
+   {
+    "auc": "0.513841",
+    "auc_beats": "YES",
+    "auc_line": "0.511796",
+    "family": "openint-level",
+    "nn": "0.130719",
+    "nn_beats": "no",
+    "nn_line": "0.153595",
+    "variant": "strict-flags"
+   }
+  ],
+  "C-10": {
+   "block_boundary": 0.558824,
+   "card_level_boundary_same_seed": 0.571895,
+   "identity_partition_accepted_block": true,
+   "identity_partition_accepted_representative": true,
+   "representative_boundary": 0.571895
+  },
+  "C-2": [
+   {
+    "auc": 0.542629,
+    "auc_line": 0.513267,
+    "feature_set": "volatility-frozen",
+    "features": 3,
+    "nn": 0.160131,
+    "nn_line": 0.176471,
+    "variant": "ratio"
+   },
+   {
+    "auc": 0.542144,
+    "auc_line": 0.510666,
+    "feature_set": "closeset",
+    "features": 2,
+    "nn": 0.160131,
+    "nn_line": 0.166667,
+    "variant": "ratio"
+   },
+   {
+    "auc": 0.556899,
+    "auc_line": 0.513583,
+    "feature_set": "volatility-frozen+closeset",
+    "features": 5,
+    "nn": 0.183007,
+    "nn_line": 0.173203,
+    "variant": "ratio"
+   },
+   {
+    "auc": 0.572619,
+    "auc_line": 0.513541,
+    "feature_set": "ALL-removable",
+    "features": 19,
+    "nn": 0.212418,
+    "nn_line": 0.169935,
+    "variant": "ratio"
+   },
+   {
+    "auc": 0.576157,
+    "auc_line": 0.513879,
+    "feature_set": "ALL-removable+closeset",
+    "features": 21,
+    "nn": 0.245098,
+    "nn_line": 0.173203,
+    "variant": "ratio"
+   },
+   {
+    "auc": 0.542629,
+    "auc_line": 0.513267,
+    "feature_set": "volatility-frozen",
+    "features": 3,
+    "nn": 0.160131,
+    "nn_line": 0.176471,
+    "variant": "rank"
+   },
+   {
+    "auc": 0.542144,
+    "auc_line": 0.510666,
+    "feature_set": "closeset",
+    "features": 2,
+    "nn": 0.160131,
+    "nn_line": 0.166667,
+    "variant": "rank"
+   },
+   {
+    "auc": 0.556899,
+    "auc_line": 0.513583,
+    "feature_set": "volatility-frozen+closeset",
+    "features": 5,
+    "nn": 0.183007,
+    "nn_line": 0.173203,
+    "variant": "rank"
+   },
+   {
+    "auc": 0.520307,
+    "auc_line": 0.513273,
+    "feature_set": "ALL-removable",
+    "features": 26,
+    "nn": 0.232026,
+    "nn_line": 0.169935,
+    "variant": "rank"
+   },
+   {
+    "auc": 0.528236,
+    "auc_line": 0.513224,
+    "feature_set": "ALL-removable+closeset",
+    "features": 28,
+    "nn": 0.264706,
+    "nn_line": 0.173203,
+    "variant": "rank"
+   },
+   {
+    "auc": 0.542629,
+    "auc_line": 0.513267,
+    "feature_set": "volatility-frozen",
+    "features": 3,
+    "nn": 0.160131,
+    "nn_line": 0.176471,
+    "variant": "strict"
+   },
+   {
+    "auc": 0.542144,
+    "auc_line": 0.510666,
+    "feature_set": "closeset",
+    "features": 2,
+    "nn": 0.160131,
+    "nn_line": 0.166667,
+    "variant": "strict"
+   },
+   {
+    "auc": 0.556899,
+    "auc_line": 0.513583,
+    "feature_set": "volatility-frozen+closeset",
+    "features": 5,
+    "nn": 0.183007,
+    "nn_line": 0.173203,
+    "variant": "strict"
+   },
+   {
+    "auc": 0.504928,
+    "auc_line": 0.513011,
+    "feature_set": "ALL-removable",
+    "features": 23,
+    "nn": 0.189542,
+    "nn_line": 0.166667,
+    "variant": "strict"
+   },
+   {
+    "auc": 0.517172,
+    "auc_line": 0.514068,
+    "feature_set": "ALL-removable+closeset",
+    "features": 25,
+    "nn": 0.245098,
+    "nn_line": 0.173203,
+    "variant": "strict"
+   },
+   {
+    "auc": 0.542629,
+    "auc_line": 0.513267,
+    "feature_set": "volatility-frozen",
+    "features": 3,
+    "nn": 0.160131,
+    "nn_line": 0.176471,
+    "variant": "strict-flags"
+   },
+   {
+    "auc": 0.542144,
+    "auc_line": 0.510666,
+    "feature_set": "closeset",
+    "features": 2,
+    "nn": 0.160131,
+    "nn_line": 0.166667,
+    "variant": "strict-flags"
+   },
+   {
+    "auc": 0.556899,
+    "auc_line": 0.513583,
+    "feature_set": "volatility-frozen+closeset",
+    "features": 5,
+    "nn": 0.183007,
+    "nn_line": 0.173203,
+    "variant": "strict-flags"
+   },
+   {
+    "auc": 0.504928,
+    "auc_line": 0.513011,
+    "feature_set": "ALL-removable",
+    "features": 23,
+    "nn": 0.189542,
+    "nn_line": 0.166667,
+    "variant": "strict-flags"
+   },
+   {
+    "auc": 0.517172,
+    "auc_line": 0.514068,
+    "feature_set": "ALL-removable+closeset",
+    "features": 25,
+    "nn": 0.245098,
+    "nn_line": 0.173203,
+    "variant": "strict-flags"
+   }
+  ],
+  "C-3": [
+   {
+    "auc": "0.572619",
+    "auc_beats": "YES",
+    "auc_line": "0.513541",
+    "nn": "0.212418",
+    "nn_beats": "YES",
+    "nn_line": "0.169935",
+    "variant": "ratio"
+   },
+   {
+    "auc": "0.520307",
+    "auc_beats": "YES",
+    "auc_line": "0.513273",
+    "nn": "0.232026",
+    "nn_beats": "YES",
+    "nn_line": "0.169935",
+    "variant": "rank"
+   },
+   {
+    "auc": "0.504928",
+    "auc_beats": "no",
+    "auc_line": "0.513011",
+    "nn": "0.189542",
+    "nn_beats": "YES",
+    "nn_line": "0.166667",
+    "variant": "strict"
+   },
+   {
+    "auc": "0.504928",
+    "auc_beats": "no",
+    "auc_line": "0.513011",
+    "nn": "0.189542",
+    "nn_beats": "YES",
+    "nn_line": "0.166667",
+    "variant": "strict-flags"
+   }
+  ],
+  "C-4": {
+   "cards": 306,
+   "cards_carrying_such_a_name": 13,
+   "cards_printing_a_release_name": 100,
+   "count_names_on_exactly_one_calendar_day": 11,
+   "distinct_release_names": 30,
+   "linkage_detected": 8,
+   "linkage_false_positives": 15,
+   "linkage_truly_overlapping_pairs": 495,
+   "names_on_exactly_one_calendar_day": [
+    "Census of Fatal Occupational Injuries",
+    "Employer Costs for Employee Compensation",
+    "Employer-Reported Workplace Injuries and Illnesses (Annual)",
+    "Labor Force Characteristics of Foreign-born Workers",
+    "Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial",
+    "Productivity and Costs by Industry: Wholesale Trade and Retail Trade",
+    "Productivity by State",
+    "Summer Youth Labor Force",
+    "Total Factor Productivity",
+    "Usual Weekly Earnings of Wage and Salary Workers",
+    "Work Experience of the Population (Annual)"
+   ]
+  },
+  "C-5": {
+   "cards_with_before_window_depth_run_ge_3": [
+    "C018",
+    "C019",
+    "C041",
+    "C058",
+    "C059"
+   ],
+   "cards_with_before_window_openint_zero": [
+    "C002",
+    "C259",
+    "C263",
+    "C264"
+   ],
+   "cards_with_depth_run_ge_3_only_after": [
+    "C017",
+    "C042",
+    "C060",
+    "C099",
+    "C139",
+    "C154",
+    "C183",
+    "C287"
+   ],
+   "detail": {
+    "C017": {
+     "after_ask": 13,
+     "after_bid": 5,
+     "before_ask": 1,
+     "before_bid": 1
+    },
+    "C018": {
+     "after_ask": 2,
+     "after_bid": 24,
+     "before_ask": 1,
+     "before_bid": 24
+    },
+    "C019": {
+     "after_ask": 2,
+     "after_bid": 1,
+     "before_ask": 2,
+     "before_bid": 4
+    },
+    "C041": {
+     "after_ask": 1,
+     "after_bid": 1,
+     "before_ask": 3,
+     "before_bid": 3
+    },
+    "C058": {
+     "after_ask": 1,
+     "after_bid": 22,
+     "before_ask": 1,
+     "before_bid": 5
+    },
+    "C059": {
+     "after_ask": 1,
+     "after_bid": 24,
+     "before_ask": 1,
+     "before_bid": 24
+    }
+   }
+  },
+  "C-6": {
+   "excess_over_line": [
+    0.022875,
+    0.003268
+   ],
+   "excess_over_null_mean": [
+    0.070098,
+    0.053517
+   ],
+   "reduction_over_line_pct": 85.7,
+   "reduction_over_null_mean_pct": 23.7
+  },
+  "C-7": {
+   "draws_with_an_event_reading_from_two_sources": "166 of 200",
+   "event_constant_vectors_still_event_constant": "157 of 1000",
+   "seed": 20260913
+  },
+  "C-8": [
+   {
+    "config": "card-span/component/any",
+    "events": 58,
+    "events_holding_2plus_same_coin": 25,
+    "largest_same_coin_count": 5
+   },
+   {
+    "config": "card-span/component/cross-coin",
+    "events": 62,
+    "events_holding_2plus_same_coin": 26,
+    "largest_same_coin_count": 4
+   },
+   {
+    "config": "card-span/greedy-clique/any",
+    "events": 116,
+    "events_holding_2plus_same_coin": 13,
+    "largest_same_coin_count": 3
+   },
+   {
+    "config": "card-span/greedy-clique/cross-coin",
+    "events": 125,
+    "events_holding_2plus_same_coin": 0,
+    "largest_same_coin_count": 1
+   },
+   {
+    "config": "move-window/component/any",
+    "events": 131,
+    "events_holding_2plus_same_coin": 15,
+    "largest_same_coin_count": 2
+   },
+   {
+    "config": "move-window/component/cross-coin",
+    "events": 136,
+    "events_holding_2plus_same_coin": 10,
+    "largest_same_coin_count": 2
+   },
+   {
+    "config": "move-window/greedy-clique/any",
+    "events": 161,
+    "events_holding_2plus_same_coin": 10,
+    "largest_same_coin_count": 2
+   },
+   {
+    "config": "move-window/greedy-clique/cross-coin",
+    "events": 168,
+    "events_holding_2plus_same_coin": 0,
+    "largest_same_coin_count": 1
+   },
+   {
+    "config": "none/none/none",
+    "events": 306,
+    "events_holding_2plus_same_coin": 0,
+    "largest_same_coin_count": 1
+   },
+   {
+    "config": "start-hour/component/any",
+    "events": 289,
+    "events_holding_2plus_same_coin": 0,
+    "largest_same_coin_count": 1
+   },
+   {
+    "config": "start-hour/component/cross-coin",
+    "events": 289,
+    "events_holding_2plus_same_coin": 0,
+    "largest_same_coin_count": 1
+   }
+  ],
+  "C-9": [
+   {
+    "combined": "021bdfbbb08bad12080090ffe02287246d143e1a0a9c617120fccaea9fb604e2",
+    "variant": "ratio"
+   },
+   {
+    "combined": "00a428658914e43da1e1372c08844488dd6bcec69bfa192a280668efdcbc3a14",
+    "variant": "rank"
+   },
+   {
+    "combined": "fb9b83059a6682098a6de41848e8ac9d89ebb207719986b07333fa8346d653f4",
+    "variant": "strict"
+   },
+   {
+    "combined": "49dc65c3af35a57ba7acf77bb1696a94272b7f2451e7b7e2fe05a2dcb631e8f6",
+    "variant": "strict-flags"
+   }
+  ]
+ },
+ "reviewed_commit": "7735d08f106f609b78f44fa652515e4330db9420",
+ "run": "28b29921e160d204",
+ "script_sha256": "de072d80820344a7ad6f73980fb99cfb0e0c5d129e6f8682bc6b06e50909f14c"
+}

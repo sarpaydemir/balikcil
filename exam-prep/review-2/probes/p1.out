@@ -1,0 +1,41 @@
+cards read: 306  kinds: {'calm': 153, 'large': 153}
+
+## partitions: own code vs second-fix events.csv
+card-span/component/any                  identical=True
+card-span/component/cross-coin           identical=True
+card-span/greedy-clique/any              identical=True
+card-span/greedy-clique/cross-coin       identical=True
+move-window/component/any                identical=True
+move-window/component/cross-coin         identical=True
+move-window/greedy-clique/any            identical=True
+move-window/greedy-clique/cross-coin     identical=True
+none/none/none                           identical=True
+start-hour/component/any                 identical=True
+start-hour/component/cross-coin          identical=True
+
+## JQ-N1 table columns, own code
+card-span/component/any {'events': 58, 'size1': 10, 'largest': 20, 'both_kinds': 37, 'same_coin_events': 25, 'largest_same_coin': 5, 'immovable_events': 2, 'immovable_cards': 23, 'size_hist': {1: 10, 2: 10, 3: 6, 4: 4, 5: 5, 6: 7, 7: 4, 8: 1, 9: 2, 10: 2, 11: 2, 12: 2, 15: 1, 20: 2}}
+card-span/component/cross-coin {'events': 62, 'size1': 13, 'largest': 20, 'both_kinds': 39, 'same_coin_events': 26, 'largest_same_coin': 4, 'immovable_events': 3, 'immovable_cards': 44, 'size_hist': {1: 13, 2: 9, 3: 6, 4: 5, 5: 6, 6: 7, 7: 4, 8: 2, 9: 1, 10: 2, 11: 3, 12: 2, 15: 1, 20: 1}}
+card-span/greedy-clique/any {'events': 116, 'size1': 32, 'largest': 7, 'both_kinds': 56, 'same_coin_events': 13, 'largest_same_coin': 3, 'immovable_events': 0, 'immovable_cards': 0, 'size_hist': {1: 32, 2: 26, 3: 29, 4: 17, 5: 7, 6: 3, 7: 2}}
+card-span/greedy-clique/cross-coin {'events': 125, 'size1': 41, 'largest': 7, 'both_kinds': 60, 'same_coin_events': 0, 'largest_same_coin': 1, 'immovable_events': 0, 'immovable_cards': 0, 'size_hist': {1: 41, 2: 27, 3: 31, 4: 18, 5: 4, 6: 2, 7: 2}}
+move-window/component/any {'events': 131, 'size1': 49, 'largest': 8, 'both_kinds': 52, 'same_coin_events': 15, 'largest_same_coin': 2, 'immovable_events': 1, 'immovable_cards': 8, 'size_hist': {1: 49, 2: 34, 3: 22, 4: 16, 5: 6, 7: 3, 8: 1}}
+move-window/component/cross-coin {'events': 136, 'size1': 56, 'largest': 8, 'both_kinds': 52, 'same_coin_events': 10, 'largest_same_coin': 2, 'immovable_events': 1, 'immovable_cards': 8, 'size_hist': {1: 56, 2: 33, 3: 22, 4: 16, 5: 5, 7: 3, 8: 1}}
+move-window/greedy-clique/any {'events': 161, 'size1': 68, 'largest': 6, 'both_kinds': 49, 'same_coin_events': 10, 'largest_same_coin': 2, 'immovable_events': 1, 'immovable_cards': 5, 'size_hist': {1: 68, 2: 56, 3: 27, 4: 7, 5: 1, 6: 2}}
+move-window/greedy-clique/cross-coin {'events': 168, 'size1': 78, 'largest': 6, 'both_kinds': 50, 'same_coin_events': 0, 'largest_same_coin': 1, 'immovable_events': 1, 'immovable_cards': 5, 'size_hist': {1: 78, 2: 55, 3: 27, 4: 5, 5: 1, 6: 2}}
+none/none/none {'events': 306, 'size1': 306, 'largest': 1, 'both_kinds': 0, 'same_coin_events': 0, 'largest_same_coin': 1, 'immovable_events': 0, 'immovable_cards': 0, 'size_hist': {1: 306}}
+start-hour/component/any {'events': 289, 'size1': 274, 'largest': 3, 'both_kinds': 2, 'same_coin_events': 0, 'largest_same_coin': 1, 'immovable_events': 0, 'immovable_cards': 0, 'size_hist': {1: 274, 2: 13, 3: 2}}
+start-hour/component/cross-coin {'events': 289, 'size1': 274, 'largest': 3, 'both_kinds': 2, 'same_coin_events': 0, 'largest_same_coin': 1, 'immovable_events': 0, 'immovable_cards': 0, 'size_hist': {1: 274, 2: 13, 3: 2}}
+
+## block shuffle (repaired) -- own checker, 1000 draws, seed 20260913
+card-span/component/any                  passed; event-moves over all draws: 44032
+card-span/component/cross-coin           passed; event-moves over all draws: 47991
+card-span/greedy-clique/any              passed; event-moves over all draws: 108915
+card-span/greedy-clique/cross-coin       passed; event-moves over all draws: 117853
+move-window/component/any                passed; event-moves over all draws: 123998
+move-window/component/cross-coin         passed; event-moves over all draws: 129096
+move-window/greedy-clique/any            passed; event-moves over all draws: 155066
+move-window/greedy-clique/cross-coin     passed; event-moves over all draws: 161971
+none/none/none                           passed; event-moves over all draws: 304995
+start-hour/component/any                 passed; event-moves over all draws: 285985
+start-hour/component/cross-coin          passed; event-moves over all draws: 285985
+constructed example (sizes 3,3,1,1,2,2): passed; event-moves: 3080 of 6000 event-draws

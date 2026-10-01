@@ -1,0 +1,51 @@
+A. cards printing a release name: 100 of 306
+   ... with at least one hour offset: 99 ; without any: 1 ; cards whose line says 'no clock time': 9
+   distinct names: 30
+   names on one START day: 11 ; cards carrying one: 13
+     - Census of Fatal Occupational Injuries ['2026-02-19']
+     - Employer Costs for Employee Compensation ['2025-09-13']
+     - Employer-Reported Workplace Injuries and Illnesses (Annual) ['2026-01-22']
+     - Labor Force Characteristics of Foreign-born Workers ['2026-05-20']
+     - Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial ['2026-05-05']
+     - Productivity and Costs by Industry: Wholesale Trade and Retail Trade ['2026-05-28']
+     - Productivity by State ['2026-05-28']
+     - Summer Youth Labor Force ['2026-08-21']
+     - Total Factor Productivity ['2026-03-19']
+     - Usual Weekly Earnings of Wage and Salary Workers ['2026-04-17']
+     - Work Experience of the Population (Annual) ['2026-01-22']
+   names on one RELEASE day (start + offset): 13 ; cards carrying one: 18
+     - American Time Use Survey
+     - Census of Fatal Occupational Injuries
+     - Employer Costs for Employee Compensation
+     - Employer-Reported Workplace Injuries and Illnesses (Annual)
+     - Labor Force Characteristics of Foreign-born Workers
+     - Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial
+     - People with Health Conditions or Difficulties that Limit Work
+     - Productivity and Costs by Industry: Wholesale Trade and Retail Trade
+     - Productivity by State
+     - Summer Youth Labor Force
+     - Total Factor Productivity
+     - Usual Weekly Earnings of Wage and Salary Workers
+     - Work Experience of the Population (Annual)
+   names in exactly one of the two lists: ['American Time Use Survey', 'People with Health Conditions or Difficulties that Limit Work']
+   'Time Use' name: American Time Use Survey start days ['2026-06-25', '2026-06-26'] release days ['2026-06-25']
+
+B. K-1 manufactured ties (raw cards, before window)
+   d=2 (half-even rounding): cards with a manufactured tie: 36
+   d=2 (half-up rounding): cards with a manufactured tie: 36
+   d=3 (half-even rounding): cards with a manufactured tie: 0
+   d=3 (half-up rounding): cards with a manufactured tie: 0
+   d=2 (float %-format): cards with a manufactured tie: 36
+   d=3 (float %-format): cards with a manufactured tie: 0
+
+C. K-4 smallest non-zero step between printed close values
+   strict-flags     distinct feature values: 13
+   strict-flags-k1  distinct feature values: 91
+
+D. card-number assignment
+   ratio            same B->C mapping as strict-flags: True
+   rank             same B->C mapping as strict-flags: True
+   strict           same B->C mapping as strict-flags: True
+   strict-flags     same B->C mapping as strict-flags: True
+   strict-flags-k1  same B->C mapping as strict-flags: True
+   mapping reproduced from the public seed and the C### order alone: True

@@ -1,0 +1,27 @@
+A. repeat features: own text parser vs card_features()
+   strict-flags     features compared: 6732, mismatches: 0
+   strict-flags-k1  features compared: 6732, mismatches: 0
+   raw              features compared: 7956, mismatches: 0
+
+B/C. strict-flags: own AUC vs CSV; NN tie range (lowest, highest, mean over random tie-breaks)
+   family | features | own AUC | CSV AUC | NN as reported | NN lowest | NN highest | NN mean | cards with tied NN | CSV nn line
+   repeat-close | 2 | 0.542144 | 0.542144 | 0.160131 | 0.009804 | 0.885621 | 0.140828 | 293 | 0.166667
+   repeat-chg | 2 | 0.523074 | 0.523074 | 0.101307 | 0.006536 | 0.928105 | 0.142932 | 301 | 0.166667
+   repeat-volume | 2 | 0.506038 | 0.506038 | 0.163399 | 0.000000 | 0.977124 | 0.129737 | 304 | 0.153595
+   repeat-trades | 2 | 0.585220 | 0.58522 | 0.232026 | 0.091503 | 0.454248 | 0.222160 | 231 | 0.173203
+   repeat-takerbuy | 2 | 0.502733 | 0.502733 | 0.124183 | 0.006536 | 0.931373 | 0.121157 | 304 | 0.169935
+   repeat-openint | 2 | 0.621051 | 0.621051 | 0.143791 | 0.045752 | 0.862745 | 0.202839 | 289 | 0.173203
+   repeat-ratio | 6 | 0.563942 | 0.563942 | 0.186275 | 0.186275 | 0.186275 | 0.186275 | 4 | 0.176471
+   repeat-depth | 4 | 0.535064 | 0.535063 | 0.222222 | 0.088235 | 0.957516 | 0.214744 | 273 | 0.169935
+   repeat-btceth | 0 features
+   ALL-removable | 43 | 0.569908 | 0.569908 | 0.392157 | 0.392157 | 0.392157 | 0.392157 | 0 | 0.169935
+
+   raw cards repeat-close: NN as reported 0.075163; lowest 0.009804; highest 0.885621; mean 0.151031; tied cards 293
+   k1 set repeat-close:    NN as reported 0.205882; lowest 0.009804; highest 0.885621; mean 0.151031; tied cards 293
+
+D. K-4 granularity: float subtraction (as E-3) vs exact decimal subtraction
+   set | version | distinct values | nn | nn line | AUC | AUC line
+   strict-flags | float | 23 | 0.176471 | 0.166667 | 0.60543 | 0.513303
+   strict-flags | exact | 13 | 0.143791 | 0.169935 | 0.596809 | 0.513207
+   strict-flags-k1 | float | 126 | 0.215686 | 0.176471 | 0.629749 | 0.512369
+   strict-flags-k1 | exact | 91 | 0.215686 | 0.173203 | 0.630049 | 0.512271

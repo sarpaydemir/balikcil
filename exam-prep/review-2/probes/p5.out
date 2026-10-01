@@ -1,0 +1,22 @@
+none/none/none synthetic-iid: n=306 A=148 L=153
+  exact 1% point of the null: 0.5654
+  reported statistic (10th largest of 1000): 2.5% 0.5588 | median 0.5654 | 97.5% 0.5719
+  support step 2/n = 0.006536
+  distribution of the reported line: 0.5523: 0.0001, 0.5588: 0.0754, 0.5654: 0.6320, 0.5719: 0.2815, 0.5784: 0.0109
+  P(two independent reported lines differ by >= 1 steps = 0.0065) = 0.5155
+  P(two independent reported lines differ by >= 2 steps = 0.0131) = 0.0582
+  P(two independent reported lines differ by >= 3 steps = 0.0196) = 0.0018
+  P(two independent reported lines differ by >= 4 steps = 0.0261) = 0.0000
+
+representative column (exact): config | n | reported | exact 1% point | reported-statistic 2.5% / 97.5% | block reported
+  none/none/none | 306 | 0.565359 | 0.5654 | 0.5588 / 0.5719 | iid 0.558824 / event-constant 0.558824
+  start-hour/component/any | 289 | 0.574394 | 0.5675 | 0.5606 / 0.5744 | iid 0.552288 / event-constant 0.558824
+  start-hour/component/cross-coin | 289 | 0.574394 | 0.5675 | 0.5606 / 0.5744 | iid 0.552288 / event-constant 0.558824
+  move-window/component/any | 131 | 0.603053 | 0.6031 | 0.5878 / 0.6183 | iid 0.565359 / event-constant 0.594771
+  move-window/component/cross-coin | 136 | 0.588235 | 0.6029 | 0.5882 / 0.6176 | iid 0.565359 / event-constant 0.598039
+  move-window/greedy-clique/any | 161 | 0.590062 | 0.5901 | 0.5776 / 0.6025 | iid 0.565359 / event-constant 0.598039
+  move-window/greedy-clique/cross-coin | 168 | 0.589286 | 0.5893 | 0.5774 / 0.6012 | iid 0.558824 / event-constant 0.575163
+  card-span/component/any | 58 | 0.655172 | 0.6552 | 0.6552 / 0.6552 | iid 0.558824 / event-constant 0.562092
+  card-span/component/cross-coin | 62 | 0.66129 | 0.6613 | 0.6290 / 0.6613 | iid 0.558824 / event-constant 0.552288
+  card-span/greedy-clique/any | 116 | 0.612069 | 0.6121 | 0.5948 / 0.6293 | iid 0.552288 / event-constant 0.601307
+  card-span/greedy-clique/cross-coin | 125 | 0.6 | 0.6000 | 0.6000 / 0.6160 | iid 0.545752 / event-constant 0.571895

@@ -1,0 +1,414 @@
+{
+ "input_fingerprint": "35925ca8acf606904a9d969733e491cec9c269f44e6470ced74aa44619cd3f0d",
+ "results": {
+  "E-1": [
+   {
+    "config": "levels=ratio;btceth=drop;funding=summary;takerbuy=centred;p7=full;ratio_dp=3",
+    "different": 0,
+    "first_different": null,
+    "identical": 306,
+    "reviewed_run": "ca9e460829ecdac5",
+    "variant": "ratio"
+   },
+   {
+    "config": "levels=rank;btceth=drop;funding=summary;takerbuy=centred;p7=full;ratio_dp=3",
+    "different": 0,
+    "first_different": null,
+    "identical": 306,
+    "reviewed_run": "35df01d621d8da5a",
+    "variant": "rank"
+   },
+   {
+    "config": "levels=rank;btceth=drop;funding=summary;takerbuy=rank;p7=no-scale;ratio_dp=3",
+    "different": 0,
+    "first_different": null,
+    "identical": 306,
+    "reviewed_run": "a9a8f3bcd515fd62",
+    "variant": "strict"
+   },
+   {
+    "config": "levels=rank;btceth=drop;funding=flags;takerbuy=rank;p7=no-scale;ratio_dp=3",
+    "different": 0,
+    "first_different": null,
+    "identical": 306,
+    "reviewed_run": "10405ae115941d40",
+    "variant": "strict-flags"
+   }
+  ],
+  "E-2": [
+   {
+    "attempt": "events as a plain list of lists (the reviewed interface)",
+    "detail": "events must be an EventMap returned by collapse() or identity_map(), not a list",
+    "result": "TypeError"
+   },
+   {
+    "attempt": "identity partition typed as a plain list (REVIEW \u00a74.3 bypass)",
+    "detail": "events must be an EventMap returned by collapse() or identity_map(), not a list",
+    "result": "TypeError"
+   },
+   {
+    "attempt": "identity_map(), block",
+    "detail": {
+     "cards_in_immovable_events": 0,
+     "config": "none/none/none",
+     "event_map_sha256": "3d904d31acf871084d211e79f02a1c1cde63b88917433ffd733b569c9608c796",
+     "events": 306,
+     "identity_partition": true,
+     "immovable_events": 0,
+     "mode": "block",
+     "n_in_null": 306
+    },
+    "result": "accepted"
+   },
+   {
+    "attempt": "a start-hour map relabelled as card-span/component/any",
+    "detail": "the event map does not match what its own configuration card-span/component/any makes from its own moments",
+    "result": "ValueError"
+   },
+   {
+    "attempt": "a card-span map with one card removed from its events",
+    "detail": "the event map does not match what its own configuration card-span/component/any makes from its own moments",
+    "result": "ValueError"
+   },
+   {
+    "attempt": "mode omitted",
+    "detail": "chance_line() missing 1 required positional argument: 'mode'",
+    "result": "TypeError"
+   },
+   {
+    "attempt": "mode='card'",
+    "detail": "mode must be 'block' or 'representative'",
+    "result": "ValueError"
+   },
+   {
+    "attempt": "representative without `representatives`",
+    "detail": "representative mode needs `representatives`: one id per event, chosen by the caller",
+    "result": "ValueError"
+   },
+   {
+    "attempt": "representative naming two cards of one event",
+    "detail": "`representatives` must name exactly one card of every event",
+    "result": "ValueError"
+   },
+   {
+    "attempt": "card-span/component/any, block",
+    "detail": {
+     "cards_in_immovable_events": 23,
+     "config": "card-span/component/any",
+     "event_map_sha256": "021cab6b1ab37fba28662247ee5525c4f9db0462f1f738eb8d2f7b5ec3fc1ce5",
+     "events": 58,
+     "identity_partition": false,
+     "immovable_events": 2,
+     "mode": "block",
+     "n_in_null": 306
+    },
+    "result": "accepted"
+   },
+   {
+    "attempt": "card-span/component/any, representative (first id of each event, a test choice only)",
+    "detail": {
+     "config": "card-span/component/any",
+     "event_map_sha256": "021cab6b1ab37fba28662247ee5525c4f9db0462f1f738eb8d2f7b5ec3fc1ce5",
+     "events": 58,
+     "identity_partition": false,
+     "mode": "representative",
+     "n_in_null": 58
+    },
+    "result": "accepted"
+   },
+   {
+    "attempt": "old-style unpacking `observed, boundary, null = chance_line(...)`",
+    "detail": "too many values to unpack (expected 3, got 17)",
+    "result": "ValueError"
+   }
+  ],
+  "E-3": [
+   {
+    "auc": 0.60543,
+    "auc_beats": true,
+    "auc_line": 0.513303,
+    "card_set": "strict-flags",
+    "close_decimals": [
+     2
+    ],
+    "distinct_min_step_values": 23,
+    "nn": 0.176471,
+    "nn_beats": true,
+    "nn_line": 0.166667
+   },
+   {
+    "auc": 0.629749,
+    "auc_beats": true,
+    "auc_line": 0.512369,
+    "card_set": "strict-flags-k1",
+    "close_decimals": [
+     3
+    ],
+    "distinct_min_step_values": 126,
+    "nn": 0.215686,
+    "nn_beats": true,
+    "nn_line": 0.176471
+   }
+  ],
+  "E-4": {
+   "block_minus_card_reviewed": [
+    -0.013071,
+    0.019607
+   ],
+   "block_minus_card_second_fix": [
+    -0.026143,
+    0.039215
+   ],
+   "none_block_vs_card": [
+    {
+     "block_reviewed": 0.558824,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "none/none/none",
+     "predictor": "synthetic-iid",
+     "representative": 0.565359,
+     "representative_n": 306
+    },
+    {
+     "block_reviewed": 0.558824,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "none/none/none",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.565359,
+     "representative_n": 306
+    }
+   ],
+   "representative_minus_card": [
+    0.002499,
+    0.095931
+   ],
+   "rows": [
+    {
+     "block_reviewed": 0.558824,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "none/none/none",
+     "predictor": "synthetic-iid",
+     "representative": 0.565359,
+     "representative_n": 306
+    },
+    {
+     "block_reviewed": 0.558824,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "none/none/none",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.565359,
+     "representative_n": 306
+    },
+    {
+     "block_reviewed": 0.571895,
+     "block_second_fix": 0.552288,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "start-hour/component/any",
+     "predictor": "synthetic-iid",
+     "representative": 0.574394,
+     "representative_n": 289
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.558824,
+     "card": 0.565359,
+     "card_and_representative_unchanged": true,
+     "config": "start-hour/component/any",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.574394,
+     "representative_n": 289
+    },
+    {
+     "block_reviewed": 0.571895,
+     "block_second_fix": 0.552288,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "start-hour/component/cross-coin",
+     "predictor": "synthetic-iid",
+     "representative": 0.574394,
+     "representative_n": 289
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.558824,
+     "card": 0.565359,
+     "card_and_representative_unchanged": true,
+     "config": "start-hour/component/cross-coin",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.574394,
+     "representative_n": 289
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.565359,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/component/any",
+     "predictor": "synthetic-iid",
+     "representative": 0.603053,
+     "representative_n": 131
+    },
+    {
+     "block_reviewed": 0.581699,
+     "block_second_fix": 0.594771,
+     "card": 0.562092,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/component/any",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.603053,
+     "representative_n": 131
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.565359,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/component/cross-coin",
+     "predictor": "synthetic-iid",
+     "representative": 0.588235,
+     "representative_n": 136
+    },
+    {
+     "block_reviewed": 0.578431,
+     "block_second_fix": 0.598039,
+     "card": 0.565359,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/component/cross-coin",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.588235,
+     "representative_n": 136
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.565359,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/greedy-clique/any",
+     "predictor": "synthetic-iid",
+     "representative": 0.590062,
+     "representative_n": 161
+    },
+    {
+     "block_reviewed": 0.571895,
+     "block_second_fix": 0.598039,
+     "card": 0.558824,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/greedy-clique/any",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.590062,
+     "representative_n": 161
+    },
+    {
+     "block_reviewed": 0.558824,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/greedy-clique/cross-coin",
+     "predictor": "synthetic-iid",
+     "representative": 0.589286,
+     "representative_n": 168
+    },
+    {
+     "block_reviewed": 0.575163,
+     "block_second_fix": 0.575163,
+     "card": 0.562092,
+     "card_and_representative_unchanged": true,
+     "config": "move-window/greedy-clique/cross-coin",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.589286,
+     "representative_n": 168
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/component/any",
+     "predictor": "synthetic-iid",
+     "representative": 0.655172,
+     "representative_n": 58
+    },
+    {
+     "block_reviewed": 0.581699,
+     "block_second_fix": 0.562092,
+     "card": 0.568627,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/component/any",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.655172,
+     "representative_n": 58
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.558824,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/component/cross-coin",
+     "predictor": "synthetic-iid",
+     "representative": 0.66129,
+     "representative_n": 62
+    },
+    {
+     "block_reviewed": 0.578431,
+     "block_second_fix": 0.552288,
+     "card": 0.565359,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/component/cross-coin",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.66129,
+     "representative_n": 62
+    },
+    {
+     "block_reviewed": 0.558824,
+     "block_second_fix": 0.552288,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/greedy-clique/any",
+     "predictor": "synthetic-iid",
+     "representative": 0.612069,
+     "representative_n": 116
+    },
+    {
+     "block_reviewed": 0.581699,
+     "block_second_fix": 0.601307,
+     "card": 0.562092,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/greedy-clique/any",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.612069,
+     "representative_n": 116
+    },
+    {
+     "block_reviewed": 0.565359,
+     "block_second_fix": 0.545752,
+     "card": 0.571895,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/greedy-clique/cross-coin",
+     "predictor": "synthetic-iid",
+     "representative": 0.6,
+     "representative_n": 125
+    },
+    {
+     "block_reviewed": 0.571895,
+     "block_second_fix": 0.571895,
+     "card": 0.565359,
+     "card_and_representative_unchanged": true,
+     "config": "card-span/greedy-clique/cross-coin",
+     "predictor": "synthetic-event-constant",
+     "representative": 0.6,
+     "representative_n": 125
+    }
+   ]
+  }
+ },
+ "run": "35925ca8acf60690",
+ "script_sha256": "08bf00f6650ce7a4e08862860ffe17ba43e41448e4df855077acc01f820f6863"
+}

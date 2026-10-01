@@ -1,0 +1,69 @@
+{
+ "card_set": "blinded-ratio",
+ "cards": 306,
+ "families_leaking": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "funding-line",
+  "openint-level",
+  "p7-shape",
+  "repeat-chg",
+  "repeat-close",
+  "repeat-depth",
+  "repeat-openint",
+  "repeat-ratio",
+  "repeat-trades",
+  "shape-scale-free",
+  "taker-buy",
+  "trades-level",
+  "volatility-frozen",
+  "volume-level"
+ ],
+ "families_leaking_nn": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "repeat-depth",
+  "repeat-ratio",
+  "repeat-trades",
+  "shape-scale-free",
+  "trades-level",
+  "volume-level"
+ ],
+ "forced_families": [
+  "volatility-frozen",
+  "funding-line",
+  "p7-shape",
+  "repeat-chg"
+ ],
+ "input_fingerprint": "d91cfc33459a0270289fd7a8d939601fd3c230533273f726ad2d172bde0e8bc6",
+ "output_dir": "exam-prep/review-2/rerun/identity/run-d91cfc33459a0270",
+ "output_sha256": {
+  "hour-linkage-blinded-ratio.csv": "c0f739f843f0dedd636328d5febaa9adc0a81ffd1f410da9e75ac8e73eddbe33",
+  "identity-audit-blinded-ratio.csv": "bb8249b6ba2b1704cdf37d804b6b988e82b7d16feead102a0f79b40c31e0c7ed"
+ },
+ "run": "d91cfc33459a0270",
+ "script_sha256": "4dfd9fd12de458e499ceeea88d9f445d10f853fd21ccb22dc407185a5b767a91",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "t4_release_names": {
+  "cards_carrying_such_a_name": 13,
+  "cards_printing_a_release_name": 100,
+  "distinct_release_names": 30,
+  "names_on_exactly_one_calendar_day_of_this_set": [
+   "Census of Fatal Occupational Injuries",
+   "Employer Costs for Employee Compensation",
+   "Employer-Reported Workplace Injuries and Illnesses (Annual)",
+   "Labor Force Characteristics of Foreign-born Workers",
+   "Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial",
+   "Productivity and Costs by Industry: Wholesale Trade and Retail Trade",
+   "Productivity by State",
+   "Summer Youth Labor Force",
+   "Total Factor Productivity",
+   "Usual Weekly Earnings of Wage and Salary Workers",
+   "Work Experience of the Population (Annual)"
+  ]
+ },
+ "top_fraction": 0.01
+}

@@ -1,0 +1,6 @@
+reference: identity_map block boundary 0.558824 ; true card-span/component/any events 58, moments_sha256 7c900a10b379b85e
+1 forged start hours, collapse(card-span/component/any)      ACCEPTED config=card-span/component/any events=306 identity_partition=True boundary=0.558824 moments_sha256_matches_true=False
+1b one card's start hour moved, collapse(card-span/...)      ACCEPTED config=card-span/component/any events=59 identity_partition=False boundary=0.558824 moments_sha256_matches_true=False
+2 EventMap(identity events, 'card-span','component','any', true moments) REFUSED ValueError: the event map does not match what its own configuration card-span/component/any makes from its own moments
+3 (same as 1, built then passed)                             ACCEPTED config=card-span/component/any events=306 identity_partition=True boundary=0.558824 moments_sha256_matches_true=False
+4 subclass, identity events, .config overwritten after construction REFUSED ValueError: unknown definition 'none'
