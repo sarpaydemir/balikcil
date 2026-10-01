@@ -1,0 +1,53 @@
+self-check: {
+ "observation_moments_sha256_on_disk": "1a503bc064e17b2dd217f2b2a0c1274a60f40404e681911d2c21d5459a08a761",
+ "observation_moments_sha256_rebuilt": "1a503bc064e17b2dd217f2b2a0c1274a60f40404e681911d2c21d5459a08a761",
+ "observation_run_fingerprint_in_manifest": "80f0c0db548e826e751fdcfcdd5b8c6fe7bd5c74ad75c5b80a8433eebf5fc0dd",
+ "observation_run_fingerprint_rebuilt": "80f0c0db548e826e751fdcfcdd5b8c6fe7bd5c74ad75c5b80a8433eebf5fc0dd",
+ "identical": true
+}
+line 1   lifetime 364.958  large 20  calm 20  
+line 2   lifetime 364.958  large 20  calm 20  
+line 3   lifetime 364.958  large 20  calm 20  
+line 4   lifetime 364.958  large 20  calm 20  
+line 5   lifetime 364.958  large 20  calm 20  
+line 6   lifetime 364.958  large 20  calm 20  
+line 7   lifetime 364.958  large 20  calm 20  
+line 8   lifetime 364.958  large 20  calm 20  
+line 9   lifetime 364.958  large 20  calm 20  
+line 10  lifetime 364.958  large 20  calm 20  
+line 11  lifetime 364.958  large 20  calm 20  
+line 12  lifetime 364.958  large 20  calm 20  
+line 13  lifetime 364.958  large 20  calm 20  
+line 14  lifetime 127.333  large 7   calm 7   
+line 15  lifetime 364.958  large 20  calm 20  
+line 16  lifetime 364.958  large 20  calm 20  
+line 17  lifetime 311.625  large 17  calm 17  
+line 18  lifetime 147.375  large 8   calm 8   
+line 19  lifetime 137.833  large 7   calm 7   
+line 20  lifetime 6.583    large 0   calm 0   lifetime 6.58 days is under the 18-day rule, so TACTICS 2 gives 0 moments
+{
+ "run_number": "5768cc7a1c0c88a2",
+ "totals": {
+  "coins": 20,
+  "large": 339,
+  "calm": 339,
+  "moments": 678,
+  "coins_with_zero_moments": [
+   20
+  ]
+ },
+ "outputs": {
+  "exam/moments/moments.csv": {
+   "action": "identical, not rewritten",
+   "sha256": "8d5c42a4499f3dfa6f79417e51be1b5adb248a3a04e580c1dfddb5a238f7386a"
+  },
+  "exam/moments/lifetimes.json": {
+   "action": "identical, not rewritten",
+   "sha256": "59f4954ba0e0966dc586be83eabffad484bf4082aa637df619a747f43a6d7e21"
+  },
+  "exam/moments/pool-report.json": {
+   "action": "identical, not rewritten",
+   "sha256": "08e49c4348e88cb367ae2e8ca71dcadd79a7b6d4bb8c62c55b24520e942462e3"
+  }
+ }
+}

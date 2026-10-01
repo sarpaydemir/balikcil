@@ -1,0 +1,86 @@
+== 1 · rows and statuses
+JQ-N1-1            **ratified** — `decisions/2026-10-01-jq-n1-canteen-8/verdict.md`; not to be commissioned again; its files are unchanged
+JQ-N1-2            **ratified** — `decisions/2026-10-01-jq-n1-canteen-8/verdict.md`; not to be commissioned again; its files are unchanged
+JQ-N1-3            **ratified** — `decisions/2026-10-01-jq-n1-canteen-8/verdict.md`; not to be commissioned again; its files are unchanged
+JQ-N1-4            **ratified** — `decisions/2026-10-01-jq-n1-canteen-8/verdict.md`; not to be commissioned again; its files are unchanged
+JQ-CANTEEN-8       **ratified** — `decisions/2026-10-01-jq-n1-canteen-8/verdict.md`; not to be commissioned again; its files are unchanged
+JQ-R04-GATE        **ratified** — `decisions/2026-10-01-jq-r04-gate/verdict.md`; not to be commissioned again; its file is unchanged
+JQ-R04-CARRIES-a   **commissioned — being answered**; ruled fit by the sixth review; its file is unchanged since the sixth-fix run
+JQ-R04-CARRIES-b   **commissioned — being answered**; ruled fit by the sixth review; its file is unchanged since the sixth-fix run
+JQ-R04-DATE-a      **waiting — not to be commissioned until JQ-R04-CARRIES is ratified**; ruled fit by the sixth review; its files are unchanged since the sixth-fix run
+JQ-R04-DATE-b      **waiting — not to be commissioned until JQ-R04-CARRIES is ratified**; ruled fit by the sixth review; its files are unchanged since the sixth-fix run
+JQ-R04-DATE-c      **waiting — not to be commissioned until JQ-R04-CARRIES is ratified**; ruled fit by the sixth review; its files are unchanged since the sixth-fix run
+JQ-R04-CONTENT-a   **waiting — not to be commissioned until JQ-R04-CARRIES is ratified**; ruled fit by the sixth review; its files are unchanged since the sixth-fix run
+JQ-R04-CONTENT-b   **waiting — not to be commissioned until JQ-R04-CARRIES is ratified**; ruled fit by the sixth review; its files are unchanged since the sixth-fix run
+JQ-R04-CONTENT-c   **waiting — not to be commissioned until JQ-R04-CARRIES is ratified**; ruled fit by the sixth review; its files are unchanged since the sixth-fix run
+JQ-R04-CONTENT-d   **withdrawn** — not a juror question: ruled not fit by the sixth review, and judged by the seventh-fix run a question about a rule; put to the user as
+JQ-B1              **withdrawn** — not a juror question; the file is a statement for the coordinator
+
+== 2 · shared 7-word runs
+exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md: 2 shared runs
+    by mateo fifth-fix run 2026-10-01 system clock
+    by mateo fourth-fix run 2026-10-01 system clock
+exam-prep/fifth-fix/juror-questions/JQ-N1.md: 6 shared runs
+    by mateo data engineer second-fix run 2026-10-01
+    by mateo fifth-fix run 2026-10-01 system clock
+    by mateo fourth-fix run 2026-10-01 system clock
+    by mateo third-fix run 2026-10-01 system clock
+    data engineer second-fix run 2026-10-01 system clock
+    mateo data engineer second-fix run 2026-10-01 system
+exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md: 0 shared runs
+exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md: 1 shared runs
+    by mateo sixth-fix run 2026-10-01 system clock
+exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md: 5 shared runs
+    2026-10-01 system clock every earlier version is
+    by mateo data engineer second-fix run 2026-10-01
+    data engineer second-fix run 2026-10-01 system clock
+    mateo data engineer second-fix run 2026-10-01 system
+    system clock every earlier version is kept
+exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md: 5 shared runs
+    2026-10-01 system clock every earlier version is
+    by mateo data engineer second-fix run 2026-10-01
+    data engineer second-fix run 2026-10-01 system clock
+    mateo data engineer second-fix run 2026-10-01 system
+    system clock every earlier version is kept
+exam-prep/third-fix/juror-questions/JQ-B1.md: 0 shared runs
+exam-prep/third-fix/juror-questions/JQ-R04-GATE.md: 4 shared runs
+    by mateo data engineer second-fix run 2026-10-01
+    by mateo third-fix run 2026-10-01 system clock
+    data engineer second-fix run 2026-10-01 system clock
+    mateo data engineer second-fix run 2026-10-01 system
+exam-prep/USER-QUESTIONS.md: 0 shared runs
+
+== 3 · numbers (SHA-256 removed)
+line 10: 256
+line 13: 256
+line 16: 256
+line 18: 256
+line 20: 256
+line 29: 33–35
+line 33: 33
+line 37: 1 8
+line 38: 04 04 04
+line 41: 04
+line 42: 04 04
+line 43: 04
+line 44: 04
+line 45: 1
+line 46: 04
+line 47: 04
+line 49: 04
+line 54: 1-1 1 1 1-2 1-3 1-4 8 1 8 1 8
+line 55: 1-2 1 2 1-1 1-3 1-4 8 1 8 1 8
+line 56: 1-3 1 3 1-1 1-2 1-4 8 1 8 1 8
+line 57: 1-4 1 4 4 4 1-1 1-2 1-3 8 1 8 1 8
+line 58: 8 8 1-1 1-2 1-3 1-4 8 1 1 8
+line 59: 04 04 04 04
+line 60: 04 04 04 04
+line 61: 04 04 04 04
+line 62: 04 04 04 04 04 04 04 04 04 112–120 221–225 245–246 268–270 667–671 04 04
+line 63: 04 04 04 04 04 04 04 04 04 112–120 221–225 245–246 268–270 667–671 04 04
+line 64: 04 04 04 04 04 04 04 04 04 112–120 221–225 245–246 268–270 667–671 04 04
+line 65: 04 04 04 04 04 04 04 04 04 112–120 221–225 245–246 268–270 667–671 04 04
+line 66: 04 04 04 04 04 04 04 04 04 112–120 221–225 245–246 268–270 667–671 04 04
+line 67: 04 04 04 04 04 04 04 04 04 112–120 221–225 245–246 268–270 667–671 04 04
+line 68: 04 04 1
+line 69: 1 1

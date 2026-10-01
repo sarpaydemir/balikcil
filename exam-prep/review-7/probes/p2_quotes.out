@@ -1,0 +1,19 @@
+ok   RULES.md:41-41 in-source=True in-U-1=True :: In the exam the coin name and the date are hidden.
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the coin name
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the date and time
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the price itself (converted to a number starting from 100)
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the coin name inside announcements
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the Wikipedia number itself (given as a ratio to the coin's own averag
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the date in the release calendar
+ok   TACTICS.md:55-62 in-source=True in-U-1=True :: price, volume, trade count, taker buy/sell pressure
+ok   TACTICS.md:55-62 in-source=True in-U-1=True :: bitcoin and ethereum, over the same hours
+ok   RULES.md:51-52 in-source=True in-U-1=True :: The chance line is not invented. The answers are shuffled 1,000 times,
+ok   decisions/2026-10-01-jq-r04-gate/verdict.md:72-72 in-source=True in-U-1=True :: The gate fails if either the nearest-neighbour attack or the pair AUC 
+ok   exam-prep/third-fix/juror-questions/JQ-R04-GATE.md:64-66 in-source=True in-U-1=True :: every feature in the audit's current list, minus the families that mus
+ok   TACTICS.md:94-94 in-source=True in-U-1=True :: Then the canteen book freezes
+ok   RULES.md:3-4 in-source=True in-U-1=True :: These rules do not change. If one must change, the user is asked first
+ok   RULES.md:119-121 in-source=True in-U-1=True :: A juror decides procedure and definition only: never a trading rule, n
+ok   RULES.md:34-35 in-source=True in-U-1=True :: The rule is written first, the result is opened second. A rule is not 
+ok   TACTICS.md:55-62 in-source=True in-U-1=True :: What is on the card
+ok   TACTICS.md:101-107 in-source=True in-U-1=True :: the coin name
+18 checks, 0 failed

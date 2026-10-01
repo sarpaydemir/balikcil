@@ -1,0 +1,39 @@
+run 192e839d653fb54f  started 2026-10-01T23:49:38Z
+line 1   moment days 112  listed 614 zips
+line 2   moment days 113  listed 692 zips
+line 3   moment days 114  listed 853 zips
+line 4   moment days 113  listed 1367 zips
+line 5   moment days 113  listed 912 zips
+line 6   moment days 111  listed 1288 zips
+line 7   moment days 111  listed 631 zips
+line 8   moment days 117  listed 499 zips
+line 9   moment days 116  listed 400 zips
+line 10  moment days 111  listed 623 zips
+line 11  moment days 109  listed 1039 zips
+line 12  moment days 115  listed 884 zips
+line 13  moment days 109  listed 559 zips
+line 14  moment days 40   listed 1081 zips
+line 15  moment days 115  listed 657 zips
+line 16  moment days 109  listed 1055 zips
+line 17  moment days 89   listed 341 zips
+line 18  moment days 47   listed 178 zips
+line 19  moment days 42   listed 168 zips
+{
+ "files_to_fetch": 1904,
+ "bytes_to_fetch": 878465167,
+ "absent_from_archive": 2,
+ "listing_errors": 0,
+ "disk": {
+  "checked_at_utc": "2026-10-01T23:50:58Z",
+  "path": "exam/data",
+  "free_bytes": 12369047552,
+  "total_bytes": 39956590592,
+  "measured_download_bytes": 878465167,
+  "size_note": "not an estimate: byte sizes come from the archive's own listing",
+  "required_free_bytes_with_headroom": 2196162917,
+  "headroom_factor": 2.5,
+  "min_free_bytes": 524288000,
+  "headroom_source": "scripts/07_download_moment_data.py constants",
+  "fits": true
+ }
+}

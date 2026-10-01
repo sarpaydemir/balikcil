@@ -1,0 +1,527 @@
+{
+ "beside_tactics_6": {
+  "cards_calm_called_for": 200,
+  "cards_large_called_for": 200,
+  "pool_calm": 339,
+  "pool_calm_minus_called_for": 139,
+  "pool_large": 339,
+  "pool_large_minus_called_for": 139
+ },
+ "coin_list_sha256": "b92a2212c166dc61a6aed6f0533d4b9031924cb7f865d0687d748039c2a25f50",
+ "kline_zips_used": 230,
+ "measured_checks": {
+  "calm_pairs_inside_one_coin_closer_than_48h": 35,
+  "distinct_start_hours": {
+   "all": 614,
+   "calm": 333,
+   "large": 295
+  },
+  "shared_start_hours": {
+   "2025-09-19T08:00Z": [
+    "line 10 calm",
+    "line 6 calm"
+   ],
+   "2025-09-21T21:00Z": [
+    "line 12 large",
+    "line 13 calm"
+   ],
+   "2025-10-09T11:00Z": [
+    "line 12 large",
+    "line 4 large"
+   ],
+   "2025-10-09T22:00Z": [
+    "line 11 large",
+    "line 2 large",
+    "line 3 large"
+   ],
+   "2025-10-09T23:00Z": [
+    "line 1 large",
+    "line 14 large",
+    "line 6 large",
+    "line 8 large",
+    "line 9 large"
+   ],
+   "2025-10-10T02:00Z": [
+    "line 15 large",
+    "line 7 large"
+   ],
+   "2025-10-12T14:00Z": [
+    "line 16 large",
+    "line 3 large",
+    "line 5 large",
+    "line 6 large"
+   ],
+   "2025-10-29T18:00Z": [
+    "line 12 large",
+    "line 3 large"
+   ],
+   "2025-10-29T20:00Z": [
+    "line 16 large",
+    "line 6 large"
+   ],
+   "2025-10-31T15:00Z": [
+    "line 10 calm",
+    "line 5 calm"
+   ],
+   "2025-11-02T16:00Z": [
+    "line 17 large",
+    "line 3 large"
+   ],
+   "2025-11-06T18:00Z": [
+    "line 3 large",
+    "line 8 large"
+   ],
+   "2025-11-06T21:00Z": [
+    "line 11 large",
+    "line 6 large"
+   ],
+   "2025-11-20T12:00Z": [
+    "line 5 large",
+    "line 6 large"
+   ],
+   "2025-11-20T13:00Z": [
+    "line 11 large",
+    "line 16 large",
+    "line 3 large"
+   ],
+   "2025-11-27T12:00Z": [
+    "line 3 large",
+    "line 8 calm"
+   ],
+   "2025-12-02T09:00Z": [
+    "line 10 calm",
+    "line 5 large"
+   ],
+   "2025-12-14T17:00Z": [
+    "line 1 calm",
+    "line 7 large"
+   ],
+   "2026-01-01T22:00Z": [
+    "line 16 calm",
+    "line 3 large"
+   ],
+   "2026-01-09T09:00Z": [
+    "line 15 calm",
+    "line 2 calm"
+   ],
+   "2026-01-15T07:00Z": [
+    "line 10 large",
+    "line 9 large"
+   ],
+   "2026-01-30T19:00Z": [
+    "line 16 large",
+    "line 3 large",
+    "line 5 large",
+    "line 6 large",
+    "line 7 large"
+   ],
+   "2026-01-30T20:00Z": [
+    "line 11 large",
+    "line 12 large",
+    "line 8 large"
+   ],
+   "2026-02-04T21:00Z": [
+    "line 11 large",
+    "line 3 large",
+    "line 8 large"
+   ],
+   "2026-02-05T01:00Z": [
+    "line 10 large",
+    "line 12 large",
+    "line 16 large",
+    "line 5 large",
+    "line 6 large"
+   ],
+   "2026-02-08T08:00Z": [
+    "line 1 large",
+    "line 2 calm"
+   ],
+   "2026-02-11T11:00Z": [
+    "line 15 large",
+    "line 8 calm"
+   ],
+   "2026-02-24T22:00Z": [
+    "line 5 large",
+    "line 6 large"
+   ],
+   "2026-02-27T10:00Z": [
+    "line 6 large",
+    "line 9 calm"
+   ],
+   "2026-03-04T19:00Z": [
+    "line 10 calm",
+    "line 13 calm"
+   ],
+   "2026-03-21T19:00Z": [
+    "line 13 large",
+    "line 3 large"
+   ],
+   "2026-03-25T02:00Z": [
+    "line 11 large",
+    "line 5 large"
+   ],
+   "2026-04-01T15:00Z": [
+    "line 13 large",
+    "line 9 calm"
+   ],
+   "2026-04-03T22:00Z": [
+    "line 7 large",
+    "line 8 calm"
+   ],
+   "2026-04-13T00:00Z": [
+    "line 11 calm",
+    "line 17 large"
+   ],
+   "2026-04-15T20:00Z": [
+    "line 3 large",
+    "line 6 large"
+   ],
+   "2026-04-24T10:00Z": [
+    "line 16 large",
+    "line 8 calm"
+   ],
+   "2026-04-30T09:00Z": [
+    "line 13 large",
+    "line 19 large"
+   ],
+   "2026-05-05T13:00Z": [
+    "line 4 large",
+    "line 5 large"
+   ],
+   "2026-05-12T11:00Z": [
+    "line 15 calm",
+    "line 3 large"
+   ],
+   "2026-06-05T05:00Z": [
+    "line 18 large",
+    "line 6 large",
+    "line 8 large"
+   ],
+   "2026-06-10T10:00Z": [
+    "line 13 large",
+    "line 8 large"
+   ],
+   "2026-08-09T07:00Z": [
+    "line 19 calm",
+    "line 4 calm"
+   ],
+   "2026-08-18T17:00Z": [
+    "line 1 calm",
+    "line 17 calm"
+   ],
+   "2026-08-21T05:00Z": [
+    "line 12 large",
+    "line 16 large",
+    "line 6 large"
+   ],
+   "2026-08-22T05:00Z": [
+    "line 7 large",
+    "line 8 large"
+   ],
+   "2026-08-26T18:00Z": [
+    "line 10 large",
+    "line 4 calm"
+   ]
+  },
+  "start_hours_shared_by_more_than_one_coin": 47,
+  "start_hours_with_two_or_more_moments_of_one_coin": 0
+ },
+ "not_done_here": "No moment was chosen for a card. How the TACTICS 6 cards are drawn from this pool is not decided by this script.",
+ "per_coin_line": {
+  "1": {
+   "calm": 20,
+   "calm_eligible_hours": 6348,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "10": {
+   "calm": 20,
+   "calm_eligible_hours": 6289,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "11": {
+   "calm": 20,
+   "calm_eligible_hours": 6212,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "12": {
+   "calm": 20,
+   "calm_eligible_hours": 6204,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "13": {
+   "calm": 20,
+   "calm_eligible_hours": 6544,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "14": {
+   "calm": 7,
+   "calm_eligible_hours": 2100,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 3010,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 7,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-01-06T08:00Z",
+   "lifetime_days": 127.333,
+   "n_large_target": 7,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 3057
+  },
+  "15": {
+   "calm": 20,
+   "calm_eligible_hours": 6146,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "16": {
+   "calm": 20,
+   "calm_eligible_hours": 6148,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "17": {
+   "calm": 17,
+   "calm_eligible_hours": 5476,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 7433,
+   "first_traded_hour_utc": "2025-10-24T08:00Z",
+   "large": 17,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 311.625,
+   "n_large_target": 17,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 7480
+  },
+  "18": {
+   "calm": 8,
+   "calm_eligible_hours": 2518,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 3491,
+   "first_traded_hour_utc": "2026-04-06T14:00Z",
+   "large": 8,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 147.375,
+   "n_large_target": 8,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 3538
+  },
+  "19": {
+   "calm": 7,
+   "calm_eligible_hours": 2374,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 3262,
+   "first_traded_hour_utc": "2026-04-16T03:00Z",
+   "large": 7,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 137.833,
+   "n_large_target": 7,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 3309
+  },
+  "2": {
+   "calm": 20,
+   "calm_eligible_hours": 6327,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "20": {
+   "calm": 0,
+   "calm_eligible_hours": null,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": null,
+   "first_traded_hour_utc": "2026-08-25T09:00Z",
+   "large": 0,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 6.583,
+   "n_large_target": 0,
+   "reason_no_moments": "lifetime 6.58 days is under the 18-day rule, so TACTICS 2 gives 0 moments",
+   "traded_hours_in_period": 159
+  },
+  "3": {
+   "calm": 20,
+   "calm_eligible_hours": 6291,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "4": {
+   "calm": 20,
+   "calm_eligible_hours": 6293,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "5": {
+   "calm": 20,
+   "calm_eligible_hours": 6256,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "6": {
+   "calm": 20,
+   "calm_eligible_hours": 6286,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "7": {
+   "calm": 20,
+   "calm_eligible_hours": 6196,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "8": {
+   "calm": 20,
+   "calm_eligible_hours": 6110,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  },
+  "9": {
+   "calm": 20,
+   "calm_eligible_hours": 6226,
+   "calm_shortfall_reason": null,
+   "candidate_start_hours": 8713,
+   "first_traded_hour_utc": "2025-09-01T00:00Z",
+   "large": 20,
+   "large_shortfall_reason": null,
+   "last_traded_hour_utc": "2026-08-31T23:00Z",
+   "lifetime_days": 364.958,
+   "n_large_target": 20,
+   "reason_no_moments": null,
+   "traded_hours_in_period": 8760
+  }
+ },
+ "procedure": "scripts/06_find_moments.py find_for_symbol + load_hourly, unchanged",
+ "procedure_script_sha256": "c73447af580959f92915ca5ab291cf976afc23646ed746725397b627a6d924d0",
+ "run_fingerprint": "5768cc7a1c0c88a27efa9208af80eb87d477a7d2c363e7d3d7af63095d22ff26",
+ "run_number": "5768cc7a1c0c88a2",
+ "seed": 20260913,
+ "self_check_reproduces_observation_moments": true,
+ "totals": {
+  "calm": 339,
+  "coins": 20,
+  "coins_with_zero_moments": [
+   20
+  ],
+  "large": 339,
+  "moments": 678
+ }
+}

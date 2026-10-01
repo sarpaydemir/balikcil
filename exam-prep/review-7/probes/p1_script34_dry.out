@@ -1,0 +1,102 @@
+run 54f349416e0e76c1: 100 checks, 1 failed
+ok   S no file of the pre-run exam-prep snapshot is missing — 
+ok   S every pre-run exam-prep file is unchanged (index and three appended files aside) — 
+ok   S exam-prep/HANDED-FORWARD.md: pre-run bytes are its prefix — prefix 33483 bytes
+ok   S exam-prep/README.md: pre-run bytes are its prefix — prefix 6936 bytes
+ok   S exam-prep/VERDICT.md: pre-run bytes are its prefix — prefix 42122 bytes
+ok   S every non-exam_ script, RULES.md, TACTICS.md and both ratified verdicts unchanged — 
+FAIL N no new exam-prep file outside seventh-fix/ except USER-QUESTIONS.md — exam-prep/USER-QUESTIONS.md, exam-prep/review-7/criteria-written-before-ruling.md, exam-prep/review-7/probes/p1_script34_dry.out
+ok   N no new script except this one — scripts/34_seventh_fix_check.py
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md unchanged — 7532779b8142
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md unchanged — 963aeb9f92d6
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md unchanged — 95d05d46c8e4
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md unchanged — c053d8144941
+ok   V the index names five earlier versions with SHA-256 — 5 found
+ok   V exam-prep/seventh-fix/JUROR-QUESTIONS-as-of-sixth-fix.md has the SHA-256 the index gives — 27a575273904
+ok   V exam-prep/sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md has the SHA-256 the index gives — 2e09076f475d
+ok   V exam-prep/fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md has the SHA-256 the index gives — 90c51c9e60f8
+ok   V exam-prep/fourth-fix/JUROR-QUESTIONS-as-of-third-fix.md has the SHA-256 the index gives — c1d3dfdeab36
+ok   V exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md has the SHA-256 the index gives — 7020127c257b
+ok   V the sixth-fix index kept byte for byte — 27a575273904
+ok   I row JQ-N1-1 appears once — 
+ok   I row JQ-N1-2 appears once — 
+ok   I row JQ-N1-3 appears once — 
+ok   I row JQ-N1-4 appears once — 
+ok   I row JQ-CANTEEN-8 appears once — 
+ok   I row JQ-R04-GATE appears once — 
+ok   I row JQ-R04-CARRIES-a appears once — 
+ok   I row JQ-R04-CARRIES-b appears once — 
+ok   I row JQ-R04-DATE-a appears once — 
+ok   I row JQ-R04-DATE-b appears once — 
+ok   I row JQ-R04-DATE-c appears once — 
+ok   I row JQ-R04-CONTENT-a appears once — 
+ok   I row JQ-R04-CONTENT-b appears once — 
+ok   I row JQ-R04-CONTENT-c appears once — 
+ok   I row JQ-R04-CONTENT-d appears once — 
+ok   I row JQ-B1 appears once — 
+ok   I no row the list does not name — 
+ok   I row JQ-N1-1 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-N1-2 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-N1-3 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-N1-4 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-CANTEEN-8 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-R04-GATE status carries **ratified** + decisions/2026-10-01-jq-r04-gate/verdict.md — 
+ok   I row JQ-R04-CARRIES-a status carries being answered + ruled fit by the sixth review — 
+ok   I row JQ-R04-CARRIES-b status carries being answered + ruled fit by the sixth review — 
+ok   I row JQ-R04-DATE-a status carries **waiting + ruled fit by the sixth review — 
+ok   I row JQ-R04-DATE-b status carries **waiting + ruled fit by the sixth review — 
+ok   I row JQ-R04-DATE-c status carries **waiting + ruled fit by the sixth review — 
+ok   I row JQ-R04-CONTENT-a status carries **waiting + ruled fit by the sixth review — 
+ok   I row JQ-R04-CONTENT-b status carries **waiting + ruled fit by the sixth review — 
+ok   I row JQ-R04-CONTENT-c status carries **waiting + ruled fit by the sixth review — 
+ok   I row JQ-R04-CONTENT-d status carries **withdrawn** + exam-prep/USER-QUESTIONS.md — 
+ok   I row JQ-B1 status carries **withdrawn** — 
+ok   I row JQ-N1-1: file, group and reading list unchanged — 
+ok   I row JQ-N1-2: file, group and reading list unchanged — 
+ok   I row JQ-N1-3: file, group and reading list unchanged — 
+ok   I row JQ-N1-4: file, group and reading list unchanged — 
+ok   I row JQ-CANTEEN-8: file, group and reading list unchanged — 
+ok   I row JQ-R04-GATE: file, group and reading list unchanged — 
+ok   I row JQ-R04-CARRIES-a: file, group and reading list unchanged — 
+ok   I row JQ-R04-CARRIES-b: file, group and reading list unchanged — 
+ok   I row JQ-R04-DATE-a: file, group and reading list unchanged — 
+ok   I row JQ-R04-DATE-b: file, group and reading list unchanged — 
+ok   I row JQ-R04-DATE-c: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-a: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-b: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-c: file, group and reading list unchanged — 
+ok   I row JQ-B1: file, group and reading list unchanged — 
+ok   I the index carries no number the sixth-fix index did not (SHA-256 values aside) — 
+ok   I no option or question sentence of any juror file in the index — 62 sentences tested; 
+ok   U quotation in RULES.md 41–41 and in USER-QUESTIONS.md: In the exam the coin name and … — source True; user file True; RULES.md line
+ok   U quotation in TACTICS.md 102–102 and in USER-QUESTIONS.md: the coin name… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 103–103 and in USER-QUESTIONS.md: the date and time… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 104–104 and in USER-QUESTIONS.md: the price itself (converted to… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 105–105 and in USER-QUESTIONS.md: the coin name inside announcem… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 106–106 and in USER-QUESTIONS.md: the Wikipedia number itself (g… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 107–107 and in USER-QUESTIONS.md: the date in the release calend… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 56–56 and in USER-QUESTIONS.md: price, volume, trade count, ta… — source True; user file True; TACTICS.md line
+ok   U quotation in TACTICS.md 61–61 and in USER-QUESTIONS.md: bitcoin and ethereum, over the… — source True; user file True; TACTICS.md line
+ok   U quotation in RULES.md 51–52 and in USER-QUESTIONS.md: The chance line is not invente… — source True; user file True; RULES.md line
+ok   U quotation in decisions/2026-10-01-jq-r04-gate/verdict.md 72–72 and in USER-QUESTIONS.md: The gate fails if either the n… — source True; user file True; verdict.md line
+ok   U quotation in exam-prep/third-fix/juror-questions/JQ-R04-GATE.md 64–66 and in USER-QUESTIONS.md: every feature in the audit's c… — source True; user file True; JQ-R04-GATE.md line
+ok   U quotation in RULES.md 3–4 and in USER-QUESTIONS.md: These rules do not change. If … — source True; user file True; RULES.md line
+ok   U quotation in RULES.md 119–121 and in USER-QUESTIONS.md: A juror decides procedure and … — source True; user file True; RULES.md line
+ok   U quotation in RULES.md 34–35 and in USER-QUESTIONS.md: The rule is written first, the… — source True; user file True; RULES.md line
+ok   U quotation in TACTICS.md 94–94 and in USER-QUESTIONS.md: Then the canteen book freezes… — source True; user file True; TACTICS.md line
+ok   U cited range TACTICS.md 55–62 holds 'price, volume, trade count' — 
+ok   U cited range TACTICS.md 101–107 holds 'What is hidden' — 
+ok   U every number in USER-QUESTIONS.md is on the declared list — 
+ok   U no decimal figure in USER-QUESTIONS.md — 
+ok   U identifiers in USER-QUESTIONS.md limited to the withdrawn row and the GATE file path — JQ-R04-CONTENT-d, JQ-R04-GATE
+ok   U no recommending word 'recommend' (outside the no-recommendation notice) — 2 hits
+ok   U no recommending word 'should choose' (outside the no-recommendation notice) — 0 hits
+ok   U no recommending word 'we suggest' (outside the no-recommendation notice) — 0 hits
+ok   U no recommending word 'better answer' (outside the no-recommendation notice) — 0 hits
+ok   U audit SHA-256 is the one HANDED-FORWARD names — cfc4bdcb6f1e
+ok   U FORCED_FAMILIES is the four families the user file and HANDED-FORWARD name — ('volatility-frozen', 'funding-line', 'p7-shape', 'repeat-chg')
+ok   U every family prefix of the audit maps to a field TACTICS 3 lists (26 prefixes) — 
+ok   U every feature key prefix written in card_features() is covered by a family prefix — 
+ok   U TACTICS.md line 63 is the Wikipedia line (for the mapping) — - number of people viewing the page on W
+ok   U the four forced groups are described in USER-QUESTIONS.md — 
+--dry: nothing written
