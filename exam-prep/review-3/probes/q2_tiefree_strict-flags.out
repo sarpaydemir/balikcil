@@ -1,0 +1,25 @@
+family | features | tied cards float | tied cards exact | tie sets equal | tie-free | line (audit shuffles) | beats | share of 2,000 further shuffles >= observed
+price-level | 1 | 20 | 20 | True | 0.1471 | 0.1797 | no | 0.1270
+volatility-frozen | 3 | 0 | 0 | True | 0.1601 | 0.1765 | no | 0.0590
+volume-level | 1 | 306 | 306 | True | 0.1186 | 0.1285 | no | 1.0000
+trades-level | 1 | 300 | 300 | True | 0.1541 | 0.1403 | YES | 0.0000
+openint-level | 1 | 303 | 303 | True | 0.1420 | 0.1310 | YES | 0.0000
+depth-level | 2 | 305 | 305 | True | 0.1471 | 0.1313 | YES | 0.0000
+ratio-level | 3 | 167 | 167 | True | 0.1345 | 0.1648 | no | 0.2030
+taker-buy | 1 | 304 | 304 | True | 0.1198 | 0.1311 | no | 0.4750
+funding-line | 3 | 305 | 305 | True | 0.1519 | 0.1248 | YES | 0.0000
+wikipedia-presence | 0 | no features
+p7-shape | 2 | 0 | 0 | True | 0.1503 | 0.1797 | no | 0.1215
+btc-eth | 0 | no features
+shape-scale-free | 13 | 0 | 0 | True | 0.1471 | 0.1732 | no | 0.1185
+repeat-close | 2 | 293 | 293 | True | 0.1408 | 0.1387 | YES | 0.0065
+repeat-chg | 2 | 301 | 301 | True | 0.1429 | 0.1345 | YES | 0.0015
+repeat-volume | 2 | 304 | 304 | True | 0.1297 | 0.1298 | no | 0.0090
+repeat-trades | 2 | 231 | 236 | False | 0.2134 | 0.1619 | YES | 0.0000
+repeat-takerbuy | 2 | 304 | 304 | False | 0.1212 | 0.1327 | no | 0.3630
+repeat-openint | 2 | 289 | 289 | False | 0.2028 | 0.1427 | YES | 0.0000
+repeat-ratio | 6 | 4 | 5 | False | 0.1863 | 0.1765 | YES | 0.0035
+repeat-depth | 4 | 273 | 273 | True | 0.2147 | 0.1423 | YES | 0.0000
+repeat-btceth | 0 | no features
+granularity-close | 1 | 304 | 304 | False | 0.1948 | 0.1337 | YES | 0.0000
+ALL-removable | 44 | 0 | 0 | True | 0.4085 | 0.1699 | YES | 0.0000

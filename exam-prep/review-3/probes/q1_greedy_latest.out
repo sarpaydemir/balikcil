@@ -1,0 +1,23 @@
+== (A) observation moments, keep earliest: engine vs literal
+move-window any engine 161 literal 161 events in one only 0
+move-window cross-coin engine 168 literal 168 events in one only 0
+card-span any engine 116 literal 116 events in one only 0
+card-span cross-coin engine 125 literal 125 events in one only 0
+== (B) observation moments, keep latest: G-5 loop vs literal
+move-window G-5 latest 168 literal latest 168 events in one only 8 | G-5 latest vs earliest in one only 12 | literal latest vs earliest in one only 4
+card-span G-5 latest 125 literal latest 124 events in one only 13 | G-5 latest vs earliest in one only 30 | literal latest vs earliest in one only 21
+== (B2) card-span, keep latest: events in one partition only (id, coin, start hour index)
+G-5 only: [('C008', 'AVGO', 7287), ('C090', 'FART', 7265), ('C162', 'KOMA', 7308)]
+G-5 only: [('C021', 'BCHU', 1430), ('C101', 'FHEU', 1424)]
+G-5 only: [('C051', 'BCHU', 7908)]
+literal only: [('C008', 'AVGO', 7287), ('C090', 'FART', 7265), ('C161', 'KOMA', 7293)]
+literal only: [('C021', 'BCHU', 1430), ('C101', 'FHEU', 1424), ('C225', 'NILU', 1397)]
+literal only: [('C051', 'BCHU', 7908), ('C168', 'KOMA', 7938), ('C262', 'NOKU', 7937)]
+== (C) random moment sets, keep earliest: engine vs literal (200 sets x 2 definitions x 2 scopes)
+('card-span', 'any') sets where engine != literal: 0 of 200
+('card-span', 'cross-coin') sets where engine != literal: 0 of 200
+('move-window', 'any') sets where engine != literal: 0 of 200
+('move-window', 'cross-coin') sets where engine != literal: 0 of 200
+== (D) random moment sets, keep latest: G-5 vs literal
+card-span sets where G-5 latest != literal latest: 172 of 200
+move-window sets where G-5 latest != literal latest: 156 of 200

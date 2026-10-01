@@ -1,0 +1,11 @@
+pairs.csv rows 495
+('calm+calm', 'diff') card spans 114 before windows 53
+('calm+calm', 'same') card spans 21 before windows 10
+('calm+large', 'diff') card spans 206 before windows 97
+('large+large', 'diff') card spans 154 before windows 101
+from card start hours:
+('calm+calm', 'diff') card spans 114 before windows 53
+('calm+calm', 'same') card spans 21 before windows 10
+('calm+large', 'diff') card spans 206 before windows 97
+('large+large', 'diff') card spans 154 before windows 101
+C010-C011 start gap h 14.0 ('AVGOUSDT', 'calm') ('AVGOUSDT', 'calm')

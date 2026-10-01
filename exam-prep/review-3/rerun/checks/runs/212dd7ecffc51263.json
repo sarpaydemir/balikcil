@@ -1,0 +1,483 @@
+{
+ "input_fingerprint": "212dd7ecffc512639e2794fe88045a4386ec830787435dadfc4cc1d4dbfcb1b4",
+ "inputs": [
+  [
+   "canteen/2026-09-19-sofia.md",
+   "650daccc526353c4418509f98a6147fd678de5808d139cfc9273dcaef92662de"
+  ],
+  [
+   "data/draw/draw-manifest.md",
+   "b4fc76a6436a3ce9bc76a9598d0aec2e8920b54f046badd58a83ac76230e8e7c"
+  ],
+  [
+   "data/draw/observation-coins.txt",
+   "336f2cf885319ae0fcfe2c3020c7ae20f7b7dff1a826230d16b8bcd7c4b81d08"
+  ],
+  [
+   "data/moments/moment-manifest.md",
+   "b50937ab7655d5d61be5c21f8e9637997bf5e4132c6b00fb039a65e9b866c0b4"
+  ],
+  [
+   "data/overlap/pairs.csv",
+   "ff77674cf36644e333afdac98e2c6d7e4f83961e34745d7e329259b06baf301d"
+  ],
+  [
+   "exam-prep/collapse/run-756cf4ea156d92c3/shuffle-calibration.csv",
+   "0c4b27f9556086644ff5ad9137322a06854f64b78daf9bf1babebd73115b5cd7"
+  ]
+ ],
+ "results": {
+  "G-1": {
+   "attempts": [
+    {
+     "attempt": "true moments, card-span/component/any, key of the true moments",
+     "boundary": 0.558824,
+     "config": "card-span/component/any",
+     "events": 58,
+     "key_check": "matched",
+     "result": "accepted"
+    },
+    {
+     "attempt": "identity_map() of the true moments, key of the true moments",
+     "boundary": 0.558824,
+     "config": "none/none/none",
+     "events": 306,
+     "key_check": "matched",
+     "result": "accepted"
+    },
+    {
+     "attempt": "REVIEW-2 p4 attempt 1: start hours moved 1,000 h apart, key of the true moments",
+     "detail": "the event map was not made from the moments of the answer key: its moments fingerprint c67e773424f913ba is not the key's '7c900a10b379b85e'",
+     "result": "ValueError"
+    },
+    {
+     "attempt": "REVIEW-2 p4 attempt 1b: one card's start hour moved, key of the true moments",
+     "detail": "the event map was not made from the moments of the answer key: its moments fingerprint a5ef644c7d4cbfc4 is not the key's '7c900a10b379b85e'",
+     "result": "ValueError"
+    },
+    {
+     "attempt": "key omitted",
+     "detail": "chance_line() missing 1 required keyword-only argument: 'key_moments_sha256'",
+     "result": "TypeError"
+    },
+    {
+     "attempt": "key given as None",
+     "detail": "the event map was not made from the moments of the answer key: its moments fingerprint 7c900a10b379b85e is not the key's 'None'",
+     "result": "ValueError"
+    },
+    {
+     "attempt": "LIMIT: forged map passed with its OWN moments fingerprint (what a judge who does not read the key could do)",
+     "boundary": 0.571895,
+     "config": "card-span/component/any",
+     "events": 298,
+     "key_check": "matched",
+     "result": "accepted"
+    }
+   ],
+   "key_moments_sha256_true": "7c900a10b379b85edb0eed000d698997cdc87e4733f7f3da25c9ed3080eb14f6"
+  },
+  "G-2": {
+   "card_level_exact_1pct": 0.565359,
+   "card_level_n": 306,
+   "card_level_reported_2_5pct": 0.558824,
+   "card_level_reported_97_5pct": 0.571895,
+   "p_two_lines_apart_by_steps": {
+    "1": 0.5155,
+    "2": 0.0582,
+    "3": 0.0018,
+    "4": 0.0
+   },
+   "rows": [
+    {
+     "block": {
+      "synthetic-event-constant": 0.558824,
+      "synthetic-iid": 0.558824
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.571895,
+      "synthetic-iid": 0.571895
+     },
+     "config": "none/none/none",
+     "n": 306,
+     "reported_stat_2_5pct": 0.558824,
+     "reported_stat_97_5pct": 0.571895,
+     "representative_exact_1pct": 0.565359,
+     "representative_reported": 0.565359
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.558824,
+      "synthetic-iid": 0.552288
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.565359,
+      "synthetic-iid": 0.571895
+     },
+     "config": "start-hour/component/any",
+     "n": 289,
+     "reported_stat_2_5pct": 0.560554,
+     "reported_stat_97_5pct": 0.574394,
+     "representative_exact_1pct": 0.567474,
+     "representative_reported": 0.574394
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.558824,
+      "synthetic-iid": 0.552288
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.565359,
+      "synthetic-iid": 0.571895
+     },
+     "config": "start-hour/component/cross-coin",
+     "n": 289,
+     "reported_stat_2_5pct": 0.560554,
+     "reported_stat_97_5pct": 0.574394,
+     "representative_exact_1pct": 0.567474,
+     "representative_reported": 0.574394
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.594771,
+      "synthetic-iid": 0.565359
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.562092,
+      "synthetic-iid": 0.571895
+     },
+     "config": "move-window/component/any",
+     "n": 131,
+     "reported_stat_2_5pct": 0.587786,
+     "reported_stat_97_5pct": 0.618321,
+     "representative_exact_1pct": 0.603053,
+     "representative_reported": 0.603053
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.598039,
+      "synthetic-iid": 0.565359
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.565359,
+      "synthetic-iid": 0.571895
+     },
+     "config": "move-window/component/cross-coin",
+     "n": 136,
+     "reported_stat_2_5pct": 0.588235,
+     "reported_stat_97_5pct": 0.617647,
+     "representative_exact_1pct": 0.602941,
+     "representative_reported": 0.588235
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.598039,
+      "synthetic-iid": 0.565359
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.558824,
+      "synthetic-iid": 0.571895
+     },
+     "config": "move-window/greedy-clique/any",
+     "n": 161,
+     "reported_stat_2_5pct": 0.57764,
+     "reported_stat_97_5pct": 0.602484,
+     "representative_exact_1pct": 0.590062,
+     "representative_reported": 0.590062
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.575163,
+      "synthetic-iid": 0.558824
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.562092,
+      "synthetic-iid": 0.571895
+     },
+     "config": "move-window/greedy-clique/cross-coin",
+     "n": 168,
+     "reported_stat_2_5pct": 0.577381,
+     "reported_stat_97_5pct": 0.60119,
+     "representative_exact_1pct": 0.589286,
+     "representative_reported": 0.589286
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.562092,
+      "synthetic-iid": 0.558824
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.568627,
+      "synthetic-iid": 0.571895
+     },
+     "config": "card-span/component/any",
+     "n": 58,
+     "reported_stat_2_5pct": 0.655172,
+     "reported_stat_97_5pct": 0.655172,
+     "representative_exact_1pct": 0.655172,
+     "representative_reported": 0.655172
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.552288,
+      "synthetic-iid": 0.558824
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.565359,
+      "synthetic-iid": 0.571895
+     },
+     "config": "card-span/component/cross-coin",
+     "n": 62,
+     "reported_stat_2_5pct": 0.629032,
+     "reported_stat_97_5pct": 0.66129,
+     "representative_exact_1pct": 0.66129,
+     "representative_reported": 0.66129
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.601307,
+      "synthetic-iid": 0.552288
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.562092,
+      "synthetic-iid": 0.571895
+     },
+     "config": "card-span/greedy-clique/any",
+     "n": 116,
+     "reported_stat_2_5pct": 0.594828,
+     "reported_stat_97_5pct": 0.62931,
+     "representative_exact_1pct": 0.612069,
+     "representative_reported": 0.612069
+    },
+    {
+     "block": {
+      "synthetic-event-constant": 0.571895,
+      "synthetic-iid": 0.545752
+     },
+     "card_level": {
+      "synthetic-event-constant": 0.565359,
+      "synthetic-iid": 0.571895
+     },
+     "config": "card-span/greedy-clique/cross-coin",
+     "n": 125,
+     "reported_stat_2_5pct": 0.6,
+     "reported_stat_97_5pct": 0.616,
+     "representative_exact_1pct": 0.6,
+     "representative_reported": 0.6
+    }
+   ],
+   "support_step": 0.006536
+  },
+  "G-3": {
+   "before_window": {
+    "calm+calm \u00b7 different coins": 53,
+    "calm+calm \u00b7 same coin": 10,
+    "calm+large \u00b7 different coins": 97,
+    "large+large \u00b7 different coins": 101
+   },
+   "card_span": {
+    "calm+calm \u00b7 different coins": 114,
+    "calm+calm \u00b7 same coin": 21,
+    "calm+large \u00b7 different coins": 206,
+    "large+large \u00b7 different coins": 154
+   },
+   "moment_manifest_consecutive_calm_pairs_under_48h": 20,
+   "pairs": 495,
+   "same_coin_pairs": [
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C010/C011",
+     "shared_hours": 34,
+     "start_gap_hours": 14
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C039/C040",
+     "shared_hours": 28,
+     "start_gap_hours": 20
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C040/C041",
+     "shared_hours": 4,
+     "start_gap_hours": 44
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C050/C051",
+     "shared_hours": 41,
+     "start_gap_hours": 7
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C050/C052",
+     "shared_hours": 10,
+     "start_gap_hours": 38
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C051/C052",
+     "shared_hours": 17,
+     "start_gap_hours": 31
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C071/C072",
+     "shared_hours": 20,
+     "start_gap_hours": 28
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C079/C080",
+     "shared_hours": 12,
+     "start_gap_hours": 36
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C084/C085",
+     "shared_hours": 15,
+     "start_gap_hours": 33
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C092/C093",
+     "shared_hours": 44,
+     "start_gap_hours": 4
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C161/C162",
+     "shared_hours": 33,
+     "start_gap_hours": 15
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C162/C163",
+     "shared_hours": 5,
+     "start_gap_hours": 43
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C163/C164",
+     "shared_hours": 15,
+     "start_gap_hours": 33
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C176/C177",
+     "shared_hours": 45,
+     "start_gap_hours": 3
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C204/C205",
+     "shared_hours": 3,
+     "start_gap_hours": 45
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C205/C206",
+     "shared_hours": 13,
+     "start_gap_hours": 35
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C210/C211",
+     "shared_hours": 37,
+     "start_gap_hours": 11
+    },
+    {
+     "before_windows_share_an_hour": false,
+     "kinds": "calm+calm",
+     "pair": "C224/C225",
+     "shared_hours": 15,
+     "start_gap_hours": 33
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C291/C292",
+     "shared_hours": 33,
+     "start_gap_hours": 15
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C293/C294",
+     "shared_hours": 30,
+     "start_gap_hours": 18
+    },
+    {
+     "before_windows_share_an_hour": true,
+     "kinds": "calm+calm",
+     "pair": "C297/C298",
+     "shared_hours": 45,
+     "start_gap_hours": 3
+    }
+   ]
+  },
+  "G-4": {
+   "book_line_187": "Trigger  : the contract is AVGOUSDT or NOKUSDT.",
+   "contracts_named_by_trigger": [
+    "AVGOUSDT",
+    "NOKUSDT"
+   ],
+   "draw_manifest_disjoint_true": true,
+   "draw_manifest_observation_x_exam_overlap_empty": true,
+   "named_contracts_in_observation_list": {
+    "AVGOUSDT": true,
+    "NOKUSDT": true
+   },
+   "observation_coins": [
+    "BCHUSDT",
+    "ZROUSDT",
+    "FARTCOINUSDT",
+    "FHEUSDT",
+    "NEWTUSDT",
+    "NILUSDT",
+    "OMNIUSDT",
+    "KOMAUSDT",
+    "AVGOUSDT",
+    "NOKUSDT"
+   ]
+  },
+  "G-5": [
+   {
+    "copy_equals_engine": true,
+    "definition": "move-window",
+    "events_holding_both_kinds_earliest": 50,
+    "events_holding_both_kinds_latest": 50,
+    "events_in_one_partition_only": 12,
+    "events_keep_earliest": 168,
+    "events_keep_latest": 168
+   },
+   {
+    "copy_equals_engine": true,
+    "definition": "card-span",
+    "events_holding_both_kinds_earliest": 60,
+    "events_holding_both_kinds_latest": 60,
+    "events_in_one_partition_only": 30,
+    "events_keep_earliest": 125,
+    "events_keep_latest": 125
+   }
+  ]
+ },
+ "run": "212dd7ecffc51263",
+ "script_sha256": "b68ef1be773e9829d9e803e7420d722c1cf3836a1ef5a674cb6df64db36aa796"
+}

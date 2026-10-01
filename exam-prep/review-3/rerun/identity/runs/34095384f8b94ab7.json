@@ -1,0 +1,84 @@
+{
+ "card_set": "blinded-strict-flags-unrounded",
+ "cards": 306,
+ "families_leaking": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "funding-line",
+  "granularity-close",
+  "p7-shape",
+  "ratio-level",
+  "repeat-chg",
+  "repeat-close",
+  "repeat-openint",
+  "repeat-ratio",
+  "shape-scale-free",
+  "volatility-frozen"
+ ],
+ "families_leaking_nn": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable"
+ ],
+ "families_leaking_nn_tie_free": [
+  "ALL",
+  "ALL-except-frozen-volatility",
+  "ALL-removable",
+  "funding-line",
+  "granularity-close",
+  "repeat-chg",
+  "repeat-close"
+ ],
+ "forced_families": [
+  "volatility-frozen",
+  "funding-line",
+  "p7-shape",
+  "repeat-chg"
+ ],
+ "input_fingerprint": "34095384f8b94ab764ac0c1ee0f2ce8125566e046becb0b3362235a5d33681ea",
+ "output_dir": "exam-prep/review-3/rerun/identity/run-34095384f8b94ab7",
+ "output_sha256": {
+  "hour-linkage-blinded-strict-flags-unrounded.csv": "0b80b6d6460c1eb65284e490173e000cb05e5b21b3f4220e39faeb8a54f8ed4f",
+  "identity-audit-blinded-strict-flags-unrounded.csv": "405d07d8d055270f9bd1c767e6f75a1ac42be10f96351b81fc0ec3c2fccf4553"
+ },
+ "run": "34095384f8b94ab7",
+ "script_sha256": "4a248f78c78376c3b58ce7b02bc20af2c035e8089529449d303c70061164f4da",
+ "seed": 20260913,
+ "shuffles": 1000,
+ "t4_release_names": {
+  "cards_carrying_such_a_name": 13,
+  "cards_carrying_such_a_name_by_release_day": 18,
+  "cards_printing_a_release_name": 100,
+  "distinct_release_names": 30,
+  "names_on_exactly_one_calendar_day_of_this_set": [
+   "Census of Fatal Occupational Injuries",
+   "Employer Costs for Employee Compensation",
+   "Employer-Reported Workplace Injuries and Illnesses (Annual)",
+   "Labor Force Characteristics of Foreign-born Workers",
+   "Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial",
+   "Productivity and Costs by Industry: Wholesale Trade and Retail Trade",
+   "Productivity by State",
+   "Summer Youth Labor Force",
+   "Total Factor Productivity",
+   "Usual Weekly Earnings of Wage and Salary Workers",
+   "Work Experience of the Population (Annual)"
+  ],
+  "names_on_exactly_one_release_day_of_this_set": [
+   "American Time Use Survey",
+   "Census of Fatal Occupational Injuries",
+   "Employer Costs for Employee Compensation",
+   "Employer-Reported Workplace Injuries and Illnesses (Annual)",
+   "Labor Force Characteristics of Foreign-born Workers",
+   "Labor Market Experience, Education, Partner Status, and Health for those Born YYYY-YYYY for Biennial",
+   "People with Health Conditions or Difficulties that Limit Work",
+   "Productivity and Costs by Industry: Wholesale Trade and Retail Trade",
+   "Productivity by State",
+   "Summer Youth Labor Force",
+   "Total Factor Productivity",
+   "Usual Weekly Earnings of Wage and Salary Workers",
+   "Work Experience of the Population (Annual)"
+  ]
+ },
+ "top_fraction": 0.01
+}

@@ -1,0 +1,7 @@
+0 true map, true key                                         ACCEPTED  events 58 boundary 0.500000 key_check matched
+1 one coin changed, true key                                 refused   ValueError: the event map was not made from the moments of the answer key: its moments fingerprint 5e4
+2 extra moment, true key                                     refused   ValueError: the event map was not made from the moments of the answer key: its moments fingerprint 0ec
+3 forged hour, instance method patched to return true key    ACCEPTED  events 59 boundary 0.500000 key_check matched
+4 forged hour, subclass overriding moments_sha256()          ACCEPTED  events 59 boundary 0.500000 key_check matched
+5 forged hour, .moments overwritten with the true tuple      refused   ValueError: the event map does not match what its own configuration card-span/component/any makes from
+true map events 58 forged map events 59

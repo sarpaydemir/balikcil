@@ -1,0 +1,46 @@
+start 2026-10-01T20:47:36Z
+free bytes 12415131648
+e59cecb7c8e455f5cd8625130b962ba343bc168f53699667e5ac132ddbed2fe6  scripts/15_event_collapse.py
+4a248f78c78376c3b58ce7b02bc20af2c035e8089529449d303c70061164f4da  scripts/16_identity_audit.py
+a37bd20fc4b0e1c2ddfb89a10caec11529363c06fb2d19550f95f41471379548  scripts/17_blind_cards.py
+9db9f7b06cb773fe269603882576f01a89af8ac092ed01773cbc63cbf4acb429  scripts/18_residual_diagnostic.py
+b68ef1be773e9829d9e803e7420d722c1cf3836a1ef5a674cb6df64db36aa796  scripts/26_third_fix_checks.py
+e35c9f497c3d4143d6bff74dce6f0315a8648fffec14e5a915e72098f2169505  scripts/27_gate_sensitivity.py
+3bd79f48b73cf2e2dca50587d23925f138f40d9c3cc2d2b5ba4e305828e4c9fe  scripts/28_juror_file_check.py
+96b0eb01c502a40b4e76c864681763206ba627b268eedb7eb19984f81d9b928e  scripts/lab_cards.py
+run bec532fa008e0e01: 306 moments, 11 configurations -> exam-prep/review-3/rerun/collapse/run-bec532fa008e0e01
+collapse done 2026-10-01T20:48:36Z
+run f8b6f4075510ae05: 306 blinded cards written to exam-prep/review-3/rerun/blind/strict-flags-unrounded/cards
+run ce322d8f4661854b: 306 blinded cards written to exam-prep/review-3/rerun/blind/strict-flags/cards
+run 937c16e58486cef4: 306 blinded cards written to exam-prep/review-3/rerun/blind/strict/cards
+run 4f96f196a7bbec91: 306 blinded cards written to exam-prep/review-3/rerun/blind/rank/cards
+run 3a4ed291699a7b05: 306 blinded cards written to exam-prep/review-3/rerun/blind/ratio/cards
+run 2a53d1de158a2b2c: 306 blinded cards written to exam-prep/review-3/rerun/blind/strict-flags-k1/cards
+blinding done 2026-10-01T20:48:44Z
+run 4858581e2eb08704: 306 cards, 26 families
+run e05144718b909704: 306 cards, 26 families
+audit strict-flags done 2026-10-01T20:51:50Z
+run 12b07f79e74f0be7: 306 cards, 26 families
+audit ratio done 2026-10-01T20:53:03Z
+run 96f1d17e27b8afaf: 306 cards, 26 families
+audit rank done 2026-10-01T20:54:23Z
+run 1f2ae3cf3a5b2044: 306 cards, 26 families
+audit strict done 2026-10-01T20:56:03Z
+run ded6a9caaf77d910: 306 cards, 26 families
+run 34095384f8b94ab7: 306 cards, 26 families
+audits done 2026-10-01T20:59:25Z
+run 03bf5fc1560d1e33
+run 7b187671811b1396
+run 7dd6bf1f73244a4f
+residual done 2026-10-01T20:59:30Z
+run 212dd7ecffc51263 written
+Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+  File "/home/user/balikcil/scripts/28_juror_file_check.py", line 128, in main
+    import lab_cards  # noqa
+    ^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'lab_cards'
+run 7f6cd821a957440e written
+end 2026-10-01T21:00:08Z
+run bbb740248b0c8717: 61 checks, 0 failed
+28 done 2026-10-01T21:11:13Z

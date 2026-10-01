@@ -1,0 +1,6 @@
+family | features | tied cards float | tied cards exact | tie sets equal | tie-free | line (audit shuffles) | beats | share of 2,000 further shuffles >= observed
+trades-level | 1 | 300 | 300 | True | 0.1541 | 0.1403 | YES | 0.0000
+repeat-close | 2 | 293 | 293 | True | 0.1510 | 0.1401 | YES | 0.0005
+repeat-trades | 2 | 231 | 236 | False | 0.2134 | 0.1619 | YES | 0.0000
+granularity-close | 1 | 256 | 257 | False | 0.2525 | 0.1567 | YES | 0.0000
+ALL-removable | 44 | 0 | 0 | True | 0.4346 | 0.1765 | YES | 0.0000
