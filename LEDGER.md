@@ -5585,3 +5585,47 @@ corrects" adds mild pressure. Steer twenty-three, recorded.
 `deb4611a6a35cb1b748b982eb48f24a96662925891b2851cace22a3af35ed150`): fit or not fit per row, only for what the fifth run
 changed; any contradiction with the ratified gate verdict; the gap; the reading
 lists; the fifth run's disagreements.
+
+`2026-10-01 22:50 UTC` · **review 5 returned · the second jury sits · sixth fix
+alongside** · Review 5: `data-engineer`, 179,753 tokens, 51 tool uses, 11
+minutes, instruction `instructions/2026-10-01-2240-data-engineer-exam-prep-review-5.md`.
+`exam-prep/REVIEW-5.md` `e3e680bba792afe7efe75ce505508348799d947e4fd71a8a9407acfe92ae2658`.
+Criteria written before ruling. The fifth run's builder reproduced all four juror
+files byte for byte; all 16 entries of its fingerprint list match.
+
+**Rulings:** all five rows of the `JQ-N1` group with `JQ-CANTEEN-8` **fit** — the
+group can sit. In the DATE/CONTENT group, `JQ-R04-CONTENT-a`, `-b` and `-d`
+**not fit**; DATE-a/b/c and CONTENT-c fit on their own text. **The gap review 4
+named must be answered before the DATE/CONTENT group sits**, and CONTENT-a is
+unfit until it is. No row to be commissioned contradicts the ratified gate
+verdict. Reading lists comply. The fifth run's three disagreements with review 4
+all hold.
+
+**A conflict the coordinator caused, and resolved.** Where `JQ-R04-CONTENT-d`
+sits conflicts with review 3's ruling on which rows are answered together; the
+reviewer traced the conflict to the coordinator's fifth instruction (*"Write it as
+a juror question in the group it bears on"*) and did not resolve it. **Resolved
+here: the sentence is withdrawn wherever it conflicts with a reviewer's ruling on
+couplings, and the reviews govern.** It was a default written without reading any
+juror file and carries no reasoning against a reasoned ruling. Not an open
+question under RULES 33: it is the coordinator retracting its own instruction,
+not the coordinator answering a question the rules leave open.
+
+**Jury 2 of the night — the `JQ-N1` group with `JQ-CANTEEN-8` — three jurors
+launched together**, instructions
+`instructions/2026-10-01-2249-juror-jq-n1-canteen-8-1.md` … `-3.md`, generated
+from the template and differing only in juror number and output file (checked
+with `diff`). Files: `exam-prep/fifth-fix/juror-questions/JQ-N1.md`
+(`071bf434f05cfc7e83b87b7698274f609a5bf28334b956fec95e64b50709497e`) and
+`JQ-CANTEEN-8.md` (`944c5d85ee547e93ae55ac8d5f10dab05bc5ebe593b3de03d9b092b40aa8d396`).
+Settled law available to them: the seven 2026-09-19 verdicts and the ratified
+gate verdict. Output to `decisions/2026-10-01-jq-n1-canteen-8/`. Five most recent
+commit subjects neutral at launch.
+
+**Sixth fix launched in parallel**, DATE and CONTENT rows only, instruction
+`instructions/2026-10-01-2251-data-engineer-exam-prep-sixth-fix.md` (SHA-256
+`f20ab082b66e950781e1d7b3cef2a415ca691cd509f69e46e316dbdd2f824264`). It carries the withdrawal above; it is forbidden to change
+the files the sitting jury reads or the ratified gate file; and **a point that must
+be answered before a group, if it is a choice changing the numbers that no rule
+settles, is written as a juror question to sit first**, with the order plain in
+the index.
