@@ -5302,3 +5302,56 @@ one item was made conditional). It rules per problem, fit or not fit per
 to-be-commissioned row, whether couplings stand, **whether the withdrawal of a
 row is justified**, and whether what was handed forward can be checked yes or no
 by the run that must meet it. Git history is outside its list.
+
+`2026-10-01 21:18 UTC` · **review 3 returned · the first jury of the night sits ·
+fourth fix launched alongside it** · Review 3: `data-engineer`, 267,281 tokens,
+107 tool uses, 34 minutes, instruction
+`instructions/2026-10-01-2042-data-engineer-exam-prep-review-3.md`.
+`exam-prep/REVIEW-3.md` `2eec1bdbc2bf297da9d0eb47faf26c98a6c1ad4f6f1e5f7557a7379a5eff1c8c`,
+`exam-prep/review-3/FINGERPRINTS.md` `1700b7ad0b686c4cf8761d276ceea9b805c4d61bdb975a3887b48aa72948822e`.
+Every third-run instrument re-run and reproduced.
+
+**Rulings as given.** `R-04` — **not solved**, agreeing with the third run;
+every gate figure reproduces exactly. `N-1` — **solved only under three
+conditions**: one juror part corrected again and the group then ratified; the
+judge's script meeting two handed-forward requirements, with the engine's key
+check hardened or one more check added (*"A deliberately tampered call gets
+through the engine today"*); and, if one particular convention is ratified, its
+implementation matching the juror file's wording and checked against an
+independent one.
+
+**Rows: three not fit**, down from six in review 2. Not fit: `JQ-N1-2`,
+`JQ-R04-CONTENT-a`, `JQ-R04-CONTENT-b` (the last "minor: figures only, no
+verdict changes"). Fit: the other eight. Couplings stand. **`JQ-B1`'s withdrawal
+is justified** and leaves no point the written rules do not settle; one
+correction to its reasoning is recommended. **A new open question no row
+answers**, which the reviewer places with the CONTENT group under RULES 33. **Not
+restated here**; the fourth run is sent to the review for it, and it goes to
+jurors rather than being declared engineering by the coordinator.
+
+**A warning acted on:** one section of `exam-prep/VERDICT.md` carries
+result-before-rule information about the gate question (RULES 6) and must not
+reach gate jurors or the referee. **Neither reading list names `VERDICT.md`**, and
+both forbid every file in `exam-prep/` not named.
+
+**Jury 1 of the night — `JQ-R04-GATE` — three jurors launched together.**
+`juror`, `opus`, effort `high`. Instructions
+`instructions/2026-10-01-2117-juror-jq-r04-gate-1.md` … `-3.md`, generated from
+one template and differing only in the juror number and output file (checked
+with `diff`). Each points at
+`exam-prep/third-fix/juror-questions/JQ-R04-GATE.md` (SHA-256
+`55e7b95c9bc4beb7eb78418ed230270661d14ed92876bb13d047d1b853f816ce`), **does not
+restate the question**, and may read the earlier ratified `verdict.md` files under
+`decisions/2026-09-19-*` as settled law, and nothing else under `decisions/`.
+Output to `decisions/2026-10-01-jq-r04-gate/`. The five commit subjects at launch
+were all neutral, checked before launch.
+
+**Fourth fix launched in parallel.** `data-engineer`, effort `high`,
+instruction `instructions/2026-10-01-2118-data-engineer-exam-prep-fourth-fix.md`.
+It acts on `REVIEW-3.md`, read by itself, and **is forbidden to change the gate
+question's file or anything a gate juror is pointed at while the jury sits.**
+
+**The loop, measured so far.** Unfit rows: 1 found by review 1, 6 of 12 by
+review 2, 3 of 11 by review 3. Instrument defects named by each review have
+been closed by the next run and each closure re-verified by the following review.
+Tokens on exam preparation tonight (runs 1–3 and reviews 2–3): 1,762,909 measured.
