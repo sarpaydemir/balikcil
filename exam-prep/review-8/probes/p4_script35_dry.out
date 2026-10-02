@@ -1,0 +1,162 @@
+run af9256c4692d40db: 160 checks, 1 failed
+ok   S no file of the pre-run exam-prep snapshot is missing — 
+ok   S every pre-run exam-prep file unchanged (index, user file and three appended files aside) — 
+ok   S exam-prep/HANDED-FORWARD.md: pre-run bytes are its prefix — prefix 39494 bytes
+ok   S exam-prep/README.md: pre-run bytes are its prefix — prefix 7990 bytes
+ok   S exam-prep/VERDICT.md: pre-run bytes are its prefix — prefix 49775 bytes
+ok   S every non-exam_ script in the snapshot unchanged — 
+FAIL N no new exam-prep file outside eighth-fix/ — exam-prep/review-8/criteria-written-before-ruling.md, exam-prep/review-8/probes/p1_code_facts.out, exam-prep/review-8/probes/p1_code_facts.py, exam-prep/review-8/probes/p2_quotes.out, exam-prep/review-8/probes/p2_quotes.py, exam-prep/review-8/probes/p3_eighth_fingerprints.out, exam-prep/review-8/probes/p3_eighth_fingerprints.sha256, exam-prep/review-8/probes/p4_script35_dry.out
+ok   N no new script except this one — scripts/35_eighth_fix_check.py
+ok   L decisions/2026-10-01-jq-n1-canteen-8/verdict.md unchanged — aa15ac0dbaae
+ok   L decisions/2026-10-01-jq-r04-carries/verdict.md unchanged — 514a8d45038d
+ok   L decisions/2026-10-01-jq-r04-date-content/verdict.md unchanged — d465a0d37366
+ok   L decisions/2026-10-01-jq-r04-gate/verdict.md unchanged — 2c0bfd3defa8
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md unchanged — 7532779b8142
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md unchanged — 963aeb9f92d6
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md unchanged — 95d05d46c8e4
+ok   L exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md unchanged — c053d8144941
+ok   V the index names six earlier versions with SHA-256 — 6 found
+ok   V exam-prep/eighth-fix/JUROR-QUESTIONS-as-of-seventh-fix.md has the SHA-256 the index gives — fb8f2e683755
+ok   V exam-prep/seventh-fix/JUROR-QUESTIONS-as-of-sixth-fix.md has the SHA-256 the index gives — 27a575273904
+ok   V exam-prep/sixth-fix/JUROR-QUESTIONS-as-of-fifth-fix.md has the SHA-256 the index gives — 2e09076f475d
+ok   V exam-prep/fifth-fix/JUROR-QUESTIONS-as-of-fourth-fix.md has the SHA-256 the index gives — 90c51c9e60f8
+ok   V exam-prep/fourth-fix/JUROR-QUESTIONS-as-of-third-fix.md has the SHA-256 the index gives — c1d3dfdeab36
+ok   V exam-prep/third-fix/JUROR-QUESTIONS-as-of-second-fix.md has the SHA-256 the index gives — 7020127c257b
+ok   V the seventh-fix index kept byte for byte — fb8f2e683755
+ok   V the seventh-fix USER-QUESTIONS.md kept byte for byte — bcc09ad8ff38
+ok   I row JQ-N1-1 appears once — 
+ok   I row JQ-N1-2 appears once — 
+ok   I row JQ-N1-3 appears once — 
+ok   I row JQ-N1-4 appears once — 
+ok   I row JQ-CANTEEN-8 appears once — 
+ok   I row JQ-R04-GATE appears once — 
+ok   I row JQ-R04-CARRIES-a appears once — 
+ok   I row JQ-R04-CARRIES-b appears once — 
+ok   I row JQ-R04-DATE-a appears once — 
+ok   I row JQ-R04-DATE-b appears once — 
+ok   I row JQ-R04-DATE-c appears once — 
+ok   I row JQ-R04-CONTENT-a appears once — 
+ok   I row JQ-R04-CONTENT-b appears once — 
+ok   I row JQ-R04-CONTENT-c appears once — 
+ok   I row JQ-R04-CONTENT-d appears once — 
+ok   I row JQ-B1 appears once — 
+ok   I no row the list does not name — 
+ok   I row JQ-N1-1 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-N1-2 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-N1-3 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-N1-4 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-CANTEEN-8 status carries **ratified** + decisions/2026-10-01-jq-n1-canteen-8/verdict.md — 
+ok   I row JQ-R04-GATE status carries **ratified** + decisions/2026-10-01-jq-r04-gate/verdict.md — 
+ok   I row JQ-R04-CARRIES-a status carries **ratified** + decisions/2026-10-01-jq-r04-carries/verdict.md — 
+ok   I row JQ-R04-CARRIES-b status carries **ratified** + decisions/2026-10-01-jq-r04-carries/verdict.md — 
+ok   I row JQ-R04-DATE-a status carries **ratified** + decisions/2026-10-01-jq-r04-date-content/verdict.md — 
+ok   I row JQ-R04-DATE-b status carries **ratified** + decisions/2026-10-01-jq-r04-date-content/verdict.md — 
+ok   I row JQ-R04-DATE-c status carries **ratified** + decisions/2026-10-01-jq-r04-date-content/verdict.md — 
+ok   I row JQ-R04-CONTENT-a status carries **ratified** + decisions/2026-10-01-jq-r04-date-content/verdict.md — 
+ok   I row JQ-R04-CONTENT-b status carries **ratified** + decisions/2026-10-01-jq-r04-date-content/verdict.md — 
+ok   I row JQ-R04-CONTENT-c status carries **ratified** + decisions/2026-10-01-jq-r04-date-content/verdict.md — 
+ok   I row JQ-R04-CONTENT-d status carries **written — not yet reviewed, not commissioned** + kept unchanged as a record — 
+ok   I row JQ-B1 status carries **withdrawn** — 
+ok   I decisions/2026-10-01-jq-r04-gate/verdict.md exists and its first line reads RATIFIED — RATIFIED
+ok   I decisions/2026-10-01-jq-n1-canteen-8/verdict.md exists and its first line reads RATIFIED — RATIFIED
+ok   I decisions/2026-10-01-jq-r04-carries/verdict.md exists and its first line reads RATIFIED — RATIFIED
+ok   I decisions/2026-10-01-jq-r04-date-content/verdict.md exists and its first line reads RATIFIED — RATIFIED
+ok   I row JQ-N1-1: file, group and reading list unchanged — 
+ok   I row JQ-N1-2: file, group and reading list unchanged — 
+ok   I row JQ-N1-3: file, group and reading list unchanged — 
+ok   I row JQ-N1-4: file, group and reading list unchanged — 
+ok   I row JQ-CANTEEN-8: file, group and reading list unchanged — 
+ok   I row JQ-R04-GATE: file, group and reading list unchanged — 
+ok   I row JQ-R04-CARRIES-a: file, group and reading list unchanged — 
+ok   I row JQ-R04-CARRIES-b: file, group and reading list unchanged — 
+ok   I row JQ-R04-DATE-a: file, group and reading list unchanged — 
+ok   I row JQ-R04-DATE-b: file, group and reading list unchanged — 
+ok   I row JQ-R04-DATE-c: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-a: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-b: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-c: file, group and reading list unchanged — 
+ok   I row JQ-B1: file, group and reading list unchanged — 
+ok   I row JQ-R04-CONTENT-d reads the new file, sits alone, and lists only the new file, RULES.md and TACTICS.md — `exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md`, `RULES.md`, `TACTICS.md`
+ok   I the index carries no number the seventh-fix index did not (SHA-256 values, run dates and HANDED-FORWARD item ids aside) — 
+ok   I no option or question sentence of any juror file in the index — 68 sentences tested; 
+ok   I the index carries the answer label 'only where' no more often than the seventh-fix index did (0) — 0
+ok   I the index carries the answer label 'not a juror' no more often than the seventh-fix index did (3) — 2
+ok   I the index carries the answer label 'may not be without' no more often than the seventh-fix index did (0) — 0
+ok   D reading list is this file, RULES.md and TACTICS.md — ['this file', '`RULES.md` (lines cited below)', '`TACTICS.md` (lines cited below)']
+ok   D quotation RULES.md 41–41 in source and in the d file: In the exam the coin name an… — source True; d file True
+ok   D quotation RULES.md 51–52 in source and in the d file: The chance line is not inven… — source True; d file True
+ok   D quotation RULES.md 119–121 in source and in the d file: A juror decides procedure an… — source True; d file True
+ok   D quotation TACTICS.md 50–51 in source and in the d file: the 24 hours before the star… — source True; d file True
+ok   D quotation TACTICS.md 56–56 in source and in the d file: price, volume, trade count, … — source True; d file True
+ok   D quotation TACTICS.md 57–57 in source and in the d file: open interest, long/short ra… — source True; d file True
+ok   D quotation TACTICS.md 58–58 in source and in the d file: funding rate, payment interv… — source True; d file True
+ok   D quotation TACTICS.md 61–61 in source and in the d file: bitcoin and ethereum, over t… — source True; d file True
+ok   D quotation TACTICS.md 63–63 in source and in the d file: number of people viewing the… — source True; d file True
+ok   D quotation TACTICS.md 102–102 in source and in the d file: the coin name… — source True; d file True
+ok   D quotation TACTICS.md 103–103 in source and in the d file: the date and time… — source True; d file True
+ok   D quotation TACTICS.md 104–104 in source and in the d file: the price itself (converted … — source True; d file True
+ok   D quotation TACTICS.md 105–105 in source and in the d file: the coin name inside announc… — source True; d file True
+ok   D quotation TACTICS.md 106–106 in source and in the d file: the Wikipedia number itself … — source True; d file True
+ok   D quotation TACTICS.md 107–107 in source and in the d file: the date in the release cale… — source True; d file True
+ok   D quotation TACTICS.md 94–94 in source and in the d file: Then the canteen book freeze… — source True; d file True
+ok   D quotation JQ-R04-GATE.md 55–57 in source and in the d file: If `ALL-removable` beats its… — source True; d file True
+ok   D quotation JQ-R04-GATE.md 64–66 in source and in the d file: every feature in the audit's… — source True; d file True
+ok   D quotation verdict.md 72–72 in source and in the d file: The gate fails if either the… — source True; d file True
+ok   D quotation verdict.md 39–39 in source and in the d file: Do RULES 9 and TACTICS 6 req… — source True; d file True
+ok   D quotation verdict.md 40–40 in source and in the d file: Does hiding "the date in the… — source True; d file True
+ok   D quotation verdict.md 41–41 in source and in the d file: Does hiding "the date and ti… — source True; d file True
+ok   D quotation verdict.md 42–42 in source and in the d file: May the blinding remove a TA… — source True; d file True
+ok   D quotation verdict.md 44–44 in source and in the d file: b1 (actual price rebased to … — source True; d file True
+ok   D quotation verdict.md 45–45 in source and in the d file: b2 (computed from printed ch… — source True; d file True
+ok   D quotation verdict.md 46–46 in source and in the d file: b3 (no price column; chg% st… — source True; d file True
+ok   D quotation verdict.md 47–47 in source and in the d file: May a ranked column come fro… — source True; d file True
+ok   D quotation verdict.md 107–107 in source and in the d file: When the test in part b iden… — source True; d file True
+ok   D quotation verdict.md 109–109 in source and in the d file: The test reads every feature… — source True; d file True
+ok   D cited range TACTICS.md 55–64 starts at 'What is on the card' — 
+ok   D cited range TACTICS.md 101–107 starts at 'What is hidden' — 
+ok   D TACTICS.md line 64 is the last item of the on-card list — - the price of the relevant prediction m
+ok   D no pointer, verdict reasoning, split or forced-family ground — 
+ok   D no path into exam-prep/ — 
+ok   D every number in the d file is on the declared list — 
+ok   D no decimal figure in the d file — 
+ok   D no recommending word 'recommend' (outside the standard notice) — 1 hits
+ok   D no recommending word 'should choose' (outside the standard notice) — 0 hits
+ok   D no recommending word 'we suggest' (outside the standard notice) — 0 hits
+ok   D no recommending word 'better answer' (outside the standard notice) — 0 hits
+ok   D no recommending word 'prefer' (outside the standard notice) — 0 hits
+ok   D answer offered: - **no** — — 
+ok   D answer offered: - **only where the card may not be without the field** — — 
+ok   D answer offered: - **yes** — — 
+ok   D answer offered: - **not a juror's** — — 
+ok   D answer offered: - **Other**, with reasons. — 
+ok   D mechanical consequence given for **no:** — 
+ok   D mechanical consequence given for **only where the card may not be without the field:** — 
+ok   D mechanical consequence given for **yes:** — 
+ok   D mechanical consequence given for **not a juror's:** — 
+ok   D stop named in the d file: if the set holds no feature on… — 
+ok   D stop named in the d file: computes a feature from a fiel… — 
+ok   D stop named in the d file: until the    measurement and t… — 
+ok   D stop named in the d file: if a ratified "Other" cannot b… — 
+ok   D verdict cited by path and line: 2026-10-01-jq-r04-date-content — 
+ok   D verdict cited by path and line: 2026-10-01-jq-r04-carries — 
+ok   D verdict cited by path and line: 2026-10-01-jq-r04-gate — 
+ok   D the four rows of split marks are not quoted — 
+ok   D audit SHA-256 is the one HANDED-FORWARD names — cfc4bdcb6f1e
+ok   D FORCED_FAMILIES is the four families the d file describes — ('volatility-frozen', 'funding-line', 'p7-shape', 'repeat-chg')
+ok   D forced prefixes are chg% (three features and repeats), the funding line and two previous-7-day figures — funding:, p7:price_pct, p7:range_pct, rep-chg:, volatility:
+ok   D every inside-set prefix maps to a field the d file names (21 prefixes) — 
+ok   D REPEAT_GROUP names thirteen columns (A-0.9) — BTC, ETH, L/S acct, chg%, close, depth +1%, depth -1%, open int, quote vol, taker L/S, taker buy%, top L/S pos, trades
+ok   D card_features() reads only the previous-7-day, funding and Wikipedia lines (nothing from the release line or announcements) — Funding, Previous 7 days, Wikipedia page views
+ok   D each feature is computed from one field (fixed keys carry one prefix; shape and repeat keys are built per column) — 
+ok   D the audit's empty-set message is the one the d file quotes — 
+ok   U one status block; removing it gives the seventh-fix bytes — 
+ok   U the block says superseded — 
+ok   H A-0.1 · Rulings present with a check line — 
+ok   H A-0.4, step 1 · The row present with a check line — 
+ok   H A-0.9 · What the frozen canteen book reads present with a check line — 
+ok   H C-5 · Files that must not reach a juror or a referee present with a check line — 
+ok   H stop in HANDED-FORWARD 1c: (i) the empty row of 1b… — 
+ok   H stop in HANDED-FORWARD 1c: (ii) a feature computed … — 
+ok   H stop in HANDED-FORWARD 1c: (iii) under "only where"… — 
+ok   H stop in HANDED-FORWARD 1c: (iv) a ratified "Other" … — 
+--dry: nothing written

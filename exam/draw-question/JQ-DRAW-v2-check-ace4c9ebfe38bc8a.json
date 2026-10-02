@@ -1,0 +1,231 @@
+{
+ "facts": {
+  "F1_more_than_200_each": {
+   "calm": 339,
+   "large": 339,
+   "pass": true
+  },
+  "F2_calm_equals_large_per_coin": {
+   "coins": 20,
+   "coins_with_zero_moments": 1,
+   "pass": true
+  },
+  "F3_no_shared_hour_and_coin": {
+   "pass": true
+  },
+  "F4_measure": {
+   "moments_recomputed": 678,
+   "pass": true,
+   "stored_value_mismatches": 0,
+   "top200_simple_vs_log_differ": 8
+  },
+  "F5_draw_number_already_seeded": {
+   "04_draw_seed_equals_it_and_seeds_random": true,
+   "exam_27_seeds_random_with_06_seed_equal_to_it": true,
+   "pass": true,
+   "pool_report_seed_equals_it": true,
+   "tactics_line_22_has_number": true
+  }
+ },
+ "inputs_sha256": {
+  "TACTICS.md": "66f03b3f26764bb734294efa35b8efc124f2d99a0af8d53b4bdb52db513b695a",
+  "exam/data/external/coin-names.json": "c241e86ff876d1f92667a1545cfcc2decfc25e96a6b6ae882e9cea5df296dd92",
+  "exam/draw/exam-coins.txt": "b92a2212c166dc61a6aed6f0533d4b9031924cb7f865d0687d748039c2a25f50",
+  "exam/moments/moments.csv": "8d5c42a4499f3dfa6f79417e51be1b5adb248a3a04e580c1dfddb5a238f7386a",
+  "exam/moments/pool-report.json": "08e49c4348e88cb367ae2e8ca71dcadd79a7b6d4bb8c62c55b24520e942462e3",
+  "open-questions/JQ-DRAW.md": "4e521cd7d7c2355653cb4dd589786ffb933d030620514bb499be773e80da13a2",
+  "scripts/04_draw.py": "72f261d05d82ddd20de1f35c3e70a97650ea528f9be9963e016882bd356fc822",
+  "scripts/06_find_moments.py": "c73447af580959f92915ca5ab291cf976afc23646ed746725397b627a6d924d0",
+  "scripts/exam_27_find_moments.py": "4231d03f4ac7b26024d66509c364a1a1549b361266fa63ac215253a1fcd48c1a",
+  "scripts/exam_36_draw_question_v2_check.py": "ff5e48674b5865c9aa9059bbc3011a80e8c144a173be94e3789d016180722a92"
+ },
+ "mechanics": {
+  "a_first_vs_b_first_part_a": {
+   "max": 95,
+   "median": 82.0,
+   "min": 69,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "coin_matched_feasible_after_largest": true,
+  "coin_matched_feasible_every_seed_after_even_chance": true,
+  "coin_order_asc_vs_desc_coin_matched_after_even_chance": {
+   "max": 92,
+   "median": 77.0,
+   "min": 62,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "coin_order_asc_vs_desc_coin_matched_after_largest": {
+   "max": 37,
+   "median": 29.0,
+   "min": 19,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "list_order_hour_symbol_vs_symbol_hour_part_a": {
+   "max": 95,
+   "median": 82.0,
+   "min": 67,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "list_order_hour_symbol_vs_symbol_hour_part_b_even_after_largest": {
+   "max": 95,
+   "median": 82.0,
+   "min": 65,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "sample_k0_leaves_state_unchanged": true,
+  "sample_vs_shuffle_take_first_part_a": {
+   "max": 139,
+   "median": 139.0,
+   "min": 139,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "sample_vs_shuffle_take_first_part_b_even_after_largest": {
+   "max": 139,
+   "median": 139.0,
+   "min": 139,
+   "seeds": 1000,
+   "seeds_identical": 0
+  }
+ },
+ "result": "PASS",
+ "reviewer_only": {
+  "large_sizes_distinct": {
+   "distinct": 339,
+   "of": 339
+  }
+ },
+ "run_number": "ace4c9ebfe38bc8abbfa6204628c6f0fa4de33ec3c581233cbed7be7e4daf186",
+ "scan": {
+  "digit_runs": {
+   "1": [
+    10,
+    22,
+    35,
+    151,
+    161,
+    168,
+    212,
+    221
+   ],
+   "100": [
+    12
+   ],
+   "113": [
+    216
+   ],
+   "115": [
+    216
+   ],
+   "2": [
+    3,
+    14,
+    24,
+    27,
+    36,
+    41,
+    71,
+    73,
+    154,
+    172
+   ],
+   "200": [
+    13,
+    13,
+    22,
+    22,
+    32,
+    33,
+    47,
+    47,
+    84,
+    86,
+    88,
+    91,
+    98,
+    100,
+    102,
+    158,
+    159,
+    167,
+    168,
+    169,
+    173,
+    190
+   ],
+   "22": [
+    34,
+    118
+   ],
+   "24": [
+    27,
+    28,
+    91
+   ],
+   "3": [
+    26,
+    51,
+    152,
+    157
+   ],
+   "33": [
+    14,
+    61
+   ],
+   "34": [
+    219
+   ],
+   "36": [
+    74
+   ],
+   "38": [
+    74
+   ],
+   "4": [
+    27,
+    92,
+    139,
+    139,
+    147,
+    163
+   ],
+   "400": [
+    1,
+    12,
+    47
+   ],
+   "42": [
+    36,
+    75
+   ],
+   "44": [
+    14
+   ],
+   "5": [
+    34,
+    165,
+    221
+   ],
+   "6": [
+    12,
+    195
+   ],
+   "7": [
+    214
+   ],
+   "8": [
+    208
+   ],
+   "99": [
+    12
+   ]
+  },
+  "matches": [],
+  "tokens_checked": 134
+ }
+}

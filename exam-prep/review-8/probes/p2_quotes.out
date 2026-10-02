@@ -1,0 +1,32 @@
+ok    in-d-file=True in-source=True  RULES.md 41-41  In the exam the coin name and the date are hidden.
+ok    in-d-file=True in-source=True  RULES.md 51-52  The chance line is not invented. The answers are shuffled 1,
+ok    in-d-file=True in-source=True  RULES.md 119-121  A juror decides procedure and definition only: never a tradi
+ok    in-d-file=True in-source=True  TACTICS.md 50-51  the 24 hours before the start, hour by hour; plus a one-line
+ok    in-d-file=True in-source=True  TACTICS.md 55-64  price, volume, trade count, taker buy/sell pressure
+ok    in-d-file=True in-source=True  TACTICS.md 55-64  open interest, long/short ratios (5-minute archive)
+ok    in-d-file=True in-source=True  TACTICS.md 55-64  funding rate, payment interval and its changes
+ok    in-d-file=True in-source=True  TACTICS.md 55-64  bitcoin and ethereum, over the same hours
+ok    in-d-file=True in-source=True  TACTICS.md 55-64  number of people viewing the page on Wikipedia (daily)
+ok    in-d-file=True in-source=True  TACTICS.md 101-107  the coin name
+ok    in-d-file=True in-source=True  TACTICS.md 101-107  the date and time
+ok    in-d-file=True in-source=True  TACTICS.md 101-107  the price itself (converted to a number starting from 100)
+ok    in-d-file=True in-source=True  TACTICS.md 101-107  the coin name inside announcements
+ok    in-d-file=True in-source=True  TACTICS.md 101-107  the Wikipedia number itself (given as a ratio to the coin's 
+ok    in-d-file=True in-source=True  TACTICS.md 101-107  the date in the release calendar
+ok    in-d-file=True in-source=True  TACTICS.md 94-94  Then the canteen book freezes
+ok    in-d-file=True in-source=True  exam-prep/third-fix/juror-questions/JQ-R04-GATE.md (whole file)  If `ALL-removable` beats its chance line on the exam cards, 
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-gate/verdict.md 72-72  The gate fails if either the nearest-neighbour attack or the
+ok    in-d-file=True in-source=True  exam-prep/third-fix/juror-questions/JQ-R04-GATE.md (whole file)  every feature in the audit's current list, minus the familie
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  Do RULES 9 and TACTICS 6 require removing columns that ident
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  Does hiding "the date in the release calendar" cover release
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  Does hiding "the date and time" cover clock hour revealed by
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  May the blinding remove a TACTICS 3 field when nothing froze
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  b1 (actual price rebased to 100, fixed decimals): Permitted.
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  b2 (computed from printed chg%, starting from 100): Permitte
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  b3 (no price column; chg% stays): Permitted only if and as f
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-date-content/verdict.md 39-47  May a ranked column come from pre-rounding values, ordering 
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-carries/verdict.md 107-107  When the test in part b identifies a column's feature sets, 
+ok    in-d-file=True in-source=True  decisions/2026-10-01-jq-r04-carries/verdict.md 109-109  The test reads every feature computed from the column's own 
+ok    in-d-file=True in-source=True  exam-prep/third-fix/juror-questions/JQ-R04-GATE.md (whole file)  that must stay on the card because … TACTICS requires them
+
+30 quotations, 0 failed

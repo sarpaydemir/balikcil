@@ -1,0 +1,323 @@
+{
+ "facts": {
+  "F1_more_than_200_each": {
+   "calm": 339,
+   "large": 339,
+   "pass": true
+  },
+  "F2_calm_equals_large_per_coin": {
+   "coins": 20,
+   "coins_with_zero_moments": 1,
+   "pass": true
+  },
+  "F3_no_shared_hour_and_coin": {
+   "pass": true
+  },
+  "F4_measure": {
+   "moments_recomputed": 678,
+   "pass": true,
+   "stored_value_mismatches": 0,
+   "top200_simple_vs_log_differ": 8
+  },
+  "F5_draw_number_already_seeded": {
+   "04_draw_seed_equals_it_and_seeds_random": true,
+   "exam_27_seeds_random_with_06_seed_equal_to_it": true,
+   "pass": true,
+   "pool_report_seed_equals_it": true,
+   "tactics_line_22_has_number": true
+  }
+ },
+ "inputs_sha256": {
+  "TACTICS.md": "66f03b3f26764bb734294efa35b8efc124f2d99a0af8d53b4bdb52db513b695a",
+  "exam/data/external/coin-names.json": "c241e86ff876d1f92667a1545cfcc2decfc25e96a6b6ae882e9cea5df296dd92",
+  "exam/draw/exam-coins.txt": "b92a2212c166dc61a6aed6f0533d4b9031924cb7f865d0687d748039c2a25f50",
+  "exam/moments/moments.csv": "8d5c42a4499f3dfa6f79417e51be1b5adb248a3a04e580c1dfddb5a238f7386a",
+  "exam/moments/pool-report.json": "08e49c4348e88cb367ae2e8ca71dcadd79a7b6d4bb8c62c55b24520e942462e3",
+  "open-questions/JQ-DRAW.md": "799446b8939b7431f6409e9cfcc8565a5cf02bde36619baba262347e5db8439b",
+  "scripts/04_draw.py": "72f261d05d82ddd20de1f35c3e70a97650ea528f9be9963e016882bd356fc822",
+  "scripts/06_find_moments.py": "c73447af580959f92915ca5ab291cf976afc23646ed746725397b627a6d924d0",
+  "scripts/exam_27_find_moments.py": "4231d03f4ac7b26024d66509c364a1a1549b361266fa63ac215253a1fcd48c1a",
+  "scripts/exam_36_draw_question_v2_check.py": "890050d83998726567169f23ea272ed7a9797d56a669f09190a950623673247d"
+ },
+ "mechanics": {
+  "a_first_vs_b_first_part_a": {
+   "max": 95,
+   "median": 82.0,
+   "min": 69,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "coin_matched_feasible_after_largest": true,
+  "coin_matched_feasible_every_seed_after_even_chance": true,
+  "coin_order_asc_vs_desc_coin_matched_after_even_chance": {
+   "max": 92,
+   "median": 77.0,
+   "min": 62,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "coin_order_asc_vs_desc_coin_matched_after_largest": {
+   "max": 37,
+   "median": 29.0,
+   "min": 19,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "list_order_hour_symbol_vs_symbol_hour_part_a": {
+   "max": 95,
+   "median": 82.0,
+   "min": 67,
+   "seeds": 1000,
+   "seeds_identical": 0
+  },
+  "sample_k0_leaves_state_unchanged": true,
+  "sample_vs_shuffle_take_first_part_a": {
+   "max": 139,
+   "median": 139.0,
+   "min": 139,
+   "seeds": 1000,
+   "seeds_identical": 0
+  }
+ },
+ "result": "FAIL",
+ "reviewer_only": {
+  "large_sizes_distinct": {
+   "distinct": 339,
+   "of": 339
+  }
+ },
+ "run_number": "72e1369b2e144eacb4631f89fc7361d7c9a6b100f43d26fb790fd89d67da01ed",
+ "scan": {
+  "digit_runs": {
+   "04": [
+    196,
+    197
+   ],
+   "1": [
+    10,
+    20,
+    33,
+    140,
+    150,
+    156,
+    157,
+    195,
+    199,
+    208
+   ],
+   "100": [
+    12
+   ],
+   "113": [
+    203
+   ],
+   "115": [
+    203
+   ],
+   "2": [
+    3,
+    14,
+    22,
+    25,
+    34,
+    39,
+    68,
+    70,
+    143,
+    161
+   ],
+   "200": [
+    13,
+    13,
+    20,
+    20,
+    30,
+    31,
+    45,
+    45,
+    80,
+    82,
+    84,
+    87,
+    94,
+    96,
+    102,
+    147,
+    148,
+    158,
+    162,
+    177
+   ],
+   "22": [
+    32,
+    114
+   ],
+   "24": [
+    25,
+    26,
+    87
+   ],
+   "3": [
+    24,
+    49,
+    141,
+    146
+   ],
+   "33": [
+    14,
+    59
+   ],
+   "34": [
+    206
+   ],
+   "36": [
+    71
+   ],
+   "38": [
+    71
+   ],
+   "4": [
+    25,
+    88,
+    130,
+    130,
+    138,
+    152
+   ],
+   "400": [
+    1,
+    12,
+    45
+   ],
+   "42": [
+    34,
+    72
+   ],
+   "44": [
+    14
+   ],
+   "5": [
+    32,
+    114,
+    154,
+    208
+   ],
+   "6": [
+    12,
+    182
+   ],
+   "7": [
+    201
+   ],
+   "8": [
+    195
+   ],
+   "99": [
+    12
+   ]
+  },
+  "matches": [
+   {
+    "kind": "coin-name-token",
+    "line": 6,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 14,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 22,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 24,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 72,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 88,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 98,
+    "matched": "Coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 98,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 99,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 127,
+    "matched": "Coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 141,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 148,
+    "matched": "Coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 149,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 150,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 151,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 158,
+    "matched": "Coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 160,
+    "matched": "coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 177,
+    "matched": "Coin"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 192,
+    "matched": "tokenized"
+   },
+   {
+    "kind": "coin-name-token",
+    "line": 192,
+    "matched": "tokenized"
+   }
+  ],
+  "tokens_checked": 134
+ }
+}

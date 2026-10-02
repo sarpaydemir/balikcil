@@ -1,0 +1,9 @@
+recorded run 5d0fd28862ba755b: file inputs hashing as recorded: 4571; differing or unreadable: 4; listing pseudo-inputs not re-hashed: 2
+   ('exam-prep/HANDED-FORWARD.md (eighth-fix section) (prefix)', "[Errno 2] No such file or directory: 'exam-prep/HANDED-FORWARD.md (eighth-fix section) (prefix)'")
+   ('exam-prep/HANDED-FORWARD.md (prefix)', "[Errno 2] No such file or directory: 'exam-prep/HANDED-FORWARD.md (prefix)'")
+   ('exam-prep/README.md (prefix)', "[Errno 2] No such file or directory: 'exam-prep/README.md (prefix)'")
+   ('exam-prep/VERDICT.md (prefix)', "[Errno 2] No such file or directory: 'exam-prep/VERDICT.md (prefix)'")
+exam-prep/HANDED-FORWARD.md (prefix): as recorded
+exam-prep/HANDED-FORWARD.md (eighth-fix section) (prefix): DIFFERS (my slice may not be the script's)
+exam-prep/README.md (prefix): as recorded
+exam-prep/VERDICT.md (prefix): as recorded

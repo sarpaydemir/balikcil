@@ -1,0 +1,46 @@
+== (1) FORCED_FAMILIES
+  volatility-frozen  ['volatility:']
+  funding-line       ['funding:']
+  p7-shape           ['p7:price_pct', 'p7:range_pct']
+  repeat-chg         ['rep-chg:']
+== REPEAT_GROUP columns: 13 -> ['BTC', 'ETH', 'L/S acct', 'chg%', 'close', 'depth +1%', 'depth -1%', 'open int', 'quote vol', 'taker L/S', 'taker buy%', 'top L/S pos', 'trades']
+  could not parse INDEX.md: /home/user/balikcil/cards/INDEX.md: no ## Before
+
+== set raw cards/: 306 cards parsed
+  (2) feature keys: 71; placed on exactly one field: 71; UNPLACED: none
+  (3) a column header printed: 14 columns; not in REPEAT_GROUP: ['h']
+  (4) columns with the rank suffix ' r': 0
+  (5) cards printing no Wikipedia line: 0; on them wikipedia:present is computed on 0, distinct values []
+  (6) ALL-removable keys: 59; left after moving out every feature of a printed field: 0 -> []
+
+== set blind-proof/rank: 306 cards parsed
+  (2) feature keys: 62; placed on exactly one field: 62; UNPLACED: none
+  (3) a column header printed: 12 columns; not in REPEAT_GROUP: ['h']
+  (4) columns with the rank suffix ' r': 8
+  (5) cards printing no Wikipedia line: 306; on them wikipedia:present is computed on 306, distinct values [0.0]
+  (6) ALL-removable keys: 51; left after moving out every feature of a printed field: 1 -> [('wikipedia:present', 'LINE:Wikipedia page views', 'printed on no card')]
+      of these, usable after standardise(): 0 -> []
+
+== set blind-proof/ratio: 306 cards parsed
+  (2) feature keys: 62; placed on exactly one field: 62; UNPLACED: none
+  (3) a column header printed: 12 columns; not in REPEAT_GROUP: ['h']
+  (4) columns with the rank suffix ' r': 0
+  (5) cards printing no Wikipedia line: 306; on them wikipedia:present is computed on 306, distinct values [0.0]
+  (6) ALL-removable keys: 51; left after moving out every feature of a printed field: 1 -> [('wikipedia:present', 'LINE:Wikipedia page views', 'printed on no card')]
+      of these, usable after standardise(): 0 -> []
+
+== set blind-proof/strict: 306 cards parsed
+  (2) feature keys: 60; placed on exactly one field: 60; UNPLACED: none
+  (3) a column header printed: 12 columns; not in REPEAT_GROUP: ['h']
+  (4) columns with the rank suffix ' r': 9
+  (5) cards printing no Wikipedia line: 306; on them wikipedia:present is computed on 306, distinct values [0.0]
+  (6) ALL-removable keys: 49; left after moving out every feature of a printed field: 1 -> [('wikipedia:present', 'LINE:Wikipedia page views', 'printed on no card')]
+      of these, usable after standardise(): 0 -> []
+
+== set blind-proof/strict-flags: 306 cards parsed
+  (2) feature keys: 59; placed on exactly one field: 59; UNPLACED: none
+  (3) a column header printed: 12 columns; not in REPEAT_GROUP: ['h']
+  (4) columns with the rank suffix ' r': 9
+  (5) cards printing no Wikipedia line: 306; on them wikipedia:present is computed on 306, distinct values [0.0]
+  (6) ALL-removable keys: 49; left after moving out every feature of a printed field: 1 -> [('wikipedia:present', 'LINE:Wikipedia page views', 'printed on no card')]
+      of these, usable after standardise(): 0 -> []
