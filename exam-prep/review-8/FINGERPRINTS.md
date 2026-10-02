@@ -1,0 +1,37 @@
+# Review 8 — fingerprints
+
+Mateo · data engineer, reviewing posture · written 2026-10-02T00:40:17Z (system clock). SHA-256 of every file this review wrote (this file aside), and of the files it reviewed, as they stood when it finished. Check with `sha256sum -c` on the lines between the fences.
+
+```
+0a00d440a3dae285330dfce6cceac1224c0d5346f276da74c7c615411bf99302  exam-prep/REVIEW-8.md
+a3ca6a6ef58a18d4d7c183ed2bbb15e569cd98fc45f73890e0ab7120f17bc26f  exam-prep/review-8/criteria-written-before-ruling.md
+7c56ee98de7124cf322b2b6833b1cad1ff405374851210146132929378aa30aa  exam-prep/review-8/probes/p1_code_facts.out
+7f9c161e2a60922718a90d73edfa9a95c0b9964d9445b42b1030b41886ba75f6  exam-prep/review-8/probes/p1_code_facts.py
+5d808fc6c1067620ffe67c20bb867bda350572d2df9fb44c8b1fe857a55272ce  exam-prep/review-8/probes/p2_quotes.out
+0a29e5cf7f7b1e7c5338cb41efcf5592a236457ea8426d040bff99b776e80507  exam-prep/review-8/probes/p2_quotes.py
+11b20067eca5efc68f8600abdfadd78e4f356b88de179f91dc03fb5622c5d641  exam-prep/review-8/probes/p3_eighth_fingerprints.out
+6d7f0976982e60edfaa539c59ff0a440459f5ac316ba672c1fbb879815e7b459  exam-prep/review-8/probes/p3_eighth_fingerprints.sha256
+c2f7bbf32a417ef55c6e99203b23a6c277169ae4d2300c4ed294cb4dcc0aec6e  exam-prep/review-8/probes/p4_script35_dry.out
+619acd8ba31029d604f74741f51190e30e6528a6eea37a2014339f3deb44e6e0  exam-prep/review-8/probes/p5_recorded_inputs.out
+08ad90a6cbf80cd59c925752343f88f63df0538d88deb3f09914633f1157e08b  exam-prep/review-8/probes/p6_index.out
+1cb95b01f6344e42402018ecd47325ff88311e3de9bd755402c9c7fe7f9589c3  exam-prep/review-8/probes/p6_index.py
+64295fc29bfd3506ecdad870fb61d453f1ae5ed3efc785071411e6d05555f648  exam-prep/review-8/probes/p7_identity_scan.out
+525994ac981b659f16e878032f9d44159ef13d307854ccd0a6a591a3911cedae  exam-prep/review-8/probes/p7_identity_scan.py
+aedcd0cd2cfeb22c7b55101be3f5d9525e6223516b84651b5244a483db090817  exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md
+fb9d51c965373a4ce728b6adf842a8baec9975cab46e718b67ada65c8d691a78  exam-prep/JUROR-QUESTIONS.md
+1b9f4bbc6a458c86988470b0d0bba49d73ef5ce92be57292f32887e8d20b08b6  exam-prep/HANDED-FORWARD.md
+a63afecbbcb7ac2b8f2ad5c87431880db01fd4b6b50e306054be65db79d42ada  exam-prep/USER-QUESTIONS.md
+7e21cbf871acd9bb68268b4e442e8b74126d3665603049ef1c6030244c15f1c7  exam-prep/VERDICT.md
+6c1f9f3dea8f8913b40566904ec3137a255783a4c8b69ddcb6281f04868dae65  exam-prep/README.md
+279ceb05755377cbadb7881f5cf99db2ea242e0e4bf6842ce678717842f72551  exam-prep/eighth-fix/EIGHTH-FIX.md
+e523fbb528b748a39cbc14f903b5c4ed47b8782286e6f913c1dcf24d8e9cadae  exam-prep/eighth-fix/FINGERPRINTS.md
+fc5326ce3782552da1bb216cc5701c1c33377d7631764a128f8bc0d5d2c7155f  scripts/35_eighth_fix_check.py
+cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f  scripts/29_identity_audit_exact.py
+96b0eb01c502a40b4e76c864681763206ba627b268eedb7eb19984f81d9b928e  scripts/lab_cards.py
+2c0bfd3defa8a70009b096675b4d65417c512b7490700434738ebbc6b8058e2d  decisions/2026-10-01-jq-r04-gate/verdict.md
+aa15ac0dbaaefec007dfb9890189e4f1a24fa949fcfece1fb7efce4459573305  decisions/2026-10-01-jq-n1-canteen-8/verdict.md
+514a8d45038d3d7ad2feba3479c58d6e1da8e50358c799203f35b22cc246050a  decisions/2026-10-01-jq-r04-carries/verdict.md
+d465a0d37366c10249eea2492f5a27b23f4c4eaf7811f2a4b0aa7873132fb769  decisions/2026-10-01-jq-r04-date-content/verdict.md
+e458f643863ed84e230798a3142a0159dc689e65ef9f2682f5454959bbc4eabe  data/universe/universe.csv
+336f2cf885319ae0fcfe2c3020c7ae20f7b7dff1a826230d16b8bcd7c4b81d08  data/draw/observation-coins.txt
+```
