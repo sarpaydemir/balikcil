@@ -6167,3 +6167,56 @@ Tonight's `R-04` decisions stand ratified and recorded; nothing is withdrawn.
 `R-04` — it decides which moments become cards before any card exists, which is
 RULES 6's order. Its review is running; if it rules the question fit, its jury
 sits tonight.
+
+`2026-10-02 00:44 UTC` · **draw question version 2: part c fit, a, b, d not fit · the draw
+thread is paused too · the laboratory stops for the night** · Review:
+`data-engineer` Mode B, instruction
+`instructions/2026-10-02-0034-data-engineer-draw-question-v2-review.md`;
+`exam/draw-question/JQ-DRAW-v2-REVIEW.md`
+`056026a5bf5a223196fdbf70c328cdb346746e41e996a1003d6d0852f823d9a3`, written inside
+`exam/`. **No leak**: a wider scan of the question file matched one ordinary word
+used in its ordinary sense, not named; the four root documents and the ten verdicts
+the jurors would be given contain no exam ticker or project name. Every fact and
+every mechanic figure reproduced independently, seeds 1–1000 only. **Not fit:**
+parts a and b — some outcomes cannot be carried out as stated; part b also
+restates a root-document line in words it does not contain; part d — a measured
+claim in its preamble is not correct as worded (one other use of the generator
+picks identical moments in 1,000 of 1,000 seeds), and its list leans by emphasis
+and space. Unresolved: Python versions other than 3.14.4; `LEDGER.md` unread by
+it. **Noted for the coordinator:** 47 start hours shared by more than one coin
+hold 111 of the 678 pool moments, which the question does not state; the reviewer
+judges no outcome needs it. Two slips it disclosed: one command opened the first
+line of a verdict it was not given, output discarded; one long output saved by
+the harness outside the folder, unopened. Steer thirty, reported by it: the
+instruction's clause about ordinary words that are a coin's base name pointed at
+one kind of leak — fair, and given because that leak had happened.
+
+**Decision, the coordinator's, on process: the draw thread pauses as well.** The
+draw is needed only when exam cards are built, and no exam card can be built
+until `R-04` closes, which now waits on the user. Finishing it tonight saves no
+time and costs a third version, a review, a jury and a referee. **The laboratory
+stops here for the night.** Nothing is running after the reporter.
+
+**Tonight, measured:** four juries sat and **all four were ratified** —
+`JQ-R04-GATE` (3–0), `JQ-N1` with `JQ-CANTEEN-8`, `JQ-R04-CARRIES`, and the
+DATE/CONTENT group. `N-1`'s juror condition is met. **`R-04` is not solved** and
+cannot close by the routes written without the user. The exam coins' raw data,
+moments and moment-day order books are acquired and verified; **no exam card
+exists.**
+
+**For the user, in the order the rules route them (a wall leak or a rule
+problem only):**
+1. **Wall leak — an exam coin's name**, disclosed in a juror-readable file and
+   repeated by the coordinator in this ledger at line 6010. Contained in the
+   working tree. **Decision needed:** append-only (RULES 30) against exam names
+   out of this ledger (TACTICS 1) — redact line 6010 or leave it.
+2. **Rule conflict — a ratified outcome against `TEAM.md`:** CONTENT-a's
+   permission needs a record of which columns the frozen book reads, and the exam
+   builder is kept blind to the canteen by `TEAM.md` lines 70–71.
+3. **A sequencing circle** in what was handed forward for `R-04`: one item needs
+   exam cards to exist, another forbids any exam card before `R-04` closes.
+4. Reported earlier tonight and still standing: **the user's e-mail address was
+   sent to eleven third-party hosts** by `scripts/08_external_sources.py` during
+   the observation run; default now off.
+
+**Commissioned last:** the reporter, for the user's written account in Turkish.
