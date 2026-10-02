@@ -6220,3 +6220,38 @@ problem only):**
    the observation run; default now off.
 
 **Commissioned last:** the reporter, for the user's written account in Turkish.
+
+`2026-10-02 00:49 UTC` · **the night's written account is delivered · a contradiction of
+the coordinator's, caught by the reporter · the night's measured cost** ·
+`reporter` (Derya), 94,436 tokens, instruction
+`instructions/2026-10-02-0044-reporter-night-account.md`. Wrote
+`reports/2026-10-02-night.md` (402 lines, SHA-256
+`276a58807c541cbe0b737e2f356aabbca1d683233f175c39c8627df21cd9439c`), in Turkish.
+**She read `LEDGER.md` as two ranges, 4929–6009 and 6011–6222, skipping line
+6010 entirely.** A scan of the report here for the twenty full exam symbols,
+every base name of three letters or more, and the two short base names in exact
+upper case found **0 / 0 / 0**.
+
+**Her finding, recorded as the coordinator's fault:** the 00:19 UTC entry says
+*"Until then no agent is pointed at `LEDGER.md`"*, and the coordinator's 00:44
+instruction pointed her at a range of it that contains line 6010. She did not
+read the line, which is why no harm followed; the instruction told her not to
+quote it, which is why she knew to skip it. **The contradiction stands and is
+the coordinator's**: the reporter must read the ledger to write the user's
+account, so the 00:19 sentence promised more than the laboratory's own procedure
+allows. It should have said *no agent is pointed at line 6010.*
+
+**Other things she recorded:** the ledger lacks token counts for some late runs
+and any total for the night — **given here, below**; `README.md` and `TEAM.md`
+disagree on the number of agent definitions ("six" against "eight"), and
+`README.md`'s status section no longer matches the work this ledger describes.
+**Both are documentation drift, named and not fixed tonight.**
+
+**The night's measured cost, every agent run since 18:53 UTC, summed by script
+from each run's reported usage: 37 runs, 5,960,495 tokens** — fixes 2–8, reviews 2–8, two
+exam-data runs, the draw question and its two reviews, twelve jurors, four
+referees and the reporter. The coordinator's own turns are not in this figure and
+were not measured (RULES 22).
+
+**The laboratory is stopped.** No agent is running. Nothing further is launched
+until the user has read the account and decided what is theirs to decide.
