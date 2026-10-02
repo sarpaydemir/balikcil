@@ -1,0 +1,107 @@
+== (a) rows and statuses
+  JQ-N1-1           ratified                                         decisions/2026-10-01-jq-n1-canteen-8/verdict.md exists, first line 'RATIFIED'
+  JQ-N1-2           ratified                                         decisions/2026-10-01-jq-n1-canteen-8/verdict.md exists, first line 'RATIFIED'
+  JQ-N1-3           ratified                                         decisions/2026-10-01-jq-n1-canteen-8/verdict.md exists, first line 'RATIFIED'
+  JQ-N1-4           ratified                                         decisions/2026-10-01-jq-n1-canteen-8/verdict.md exists, first line 'RATIFIED'
+  JQ-CANTEEN-8      ratified                                         decisions/2026-10-01-jq-n1-canteen-8/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-GATE       ratified                                         decisions/2026-10-01-jq-r04-gate/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-CARRIES-a  ratified                                         decisions/2026-10-01-jq-r04-carries/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-CARRIES-b  ratified                                         decisions/2026-10-01-jq-r04-carries/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-DATE-a     ratified                                         decisions/2026-10-01-jq-r04-date-content/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-DATE-b     ratified                                         decisions/2026-10-01-jq-r04-date-content/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-DATE-c     ratified                                         decisions/2026-10-01-jq-r04-date-content/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-CONTENT-a  ratified                                         decisions/2026-10-01-jq-r04-date-content/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-CONTENT-b  ratified                                         decisions/2026-10-01-jq-r04-date-content/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-CONTENT-c  ratified                                         decisions/2026-10-01-jq-r04-date-content/verdict.md exists, first line 'RATIFIED'
+  JQ-R04-CONTENT-d  written — not yet reviewed, not commissioned     
+  JQ-B1             withdrawn                                        
+
+== (b) shared runs of 7 words with each juror file named
+  exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md: 6 shared
+      2026-10-02 system clock every earlier version is
+      by mateo eighth-fix run 2026-10-02 system clock
+      eighth-fix run 2026-10-02 system clock every earlier
+      mateo eighth-fix run 2026-10-02 system clock every
+      run 2026-10-02 system clock every earlier version
+      system clock every earlier version is kept
+  exam-prep/fifth-fix/juror-questions/JQ-CANTEEN-8.md: 2 shared
+      by mateo fifth-fix run 2026-10-01 system clock
+      by mateo fourth-fix run 2026-10-01 system clock
+  exam-prep/fifth-fix/juror-questions/JQ-N1.md: 6 shared
+      by mateo data engineer second-fix run 2026-10-01
+      by mateo fifth-fix run 2026-10-01 system clock
+      by mateo fourth-fix run 2026-10-01 system clock
+      by mateo third-fix run 2026-10-01 system clock
+      data engineer second-fix run 2026-10-01 system clock
+      mateo data engineer second-fix run 2026-10-01 system
+  exam-prep/sixth-fix/juror-questions/JQ-R04-CARRIES.md: 0 shared
+  exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT.md: 4 shared
+      by mateo data engineer second-fix run 2026-10-01
+      data engineer second-fix run 2026-10-01 system clock
+      mateo data engineer second-fix run 2026-10-01 system
+      system clock every earlier version is kept
+  exam-prep/sixth-fix/juror-questions/JQ-R04-DATE.md: 4 shared
+      by mateo data engineer second-fix run 2026-10-01
+      data engineer second-fix run 2026-10-01 system clock
+      mateo data engineer second-fix run 2026-10-01 system
+      system clock every earlier version is kept
+  exam-prep/third-fix/juror-questions/JQ-B1.md: 0 shared
+  exam-prep/third-fix/juror-questions/JQ-R04-GATE.md: 4 shared
+      by mateo data engineer second-fix run 2026-10-01
+      by mateo third-fix run 2026-10-01 system clock
+      data engineer second-fix run 2026-10-01 system clock
+      mateo data engineer second-fix run 2026-10-01 system
+
+== (c) number tokens in the index (SHA-256 hex values removed)
+  line 3: ['2026-10-01']
+  line 4: ['2026-10-01']
+  line 5: ['2026-10-01']
+  line 6: ['2026-10-01']
+  line 7: ['2026-10-01']
+  line 8: ['2026-10-01']
+  line 9: ['2026-10-02']
+  line 11: ['256']
+  line 12: ['56']
+  line 14: ['256']
+  line 15: ['56']
+  line 17: ['256']
+  line 18: ['56']
+  line 20: ['256', '56']
+  line 22: ['256', '56']
+  line 24: ['256']
+  line 25: ['56']
+  line 33: ['33–35']
+  line 37: ['33']
+  line 41: ['8', '4-']
+  line 42: ['4-', '4-']
+  line 43: ['4-', '4-']
+  line 45: ['4-']
+  line 49: ['4-']
+  line 50: ['4-']
+  line 51: ['4-']
+  line 55: ['4-']
+  line 56: ['4-']
+  line 57: ['35,', '1']
+  line 58: ['1']
+  line 59: ['0.1.']
+  line 63: ['1', '1', '2,', '3,', '4,', '8', '8.', '2026-10-01-', '8']
+  line 64: ['2', '2', '1,', '3,', '4,', '8', '8.', '2026-10-01-', '8']
+  line 65: ['3', '3', '1,', '2,', '4,', '8', '8.', '2026-10-01-', '8']
+  line 66: ['4', '4', '4', '4', '1,', '2,', '3,', '8', '8.', '2026-10-01-', '8']
+  line 67: ['8', '8.', '1,', '2,', '3,', '4', '8.', '2026-10-01-', '8']
+  line 68: ['4-', '4-', '4-', '2026-10-01-', '4-']
+  line 69: ['4-', '4-', '4-', '4-', '2026-10-01-', '4-']
+  line 70: ['4-', '4-', '4-', '4-', '2026-10-01-', '4-']
+  line 71: ['4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '2026-09-19-', '112–120,', '221–225,', '245–246,', '268–270', '667–671', '4-', '2026-10-01-', '4-']
+  line 72: ['4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '2026-09-19-', '112–120,', '221–225,', '245–246,', '268–270', '667–671', '4-', '2026-10-01-', '4-']
+  line 73: ['4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '2026-09-19-', '112–120,', '221–225,', '245–246,', '268–270', '667–671', '4-', '2026-10-01-', '4-']
+  line 74: ['4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '2026-09-19-', '112–120,', '221–225,', '245–246,', '268–270', '667–671', '4-', '2026-10-01-', '4-']
+  line 75: ['4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '2026-09-19-', '112–120,', '221–225,', '245–246,', '268–270', '667–671', '4-', '2026-10-01-', '4-']
+  line 76: ['4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '4-', '2026-09-19-', '112–120,', '221–225,', '245–246,', '268–270', '667–671', '4-', '2026-10-01-', '4-']
+  line 77: ['4-', '4-', '4-', '04', '4-']
+
+== (d) multi-word answer labels of the d file in the index
+  'only where the card may not be without the field': 0
+  'only where': 0
+  "not a juror's": 1
+  'not a juror': 2

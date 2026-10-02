@@ -6098,3 +6098,31 @@ needs under the ratified CONTENT-a and **may not make, because it may not see th
 canteen book** — juror 2's objection on that jury, now standing as a gap with no
 one able to fill it without carrying the recipe's structure into exam
 preparation. Named, not settled.
+
+`2026-10-02 00:33 UTC` · **draw question, second version · reviewed before any juror** ·
+`data-engineer` Mode B, 166,163 tokens, 40 tool uses, 13 minutes, instruction
+`instructions/2026-10-02-0022-data-engineer-exam-draw-question-v2.md` — which
+**forbade naming, quoting or hinting at any word a scan matched**, and put every
+record of scan matches under `exam/draw-question/`. `open-questions/JQ-DRAW.md`
+version 2, SHA-256 `4e521cd7d7c2355653cb4dd589786ffb933d030620514bb499be773e80da13a2`,
+**four parts**: the large cards, the calm cards, the seed, and how a random draw
+is carried out — the last now put to jurors because review 1 measured that each
+mechanic changes which moments are drawn. Checker
+`scripts/exam_36_draw_question_v2_check.py`, final run `ace4c9ebfe38bc8a`: PASS;
+every fact re-measured true, including all 678 stored 24-hour changes recomputed
+from the exam klines with 06's own loader (0 mismatches); every mechanic put to
+jurors changes the draw in all of seeds 1–1000, **never the draw number**; **a
+scan over 134 name tokens, every case, whole words, found nothing**, and the
+reviewer-facing material now lives in `exam/draw-question/`, not in the
+juror-readable file. Unresolved by name: whether `random.sample` gives the same
+output across Python 3 versions (only 3.14.4 available; the question now requires
+the version to be written down before any draw); and `LEDGER.md` unread by it, so
+a recorded user decision on the draw cannot be excluded by it — **none exists**,
+checked here. Steer twenty-nine, reported by it: the instruction restated that
+version 1 failed and leaked — result content in the RULES 3 sense, not a
+conclusion. Fair.
+
+**Review launched**, `data-engineer` Mode B, instruction
+`instructions/2026-10-02-0034-data-engineer-draw-question-v2-review.md` (SHA-256
+`22b9bcbebac7c48cd058deaf62b5f1592df8f878ff9622c369e56a41ae0c401a`); its file is written to `exam/draw-question/`, not to the
+juror-readable folder.
