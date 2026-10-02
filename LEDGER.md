@@ -5934,3 +5934,61 @@ woken tonight**: there is not yet a question the rules route to them.
 and consistent with all four ratified verdicts; the index made true; the
 handed-forward item made checkable; **no juror file may hand a juror a verdict's
 reasoning that quotes material the juror is otherwise denied.**
+
+`2026-10-02 00:02 UTC` · **the exam coins' moments are found, verified against the
+observation procedure, and the pool is larger than the exam · a draw question
+is being written** · `data-engineer`, Mode B step 2, 119,757 tokens, 37 tool
+uses, ~16 minutes, instruction
+`instructions/2026-10-01-2346-data-engineer-exam-moments.md`. No card, no key,
+no blinding, no moment chosen; no commit by the run.
+
+**The procedure was proven identical before it was used.** `scripts/exam_27_find_moments.py`
+loads `scripts/06_find_moments.py` unchanged and **first re-ran 06's procedure on
+the observation inputs: the rebuilt `data/moments/moments.csv` is byte-identical**
+(`1a503bc0…a761`) and its run number matches the manifest (`80f0c0db548e826e…`).
+Then it ran the same procedure on the exam coins, seed `20260913` as 06 uses it.
+All 247 exam kline zips re-checked against the first step's inventory: no
+mismatch. A second run rewrote nothing. The three ratified verdicts bearing on
+moments — large-moment selection (48 h applied during selection, 2–1), calm
+separation (no calm–calm minimum, 3–0) and `JQ-CANTEEN-8` a (calm moments may
+overlap, 3–0) — are already what 06 does.
+
+**The pool, by exam-coin line:** lines 1–13, 15, 16 — 20 large and 20 calm each;
+line 14 — 7 + 7; line 17 — 17 + 17; line 18 — 8 + 8; line 19 — 7 + 7; **line 20 —
+0 + 0**, its lifetime of 6.583 days being under TACTICS 2's one moment per 18 days.
+**Totals 339 large + 339 calm = 678.** TACTICS 6 calls for 200 + 200. Measured
+facts beside it: 35 calm–calm pairs of one coin closer than 48 h (allowed); 47
+start hours shared by more than one coin, 27 large-only, 6 calm-only, **14
+mixing a large and a calm moment — each of which, under the ratified start-hour
+and representative reading of RULES 13, becomes one event holding both kinds**;
+no coin with two moments at one start hour. `exam/moments/moments.csv`
+`8d5c42a4499f3dfa6f79417e51be1b5adb248a3a04e580c1dfddb5a238f7386a`,
+`exam/moments/pool-report.json`
+`08e49c4348e88cb367ae2e8ca71dcadd79a7b6d4bb8c62c55b24520e942462e3`.
+
+**Moment-day order books:** 1,904 files, 878,465,167 bytes, taken from the
+archive's own listing; free disk 12,368,437,248 bytes before; **1,904 fetched, 0
+failed, all checksum-verified and re-hashed on disk** (23:51:05–23:58:31 UTC),
+for all 678 pool moments and both sides of each start. **Two days the archive does
+not hold:** line 7 and line 10, each 2026-01-14 — the folders listed without
+error and those names are absent. `bookdepth-manifest.jsonl`
+`5bd1c53220247c363c6f0d9705eeb34fe89ec1b175815171080f66b0d43c55ee`. `exam/data/`
+now 963 MB; 11 GB free.
+
+**Still open:** the prediction-market card-span filter (not acquisition, not
+applied); and **how the 400 are drawn from the 678** — the run found nothing in
+`TACTICS.md`, `RULES.md` or the verdicts it may read that says, and named it an
+open question rather than choosing. **Its own steer report:** the instruction's
+conditional sentence on the draw "leans toward that conclusion"; it checked
+independently. Steer twenty-seven, recorded.
+
+**Launched: the draw written as a juror question**, `data-engineer` Mode B,
+instruction `instructions/2026-10-02-0003-data-engineer-exam-draw-question.md`
+(SHA-256 `8a9a256a78e73bdcf959c1f000b3001f036430d6a7d19d64034706de18690a50`). It must first check for itself whether the draw is settled;
+if not, write **one juror question** in a new folder, `open-questions/`, that
+jurors may read and that **carries no coin name, date or price**. The instruction
+states, for the first time in one place, the standards seven reviews applied to
+juror questions — answerable from what it names; every option able to follow;
+leaning toward none, a figure only where needed; "already settled" and "outside a
+juror's scope" both offered as answers; inside RULES 33; pointing at no working
+file — and asks the author to show how each was checked.
