@@ -6255,3 +6255,9 @@ were not measured (RULES 22).
 
 **The laboratory is stopped.** No agent is running. Nothing further is launched
 until the user has read the account and decided what is theirs to decide.
+
+`2026-10-02 00:51 UTC` · **correction to the night's total** · The exam-moments run
+(Mode B step 2) reported its usage again when its detached download finished:
+**120,634 tokens**, not the interim 119,757 used in the total above. The night's
+measured total is therefore **5,961,372 tokens over 37 runs**. No other change:
+its outputs and fingerprints are as recorded at 00:02 UTC.
