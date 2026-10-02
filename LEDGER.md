@@ -6024,3 +6024,77 @@ every ratified verdict except that one.
 `fc07ef06e28e1f03254db5ab6359e7db1f4a3bae38d4079499d4015a0bafcb86`): settled or open; fit or not fit per part under the standards; anything
 identifying a coin, date or price; and **whether the author's own conventions
 change the numbers — in which case they belong in the question.**
+
+`2026-10-02 00:19 UTC` · **WALL LEAK · an exam coin's name disclosed outside `exam/`, in a
+juror-readable file and in this ledger · contained · reported to the user** ·
+The review of `JQ-DRAW` (`data-engineer` Mode B, 114,834 tokens, instruction
+`instructions/2026-10-02-0009-data-engineer-draw-question-review.md`, review file
+SHA-256 `0535fa77a386af2ecfe6298840f9a701556d46ecc49d55f988034df161d6964f`) ruled
+**all three parts not fit** and found that **the question file disclosed one exam
+coin's name**: its author, describing its own name scan in the section headed for
+the reviewer, listed the words the scan had matched, and one of them can only be an
+exam coin's base name. TACTICS 1 keeps exam names inside `exam/draw/`, closed to
+the watcher, the canteen chair and the skeptic, and out of this ledger because it
+is a root document a watcher can be pointed at.
+
+**The coordinator repeated it.** This ledger's entry of 2026-10-02 00:09 UTC,
+**line 6010**, relayed the author's remark linking that word to a coin. **That is
+the coordinator's breach, not the author's**: the remark arrived in an agent's
+report and the coordinator copied it into a root document. Twenty-ninth fault of
+this coordinator's kind. The word is not repeated here.
+
+**Contained, in the working tree:** the question file (SHA-256
+`56dcaa89c983010f39ea9cf46869314abe5f332cb299ef82799e048aa654e97c`) and its review
+were moved, unchanged, into `exam/draw-question/` (closed to every role but the
+exam builder), and `open-questions/README.md` now states that nothing there may
+carry an exam coin's name "not even as a word matched by a scan". **The move was
+done in two commits**, because the first `git mv` failed on the then-untracked
+review file and a following `git add -A` committed it in place for one commit
+(`c22ef49`) before the second moved it (`4c92fee`). A scan of every file outside
+`exam/`, `data/` and `.git/` for the twenty full exam symbols and every base name
+of three letters or more, case-sensitive, **found none**; two base names are
+shorter than three letters and collide with ordinary words, which is how this
+leak happened and why a word scan cannot clear them.
+
+**Exposure, measured by who could have read it:** no juror, watcher, canteen
+chair or skeptic was launched between 00:08 UTC, when the file was written, and
+the move; every agent instruction issued tonight closes `LEDGER.md`. **The git
+history now holds the file and the ledger line**, but the git history has held
+`exam/draw/exam-coins.txt` itself since 2026-09-18, so the remote carries nothing
+it did not already carry. **What is new is a juror-readable path and a root
+document**, both inside the folder.
+
+**A rule conflict the coordinator does not settle:** this ledger is append-only
+(RULES 30, and the ledger skill: "no line is ever deleted"), and TACTICS 1 keeps
+exam names out of it. Redacting line 6010 would break the first; leaving it breaks
+the second. **That is the user's decision**, and it is put to the user. Until then
+no agent is pointed at `LEDGER.md`.
+
+**What the review also found**, by section only: every part fails on the
+standards — a working-file pointer and an unanswerable entry in part a; options
+that cannot follow as stated in parts b and c; a leaning passage in the section
+for the reviewer; two false factual claims; **and every one of the author's
+"conventions" changes which moments are drawn** — list order, generator and
+method, the order of the two draws, coin order, and the size measure — measured
+by the reviewer with seeds 1–1000, never the draw number. **So they are part of
+the question, not conventions.** It also names something a juror could not find:
+`TACTICS.md` line 22's number has already seeded the selection of the pool's calm
+moments. The draw remains open by everything the reviewer could read.
+
+**Eighth fix returned**, `data-engineer`, 299,936 tokens, 63 tool uses,
+instruction `instructions/2026-10-01-2357-data-engineer-exam-prep-eighth-fix.md`:
+`JQ-R04-CONTENT-d` rewritten as a juror question
+(`exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md`
+`aedcd0cd2cfeb22c7b55101be3f5d9525e6223516b84651b5244a483db090817`) with "outside
+what a juror may decide" among its answers; U-1 marked superseded, text kept byte
+for byte; the index made true (`fb9d51c965373a4ce728b6adf842a8baec9975cab46e718b67ada65c8d691a78`);
+script 35, run `5d0fd28862ba755b`, 160 checks, 0 failed. **It corrected the
+coordinator:** the instruction said RULES 35 sends a scope refusal "to the user";
+**RULES 35's text does not say that.** The route to the user rests on the rules'
+preamble — a rule is changed only after the user is asked — not on RULES 35.
+Recorded as the coordinator's inaccuracy. It added handed-forward item **A-0.9: a
+record of which columns the frozen canteen book reads**, which the exam builder
+needs under the ratified CONTENT-a and **may not make, because it may not see the
+canteen book** — juror 2's objection on that jury, now standing as a gap with no
+one able to fill it without carrying the recipe's structure into exam
+preparation. Named, not settled.
