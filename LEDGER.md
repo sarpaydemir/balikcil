@@ -6126,3 +6126,44 @@ conclusion. Fair.
 `instructions/2026-10-02-0034-data-engineer-draw-question-v2-review.md` (SHA-256
 `22b9bcbebac7c48cd058deaf62b5f1592df8f878ff9622c369e56a41ae0c401a`); its file is written to `exam/draw-question/`, not to the
 juror-readable folder.
+
+`2026-10-02 00:41 UTC` · **review 8: `JQ-R04-CONTENT-d` not fit again, and two structural
+blocks in `R-04` · the `R-04` thread is paused for the user** · Review 8:
+`data-engineer`, instruction `instructions/2026-10-02-0021-data-engineer-exam-prep-review-8.md`;
+`exam-prep/REVIEW-8.md` `0a00d440a3dae285330dfce6cceac1224c0d5346f276da74c7c615411bf99302`.
+30 of 30 quotations found; 22 of 22 eighth-run fingerprints match. **It hashed
+every token its scans matched so that no matched word is written anywhere**, and
+when it tried to list them on screen the harness refused it — so it kept its
+report to identifiers and line numbers. Nothing juror-facing identifies an exam
+coin, date or price.
+
+**`JQ-R04-CONTENT-d` — not fit**: determinacy and truth faults in two sections, a
+weighting fault it calls its own judgement, and a contested reading against line
+56 of the DATE/CONTENT verdict. Three of the eighth run's own choices change the
+numbers and sit outside the question.
+
+**Two blocks that a further fix run cannot remove:**
+1. **A sequencing circle.** Handed-forward A-0.4 step 1 needs exam cards to exist
+   before it can be met, while the fourth run's A-0 forbids any exam card before
+   `R-04` closes. **No earlier review named it.** Under the rules as written,
+   `R-04` cannot close by this route.
+2. **A conflict between a ratified outcome and a written document.** The ratified
+   CONTENT-a (2–1) lets the blinding leave out a column the frozen book does not
+   read; meeting it needs a record of which columns the frozen book reads
+   (A-0.9); handing that record to the run that builds exam cards is contested
+   against `TEAM.md` lines 70–71 and 172–174, which keep exam preparation blind to
+   the canteen *so that the exam is not built around the ideas*. **This is the
+   objection juror 2 made on that jury, standing.** A juror may not change
+   `TEAM.md`; a referee does not answer questions. **It is a rule question.**
+
+**Decision, the coordinator's, on process not substance: the `R-04` thread
+stops here for the night.** Each fix-and-review cycle has cost about half a
+million tokens, review 8 has found two blocks no fix run can remove, and the user
+must already be asked about line 6010 of this ledger. Running a ninth fix before
+the user has seen these would spend money on work the user's answers may void.
+Tonight's `R-04` decisions stand ratified and recorded; nothing is withdrawn.
+
+**What continues:** the draw question (`JQ-DRAW` version 2) does not depend on
+`R-04` — it decides which moments become cards before any card exists, which is
+RULES 6's order. Its review is running; if it rules the question fit, its jury
+sits tonight.
