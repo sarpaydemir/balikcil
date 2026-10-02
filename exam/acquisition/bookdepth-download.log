@@ -53,3 +53,17 @@ line 19  moment days 42   listed 168 zips
   1400/1904  {'ok': 1400, 'skipped': 0, 'failed': 0}  2026-10-01T23:56:50Z
   1500/1904  {'ok': 1500, 'skipped': 0, 'failed': 0}  2026-10-01T23:57:09Z
   1600/1904  {'ok': 1600, 'skipped': 0, 'failed': 0}  2026-10-01T23:57:28Z
+  1700/1904  {'ok': 1700, 'skipped': 0, 'failed': 0}  2026-10-01T23:57:48Z
+  1800/1904  {'ok': 1800, 'skipped': 0, 'failed': 0}  2026-10-01T23:58:06Z
+  1900/1904  {'ok': 1900, 'skipped': 0, 'failed': 0}  2026-10-01T23:58:26Z
+{
+ "finished_at_utc": "2026-10-01T23:58:31Z",
+ "counts_this_attempt": {
+  "ok": 1904,
+  "skipped": 0,
+  "failed": 0
+ },
+ "files_wanted": 1904,
+ "files_verified_on_disk": 1904,
+ "outcome": "complete"
+}
