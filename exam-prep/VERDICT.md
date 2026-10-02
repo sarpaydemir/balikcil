@@ -939,3 +939,133 @@ solved**; **nothing was measured on exam cards**; **U-1 is not reviewed**;
 **two juror files now carry a stale clause this run may not correct**.
 
 Nothing under `exam/` was read or written by this run.
+
+---
+
+# Eighth-fix run · 2026-10-02 — acting on `exam-prep/REVIEW-7.md`, and on the REVIEW-6 items about JQ-R04-CONTENT-d left open
+
+Mateo · data engineer · appended 2026-10-02 (system clock, RULES 23).
+**Nothing above this line was changed**: the first 49,775 bytes of this file
+are the file as the seventh review found it (SHA-256
+`c169dbe7a84bafb0542a14dffd3529fda9c4b063980043641b2053af979f6518`). This
+section says what happened, not how; the working is in
+`exam-prep/eighth-fix/EIGHTH-FIX.md`; what later runs must do is in the
+fourth-fix to eighth-fix sections of `exam-prep/HANDED-FORWARD.md`, read
+together.
+
+## The two problems now
+
+| problem | seventh-fix verdict | now |
+|---|---|---|
+| **R-04 · is the exam blind?** | NOT SOLVED | **NOT SOLVED.** Nothing was measured. The JQ-R04-CARRIES and DATE/CONTENT groups are now ratified. R-04 still needs the ratified outcome of JQ-R04-CONTENT-d (or, if its referee sends it to the user, the user's answer to a corrected and reviewed U-1), the A-0.9 record, and the gate run on exam cards (HANDED-FORWARD). |
+| **N-1 · collapse before counting** | not acted on | **Not acted on by this run.** |
+
+## Outcome of every item acted on
+
+Numbering: `exam-prep/eighth-fix/EIGHTH-FIX.md` §1.
+
+| item | outcome |
+|---|---|
+| R7-1 | **Acted on**: JQ-R04-CONTENT-d is a juror question again. |
+| R7-2 | **Recorded; unchanged.** |
+| R7-3 | **Recorded**; both routes stay reachable. |
+| R7-4 | **Recorded, not corrected**: U-1 superseded, text kept; correction and review required before any return (HANDED-FORWARD eighth-fix A-0.1 item 3). |
+| R7-5 | **Recorded** for U-1; not repeated in the new juror file. |
+| R7-6 | **Done** (HANDED-FORWARD eighth-fix A-0.1). |
+| R7-7 | **Done** (HANDED-FORWARD eighth-fix A-0.4 step 1, 1b, 1c). |
+| R7-8 | **Recorded**; C-5 replaced. |
+| R7-9 | **Done** (index). |
+| R7-10 | **Done** (index). |
+| R7-11 | **Recorded**; the JQ-R04-CONTENT-d row updated. |
+| R7-12 | **Kept**; checked by script. |
+| R7-13 | **Recorded.** |
+| R7-14 | Item 1 **resolved**; items 2 and 3 **not checkable by me**; items 4–6 **recorded**. |
+| R7-15 | **Recorded.** |
+| R7-16 | **Referred to the coordinator** (below, item 4). |
+| R6-6 | **Done**, by the juror route; the seventh run's withdrawal superseded, its files kept. |
+| R6-7 | **Done** (HANDED-FORWARD eighth-fix A-0.4 step 1). |
+| R6-8 | **Done** (the juror file; HANDED-FORWARD eighth-fix A-0.4 step 1 and A-0.9). |
+| R6-9 | **Done.** |
+| R6-10 | **Done**: scope is answerable by jurors and checked by the referee. |
+| R6-11 | **Checked again against all four ratified verdicts**: no contradiction; one gap named (EIGHTH-FIX §3). |
+| R6-15 | **Holds.** |
+| R6-17 | **Same**: not measured. |
+
+## JQ-R04-CONTENT-d
+
+**A juror question again**, at
+`exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md`. It meets every
+test the seven reviews applied, as I fixed them before writing
+(`exam-prep/eighth-fix/criteria-written-before-correcting.md` §1), test by
+test in EIGHTH-FIX §2; "this is outside what a juror may decide" is one of
+its answers; it contradicts none of the four ratified verdicts. **It has
+not been reviewed.** Its sixth-fix version is kept unchanged as a record.
+
+## U-1
+
+**Superseded by the juror route**, its text kept byte for byte (one status
+block inserted under its heading; the seventh-fix file kept as a copy). It
+is not to be put to the user now. It is returned to only if the referee's
+verdict on JQ-R04-CONTENT-d sends the question to the user, and then only
+after it is corrected for REVIEW-7 §2 and found fit by a review.
+
+## The index
+
+`exam-prep/JUROR-QUESTIONS.md`, re-issued: **true** — every ratified row
+reads ratified and names its verdict file (JQ-N1 group, JQ-R04-GATE,
+JQ-R04-CARRIES, DATE/CONTENT); JQ-R04-CONTENT-d reads "written — not yet
+reviewed, not commissioned"; JQ-B1 withdrawn. It carries no wording, option
+or number of any question. Its seventh-fix version is kept byte for byte at
+`exam-prep/eighth-fix/JUROR-QUESTIONS-as-of-seventh-fix.md`, and every
+earlier one where it was.
+
+Checked by `scripts/35_eighth_fix_check.py`, run `5d0fd28862ba755b`: 160
+checks, 0 failed (`exam-prep/eighth-fix/checks/eighth-fix-check-5d0fd28862ba755b.md`).
+
+## For the coordinator
+
+1. **Review before commission.** The new juror file is not reviewed. Every
+   juror file ratified so far had first been ruled fit by a review.
+2. **A-0.9 is new and has no owner yet.** Applying the ratified
+   JQ-R04-CONTENT-a needs to know which columns the frozen canteen book
+   reads; the run that builds the exam cards may not read the canteen. A
+   run that may read it must make that record, and a review check it,
+   before exam cards are built.
+3. **A gap between two passages of the DATE/CONTENT verdict** (its "Effect
+   on exam cards" line 56 and its outcome sentences, lines 39 and 42): named
+   in EIGHTH-FIX §3, not settled; a possible open question if a run must
+   rely on it.
+4. **REVIEW-7 §8's instruction named for exam moments**, and the two
+   modified files under `exam/acquisition/` in the status supplied with my
+   instruction: I cannot see either. If exam cards are built before A-0.1
+   is met, the order breaks.
+5. **`LEDGER.md`**: whether the four ratifications are recorded there I
+   cannot check.
+
+## `RULES.md`
+
+**Nothing this run did requires changing a rule in `RULES.md`, and this run
+changes none.** One wording to name: the instruction says RULES 35 sends "a
+question refused on scope … to the user". RULES 35 says the referee refuses
+and says why; it does not say where a refused question goes. That a
+question about a rule is the user's follows from `RULES.md` lines 3–4 and
+RULES 33. Routing it there is procedure, not a rule change.
+
+## A steer in the instruction I was given
+
+No result and no prediction. **Named: the instruction chooses the fix.**
+"So the row goes to jurors", "Write `JQ-R04-CONTENT-d` as a juror question"
+and "Mark U-1 … as superseded" tell me which of the two routes to take,
+after saying "The coordinator does not settle this". It rests the choice on
+RULES 35's scope check, which REVIEW-7 §1 also cites. I followed it, and
+kept the other route reachable: "not a juror's" is an answer, the referee
+checks scope, and U-1 is kept. "R-04 cannot close until this row is
+settled" and what the coordinator has and has not read are information.
+
+## What this run did not do
+
+EIGHTH-FIX §6, eight items. The ones that matter most: **R-04 is not
+solved**; **nothing was measured on exam cards**; **the new juror file is
+not reviewed**; **A-0.9 has no owner**.
+
+Nothing under `exam/` was read or written by this run.

@@ -149,3 +149,24 @@ of A-0.4), `seventh-fix/SEVENTH-FIX.md`,
 `USER-QUESTIONS.md` and in `scripts/34_seventh_fix_check.py`; nothing written
 by an earlier run was overwritten, apart from `JUROR-QUESTIONS.md`, whose
 earlier version is kept at `seventh-fix/JUROR-QUESTIONS-as-of-sixth-fix.md`.
+
+---
+
+## Addendum · eighth-fix run, 2026-10-02
+
+Appended by Mateo (eighth-fix run); nothing above was changed (its first
+7,990 bytes still hash to `0f884ca1…502a`). After the seventh review
+(`REVIEW-7.md`), an eighth run wrote JQ-R04-CONTENT-d again as a juror
+question, marked U-1 superseded, and corrected the index. Read, in this
+order: `VERDICT.md` (its last appended section), `JUROR-QUESTIONS.md`
+(re-issued; earlier versions kept), `USER-QUESTIONS.md` (U-1 marked
+superseded; text kept), `HANDED-FORWARD.md` (**its fourth-fix to eighth-fix
+sections together**: the eighth-fix section replaces A-0.1, step 1 of A-0.4
+and C-5, and adds A-0.9), `eighth-fix/EIGHTH-FIX.md`,
+`eighth-fix/criteria-written-before-correcting.md`,
+`eighth-fix/juror-questions/`, `eighth-fix/checks/`,
+`eighth-fix/FINGERPRINTS.md`. New outputs live in `eighth-fix/` and in
+`scripts/35_eighth_fix_check.py`; nothing written by an earlier run was
+overwritten, apart from `JUROR-QUESTIONS.md` and `USER-QUESTIONS.md`, whose
+earlier versions are kept at `eighth-fix/JUROR-QUESTIONS-as-of-seventh-fix.md`
+and `eighth-fix/USER-QUESTIONS-as-of-seventh-fix.md`.

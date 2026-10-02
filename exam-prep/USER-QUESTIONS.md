@@ -14,6 +14,21 @@ not recommending it.**
 
 ## U-1 · When a field must stay on the exam card and still gives the coin away, does the exam's blindness check count it?
 
+<!-- eighth-fix status block: begin -->
+> **Status, set by the eighth-fix run (2026-10-02, system clock):
+> superseded — not to be put to the user now.** On the coordinator's
+> instruction to that run, `JQ-R04-CONTENT-d` goes back to jurors (RULES 35
+> gives the scope check to the referee). The juror question is
+> `exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md`. U-1 is kept
+> below unchanged (RULES 30), so that it can be returned to if the
+> referee's verdict on that question sends it to the user. Before U-1 is
+> put to the user it must be corrected and reviewed: `exam-prep/REVIEW-7.md`
+> §2 found it not fit as it stands, and its point 4 ("None of those rulings
+> exists yet") is no longer true — the rulings it names are ratified. What
+> must happen first is in `exam-prep/HANDED-FORWARD.md`, eighth-fix
+> section, A-0.1.
+<!-- eighth-fix status block: end -->
+
 (This replaces a juror question, `JQ-R04-CONTENT-d`, which the data
 engineer's seventh-fix run withdrew from jurors because it judged it to be a
 question about a rule. You may judge otherwise; see the last answer of

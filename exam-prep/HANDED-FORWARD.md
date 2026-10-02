@@ -678,3 +678,167 @@ reasons).
   ratification sentence above.
   *Check: does the commission's file list equal the row's column, and are
   the two R-04 groups' juror sets disjoint?*
+
+---
+---
+
+# Section added by the eighth-fix run · 2026-10-02 — amendments to the fourth-fix through seventh-fix sections
+
+Mateo · data engineer · eighth-fix run · appended 2026-10-02 (system clock,
+RULES 23). **Nothing above this line was changed:** the first 39,494 bytes
+of this file are the file as the seventh review found it (SHA-256
+`a7607321d6ca40a5cad01afe2ca98763616ea9b49206cebc86db6c0d8cf6141a`).
+
+**How to read this file now.** A later run reads the fourth-fix, fifth-fix,
+sixth-fix and seventh-fix sections **and this section**, and nothing
+earlier. This section **replaces** the seventh-fix A-0.1, the seventh-fix
+A-0.4 step 1 with its check line, and the seventh-fix C-5; it **adds**
+A-0.9. Steps 2–5 of the fifth-fix A-0.4 stay in force word for word, read
+with step 1b below; every other item stays in force word for word. Nothing
+here is a trading rule, a threshold or a score. Source of every change:
+`exam-prep/REVIEW-7.md` (§ named at each item), `exam-prep/REVIEW-6.md`
+§2.1 and §3, and the coordinator's instruction to this run, which sends
+JQ-R04-CONTENT-d back to jurors. The juror file is
+`exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md`; its SHA-256 is
+in `exam-prep/eighth-fix/FINGERPRINTS.md`. Its answers are named below by
+their labels: "no", "only where the card may not be without the field"
+(short: "only where"), "yes", "not a juror's", "Other".
+
+---
+
+## A · Before any exam card is built — replaced and added items
+
+- **A-0.1 · Rulings** (replaces the seventh-fix A-0.1; REVIEW-7 §1, §3).
+  1. These verdict files exist and read RATIFIED:
+     `decisions/2026-10-01-jq-r04-gate/verdict.md` (JQ-R04-GATE),
+     `decisions/2026-10-01-jq-r04-carries/verdict.md` (JQ-R04-CARRIES-a,
+     -b), `decisions/2026-10-01-jq-r04-date-content/verdict.md`
+     (JQ-R04-DATE-a, -b, -c; JQ-R04-CONTENT-a, -b, -c). Each ratification
+     is recorded in `LEDGER.md` (RULES 35); this run may not open
+     `LEDGER.md` and did not check it.
+  2. **JQ-R04-CONTENT-d** — from the eighth-fix juror file, with the
+     SHA-256 that `exam-prep/eighth-fix/FINGERPRINTS.md` gives — has an
+     outcome ratified under RULES 33–35 and recorded in `LEDGER.md`. Its
+     three or more jurors sat on neither the JQ-R04-CARRIES group nor the
+     DATE/CONTENT group, and each was given only the files its index row
+     names.
+  3. **If the referee refuses JQ-R04-CONTENT-d on scope, or ratifies its
+     answer "not a juror's"**, the question goes to the user as U-1
+     (`exam-prep/USER-QUESTIONS.md`). Before U-1 is put to the user: a run
+     corrects every fault `exam-prep/REVIEW-7.md` §2 names (the title; the
+     GATE file path in point 3 and the invitation to look at results; point
+     4, which is no longer true; the section on which written rule it
+     touches; the "Wide" bullet; what happens to an empty graded set; the
+     stops), brings its statements up to date with the four ratified
+     verdicts, and states, for each of its answers, how the row is composed
+     in a form checkable as step 1 below is; and a review finds it fit. The
+     user's answer is then recorded in `LEDGER.md` and takes the place of
+     the outcome in item 2.
+  4. **If the referee refuses JQ-R04-CONTENT-d on any other ground** (count,
+     independence, grounding, a tie, a reasoned objection), there is no
+     outcome; what follows is the coordinator's. R-04 waits.
+  *Check: do the three verdict files of item 1 exist and read RATIFIED; is
+  a ratified outcome of JQ-R04-CONTENT-d, from the named file with its
+  SHA-256, recorded — or, in its place under item 3, the user's recorded
+  answer to a U-1 corrected and found fit by a review; are the juror sets
+  of JQ-R04-CARRIES, DATE/CONTENT and JQ-R04-CONTENT-d disjoint?*
+
+- **A-0.4, step 1 · The row** (replaces the seventh-fix step 1 and its
+  check line, which replaced the fifth-fix ones; REVIEW-6 §2.1; REVIEW-7
+  §3). `ALL-removable` is composed as the ratified outcome of
+  JQ-R04-CONTENT-d says. The audit is `scripts/29_identity_audit_exact.py`
+  (SHA-256 `cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f`)
+  where the outcome moves nothing beyond `FORCED_FAMILIES`; otherwise a
+  version of it whose header lists the change. Which field each feature is
+  computed from is read from `card_features()`, not chosen.
+  - **"no":** the row is every feature the audit computes minus the four
+    families of `FORCED_FAMILIES`: `volatility-frozen`, `funding-line`,
+    `p7-shape`, `repeat-chg`. Nothing else is moved.
+  - **"only where":** in addition, every feature computed from a field the
+    exam card prints is moved out, **except** the features of each column
+    for which both of these are on record before the row is composed:
+    (a) the A-0.7 measurement on the exam cards — made for **every** column
+    the card prints, not only for a column a run wants to leave out — says
+    the column carries a measured coin signature as the ratified
+    JQ-R04-CARRIES outcome defines it; (b) the A-0.9 record says the frozen
+    canteen book does not read the column. A line of the card (the
+    previous-7-day line, the Wikipedia line) has no ratified test of a
+    signature, so its features are moved out.
+  - **"yes":** every feature computed from a field the exam card prints is
+    moved out. The row is then empty (step 1b).
+  - **"not a juror's", or a refusal on scope:** A-0.1 item 3. The row is
+    not composed until the user's recorded answer to the corrected,
+    reviewed U-1 exists, and it is composed as that U-1 states.
+  - **"Other":** as its ratified text says; if it cannot be carried out as
+    written, stop (1c iv).
+  - **Header.** For every feature moved out, the audit version's header
+    names the field it is computed from and the part of the ratified
+    outcome that moves it; under "only where", also which of (a) and (b)
+    is not on record for that field, or that the field is a line.
+  - **1b · Empty row.** If the composed row holds no feature on the exam
+    cards, the audit reports "no features left after blinding" for it.
+    Steps 2 and 3 then have no result to apply, and by step 4 the gate does
+    not pass. The run records "gate not graded: empty row", stops, and
+    tells the coordinator.
+  - **1c · Stops** — tell the coordinator; do not settle. These are the
+    stops the juror file names, in its order: (i) the empty row of 1b;
+    (ii) a feature computed from a field whose features leave the row and
+    from one whose features stay; (iii) under "only where", while (a) or
+    (b) is not complete for every column the card prints, or where A-0.7
+    or A-0.9 stopped or is unclear for a column; (iv) a ratified "Other"
+    that cannot be carried out as written.
+  - Every feature moved out is still reported with both attacks and named
+    in the exam manifest with its size (A-7); it is not graded.
+  *Check (replaces the fifth-fix and seventh-fix check lines of A-0.4): is
+  the row composed as the ratified JQ-R04-CONTENT-d outcome says, with the
+  audit version and its SHA-256 named; does the header name, for every
+  feature moved out, its field, the part of the outcome that moves it and,
+  under "only where", the missing record or "line"; was every stop of 1c
+  referred rather than resolved; and, where the row is not empty, does it
+  pass by steps 2–4 of the fifth-fix A-0.4?*
+
+- **A-0.9 · What the frozen canteen book reads** (new; needed to apply the
+  ratified JQ-R04-CONTENT-a, whose first condition is "nothing the frozen
+  canteen book reads it", and for the "only where" answer above; no earlier
+  item requires it). Before any exam card is built, a record lists each of
+  the thirteen columns that `REPEAT_GROUP` in
+  `scripts/29_identity_audit_exact.py` names and gives, for each, the lines
+  of the frozen canteen book (`canteen/2026-09-19-sofia.md`) that read it,
+  quoted, or "none found" with the search that was made. It is made by a
+  run permitted to read that book — the run that builds the exam cards is
+  not (`TEAM.md`, Nadia; Mode B closes `canteen/`) — and a review checks
+  it. Where it is unclear whether a passage reads a column, the column is
+  marked "referred" and the point goes to the coordinator as a possible
+  open question (RULES 33); no run treats the condition as met or as
+  failed for that column until it is answered. The run that builds the
+  exam cards receives only the list: each column's name and "read", "not
+  read" or "referred".
+  *Check: does the record exist and name all thirteen columns; does each
+  entry quote lines or say "none found" with its search; was every unclear
+  column referred; did a review check it; did the exam-building run
+  receive the list and nothing else of the book?*
+
+## C · Replaced
+
+- **C-5 · Files that must not reach a juror or a referee** (replaces the
+  seventh-fix C-5; REVIEW-7 §3). Whoever commissions a juror or a referee
+  of any row in `exam-prep/JUROR-QUESTIONS.md` gives only the files that
+  row's "files a juror needs" column names, and gives
+  `canteen/2026-09-19-sofia.md` only by the line ranges it names. For
+  JQ-R04-CONTENT-d that is its eighth-fix file, `RULES.md` and `TACTICS.md`
+  — **not** the verdict files the juror file quotes. Never given to a juror
+  or a referee: `exam-prep/REVIEW.md`, `REVIEW-2.md` … `REVIEW-7.md`,
+  `VERDICT.md`, `HANDED-FORWARD.md`, `USER-QUESTIONS.md`,
+  `R-04-blindness.md`, `N-1-collapse.md`, `decisions-and-open-questions.md`,
+  any `*-FIX.md`, any criteria file, any `pre-run-*` file, anything under
+  `exam-prep/seventh-fix/`, anything under `exam-prep/eighth-fix/` except
+  the JQ-R04-CONTENT-d juror file, the withdrawn
+  `exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md`, the A-0.9
+  record, and anything under `exam-prep/*/checks/`, `exam-prep/*/identity/`,
+  `exam-prep/*/collapse/`, `exam-prep/review-*/` or `exam-prep/blind-proof/`
+  — and, in general, nothing under `exam-prep/` that the row does not name.
+  A juror of one R-04 group (JQ-R04-CARRIES; the DATE/CONTENT pair;
+  JQ-R04-CONTENT-d) is not given the file of another, nor its answers,
+  beyond what the row's own file quotes.
+  *Check: does the commission's file list equal the row's column, and are
+  the three R-04 groups' juror sets disjoint?*

@@ -173,10 +173,10 @@ that records it.
 
 ## The question
 
-**Question d.** Under the ratified outcomes above, does a field that an
-exam card prints count as one of the families "that must stay on the card
-because … TACTICS requires them", so that its features leave
-`ALL-removable` and are measured and named, not graded?
+**Question d.** Under the ratified outcomes above, do the features
+computed from a field that an exam card prints count among the families
+"that must stay on the card because … TACTICS requires them", so that they
+leave `ALL-removable` and are measured and named, not graded?
 
 - **no** — "TACTICS requires" means what TACTICS requires by its own words;
   ratified outcomes that let a field stay, or that give no permission to
@@ -188,9 +188,10 @@ because … TACTICS requires them", so that its features leave
   lists it and nothing permits a card without it, and so is required; its
   features leave the set. A field they permit to be left out is removable:
   if the card prints it, its features are in the set and graded. A field
-  counts as one the card may be without only where the conditions of that
-  permission (JQ-R04-CONTENT-a, quoted above) are established for it on
-  the exam cards.
+  counts as one the card may be without only where both conditions of
+  that permission (JQ-R04-CONTENT-a, quoted above) are established for it
+  before the gate is run: one is measured on the exam cards, the other is
+  recorded from the frozen canteen book.
 - **yes** — a field the exam card prints is there because TACTICS 3 puts
   it on the card and no ratified outcome removes it, and so is required;
   its features leave the set.
@@ -209,7 +210,7 @@ code, not chosen.
   except the four groups listed above.
 - **only where the card may not be without the field:** the set holds the
   features of each column the card prints for which both conditions of
-  JQ-R04-CONTENT-a are established on the exam cards: the measurement says
+  JQ-R04-CONTENT-a are established: the measurement on the exam cards says
   it carries a measured coin signature, and the record says nothing the
   frozen canteen book reads it. The features of every other field the card
   prints leave the set. The test JQ-R04-CARRIES ratified is written for a
@@ -231,8 +232,9 @@ stops and tells the coordinator; it does not settle the point itself:
 2. if a version of the audit computes a feature from a field whose
    features leave the set and from one whose features stay;
 3. under "only where the card may not be without the field": until the
-   measurement and the record it rests on are complete, or where either of
-   them stops or is unclear;
+   measurement and the record that answer rests on are complete for every
+   column the card prints, or where either of them stops or is unclear for
+   a column;
 4. if a ratified "Other" cannot be carried out as written.
 
 What follows a stop is not decided by this question.

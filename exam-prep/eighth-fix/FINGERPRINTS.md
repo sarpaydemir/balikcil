@@ -1,0 +1,28 @@
+# Eighth fix — fingerprints
+
+Mateo · data engineer · eighth-fix run · written 2026-10-02T00:17:20Z (system clock). SHA-256 of every file this run wrote or changed, and of the files it names as inputs. Check with `sha256sum -c` on the lines between the fences.
+
+```
+8422488c4ba9e4f104b226dd4d992ba805efcf4dc7625c2707adbb3c71349792  exam-prep/eighth-fix/checks/eighth-fix-check-5d0fd28862ba755b.md
+3c4308953dfb2a682dbb10c4ef3069bcaee6a98ffff43f4bd0c7cba5a6599306  exam-prep/eighth-fix/checks/runs/5d0fd28862ba755b.clock
+ced0ab992aa69e233eeea83be91b6ee46b673f3398e9a1dcbbe48036e83bb864  exam-prep/eighth-fix/checks/runs/5d0fd28862ba755b.json
+3b5dd371074ddd606770acd5745c28fe226c378237bb709c64d2263b89c5999c  exam-prep/eighth-fix/criteria-written-before-correcting.md
+279ceb05755377cbadb7881f5cf99db2ea242e0e4bf6842ce678717842f72551  exam-prep/eighth-fix/EIGHTH-FIX.md
+fb8f2e683755ad8085f1e139f767e2c2e028b8cf7c413fe15ab1b429dfdf1be1  exam-prep/eighth-fix/JUROR-QUESTIONS-as-of-seventh-fix.md
+aedcd0cd2cfeb22c7b55101be3f5d9525e6223516b84651b5244a483db090817  exam-prep/eighth-fix/juror-questions/JQ-R04-CONTENT-d.md
+9babe55ecf5770ac538f70541dd81458cb8389b62be9dc6562c58d3b22699c6e  exam-prep/eighth-fix/pre-run-fingerprints.txt
+56d25d452b39f043103331de31b48f95e951adb9ec2547ed1a7df9eee85f0a7e  exam-prep/eighth-fix/pre-run-scripts-fingerprints.txt
+bcc09ad8ff38f90e064d7cf781ab8081d4514a6a981c17b642e5f9927b7a429b  exam-prep/eighth-fix/USER-QUESTIONS-as-of-seventh-fix.md
+fb9d51c965373a4ce728b6adf842a8baec9975cab46e718b67ada65c8d691a78  exam-prep/JUROR-QUESTIONS.md
+a63afecbbcb7ac2b8f2ad5c87431880db01fd4b6b50e306054be65db79d42ada  exam-prep/USER-QUESTIONS.md
+7e21cbf871acd9bb68268b4e442e8b74126d3665603049ef1c6030244c15f1c7  exam-prep/VERDICT.md
+1b9f4bbc6a458c86988470b0d0bba49d73ef5ce92be57292f32887e8d20b08b6  exam-prep/HANDED-FORWARD.md
+6c1f9f3dea8f8913b40566904ec3137a255783a4c8b69ddcb6281f04868dae65  exam-prep/README.md
+fc5326ce3782552da1bb216cc5701c1c33377d7631764a128f8bc0d5d2c7155f  scripts/35_eighth_fix_check.py
+cfc4bdcb6f1ee65430ac08fad0d085ff6e83510ac4d741145aa32cde3487d03f  scripts/29_identity_audit_exact.py
+2c0bfd3defa8a70009b096675b4d65417c512b7490700434738ebbc6b8058e2d  decisions/2026-10-01-jq-r04-gate/verdict.md
+aa15ac0dbaaefec007dfb9890189e4f1a24fa949fcfece1fb7efce4459573305  decisions/2026-10-01-jq-n1-canteen-8/verdict.md
+514a8d45038d3d7ad2feba3479c58d6e1da8e50358c799203f35b22cc246050a  decisions/2026-10-01-jq-r04-carries/verdict.md
+d465a0d37366c10249eea2492f5a27b23f4c4eaf7811f2a4b0aa7873132fb769  decisions/2026-10-01-jq-r04-date-content/verdict.md
+963aeb9f92d69716096acfc5759999bdd9133d9aa933e0b04a0ec7684057ada1  exam-prep/sixth-fix/juror-questions/JQ-R04-CONTENT-d.md
+```
