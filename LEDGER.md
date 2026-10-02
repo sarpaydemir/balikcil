@@ -5992,3 +5992,35 @@ juror questions — answerable from what it names; every option able to follow;
 leaning toward none, a figure only where needed; "already settled" and "outside a
 juror's scope" both offered as answers; inside RULES 33; pointing at no working
 file — and asks the author to show how each was checked.
+
+`2026-10-02 00:09 UTC` · **the draw question is written · reviewed before any juror sees
+it** · `data-engineer`, Mode B, 113,700 tokens, 33 tool uses, 6 minutes,
+instruction `instructions/2026-10-02-0003-data-engineer-exam-draw-question.md`.
+**It checked for itself and found the draw open**: `TACTICS.md` lines 99–100 fix
+only the counts and line 110 that every sitter gets the same 400; a search of the
+four root documents for 400, 200, draw, sample, random, seed, lot, pick, chosen,
+select and exam finds no procedure; the only seed is `TACTICS.md` line 22, in the
+coin draw; none of the ten verdicts it could read decides it. **`JQ-DRAW`**,
+`open-questions/JQ-DRAW.md`
+`56dcaa89c983010f39ea9cf46869314abe5f332cb299ef82799e048aa654e97c`, three parts —
+which large moments, which calm moments, what seeds any random draw — each
+offering "already settled", "outside a juror's scope" and "other". Its checker
+`scripts/exam_35_draw_question_check.py` passed: pool facts re-measured, the file
+scanned for coin names, dates and decimals; thirteen hand-read matches, none a
+coin or date (the word "on" matches one coin's base name). It disclosed eight
+conventions it fixed itself so that no option leaves a choice that changes the
+numbers, **and said plainly they are its choices, open to a juror's "other".**
+Steer twenty-eight, reported by it and recorded: the instruction stated the
+previous run's conclusion before asking it to check.
+
+**A gap the coordinator closes:** the file tells jurors to read "the ratified
+verdicts", which would include the DATE/CONTENT verdict that quotes the canteen
+book. **Deciding the draw is preparing the exam, and the exam is prepared blind
+to the canteen (`TEAM.md` lines 70–71).** The jury on `JQ-DRAW` will be given
+every ratified verdict except that one.
+
+**Review launched before any juror**, `data-engineer` Mode B, instruction
+`instructions/2026-10-02-0009-data-engineer-draw-question-review.md` (SHA-256
+`fc07ef06e28e1f03254db5ab6359e7db1f4a3bae38d4079499d4015a0bafcb86`): settled or open; fit or not fit per part under the standards; anything
+identifying a coin, date or price; and **whether the author's own conventions
+change the numbers — in which case they belong in the question.**
